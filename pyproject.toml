@@ -26,15 +26,15 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["tools*"]
-exclude = ["tools.*.tests*", "tools.*.fixtures*"]
+include = ["scripts*"]
+exclude = ["scripts.*.tests*", "scripts.*.fixtures*"]
 
 [tool.setuptools-scm]
 
 [tool.coverage.run]
 relative_files = true
 branch = true
-source = ["tools"]
+source = ["scripts"]
 omit = [
     "*/test_*.py",
     "*/tests/*",
@@ -44,8 +44,8 @@ omit = [
 
 [tool.coverage.paths]
 source = [
-    "tools",
-    "*/homecoming-build-companion/tools",
+    "scripts",
+    "*/homecoming-build-companion/scripts",
 ]
 
 [tool.coverage.report]
@@ -90,7 +90,7 @@ ignore = [
 "**/conftest.py" = ["D"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["tools"]
+known-first-party = ["scripts"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
@@ -115,7 +115,7 @@ module = "tests.*"
 disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
-testpaths = ["tools"]
+testpaths = ["scripts"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
 addopts = "-q --tb=short"
