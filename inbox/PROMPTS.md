@@ -1,0 +1,4357 @@
+# Pre-generated extraction prompts
+
+One ready-to-copy prompt per row in [CAPTURE_QUEUE.md](../../homecoming-build-companion/community/CAPTURE_QUEUE.md).
+
+Workflow per row (full instructions in [CAPTURE_WORKFLOW.md](../tools/CAPTURE_WORKFLOW.md)):
+
+1. Click the URL → opens forum thread in Chrome.
+2. Open the Claude for Chrome side panel (extension icon, top right of Chrome).
+3. Copy the prompt block below into the side panel chat → send.
+4. Copy Claude's response (whole assistant message).
+5. In PowerShell: `& "C:\Users\petek\repos\homecoming-build-companion\tools\capture.ps1" -Paste`
+
+The prompt fills in the URL, today's date (2026-04-29), the topic tags, and trust level for that specific guide. Don't edit anything — paste verbatim.
+
+Total in queue: **28** captures.
+
+---
+
+## 1. PPM Information Guide
+
+- **URL:** <https://forums.homecomingservers.com/topic/5290-procs-per-minute-ppm-information-guide/>
+- **Target:** `mechanics/ppm-information-guide.md`
+- **Topics:** mechanics, procs
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/5290-procs-per-minute-ppm-information-guide/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: PPM Information Guide
+url: https://forums.homecomingservers.com/topic/5290-procs-per-minute-ppm-information-guide/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, procs]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/5290-procs-per-minute-ppm-information-guide/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 2. Comprehensive Incarnate Guide
+
+- **URL:** <https://forums.homecomingservers.com/topic/8727-a-comprehensive-guide-to-the-incarnate-system/>
+- **Target:** `mechanics/incarnate-system-comprehensive.md`
+- **Topics:** mechanics, incarnates
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/8727-a-comprehensive-guide-to-the-incarnate-system/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Comprehensive Incarnate Guide
+url: https://forums.homecomingservers.com/topic/8727-a-comprehensive-guide-to-the-incarnate-system/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, incarnates]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/8727-a-comprehensive-guide-to-the-incarnate-system/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 3. Wavicle's What Really Matters
+
+- **URL:** <https://forums.homecomingservers.com/topic/31511-wavicles-guide-to-what-really-matters/#comment-700039>
+- **Target:** `mechanics/wavicle-what-really-matters.md`
+- **Topics:** mechanics, min-maxing, build-philosophy
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/31511-wavicles-guide-to-what-really-matters/#comment-700039
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Wavicle's What Really Matters
+url: https://forums.homecomingservers.com/topic/31511-wavicles-guide-to-what-really-matters/#comment-700039
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, min-maxing, build-philosophy]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/31511-wavicles-guide-to-what-really-matters/#comment-700039
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 4. Recharge Guide
+
+- **URL:** <https://forums.homecomingservers.com/topic/12685-recharge-guide/>
+- **Target:** `mechanics/recharge-guide.md`
+- **Topics:** mechanics, recharge
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/12685-recharge-guide/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Recharge Guide
+url: https://forums.homecomingservers.com/topic/12685-recharge-guide/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, recharge]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/12685-recharge-guide/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 5. Survivability Tool
+
+- **URL:** <https://forums.homecomingservers.com/topic/12212-the-survivability-tool/>
+- **Target:** `tools/survivability-tool.md`
+- **Topics:** tools, survivability
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/12212-the-survivability-tool/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Survivability Tool
+url: https://forums.homecomingservers.com/topic/12212-the-survivability-tool/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [tools, survivability]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/12212-the-survivability-tool/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 6. Common Resist Breakdown (Galaxy Brain)
+
+- **URL:** <https://forums.homecomingservers.com/topic/11157-galaxy-brains-common-resist-breakdown/#comment-395065>
+- **Target:** `mechanics/galaxy-brain-resist-breakdown.md`
+- **Topics:** mechanics, resistance
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/11157-galaxy-brains-common-resist-breakdown/#comment-395065
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Common Resist Breakdown (Galaxy Brain)
+url: https://forums.homecomingservers.com/topic/11157-galaxy-brains-common-resist-breakdown/#comment-395065
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, resistance]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/11157-galaxy-brains-common-resist-breakdown/#comment-395065
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 7. Health & Regeneration mechanics
+
+- **URL:** <https://forums.homecomingservers.com/topic/2065-a-guide-to-health-amp-regeneration-and-how-they-work/#comment-103380>
+- **Target:** `mechanics/health-and-regen-explained.md`
+- **Topics:** mechanics, regen, hp
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/2065-a-guide-to-health-amp-regeneration-and-how-they-work/#comment-103380
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Health & Regeneration mechanics
+url: https://forums.homecomingservers.com/topic/2065-a-guide-to-health-amp-regeneration-and-how-they-work/#comment-103380
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, regen, hp]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/2065-a-guide-to-health-amp-regeneration-and-how-they-work/#comment-103380
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 8. Nic's Guide to IOs with Impact
+
+- **URL:** <https://forums.homecomingservers.com/topic/4278-nics-guide-to-ios-with-impact/>
+- **Target:** `mechanics/nics-ios-with-impact.md`
+- **Topics:** mechanics, set-bonuses, slotting
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/4278-nics-guide-to-ios-with-impact/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Nic's Guide to IOs with Impact
+url: https://forums.homecomingservers.com/topic/4278-nics-guide-to-ios-with-impact/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, set-bonuses, slotting]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/4278-nics-guide-to-ios-with-impact/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 9. Pretty Damned Spectacular IO/SetIO Guide
+
+- **URL:** <https://forums.homecomingservers.com/topic/23164-a-pretty-damned-spectacular-guide-on-leveling-with-ios-and-io-sets/#comment-472634>
+- **Target:** `mechanics/pretty-damned-spectacular-io-guide.md`
+- **Topics:** mechanics, io-leveling
+- **Trust:** single-author-opinion
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/23164-a-pretty-damned-spectacular-guide-on-leveling-with-ios-and-io-sets/#comment-472634
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Pretty Damned Spectacular IO/SetIO Guide
+url: https://forums.homecomingservers.com/topic/23164-a-pretty-damned-spectacular-guide-on-leveling-with-ios-and-io-sets/#comment-472634
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, io-leveling]
+trust: single-author-opinion
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/23164-a-pretty-damned-spectacular-guide-on-leveling-with-ios-and-io-sets/#comment-472634
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 10. Instant Improvements: IO Cheat Sheet
+
+- **URL:** <https://forums.homecomingservers.com/topic/12286-instant-improvements-a-cheat-sheet-for-io-enhancements/#comment-317143>
+- **Target:** `mechanics/instant-improvements-io-cheat-sheet.md`
+- **Topics:** mechanics, io-cheatsheet
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/12286-instant-improvements-a-cheat-sheet-for-io-enhancements/#comment-317143
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Instant Improvements: IO Cheat Sheet
+url: https://forums.homecomingservers.com/topic/12286-instant-improvements-a-cheat-sheet-for-io-enhancements/#comment-317143
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, io-cheatsheet]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/12286-instant-improvements-a-cheat-sheet-for-io-enhancements/#comment-317143
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 11. HP/Regen Proc Cheat Sheet
+
+- **URL:** <https://forums.homecomingservers.com/topic/19022-hpregen-proc-cheat-sheet/>
+- **Target:** `mechanics/hp-regen-proc-cheatsheet.md`
+- **Topics:** mechanics, procs, hp, regen
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/19022-hpregen-proc-cheat-sheet/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: HP/Regen Proc Cheat Sheet
+url: https://forums.homecomingservers.com/topic/19022-hpregen-proc-cheat-sheet/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, procs, hp, regen]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/19022-hpregen-proc-cheat-sheet/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 12. Slotting for Endurance Recovery — Cheat Sheet
+
+- **URL:** <https://forums.homecomingservers.com/topic/8892-slotting-for-endurance-recovery-a-cheat-sheet/#comment-488125>
+- **Target:** `mechanics/endurance-recovery-cheatsheet.md`
+- **Topics:** mechanics, endurance, slotting
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/8892-slotting-for-endurance-recovery-a-cheat-sheet/#comment-488125
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Slotting for Endurance Recovery — Cheat Sheet
+url: https://forums.homecomingservers.com/topic/8892-slotting-for-endurance-recovery-a-cheat-sheet/#comment-488125
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, endurance, slotting]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/8892-slotting-for-endurance-recovery-a-cheat-sheet/#comment-488125
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 13. Heatstroke's End Management & Stamina Tips
+
+- **URL:** <https://forums.homecomingservers.com/topic/40712-heatstrokes-helpful-hints-on-end-management-and-stamina/>
+- **Target:** `mechanics/heatstroke-end-management.md`
+- **Topics:** mechanics, endurance
+- **Trust:** single-author-opinion
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/40712-heatstrokes-helpful-hints-on-end-management-and-stamina/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Heatstroke's End Management & Stamina Tips
+url: https://forums.homecomingservers.com/topic/40712-heatstrokes-helpful-hints-on-end-management-and-stamina/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, endurance]
+trust: single-author-opinion
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/40712-heatstrokes-helpful-hints-on-end-management-and-stamina/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 14. Attuning / Catalyzing Enhancements
+
+- **URL:** <https://forums.homecomingservers.com/topic/2105-attuningcatalyzing-enhancements/>
+- **Target:** `mechanics/attuning-and-catalyzing.md`
+- **Topics:** mechanics, ios
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/2105-attuningcatalyzing-enhancements/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Attuning / Catalyzing Enhancements
+url: https://forums.homecomingservers.com/topic/2105-attuningcatalyzing-enhancements/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, ios]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/2105-attuningcatalyzing-enhancements/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 15. Enhancement Converters Crash Course
+
+- **URL:** <https://forums.homecomingservers.com/topic/1682-a-quick-and-dirty-crash-course-in-enhancement-converters/#comment-21763>
+- **Target:** `mechanics/enhancement-converters.md`
+- **Topics:** mechanics, ios, market
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/1682-a-quick-and-dirty-crash-course-in-enhancement-converters/#comment-21763
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Enhancement Converters Crash Course
+url: https://forums.homecomingservers.com/topic/1682-a-quick-and-dirty-crash-course-in-enhancement-converters/#comment-21763
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, ios, market]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/1682-a-quick-and-dirty-crash-course-in-enhancement-converters/#comment-21763
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 16. Don't Fear the Respec — Multiple Builds & Unslotters
+
+- **URL:** <https://forums.homecomingservers.com/topic/43047-dont-fear-the-respec-respecs-multiple-builds-and-unslotters/>
+- **Target:** `mechanics/respecs-multibuilds-unslotters.md`
+- **Topics:** mechanics, respecs, multibuilds
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/43047-dont-fear-the-respec-respecs-multiple-builds-and-unslotters/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Don't Fear the Respec — Multiple Builds & Unslotters
+url: https://forums.homecomingservers.com/topic/43047-dont-fear-the-respec-respecs-multiple-builds-and-unslotters/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, respecs, multibuilds]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/43047-dont-fear-the-respec-respecs-multiple-builds-and-unslotters/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 25. For a new character leveling, how do you slot? (Sovera)
+
+- **URL:** <https://forums.homecomingservers.com/topic/63957-for-a-new-character-leveling-how-do-you-slot/>
+- **Target:** `leveling/slotting-while-leveling-sovera.md`
+- **Topics:** leveling, slotting, ios
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/63957-for-a-new-character-leveling-how-do-you-slot/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: For a new character leveling, how do you slot? (Sovera)
+url: https://forums.homecomingservers.com/topic/63957-for-a-new-character-leveling-how-do-you-slot/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [leveling, slotting, ios]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/63957-for-a-new-character-leveling-how-do-you-slot/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 26. Ultimate Guide to Enhancements and How to Make Them (Yomo)
+
+- **URL:** <https://forums.homecomingservers.com/topic/62648-the-ultimate-guide-to-enhancements-and-how-to-make-them/>
+- **Target:** `io-sets/enhancements-and-how-to-make-them.md`
+- **Topics:** io-sets, converters, market
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/62648-the-ultimate-guide-to-enhancements-and-how-to-make-them/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Ultimate Guide to Enhancements and How to Make Them (Yomo)
+url: https://forums.homecomingservers.com/topic/62648-the-ultimate-guide-to-enhancements-and-how-to-make-them/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [io-sets, converters, market]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/62648-the-ultimate-guide-to-enhancements-and-how-to-make-them/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 17. Accolade Guide — 4 Passive Bonuses
+
+- **URL:** <https://forums.homecomingservers.com/topic/4233-accolade-guide-4-passive-bonuses/>
+- **Target:** `mechanics/accolade-guide-passive-bonuses.md`
+- **Topics:** mechanics, accolades
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/4233-accolade-guide-4-passive-bonuses/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Accolade Guide — 4 Passive Bonuses
+url: https://forums.homecomingservers.com/topic/4233-accolade-guide-4-passive-bonuses/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, accolades]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/4233-accolade-guide-4-passive-bonuses/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 18. Guide to Accolades and More
+
+- **URL:** <https://forums.homecomingservers.com/topic/43258-guide-to-accolades-and-more/>
+- **Target:** `mechanics/accolades-and-more.md`
+- **Topics:** mechanics, accolades
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/43258-guide-to-accolades-and-more/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Guide to Accolades and More
+url: https://forums.homecomingservers.com/topic/43258-guide-to-accolades-and-more/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [mechanics, accolades]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/43258-guide-to-accolades-and-more/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 19. I28P1 Farming Microguide — Maps & Builds
+
+- **URL:** <https://forums.homecomingservers.com/topic/37390-issue-28-page-1-farming-microguide-maps-builds/page/13/#comment-703643>
+- **Target:** `meta-builds/farming-i28p1-microguide.md`
+- **Topics:** meta-build, farming, brute, scrapper
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/37390-issue-28-page-1-farming-microguide-maps-builds/page/13/#comment-703643
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: I28P1 Farming Microguide — Maps & Builds
+url: https://forums.homecomingservers.com/topic/37390-issue-28-page-1-farming-microguide-maps-builds/page/13/#comment-703643
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [meta-build, farming, brute, scrapper]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/37390-issue-28-page-1-farming-microguide-maps-builds/page/13/#comment-703643
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 20. Invulnerability Tankers — Soft-cap Defense
+
+- **URL:** <https://forums.homecomingservers.com/topic/1642-invulnerability-tankers-soft-cap-defense/>
+- **Target:** `archetypes/tanker-invulnerability-softcap.md`
+- **Topics:** tanker, invulnerability, soft-cap
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/1642-invulnerability-tankers-soft-cap-defense/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Invulnerability Tankers — Soft-cap Defense
+url: https://forums.homecomingservers.com/topic/1642-invulnerability-tankers-soft-cap-defense/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [tanker, invulnerability, soft-cap]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/1642-invulnerability-tankers-soft-cap-defense/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 27. Dominator Benchmarks
+
+- **URL:** <https://forums.homecomingservers.com/topic/63824-dominator-benchmarks/>
+- **Target:** `archetypes/dominator/dominator-benchmarks.md`
+- **Topics:** dominator, benchmarks, perma-dom
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/63824-dominator-benchmarks/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Dominator Benchmarks
+url: https://forums.homecomingservers.com/topic/63824-dominator-benchmarks/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [dominator, benchmarks, perma-dom]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/63824-dominator-benchmarks/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 28. The Rich Alt's Guide to Perma-Dom
+
+- **URL:** <https://forums.homecomingservers.com/topic/47026-the-rich-alts-guide-to-perma-dom/>
+- **Target:** `archetypes/dominator/rich-alt-guide-to-perma-dom.md`
+- **Topics:** dominator, perma-dom, recharge
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/47026-the-rich-alts-guide-to-perma-dom/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: The Rich Alt's Guide to Perma-Dom
+url: https://forums.homecomingservers.com/topic/47026-the-rich-alts-guide-to-perma-dom/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [dominator, perma-dom, recharge]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/47026-the-rich-alts-guide-to-perma-dom/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 21. Time Manipulation Guide
+
+- **URL:** <https://forums.homecomingservers.com/topic/7238-time-manipulation-guide/>
+- **Target:** `powersets/time-manipulation.md`
+- **Topics:** powerset, support, time
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/7238-time-manipulation-guide/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Time Manipulation Guide
+url: https://forums.homecomingservers.com/topic/7238-time-manipulation-guide/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [powerset, support, time]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/7238-time-manipulation-guide/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 22. Poison Guide
+
+- **URL:** <https://forums.homecomingservers.com/topic/17683-poison-guide-a-guide-to-the-most-deadly-poisons/>
+- **Target:** `powersets/poison.md`
+- **Topics:** powerset, debuff, poison
+- **Trust:** community-consensus
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/17683-poison-guide-a-guide-to-the-most-deadly-poisons/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Poison Guide
+url: https://forums.homecomingservers.com/topic/17683-poison-guide-a-guide-to-the-most-deadly-poisons/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [powerset, debuff, poison]
+trust: community-consensus
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/17683-poison-guide-a-guide-to-the-most-deadly-poisons/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 23. Energy Melee — Murder Bunny
+
+- **URL:** <https://forums.homecomingservers.com/topic/2915-enen-the-murder-bunny/>
+- **Target:** `powersets/energy-melee.md`
+- **Topics:** powerset, melee, energy-melee
+- **Trust:** single-author-opinion
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/2915-enen-the-murder-bunny/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Energy Melee — Murder Bunny
+url: https://forums.homecomingservers.com/topic/2915-enen-the-murder-bunny/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [powerset, melee, energy-melee]
+trust: single-author-opinion
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/2915-enen-the-murder-bunny/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
+
+## 24. Guide Index
+
+- **URL:** <https://forums.homecomingservers.com/topic/5517-guide-index/>
+- **Target:** `_meta/guide-index.md`
+- **Topics:** meta, index
+- **Trust:** first-party
+
+Copy everything between the ~~~ markers below and paste it into the Claude for Chrome side panel:
+
+~~~
+You're reading a Homecoming City of Heroes forum thread. Extract it into a
+markdown file matching the format below.
+
+IMPORTANT — multi-post guides. Many threads spread the guide across several
+sequential posts by the same author (post 1: intro / table of contents,
+post 2: section A, post 3: section B, ...). Walk the entire thread and
+treat ALL posts by the original poster (and any users the OP explicitly
+names as co-authors) as one continuous guide. Concatenate them in
+chronological order, preserving the OP's section structure and headings.
+If the OP edits a post over time, capture the latest version.
+
+Replies from other users are community discussion. Include them only if
+they materially correct, extend, or codify the guide content — and
+attribute clearly ("as @user noted in reply 17, ..."). Skip flames,
+signatures, brief praise, off-topic chatter.
+
+URL: https://forums.homecomingservers.com/topic/5517-guide-index/
+
+# Frontmatter rules (apply to every emitted block below)
+# - `trust:` is exactly one of: first-party, community-consensus, single-author-opinion.
+#   Forum user-rank labels (Members, Retired Community Rep, etc.) are not valid trust values.
+# - `authors:` is a single-line YAML array, e.g. [Bopper, tidge].
+#   Single-line keeps the index parser happy.
+# - All listed keys are required.
+
+# Embedded builds — capture each as its own block
+
+When the thread contains a complete build dump — a "Hero Plan" / "Villain Plan"
+forum-export block, a [b]Hero Plan...[/b] BBCode block, or a DataLink URL —
+extract it as a SEPARATE markdown block in the response, after the parent
+capture. Each build is its own loadable artifact and gets its own file when
+the user ingests, so it carries enough context to stand alone.
+
+If the thread contains zero embedded builds, emit only the parent capture
+and skip the per-build blocks entirely.
+
+# Required output
+
+Emit one PARENT capture block, immediately followed by zero or more BUILD
+sub-capture blocks. Use the templates exactly. Output only fenced markdown
+blocks, no other commentary.
+
+## Block 1 — PARENT capture
+
+```markdown
+---
+title: Guide Index
+url: https://forums.homecomingservers.com/topic/5517-guide-index/
+source: forums.homecomingservers.com
+authors: [<every author whose content you included>]
+date_posted: <OP's first-post date, YYYY-MM-DD, or unknown>
+date_captured: 2026-04-29
+captured_by: local-capture
+topic_tags: [meta, index]
+trust: first-party
+multi_post: <true | false>
+post_count: <number of OP/co-author posts you concatenated, e.g. 1, 4, 12>
+contradicts_data: <none | "claim X conflicts with data/Y.json — see notes">
+---
+
+## Summary
+
+3-5 bullet conclusions covering the WHOLE guide (not just the first post).
+State the conclusions; don't tease.
+
+- Top-line claim 1
+- Top-line claim 2
+- Top-line claim 3
+
+## Verbatim excerpt
+
+> Substantive paragraphs from the OP's posts in chronological order.
+> If the guide spans multiple posts, mark each with a heading like
+> "### Post 2 — Section: <name>" so the original structure is preserved.
+> Trim with [...] inside long passages; preserve every section.
+
+## Notable replies (only if materially additive)
+
+- @user_name (date) — one-line summary of the contribution + verbatim excerpt.
+
+## Build attachments
+
+List every embedded build emitted in Block 2+ below, plus any unattached
+build references (DataLink-only, .mxd attachments, etc.). When the thread
+contains no embedded builds, the section is empty.
+
+- <build title> — see Block <N> below — file: builds/<at>/<slug>.md — <archetype>, <primary>/<secondary>, <one-line summary>
+- DataLink only (no full export): <verbatim URL> — importable via MidsReborn Ctrl+I
+- .mxd file attachment: <filename> — referenced in the OP; the file itself is not retrieved by this capture
+```
+
+## Block 2+ — BUILD sub-capture (repeat once per embedded build)
+
+```markdown
+---
+title: <build name from the post, or "<AT>/<Primary>/<Secondary> — <theme>">
+parent_guide: <relative path to the parent capture, e.g. archetypes/blaster/<slug>.md>
+parent_url: https://forums.homecomingservers.com/topic/5517-guide-index/
+post_url: <URL of the specific post containing this build, with #post-N anchor when available>
+build_author: <forum handle who posted this specific build>
+date_posted: <YYYY-MM-DD of the post containing the build>
+date_captured: 2026-04-29
+captured_by: local-capture
+archetype: <Tanker | Brute | Scrapper | Stalker | Sentinel | Blaster | Corruptor | Defender | Controller | Dominator | Mastermind | Peacebringer | Warshade | Arachnos Soldier | Arachnos Widow>
+primary: <powerset name as it appears in the build>
+secondary: <powerset name>
+ancillary: <ancillary / patron pool name, or "none">
+build_goal: <one phrase, e.g. "soft-cap defense", "max damage", "perma-Hasten farmer">
+build_format: <forum-export | datalink | mxd | mixed>
+verified: false
+contradicts_data: <none | flag>
+suggested_filename: builds/<archetype-lowercase>/<slug>.md
+---
+
+## Context
+
+2-4 sentence summary covering: what the parent guide says about this build,
+why it exists, what it's optimized for, when to use it. Pull the context
+from the parent guide so this file reads cleanly on its own.
+
+## Verbatim build
+
+The complete forum-export block, BBCode and all, copied verbatim from the
+post. Preserve the source formatting. The block speaks for itself; the user
+pastes it into MidsReborn directly.
+
+## DataLink
+
+When the post includes a DataLink URL, paste it verbatim here. Omit the
+section when no DataLink is posted.
+
+## Notes from the author (if any)
+
+Author commentary that accompanies the build in the same post, copied
+verbatim. Omit the section when no author commentary is present.
+```
+
+After Claude responds, copy its message and run:
+
+~~~powershell
+& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+~~~
+
+---
