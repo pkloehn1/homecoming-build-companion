@@ -17,9 +17,9 @@ try {
     Push-Location $repoRoot
     try {
         if ($usePyLauncher) {
-            & $pythonCmd.Source -3 -m tools.dev.bootstrap_venv @args
+            & $pythonCmd.Source -3 -m scripts.dev.bootstrap_venv @args
         } else {
-            & $pythonCmd.Source -m tools.dev.bootstrap_venv @args
+            & $pythonCmd.Source -m scripts.dev.bootstrap_venv @args
         }
         if ($LASTEXITCODE -ne 0) {
             throw "bootstrap_venv failed with exit code $LASTEXITCODE."
