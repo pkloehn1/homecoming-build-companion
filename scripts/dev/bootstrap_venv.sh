@@ -9,4 +9,4 @@ if ! command -v python3 >/dev/null 2>&1; then
 fi
 
 cd "${repo_root}"
-python3 -m tools.dev.bootstrap_venv "$@"
+python3 -m scripts.dev.bootstrap_venv "$@"
