@@ -19,7 +19,19 @@ RUFF    := $(VENV_BIN)/ruff$(EXE)
 MYPY    := $(VENV_BIN)/mypy$(EXE)
 PYTEST  := $(PYTHON) -m pytest
 
-COV_PACKAGE ?= tools
+COV_PACKAGE ?= scripts
+
+# ---------------------------------------------------------------------------
+# Bootstrap (cross-platform venv + dev tooling)
+# ---------------------------------------------------------------------------
+
+.PHONY: bootstrap
+bootstrap: ## Bootstrap repo venv and dev tooling (cross-platform)
+ifeq ($(OS),Windows_NT)
+	pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/dev/Bootstrap-Venv.ps1
+else
+	./scripts/dev/bootstrap_venv.sh
+endif
 
 # ---------------------------------------------------------------------------
 # Lint / Format / Type
@@ -29,7 +41,7 @@ COV_PACKAGE ?= tools
 lint: ## Run ruff check + format --check + mypy
 	$(RUFF) check .
 	$(RUFF) format --check .
-	$(MYPY) tools
+	$(MYPY) scripts
 
 .PHONY: fix
 fix: ## Auto-fix ruff lint issues and reformat
@@ -60,7 +72,7 @@ cov-html: ## Run tests with HTML coverage report
 .PHONY: validate
 validate: ## Validate a build JSON. Usage: make validate BUILD=path/to/build.json
 	@if [ -z "$(BUILD)" ]; then echo "Usage: make validate BUILD=path/to/build.json"; exit 1; fi
-	$(PYTHON) -m tools.build_validator $(BUILD)
+	$(PYTHON) -m scripts.build_validator $(BUILD)
 
 # ---------------------------------------------------------------------------
 # Help
