@@ -4,6 +4,17 @@
 # Run all on demand: pre-commit run --all-files
 
 repos:
+  - repo: local
+    hooks:
+      - id: check-git-signing
+        name: Check Git Commit Signing
+        entry: python -m scripts.testing.hooks.check_git_signing
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages:
+          - pre-commit
+
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # v0.15.x supports target-version = "py314"; v0.8.0 caps at py313.
     rev: v0.15.12
@@ -16,7 +27,7 @@ repos:
     rev: v1.13.0
     hooks:
       - id: mypy
-        files: ^tools/
+        files: ^scripts/
         additional_dependencies:
           - types-PyYAML
 
