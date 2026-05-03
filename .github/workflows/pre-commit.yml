@@ -1,0 +1,159 @@
+---
+# Pre-commit hook parity workflow
+# Runs the local hook suite in CI for alignment.
+# Per-hook annotations emitted on failure for PR Checks tab visibility.
+
+name: Pre-commit Hooks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  merge_group:
+    branches:
+      - main
+    types:
+      - checks_requested
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  pre-commit:
+    name: Run pre-commit
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+      statuses: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e '.[dev]'
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.8"
+          terraform_wrapper: false
+
+      - name: Set up tflint
+        uses: terraform-linters/setup-tflint@v4
+        with:
+          tflint_version: v0.54.0
+
+      - name: Determine diff range
+        id: diff
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            candidate="${{ github.event.before }}"
+          else
+            candidate="origin/main"
+          fi
+          if [ "$candidate" = "0000000000000000000000000000000000000000" ]; then
+            candidate="origin/main"
+          fi
+          if ! git cat-file -e "$candidate^{commit}" 2>/dev/null; then
+            candidate="origin/main"
+          fi
+          echo "from_ref=$candidate" >> "$GITHUB_OUTPUT"
+          echo "to_ref=${{ github.sha }}" >> "$GITHUB_OUTPUT"
+
+      - name: Build SKIP list from hook classification
+        id: skip
+        shell: bash
+        run: |
+          skip=$(python -c "
+          import yaml, pathlib
+          p = pathlib.Path('.github/precommit-hook-classification.yml')
+          if p.is_file():
+              d = yaml.safe_load(p.read_text())
+              print(','.join(d.get('ci_skip', [])))
+          else:
+              print('super-linter')
+          ")
+          echo "hooks=$skip" >> "$GITHUB_OUTPUT"
+
+      - name: Run pre-commit hooks
+        id: hooks
+        shell: bash
+        env:
+          SKIP: ${{ steps.skip.outputs.hooks }}
+          SKIP_GIT_SIGNING_CHECK: "1"
+        run: |
+          set +e
+          python -m pre_commit run \
+            --color never \
+            --from-ref "${{ steps.diff.outputs.from_ref }}" \
+            --to-ref "${{ steps.diff.outputs.to_ref }}" \
+            --show-diff-on-failure 2>&1 | tee /tmp/pre-commit-output.txt
+          echo "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Annotate failed hooks
+        if: steps.hooks.outputs.exit_code != '0'
+        shell: bash
+        run: |
+          grep -E '\.{3,}Failed\s*$' /tmp/pre-commit-output.txt | while IFS= read -r line; do
+            hook_name="${line%%.*}"
+            echo "::error title=pre-commit: ${hook_name}::Hook '${hook_name}' failed"
+          done
+
+      - name: Generate hook summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "## Pre-commit Hook Results"
+            echo ""
+            echo "| Hook | Result |"
+            echo "|------|--------|"
+            while IFS= read -r line; do
+              if echo "$line" | grep -qE '\.{3,}(Passed|Failed|Skipped)'; then
+                hook="${line%%.*}"
+                if echo "$line" | grep -q 'Passed'; then
+                  echo "| ${hook} | Passed |"
+                elif echo "$line" | grep -q 'Failed'; then
+                  echo "| ${hook} | Failed |"
+                elif echo "$line" | grep -q 'Skipped'; then
+                  echo "| ${hook} | Skipped |"
+                fi
+              fi
+            done < /tmp/pre-commit-output.txt
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail if hooks failed
+        if: steps.hooks.outputs.exit_code != '0'
+        shell: bash
+        run: exit 1
+
+      - name: Report required status context
+        if: ${{ github.event_name == 'pull_request' && always() }}
+        uses: ./.github/actions/report-status-context
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-number: ${{ github.event.pull_request.number }}
+          job-status: ${{ job.status }}
+          status-context: Pre-commit Hooks / Run pre-commit
+          target-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+...

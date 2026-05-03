@@ -1,0 +1,42 @@
+[type]([scope]): [Brief description]
+
+User additions:
+- [Specific user direction]
+
+Augment edits:
+- [Specific change 1]
+- [Specific change 2]
+
+Validation:
+- [tests] [what was added/updated]
+- [results] [key outputs, exit codes]
+
+# STRONGLY RECOMMENDED: add an issue trailer to EVERY commit.
+#
+# The PR auto-summary (scripts.github.pr_auto_summary) groups commits
+# under the issue they reference when the PR closes 2+ issues.
+# Commits with no trailer fall into an "Other changes" block -- the
+# grouping degrades gracefully but loses signal.
+#
+# Pick one or both and include the trailer on a line of its own at
+# the end of the message body:
+#
+#     Refs #123
+#     Closes #456
+#
+# `Refs #N`   -- the commit contributes to issue N (no auto-close).
+# `Closes #N` -- the commit closes issue N on merge.
+# `Fixes #N`  -- same as Closes (GitHub alias).
+#
+# Multiple trailers are valid:
+#
+#     Refs #298
+#     Refs #306
+#
+# If a single commit genuinely has no linked issue (rare), omit the
+# trailer and accept the "Other changes" grouping.
+
+Refs #<issue-number>
+
+Co-Authored-By: Augment (GPT-5)
+Requested-by: <Your Name>
