@@ -1,0 +1,46 @@
+{
+  "name": "LightningLeopard",
+  "display_name": "LightningLeopard",
+  "display_fullname": "Tsoo.LightningLeopard",
+  "display_help": "Tsoo",
+  "display_short_help": "Tsoo",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/TSOO/LIGHTNINGLEOPARD.POWERSETS",
+  "icon": "lightningleopard_set.png",
+  "requires": "",
+  "power_names": [
+    "Tsoo.LightningLeopard.Charged_Brawl",
+    "Tsoo.LightningLeopard.Havoc_Punch",
+    "Tsoo.LightningLeopard.Thunder_Strike",
+    "Tsoo.LightningLeopard.Lightning_Bolt",
+    "Tsoo.LightningLeopard.Ball_Lightning",
+    "Tsoo.LightningLeopard.Lightning_Clap",
+    "Tsoo.LightningLeopard.Lightning_Storm"
+  ],
+  "power_display_names": [
+    "Charged Brawl",
+    "Havoc Punch",
+    "Thunder Strike",
+    "Lightning Bolt",
+    "Ball Lightning",
+    "Lightning Clap",
+    "Lightning Storm"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Energy/Smash), Foe Sleep, -End, -Recovery",
+    "Melee, Heavy DMG(Energy/Smash), Foe Sleep, -End, -Recovery",
+    "Melee (Targeted AoE), Superior DMG(Energy/Smash), Foe Disorient, Knockback, -End, -Recovery",
+    "Ranged, High DMG(Energy), Foe -End, -Recovery",
+    "Ranged (Targeted AoE), Moderate DoT(Energy), Foe -End, -Recovery",
+    "PBAoE, Foe Disorient, Knockback",
+    "Summon Lightning Storm"
+  ]
+}

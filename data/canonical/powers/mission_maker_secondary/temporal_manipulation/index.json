@@ -1,0 +1,54 @@
+{
+  "name": "Temporal_Manipulation",
+  "display_name": "Temporal Manipulation",
+  "display_fullname": "Mission Maker Secondary.Temporal Manipulation",
+  "display_help": "By gazing into the flow of time you are able to manipulate time itself. Time Manipulation allows the wielder to inflict crippling debuffs, and cause mental damage and exhausting your foes by showing them their future and accelerating their aging.",
+  "display_short_help": "Temporal Manipulation",
+  "available_level": [
+    0,
+    1,
+    3,
+    9,
+    15,
+    19,
+    27,
+    34,
+    37
+  ],
+  "source_file": "DEFS/POWERS/MISSION_MAKER_SECONDARY/TEMPORAL_MANIPULATION.POWERSETS",
+  "icon": "temporal_manipulation_set.png",
+  "requires": "",
+  "power_names": [
+    "Mission_Maker_Secondary.Temporal_Manipulation.Time_Wall",
+    "Mission_Maker_Secondary.Temporal_Manipulation.Aging_Touch",
+    "Mission_Maker_Secondary.Temporal_Manipulation.Time_Stop",
+    "Mission_Maker_Secondary.Temporal_Manipulation.Chronos",
+    "Mission_Maker_Secondary.Temporal_Manipulation.End_of_Time",
+    "Mission_Maker_Secondary.Temporal_Manipulation.Temporal_Healing",
+    "Mission_Maker_Secondary.Temporal_Manipulation.Future_Pain",
+    "Mission_Maker_Secondary.Temporal_Manipulation.Time_Shift",
+    "Mission_Maker_Secondary.Temporal_Manipulation.Time_Lord"
+  ],
+  "power_display_names": [
+    "Time Crawl",
+    "Aging Touch",
+    "Time Stop",
+    "Chronos",
+    "End of Time",
+    "Temporal Healing",
+    "Future Pain",
+    "Time Shift",
+    "Time Lord"
+  ],
+  "power_short_helps": [
+    "Ranged Foe, -Speed, -Recharge, -Regen, Special",
+    "Melee, Moderate DMG(Psionic)",
+    "Ranged Hold, Foe -Regen, -Heal",
+    "Self +Damage, +Recharge, +ToHit",
+    "PBAoE, Moderate DMG(Cold/Energy)",
+    "Self +Absorb, +Recovery, +Res(Slow, Regen Debuff)",
+    "Melee, Foe Fear, Superior DMG(Psionic)",
+    "AoE, Foe Disorient, -Speed, -ToHit",
+    "Auto: Self +Recharge, Res (Slow, Energy, Stun)"
+  ]
+}

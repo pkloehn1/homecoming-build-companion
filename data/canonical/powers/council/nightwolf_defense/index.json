@@ -1,0 +1,26 @@
+{
+  "name": "Nightwolf_Defense",
+  "display_name": "Nightwolf_Defense",
+  "display_fullname": "Council.Nightwolf Defense",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    39
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/NIGHTWOLF_DEFENSE.POWERSETS",
+  "icon": "nightwolf_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Nightwolf_Defense.Resistance",
+    "Council.Nightwolf_Defense.Pack_Tactics"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Pack Tactics"
+  ],
+  "power_short_helps": [
+    "Auto Res(All Dam, Immobilization)",
+    "Auto: Self +ToHit, +DMG, -DEF(Special)"
+  ]
+}

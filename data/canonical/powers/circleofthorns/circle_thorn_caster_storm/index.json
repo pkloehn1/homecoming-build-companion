@@ -1,0 +1,38 @@
+{
+  "name": "Circle_Thorn_Caster_Storm",
+  "display_name": "Circle_Thorn_Caster_Storm",
+  "display_fullname": "CircleOfThorns.Circle Thorn Caster Storm",
+  "display_help": "Circle of Thorns",
+  "display_short_help": "Circle of Thorns",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CIRCLEOFTHORNS/CIRCLE_THORN_CASTER_STORM.POWERSETS",
+  "icon": "circle_thorn_caster_cold_set.png",
+  "requires": "",
+  "power_names": [
+    "CircleOfThorns.Circle_Thorn_Caster_Storm.Gust",
+    "CircleOfThorns.Circle_Thorn_Caster_Storm.Hailstones",
+    "CircleOfThorns.Circle_Thorn_Caster_Storm.Charged_Brawl",
+    "CircleOfThorns.Circle_Thorn_Caster_Storm.Lightning_Strike",
+    "CircleOfThorns.Circle_Thorn_Caster_Storm.Frozen_Armor"
+  ],
+  "power_display_names": [
+    "Gust",
+    "Hailstones",
+    "Charged Brawl",
+    "Lightning Strike",
+    "Frozen Armor"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Smash), Minor DoT(Smash), Foe -Fly",
+    "Ranged, High DMG(Cold), Foe Chance for Knockdown",
+    "Melee, Moderate DMG(Energy/Smash), Foe Sleep, -End, -Recovery",
+    "Ranged, Extreme DMG(Energy), Foe -End, Disorient",
+    "Self, +Def(Smash, Lethal), +Res(Cold)"
+  ]
+}

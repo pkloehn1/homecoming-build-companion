@@ -1,0 +1,83 @@
+{
+  "$comment": "Canonical attack chains seeded from community knowledge. Cross-reference against arcanatime + recharge values in data/canonical/powers/*. Add chains as you capture them from forum threads; record provenance in source_capture.",
+  "schema_version": 1,
+  "$schema_doc": "Each entry: archetype + primary + powers (in chain order) + required_global_recharge (% global rech needed for gapless 3-chain at +95% slotted rech) + source_capture (path under community/ once captured).",
+  "examples": [
+    {
+      "name": "Tanker SuperStrength 3-chain (KB-included)",
+      "archetype": "Tanker",
+      "primary": "Super_Strength",
+      "powers": ["Punch", "Haymaker", "Knockout_Blow"],
+      "required_global_recharge_pct": 250,
+      "notes": "Tight chain. Requires perma-Hasten (+167%) + Spiritual Alpha (+33%) + ~50% from sets to fit Knockout Blow's 25-sec base recharge into a 5.4-sec cycle. Easier alternative: drop KB from chain, fire on cooldown.",
+      "source_capture": null,
+      "dps_estimate_pylon": null
+    },
+    {
+      "name": "Brute Foot Stomp on cooldown (AoE filler)",
+      "archetype": "Brute",
+      "primary": "Super_Strength",
+      "powers": ["Foot_Stomp"],
+      "required_global_recharge_pct": 100,
+      "notes": "20-sec base recharge → ~6.7sec at +200% global. Use as the AoE 'tick'; fill with Punch/Haymaker single-target between fires. Force Feedback +Recharge proc in Foot Stomp adds +100% rech proc on KD targets — synergistic.",
+      "source_capture": null,
+      "dps_estimate_pylon": null
+    },
+    {
+      "name": "Stalker Energy Melee AS-cycle (procmonster)",
+      "archetype": "Stalker",
+      "primary": "Energy_Melee",
+      "powers": ["Build_Up", "Assassin_Strike", "Total_Focus"],
+      "required_global_recharge_pct": 100,
+      "notes": "Procmonster build: AS slotted with 4-5 damage procs, perma-Hasten avoided to preserve PPM chance. Build Up + AS critical = ~600+ dmg single hit. Total Focus on cooldown also proc-loaded.",
+      "source_capture": null,
+      "dps_estimate_pylon": null
+    },
+    {
+      "name": "Blaster Fire/Atomic 3-chain",
+      "archetype": "Blaster",
+      "primary": "Fire_Blast",
+      "powers": ["Fire_Blast", "Fire_Ball", "Blaze"],
+      "required_global_recharge_pct": 167,
+      "notes": "Standard ranged 3-chain. Fire_Blast (T1) → Fire_Ball (T3 AoE) → Blaze (T8 heavy). Perma-Hasten + Aim/Build Up rotation. Inferno on cooldown for clears.",
+      "source_capture": null,
+      "dps_estimate_pylon": null
+    },
+    {
+      "name": "Dominator Permadom rotation",
+      "archetype": "Dominator",
+      "primary": "Mind_Control",
+      "powers": ["Domination", "Telekinetic_Thrust", "Total_Domination"],
+      "required_global_recharge_pct": 165,
+      "notes": "Permadom requires +165% global rech (90sec dom recharge / 90sec duration). Domination always-up gives +25% Mez Mag + endurance refund. Heavy assault attack on cooldown.",
+      "source_capture": null,
+      "dps_estimate_pylon": null
+    },
+    {
+      "name": "Sentinel Snipe-cycle (post-i24 fast snipes)",
+      "archetype": "Sentinel",
+      "primary": "Beam_Rifle",
+      "powers": ["Aim", "Charged_Shot", "Penetrating_Ray"],
+      "required_global_recharge_pct": 130,
+      "notes": "Aim or +22% ToHit converts Penetrating Ray to fast snipe (1.32 sec cast). Slot snipe with damage procs (Apocalypse, Sting of the Manticore). Cycle: ToHit buff → snipe → fillers → snipe.",
+      "source_capture": null,
+      "dps_estimate_pylon": null
+    },
+    {
+      "name": "Brute Energy Melee Total Focus rotation",
+      "archetype": "Brute",
+      "primary": "Energy_Melee",
+      "powers": ["Build_Up", "Total_Focus", "Energy_Punch", "Bone_Smasher"],
+      "required_global_recharge_pct": 175,
+      "notes": "Total Focus (15sec base) on cooldown with 5 damage procs. Energy Punch + Bone Smasher fill. Brute Fury needs the rapid filler attacks to scale damage.",
+      "source_capture": null,
+      "dps_estimate_pylon": null
+    }
+  ],
+  "$todo": [
+    "Capture Pylon DPS test results from forum threads to fill dps_estimate_pylon.",
+    "Add chains for Mastermind pet rotations (different math; not a player attack chain).",
+    "Add Defender debuff cycles (target debuff stacking + main attack).",
+    "Add chain calculator references / tools threads."
+  ]
+}

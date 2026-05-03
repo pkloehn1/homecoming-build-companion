@@ -1,0 +1,104 @@
+{
+  "name": "PNCB_Minion",
+  "gender": "GENDER_NEUTER",
+  "group_name": "PNCB",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Humanoid",
+    "HumanSkeleton"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 30,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_MINION",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "minion_grunt",
+    "description": "The members of the Port Noble Citizen's Brigade are armed citizens standing up for their right and freedoms after the collapse of the Council in Striga Isle. The Patrollers are the least trained, and so have been given some special armaments to shore up their lack of expertise.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "V_ParagonPolice.Police_Assault_Rifle.Assault_Rifle",
+      "V_ParagonPolice.Police_Assault_Rifle.Assault_Rifle_Spray_Lead",
+      "Council.MartialArts.Thunder_Kick",
+      "Council.MartialArts.Storm_Kick",
+      "Council.Flamethrower.Flamethrower"
+    ],
+    "power_display_names": [
+      "Assault Rifle",
+      "Assault Rifle Spray Lead",
+      "Thunder Kick",
+      "Storm Kick",
+      "Flamethrower"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "V_ParagonPolice",
+        "power_set": "Police_Assault_Rifle",
+        "power": "Assault_Rifle",
+        "level": 0
+      },
+      {
+        "power_category": "V_ParagonPolice",
+        "power_set": "Police_Assault_Rifle",
+        "power": "Assault_Rifle_Spray_Lead",
+        "level": 0
+      },
+      {
+        "power_category": "Council",
+        "power_set": "MartialArts",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Council",
+        "power_set": "Flamethrower",
+        "power": "Flamethrower",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 30,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Port Noble Patroller"
+      ],
+      "costumes": [
+        "PNCB_min_f_01",
+        "PNCB_min_f_02",
+        "PNCB_min_m_01",
+        "PNCB_min_m_02",
+        "PNCB_min_m_03"
+      ]
+    }
+  ]
+}

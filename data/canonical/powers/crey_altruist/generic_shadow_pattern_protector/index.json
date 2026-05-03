@@ -1,0 +1,54 @@
+{
+  "name": "Generic_Shadow_Pattern_Protector",
+  "display_name": "Generic Shadow Pattern Protector",
+  "display_fullname": "Crey Altruist.Generic Shadow Pattern Protector",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/GENERIC_SHADOW_PATTERN_PROTECTOR.POWERSETS",
+  "icon": "generic_shadow_pattern_protector_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Generic_Shadow_Pattern_Protector.Shadow_Punch",
+    "Crey_Altruist.Generic_Shadow_Pattern_Protector.Smite",
+    "Crey_Altruist.Generic_Shadow_Pattern_Protector.Gloom",
+    "Crey_Altruist.Generic_Shadow_Pattern_Protector.Siphon_Life",
+    "Crey_Altruist.Generic_Shadow_Pattern_Protector.Midnight_Grasp",
+    "Crey_Altruist.Generic_Shadow_Pattern_Protector.Life_Drain",
+    "Crey_Altruist.Generic_Shadow_Pattern_Protector.Dark_Blast",
+    "Crey_Altruist.Generic_Shadow_Pattern_Protector.Tenebrous_Tentacles",
+    "Crey_Altruist.Generic_Shadow_Pattern_Protector.Dark_Embrace"
+  ],
+  "power_display_names": [
+    "Shadow Punch",
+    "Smite",
+    "Gloom",
+    "Siphon Life",
+    "Midnight Grasp",
+    "Life Drain",
+    "Dark Blast",
+    "Tenebrous Tentacles",
+    "Dark Embrace"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Negative/Smash), Foe -ToHit",
+    "Melee, Heavy DMG(Negative/Smash), Foe -ToHit",
+    "Ranged, High DoT(Negative), Foe -ToHit",
+    "Melee, Superior DMG(Negative), Foe -ToHit, Self Heal",
+    "Melee, Extreme DoT(Negative), Foe Immobilize, -ToHit",
+    "Ranged, High DMG(Negative), Foe -ToHit, Self Heal",
+    "Ranged, Moderate DMG(Negative), Foe -ToHit",
+    "Ranged (Cone), Moderate DoT(Negative), Foe Immobilize, -ToHit",
+    "Toggle: Self +Res(Smash, Lethal, Negative, Toxic)"
+  ]
+}

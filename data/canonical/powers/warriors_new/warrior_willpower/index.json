@@ -1,0 +1,26 @@
+{
+  "name": "Warrior_Willpower",
+  "display_name": "Warrior_Willpower",
+  "display_fullname": "Warriors New.Warrior Willpower",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    39,
+    39
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_WILLPOWER.POWERSETS",
+  "icon": "warrior_willpower_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Willpower.High_Pain_Tolerance",
+    "Warriors_New.Warrior_Willpower.Heightened_Senses"
+  ],
+  "power_display_names": [
+    "Willpower",
+    "Heightened Senses"
+  ],
+  "power_short_helps": [
+    "Auto: Self +Res(All), +MaxHP, +Regeneration, +Recovery",
+    "Toggle: Self +DEF(Smash, Lethal, Fire, Cold, Energy, Negative), +Res(Confuse, Fear, Hold, Immobilize, Disorient, Sleep, Knockback), +Perception"
+  ]
+}

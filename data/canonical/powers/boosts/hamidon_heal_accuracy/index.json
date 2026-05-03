@@ -1,0 +1,22 @@
+{
+  "name": "Hamidon_Heal_Accuracy",
+  "display_name": "Hamidon Heal Accuracy",
+  "display_fullname": "Boosts.Hamidon Heal Accuracy",
+  "display_help": "Enhances the healing ability and the accuracy of a power.",
+  "display_short_help": "Hamidon (All Origins)",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/HAMIDON_HEAL_ACCURACY.POWERSETS",
+  "icon": "hamidon_heal_endurance_discount_set.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Hamidon_Heal_Accuracy.Hamidon_Heal_Accuracy"
+  ],
+  "power_display_names": [
+    "Chloroplast Exposure (Acc/Heal/Absorb)"
+  ],
+  "power_short_helps": [
+    "Enhances Heal, Enhances Absorb, and Enhances Accuracy"
+  ]
+}

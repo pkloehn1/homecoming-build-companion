@@ -1,0 +1,22 @@
+{
+  "name": "Freaklok",
+  "display_name": "Freaklok",
+  "display_fullname": "Redirects.Freaklok",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/REDIRECTS/FREAKLOK.POWERSETS",
+  "icon": "freaklok_set.png",
+  "requires": "",
+  "power_names": [
+    "Redirects.Freaklok.Immolation"
+  ],
+  "power_display_names": [
+    "Immolation"
+  ],
+  "power_short_helps": [
+    "Post Death Special: PBAoE, Ally +ToHit, +DMG, +Recharge"
+  ]
+}

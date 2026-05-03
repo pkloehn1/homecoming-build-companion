@@ -1,0 +1,30 @@
+{
+  "name": "Altruist_Deadly_Queen_Offense",
+  "display_name": "Deadly Queen Offense",
+  "display_fullname": "Crey Altruist.Deadly Queen Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_DEADLY_QUEEN_OFFENSE.POWERSETS",
+  "icon": "altruist_deadly_queen_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Deadly_Queen_Offense.Dragons_Tail",
+    "Crey_Altruist.Altruist_Deadly_Queen_Offense.Spinning_Kick",
+    "Crey_Altruist.Altruist_Deadly_Queen_Offense.Thunder_Kick"
+  ],
+  "power_display_names": [
+    "Dragon's Tail",
+    "Spinning Kick",
+    "Thunder Kick"
+  ],
+  "power_short_helps": [
+    "PBAoE Melee, Moderate DMG(Smash), Foe Knockdown",
+    "Melee (Cone), Heavy DMG(Smash), Foe Knockdown",
+    "Melee, Light DMG(Smash), Foe Disorient"
+  ]
+}

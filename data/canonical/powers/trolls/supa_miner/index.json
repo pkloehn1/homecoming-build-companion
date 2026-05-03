@@ -1,0 +1,58 @@
+{
+  "name": "Supa_Miner",
+  "display_name": "Supa Miner",
+  "display_fullname": "Trolls.Supa Miner",
+  "display_help": "Trolls",
+  "display_short_help": "Trolls",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/TROLLS/SUPA_MINER.POWERSETS",
+  "icon": "supa_miner_set.png",
+  "requires": "",
+  "power_names": [
+    "Trolls.Supa_Miner.Ablating_Strike",
+    "Trolls.Supa_Miner.Sweeping_Strike",
+    "Trolls.Supa_Miner.Tremor",
+    "Trolls.Supa_Miner.Knockout_Blow",
+    "Trolls.Supa_Miner.Fissure",
+    "Trolls.Supa_Miner.Hurl",
+    "Trolls.Supa_Miner.Integration",
+    "Trolls.Supa_Miner.Unstoppable",
+    "Trolls.Supa_Miner.Fast_Healing",
+    "Trolls.Supa_Miner.Rock_Armor"
+  ],
+  "power_display_names": [
+    "Ablating Strike",
+    "Sweeping Strike",
+    "Tremor",
+    "Seismic Slash",
+    "Fissure",
+    "Hurl",
+    "Integration",
+    "Unstoppable",
+    "Fast Healing",
+    "Rock Armor"
+  ],
+  "power_short_helps": [
+    "Melee, Heavy DMG(Lethal), Foe -DEF",
+    "Melee (Cone), High DMG(Lethal)",
+    "PBAoE Melee, Moderate DMG(Smash), Foe Knockback",
+    "Melee (Cone), Extreme DMG(Lethal), Foe Knockup, -DEF",
+    "Close (Targeted AoE), Moderate DMG(Smash), Foe Disorient, Knockup",
+    "Ranged, High DMG(Smash), Foe Knockback, -Fly",
+    "Toggle: Self +Res(Hold, Immobilize, Disorient, Sleep, Knockback), +Regen",
+    "Self +Res(Disorient, Sleep, Hold, Immobilize, All DMG but Psionics), +Recovery, Delayed Weaken(Self -End)",
+    "Auto: Self +MaxHP, +Regen",
+    "Toggle: Self +DEF(Smash, Lethal, Energy, Negative, Psionic), +Res(Fire, Cold, Toxic)"
+  ]
+}

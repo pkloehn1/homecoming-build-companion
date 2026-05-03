@@ -1,0 +1,22 @@
+{
+  "name": "Altruist_Bionic_Devil_Defense",
+  "display_name": "Bionic Devil Defense",
+  "display_fullname": "Crey Altruist.Bionic Devil Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_BIONIC_DEVIL_DEFENSE.POWERSETS",
+  "icon": "altruist_bionic_devil_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Bionic_Devil_Defense.Unstoppable"
+  ],
+  "power_display_names": [
+    "Unstoppable"
+  ],
+  "power_short_helps": [
+    "Self +Res(Disorient, Sleep, Hold, Immobilize, All DMG but Psionics), +Recovery, Delayed Weaken(Self -End, -HP)"
+  ]
+}

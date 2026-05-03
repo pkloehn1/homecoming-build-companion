@@ -1,0 +1,22 @@
+{
+  "name": "Rikti_Plasma_Turret",
+  "display_name": "Rikti Plasma Turret",
+  "display_fullname": "Rikti.Rikti Plasma Turret",
+  "display_help": "Base Defenses",
+  "display_short_help": "Base Defenses",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIKTI_PLASMA_TURRET.POWERSETS",
+  "icon": "rikti_plasma_turret_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rikti_Plasma_Turret.Rikti_Plasma_Turret"
+  ],
+  "power_display_names": [
+    "Rikti Plasma Turret"
+  ],
+  "power_short_helps": [
+    "-Regeneration"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "name": "PsychicClockwork_Cannon_Champion",
+  "gender": "GENDER_MALE",
+  "group_name": "PsychicClockwork",
+  "commandable_pet": 0,
+  "power_tags": [],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 35,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ELITE",
+    "ai_config": "PsychicClockwork_Champion",
+    "character_class_name": "boss_elite",
+    "description": "The Clockwork Rooks take advantage of the Clockwork's vast numbers to utilize a Sprocket as a pawn, companion, as well as their weapon of choice.<br><br>When engaged, the Champion will grab their Sprocket pawn, and channel an energy current through its body to create a super-charged mace for dealing with any opponents who interrupt their work.<br><br>The ability to psionically insert themselves into their target's focus combined with the clock-face shield they defend themselves with, these champions are one of the Clockwork King's favored approaches to dealing with super-powered threats that get in his way.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.4,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Portal.Clockwork_Champion.Resistance",
+      "Portal.Clockwork_Champion.Reassemble",
+      "Portal.Clockwork_Champion.Charged_Bolts",
+      "Portal.Clockwork_Champion.Bash",
+      "Portal.Clockwork_Champion.Pulverize",
+      "Portal.Clockwork_Champion.Whirling_Mace",
+      "Portal.Clockwork_Champion.Crowd_Control",
+      "Portal.Clockwork_Champion.Push_Back",
+      "Portal.Clockwork_Champion.Phalanx_Fighting",
+      "Portal.Clockwork_Champion.Energized_Shield",
+      "Portal.Clockwork_Champion.Taunt"
+    ],
+    "power_display_names": [
+      "Resistance",
+      "Reassemble",
+      "Psionic Lightning",
+      "Psycholectric Bash",
+      "Psycholectric Pulverize",
+      "Whirling Sprocket",
+      "Crowd Conduction",
+      "Push Back",
+      "Phalanx Fighting",
+      "The Clock Works",
+      "Taunt"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Portal",
+        "power_set": "Clockwork_Champion",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 35,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Cannon Rook"
+      ],
+      "costumes": [
+        "PsychicClockwork_Champion"
+      ]
+    }
+  ]
+}

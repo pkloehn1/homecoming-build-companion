@@ -1,0 +1,46 @@
+{
+  "name": "Rider_War_HM",
+  "display_name": "Rider War (Advanced Mode)",
+  "display_fullname": "Rikti.Rider War (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIDER_WAR_HM.POWERSETS",
+  "icon": "heavy_assault_suit_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rider_War_HM.Fly",
+    "Rikti.Rider_War_HM.Laser_Lance",
+    "Rikti.Rider_War_HM.Sweeping_Laser",
+    "Rikti.Rider_War_HM.Fusion_Pulse",
+    "Rikti.Rider_War_HM.Fusion_Explosion",
+    "Rikti.Rider_War_HM.Fusion_Overload",
+    "Rikti.Rider_War_HM.Armored_Exoskeleton"
+  ],
+  "power_display_names": [
+    "Fly",
+    "Laser Lance: War",
+    "Sweeping Laser: War",
+    "Fusion Pulse: War",
+    "Fusion Explosion: War",
+    "Fusion Overload: War",
+    "Armored Exoskeleton: War"
+  ],
+  "power_short_helps": [
+    "Self Travel",
+    "Ranged (Narrow Cone), Moderate DMG(Fire/Energy), Foe -DEF",
+    "Ranged (Cone), Moderate DMG(Fire/Energy), Minor DoT(Fire), Foe -DEF",
+    "Ranged (Narrow Cone), Moderate DMG(Fire/Energy), Moderate DoT(Fire), Foe -Resist(All), -Regen",
+    "Ranged (Targeted AoE), Moderate DMG(Fire/Energy), Moderate DoT(Fire), Foe -Resist(All), -Regen",
+    "Post Death Special: PBAoE, High DMG(Fire), Extreme DoT(Fire), Foe -Resist(All), -Regen",
+    "Resistance"
+  ]
+}

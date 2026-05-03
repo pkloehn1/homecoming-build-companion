@@ -1,0 +1,30 @@
+{
+  "name": "Crey_Electric_Tank_Corrupted",
+  "display_name": "Crey_Electric_Tank_Corrupted",
+  "display_fullname": "Crey.Crey Electric Tank Corrupted",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY/CREY_ELECTRIC_TANK_CORRUPTED.POWERSETS",
+  "icon": "crey_electric_tank_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey.Crey_Electric_Tank_Corrupted.Haymaker",
+    "Crey.Crey_Electric_Tank_Corrupted.Jab",
+    "Crey.Crey_Electric_Tank_Corrupted.Throw"
+  ],
+  "power_display_names": [
+    "Voltaic Haymaker",
+    "Voltaic Jab",
+    "Throw"
+  ],
+  "power_short_helps": [
+    "Melee Energy, Knockback, Foe -End",
+    "Melee, Minor DMG(Energy), Foe Stun, Foe -DEF",
+    "Ranged, Moderate DMG(Smash)"
+  ]
+}

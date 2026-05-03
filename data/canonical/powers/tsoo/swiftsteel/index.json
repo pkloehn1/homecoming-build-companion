@@ -1,0 +1,46 @@
+{
+  "name": "SwiftSteel",
+  "display_name": "SwiftSteel",
+  "display_fullname": "Tsoo.SwiftSteel",
+  "display_help": "Tsoo",
+  "display_short_help": "Tsoo",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/TSOO/SWIFTSTEEL.POWERSETS",
+  "icon": "swiftsteel_set.png",
+  "requires": "",
+  "power_names": [
+    "Tsoo.SwiftSteel.Katana_Hack",
+    "Tsoo.SwiftSteel.Katana_Slash",
+    "Tsoo.SwiftSteel.Whirling_Katana",
+    "Tsoo.SwiftSteel.Shuriken",
+    "Tsoo.SwiftSteel.Siphon_Power",
+    "Tsoo.SwiftSteel.Siphon_Speed",
+    "Tsoo.SwiftSteel.Quick"
+  ],
+  "power_display_names": [
+    "Katana Hack",
+    "Katana Slash",
+    "Whirling Katana",
+    "Shuriken",
+    "Siphon Power",
+    "Siphon Speed",
+    "Quick"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal), Foe -DEF",
+    "Melee, Light DMG(Lethal), Foe -DEF",
+    "PBAoE Melee, Moderate DMG(Lethal), Minor DoT(Lethal), Foe -DEF",
+    "Ranged, Light DMG(Lethal)",
+    "Ranged, Foe -DMG, Team +DMG",
+    "Ranged, Foe -SPD, -Recharge, Self +SPD, +Recharge",
+    "Auto: Self +SPD, +Jump"
+  ]
+}

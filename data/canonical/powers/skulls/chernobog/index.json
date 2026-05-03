@@ -1,0 +1,50 @@
+{
+  "name": "Chernobog",
+  "display_name": "Chernobog",
+  "display_fullname": "Skulls.Chernobog",
+  "display_help": "Chernobog",
+  "display_short_help": "Chernobog",
+  "available_level": [
+    0,
+    0,
+    0,
+    9,
+    13,
+    17,
+    19,
+    21
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/CHERNOBOG.POWERSETS",
+  "icon": "chernobog_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Chernobog.Deadly_Cut",
+    "Skulls.Chernobog.Deadly_Bolt",
+    "Skulls.Chernobog.Deadly_Blast",
+    "Skulls.Chernobog.Deadly_Hack",
+    "Skulls.Chernobog.Deadly_Circle",
+    "Skulls.Chernobog.Terrifying_Stare",
+    "Skulls.Chernobog.Boon_of_Death",
+    "Skulls.Chernobog.Deaths_Embrace"
+  ],
+  "power_display_names": [
+    "Deadly Smash",
+    "Deadly Bolt",
+    "Deadly Blast",
+    "Deadly Crush",
+    "Deadly Bash",
+    "Terrifying Stare",
+    "Boon of Death",
+    "Death's Embrace"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Negative/Cold), Foe -ToHit",
+    "Ranged, Moderate DMG(Cold/Negative), Foe -SPD, -Recharge",
+    "Ranged, High DMG(Negative/Cold), Foe -ToHit",
+    "Melee, High DMG(Cold/Negative), Foe -SPD, -Recharge",
+    "Melee (Targeted AoE), Superior DMG(Negative/Cold), Foe -DEF",
+    "Ranged (Cone), Foe Fear, -ToHit",
+    "Ranged, Light DMG(Cold), Foe -DMG, -ToHit, -Regen, Team Heal",
+    "Ranged, Moderate DMG(Cold), Moderate DoT(Negative), Foe Hold, -SPD, -Recharge"
+  ]
+}

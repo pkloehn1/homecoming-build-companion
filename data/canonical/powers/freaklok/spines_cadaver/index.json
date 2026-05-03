@@ -1,0 +1,26 @@
+{
+  "name": "Spines_Cadaver",
+  "display_name": "Spines_Cadaver",
+  "display_fullname": "Freaklok.Spines Cadaver",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/SPINES_CADAVER.POWERSETS",
+  "icon": "spines_cadaver_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Spines_Cadaver.Thorny_Darts",
+    "Freaklok.Spines_Cadaver.Skewer"
+  ],
+  "power_display_names": [
+    "Thorny Darts",
+    "Skewer"
+  ],
+  "power_short_helps": [
+    "Ranged, Light DMG(Lethal), Minor DoT(Toxic), Foe -DEF",
+    "Melee, Heavy DMG(Lethal), Minor DoT(Toxic), Foe -DEF"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Trip_Mine_Dominator",
+  "display_name": "Mine",
+  "display_fullname": "Pets.Mine",
+  "display_help": "Devices",
+  "display_short_help": "Devices",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/TRIP_MINE_DOMINATOR.POWERSETS",
+  "icon": "mine_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Trip_Mine_Dominator.TripMine",
+    "Pets.Trip_Mine_Dominator.TripMine_SelfDestruct",
+    "Pets.Trip_Mine_Dominator.TripMine_Info",
+    "Pets.Trip_Mine_Dominator.TripMine_Resistance"
+  ],
+  "power_display_names": [
+    "Trip Mine",
+    "Self Destruct",
+    "Trip Mine",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "AoE Lethal/Fire, Knockback",
+    "Self Destruct",
+    "AoE Lethal/Fire, Knockback",
+    "Resistance"
+  ]
+}

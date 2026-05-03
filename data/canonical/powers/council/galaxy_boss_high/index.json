@@ -1,0 +1,30 @@
+{
+  "name": "Galaxy_Boss_High",
+  "display_name": "Galaxy_Boss_High",
+  "display_fullname": "Council.Galaxy Boss High",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    39,
+    39,
+    39
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/GALAXY_BOSS_HIGH.POWERSETS",
+  "icon": "galaxy_boss_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Galaxy_Boss_High.Eclipse",
+    "Council.Galaxy_Boss_High.Quasar",
+    "Council.Galaxy_Boss_High.Stygian_Return"
+  ],
+  "power_display_names": [
+    "Eclipse",
+    "Quasar",
+    "Stygian Return"
+  ],
+  "power_short_helps": [
+    "PBAoE, Foe -End, -Recovery, Self +End, +Res(All DMG)",
+    "PBAoE, Extreme DMG(Negative), Foe -Recharge, -SPD, Knockback",
+    "Self Rez, Special"
+  ]
+}

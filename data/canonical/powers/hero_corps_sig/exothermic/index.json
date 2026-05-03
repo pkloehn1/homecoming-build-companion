@@ -1,0 +1,62 @@
+{
+  "name": "Exothermic",
+  "display_name": "Exothermic",
+  "display_fullname": "Hero Corps Sig.Exothermic",
+  "display_help": "Powers assigned to the Hero NPC \"Exothermic\"<br><br>Fire/Thermal with some variety sprinkled in.",
+  "display_short_help": "Exothermic",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/HERO_CORPS_SIG/EXOTHERMIC.POWERSETS",
+  "icon": "crey_boss_hero_clone_power_set.png",
+  "requires": "",
+  "power_names": [
+    "Hero_Corps_Sig.Exothermic.Hot_Feet",
+    "Hero_Corps_Sig.Exothermic.Flashfire",
+    "Hero_Corps_Sig.Exothermic.Flares",
+    "Hero_Corps_Sig.Exothermic.Fire_Blast",
+    "Hero_Corps_Sig.Exothermic.Fire_Breath",
+    "Hero_Corps_Sig.Exothermic.Fire_Sword",
+    "Hero_Corps_Sig.Exothermic.Fiery_Embrace",
+    "Hero_Corps_Sig.Exothermic.Cauterize",
+    "Hero_Corps_Sig.Exothermic.Melt_Armor",
+    "Hero_Corps_Sig.Exothermic.Consume",
+    "Hero_Corps_Sig.Exothermic.Burn"
+  ],
+  "power_display_names": [
+    "Hot Feet",
+    "Flashfire",
+    "Flares",
+    "Fire Blast",
+    "Fire Breath",
+    "Fire Sword",
+    "Fiery Embrace",
+    "Cauterize",
+    "Slag Armor",
+    "Consume",
+    "Burn"
+  ],
+  "power_short_helps": [
+    "Toggle: PBAoE, Minor DoT(Fire), Foe -SPD",
+    "Ranged (Targeted AoE), Minor DMG(Fire), Foe Disorient",
+    "Ranged, Minor DMG(Fire)",
+    "Ranged, Moderate DMG(Fire)",
+    "Close (Cone), Moderate DoT(Fire)",
+    "Melee, Moderate DMG(Fire/Lethal)",
+    "Self +DMG",
+    "Ally Heal",
+    "Ranged, Foe -Res, -DEF",
+    "PBAoE Fire Dam, Self +End",
+    "Location (PBAoE), Moderate DoT(Fire), Self Res(Immobilize)"
+  ]
+}

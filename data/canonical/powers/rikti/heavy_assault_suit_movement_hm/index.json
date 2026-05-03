@@ -1,0 +1,26 @@
+{
+  "name": "Heavy_Assault_Suit_Movement_HM",
+  "display_name": "Heavy Assault Suit (Advanced Mode)",
+  "display_fullname": "Rikti.Heavy Assault Suit (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/HEAVY_ASSAULT_SUIT_MOVEMENT_HM.POWERSETS",
+  "icon": "rikti_gunman_movement_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Heavy_Assault_Suit_Movement_HM.Teleport",
+    "Rikti.Heavy_Assault_Suit_Movement_HM.Super_Leap"
+  ],
+  "power_display_names": [
+    "Teleswap",
+    "Galvanized"
+  ],
+  "power_short_helps": [
+    "Self: Special Travel, Foe Confuse",
+    "Self Travel"
+  ]
+}

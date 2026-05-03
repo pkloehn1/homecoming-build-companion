@@ -1,0 +1,22 @@
+{
+  "name": "Commander_Aux",
+  "display_name": "Commander_Aux",
+  "display_fullname": "BlackwingIndustries.Commander Aux",
+  "display_help": "Blackwing Industries",
+  "display_short_help": "Blackwing Industries",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BLACKWINGINDUSTRIES/COMMANDER_AUX.POWERSETS",
+  "icon": "bwi_commander_aux_set.png",
+  "requires": "",
+  "power_names": [
+    "BlackwingIndustries.Commander_Aux.Burst_of_Speed"
+  ],
+  "power_display_names": [
+    "Excelsion Burst of Speed"
+  ],
+  "power_short_helps": [
+    "PBAoE Melee, Moderate DMG(Energy/Smash), Self Teleport, Combo Builder"
+  ]
+}

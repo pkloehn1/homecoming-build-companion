@@ -1,0 +1,38 @@
+{
+  "name": "Piecemeal_Pets",
+  "display_name": "Piecemeal_Pets",
+  "display_fullname": "Freaklok.Piecemeal Pets",
+  "display_help": "Piecemeal",
+  "display_short_help": "Piecemeal",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/PIECEMEAL_PETS.POWERSETS",
+  "icon": "macro_button_01.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Piecemeal_Pets.Electrical_Bolt",
+    "Freaklok.Piecemeal_Pets.Electrical_Field",
+    "Freaklok.Piecemeal_Pets.Jolting_Chain_Jump1",
+    "Freaklok.Piecemeal_Pets.Jolting_Chain_Jump2",
+    "Freaklok.Piecemeal_Pets.Jolting_Chain_Jump3"
+  ],
+  "power_display_names": [
+    "Electrical Bolt",
+    "Electrical Field",
+    "Charge",
+    "Charge",
+    "Charge"
+  ],
+  "power_short_helps": [
+    "Ranged, Light DMG(Energy), Foe -End, -Recovery",
+    "Electrical Field",
+    "Charged",
+    "Charged",
+    "Charged"
+  ]
+}

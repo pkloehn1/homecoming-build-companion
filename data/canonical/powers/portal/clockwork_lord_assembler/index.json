@@ -1,0 +1,22 @@
+{
+  "name": "Clockwork_Lord_Assembler",
+  "display_name": "Clockwork Lord Assembler",
+  "display_fullname": "Portal.Clockwork Lord Assembler",
+  "display_help": "Psychic Clockwork",
+  "display_short_help": "Psychic Clockwork",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/PORTAL/CLOCKWORK_LORD_ASSEMBLER.POWERSETS",
+  "icon": "clockwork_boss_assembler_powers_set.png",
+  "requires": "",
+  "power_names": [
+    "Portal.Clockwork_Lord_Assembler.Summon_Clockwork"
+  ],
+  "power_display_names": [
+    "Summon Clockwork"
+  ],
+  "power_short_helps": [
+    "Summon 2 Assembler Dukes"
+  ]
+}

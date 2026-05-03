@@ -1,0 +1,46 @@
+{
+  "name": "Altruist_Sacred_Stone_Offense",
+  "display_name": "Sacred Stone Offense",
+  "display_fullname": "Crey Altruist.Sacred Stone Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SACRED_STONE_OFFENSE.POWERSETS",
+  "icon": "altruist_sacred_stone_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Sacred_Stone_Offense.Stone_Fist",
+    "Crey_Altruist.Altruist_Sacred_Stone_Offense.Stone_Mallet",
+    "Crey_Altruist.Altruist_Sacred_Stone_Offense.Fissure",
+    "Crey_Altruist.Altruist_Sacred_Stone_Offense.Seismic_Smash",
+    "Crey_Altruist.Altruist_Sacred_Stone_Offense.Hurl_Boulder",
+    "Crey_Altruist.Altruist_Sacred_Stone_Offense.Tremor",
+    "Crey_Altruist.Altruist_Sacred_Stone_Offense.Taunt"
+  ],
+  "power_display_names": [
+    "Stone Fist",
+    "Stone Mallet",
+    "Fissure",
+    "Seismic Smash",
+    "Hurl Boulder",
+    "Tremor",
+    "Taunt"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Smash), Foe Disorient",
+    "Melee, High DMG(Smash), Foe Knockback",
+    "Close (Targeted AoE), Moderate DMG(Smash), Foe Disorient, Knockup",
+    "Melee, Extreme DMG(Smash), Foe Hold",
+    "Ranged, High DMG(Smash), Foe Knockback, -Fly",
+    "PBAoE Melee, Moderate DMG(Smash), Foe Knockback",
+    "Ranged (Targeted AoE), Foe Taunt, -Range"
+  ]
+}

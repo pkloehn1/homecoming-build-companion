@@ -1,0 +1,22 @@
+{
+  "name": "Circle_Thorn_Caster_Seismic_Char",
+  "display_name": "Cirle_Thorn_Caster_Seismic_Char",
+  "display_fullname": "CircleOfThorns.Cirle Thorn Caster Seismic Char",
+  "display_help": "Circle of Thorns",
+  "display_short_help": "Circle of Thorns",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/CIRCLEOFTHORNS/CIRCLE_THORN_CASTER_SEISMIC_CHAR.POWERSETS",
+  "icon": "cirle_thorn_caster_seismic_char_set.png",
+  "requires": "",
+  "power_names": [
+    "CircleOfThorns.Circle_Thorn_Caster_Seismic_Char.Char"
+  ],
+  "power_display_names": [
+    "Char"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DoT(Fire), Foe Hold"
+  ]
+}

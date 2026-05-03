@@ -1,0 +1,26 @@
+{
+  "name": "Warrior_Shield",
+  "display_name": "Warrior_Shield",
+  "display_fullname": "Warriors New.Warrior Shield",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    39,
+    39
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_SHIELD.POWERSETS",
+  "icon": "warrior_shield_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Shield.Phalanx_Fighting",
+    "Warriors_New.Warrior_Shield.Active_Defense"
+  ],
+  "power_display_names": [
+    "Shield Defense",
+    "Active Defense"
+  ],
+  "power_short_helps": [
+    "Auto: Self Special +DEF(All but Psionic, Toxic), +Res(Fire, Cold, Energy, Negative, Toxic), +MaxHP",
+    "Toggle: Self +DEF(All but Psionic, Toxic), +Res(Disorient, Hold, Immobilize, Sleep, Fear, Confuse, Repel, Knockback)"
+  ]
+}

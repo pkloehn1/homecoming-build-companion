@@ -1,0 +1,22 @@
+{
+  "name": "Martial_Manipulation",
+  "display_name": "Mind Control",
+  "display_fullname": "Redirects.Mind Control",
+  "display_help": "You can manipulate and control your opponent's mind. Since Mental powers directly affect the mind, most tend to be very accurate, and thus very useful against higher level foes. Few foes can resist Psionic powers, but creatures without minds, like machines and robots, are resistant to many of the effects.",
+  "display_short_help": "Mind Control",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/REDIRECTS/MARTIAL_MANIPULATION.POWERSETS",
+  "icon": "martial_manipulation_set.png",
+  "requires": "",
+  "power_names": [
+    "Redirects.Martial_Manipulation.Burst_of_Speed_NPC"
+  ],
+  "power_display_names": [
+    "Excelsion Burst of Speed"
+  ],
+  "power_short_helps": [
+    "PBAoE Melee, Moderate DMG(Energy/Smash), Self Teleport, Combo Builder"
+  ]
+}

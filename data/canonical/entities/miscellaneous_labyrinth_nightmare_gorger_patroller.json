@@ -1,0 +1,84 @@
+{
+  "name": "Miscellaneous_Labyrinth_Nightmare_Gorger_Patroller",
+  "gender": "GENDER_NEUTER",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 60,
+    "max_level": 60,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BIGMONSTER",
+    "ai_config": "ScriptNoSleep_Melee_NeverAfraid",
+    "character_class_name": "boss_monster",
+    "description": "The dark gorgers are fragmented forces of nature that have become symbiotic with the cancerous fog growths in the Labyrinth, resulting in the formation of massive goliaths that are both divine and nightmare in nature. These monstrosities are the herald of the night's darkness.<br><br>Bringing with them the ability to drag their victims into lucid nightmares to have their dreams consumed. Unless one could sever its connection to the Fog of Catastrophe, they cannot truly be strucken down, only seperated temporarily into smaller nightmares. It is the ultimate culmination of the Labyrinthine Nightmare's capabilities to birth sleepless dreams into reality.<br><br><color Black>'What is the true nature behind nightmares? Perhaps it's a mortal lack of comprehension that births fear? If so and gods are omniscient, can they experience fear? <i>What could possibly scare a god?</i>'</color>",
+    "group_description": "Labyrinthine Nightmare",
+    "display_class_name": "Monstrosity",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 0.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Reaper.Crush",
+      "Event.Labyrinth_Reaper.Crush2",
+      "Event.Labyrinth_Reaper.Damage_Resistance"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Nightmare Crush",
+      "Nightmare Crush",
+      "Damage Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Reaper",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 60,
+      "max_level": 60,
+      "experience": 0,
+      "display_names": [
+        "Dark Gorger"
+      ],
+      "costumes": [
+        "Labyrinth_Nightmare_Gorger_01"
+      ]
+    }
+  ]
+}

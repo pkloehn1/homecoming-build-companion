@@ -1,0 +1,34 @@
+{
+  "name": "Altruist_Golden_Wind_Support",
+  "display_name": "Golden Wind Support",
+  "display_fullname": "Crey Altruist.Golden Wind Support",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_GOLDEN_WIND_SUPPORT.POWERSETS",
+  "icon": "altruist_golden_wind_support_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Golden_Wind_Support.Gale",
+    "Crey_Altruist.Altruist_Golden_Wind_Support.O2_Boost",
+    "Crey_Altruist.Altruist_Golden_Wind_Support.Hurricane",
+    "Crey_Altruist.Altruist_Golden_Wind_Support.Tornado"
+  ],
+  "power_display_names": [
+    "Gale",
+    "O2 Boost",
+    "Hurricane",
+    "Tornado"
+  ],
+  "power_short_helps": [
+    "Ranged (Cone), Minor DMG(Smash), Foe Knockback",
+    "Ranged, Ally Heal, +Res(Disorient, Sleep, End Drain), +Perception",
+    "Toggle: PBAoE, Foe -Range, -ToHit, Knockback/Repel",
+    "Summon Tornado"
+  ]
+}

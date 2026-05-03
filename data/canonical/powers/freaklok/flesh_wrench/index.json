@@ -1,0 +1,58 @@
+{
+  "name": "Flesh_Wrench",
+  "display_name": "Flesh_Wrench",
+  "display_fullname": "Freaklok.Flesh Wrench",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/FLESH_WRENCH.POWERSETS",
+  "icon": "flesh_wrench_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Flesh_Wrench.Slice",
+    "Freaklok.Flesh_Wrench.Pulverize",
+    "Freaklok.Flesh_Wrench.Shatter",
+    "Freaklok.Flesh_Wrench.Eviscerate",
+    "Freaklok.Flesh_Wrench.Crowd_Control",
+    "Freaklok.Flesh_Wrench.Frenzy",
+    "Freaklok.Flesh_Wrench.Tesla_Cage",
+    "Freaklok.Flesh_Wrench.Electrifying_Fences",
+    "Freaklok.Flesh_Wrench.Lightning_Rod",
+    "Freaklok.Flesh_Wrench.Kinetic_Boost"
+  ],
+  "power_display_names": [
+    "Slice",
+    "Pulverize",
+    "Shatter",
+    "Eviscerate",
+    "Crowd Control",
+    "Frenzy",
+    "Tesla Cage",
+    "Electrifying Fences",
+    "Lightning Rod",
+    "Kinetic Boost"
+  ],
+  "power_short_helps": [
+    "Melee, Heavy DMG(Lethal), Foe -DEF",
+    "Melee, High DMG(Smash), Minor DoT(Energy), Foe Disorient",
+    "Melee, Extreme DMG(Smash), Minor DoT(Energy), Foe Knockdown",
+    "Melee (Cone), High DMG(Lethal), Foe -DEF",
+    "Melee (Cone), High DMG(Smash), Minor DoT(Energy), Foe Knockdown",
+    "PBAoE Melee, Heavy DMG(Energy), Foe -DEF",
+    "Ranged, Moderate DMG(Energy), Foe Hold, -End, -Recovery",
+    "Ranged (Targeted AoE), Light DoT(Energy), Foe Immobilize, -End, -Recovery",
+    "PBAoE, Superior DMG(Energy), Foe Knockback; Self Teleport;",
+    "PBAoE, Foe -DMG, -End, -Regen, -SPD, -Recharge, Self Heal, +DMG, +End, +SPD, +Recharge"
+  ]
+}

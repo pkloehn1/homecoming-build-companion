@@ -1,0 +1,38 @@
+{
+  "name": "Rikti_Monkey_Melee_Cold",
+  "display_name": "Rikti Monkey Melee Cold",
+  "display_fullname": "Rikti.Rikti Monkey Melee Cold",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIKTI_MONKEY_MELEE_COLD.POWERSETS",
+  "icon": "rikti_monkey_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rikti_Monkey_Melee_Cold.Monkey_Brawl2",
+    "Rikti.Rikti_Monkey_Melee_Cold.Monkey_Brawl",
+    "Rikti.Rikti_Monkey_Melee_Cold.Psychic_Dart",
+    "Rikti.Rikti_Monkey_Melee_Cold.Gas",
+    "Rikti.Rikti_Monkey_Melee_Cold.Resistance"
+  ],
+  "power_display_names": [
+    "Freezing Simian Strike",
+    "Freezing Primate Punch",
+    "Psychic Dart",
+    "Gas",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Cold/Smash), Foe -Recharge, -SPD",
+    "Melee, Light DMG(Cold/Smash), Foe -Recharge, -SPD",
+    "Ranged, Moderate DMG(Psionic), Foe -Recharge",
+    "Post Death AoE Special",
+    "Auto Res Cold"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Nemesis_Weather_Machine",
+  "display_name": "Nemesis_Weather_Machine",
+  "display_fullname": "Nemesis.Nemesis Weather Machine",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_WEATHER_MACHINE.POWERSETS",
+  "icon": "nemesis_weather_machine_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Weather_Machine.Lightning_Storm",
+    "Nemesis.Nemesis_Weather_Machine.Resistance"
+  ],
+  "power_display_names": [
+    "Lightning Storm",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Summon Lightning Storm/Tornado",
+    "Resistance"
+  ]
+}

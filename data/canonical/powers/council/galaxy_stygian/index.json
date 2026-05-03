@@ -1,0 +1,22 @@
+{
+  "name": "Galaxy_Stygian",
+  "display_name": "Galaxy_Stygian",
+  "display_fullname": "Council.Galaxy Stygian",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/GALAXY_STYGIAN.POWERSETS",
+  "icon": "galaxy_stygian_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Galaxy_Stygian.Stygian_Return"
+  ],
+  "power_display_names": [
+    "Stygian Return"
+  ],
+  "power_short_helps": [
+    "Self Rez, Special"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Altruist_Siren_Singer_Support",
+  "display_name": "Siren Singer Support",
+  "display_fullname": "Crey Altruist.Siren Singer Support",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SIREN_SINGER_SUPPORT.POWERSETS",
+  "icon": "altruist_siren_singer_support_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Siren_Singer_Support.Sonic_Barrier",
+    "Crey_Altruist.Altruist_Siren_Singer_Support.Sonic_Dispersion",
+    "Crey_Altruist.Altruist_Siren_Singer_Support.Liquefy"
+  ],
+  "power_display_names": [
+    "Sonic Barrier",
+    "Sonic Dispersion",
+    "Liquefy"
+  ],
+  "power_short_helps": [
+    "Ranged, Ally +Res(Smash, Lethal, Fire, Cold, Energy, Negative, Toxic)",
+    "Toggle: PBAoE, Team +Res(All DMG but Psionics, Hold, Immobilize, Disorient)",
+    "Ranged (Location AoE), Light DMG(Energy/Smash), Foe Hold, Knockdown, -ToHit, -Recharge, -Jump, -DEF, -Fly"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "name": "FRKLK_Mire_Male",
+  "gender": "GENDER_MALE",
+  "group_name": "Freaklok",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 29,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 2,
+    "spawn_limit_mission": 2,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_MINION",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "minion_grunt",
+    "description": "The Freaklok are not a homogenous group, and these Eidolons have passed the minimum requirements for CMRj repair and improvement. As a result, these Eidolons can weaponize their physiologies to periodically emit pheromones that stun unsuspecting supers.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.2,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Freaklok.Mire_Eidolon.Dark_Blast",
+      "Freaklok.Mire_Eidolon.Night_Fall",
+      "Freaklok.Mire_Eidolon.Tenebrous_Tentacles",
+      "Freaklok.Mire_Eidolon.Shadow_Punch",
+      "Freaklok.Necrotic_Detonations.Corpse_Gas",
+      "Freaklok.Resistances.Eidolon_Resistance"
+    ],
+    "power_display_names": [
+      "Dark Blast",
+      "Night Fall",
+      "Tenebrous Tentacles",
+      "Shadow Punch",
+      "Corpse Gas",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Freaklok",
+        "power_set": "Mire_Eidolon",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Necrotic_Detonations",
+        "power": "Corpse_Gas",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Resistances",
+        "power": "Eidolon_Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 29,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Shambling Mire Eidolon"
+      ],
+      "costumes": [
+        "FRKLK_Shambling_MireM"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Altruist_Cerulean_Soul_Defense",
+  "display_name": "Cerulean Soul Defense",
+  "display_fullname": "Crey Altruist.Cerulean Soul Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_CERULEAN_SOUL_DEFENSE.POWERSETS",
+  "icon": "altruist_cerulean_soul_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Cerulean_Soul_Defense.Inner_Focus",
+    "Crey_Altruist.Altruist_Cerulean_Soul_Defense.Reflexes"
+  ],
+  "power_display_names": [
+    "Inner Focus",
+    "Reflexes"
+  ],
+  "power_short_helps": [
+    "Toggle: Self +DEF(Melee, Ranged, AoE), +Res(Confuse), +Perception",
+    "Auto: Self +DEF(Ranged, Melee, AoE), Scaling Damage Resistance"
+  ]
+}

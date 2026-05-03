@@ -1,0 +1,26 @@
+{
+  "tag": "AssassinsFocus",
+  "bears": [
+    [
+      "Stalker Melee.Sonic Melee.Deafening Wave",
+      "stalker_melee.sonic_melee.deafening_wave"
+    ],
+    [
+      "Stalker Melee.Sonic Melee.Earsplitter",
+      "stalker_melee.sonic_melee.earsplitter"
+    ],
+    [
+      "Stalker Melee.Sonic Melee.Sonic Clap",
+      "stalker_melee.sonic_melee.sonic_clap"
+    ],
+    [
+      "Stalker Melee.Sonic Melee.Sonic Thrust",
+      "stalker_melee.sonic_melee.sonic_thrust"
+    ],
+    [
+      "Stalker Melee.Sonic Melee.Strident Echo",
+      "stalker_melee.sonic_melee.strident_echo"
+    ]
+  ],
+  "affects": []
+}

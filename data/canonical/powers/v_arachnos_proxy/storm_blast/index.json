@@ -1,0 +1,54 @@
+{
+  "name": "Storm_Blast",
+  "display_name": "Storm Blast",
+  "display_fullname": "V Arachnos Proxy.Storm Blast",
+  "display_help": "Storm Blast conjures violent weather to attack your foes. The use of your storm attacks will empower your created storm cells.",
+  "display_short_help": "Storm Blast",
+  "available_level": [
+    0,
+    0,
+    1,
+    5,
+    7,
+    11,
+    17,
+    25,
+    31
+  ],
+  "source_file": "DEFS/POWERS/V_ARACHNOS_PROXY/STORM_BLAST.POWERSETS",
+  "icon": "storm_summoning_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Arachnos_Proxy.Storm_Blast.Gust",
+    "V_Arachnos_Proxy.Storm_Blast.Hailstones",
+    "V_Arachnos_Proxy.Storm_Blast.Jet_Stream",
+    "V_Arachnos_Proxy.Storm_Blast.Storm_Cell",
+    "V_Arachnos_Proxy.Storm_Blast.Aim",
+    "V_Arachnos_Proxy.Storm_Blast.Direct_Strike",
+    "V_Arachnos_Proxy.Storm_Blast.Chain_Lightning",
+    "V_Arachnos_Proxy.Storm_Blast.Cloudburst",
+    "V_Arachnos_Proxy.Storm_Blast.Category_Five"
+  ],
+  "power_display_names": [
+    "Gust",
+    "Hailstones",
+    "Jet Stream",
+    "Storm Cell",
+    "Intensify",
+    "Direct Strike",
+    "Chain Lightning",
+    "Cloudburst",
+    "Category Five"
+  ],
+  "power_short_helps": [
+    "Ranged, DMG(Smash), -Fly",
+    "Ranged, DMG(Cold), Chance for Knockdown",
+    "Ranged (Cone), DMG(Smashing), Foe Knockdown or Repel",
+    "Ranged (Location AoE), Foe -Recharge, -SPD, +Wet, Special",
+    "Self +To Hit, +DMG, Special",
+    "Sniper, DMG(Energy), Foe -End, Special",
+    "Ranged Chain, DoT(Energy), Foe -End",
+    "Ranged, DoT(Cold), +Wet, Special",
+    "Ranged (Location AoE), DoT(Energy), +Wet"
+  ]
+}

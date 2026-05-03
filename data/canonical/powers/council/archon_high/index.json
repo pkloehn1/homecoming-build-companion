@@ -1,0 +1,38 @@
+{
+  "name": "Archon_High",
+  "display_name": "Archon High",
+  "display_fullname": "Council.Archon High",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/ARCHON_HIGH.POWERSETS",
+  "icon": "archon_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Archon_High.Energy_Torrent",
+    "Council.Archon_High.Power_Burst",
+    "Council.Archon_High.Nova",
+    "Council.Archon_High.Bone_Smasher",
+    "Council.Archon_High.Energize"
+  ],
+  "power_display_names": [
+    "Energy Torrent",
+    "Power Burst",
+    "Nova",
+    "Bone Smasher",
+    "Energize"
+  ],
+  "power_short_helps": [
+    "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback",
+    "Close, Superior DMG(Energy/Smash), Foe Knockback",
+    "PBAoE, Extreme DMG(Energy/Smash), Foe Knockback",
+    "Melee, High DMG(Energy/Smash), Foe Disorient",
+    "Self Endurance Discount, Heal, +Regen, Res(Stun)"
+  ]
+}

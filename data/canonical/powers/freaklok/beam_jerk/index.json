@@ -1,0 +1,54 @@
+{
+  "name": "Beam_Jerk",
+  "display_name": "Beam_Jerk",
+  "display_fullname": "Freaklok.Beam Jerk",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/BEAM_JERK.POWERSETS",
+  "icon": "beam_jerk_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Beam_Jerk.Single_Shot",
+    "Freaklok.Beam_Jerk.Disintegrate",
+    "Freaklok.Beam_Jerk.Lancer_Shot",
+    "Freaklok.Beam_Jerk.Penetrating_Ray",
+    "Freaklok.Beam_Jerk.Refractor_Beam",
+    "Freaklok.Beam_Jerk.Gremlins",
+    "Freaklok.Beam_Jerk.Stunning_Aura",
+    "Freaklok.Beam_Jerk.Fulcrum_Shift",
+    "Freaklok.Beam_Jerk.Caltrops"
+  ],
+  "power_display_names": [
+    "Single Shot",
+    "Disintegrate",
+    "Lancer Shot",
+    "Penetrating Ray",
+    "Refractor Beam",
+    "Gremlins",
+    "Conductive Aura",
+    "Fulcrum Shift",
+    "Caltrops"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Energy), Foe Knockdown, Special",
+    "Ranged, Superior DoT(Energy), Foe -Regen, Special",
+    "Ranged, Superior DMG(Energy), Foe Disorient, Special",
+    "Ranged, Extreme DMG(Energy), Foe Knockdown, Special",
+    "Ranged (Targeted AoE), Moderate DMG(Energy), Foe -DEF, Special",
+    "Summon Gremlins: Melee, Moderate DMG(Energy)",
+    "Toggle: PBAoE, Foe -End, Self +Recovery, +Regeneration",
+    "Ranged (Targeted AoE), Foe -DMG, Team +DMG",
+    "Close (Location AoE), Minor DoT(Lethal), Foe -SPD, -Fly, -Jump"
+  ]
+}

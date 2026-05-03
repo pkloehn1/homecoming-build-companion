@@ -1,0 +1,26 @@
+{
+  "name": "Warrior_Ranged_Boss_2",
+  "display_name": "Warrior_Ranged_Boss_2",
+  "display_fullname": "Warriors New.Warrior Ranged Boss 2",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    39
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_RANGED_BOSS_2.POWERSETS",
+  "icon": "warrior_ranged_boss_2_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Ranged_Boss_2.Fistful_of_Bolts",
+    "Warriors_New.Warrior_Ranged_Boss_2.Fistful_of_Arrows"
+  ],
+  "power_display_names": [
+    "Fistful of Bolts",
+    "Fistful of Arrows"
+  ],
+  "power_short_helps": [
+    "Ranged (Cone), Moderate DMG(Lethal)",
+    "Ranged (Cone), Moderate DMG(Lethal)"
+  ]
+}

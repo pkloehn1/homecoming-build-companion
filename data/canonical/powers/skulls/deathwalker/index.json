@@ -1,0 +1,38 @@
+{
+  "name": "Deathwalker",
+  "display_name": "Deathwalker",
+  "display_fullname": "Skulls.Deathwalker",
+  "display_help": "Skulls",
+  "display_short_help": "Skulls",
+  "available_level": [
+    0,
+    0,
+    14,
+    0,
+    26
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/DEATHWALKER.POWERSETS",
+  "icon": "deathwalker_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Deathwalker.Dark_Blast",
+    "Skulls.Deathwalker.Night_Fall",
+    "Skulls.Deathwalker.Moonbeam",
+    "Skulls.Deathwalker.Dark_Grasp",
+    "Skulls.Deathwalker.Dark_Grasp_2"
+  ],
+  "power_display_names": [
+    "Dark Blast",
+    "Night Fall",
+    "Moonbeam",
+    "Dark Grasp",
+    "Dark Grasp"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Negative), Foe -ToHit",
+    "Ranged (Cone), Moderate DoT(Negative), Foe -ToHit",
+    "Ranged, Superior DMG(Negative), Foe -ToHit",
+    "Ranged, Moderate DMG(Negative), Foe Hold, -ToHit",
+    "Ranged, Moderate DMG(Negative), Foe Hold, -ToHit"
+  ]
+}

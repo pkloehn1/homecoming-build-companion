@@ -1,0 +1,46 @@
+{
+  "name": "Nemesis_Fake_Nemesis_TW",
+  "display_name": "Nemesis_Fake_Nemesis_TW",
+  "display_fullname": "Nemesis.Nemesis Fake Nemesis TW",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_FAKE_NEMESIS_TW.POWERSETS",
+  "icon": "werewolf_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Fake_Nemesis_TW.Defensive_Sweep",
+    "Nemesis.Nemesis_Fake_Nemesis_TW.Crushing_Blow",
+    "Nemesis.Nemesis_Fake_Nemesis_TW.Follow_Through",
+    "Nemesis.Nemesis_Fake_Nemesis_TW.Sweeping_Strike",
+    "Nemesis.Nemesis_Fake_Nemesis_TW.Shatter_Armor",
+    "Nemesis.Nemesis_Fake_Nemesis_TW.Whirling_Smash",
+    "Nemesis.Nemesis_Fake_Nemesis_TW.Arc_of_Destruction"
+  ],
+  "power_display_names": [
+    "Defensive Sweep",
+    "Crushing Blow",
+    "Follow Through",
+    "Staff Discharge",
+    "Rend Armor",
+    "Whirling Smash",
+    "Arc of Destruction"
+  ],
+  "power_short_helps": [
+    "Melee (Cone), Light DMG(Smash), Foe -Resist(All), Self +DEF(Melee, Smash)",
+    "Melee, High DMG(Smash), Foe -DEF, -Resist(All)",
+    "Melee, Superior DMG(Smash), Foe Disorient, Knockback, -Resist(All)",
+    "Melee (Cone), Moderate DMG(Energy), Foe Disorient, -Resist(All)",
+    "Melee, Extreme DMG(Smash), Foe -DEF, -Resist(All)",
+    "PBAoE Melee, Moderate DMG(Smash), Foe Knockback, -Resist(All)",
+    "Melee (Cone), Superior DMG(Smash), Foe Knockback, -Resist(All)"
+  ]
+}

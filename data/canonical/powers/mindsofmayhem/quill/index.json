@@ -1,0 +1,38 @@
+{
+  "name": "Quill",
+  "display_name": "Quill",
+  "display_fullname": "MindsOfMayhem.Quill",
+  "display_help": "Nightmares",
+  "display_short_help": "Nightmares",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/MINDSOFMAYHEM/QUILL.POWERSETS",
+  "icon": "quill_set.png",
+  "requires": "",
+  "power_names": [
+    "MindsOfMayhem.Quill.Lunge",
+    "MindsOfMayhem.Quill.Spine_Burst",
+    "MindsOfMayhem.Quill.Impale",
+    "MindsOfMayhem.Quill.Quills",
+    "MindsOfMayhem.Quill.Spine_Throwing"
+  ],
+  "power_display_names": [
+    "Lunge",
+    "Spine Burst",
+    "Impale",
+    "Quills",
+    "Spine Throwing"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal), Minor DoT(Toxic), Foe -SPD, -Recharge",
+    "PBAoE Melee, Moderate DMG(Lethal), Minor DoT(Toxic), Foe -SPD, -Recharge",
+    "Ranged, Heavy DMG(Lethal), Minor DoT(Toxic), Foe Immobilize, -SPD, -Recharge",
+    "Auto: PBAoE, Minor DoT(Lethal), Foe -SPD, -Recharge",
+    "Ranged (Cone), Light DMG(Lethal), Minor DoT(Toxic), Foe -SPD, -Recharge"
+  ]
+}

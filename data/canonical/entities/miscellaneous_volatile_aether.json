@@ -1,0 +1,100 @@
+{
+  "name": "Miscellaneous_Volatile_Aether",
+  "gender": "GENDER_NEUTER",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Raid",
+    "Ghost",
+    "Undead"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 1,
+    "max_level": 54,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": true,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ELITE",
+    "ai_config": "NeverSleep_UltraCoward",
+    "character_class_name": "boss_praetorianelite",
+    "description": "This thing is an entropic amalgamation of malevolent fog.<br><br>If you can suppress its raging energies, you could release the swirling power within!<br><br><color Burlywood>As malevolence accumulates in local fog concentrations, it can cause those exposed to become erratic and volatile. Prolonged exposure to this pollution will cause insanity, and throughout the ages has claimed the minds of many who lost their way in the Labyrinth of Fog.</color>",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": "Pinata",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 5.0,
+    "additional_rewards": [
+      "LabyrinthInspiration"
+    ],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Aether.Fast_Healing",
+      "Event.Labyrinth_Aether.Fly",
+      "Event.Labyrinth_Aether.Health"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Unstable Energy",
+      "Fly",
+      "Fog of Catastrophe"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Aether",
+        "power": "Fast_Healing",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Aether",
+        "power": "Fly",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Aether",
+        "power": "Health",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 1,
+      "max_level": 54,
+      "experience": 0,
+      "display_names": [
+        "Malevolent Fog"
+      ],
+      "costumes": [
+        "Volatile_Aether"
+      ]
+    }
+  ]
+}

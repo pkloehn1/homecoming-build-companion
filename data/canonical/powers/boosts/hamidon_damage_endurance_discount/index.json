@@ -1,0 +1,22 @@
+{
+  "name": "Hamidon_Damage_Endurance_Discount",
+  "display_name": "Hamidon Damage Endurance Discount",
+  "display_fullname": "Boosts.Hamidon Damage Endurance Discount",
+  "display_help": "Enhances the damage and increases the attack rate of a power.",
+  "display_short_help": "Hamidon (All Origins)",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/HAMIDON_DAMAGE_ENDURANCE_DISCOUNT.POWERSETS",
+  "icon": "hamidon_damage_accuracy_set.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Hamidon_Damage_Endurance_Discount.Hamidon_Damage_Endurance_Discount"
+  ],
+  "power_display_names": [
+    "Karyoplasm Exposure (Dam/End)"
+  ],
+  "power_short_helps": [
+    "Enhances Damage and Reduces Endurance Cost"
+  ]
+}

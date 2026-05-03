@@ -1,0 +1,42 @@
+{
+  "name": "Clockwork_King_Melee_Powers_HM",
+  "display_name": "Clockwork King Melee Powers (Hard Mode)",
+  "display_fullname": "Portal.Clockwork King Melee Powers (Hard Mode)",
+  "display_help": "Psychic Clockwork",
+  "display_short_help": "Psychic Clockwork",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PORTAL/CLOCKWORK_KING_MELEE_POWERS_HM.POWERSETS",
+  "icon": "clockwork_king_melee_powers_set.png",
+  "requires": "",
+  "power_names": [
+    "Portal.Clockwork_King_Melee_Powers_HM.Resistance",
+    "Portal.Clockwork_King_Melee_Powers_HM.Psi_Blade",
+    "Portal.Clockwork_King_Melee_Powers_HM.Telekinetic_Blow",
+    "Portal.Clockwork_King_Melee_Powers_HM.Taunt",
+    "Portal.Clockwork_King_Melee_Powers_HM.Greater_Psi_Blade",
+    "Portal.Clockwork_King_Melee_Powers_HM.Mass_Levitate"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Psi Blade",
+    "Telekinetic Blow",
+    "Taunt",
+    "Greater Psi Blade",
+    "Mass Levitate"
+  ],
+  "power_short_helps": [
+    "Resistance",
+    "Melee, Moderate DMG(Psionic/Lethal), Minor DoT(Psionic), Foe -Recharge",
+    "Melee, High DMG(Psionic/Smash), Minor DoT(Psionic), Foe Knockup",
+    "Ranged (Targeted AoE), Foe Taunt, -Range",
+    "Melee, Extreme DMG(Psionic/Lethal), Foe Hold, -Recharge",
+    "PBAoE Melee, Heavy DMG(Smash), Minor DoT(Psionic), Foe Knockup"
+  ]
+}

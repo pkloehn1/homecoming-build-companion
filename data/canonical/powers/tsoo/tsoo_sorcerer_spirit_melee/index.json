@@ -1,0 +1,30 @@
+{
+  "name": "Tsoo_Sorcerer_Spirit_Melee",
+  "display_name": "Tsoo_Sorcerer_Spirit_Melee",
+  "display_fullname": "Tsoo.Tsoo Sorcerer Spirit Melee",
+  "display_help": "Tsoo",
+  "display_short_help": "Tsoo",
+  "available_level": [
+    0,
+    39,
+    39
+  ],
+  "source_file": "DEFS/POWERS/TSOO/TSOO_SORCERER_SPIRIT_MELEE.POWERSETS",
+  "icon": "tsoo_sorcerer_spirit_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Tsoo.Tsoo_Sorcerer_Spirit_Melee.Brawl",
+    "Tsoo.Tsoo_Sorcerer_Spirit_Melee.Punch",
+    "Tsoo.Tsoo_Sorcerer_Spirit_Melee.Wolf_Punch"
+  ],
+  "power_display_names": [
+    "Brawl",
+    "Punch",
+    "Wolf Punch"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Smash)",
+    "Melee, Moderate DMG(Smash), Foe Knockback",
+    "Melee, Moderate DMG(Smash), Foe Disorient"
+  ]
+}

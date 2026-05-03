@@ -1,0 +1,42 @@
+{
+  "name": "Altruist_Siberian_Punk_Offense",
+  "display_name": "Siberian Punk Offense",
+  "display_fullname": "Crey Altruist.Siberian Punk Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SIBERIAN_PUNK_OFFENSE.POWERSETS",
+  "icon": "altruist_siberian_punk_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Siberian_Punk_Offense.Quick_Strike",
+    "Crey_Altruist.Altruist_Siberian_Punk_Offense.Body_Blow",
+    "Crey_Altruist.Altruist_Siberian_Punk_Offense.Smashing_Blow",
+    "Crey_Altruist.Altruist_Siberian_Punk_Offense.Repulsing_Torrent",
+    "Crey_Altruist.Altruist_Siberian_Punk_Offense.Burst",
+    "Crey_Altruist.Altruist_Siberian_Punk_Offense.Focused_Burst"
+  ],
+  "power_display_names": [
+    "Quick Strike",
+    "Body Blow",
+    "Smashing Blow",
+    "Repulsing Torrent",
+    "Burst",
+    "Focused Burst"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Energy/Smash), Foe Knockdown, -DMG",
+    "Melee, Moderate DMG(Energy/Smash), Foe Disorient, -DMG",
+    "Melee, Heavy DMG(Energy/Smash), Foe Disorient, -DMG",
+    "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback, -DMG",
+    "PBAoE Melee, Moderate DMG(Energy/Smash), Foe Knockdown, -DMG",
+    "Ranged, High DMG(Energy/Smash), Foe Knockdown, -DMG"
+  ]
+}

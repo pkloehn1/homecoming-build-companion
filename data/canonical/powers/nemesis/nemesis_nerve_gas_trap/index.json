@@ -1,0 +1,26 @@
+{
+  "name": "Nemesis_Nerve_Gas_Trap",
+  "display_name": "Nemesis_Nerve_Gas_Trap",
+  "display_fullname": "Nemesis.Nemesis Nerve Gas Trap",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_NERVE_GAS_TRAP.POWERSETS",
+  "icon": "nemesis_nerve_gas_trap_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Nerve_Gas_Trap.Self_Destruct",
+    "Nemesis.Nemesis_Nerve_Gas_Trap.Resistance"
+  ],
+  "power_display_names": [
+    "Self Destruct",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Self Destruct",
+    "Resistance"
+  ]
+}

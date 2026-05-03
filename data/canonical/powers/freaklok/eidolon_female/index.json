@@ -1,0 +1,50 @@
+{
+  "name": "Eidolon_Female",
+  "display_name": "Eidolon_Female",
+  "display_fullname": "Freaklok.Eidolon Female",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/EIDOLON_FEMALE.POWERSETS",
+  "icon": "eidolon_female_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Eidolon_Female.Neutrino_Bolt",
+    "Freaklok.Eidolon_Female.Cosmic_Burst",
+    "Freaklok.Eidolon_Female.Proton_Volley",
+    "Freaklok.Eidolon_Female.Irradiate",
+    "Freaklok.Eidolon_Female.Contaminated_Strike",
+    "Freaklok.Eidolon_Female.Atom_Smasher",
+    "Freaklok.Eidolon_Female.Radiation_Infection",
+    "Freaklok.Eidolon_Female.Focus"
+  ],
+  "power_display_names": [
+    "Neutrino Bolt",
+    "Cosmic Burst",
+    "Proton Volley",
+    "Irradiate",
+    "Contaminated Strike",
+    "Atom Smasher",
+    "Radiation Infection",
+    "Focus"
+  ],
+  "power_short_helps": [
+    "Ranged, Minor DMG(Energy), Foe -DEF",
+    "Ranged, Superior DMG(Energy), Foe Disorient, -DEF",
+    "Ranged, Extreme DMG(Energy), Foe -DEF",
+    "PBAoE, Moderate DoT(Energy), Foe -DEF",
+    "Melee, Light DMG(Energy/Smash), Foe -DEF",
+    "PBAoE Melee, Heavy DMG(Toxic/Energy), Foe Disorient, -DEF",
+    "Toggle: Ranged (Targeted AoE), Foe -DEF, -ToHit",
+    "Toggle: Self +DEF(Melee, Ranged), +Res(Confuse), +Perception"
+  ]
+}

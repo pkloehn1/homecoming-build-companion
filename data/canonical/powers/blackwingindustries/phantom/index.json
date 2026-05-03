@@ -1,0 +1,58 @@
+{
+  "name": "Phantom",
+  "display_name": "BWI PEACE Phantom",
+  "display_fullname": "BlackwingIndustries.BWI PEACE Phantom",
+  "display_help": "Blackwing Industries",
+  "display_short_help": "Blackwing Industries",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/BLACKWINGINDUSTRIES/PHANTOM.POWERSETS",
+  "icon": "bwi_phantom_set.png",
+  "requires": "",
+  "power_names": [
+    "BlackwingIndustries.Phantom.SpecularImplants",
+    "BlackwingIndustries.Phantom.Hide",
+    "BlackwingIndustries.Phantom.Placate",
+    "BlackwingIndustries.Phantom.AStrike",
+    "BlackwingIndustries.Phantom.Sting_of_the_Wasp",
+    "BlackwingIndustries.Phantom.Gamblers_Cut",
+    "BlackwingIndustries.Phantom.Flashing_Steel",
+    "BlackwingIndustries.Phantom.Divine_Avalanche",
+    "BlackwingIndustries.Phantom.Trick_Shot",
+    "BlackwingIndustries.Phantom.Web_Grenade"
+  ],
+  "power_display_names": [
+    "Specular Implants",
+    "Hide",
+    "Placate",
+    "Assassin's Blade",
+    "Sting of the Wasp",
+    "Gambler's Cut",
+    "Flashing Steel",
+    "Divine Avalanche",
+    "Trick Shot",
+    "Web Grenade"
+  ],
+  "power_short_helps": [
+    "Toggle: Self +ToHit, +Perception, +Res(DeBuff ToHit)",
+    "Toggle: Self Stealth, +DEF",
+    "Melee, Foe Placate, Self Stealth/Hide",
+    "Melee, Extreme DMG(Lethal)",
+    "Melee, Moderate DMG(Lethal), DoT(Toxic), Foe -DEF, -Heal, -Regen",
+    "Melee, Light DMG(Lethal), DoT(Toxic), Foe -DEF, -Heal, -Regen",
+    "Melee (Cone), Moderate DMG(Lethal), DoT(Toxic), Foe -DEF, -Heal, -Regen",
+    "Melee, Light DMG(Lethal), DoT(Toxic), Foe -Heal, -Regen, Self +DEF(Melee, Lethal)",
+    "Ranged (Chain AoE), Moderate DMG(Lethal), DoT(Toxic), Foe -Heal, -Regen",
+    "Ranged, Foe Immobilize, -Recharge, -SPD, -Fly, -Jump"
+  ]
+}

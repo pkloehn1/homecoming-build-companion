@@ -1,0 +1,46 @@
+{
+  "name": "Goldbricker_AU",
+  "display_name": "Goldbricker AU",
+  "display_fullname": "V GoldBrickers.Goldbricker AU",
+  "display_help": "Gold Brickers",
+  "display_short_help": "Gold Brickers",
+  "available_level": [
+    34,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_GOLDBRICKERS/GOLDBRICKER_AU.POWERSETS",
+  "icon": "crey_power_tank_set.png",
+  "requires": "",
+  "power_names": [
+    "V_GoldBrickers.Goldbricker_AU.Gold_Skin",
+    "V_GoldBrickers.Goldbricker_AU.Energy_Punch",
+    "V_GoldBrickers.Goldbricker_AU.Whirling_Hands",
+    "V_GoldBrickers.Goldbricker_AU.Bone_Smasher",
+    "V_GoldBrickers.Goldbricker_AU.Power_Bolt",
+    "V_GoldBrickers.Goldbricker_AU.Power_Blast",
+    "V_GoldBrickers.Goldbricker_AU.Explosive_Blast"
+  ],
+  "power_display_names": [
+    "Phasing Gold Skin",
+    "Energy Punch",
+    "Whirling Hands",
+    "Bone Smasher",
+    "Power Bolt",
+    "Power Blast",
+    "Explosive Blast"
+  ],
+  "power_short_helps": [
+    "Resistance",
+    "Melee, Moderate DMG(Negative/Smash), Foe Disorient",
+    "PBAoE Melee, Moderate DMG(Negative/Smash), Foe Disorient",
+    "Melee, High DMG(Negative/Smash), Foe Disorient",
+    "Ranged, Moderate DMG(Negative/Smash), Foe Knockdown",
+    "Ranged, High DMG(Negative/Smash), Foe Knockback",
+    "Ranged (Targeted AoE), Moderate DMG(Negative/Smash), Foe Knockback"
+  ]
+}

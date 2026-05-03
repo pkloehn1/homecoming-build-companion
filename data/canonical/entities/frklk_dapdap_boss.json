@@ -1,0 +1,113 @@
+{
+  "name": "Frklk_DapDap_Boss",
+  "gender": "GENDER_MALE",
+  "group_name": "Freaklok",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human",
+    "Electronic"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 30,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": true,
+    "rank": "VR_BOSS",
+    "ai_config": "Freakshow_Freaks_Base",
+    "character_class_name": "boss_grunt",
+    "description": "Dap-Dap is street-famous for his dealings with Nemesis and brokering a deal for a massive acquisition of technology. Since his fifteen minutes of fame for being busted by heroes in the mid 2000s had long since expired, Dap-Dap sank back into the ranks of the Freakshow as just another meme-spouting anarchist. But he always longed for the spotlight once again, to be 'down with the street' and the talk of the town. It was no surprise when he joined up with Piecemeal and Bile's coalition to advance the Freaklok.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 0.95,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Freakshow.Freakshow_Metal_Swiper_High.Cybernetic_Strike",
+      "Freakshow.Freakshow_Metal_Swiper_High.Cybernetic_Slash",
+      "Freakshow.Freakshow_Metal_Swiper_High.Cybernetic_Shred",
+      "Freakshow.Freakshow_Metal_Swiper_High.Sawblade",
+      "Freakshow.Freakshow_Metal_Swiper_High.Blood_Frenzy",
+      "Freakshow.Freakshow_Metal_Tank_Swiper_High.Cybernetic_Flurry",
+      "Freakshow.Freakshow_Metal_Tank_Swiper_High.Cybernetic_Hemorrhage",
+      "Freakshow.Freakshow_Inherent_Defense.Dull_Pain",
+      "Freakshow.Freakshow_Inherent_Defense.Resistance"
+    ],
+    "power_display_names": [
+      "Cybernetic Strike",
+      "Cybernetic Slash",
+      "Cybernetic Shred",
+      "Sawblade",
+      "Blood Frenzy",
+      "Cybernetic Flurry",
+      "Cybernetic Hemorrhage",
+      "Dull Pain",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Freakshow",
+        "power_set": "Freakshow_Metal_Swiper_High",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Freakshow",
+        "power_set": "Freakshow_Metal_Tank_Swiper_High",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Freakshow",
+        "power_set": "Freakshow_Inherent_Defense",
+        "power": "Dull_Pain",
+        "level": 0
+      },
+      {
+        "power_category": "Freakshow",
+        "power_set": "Freakshow_Inherent_Defense",
+        "power": "Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 30,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Dap-Dap tha Deal-maka'"
+      ],
+      "costumes": [
+        "FRKLK_DapDap"
+      ]
+    }
+  ]
+}

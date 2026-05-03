@@ -1,0 +1,38 @@
+{
+  "name": "Ghost",
+  "display_name": "Ghost",
+  "display_fullname": "Skulls.Ghost",
+  "display_help": "Ghosts",
+  "display_short_help": "Ghosts",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/GHOST.POWERSETS",
+  "icon": "ghost_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Ghost.Resistance",
+    "Skulls.Ghost.Self_Destruct",
+    "Skulls.Ghost.Ghastly_Blast",
+    "Skulls.Ghost.Life_Drain",
+    "Skulls.Ghost.Necroplasmic_Grasp"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Self Destruct",
+    "Ghastly Blast",
+    "Life Drain",
+    "Necroplasmic Grasp"
+  ],
+  "power_short_helps": [
+    "Self (Auto), +RES(Sleep, Fear, Immobilize, Slow, Smashing, Lethal, Cold, Negative, Toxic)",
+    "Self (Auto), Destruct",
+    "Ranged, Moderate DMG (Negative), Foe -ToHit",
+    "Ranged, High DMG(Negative), Foe -ToHit, Self Heal",
+    "Melee, Extreme DoT(Negative), Foe Hold"
+  ]
+}

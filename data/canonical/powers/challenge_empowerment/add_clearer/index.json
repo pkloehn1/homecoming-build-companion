@@ -1,0 +1,22 @@
+{
+  "name": "Add_Clearer",
+  "display_name": "Add Clearer",
+  "display_fullname": "Challenge Empowerment.Add Clearer",
+  "display_help": "Challenge Empowerment",
+  "display_short_help": "Challenge Empowerment",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/CHALLENGE_EMPOWERMENT/ADD_CLEARER.POWERSETS",
+  "icon": "tactics_set.png",
+  "requires": "",
+  "power_names": [
+    "Challenge_Empowerment.Add_Clearer.HM_AddClearer"
+  ],
+  "power_display_names": [
+    "Add Clearer"
+  ],
+  "power_short_helps": [
+    "Kill Added Enemies"
+  ]
+}

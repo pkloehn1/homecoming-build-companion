@@ -1,0 +1,26 @@
+{
+  "name": "Scarcity",
+  "display_name": "Scarcity",
+  "display_fullname": "Rikti.Scarcity",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/SCARCITY.POWERSETS",
+  "icon": "scarcity_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Scarcity.Paralytic_Blast",
+    "Rikti.Scarcity.Paralytic_Aura"
+  ],
+  "power_display_names": [
+    "Paralytic Blast",
+    "Paralytic Aura"
+  ],
+  "power_short_helps": [
+    "Ranged, Heavy DMG(Toxic), Foe Fear, -SPD, -Recharge, -End, -Recovery",
+    "Auto: PBAoE, Minor DoT(Toxic), Foe Fear, -SPD, -Recharge, -End, -Recovery"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "tag": "IncarnateContent",
+  "bears": [
+    [
+      "Incarnate.Hybrid.Doublehit",
+      "incarnate.hybrid_silent.doublehit"
+    ],
+    [
+      "Incarnate.Hybrid.Doublehit",
+      "incarnate.hybrid_silent.doublehit_partial_core"
+    ],
+    [
+      "Incarnate.Hybrid.Doublehit",
+      "incarnate.hybrid_silent.doublehit_partial_radial"
+    ],
+    [
+      "Incarnate.Hybrid.Doublehit",
+      "incarnate.hybrid_silent.doublehit_rare"
+    ],
+    [
+      "Incarnate.Hybrid.Doublehit",
+      "incarnate.hybrid_silent.doublehit_uncommon"
+    ],
+    [
+      "Incarnate.Hybrid.Doublehit",
+      "incarnate.hybrid_silent.doublehit_very_rare"
+    ],
+    [
+      "Incarnate.Hybrid.Waylay",
+      "incarnate.hybrid_silent.containment_1"
+    ],
+    [
+      "Incarnate.Hybrid.Waylay",
+      "incarnate.hybrid_silent.containment_2"
+    ],
+    [
+      "Incarnate.Hybrid.Waylay",
+      "incarnate.hybrid_silent.containment_3"
+    ],
+    [
+      "Incarnate.Hybrid.Waylay",
+      "incarnate.hybrid_silent.containment_4"
+    ],
+    [
+      "Incarnate.Hybrid.Waylay",
+      "incarnate.hybrid_silent.containment_5"
+    ],
+    [
+      "Incarnate.Hybrid.Waylay",
+      "incarnate.hybrid_silent.containment_6"
+    ],
+    [
+      "Incarnate.Hybrid.Waylay",
+      "incarnate.hybrid_silent.containment_7"
+    ],
+    [
+      "Incarnate.Hybrid.Waylay",
+      "incarnate.hybrid_silent.containment_8"
+    ],
+    [
+      "Incarnate.Hybrid.Waylay",
+      "incarnate.hybrid_silent.containment_9"
+    ],
+    [
+      "Incarnate.Interface.Cognitive Interface",
+      "incarnate.interface_silent.dot_psionic"
+    ],
+    [
+      "Incarnate.Interface.Degenerative Interface",
+      "incarnate.interface_silent.dot_toxic"
+    ],
+    [
+      "Incarnate.Interface.Preemptive Interface",
+      "incarnate.interface_silent.dot_energy"
+    ],
+    [
+      "Incarnate.Interface.Reactive Interface",
+      "incarnate.interface_silent.dot_debuff"
+    ],
+    [
+      "Incarnate.Interface.Spectral Interface",
+      "incarnate.interface_silent.dot_negative"
+    ]
+  ],
+  "affects": []
+}

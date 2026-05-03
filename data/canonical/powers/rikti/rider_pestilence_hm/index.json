@@ -1,0 +1,46 @@
+{
+  "name": "Rider_Pestilence_HM",
+  "display_name": "Rider Pestilence (Advanced Mode)",
+  "display_fullname": "Rikti.Rider Pestilence (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIDER_PESTILENCE_HM.POWERSETS",
+  "icon": "heavy_assault_suit_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rider_Pestilence_HM.Fly",
+    "Rikti.Rider_Pestilence_HM.Laser_Lance",
+    "Rikti.Rider_Pestilence_HM.Sweeping_Laser",
+    "Rikti.Rider_Pestilence_HM.Fusion_Pulse",
+    "Rikti.Rider_Pestilence_HM.Fusion_Explosion",
+    "Rikti.Rider_Pestilence_HM.Fusion_Overload",
+    "Rikti.Rider_Pestilence_HM.Armored_Exoskeleton"
+  ],
+  "power_display_names": [
+    "Fly",
+    "Laser Lance: Pestilence",
+    "Sweeping Laser: Pestilence",
+    "Fusion Pulse: Pestilence",
+    "Fusion Explosion: Pestilence",
+    "Fusion Overload: Pestilence",
+    "Armored Exoskeleton: Pestilence"
+  ],
+  "power_short_helps": [
+    "Self Travel",
+    "Ranged (Narrow Cone), Light DMG(Toxic/Energy), Foe -DEF",
+    "Ranged (Cone), Moderate DMG(Toxic/Energy), Foe -DEF",
+    "Ranged (Narrow Cone), Moderate DMG(Toxic/Energy), Minor DoT(Toxic), Foe -Resist(All), -Regen, -DEF",
+    "Ranged (Targeted AoE), Moderate DMG(Toxic/Energy), Minor DoT(Toxic), Foe -Resist(All), -Regen, -DEF",
+    "Post Death Special: PBAoE, High DMG(Toxic/Energy), Minor DoT(Toxic), Foe -Resist(All), -Regen, -DEF",
+    "Resistance"
+  ]
+}

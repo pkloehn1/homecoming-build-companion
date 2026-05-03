@@ -1,0 +1,30 @@
+{
+  "name": "Control_Points",
+  "display_name": "Control Points",
+  "display_fullname": "Base Fields.Control Points",
+  "display_help": "Control Points",
+  "display_short_help": "Control Points",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/BASE_FIELDS/CONTROL_POINTS.POWERSETS",
+  "icon": "inherent_brawl.png",
+  "requires": "",
+  "power_names": [
+    "Base_Fields.Control_Points.Control_Point_00",
+    "Base_Fields.Control_Points.Control_Point_03",
+    "Base_Fields.Control_Points.Control_Point_04"
+  ],
+  "power_display_names": [
+    "Control Point",
+    "Control Point",
+    "Control Point"
+  ],
+  "power_short_helps": [
+    "Control Point",
+    "Control Point",
+    "Control Point"
+  ]
+}

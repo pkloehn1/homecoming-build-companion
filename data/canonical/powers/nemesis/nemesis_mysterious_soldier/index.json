@@ -1,0 +1,22 @@
+{
+  "name": "Nemesis_Mysterious_Soldier",
+  "display_name": "Nemesis_Mysterious_Soldier",
+  "display_fullname": "Nemesis.Nemesis Mysterious Soldier",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_MYSTERIOUS_SOLDIER.POWERSETS",
+  "icon": "nemesis_mysterious_soldier_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Mysterious_Soldier.Vengeance"
+  ],
+  "power_display_names": [
+    "Vengeance"
+  ],
+  "power_short_helps": [
+    "Post Death Special: PBAoE, Team +DEF(Melee, Ranged, AoE), +ToHit, +DMG, Heal"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Altruist_Binding_Blade_Offense",
+  "display_name": "Binding Blade Offense",
+  "display_fullname": "Crey Altruist.Binding Blade Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_BINDING_BLADE_OFFENSE.POWERSETS",
+  "icon": "altruist_binding_blade_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Binding_Blade_Offense.Psi_Blade",
+    "Crey_Altruist.Altruist_Binding_Blade_Offense.Psi_Blade_Sweep",
+    "Crey_Altruist.Altruist_Binding_Blade_Offense.Greater_Psi_Blade",
+    "Crey_Altruist.Altruist_Binding_Blade_Offense.Assassins_Psi_Blade",
+    "Crey_Altruist.Altruist_Binding_Blade_Offense.Project_Will"
+  ],
+  "power_display_names": [
+    "Psi Blade",
+    "Psi Blade Sweep",
+    "Greater Psi Blade",
+    "Blade of Fear",
+    "Project Will"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Psionic/Lethal), DoT(Psionic), Foe -Recharge",
+    "Melee (Cone), Heavy DMG(Psionic/Lethal), DoT(Psionic), Foe Disorient, -Recharge",
+    "Melee, Extreme DMG(Psionic/Lethal), Foe Hold, -Recharge",
+    "Melee, High DMG(Psionic/Lethal), Foe Fear",
+    "Ranged, Moderate DMG(Psionic), Foe Knockdown"
+  ]
+}

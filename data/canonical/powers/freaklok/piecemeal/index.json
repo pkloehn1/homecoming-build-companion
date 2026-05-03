@@ -1,0 +1,54 @@
+{
+  "name": "Piecemeal",
+  "display_name": "Piecemeal",
+  "display_fullname": "Freaklok.Piecemeal",
+  "display_help": "Piecemeal",
+  "display_short_help": "Piecemeal",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/PIECEMEAL.POWERSETS",
+  "icon": "piecemeal_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Piecemeal.Teleport",
+    "Freaklok.Piecemeal.Swipe",
+    "Freaklok.Piecemeal.Cross_Cut",
+    "Freaklok.Piecemeal.Jacobs_Ladder",
+    "Freaklok.Piecemeal.Blade_Flurry",
+    "Freaklok.Piecemeal.Proton_Volley",
+    "Freaklok.Piecemeal.Ball_Lightning",
+    "Freaklok.Piecemeal.Jolting_Chain",
+    "Freaklok.Piecemeal.Voltaic_Sentinel"
+  ],
+  "power_display_names": [
+    "Teleport",
+    "Swipe",
+    "Cross Cut",
+    "Jacobs Ladder",
+    "Blade Flurry",
+    "Proton Volley",
+    "Ball Lightning",
+    "Jolting Chain",
+    "Voltaic Sentinel"
+  ],
+  "power_short_helps": [
+    "Self Travel",
+    "Melee, Light DMG(Energy/Lethal), Foe -DEF, Chance for Critical Hit",
+    "Melee, Moderate DMG(Energy/Lethal), Foe -DEF, Chance for Critical Hit",
+    "Melee (Cone), High DMG(Energy), Foe Sleep, -End, -Recovery",
+    "Melee (Cone), Extreme DMG(Energy/Lethal), Foe Knockdown, -Def, Chance for Critical Hit",
+    "Ranged (Sniper), Extreme DMG(Energy), Foe -DEF",
+    "Ranged (Targeted AoE), Moderate DoT(Energy), Foe -End, -Recovery",
+    "Ranged (Chain AoE), Minor DMG(Energy), Foe Knockdown, -End, -Recovery",
+    "Summon Sentinel: Ranged, Moderate DMG(Energy), Foe -End"
+  ]
+}

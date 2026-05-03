@@ -1,0 +1,34 @@
+{
+  "name": "Hack",
+  "display_name": "Hacker",
+  "display_fullname": "Pets.Hacker",
+  "display_help": "Hacker",
+  "display_short_help": "Hacker",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/HACK.POWERSETS",
+  "icon": "temppower_warwolf_wistel_pet_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Hack.Hasten",
+    "Pets.Hack.ToHit",
+    "Pets.Hack.Damage",
+    "Pets.Hack.Recharge"
+  ],
+  "power_display_names": [
+    "Hasten",
+    "ToHit Cap",
+    "Damage Cap",
+    "Recharge Cap"
+  ],
+  "power_short_helps": [
+    "Togle: Self +SPD",
+    "+ToHit Cap",
+    "+Damage Cap",
+    "+Recharge Cap"
+  ]
+}

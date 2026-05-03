@@ -1,0 +1,22 @@
+{
+  "name": "Hamidon_Endurance_Modification_Recharge",
+  "display_name": "Hamidon Endurance Modification Recharge",
+  "display_fullname": "Boosts.Hamidon Endurance Modification Recharge",
+  "display_help": "Enhances the endurance modification ability and increases the attack rate of a power.",
+  "display_short_help": "Hamidon (All Origins)",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/HAMIDON_ENDURANCE_MODIFICATION_RECHARGE.POWERSETS",
+  "icon": "hamidon_accuracy_mez_set.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Hamidon_Endurance_Modification_Recharge.Hamidon_Endurance_Modification_Recharge"
+  ],
+  "power_display_names": [
+    "Vesicle Exposure (End Mod/Rech)"
+  ],
+  "power_short_helps": [
+    "Enhances Endurance Modification and Increases Attack Rate"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Skulls_BoneDaddy_High",
+  "display_name": "Skulls_BoneDaddy_High",
+  "display_fullname": "Skulls.Skulls BoneDaddy High",
+  "display_help": "Skulls",
+  "display_short_help": "Skulls",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/SKULLS_BONEDADDY_HIGH.POWERSETS",
+  "icon": "skulls_bonedaddy_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Skulls_BoneDaddy_High.Deadly_Fists",
+    "Skulls.Skulls_BoneDaddy_High.Deadly_Smite",
+    "Skulls.Skulls_BoneDaddy_High.Deadly_Maul",
+    "Skulls.Skulls_BoneDaddy_High.Soul_Drain",
+    "Skulls.Skulls_BoneDaddy_High.Deadly_Bolt",
+    "Skulls.Skulls_BoneDaddy_High.Deadly_Blast"
+  ],
+  "power_display_names": [
+    "Deadly Fists",
+    "Deadly Smite",
+    "Deadly Maul",
+    "Soul Drain",
+    "Deadly Bolt",
+    "Deadly Blast"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Negative/Cold), Foe -SPD, -Recharge, -ToHit",
+    "Melee, Heavy DMG(Negative/Cold), Foe -SPD, -Recharge, -ToHit",
+    "Melee (Cone), High DoT(Negative/Cold), Foe -SPD, -Recharge, -ToHit",
+    "PBAoE Melee, Moderate DMG(Negative/Cold), Self +DMG, +ToHit",
+    "Ranged, Moderate DMG(Negative/Cold), Foe -SPD, -Recharge, -ToHit",
+    "Ranged, High DoT(Negative/Cold), Foe -SPD, -Recharge, -ToHit"
+  ]
+}

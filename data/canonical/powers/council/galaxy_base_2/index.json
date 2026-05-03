@@ -1,0 +1,26 @@
+{
+  "name": "Galaxy_Base_2",
+  "display_name": "Galaxy_Base_2",
+  "display_fullname": "Council.Galaxy Base 2",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/GALAXY_BASE_2.POWERSETS",
+  "icon": "galaxy_base_2_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Galaxy_Base_2.Gravimetric_Snare",
+    "Council.Galaxy_Base_2.Shadow_Blast"
+  ],
+  "power_display_names": [
+    "Gravimetric Snare",
+    "Shadow Blast"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DoT(Negative), Foe Immobilize, -Recharge, -SPD",
+    "Ranged, High DMG(Negative), Foe Knockback, -Recharge, -SPD"
+  ]
+}

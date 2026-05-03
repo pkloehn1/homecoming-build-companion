@@ -1,0 +1,34 @@
+{
+  "name": "Priest_HM",
+  "display_name": "Priest (Advanced Mode)",
+  "display_fullname": "Rikti.Priest (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/PRIEST_HM.POWERSETS",
+  "icon": "priest_hm_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Priest_HM.Transfusion",
+    "Rikti.Priest_HM.Fulcrum_Shift",
+    "Rikti.Priest_HM.Regeneration_Aura",
+    "Rikti.Priest_HM.Fortitude"
+  ],
+  "power_display_names": [
+    "Transfusion",
+    "Fulcrum Shift",
+    "Regeneration Aura",
+    "Fortitude"
+  ],
+  "power_short_helps": [
+    "High-Accuracy, Ranged, Foe -End, -Regen, Team Heal",
+    "Ranged (Targeted AoE), Foe -DMG, Team +DMG",
+    "PBAoE, Team +Regeneration, +Recovery",
+    "Ranged, Ally +DEF, +DMG, +ToHit"
+  ]
+}

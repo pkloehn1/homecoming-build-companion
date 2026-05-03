@@ -1,0 +1,58 @@
+{
+  "name": "Maestro",
+  "display_name": "Maestro",
+  "display_fullname": "Council.Maestro",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/MAESTRO.POWERSETS",
+  "icon": "maestro_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Maestro.Hymn_of_Dissonance",
+    "Council.Maestro.Aria_of_Stasis",
+    "Council.Maestro.Enfeebling_Lullaby",
+    "Council.Maestro.Confounding_Chant",
+    "Council.Maestro.Scream",
+    "Council.Maestro.Howl",
+    "Council.Maestro.Shockwave",
+    "Council.Maestro.Shout",
+    "Council.Maestro.Sonic_Shield",
+    "Council.Maestro.Resistance"
+  ],
+  "power_display_names": [
+    "Hymn of Dissonance",
+    "Aria of Stasis",
+    "Enfeebling Lullaby",
+    "Confounding Chant",
+    "Scream",
+    "Howl",
+    "Shockwave",
+    "Shout",
+    "Sonic Shield",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Psionic), Foe Hold, -Recharge",
+    "Ranged (Cone), Moderate DMG(Psionic), Foe Immobilize, -SPD",
+    "Ranged (Cone), Minor DMG(Psionic), Foe Sleep, -DMG",
+    "Ranged (Cone), Extreme DoT(Psionic), Foe Disorient",
+    "Ranged, Heavy DoT(Energy/Smash), Foe -Resist(All)",
+    "Ranged (Cone), Light DMG(Energy/Smash), Foe -Resist(All)",
+    "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback",
+    "Ranged, Superior DMG(Energy/Smash), Foe -Resist(All)",
+    "Toggle: Self +Res(Smash, Lethal, Energy)",
+    "Resistance"
+  ]
+}

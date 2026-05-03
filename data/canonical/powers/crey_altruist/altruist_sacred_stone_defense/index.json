@@ -1,0 +1,26 @@
+{
+  "name": "Altruist_Sacred_Stone_Defense",
+  "display_name": "Sacred Stone Defense",
+  "display_fullname": "Crey Altruist.Sacred Stone Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SACRED_STONE_DEFENSE.POWERSETS",
+  "icon": "altruist_sacred_stone_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Sacred_Stone_Defense.Rock_Armor",
+    "Crey_Altruist.Altruist_Sacred_Stone_Defense.Earths_Embrace"
+  ],
+  "power_display_names": [
+    "Rock Armor",
+    "Earth's Embrace"
+  ],
+  "power_short_helps": [
+    "Toggle: Self +DEF(Smash, Lethal, Energy, Negative), +Res(Fire, Cold, Toxic, Hold, Immobilize, Disorient, Sleep, Knockback, Repel, End Drain), +Regen, +Recovery",
+    "Self Heal, +MaxHP, +Res(Toxic)"
+  ]
+}

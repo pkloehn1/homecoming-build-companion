@@ -1,0 +1,26 @@
+{
+  "name": "MissileLauncher",
+  "display_name": "Missile Launcher",
+  "display_fullname": "Council.Missile Launcher",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    29
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/MISSILELAUNCHER.POWERSETS",
+  "icon": "missilelauncher_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.MissileLauncher.Missile_Launcher",
+    "Council.MissileLauncher.Rocket_Launch"
+  ],
+  "power_display_names": [
+    "Missile Launcher",
+    "Rocket Launch"
+  ],
+  "power_short_helps": [
+    "Ranged (Targeted AoE), Heavy DMG(Fire/Lethal), Foe Knockback",
+    "Ranged (Targeted AoE), Superior DMG(Fire/Lethal), Foe Knockback"
+  ]
+}

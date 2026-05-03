@@ -1,0 +1,26 @@
+{
+  "name": "Epic_IceMastery",
+  "display_name": "Ice Mastery",
+  "display_fullname": "Redirects.Ice Mastery",
+  "display_help": "Ice Mastery",
+  "display_short_help": "Ice Mastery",
+  "available_level": [
+    34,
+    34
+  ],
+  "source_file": "DEFS/POWERS/REDIRECTS/EPIC_ICEMASTERY.POWERSETS",
+  "icon": "stalker_epicmumastery_snipe_set.png",
+  "requires": "",
+  "power_names": [
+    "Redirects.Epic_IceMastery.Frozen_Spear_Quick",
+    "Redirects.Epic_IceMastery.Frozen_Spear_Normal"
+  ],
+  "power_display_names": [
+    "Frozen Spear",
+    "Frozen Spear"
+  ],
+  "power_short_helps": [
+    "Sniper, DMG(Cold), Foe Sleep, -Recharge, -SPD",
+    "Sniper, DMG(Cold), Foe Sleep, -Recharge, -SPD"
+  ]
+}

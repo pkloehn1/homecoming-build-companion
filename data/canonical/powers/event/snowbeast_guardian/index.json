@@ -1,0 +1,34 @@
+{
+  "name": "Snowbeast_Guardian",
+  "display_name": "Winter Guardian",
+  "display_fullname": "Event.Winter Guardian",
+  "display_help": "Winter Guardian",
+  "display_short_help": "Winter Guardian",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/SNOWBEAST_GUARDIAN.POWERSETS",
+  "icon": "icearmor_hoarfrost.png",
+  "requires": "",
+  "power_names": [
+    "Event.Snowbeast_Guardian.Elemental_Armor",
+    "Event.Snowbeast_Guardian.Ethereal_Armor",
+    "Event.Snowbeast_Guardian.Corporeal_Armor",
+    "Event.Snowbeast_Guardian.One_with_Winter"
+  ],
+  "power_display_names": [
+    "Elemental Armor",
+    "Ethereal Armor",
+    "Corporeal Armor",
+    "One with Winter"
+  ],
+  "power_short_helps": [
+    "Elemental Armor",
+    "Ethereal Armor",
+    "Corporeal Armor",
+    "Toggle: Self Intangible"
+  ]
+}

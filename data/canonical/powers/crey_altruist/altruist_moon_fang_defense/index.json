@@ -1,0 +1,26 @@
+{
+  "name": "Altruist_Moon_Fang_Defense",
+  "display_name": "Moon Fang Defense",
+  "display_fullname": "Crey Altruist.Moon Fang Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_MOON_FANG_DEFENSE.POWERSETS",
+  "icon": "altruist_moon_fang_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Moon_Fang_Defense.Dark_Embrace",
+    "Crey_Altruist.Altruist_Moon_Fang_Defense.Shadow_Meld"
+  ],
+  "power_display_names": [
+    "Dark Embrace",
+    "Shadow Meld"
+  ],
+  "power_short_helps": [
+    "Toggle: Self +Res(Smash, Lethal, Fire, Cold, Energy, Negative, Psionic, Toxic, Hold, Disorient, Sleep, Fear)",
+    "Self +DEF(All), +Regen, +Recovery"
+  ]
+}

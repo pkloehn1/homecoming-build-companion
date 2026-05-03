@@ -1,0 +1,46 @@
+{
+  "name": "Altruist_Bionic_Devil_Offense",
+  "display_name": "Bionic Devil Offense",
+  "display_fullname": "Crey Altruist.Bionic Devil Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_BIONIC_DEVIL_OFFENSE.POWERSETS",
+  "icon": "altruist_bionic_devil_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Bionic_Devil_Offense.Blaze",
+    "Crey_Altruist.Altruist_Bionic_Devil_Offense.Crane_Kick",
+    "Crey_Altruist.Altruist_Bionic_Devil_Offense.Dragons_Tail",
+    "Crey_Altruist.Altruist_Bionic_Devil_Offense.Fire_Ball",
+    "Crey_Altruist.Altruist_Bionic_Devil_Offense.Fire_Smash",
+    "Crey_Altruist.Altruist_Bionic_Devil_Offense.Flares",
+    "Crey_Altruist.Altruist_Bionic_Devil_Offense.Thunder_Kick"
+  ],
+  "power_display_names": [
+    "Blaze",
+    "Crane Kick",
+    "Dragon's Tail",
+    "Fire Ball",
+    "Fire Smash",
+    "Flares",
+    "Thunder Kick"
+  ],
+  "power_short_helps": [
+    "Close, Superior DMG(Fire), DoT(Fire)",
+    "Melee, Superior DMG(Smash), Foe Knockback",
+    "PBAoE Melee, Moderate DMG(Smash), Foe Knockdown",
+    "Ranged (Targeted AoE), Moderate DMG(Fire/Smash), DoT(Fire)",
+    "Melee, Moderate DMG(Fire/Smash), DoT(Fire), Foe Knockback",
+    "Ranged, Moderate DMG(Fire)",
+    "Melee, Light DMG(Smash), Foe Disorient"
+  ]
+}

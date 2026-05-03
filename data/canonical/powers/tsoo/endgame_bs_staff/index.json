@@ -1,0 +1,50 @@
+{
+  "name": "Endgame_BS_Staff",
+  "display_name": "Endgame_BS_Staff",
+  "display_fullname": "Tsoo.Endgame BS Staff",
+  "display_help": "Tsoo",
+  "display_short_help": "Tsoo",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/TSOO/ENDGAME_BS_STAFF.POWERSETS",
+  "icon": "endgame_bs_staff_set.png",
+  "requires": "",
+  "power_names": [
+    "Tsoo.Endgame_BS_Staff.Mercurial_Blow",
+    "Tsoo.Endgame_BS_Staff.Precise_Strike",
+    "Tsoo.Endgame_BS_Staff.Guarded_Spin",
+    "Tsoo.Endgame_BS_Staff.Eye_of_the_Storm",
+    "Tsoo.Endgame_BS_Staff.Mastery_of_Form",
+    "Tsoo.Endgame_BS_Staff.Serpents_Reach",
+    "Tsoo.Endgame_BS_Staff.Innocuous_Strikes",
+    "Tsoo.Endgame_BS_Staff.Sky_Splitter"
+  ],
+  "power_display_names": [
+    "Mercurial Blow",
+    "Precise Strike",
+    "Guarded Spin",
+    "Eye of the Storm",
+    "Mastery of Form",
+    "Serpent's Reach",
+    "Innocuous Strikes",
+    "Sky Splitter"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Smash), Foe -DEF",
+    "Melee, Moderate DMG(Smash), Foe Disorient",
+    "Melee (Cone), Moderate DMG(Smash), Self +DEF(Melee, Lethal)",
+    "PBAoE Melee, High DoT(Smash), Foe Knockdown, -Resist(All)",
+    "Self +DMG, +ToHit",
+    "Close, Heavy DMG(Smash), Foe Knockdown",
+    "Melee (Cone), High DMG(Smash), Foe Immobilize, -SPD",
+    "Melee, Extreme DMG(Smash/Energy), Foe Disorient, Knockup, -Fly, Self +Regen, +Recovery"
+  ]
+}

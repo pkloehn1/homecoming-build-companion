@@ -1,0 +1,30 @@
+{
+  "name": "Circle_Madness_High",
+  "display_name": "Circle_Madness_High",
+  "display_fullname": "CircleOfThorns.Circle Madness High",
+  "display_help": "Circle of Thorns",
+  "display_short_help": "Circle of Thorns",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CIRCLEOFTHORNS/CIRCLE_MADNESS_HIGH.POWERSETS",
+  "icon": "circle_madness_ranged_set.png",
+  "requires": "",
+  "power_names": [
+    "CircleOfThorns.Circle_Madness_High.Farsight",
+    "CircleOfThorns.Circle_Madness_High.Total_Domination",
+    "CircleOfThorns.Circle_Madness_High.Mind_Over_Body"
+  ],
+  "power_display_names": [
+    "Farsight",
+    "Total Domination",
+    "Mind Over Body"
+  ],
+  "power_short_helps": [
+    "PBAoE, Team +ToHit, +DEF, +Perception",
+    "Ranged (Targeted AoE), Superior DMG(Psionic), Foe Hold",
+    "Toggle: Self +Res(Smash, Lethal, Psionics)"
+  ]
+}

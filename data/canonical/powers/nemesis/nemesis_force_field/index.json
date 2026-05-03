@@ -1,0 +1,26 @@
+{
+  "name": "Nemesis_Force_Field",
+  "display_name": "Nemesis_Force_Field",
+  "display_fullname": "Nemesis.Nemesis Force Field",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_FORCE_FIELD.POWERSETS",
+  "icon": "nemesis_force_field_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Force_Field.Personal_Force_Field_Buff",
+    "Nemesis.Nemesis_Force_Field.Personal_Force_Field"
+  ],
+  "power_display_names": [
+    "Adaptive Force Field Grant",
+    "Adaptive Force Field"
+  ],
+  "power_short_helps": [
+    "Self +DEF(Smash, Lethal, Fire, Cold, Energy, Negative), +Res(All DMG but Psionic, Teleport), +Absorb, +Regen, +Recovery, +DMG, +ToHit (Special)",
+    "Self +DEF(Smash, Lethal, Fire, Cold, Energy, Negative), +Res(All DMG but Psionic, Teleport), +Absorb, +Regen, +Recovery, +DMG, +ToHit (Special)"
+  ]
+}

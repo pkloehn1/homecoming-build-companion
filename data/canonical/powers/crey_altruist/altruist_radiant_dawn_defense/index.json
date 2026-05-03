@@ -1,0 +1,22 @@
+{
+  "name": "Altruist_Radiant_Dawn_Defense",
+  "display_name": "Radiant Dawn Defense",
+  "display_fullname": "Crey Altruist.Radiant Dawn Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_RADIANT_DAWN_DEFENSE.POWERSETS",
+  "icon": "altruist_radiant_dawn_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Radiant_Dawn_Defense.Alpha_Barrier"
+  ],
+  "power_display_names": [
+    "Alpha Barrier"
+  ],
+  "power_short_helps": [
+    "Toggle: Self +Res(Smash, Lethal, Fire, Cold, Energy, Negative, Toxic)"
+  ]
+}

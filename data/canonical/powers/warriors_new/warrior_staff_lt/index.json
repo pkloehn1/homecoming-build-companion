@@ -1,0 +1,30 @@
+{
+  "name": "Warrior_Staff_Lt",
+  "display_name": "Warrior_Staff_Lt",
+  "display_fullname": "Warriors New.Warrior Staff Lt",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_STAFF_LT.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Staff_Lt.Eye_of_the_Storm",
+    "Warriors_New.Warrior_Staff_Lt.Serpents_Reach",
+    "Warriors_New.Warrior_Staff_Lt.Guarded_Spin"
+  ],
+  "power_display_names": [
+    "Eye of the Storm",
+    "Serpent's Reach",
+    "Guarded Spin"
+  ],
+  "power_short_helps": [
+    "PBAoE Melee, Moderate DoT(Smash), Foe Knockdown",
+    "Ranged, Superior DMG(Smash), Foe Knockdown",
+    "Melee (Cone), Moderate DMG(Smash), Self +Def(Melee, Smash, Lethal)"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "name": "FRKLK_Cadaver_04",
+  "gender": "GENDER_MALE",
+  "group_name": "Freaklok",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 29,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_MINION",
+    "ai_config": "Default_Melee",
+    "character_class_name": "minion_grunt",
+    "description": "This trial run of Dr. Pierce's interpretations of CMRj, applied to existing Vahzilok cadaver methodology, has resulted in a feral Freak zombie, which experts are calling 'terrifying'.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.2,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Vahzilok.Vahzilok_Cadaver_Slab_Minion_Powers_Ranged.Projectile_Vomit",
+      "Freaklok.Savage_Cadaver.Savage_Strike",
+      "Freaklok.Savage_Cadaver.Maiming_Slash",
+      "Freaklok.Necrotic_Detonations.Sticky_Corpse",
+      "Freaklok.Resistances.Cadaver_Resistance"
+    ],
+    "power_display_names": [
+      "Projectile Vomit",
+      "Savage Strike",
+      "Maiming Slash",
+      "Sticky Corpse Puddle",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Vahzilok",
+        "power_set": "Vahzilok_Cadaver_Slab_Minion_Powers_Ranged",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Savage_Cadaver",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Necrotic_Detonations",
+        "power": "Sticky_Corpse",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Resistances",
+        "power": "Cadaver_Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 29,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Freaklok Feral Cadaver"
+      ],
+      "costumes": [
+        "Frklk_Cadaver04a",
+        "Frklk_Cadaver04b",
+        "Frklk_Cadaver04c",
+        "Frklk_Cadaver04d"
+      ]
+    }
+  ]
+}

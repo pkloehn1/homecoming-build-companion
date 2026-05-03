@@ -1,0 +1,54 @@
+{
+  "name": "Bio_Organic_Armor",
+  "display_name": "Bio Armor",
+  "display_fullname": "Mission Maker Secondary.Bio Armor",
+  "display_help": "Your body is shielded by an incredibly durable Bio Armor that evolves based upon your environment. You are also able to siphon genetic data from your foes to empower yourself as well as shift from a Defensive, Offensive and Efficient form. Bio Armor provides good damage resistance and defense, a fair amount of regeneration and a good number of offensive/debuff power options.",
+  "display_short_help": "Bio Armor",
+  "available_level": [
+    0,
+    1,
+    3,
+    9,
+    15,
+    19,
+    27,
+    34,
+    37
+  ],
+  "source_file": "DEFS/POWERS/MISSION_MAKER_SECONDARY/BIO_ORGANIC_ARMOR.POWERSETS",
+  "icon": "bio_organic_armor_set.png",
+  "requires": "",
+  "power_names": [
+    "Mission_Maker_Secondary.Bio_Organic_Armor.Hardened_Carapace",
+    "Mission_Maker_Secondary.Bio_Organic_Armor.Inexhaustible",
+    "Mission_Maker_Secondary.Bio_Organic_Armor.Environmental_Modification",
+    "Mission_Maker_Secondary.Bio_Organic_Armor.Efficient_Adaptation",
+    "Mission_Maker_Secondary.Bio_Organic_Armor.Ablative_Carapace",
+    "Mission_Maker_Secondary.Bio_Organic_Armor.Evolving_Armor",
+    "Mission_Maker_Secondary.Bio_Organic_Armor.DNA_Siphon",
+    "Mission_Maker_Secondary.Bio_Organic_Armor.Genetic_Contamination",
+    "Mission_Maker_Secondary.Bio_Organic_Armor.Parasitic_Aura"
+  ],
+  "power_display_names": [
+    "Hardened Carapace",
+    "Inexhaustible",
+    "Environmental Modification",
+    "Efficient Adaptation",
+    "Ablative Carapace",
+    "Evolving Armor",
+    "DNA Siphon",
+    "Genetic Contamination",
+    "Parasitic Aura"
+  ],
+  "power_short_helps": [
+    "Self Toggle, +Res(Lethal, Smash, Toxic, Disorient, Sleep), +Special",
+    "Auto: +Max HP, +Regen, +Recovery, +Res(Slow, End Drain), +Special",
+    "Self Toggle, +Res(Hold, Knockdown, Immobilize), +Def(Energy, Negative, Fire, Cold, Psionic), +Special",
+    "Toggle: Bio Armor Efficient Mode",
+    "Self, +Absorption, +Regeneration",
+    "Self Toggle, +Res(All), Foe -Res(All), Taunt, +Special",
+    "Click, PBAoE Minor DMG(Lethal/Toxic) Foe -Regen, Taunt, Self +HP, +End, +Special",
+    "Toggle: PBAoE, Minor DoT(Toxic), -Damage(All)",
+    "PBAoE, Self +Absorb, +Regeneration, +Recovery, Foe -DMG"
+  ]
+}

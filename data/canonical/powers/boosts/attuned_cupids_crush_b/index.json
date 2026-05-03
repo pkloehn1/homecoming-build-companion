@@ -1,0 +1,22 @@
+{
+  "name": "Attuned_Cupids_Crush_B",
+  "display_name": "Attuned Cupids Crush B",
+  "display_fullname": "Boosts.Attuned Cupids Crush B",
+  "display_help": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Reduces endurance cost by {Boost.Attrib.Endurance.Scale}%. Increases recharge rate by {Boost.Attrib.RechargeTime.Scale}%.",
+  "display_short_help": "Set: Cupid's Crush",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/ATTUNED_CUPIDS_CRUSH_B.POWERSETS",
+  "icon": "e_icon_cupids_crush.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Attuned_Cupids_Crush_B.Attuned_Cupids_Crush_B"
+  ],
+  "power_display_names": [
+    "Cupid's Crush: Endurance/Recharge"
+  ],
+  "power_short_helps": [
+    "-End Cost, +Rech"
+  ]
+}

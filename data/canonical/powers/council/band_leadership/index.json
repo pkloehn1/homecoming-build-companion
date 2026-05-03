@@ -1,0 +1,22 @@
+{
+  "name": "Band_Leadership",
+  "display_name": "Band Leadership",
+  "display_fullname": "Council.Band Leadership",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/BAND_LEADERSHIP.POWERSETS",
+  "icon": "band_leadership_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Band_Leadership.Leadership"
+  ],
+  "power_display_names": [
+    "Leadership"
+  ],
+  "power_short_helps": [
+    "Toggle: PBAoE, Team +ToHit, +DMG, +DEF"
+  ]
+}

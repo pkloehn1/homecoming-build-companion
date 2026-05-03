@@ -1,0 +1,38 @@
+{
+  "name": "Resistances",
+  "display_name": "Resistances",
+  "display_fullname": "Freaklok.Resistances",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/RESISTANCES.POWERSETS",
+  "icon": "resistances_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Resistances.Cadaver_Resistance",
+    "Freaklok.Resistances.Eidolon_Resistance",
+    "Freaklok.Resistances.Lost_Resistance",
+    "Freaklok.Resistances.Tank_Resistance",
+    "Freaklok.Resistances.IDX_Resistance"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Resistance",
+    "Resistance",
+    "Resistance",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Auto: Self +Res(Smash, Negative, Toxic, Fear, Immobilize, Sleep, Slow), +SPD",
+    "Auto: Self +Res(Negative)",
+    "Auto: Self +Res(Psionic, Confuse, Fear, Sleep)",
+    "Auto: Self +Res(Smash, Lethal, Cold, Negative, Psionic, Toxic, Disorient, Knockback), +SPD",
+    "Auto: Self +Res(Cold), +Regeneration, +SPD"
+  ]
+}

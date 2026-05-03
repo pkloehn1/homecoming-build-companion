@@ -1,0 +1,106 @@
+{
+  "name": "ParagonProtectors_HeroCorps_Clone_Female_03",
+  "gender": "GENDER_FEMALE",
+  "group_name": "ParagonProtectors",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": true,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_NeverAfraid",
+    "character_class_name": "boss_grunt",
+    "description": "This generation of Paragon Protector seems... incomplete. They speak in odd, disjointed thoughts and seem to lack complete control of their powers.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.4,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Hero_Corps_Sig.Feralina.Brawl",
+      "Hero_Corps_Sig.Feralina.Swipe",
+      "Hero_Corps_Sig.Feralina.Strike",
+      "Hero_Corps_Sig.Feralina.Slash",
+      "Hero_Corps_Sig.Feralina.Eviscerate",
+      "Hero_Corps_Sig.Feralina.Maiming_Slash",
+      "Hero_Corps_Sig.Feralina.Vicious_Slash",
+      "Hero_Corps_Sig.Feralina.Rending_Flurry",
+      "Hero_Corps_Sig.Feralina.Healing_Aura",
+      "Hero_Corps_Sig.Feralina.Recovery_Aura",
+      "Hero_Corps_Sig.Feralina.Conserve_Power",
+      "Hero_Corps_Sig.Feralina.Elude",
+      "Hero_Corps_Sig.Feralina.Practiced_Brawler"
+    ],
+    "power_display_names": [
+      "Brawl",
+      "Swipe",
+      "Strike",
+      "Slash",
+      "Eviscerate",
+      "Maiming Slash",
+      "Vicious Slash",
+      "Rending Flurry",
+      "Healing Aura",
+      "Recovery Aura",
+      "Energize",
+      "Elude",
+      "Practiced Brawler"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Hero_Corps_Sig",
+        "power_set": "Feralina",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "9th Generation Hero Corps Clone"
+      ],
+      "costumes": [
+        "CFRA_Claws"
+      ]
+    }
+  ]
+}

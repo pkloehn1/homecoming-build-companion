@@ -1,0 +1,22 @@
+{
+  "name": "Creeper_FX",
+  "display_name": "Creeper FX",
+  "display_fullname": "Villain Pets.Creeper FX",
+  "display_help": "Plant Control",
+  "display_short_help": "Plant Control",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/VILLAIN_PETS/CREEPER_FX.POWERSETS",
+  "icon": "creeper_entangle_set.png",
+  "requires": "",
+  "power_names": [
+    "Villain_Pets.Creeper_FX.CreeperFX"
+  ],
+  "power_display_names": [
+    "Self Destruct"
+  ],
+  "power_short_helps": [
+    "Self Destruct"
+  ]
+}

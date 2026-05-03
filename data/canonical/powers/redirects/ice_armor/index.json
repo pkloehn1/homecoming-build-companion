@@ -1,0 +1,26 @@
+{
+  "name": "Ice_Armor",
+  "display_name": "Ice Armor",
+  "display_fullname": "Redirects.Ice Armor",
+  "display_help": "These powers are used by Ice Armor powers.",
+  "display_short_help": "Battle Axe",
+  "available_level": [
+    29,
+    29
+  ],
+  "source_file": "DEFS/POWERS/REDIRECTS/ICE_ARMOR.POWERSETS",
+  "icon": "tanker_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Redirects.Ice_Armor.Icy_Bastion",
+    "Redirects.Ice_Armor.Icy_Bastion_NoCast"
+  ],
+  "power_display_names": [
+    "Icy Bastion",
+    "Icy Bastion"
+  ],
+  "power_short_helps": [
+    "Self +Res(All DMG, but Psionics), +Res(Knockback, Repel, Disorient, Hold, Immobilize, Sleep), +Regen, +Recovery",
+    "Self +Res(All DMG, but Psionics), +Res(Knockback, Repel, Disorient, Hold, Immobilize, Sleep), +Regen, +Recovery"
+  ]
+}

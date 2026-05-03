@@ -1,0 +1,29 @@
+{
+  "name": "Hero_Corps_Sig",
+  "display_name": "Hero Corps Signature",
+  "source_file": "DEFS/POWERS/HERO_CORPS_SIG.CATEGORIES",
+  "archetypes": [],
+  "display_help": null,
+  "display_short_help": null,
+  "powerset_names": [
+    "hero_corps_sig.bronze_bird",
+    "hero_corps_sig.crosswind",
+    "hero_corps_sig.exothermic",
+    "hero_corps_sig.feralina",
+    "hero_corps_sig.little_league",
+    "hero_corps_sig.resistances",
+    "hero_corps_sig.shiverstrike",
+    "hero_corps_sig.vulcannon"
+  ],
+  "powerset_display_names": [
+    "Bronze_Bird",
+    "Crosswind",
+    "Exothermic",
+    "Feralina",
+    "Little_League",
+    "Inherent Resists",
+    "Shiverstrike",
+    "Vulcannon"
+  ],
+  "powersets_with_requirements": []
+}

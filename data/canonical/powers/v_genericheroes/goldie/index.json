@@ -1,0 +1,42 @@
+{
+  "name": "Goldie",
+  "display_name": "Goldie",
+  "display_fullname": "V GenericHeroes.Goldie",
+  "display_help": "Hero",
+  "display_short_help": "Hero",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_GENERICHEROES/GOLDIE.POWERSETS",
+  "icon": "energy_blaster_high_set.png",
+  "requires": "",
+  "power_names": [
+    "V_GenericHeroes.Goldie.Energy_Torrent",
+    "V_GenericHeroes.Goldie.Power_Burst",
+    "V_GenericHeroes.Goldie.Power_Bolt",
+    "V_GenericHeroes.Goldie.Power_Blast",
+    "V_GenericHeroes.Goldie.Explosive_Blast",
+    "V_GenericHeroes.Goldie.Power_Thrust"
+  ],
+  "power_display_names": [
+    "Energy Torrent",
+    "Power Burst",
+    "Power Bolt",
+    "Power Blast",
+    "Explosive Blast",
+    "Power Thrust"
+  ],
+  "power_short_helps": [
+    "Cone Energy/Smash, Knockback",
+    "Close, High DMG(Energy/Smash), Foe Knockback",
+    "Ranged Energy Knockback",
+    "Ranged Energy/Smash, Knockback",
+    "Targeted AoE Smash/Energy, Knockback",
+    "Melee, Minor DMG(Energy/Smash), Foe Knockback"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Altruist_White_Haze_Offense",
+  "display_name": "White Haze Offense",
+  "display_fullname": "Crey Altruist.White Haze Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_WHITE_HAZE_OFFENSE.POWERSETS",
+  "icon": "altruist_white_haze_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_White_Haze_Offense.Ice_Bolt",
+    "Crey_Altruist.Altruist_White_Haze_Offense.Ice_Blast",
+    "Crey_Altruist.Altruist_White_Haze_Offense.Freeze_Ray",
+    "Crey_Altruist.Altruist_White_Haze_Offense.Ice_Storm",
+    "Crey_Altruist.Altruist_White_Haze_Offense.Bitter_Ice_Blast"
+  ],
+  "power_display_names": [
+    "Ice Bolt",
+    "Ice Blast",
+    "Freeze Ray",
+    "Ice Storm",
+    "Bitter Ice Blast"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Cold/Smash), Foe -SPD, -Recharge",
+    "Ranged, High DMG(Cold/Smash), Foe -SPD, -Recharge",
+    "Ranged, Heavy DoT(Cold), Foe Hold",
+    "Ranged (Location AoE), Minor DoT(Cold/Lethal), Foe -Recharge, -SPD",
+    "Ranged, Extreme DMG(Cold/Smash), Foe -Recharge, -SPD, -ToHit"
+  ]
+}

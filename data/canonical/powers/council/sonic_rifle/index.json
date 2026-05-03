@@ -1,0 +1,26 @@
+{
+  "name": "Sonic_Rifle",
+  "display_name": "Sonic Rifle",
+  "display_fullname": "Council.Sonic Rifle",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    29
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/SONIC_RIFLE.POWERSETS",
+  "icon": "sonic_rifle_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Sonic_Rifle.Sonic_Blast",
+    "Council.Sonic_Rifle.Heavy_Sonic_Blast"
+  ],
+  "power_display_names": [
+    "Sonic Blast",
+    "Heavy Sonic Blast"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Energy), Foe -Resist(All but Psionics)",
+    "Ranged, High DMG(Energy), Foe -Resist(All but Psionics)"
+  ]
+}

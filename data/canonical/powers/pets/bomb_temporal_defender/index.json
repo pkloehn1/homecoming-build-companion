@@ -1,0 +1,34 @@
+{
+  "name": "Bomb_Temporal_Defender",
+  "display_name": "Bomb_Temporal_Defender",
+  "display_fullname": "Pets.Bomb Temporal Defender",
+  "display_help": "",
+  "display_short_help": "",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/BOMB_TEMPORAL_DEFENDER.POWERSETS",
+  "icon": "bomb_controller_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Bomb_Temporal_Defender.Self_Destruct",
+    "Pets.Bomb_Temporal_Defender.Resistance",
+    "Pets.Bomb_Temporal_Defender.Temporal_Bubble",
+    "Pets.Bomb_Temporal_Defender.Temporal_Bubble_Debuff"
+  ],
+  "power_display_names": [
+    "Self Destruct",
+    "Resistance",
+    "Temporal Bubble",
+    "Temporal Bubble"
+  ],
+  "power_short_helps": [
+    "Resistance",
+    "Resistance",
+    "Temporal Bubble",
+    "Temporal Bubble"
+  ]
+}

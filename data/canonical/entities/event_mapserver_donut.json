@@ -1,0 +1,102 @@
+{
+  "name": "Event_Mapserver_Donut",
+  "gender": "GENDER_MALE",
+  "group_name": "Event",
+  "commandable_pet": 0,
+  "power_tags": [
+    "MapserverPlot"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": true,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_LIEUTENANT",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "lt_grunt",
+    "description": "Donuts are not good for you in large quantities, much like everything else.",
+    "group_description": "D.O.O.M.",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.5,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Mission_Maker_Attacks.Dark_Blast.Dark_Blast",
+      "Mission_Maker_Attacks.Dark_Blast.Gloom",
+      "Mission_Maker_Attacks.Dark_Blast.Dark_Pit",
+      "Mission_Maker_Attacks.Dark_Blast.Tenebrous_Tentacles",
+      "Mission_Maker_Attacks.Dark_Blast.Night_Fall",
+      "Mission_Maker_Attacks.Dark_Blast.Moonbeam_Quick",
+      "Mission_Maker_Attacks.Dark_Blast.Torrent",
+      "Mission_Maker_Attacks.Dark_Blast.Life_Drain",
+      "Mission_Maker_Attacks.Dark_Blast.Blackstar",
+      "Nemesis.Nemesis_Soldier_Defense.Resistance"
+    ],
+    "power_display_names": [
+      "Dark Blast",
+      "Gloom",
+      "Dark Pit",
+      "Tenebrous Tentacles",
+      "Night Fall",
+      "Moonbeam",
+      "Torrent",
+      "Life Drain",
+      "Blackstar",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Mission_Maker_Attacks",
+        "power_set": "Dark_Blast",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Nemesis",
+        "power_set": "Nemesis_Soldier_Defense",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "The Almighty Donut of Death"
+      ],
+      "costumes": [
+        "Event_MapserverDonut"
+      ]
+    }
+  ]
+}

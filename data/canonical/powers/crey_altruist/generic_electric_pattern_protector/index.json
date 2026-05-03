@@ -1,0 +1,50 @@
+{
+  "name": "Generic_Electric_Pattern_Protector",
+  "display_name": "Generic_Electric_Pattern_Protector",
+  "display_fullname": "Crey Altruist.Generic Electric Pattern Protector",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/GENERIC_ELECTRIC_PATTERN_PROTECTOR.POWERSETS",
+  "icon": "generic_electric_pattern_protector_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Generic_Electric_Pattern_Protector.Charged_Bolts",
+    "Crey_Altruist.Generic_Electric_Pattern_Protector.Lightning_Bolt",
+    "Crey_Altruist.Generic_Electric_Pattern_Protector.Ball_Lightning",
+    "Crey_Altruist.Generic_Electric_Pattern_Protector.Charged_Brawl",
+    "Crey_Altruist.Generic_Electric_Pattern_Protector.Havoc_Punch",
+    "Crey_Altruist.Generic_Electric_Pattern_Protector.Thunder_Strike",
+    "Crey_Altruist.Generic_Electric_Pattern_Protector.Dull_Pain",
+    "Crey_Altruist.Generic_Electric_Pattern_Protector.Moment_of_Glory"
+  ],
+  "power_display_names": [
+    "Charged Bolts",
+    "Lightning Bolt",
+    "Ball Lightning",
+    "Charged Brawl",
+    "Havoc Punch",
+    "Thunder Strike",
+    "Dull Pain",
+    "Moment of Glory"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Energy), Foe -End, -Recovery",
+    "Ranged, High DMG(Energy), Foe -End, -Recovery",
+    "Ranged (Targeted AoE), Moderate DoT(Energy), Foe -End, -Recovery",
+    "Melee, Light DMG(Energy/Smash), Foe Sleep, -End, -Recovery",
+    "Melee, Heavy DMG(Energy/Smash), Foe Sleep, -End, -Recovery",
+    "Melee (Targeted AoE), Superior DMG(Energy/Smash), Foe Disorient, Knockback, -End, -Recovery",
+    "Self Heal, +MaxHP",
+    "Self +Res(All DMG but Psionics, Hold, Immobilize, Disorient, Sleep, Knockback), +DEF(All DMG but Psionics), +Recovery"
+  ]
+}

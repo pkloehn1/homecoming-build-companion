@@ -1,0 +1,46 @@
+{
+  "name": "CopperCrane",
+  "display_name": "CopperCrane",
+  "display_fullname": "Tsoo.CopperCrane",
+  "display_help": "Tsoo",
+  "display_short_help": "Tsoo",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/TSOO/COPPERCRANE.POWERSETS",
+  "icon": "coppercrane_set.png",
+  "requires": "",
+  "power_names": [
+    "Tsoo.CopperCrane.Crippling_Axe_Kick",
+    "Tsoo.CopperCrane.Crane_Kick",
+    "Tsoo.CopperCrane.Cobra_Strike",
+    "Tsoo.CopperCrane.Eagles_Claw",
+    "Tsoo.CopperCrane.Shuriken",
+    "Tsoo.CopperCrane.Siphon_Power",
+    "Tsoo.CopperCrane.Siphon_Speed"
+  ],
+  "power_display_names": [
+    "Crippling Axe Kick",
+    "Crane Kick",
+    "Cobra Strike",
+    "Eagles Claw",
+    "Shuriken",
+    "Siphon Power",
+    "Siphon Speed"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Smash), Foe Immobilize, -SPD, -Fly, -DEF",
+    "Melee, High DMG(Smash), Foe Knockback",
+    "Melee, Superior DMG(Smash), Foe Disorient",
+    "Melee, Superior DMG(Smash), Foe Disorient, Chance for Critical Hit",
+    "Ranged, Light DMG(Lethal)",
+    "Ranged, Foe -DMG, Team +DMG",
+    "Ranged, Foe -SPD, -Recharge, Self +SPD, +Recharge"
+  ]
+}

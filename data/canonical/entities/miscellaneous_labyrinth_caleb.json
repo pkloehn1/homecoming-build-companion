@@ -1,0 +1,119 @@
+{
+  "name": "Miscellaneous_Labyrinth_Caleb",
+  "gender": "GENDER_MALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Undead",
+    "Demon",
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Miscellaneous_Labyrinth_GiantMonsters",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 54,
+    "max_level": 54,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": true,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BIGMONSTER",
+    "ai_config": "GiantMonster_NeverAfraid",
+    "character_class_name": "boss_monster",
+    "description": "These titans of the Labyrinth are nightmarish reflections of giant monstrosities that prowled the Earth. Each has been blessed by a divine touch, granting them more power than their original inspirations. Wreathed in an unholy fog, these beings seek only to consume the sanity of their prey and swell in strength.",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [
+      "Giant_Monster_Merit",
+      "LabyrinthObol5"
+    ],
+    "power_full_names": [
+      "V_GenericVillains.Mastermind_Leadership.Maneuvers",
+      "CircleOfThorns.Giant_Caleb.Resistance",
+      "CircleOfThorns.Giant_Caleb.Life_Drain",
+      "CircleOfThorns.Giant_Caleb.Gloom",
+      "CircleOfThorns.Giant_Caleb.Tenebrous_Tentacles",
+      "CircleOfThorns.Giant_Caleb.Dark_Regeneration",
+      "CircleOfThorns.Giant_Caleb.Darkest_Night",
+      "CircleOfThorns.Giant_Caleb.Soul_Drain",
+      "CircleOfThorns.Giant_Caleb.Fearsome_Stare",
+      "CircleOfThorns.Giant_Caleb.Blackstar",
+      "CircleOfThorns.Giant_Caleb.Fly",
+      "Event.Giant_Monster.GM_HP"
+    ],
+    "power_display_names": [
+      "Leadership",
+      "Resistance",
+      "Life Drain",
+      "Gloom",
+      "Tenebrous Tentacles",
+      "Dark Regeneration",
+      "Darkest Night",
+      "Soul Drain",
+      "Fearsome Stare",
+      "Blackstar",
+      "Fly",
+      "Colossal"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "V_GenericVillains",
+        "power_set": "Mastermind_Leadership",
+        "power": "Maneuvers",
+        "level": 0
+      },
+      {
+        "power_category": "CircleOfThorns",
+        "power_set": "Giant_Caleb",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Giant_Monster",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 54,
+      "max_level": 54,
+      "experience": 0,
+      "display_names": [
+        "Crystal of the Goddess"
+      ],
+      "costumes": [
+        "Labyrinth_Caleb"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "name": "FRKLK_Beam_Jerk",
+  "gender": "GENDER_MALE",
+  "group_name": "Freaklok",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human",
+    "Electronic"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 29,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ELITE",
+    "ai_config": "Ranged_Aggressive",
+    "character_class_name": "boss_elite",
+    "description": "The Freaklok Beam Jerk gets his name from a long career of earning it. The reactions to the tactical readout on his abilities starts with 'Oh.' and typically ends with 'Oh come on.' His turbocharged nervous system is interfaced directly to a myriad of experimental devices both under and over the skin, and all of it earns him the title he wears.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.2,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Freaklok.Beam_Jerk.Single_Shot",
+      "Freaklok.Beam_Jerk.Disintegrate",
+      "Freaklok.Beam_Jerk.Lancer_Shot",
+      "Freaklok.Beam_Jerk.Penetrating_Ray",
+      "Freaklok.Beam_Jerk.Refractor_Beam",
+      "Freaklok.Beam_Jerk.Gremlins",
+      "Freaklok.Beam_Jerk.Stunning_Aura",
+      "Freaklok.Beam_Jerk.Fulcrum_Shift",
+      "Freaklok.Beam_Jerk.Caltrops",
+      "Mission_Maker_Movement.Flight.Fly",
+      "Freaklok.Necrotic_Detonations.Lok_Reboot",
+      "Freaklok.Resistances.IDX_Resistance"
+    ],
+    "power_display_names": [
+      "Single Shot",
+      "Disintegrate",
+      "Lancer Shot",
+      "Penetrating Ray",
+      "Refractor Beam",
+      "Gremlins",
+      "Conductive Aura",
+      "Fulcrum Shift",
+      "Caltrops",
+      "Fly",
+      "Lok Reboot",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Freaklok",
+        "power_set": "Beam_Jerk",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Mission_Maker_Movement",
+        "power_set": "Flight",
+        "power": "Fly",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Necrotic_Detonations",
+        "power": "Lok_Reboot",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Resistances",
+        "power": "IDX_Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 29,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Freaklok Beam Jerk"
+      ],
+      "costumes": [
+        "FRKLK_BeamJerk_EB"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "name": "Skulls_TitanBrute_Boss_Male_High",
+  "gender": "GENDER_MALE",
+  "group_name": "Skulls",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Skulls_Boss",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Melee",
+    "character_class_name": "boss_grunt",
+    "description": "Drawn from the ranks of the Bone Daddies, Soul Harvesters have tapped into more powerful dark rituals to gain superhuman strength, wielding massive greatweapons from the netherworld. These eldritch weapons cut the very tether between body and soul, but are also more than capable of flaying flesh from bone, allowing Harvesters to armor themselves in additional body parts from their victims.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.4,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Skulls.Skulls_Bosses_High.Deadly_Crush",
+      "Skulls.Skulls_Bosses_High.Deadly_Rend",
+      "Skulls.Skulls_Bosses_High.Deadly_Arc",
+      "Skulls.Skulls_Bosses_High.Deadly_Slice",
+      "Skulls.Skulls_Bosses_High.Deadly_Bolt",
+      "Skulls.Skulls_Bosses_High.Deadly_Blast",
+      "Skulls.Skulls_Bosses_High.Boon_of_Death",
+      "Skulls.Skulls_Bosses_High.Murky_Cloud",
+      "Skulls.Skulls_Inherent_Defense.Resistance"
+    ],
+    "power_display_names": [
+      "Deadly Crush",
+      "Deadly Rend",
+      "Deadly Arc",
+      "Deadly Slice",
+      "Deadly Bolt",
+      "Deadly Blast",
+      "Boon of Death",
+      "Murky Cloud",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Skulls",
+        "power_set": "Skulls_Bosses_High",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Skulls",
+        "power_set": "Skulls_Inherent_Defense",
+        "power": "Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Soul Harvester"
+      ],
+      "costumes": [
+        "Thug_Skull_Male_Harvester_01",
+        "Thug_Skull_Male_Harvester_02",
+        "Thug_Skull_Male_Harvester_03",
+        "Thug_Skull_Male_Harvester_04",
+        "Thug_Skull_Male_Harvester_05",
+        "Thug_Skull_Male_Harvester_06",
+        "Thug_Skull_Male_Harvester_07",
+        "Thug_Skull_Male_Harvester_08",
+        "Thug_Skull_Male_Harvester_09"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Maestro_High",
+  "display_name": "Maestro High",
+  "display_fullname": "Council.Maestro High",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/MAESTRO_HIGH.POWERSETS",
+  "icon": "maestro_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Maestro_High.Dreadful_Wail"
+  ],
+  "power_display_names": [
+    "Dreadful Wail"
+  ],
+  "power_short_helps": [
+    "PBAoE, Extreme DMG(Energy/Smash), Foe Disorient, -Resist(All)"
+  ]
+}

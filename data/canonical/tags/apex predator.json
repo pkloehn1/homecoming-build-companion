@@ -1,0 +1,18 @@
+{
+  "tag": "Apex Predator",
+  "bears": [
+    [
+      "Mastermind Summon.Beast Mastery.Call Hawk",
+      "mastermind_summon.beast_mastery.call_hawk"
+    ],
+    [
+      "Mastermind Summon.Beast Mastery.Call Ravens",
+      "mastermind_summon.beast_mastery.call_locusts"
+    ],
+    [
+      "Mastermind Summon.Beast Mastery.Call Swarm",
+      "mastermind_summon.beast_mastery.call_swarm"
+    ]
+  ],
+  "affects": []
+}

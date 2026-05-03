@@ -1,0 +1,111 @@
+{
+  "name": "Miscellaneous_Labyrinth_Nightmare_Guardian_Titan",
+  "gender": "GENDER_NEUTER",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Raid",
+    "Ghost",
+    "Undead"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Miscellaneous_Labyrinth_Guardians",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 60,
+    "max_level": 60,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BIGMONSTER",
+    "ai_config": "Signatures",
+    "character_class_name": "boss_challengearchvillain",
+    "description": "The Labyrinth Guardians are walking embodiments of Labyrinth of Fog, granted to the souls of gladiators who left an impression. These unholy goliaths emerge to preside over the resting grounds annointed by the Goddess' presence, but are instructed not to interfere. <br><br>But never mistake impartiality with incapability, each and every one is a mighty titan. Armed with the Gladiator's arsenal of weapons molded of pure nightmare that shave away at the soul's sanctity.",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": "Monstrosity",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.0,
+    "additional_rewards": [
+      "LabyrinthInspiration",
+      "LabyrinthObol3"
+    ],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Minotaur_TW.Defensive_Sweep",
+      "Event.Labyrinth_Minotaur_TW.Crushing_Blow",
+      "Event.Labyrinth_Minotaur_TW.Follow_Through",
+      "Event.Labyrinth_Minotaur_TW.Sweeping_Strike",
+      "Event.Labyrinth_Minotaur_TW.Shatter_Armor",
+      "Event.Labyrinth_Minotaur_TW.Whirling_Smash",
+      "Event.Labyrinth_Minotaur_TW.Arc_of_Destruction",
+      "Event.Labyrinth_Guardian.Constitution"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Defensive Sweep",
+      "Crushing Blow",
+      "Follow Through",
+      "Titan Sweep",
+      "Rend Armor",
+      "Whirling Smash",
+      "Arc of Destruction",
+      "Constitution"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Minotaur_TW",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Guardian",
+        "power": "Constitution",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 60,
+      "max_level": 60,
+      "experience": 0,
+      "display_names": [
+        "Labyrinth Guardian"
+      ],
+      "costumes": [
+        "Labyrinth_Fog_Guardian_TW"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Altruist_Lunar_Wave_Offense",
+  "display_name": "Lunar Wave Offense",
+  "display_fullname": "Crey Altruist.Lunar Wave Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_LUNAR_WAVE_OFFENSE.POWERSETS",
+  "icon": "altruist_lunar_wave_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Lunar_Wave_Offense.Swipe",
+    "Crey_Altruist.Altruist_Lunar_Wave_Offense.Strike",
+    "Crey_Altruist.Altruist_Lunar_Wave_Offense.Slash",
+    "Crey_Altruist.Altruist_Lunar_Wave_Offense.Spin",
+    "Crey_Altruist.Altruist_Lunar_Wave_Offense.Focus",
+    "Crey_Altruist.Altruist_Lunar_Wave_Offense.Shockwave"
+  ],
+  "power_display_names": [
+    "Swipe",
+    "Strike",
+    "Slash",
+    "Spin",
+    "Focus",
+    "Shockwave"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Lethal)",
+    "Melee, Moderate DMG(Lethal)",
+    "Melee, Heavy DMG(Lethal), Foe -DEF",
+    "PBAoE Melee, Heavy DMG(Lethal)",
+    "Ranged, Heavy DMG(Lethal), Foe Knockdown",
+    "Melee (Cone), Moderate DMG(Lethal), Foe Knockdown"
+  ]
+}

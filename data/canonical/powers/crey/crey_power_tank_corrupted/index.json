@@ -1,0 +1,30 @@
+{
+  "name": "Crey_Power_Tank_Corrupted",
+  "display_name": "Crey_Power_Tank_Corrupted",
+  "display_fullname": "Crey.Crey Power Tank Corrupted",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY/CREY_POWER_TANK_CORRUPTED.POWERSETS",
+  "icon": "crey_power_tank_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey.Crey_Power_Tank_Corrupted.Haymaker",
+    "Crey.Crey_Power_Tank_Corrupted.Jab",
+    "Crey.Crey_Power_Tank_Corrupted.Throw"
+  ],
+  "power_display_names": [
+    "Power Haymaker",
+    "Power Jab",
+    "Throw"
+  ],
+  "power_short_helps": [
+    "Melee Energy, Knockback",
+    "Melee, Minor DMG(Energy), Foe Stun, Knockback",
+    "Ranged, Moderate DMG(Smash)"
+  ]
+}

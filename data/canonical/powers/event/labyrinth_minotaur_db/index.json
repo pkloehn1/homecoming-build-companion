@@ -1,0 +1,46 @@
+{
+  "name": "Labyrinth_Minotaur_DB",
+  "display_name": "Labyrinth Minotaur DB",
+  "display_fullname": "Event.Labyrinth Minotaur DB",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_MINOTAUR_DB.POWERSETS",
+  "icon": "werewolf_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Minotaur_DB.Power_Slice",
+    "Event.Labyrinth_Minotaur_DB.Ablating_Strike",
+    "Event.Labyrinth_Minotaur_DB.Typhoons_Edge",
+    "Event.Labyrinth_Minotaur_DB.Blinding_Feint",
+    "Event.Labyrinth_Minotaur_DB.Sweeping_Strike",
+    "Event.Labyrinth_Minotaur_DB.One_Thousand_Cuts",
+    "Event.Labyrinth_Minotaur_DB.Air_Cutter"
+  ],
+  "power_display_names": [
+    "Power Slice",
+    "Ablating Strike",
+    "Typhoon's Edge",
+    "Blinding Feint",
+    "Sweeping Strike",
+    "One Thousand Cuts",
+    "Air Cutter"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Negative), Foe -MaxHP",
+    "Melee, Heavy DMG(Negative), Foe -DEF, -MaxHP",
+    "PBAoE Melee, High DMG(Negative), Foe Knockdown, -DEF, -ToHit, -MaxHP",
+    "Melee, Light DMG(Negative), Foe -MaxHP, Self +DMG, +ToHit",
+    "Melee (Cone), High DMG(Negative), Moderate DoT(Negative), Foe -MaxHP",
+    "Melee (Cone), Extreme DMG(Negative), Foe Knockdown, -MaxHP",
+    "Ranged, High DMG(Negative), Foe Knockback, -MaxHP"
+  ]
+}

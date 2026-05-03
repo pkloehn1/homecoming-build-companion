@@ -1,0 +1,30 @@
+{
+  "name": "Blood_Widow_High",
+  "display_name": "Blood_Widow_High",
+  "display_fullname": "V Arachnos.Blood Widow High",
+  "display_help": "Arachnos",
+  "display_short_help": "Arachnos",
+  "available_level": [
+    0,
+    34,
+    34
+  ],
+  "source_file": "DEFS/POWERS/V_ARACHNOS/BLOOD_WIDOW_HIGH.POWERSETS",
+  "icon": "blood_widow_high_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Arachnos.Blood_Widow_High.Strike",
+    "V_Arachnos.Blood_Widow_High.Dart_Burst",
+    "V_Arachnos.Blood_Widow_High.Foresight"
+  ],
+  "power_display_names": [
+    "Strike",
+    "Dart Burst",
+    "Foresight"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal), Minor DoT(Toxic), Foe -SPD, -Recharge",
+    "Ranged (Cone), Light DMG(Lethal), Minor DoT(Toxic), Foe -Regeneration",
+    "Auto: Self +Res(Confuse, Fear, Hold, Immobilize, Disorient, Sleep, Psionic), +DEF(Melee, Ranged, AoE), Scaling DMG Resistance"
+  ]
+}

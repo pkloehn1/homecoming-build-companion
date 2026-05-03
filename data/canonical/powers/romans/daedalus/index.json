@@ -1,0 +1,22 @@
+{
+  "name": "Daedalus",
+  "display_name": "Daedalus",
+  "display_fullname": "Romans.Daedalus",
+  "display_help": "Daedalus",
+  "display_short_help": "Daedalus",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/ROMANS/DAEDALUS.POWERSETS",
+  "icon": "surgeon_set.png",
+  "requires": "",
+  "power_names": [
+    "Romans.Daedalus.Overcharge"
+  ],
+  "power_display_names": [
+    "Overcharge"
+  ],
+  "power_short_helps": [
+    "Self +DEF(All but Psionics), +Recovery, +Max HP, Res(DeBuff DEF), +Special"
+  ]
+}

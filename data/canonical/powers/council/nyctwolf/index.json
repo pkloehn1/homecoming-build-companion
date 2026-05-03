@@ -1,0 +1,42 @@
+{
+  "name": "Nyctwolf",
+  "display_name": "Nyctwolf",
+  "display_fullname": "Council.Nyctwolf",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/NYCTWOLF.POWERSETS",
+  "icon": "nyctwolf_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Nyctwolf.Black_Dwarf_Strike",
+    "Council.Nyctwolf.Black_Dwarf_Smite",
+    "Council.Nyctwolf.Black_Dwarf_Drain",
+    "Council.Nyctwolf.Black_Dwarf_Mire",
+    "Council.Nyctwolf.Dwarf_Shadow_Bolt",
+    "Council.Nyctwolf.Absorption"
+  ],
+  "power_display_names": [
+    "Black Dwarf Strike",
+    "Black Dwarf Smite",
+    "Black Dwarf Drain",
+    "Black Dwarf Mire",
+    "Dwarf Shadow Bolt",
+    "Absorption"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Negative/Lethal), Foe Knockdown, -Recharge, -SPD",
+    "Melee, Heavy DMG(Negative/Lethal), Foe Knockback, Disorient, -Recharge, -SPD, -Fly",
+    "Melee, Superior DMG(Negative), Foe -Recharge, -SPD, Self Heal",
+    "PBAoE, Moderate DMG(Negative), Foe -Recharge, -SPD, Self +DMG, +ToHit",
+    "Ranged, Light DMG(Negative), Foe -Recharge, -SPD",
+    "Auto: Self +Res(All DMG but Psionic, Confuse, Fear, Immobilize, Disorient, Sleep, Knockback, Slow), +MaxHP"
+  ]
+}

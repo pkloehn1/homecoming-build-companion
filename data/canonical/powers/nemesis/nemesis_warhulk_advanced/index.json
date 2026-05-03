@@ -1,0 +1,42 @@
+{
+  "name": "Nemesis_Warhulk_Advanced",
+  "display_name": "Nemesis_Warhulk_Advanced",
+  "display_fullname": "Nemesis.Nemesis Warhulk Advanced",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_WARHULK_ADVANCED.POWERSETS",
+  "icon": "nemesis_monstrosity_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Warhulk_Advanced.Gatling_Gun_Burst",
+    "Nemesis.Nemesis_Warhulk_Advanced.Gatling_Gun_Sweep",
+    "Nemesis.Nemesis_Warhulk_Advanced.Shrink_Ray_Tell",
+    "Nemesis.Nemesis_Warhulk_Advanced.Shrink_Ray",
+    "Nemesis.Nemesis_Warhulk_Advanced.Pummel",
+    "Nemesis.Nemesis_Warhulk_Advanced.Foot_Stomp"
+  ],
+  "power_display_names": [
+    "Gatling Gun Burst",
+    "Gatling Gun Sweep",
+    "Siphon Shrink Ray",
+    "Siphon Shrink Ray",
+    "Pummel",
+    "Foot Stomp"
+  ],
+  "power_short_helps": [
+    "Ranged, Heavy DMG(Lethal), Foe -DEF",
+    "Ranged (Cone), Superior DoT(Lethal), Foe -DEF",
+    "Target of Siphon Shrink Ray",
+    "Ranged (Facing Cone), Special, High DMG(Energy), Foe -RES, -DMG, +DEF",
+    "Melee (Cone), Heavy DMG(Lethal), Foe Knockback",
+    "PBAoE Melee, Heavy DMG(Smash), Foe Disorient, Knockback"
+  ]
+}

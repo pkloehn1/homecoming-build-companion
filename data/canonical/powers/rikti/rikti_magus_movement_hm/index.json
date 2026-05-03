@@ -1,0 +1,26 @@
+{
+  "name": "Rikti_Magus_Movement_HM",
+  "display_name": "Rikti Magus Movement (Advanced Mode)",
+  "display_fullname": "Rikti.Rikti Magus Movement (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIKTI_MAGUS_MOVEMENT_HM.POWERSETS",
+  "icon": "rikti_gunman_movement_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rikti_Magus_Movement_HM.Teleport",
+    "Rikti.Rikti_Magus_Movement_HM.Super_Leap"
+  ],
+  "power_display_names": [
+    "Teleport",
+    "Super Leap"
+  ],
+  "power_short_helps": [
+    "Self Travel",
+    "Self Travel"
+  ]
+}

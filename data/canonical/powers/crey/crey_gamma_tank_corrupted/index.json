@@ -1,0 +1,30 @@
+{
+  "name": "Crey_Gamma_Tank_Corrupted",
+  "display_name": "Crey_Gamma_Tank_Corrupted",
+  "display_fullname": "Crey.Crey Gamma Tank Corrupted",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY/CREY_GAMMA_TANK_CORRUPTED.POWERSETS",
+  "icon": "macro_button_01.png",
+  "requires": "",
+  "power_names": [
+    "Crey.Crey_Gamma_Tank_Corrupted.Haymaker",
+    "Crey.Crey_Gamma_Tank_Corrupted.Jab",
+    "Crey.Crey_Gamma_Tank_Corrupted.Throw"
+  ],
+  "power_display_names": [
+    "Gamma Haymaker",
+    "Gamma Jab",
+    "Throw"
+  ],
+  "power_short_helps": [
+    "Melee Energy, Knockback, Foe -DEF",
+    "Melee, Minor DMG(Energy), Foe Stun, Foe -DEF",
+    "Ranged, Moderate DMG(Smash)"
+  ]
+}

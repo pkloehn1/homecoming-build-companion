@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mids-reborn/build-format/CharacterBuildData.schema.json",
+  "title": "MidsReborn Character Build Data",
+  "description": "Schema for the modern JSON build format produced by MidsReborn's File -> Save As -> JSON. Hand-authored from MidsReborn/Core/BuildFile/CharacterBuildData.cs and the DataModels classes (read as documentation). When MidsReborn updates the C# classes, this file may need a touch-up.",
+  "houseRules": {
+    "exemplar_10_playability": {
+      "description": "Universal house rule — every build emitted by Claude must remain PLAYABLE when exemplared to level 10. Playable means: character can attack, has a defensive layer running where the AT has one, has a travel power, isn't dead weight. NOT optimized, NOT soft-capped, NOT preserving set bonuses. Level-50 endgame quality is the primary objective; this rule must never trade level-50 quality for exemplar performance.",
+      "priority_order": [
+        "1. Level-50 endgame quality is the primary build target. Pick powers and enhancements that maximize level-50 performance.",
+        "2. Exemplar-10 must be playable (functional, not optimal).",
+        "3. Never trade level-50 quality for exemplar bonuses or set-bonus persistence."
+      ],
+      "checks": [
+        "PowerEntries with Level <= 14 cover the build's functional core: at least 2 attacks, at least 1 defensive layer (where the AT has one), travel power picked by Level <= 12, Build Up / Aim equivalent if the AT has one, sustain mechanic if the AT depends on one. Most level-50 builds satisfy this naturally because normal leveling picks these in order.",
+        "Slot allocation: SlotEntries with Level <= 15 populate exemplar-10-available powers, not just late-game heavy hitters.",
+        "Enhancement choices: pick the IOs that maximize level 50. Prefer attuned IOs only when they're as good as the crafted alternative for level 50 (the exemplar-friendly behavior is then a free side benefit). Do NOT pick PvP sets for exemplar set-bonus persistence; PvP set bonuses retain on exemplar but that's informational, not a slotting recommendation. Use purples and crafted level-50 IOs freely when they're best at 50; loss of set bonuses below effective 47 is acceptable.",
+        "Trade-off surfacing: when exemplar playability and level-50 optimization conflict, level 50 wins. Explain the trade-off in the build summary and proceed."
+      ],
+      "see_also": "../docs/slotting-and-leveling.md#exemplar-mechanics-and-the-universal-exemplar-10-rule"
+    }
+  },
+  "type": "object",
+  "required": ["Class", "Origin", "Alignment", "PowerSets", "LastPower", "PowerEntries"],
+  "properties": {
+    "BuiltWith": {
+      "description": "Provenance: which MidsReborn version + database produced this build.",
+      "type": "object",
+      "properties": {
+        "App": { "type": "string", "description": "App name. Typically 'Mids Reborn'." },
+        "Version": { "type": "string", "description": "App version, e.g. '3.6.7.0'." },
+        "Database": { "type": "string", "description": "Database name, typically 'Homecoming'." },
+        "DatabaseVersion": { "type": "string", "description": "Database version string." }
+      }
+    },
+    "Level": {
+      "type": "string",
+      "description": "Character level as a string (1-50). Typed as string in MidsReborn for legacy reasons."
+    },
+    "Class": {
+      "type": "string",
+      "description": "Archetype ClassName (e.g. 'Class_Tanker', 'Class_Blaster'). Resolves through Archetypes.json. Required."
+    },
+    "Origin": {
+      "type": "string",
+      "description": "Origin: Magic, Mutation, Natural, Science, Technology. Required."
+    },
+    "Alignment": {
+      "type": "string",
+      "enum": ["Hero", "Vigilante", "Rogue", "Villain", "Loyalist", "Resistance"],
+      "description": "Character alignment. Required."
+    },
+    "Name": {
+      "type": "string",
+      "description": "Character name. Free-form."
+    },
+    "Comment": {
+      "type": ["string", "null"],
+      "description": "Build notes / changelog the player wrote in the app."
+    },
+    "PowerSets": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Powerset full names in fixed slot order: [Primary, Secondary, Pool1, Pool2, Pool3, Pool4, Ancillary]. Empty string for unfilled slots. Required.",
+      "minItems": 7,
+      "maxItems": 8
+    },
+    "LastPower": {
+      "type": "integer",
+      "description": "Index of the last main power in PowerEntries. Required."
+    },
+    "PowerEntries": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/PowerData" },
+      "description": "Every power slot in the build, including empty slots and inherent powers. Required."
+    }
+  },
+  "$defs": {
+    "PowerData": {
+      "type": "object",
+      "description": "One power pick (or empty slot) in the build.",
+      "properties": {
+        "PowerName": {
+          "type": "string",
+          "description": "Power FullName (e.g. 'Tanker.Invulnerability.Unstoppable'). Empty string for unfilled slot."
+        },
+        "Level": {
+          "type": "integer",
+          "description": "Character level at which this power was picked (1-50). -1 means unfilled / inherent at default level."
+        },
+        "StatInclude": {
+          "type": "boolean",
+          "description": "Whether this power's stats are included in the in-app totals view."
+        },
+        "ProcInclude": {
+          "type": "boolean",
+          "description": "Whether procs slotted in this power are included in the in-app totals."
+        },
+        "VariableValue": {
+          "type": "integer",
+          "description": "For powers with a variable scale (e.g. Defiant Barrage, Power Boost stack count)."
+        },
+        "InherentSlotsUsed": {
+          "type": "integer",
+          "description": "Slots the inherent system has used (Health, Stamina, etc. with their pre-allocated slot levels)."
+        },
+        "SubPowerEntries": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SubPowerData" },
+          "description": "Granted sub-powers (auras, secondary form-shifts, etc.). Most powers have none."
+        },
+        "SlotEntries": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SlotData" },
+          "description": "Enhancement slots in this power. Length 0..6 (1 inherent + up to 5 added)."
+        }
+      }
+    },
+    "SubPowerData": {
+      "type": "object",
+      "properties": {
+        "PowerName": { "type": "string", "description": "Sub-power FullName." },
+        "StatInclude": { "type": "boolean" }
+      }
+    },
+    "SlotData": {
+      "type": "object",
+      "description": "One enhancement slot in a power.",
+      "required": ["Level", "IsInherent"],
+      "properties": {
+        "Level": {
+          "type": "integer",
+          "description": "Character level at which this slot was added. For the inherent slot, this is the power's pick level."
+        },
+        "IsInherent": {
+          "type": "boolean",
+          "description": "True for the slot that comes free with the power; false for added slots."
+        },
+        "Enhancement": {
+          "oneOf": [
+            { "$ref": "#/$defs/EnhancementData" },
+            { "type": "null" }
+          ],
+          "description": "The enhancement currently slotted. Null = empty slot."
+        },
+        "FlippedEnhancement": {
+          "oneOf": [
+            { "$ref": "#/$defs/EnhancementData" },
+            { "type": "null" }
+          ],
+          "description": "Alternate-form enhancement (e.g. Attuned vs Crafted; Mids stores both for the in-app 'flip' feature)."
+        }
+      }
+    },
+    "EnhancementData": {
+      "type": "object",
+      "description": "One enhancement instance.",
+      "required": ["Uid"],
+      "properties": {
+        "Uid": {
+          "type": "string",
+          "description": "Enhancement UID, e.g. 'Crushing_Impact_Acc/Dmg' or 'Attuned_Luck_of_the_Gambler_E'. Resolves through Enhancement.json."
+        },
+        "Grade": {
+          "type": "string",
+          "enum": ["None", "TrainingOrigin", "DualOrigin", "SingleOrigin", "Hami-O", "InventOrigin", "SetOrigin"],
+          "description": "Enhancement grade. 'None' for set IOs / IOs (grade-less). TO/DO/SO for older types.",
+          "default": "None"
+        },
+        "IoLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50,
+          "description": "Crafted IO level (10-50). Ignored for TO/DO/SO/HO and Attuned IOs.",
+          "default": 1
+        },
+        "RelativeLevel": {
+          "type": "string",
+          "enum": ["MinusThree", "MinusTwo", "MinusOne", "Even", "PlusOne", "PlusTwo", "PlusThree", "PlusFour", "PlusFive"],
+          "description": "Effective level relative to character. Boosters push from Even toward PlusFive (max +5).",
+          "default": "Even"
+        },
+        "Obtained": {
+          "type": "boolean",
+          "description": "Whether the player has actually acquired this enhancement (vs. planning).",
+          "default": false
+        }
+      }
+    }
+  }
+}

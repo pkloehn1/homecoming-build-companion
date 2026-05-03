@@ -1,0 +1,167 @@
+{
+  "name": "Miscellaneous_Labyrinth_Scirocco",
+  "gender": "GENDER_MALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human",
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Miscellaneous_Labyrinth_Memories",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 55,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "Signatures_Ranged",
+    "character_class_name": "boss_praetorianarchvillain",
+    "description": "This malevolent fog has become thick and warped... Taking on a powerful physical form; A manifestation of the collective memory's strongest. These beings exist on the fringes of reality and grow stronger by breathing deep of the surrounding fog's pollution.",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": "Memory",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.0,
+    "additional_rewards": [
+      "LabyrinthMemoryAether",
+      "LabyrinthObol3"
+    ],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Aether.Stamina",
+      "V_GenericVillains.Mastermind_Leadership.Maneuvers",
+      "Temporary_Powers.Temporary_Powers.Labyrinth_FX",
+      "V_Arachnos.AV_Resistances.Resistance",
+      "V_Arachnos.Scirocco.Hack",
+      "V_Arachnos.Scirocco.Slice",
+      "V_Arachnos.Scirocco.Parry",
+      "V_Arachnos.Scirocco.Whirling_Sword",
+      "V_Arachnos.Scirocco.Disembowel",
+      "V_Arachnos.Scirocco.Head_Splitter",
+      "V_Arachnos.Scirocco.Lightning_Blast",
+      "V_Arachnos.Scirocco.Cage_of_Lightning",
+      "V_Arachnos.Scirocco.Static_Discharge",
+      "V_Arachnos.Scirocco.Shocking_Bolt",
+      "V_Arachnos.Scirocco.EM_Pulse",
+      "V_Arachnos.Scirocco.Ball_Lightning",
+      "V_Arachnos.Scirocco.Dust_Devils",
+      "V_Arachnos.Scirocco.Desert_Wind",
+      "V_Arachnos.Scirocco.Resistance",
+      "V_Arachnos.Scirocco.Fly",
+      "V_Arachnos.Scirocco.Fly_fx"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Pollution of Catastrophe",
+      "Leadership",
+      "Fog Guardians",
+      "Resistance",
+      "Hack",
+      "Slice",
+      "Parry",
+      "Whirling Sword",
+      "Disembowel",
+      "Head Splitter",
+      "Lightning Blast",
+      "Cage of Lightning",
+      "Static Discharge",
+      "Shocking Bolt",
+      "EM Pulse",
+      "Ball Lightning",
+      "Dust Devils",
+      "Desert Wind",
+      "Resistance",
+      "Fly",
+      "Fly fx"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Aether",
+        "power": "Stamina",
+        "level": 0
+      },
+      {
+        "power_category": "V_GenericVillains",
+        "power_set": "Mastermind_Leadership",
+        "power": "Maneuvers",
+        "level": 0
+      },
+      {
+        "power_category": "Temporary_Powers",
+        "power_set": "Temporary_Powers",
+        "power": "Labyrinth_FX",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "AV_Resistances",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Scirocco",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 55,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Coagulated Pollution"
+      ],
+      "costumes": [
+        "Signature_Scirocco"
+      ]
+    }
+  ]
+}

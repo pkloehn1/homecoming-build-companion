@@ -1,0 +1,30 @@
+{
+  "name": "Skulls_LTs_High",
+  "display_name": "Skulls_LTs_High",
+  "display_fullname": "Skulls.Skulls LTs High",
+  "display_help": "Skulls",
+  "display_short_help": "Skulls",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/SKULLS_LTS_HIGH.POWERSETS",
+  "icon": "skulls_lts_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Skulls_LTs_High.Deadly_Blast",
+    "Skulls.Skulls_LTs_High.Life_Drain",
+    "Skulls.Skulls_LTs_High.Deadly_Fists"
+  ],
+  "power_display_names": [
+    "Deadly Blast",
+    "Life Drain",
+    "Deadly Fists"
+  ],
+  "power_short_helps": [
+    "Ranged, High DoT(Negative/Cold), Foe -ToHit",
+    "Ranged, High DMG(Negative), Foe -ToHit, Self Heal",
+    "Melee, Moderate DMG(Negative/Cold), Foe -SPD, -Recharge, -ToHit"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Warrior_Staff_Minion",
+  "display_name": "Warrior_Staff_Minion",
+  "display_fullname": "Warriors New.Warrior Staff Minion",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_STAFF_MINION.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Staff_Minion.Mercurial_Blow",
+    "Warriors_New.Warrior_Staff_Minion.Precise_Strike"
+  ],
+  "power_display_names": [
+    "Mercurial Blow",
+    "Precise Strike"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Smash), Foe -DEF",
+    "Melee, Heavy DMG(Smash), Foe Disorient"
+  ]
+}

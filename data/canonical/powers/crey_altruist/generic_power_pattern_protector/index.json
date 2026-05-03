@@ -1,0 +1,58 @@
+{
+  "name": "Generic_Power_Pattern_Protector",
+  "display_name": "Generic_Power_Pattern_Protector",
+  "display_fullname": "Crey Altruist.Generic Power Pattern Protector",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/GENERIC_POWER_PATTERN_PROTECTOR.POWERSETS",
+  "icon": "generic_power_pattern_protector_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Generic_Power_Pattern_Protector.Energy_Punch",
+    "Crey_Altruist.Generic_Power_Pattern_Protector.Whirling_Hands",
+    "Crey_Altruist.Generic_Power_Pattern_Protector.Bone_Smasher",
+    "Crey_Altruist.Generic_Power_Pattern_Protector.Total_Focus",
+    "Crey_Altruist.Generic_Power_Pattern_Protector.Power_Bolt",
+    "Crey_Altruist.Generic_Power_Pattern_Protector.Power_Blast",
+    "Crey_Altruist.Generic_Power_Pattern_Protector.Energy_Torrent",
+    "Crey_Altruist.Generic_Power_Pattern_Protector.Explosive_Blast",
+    "Crey_Altruist.Generic_Power_Pattern_Protector.Dull_Pain",
+    "Crey_Altruist.Generic_Power_Pattern_Protector.Moment_of_Glory"
+  ],
+  "power_display_names": [
+    "Energy Punch",
+    "Whirling Hands",
+    "Bone Smasher",
+    "Total Focus",
+    "Power Bolt",
+    "Power Blast",
+    "Energy Torrent",
+    "Explosive Blast",
+    "Dull Pain",
+    "Moment of Glory"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Energy/Smash), Foe Disorient",
+    "PBAoE Melee, Moderate DMG(Energy/Smash), Foe Disorient",
+    "Melee, High DMG(Energy/Smash), Foe Disorient",
+    "Melee, Extreme DMG(Energy/Smash), Foe Disorient",
+    "Ranged, Moderate DMG(Energy/Smash), Foe Knockback",
+    "Ranged, High DMG(Energy/Smash), Foe Knockback",
+    "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback",
+    "Ranged (Targeted AoE), Moderate DMG(Energy/Smash), Foe Knockback",
+    "Self Heal, +MaxHP",
+    "Self +Res(All DMG but Psionics, Hold, Immobilize, Disorient, Sleep, Knockback), +DEF(All DMG but Psionics), +Recovery"
+  ]
+}

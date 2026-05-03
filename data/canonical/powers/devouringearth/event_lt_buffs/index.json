@@ -1,0 +1,34 @@
+{
+  "name": "Event_Lt_Buffs",
+  "display_name": "Devouring Earth Lt Plant Buff",
+  "display_fullname": "DevouringEarth.Devouring Earth Lt Plant Buff",
+  "display_help": "Devouring Earth",
+  "display_short_help": "Devouring Earth",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/DEVOURINGEARTH/EVENT_LT_BUFFS.POWERSETS",
+  "icon": "event_lt_buffs_set.png",
+  "requires": "",
+  "power_names": [
+    "DevouringEarth.Event_Lt_Buffs.Tree_of_Life",
+    "DevouringEarth.Event_Lt_Buffs.Swamp_Fungi",
+    "DevouringEarth.Event_Lt_Buffs.Cairn",
+    "DevouringEarth.Event_Lt_Buffs.Quartz"
+  ],
+  "power_display_names": [
+    "Tree of Life",
+    "Swamp Fungi",
+    "Cairn",
+    "Quartz"
+  ],
+  "power_short_helps": [
+    "AoE Heal",
+    "AoE Resist Effects",
+    "AoE Buff Def",
+    "AoE Buff Acc"
+  ]
+}

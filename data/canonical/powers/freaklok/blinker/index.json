@@ -1,0 +1,54 @@
+{
+  "name": "Blinker",
+  "display_name": "Blinker",
+  "display_fullname": "Freaklok.Blinker",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/BLINKER.POWERSETS",
+  "icon": "blinker_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Blinker.Pistols",
+    "Freaklok.Blinker.Dual_Wield",
+    "Freaklok.Blinker.Empty_Clips",
+    "Freaklok.Blinker.Executioners_Shot",
+    "Freaklok.Blinker.Trip_Mine",
+    "Freaklok.Blinker.Teleport_Foe",
+    "Freaklok.Blinker.Surveillance",
+    "Freaklok.Blinker.Cloaking_Device",
+    "Freaklok.Blinker.Teleport"
+  ],
+  "power_display_names": [
+    "Pistols",
+    "Dual Wield",
+    "Empty Clips",
+    "Executioner's Shot",
+    "Trip Mine",
+    "Teleport Foe",
+    "Surveillance",
+    "Cloaking Device",
+    "Teleport"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Lethal), Foe -DEF",
+    "Ranged, Heavy DMG(Lethal), Foe Knockdown",
+    "Ranged (Cone), Moderate DMG(Lethal), Foe Knockdown, -DEF",
+    "Ranged, Superior DMG(Lethal), Foe Knockback, -DEF",
+    "Place Mine: PBAoE, Superior DMG(Lethal/Fire), Foe Knockback",
+    "Ranged, Teleport Foe",
+    "Ranged, Foe -DEF, -Res(All)",
+    "Toggle: Self Stealth, +DEF(Melee, Ranged, AoE)",
+    "Self Travel"
+  ]
+}

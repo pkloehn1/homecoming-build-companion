@@ -1,0 +1,22 @@
+{
+  "name": "Hamidon_Damage_Recharge",
+  "display_name": "Hamidon Damage Recharge",
+  "display_fullname": "Boosts.Hamidon Damage Recharge",
+  "display_help": "Enhances the damage and increases the attack rate of a power.",
+  "display_short_help": "Hamidon (All Origins)",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/HAMIDON_DAMAGE_RECHARGE.POWERSETS",
+  "icon": "hamidon_damage_accuracy_set.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Hamidon_Damage_Recharge.Hamidon_Damage_Recharge"
+  ],
+  "power_display_names": [
+    "Chromatin Exposure (Dam/Rech)"
+  ],
+  "power_short_helps": [
+    "Enhances Damage and Increases Attack Rate"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Psionic_Armor",
+  "display_name": "Psionic Armor",
+  "display_fullname": "Mission Maker Secondary.Psionic Armor",
+  "display_help": "You use your psionic powers to shield yourself reducing incoming damage, as well as steal your foes own psyche and use it against them, be it by empowering your own regenerative powers, weakening their defenses or completely subduing their will.",
+  "display_short_help": "Psionic Armor",
+  "available_level": [
+    0,
+    1,
+    3,
+    9,
+    15,
+    19,
+    27,
+    34,
+    37
+  ],
+  "source_file": "DEFS/POWERS/MISSION_MAKER_SECONDARY/PSIONIC_ARMOR.POWERSETS",
+  "icon": "dark_armor_set.png",
+  "requires": "",
+  "power_names": [
+    "Mission_Maker_Secondary.Psionic_Armor.Psychic_Wall",
+    "Mission_Maker_Secondary.Psionic_Armor.Psionic_Shield",
+    "Mission_Maker_Secondary.Psionic_Armor.Impenetrable_Mind",
+    "Mission_Maker_Secondary.Psionic_Armor.Devour_Psyche",
+    "Mission_Maker_Secondary.Psionic_Armor.Mask_Presence",
+    "Mission_Maker_Secondary.Psionic_Armor.Fortify_Mind",
+    "Mission_Maker_Secondary.Psionic_Armor.Precognition",
+    "Mission_Maker_Secondary.Psionic_Armor.Aura_of_Insanity",
+    "Mission_Maker_Secondary.Psionic_Armor.Memento_Mori"
+  ],
+  "power_display_names": [
+    "Psychic Wall",
+    "Psionic Shield",
+    "Impenetrable Mind",
+    "Devour Psyche",
+    "Mask Presence",
+    "Psychokinetic Barrier",
+    "Precognition",
+    "Aura of Insanity",
+    "Memento Mori"
+  ],
+  "power_short_helps": [
+    "Toggle: Self +Res(Smash, Lethal, Psionic)",
+    "Self +Res(Fire, Cold, Energy, Negative, End Drain)",
+    "Self Res (Psionics, Disorient, Hold, Immobilize, Sleep, Fear, Confuse, Knockback)",
+    "Cone Foe -Regen, -Heal, -Recovery; Self +Regen, +Recovery",
+    "Toggle: Self Stealth, +DEF(Melee, Ranged, AoE)",
+    "Self, +Absorb, +MaxHP, +Regeneration, +Res(-Regeneration, -Recovery, -Recharge, -Endurance)",
+    "Auto: Self +DEF(Melee, Ranged, AoE, Psionic), +Perception",
+    "PBAoE, Foe Confuse, Disorient, Sleep, Hold, Fear, DoT(Psionic), +Special",
+    "Self Rez, +Max HP, Special"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Labyrinth_Gorgon",
+  "display_name": "Labyrinth Gorgon",
+  "display_fullname": "Event.Labyrinth Gorgon",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_GORGON.POWERSETS",
+  "icon": "elder_viper_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Gorgon.Stab",
+    "Event.Labyrinth_Gorgon.Venomous_Spit",
+    "Event.Labyrinth_Gorgon.Poison_Bite",
+    "Event.Labyrinth_Gorgon.Hide",
+    "Event.Labyrinth_Gorgon.Jump_Stab"
+  ],
+  "power_display_names": [
+    "Stab",
+    "Venomous Spit",
+    "Poison Bite",
+    "Hide",
+    "Jump Stab"
+  ],
+  "power_short_helps": [
+    "Melee(Negative), DoT(Toxic)",
+    "DoT(Toxic)",
+    "Melee(Negative), DoT(Toxic)",
+    "Toggle: Self Stealth, +DEF(Melee, Ranged, AoE)",
+    "Melee(Negative), DoT(Toxic)"
+  ]
+}

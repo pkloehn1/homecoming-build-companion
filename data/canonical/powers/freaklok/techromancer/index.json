@@ -1,0 +1,38 @@
+{
+  "name": "Techromancer",
+  "display_name": "Techromancer",
+  "display_fullname": "Freaklok.Techromancer",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/TECHROMANCER.POWERSETS",
+  "icon": "techromancer_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Techromancer.Chain_Induction",
+    "Freaklok.Techromancer.Lightning_Bolt",
+    "Freaklok.Techromancer.Ball_Lightning",
+    "Freaklok.Techromancer.Defibrillate",
+    "Freaklok.Techromancer.Defibrillate_Check"
+  ],
+  "power_display_names": [
+    "Chain Induction",
+    "Lightning Bolt",
+    "Ball Lightning",
+    "Defibrillate",
+    "Defibrillate Check"
+  ],
+  "power_short_helps": [
+    "Melee (Chain AoE), Heavy DMG(Energy/Smash), Foe -End, -Recovery",
+    "Ranged, High DMG(Energy), Foe -End, -Recovery",
+    "Ranged (Targeted AoE), Moderate DoT(Energy), Foe -End, -Recovery",
+    "Melee (Targeted AoE), Superior DMG(Energy/Smash), Foe Knockback, Disorient, -End, -Recovery, Ally Rez, Self Disorient",
+    "Special"
+  ]
+}

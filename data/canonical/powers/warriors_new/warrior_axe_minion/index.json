@@ -1,0 +1,22 @@
+{
+  "name": "Warrior_Axe_Minion",
+  "display_name": "Warrior_Axe_Minion",
+  "display_fullname": "Warriors New.Warrior Axe Minion",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_AXE_MINION.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Axe_Minion.Gash"
+  ],
+  "power_display_names": [
+    "Beheader"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal), Foe Knockdown"
+  ]
+}

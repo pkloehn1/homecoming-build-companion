@@ -1,0 +1,25 @@
+{
+  "name": "Nightstalkers",
+  "display_name": "Nightstalkers",
+  "source_file": "DEFS/POWERS/NIGHTSTALKERS.CATEGORIES",
+  "archetypes": [],
+  "display_help": null,
+  "display_short_help": null,
+  "powerset_names": [
+    "nightstalkers.houndmaster",
+    "nightstalkers.resistances",
+    "nightstalkers.shadowwolf",
+    "nightstalkers.shadowwolfpet",
+    "nightstalkers.spirit_panther",
+    "nightstalkers.wodan"
+  ],
+  "powerset_display_names": [
+    "Houndmaster",
+    "Resistances",
+    "Shadowwolf",
+    "ShadowWolfPet",
+    "Spirit Panther",
+    "Wodan"
+  ],
+  "powersets_with_requirements": []
+}

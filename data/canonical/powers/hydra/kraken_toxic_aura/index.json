@@ -1,0 +1,22 @@
+{
+  "name": "Kraken_Toxic_Aura",
+  "display_name": "Kraken Toxic Aura",
+  "display_fullname": "Hydra.Kraken Toxic Aura",
+  "display_help": "Kraken",
+  "display_short_help": "Kraken",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/HYDRA/KRAKEN_TOXIC_AURA.POWERSETS",
+  "icon": "kraken_toxic_aura_set.png",
+  "requires": "",
+  "power_names": [
+    "Hydra.Kraken_Toxic_Aura.Toxic_Aura"
+  ],
+  "power_display_names": [
+    "Toxic Aura"
+  ],
+  "power_short_helps": [
+    "Toggle: PBAoE, Minor DoT(Toxic), Foe -DMG"
+  ]
+}

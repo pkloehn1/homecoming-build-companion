@@ -1,0 +1,22 @@
+{
+  "name": "Nemesis_General_Melee",
+  "display_name": "Nemesis_General_Melee",
+  "display_fullname": "Nemesis.Nemesis General Melee",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_GENERAL_MELEE.POWERSETS",
+  "icon": "nemesis_lancer_officer_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_General_Melee.Lance"
+  ],
+  "power_display_names": [
+    "Atomic Bayonet"
+  ],
+  "power_short_helps": [
+    "Melee (Targeted AoE), Heavy DMG(Lethal/Energy), Foe Disorient"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "name": "HeroCorps_Vulcannon",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Hero_Corps",
+  "commandable_pet": 0,
+  "power_tags": [],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 1,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 1,
+    "spawn_limit_mission": 1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": true,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_NeverAfraid",
+    "character_class_name": "boss_grunt",
+    "description": "Vanessa Shaw has one rule, and one rule only when it comes to working with her - when she fires, get out of the way. Her power is great, her friendly-fire rating is not. Hero Corps has been working with her for years to study her powers and help focus them, but currently she comes with a disclaimer that you should not 'stand directly in front of the Vulcannon.'",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Hero_Corps_Sig.Vulcannon.Brawl",
+      "Hero_Corps_Sig.Vulcannon.Rain_of_Fire",
+      "Hero_Corps_Sig.Vulcannon.Inferno",
+      "Hero_Corps_Sig.Vulcannon.Vulcannon_Beam",
+      "Hero_Corps_Sig.Vulcannon.Aim",
+      "Hero_Corps_Sig.Vulcannon.VulcannonBeam_ChargeUp",
+      "Hero_Corps_Sig.Vulcannon.Molten_Armor",
+      "Hero_Corps_Sig.Vulcannon.Stone_Skin",
+      "Hero_Corps_Sig.Vulcannon.Heavy_Stone_Fist",
+      "Hero_Corps_Sig.Vulcannon.Seismic_Smash",
+      "Hero_Corps_Sig.Vulcannon.Tremor",
+      "Hero_Corps_Sig.Vulcannon.Cremate",
+      "Hero_Corps_Sig.Vulcannon.Brimstone_Proc_Vulcannon",
+      "Hero_Corps_Sig.Vulcannon.Meltdown_Armor",
+      "Hero_Corps_Sig.Resistances.HC_Med_Res"
+    ],
+    "power_display_names": [
+      "Brawl",
+      "Rain of Fire",
+      "Inferno",
+      "Vulcannon",
+      "Aim",
+      "Charging For Vulcannon",
+      "Molten Armor",
+      "Stone Skin",
+      "Heavy Stone Fist",
+      "Seismic Smash",
+      "Tremor",
+      "Cremate",
+      "Brimstone",
+      "Meltdown Armor",
+      "Heavy Resists"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Hero_Corps_Sig",
+        "power_set": "Vulcannon",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Hero_Corps_Sig",
+        "power_set": "Resistances",
+        "power": "HC_Med_Res",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 1,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Vulcannon"
+      ],
+      "costumes": [
+        "HC_Vulcannon"
+      ]
+    }
+  ]
+}

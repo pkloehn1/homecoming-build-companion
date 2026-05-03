@@ -1,0 +1,58 @@
+{
+  "name": "Crosswind",
+  "display_name": "Crosswind",
+  "display_fullname": "Hero Corps Sig.Crosswind",
+  "display_help": "Crosswind",
+  "display_short_help": "Crosswind",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    34,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/HERO_CORPS_SIG/CROSSWIND.POWERSETS",
+  "icon": "crey_boss_hero_clone_power_set.png",
+  "requires": "",
+  "power_names": [
+    "Hero_Corps_Sig.Crosswind.Brawl",
+    "Hero_Corps_Sig.Crosswind.Shockwave",
+    "Hero_Corps_Sig.Crosswind.Dreadful_Wail",
+    "Hero_Corps_Sig.Crosswind.Sonic_Thrust",
+    "Hero_Corps_Sig.Crosswind.Sound_Cannon",
+    "Hero_Corps_Sig.Crosswind.Superspeed",
+    "Hero_Corps_Sig.Crosswind.Nimble_Slash",
+    "Hero_Corps_Sig.Crosswind.Power_Slice",
+    "Hero_Corps_Sig.Crosswind.Ablating_Strike",
+    "Hero_Corps_Sig.Crosswind.Sweeping_Strike"
+  ],
+  "power_display_names": [
+    "Brawl",
+    "Shockwave",
+    "Dreadful Wail",
+    "Sonic Thrust",
+    "Sound Cannon",
+    "TooDarnFast",
+    "Nimble Slash",
+    "Power Slice",
+    "Ablating Strike",
+    "Sweeping Strike"
+  ],
+  "power_short_helps": [
+    "Melee Smash",
+    "Ranged (Cone), Minor DMG(Smashing/Energy), Foe Knockback",
+    "PBAoE, Extreme DMG(Energy/Smash), Foe Disorient, -Resist, Self -Recovery",
+    "Melee, Minor DMG(Smash/Energy), Foe Knockback",
+    "Ranged (Cone), Foe Stun, Knockback",
+    "Boost Run SPD",
+    "Melee, Minor DMG(Lethal)",
+    "Melee, Moderate DMG(Lethal)",
+    "Melee, Moderate DMG(Lethal), Foe -DEF",
+    "Melee (Cone), Superior DMG(Lethal)"
+  ]
+}

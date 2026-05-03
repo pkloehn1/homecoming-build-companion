@@ -1,0 +1,22 @@
+{
+  "name": "Hamidon_Endurance_Modification_Accuracy",
+  "display_name": "Hamidon Endurance Modification Accuracy",
+  "display_fullname": "Boosts.Hamidon Endurance Modification Accuracy",
+  "display_help": "Enhances the accuracy and the endurance modification ability of a power.",
+  "display_short_help": "Hamidon (All Origins)",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/HAMIDON_ENDURANCE_MODIFICATION_ACCURACY.POWERSETS",
+  "icon": "hamidon_accuracy_mez_set.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Hamidon_Endurance_Modification_Accuracy.Hamidon_Endurance_Modification_Accuracy"
+  ],
+  "power_display_names": [
+    "Microtubule Exposure (End Mod/Acc)"
+  ],
+  "power_short_helps": [
+    "Enhances Endurance Modification and Accuracy"
+  ]
+}

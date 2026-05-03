@@ -1,0 +1,30 @@
+{
+  "name": "Labyrinth_BigSpider",
+  "display_name": "Labyrinth Big Spider",
+  "display_fullname": "Event.Labyrinth Big Spider",
+  "display_help": "Labryinth of Fog",
+  "display_short_help": "Labryinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_BIGSPIDER.POWERSETS",
+  "icon": "banespawn_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_BigSpider.Frigid_Slash",
+    "Event.Labyrinth_BigSpider.Frigid_Slice",
+    "Event.Labyrinth_BigSpider.Frigid_Burst"
+  ],
+  "power_display_names": [
+    "Nightmare Slash",
+    "Nightmare Slice",
+    "Nightmare Burst"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG (Negative Energy), -RES(Foe, Negative Energy), Deep Sleep(Foe)",
+    "Melee (Cone), Moderate DMG (Negative Energy), -RES(Foe, Negative Energy), Chance for Deep Sleep(Foe)",
+    "Targeted AoE (Secondary Targeted), Superior DMG(Negative Energy), -DEF(Foe, All), -Regen(Foe), -Rec(Foe), Chance for EndDrain(Foe), Chance for Deep Sleep(Foe)"
+  ]
+}

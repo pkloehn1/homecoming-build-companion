@@ -1,0 +1,42 @@
+{
+  "name": "Skulls_DeathKnight",
+  "display_name": "Skulls_DeathKnight",
+  "display_fullname": "Skulls.Skulls DeathKnight",
+  "display_help": "Skulls",
+  "display_short_help": "Skulls",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/SKULLS_DEATHKNIGHT.POWERSETS",
+  "icon": "skulls_deathknight_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Skulls_DeathKnight.Slash",
+    "Skulls.Skulls_DeathKnight.Hack",
+    "Skulls.Skulls_DeathKnight.Disembowel",
+    "Skulls.Skulls_DeathKnight.Deadly_Bolt",
+    "Skulls.Skulls_DeathKnight.Deadly_Blast",
+    "Skulls.Skulls_DeathKnight.Obsidian_Shield"
+  ],
+  "power_display_names": [
+    "Slash",
+    "Hack",
+    "Disembowel",
+    "Deadly Bolt",
+    "Deadly Blast",
+    "Obsidian Shield"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal/Negative), Foe -DEF",
+    "Melee, High DMG(Lethal/Negative), Foe -DEF",
+    "Melee, Superior DMG(Lethal/Negative), Foe Knockup, -DEF",
+    "Ranged, Moderate DMG(Negative/Cold), Foe -SPD, -Recharge, -ToHit",
+    "Ranged, High DoT(Negative/Cold), Foe -SPD, -Recharge, -ToHit",
+    "Toggle: Self +Res(Fire, Cold, Negative, Sleep, Hold, Disorient, Fear)"
+  ]
+}

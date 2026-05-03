@@ -1,0 +1,174 @@
+{
+  "tag": "FullHenchman",
+  "bears": [
+    [
+      "mastermindpets_assault_bot",
+      [
+        "Assault Bot"
+      ]
+    ],
+    [
+      "mastermindpets_cold_demonling",
+      [
+        "Cold Demonling"
+      ]
+    ],
+    [
+      "mastermindpets_commando",
+      [
+        "Commando"
+      ]
+    ],
+    [
+      "mastermindpets_demon_prince",
+      [
+        "Demon Prince"
+      ]
+    ],
+    [
+      "mastermindpets_dire_wolf",
+      [
+        "Dire Wolf"
+      ]
+    ],
+    [
+      "mastermindpets_droid",
+      [
+        "Battle Drone"
+      ]
+    ],
+    [
+      "mastermindpets_ember_demon",
+      [
+        "Ember Demon"
+      ]
+    ],
+    [
+      "mastermindpets_fiery_demonling",
+      [
+        "Fiery Demonling"
+      ]
+    ],
+    [
+      "mastermindpets_genin",
+      [
+        "Genin"
+      ]
+    ],
+    [
+      "mastermindpets_hellfire_demonling",
+      [
+        "Hellfire Demonling"
+      ]
+    ],
+    [
+      "mastermindpets_hellfire_gargoyle",
+      [
+        "Hellfire Gargoyle"
+      ]
+    ],
+    [
+      "mastermindpets_howler_wolf",
+      [
+        "Howler Wolf"
+      ]
+    ],
+    [
+      "mastermindpets_howler_wolf_alpha",
+      [
+        "Alpha Howler Wolf"
+      ]
+    ],
+    [
+      "mastermindpets_jonin",
+      [
+        "Jounin"
+      ]
+    ],
+    [
+      "mastermindpets_lich",
+      [
+        "Lich"
+      ]
+    ],
+    [
+      "mastermindpets_lioness",
+      [
+        "Lioness"
+      ]
+    ],
+    [
+      "mastermindpets_maintenance_bot",
+      [
+        "Maintenance Drone"
+      ]
+    ],
+    [
+      "mastermindpets_medic",
+      [
+        "Medic"
+      ]
+    ],
+    [
+      "mastermindpets_oni",
+      [
+        "Oni"
+      ]
+    ],
+    [
+      "mastermindpets_protector_bot",
+      [
+        "Protector Bot"
+      ]
+    ],
+    [
+      "mastermindpets_skeletal_warrior",
+      [
+        "Grave Knight"
+      ]
+    ],
+    [
+      "mastermindpets_soldier",
+      [
+        "Soldier"
+      ]
+    ],
+    [
+      "mastermindpets_spec_ops",
+      [
+        "Spec Ops"
+      ]
+    ],
+    [
+      "mastermindpets_thug",
+      [
+        "Punk"
+      ]
+    ],
+    [
+      "mastermindpets_thug_arsonist",
+      [
+        "Arsonist"
+      ]
+    ],
+    [
+      "mastermindpets_thug_boss",
+      [
+        "Bruiser"
+      ]
+    ],
+    [
+      "mastermindpets_thug_lt",
+      [
+        "Enforcers"
+      ]
+    ],
+    [
+      "mastermindpets_zombie",
+      [
+        "Zombie"
+      ]
+    ]
+  ],
+  "affects": []
+}

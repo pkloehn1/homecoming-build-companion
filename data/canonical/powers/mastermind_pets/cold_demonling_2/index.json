@@ -1,0 +1,30 @@
+{
+  "name": "Cold_Demonling_2",
+  "display_name": "Demons Cold Demonling 2",
+  "display_fullname": "Mastermind Pets.Demons Cold Demonling 2",
+  "display_help": "Demons",
+  "display_short_help": "Demons",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/MASTERMIND_PETS/COLD_DEMONLING_2.POWERSETS",
+  "icon": "cold_demonling_2_set.png",
+  "requires": "",
+  "power_names": [
+    "Mastermind_Pets.Cold_Demonling_2.Resistance",
+    "Mastermind_Pets.Cold_Demonling_2.Ice_Blast",
+    "Mastermind_Pets.Cold_Demonling_2.Enchant_Demon"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Ice Blast",
+    "Enchant Demon"
+  ],
+  "power_short_helps": [
+    "Auto Res Placate, Disorient, Terrorize, Smashing, Lethal, Fire, Cold, Toxic",
+    "Ranged, DMG(Cold), Foe -Recharge, -SPD",
+    "Enchant Demon"
+  ]
+}

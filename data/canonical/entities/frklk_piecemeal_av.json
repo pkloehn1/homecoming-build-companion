@@ -1,0 +1,114 @@
+{
+  "name": "FRKLK_Piecemeal_AV",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Freaklok",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human",
+    "Electronic",
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 29,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "SkyRaiders_Porter",
+    "character_class_name": "boss_archvillain",
+    "description": "Dr. Pierce has committed herself to the advancement of the Freaklok by personally testing nearly every bit of technology on herself before it goes out into the field. The result is this new cybernetic evolution of the woman who once ran a shop out of Skyway City.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.2,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Freakshow.Freakshow_Bile_Defense.Resistance",
+      "Freaklok.Piecemeal.Teleport",
+      "Freaklok.Piecemeal.Swipe",
+      "Freaklok.Piecemeal.Cross_Cut",
+      "Freaklok.Piecemeal.Jacobs_Ladder",
+      "Freaklok.Piecemeal.Blade_Flurry",
+      "Freaklok.Piecemeal.Proton_Volley",
+      "Freaklok.Piecemeal.Ball_Lightning",
+      "Freaklok.Piecemeal.Jolting_Chain",
+      "Freaklok.Piecemeal.Voltaic_Sentinel",
+      "Freaklok.Regeneration.Instant_Healing"
+    ],
+    "power_display_names": [
+      "Resistance",
+      "Teleport",
+      "Swipe",
+      "Cross Cut",
+      "Jacobs Ladder",
+      "Blade Flurry",
+      "Proton Volley",
+      "Ball Lightning",
+      "Jolting Chain",
+      "Voltaic Sentinel",
+      "Instant Healing"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Freakshow",
+        "power_set": "Freakshow_Bile_Defense",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Piecemeal",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Regeneration",
+        "power": "Instant_Healing",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 29,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Piecemeal"
+      ],
+      "costumes": [
+        "FRKLK_Piecemeal"
+      ]
+    }
+  ]
+}

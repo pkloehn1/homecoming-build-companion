@@ -1,0 +1,50 @@
+{
+  "name": "Raptor_VHigh_Poison",
+  "display_name": "Raptor VHigh Poison",
+  "display_fullname": "V Wyvern.Raptor VHigh Poison",
+  "display_help": "Wyvern",
+  "display_short_help": "Wyvern",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    39,
+    39
+  ],
+  "source_file": "DEFS/POWERS/V_WYVERN/RAPTOR_VHIGH_POISON.POWERSETS",
+  "icon": "raptor_vhigh_poison_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Wyvern.Raptor_VHigh_Poison.Talon_Aimed_Shot",
+    "V_Wyvern.Raptor_VHigh_Poison.Talon_Blazing_Arrow",
+    "V_Wyvern.Raptor_VHigh_Poison.Talon_Ranged_Shot",
+    "V_Wyvern.Raptor_VHigh_Poison.Talon_Explosive_Arrow",
+    "V_Wyvern.Raptor_VHigh_Poison.Talon_Rain_of_Arrows",
+    "V_Wyvern.Raptor_VHigh_Poison.Talon_Entangling_Arrow",
+    "V_Wyvern.Raptor_VHigh_Poison.Talon_Flash_Arrow",
+    "V_Wyvern.Raptor_VHigh_Poison.Talon_Ice_Arrow"
+  ],
+  "power_display_names": [
+    "Talon Aimed Shot",
+    "Talon Blazing Arrow",
+    "Talon Ranged Shot",
+    "Talon Explosive Arrow",
+    "Talon Rain of Arrows",
+    "Talon Entangling Arrow",
+    "Talon Flash Arrow",
+    "Talon Ice Arrow"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Lethal), DoT(Toxic), Foe -SPD, -Recharge",
+    "Ranged, Moderate DMG(Lethal), DoT(Fire/Toxic), Foe -SPD, -Recharge",
+    "Ranged (Sniper), Extreme DMG(Lethal), DoT(Toxic), Foe -SPD, -Recharge",
+    "Ranged (Targeted AoE), Moderate DMG(Fire/Lethal), DoT(Toxic), Foe Knockback, -SPD, -Recharge",
+    "Ranged (Location AoE), Extreme DoT(Lethal/Toxic), Foe Immobilize, -SPD, -Recharge",
+    "Ranged, Foe Immobilize, -SPD, -Recharge, -Fly, -Jump",
+    "Ranged (Targeted AoE), Foe -Perception, -ToHit",
+    "Ranged, Foe Hold, -SPD, -Recharge, -DMG, -Special"
+  ]
+}

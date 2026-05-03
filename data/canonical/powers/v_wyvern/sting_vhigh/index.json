@@ -1,0 +1,42 @@
+{
+  "name": "Sting_VHigh",
+  "display_name": "Sting VHigh",
+  "display_fullname": "V Wyvern.Sting VHigh",
+  "display_help": "Wyvern",
+  "display_short_help": "Wyvern",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    39
+  ],
+  "source_file": "DEFS/POWERS/V_WYVERN/STING_VHIGH.POWERSETS",
+  "icon": "sting_vhigh_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Wyvern.Sting_VHigh.Talon_Aimed_Shot",
+    "V_Wyvern.Sting_VHigh.Talon_Blazing_Arrow",
+    "V_Wyvern.Sting_VHigh.Talon_Ranged_Shot",
+    "V_Wyvern.Sting_VHigh.Talon_Explosive_Arrow",
+    "V_Wyvern.Sting_VHigh.Talon_Entangling_Arrow",
+    "V_Wyvern.Sting_VHigh.Talon_Flash_Arrow"
+  ],
+  "power_display_names": [
+    "Talon Aimed Shot",
+    "Talon Blazing Arrow",
+    "Talon Ranged Shot",
+    "Talon Explosive Arrow",
+    "Talon Entangling Arrow",
+    "Talon Flash Arrow"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Lethal), Foe -Res(All)",
+    "Ranged, Moderate DMG(Lethal), High DoT(Fire), Foe -Res(All)",
+    "Ranged (Sniper), Extreme DMG(Lethal), Foe -Res(All)",
+    "Ranged (Targeted AoE), Moderate DMG(Fire/Lethal), Foe Knockback, -Res(All)",
+    "Ranged, Foe Immobilize, -Recharge, -SPD, -Fly, -Jump",
+    "Ranged (Targeted AoE), Foe -Perception, -ToHit"
+  ]
+}

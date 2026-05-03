@@ -1,0 +1,22 @@
+{
+  "name": "NemesisGas_HM",
+  "display_name": "Nemesis Gas (Advanced Mode)",
+  "display_fullname": "Pets.Nemesis Gas (Advanced Mode)",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/NEMESISGAS_HM.POWERSETS",
+  "icon": "nemesisgas_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.NemesisGas_HM.Nemesis_Gas"
+  ],
+  "power_display_names": [
+    "Nemesis Gas"
+  ],
+  "power_short_helps": [
+    "PBAoE DoT(Toxic), Foe -Def(All), -DMG, -Rech, -Regen"
+  ]
+}

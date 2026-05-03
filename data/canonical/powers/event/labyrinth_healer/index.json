@@ -1,0 +1,22 @@
+{
+  "name": "Labyrinth_Healer",
+  "display_name": "Labyrinth Healer",
+  "display_fullname": "Event.Labyrinth Healer",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_HEALER.POWERSETS",
+  "icon": "dust_devil_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Healer.Heal"
+  ],
+  "power_display_names": [
+    "Mythic Fog"
+  ],
+  "power_short_helps": [
+    "PBAoE: Heal, +Special(Anchored)"
+  ]
+}

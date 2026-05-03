@@ -1,0 +1,34 @@
+{
+  "name": "Ember_Demon_3",
+  "display_name": "Demons Ember Demon 3",
+  "display_fullname": "Mastermind Pets.Demons Ember Demon 3",
+  "display_help": "Demons",
+  "display_short_help": "Demons",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/MASTERMIND_PETS/EMBER_DEMON_3.POWERSETS",
+  "icon": "ember_demon_3_set.png",
+  "requires": "",
+  "power_names": [
+    "Mastermind_Pets.Ember_Demon_3.Fire_Ball",
+    "Mastermind_Pets.Ember_Demon_3.Abyssal_Mending",
+    "Mastermind_Pets.Ember_Demon_3.Abyssal_Reconstruction",
+    "Mastermind_Pets.Ember_Demon_3.Abyssal_Empowerment"
+  ],
+  "power_display_names": [
+    "Fire Ball",
+    "Abyssal Mending",
+    "Abyssal Reconstruction",
+    "Abyssal Empowerment"
+  ],
+  "power_short_helps": [
+    "Ranged (Targeted AoE), DMG(Fire/Smash)",
+    "Demon Ally Heal",
+    "PBAoE, Demon Ally +Heal",
+    "Empower"
+  ]
+}

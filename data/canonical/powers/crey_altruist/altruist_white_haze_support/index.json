@@ -1,0 +1,30 @@
+{
+  "name": "Altruist_White_Haze_Support",
+  "display_name": "White Haze Support",
+  "display_fullname": "Crey Altruist.White Haze Support",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_WHITE_HAZE_SUPPORT.POWERSETS",
+  "icon": "altruist_white_haze_support_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_White_Haze_Support.Ice_Shield",
+    "Crey_Altruist.Altruist_White_Haze_Support.Arctic_Fog",
+    "Crey_Altruist.Altruist_White_Haze_Support.Benumb"
+  ],
+  "power_display_names": [
+    "Ice Shield",
+    "Arctic Fog",
+    "Benumb"
+  ],
+  "power_short_helps": [
+    "Ranged, Ally +DEF(Smash, Lethal, Energy, Negative), +Res(Fire, Cold)",
+    "Toggle: PBAoE, Team Stealth, +DEF(All), +Res(Fire, Cold, Energy, Slow)",
+    "Ranged, Foe -DMG, -End, -Regen, -Special"
+  ]
+}

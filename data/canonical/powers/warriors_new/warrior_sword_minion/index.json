@@ -1,0 +1,22 @@
+{
+  "name": "Warrior_Sword_Minion",
+  "display_name": "Warrior_Sword_Minion",
+  "display_fullname": "Warriors New.Warrior Sword Minion",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_SWORD_MINION.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Sword_Minion.Slash"
+  ],
+  "power_display_names": [
+    "Slash"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal), Foe -DEF"
+  ]
+}

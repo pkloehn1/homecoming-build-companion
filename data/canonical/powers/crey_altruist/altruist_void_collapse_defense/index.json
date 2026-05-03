@@ -1,0 +1,26 @@
+{
+  "name": "Altruist_Void_Collapse_Defense",
+  "display_name": "Void Collapse Defense",
+  "display_fullname": "Crey Altruist.Void Collapse Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_VOID_COLLAPSE_DEFENSE.POWERSETS",
+  "icon": "altruist_void_collapse_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Void_Collapse_Defense.DNA_Siphon",
+    "Crey_Altruist.Altruist_Void_Collapse_Defense.Eclipse"
+  ],
+  "power_display_names": [
+    "DNA Siphon",
+    "Eclipse"
+  ],
+  "power_short_helps": [
+    "PBAoE, Minor DMG(Lethal/Toxic), Foe -Regen, Self Heal, +End, +Regen, +Recovery",
+    "PBAoE, Foe -End, -Recovery, Self +End, +Res(All DMG)"
+  ]
+}

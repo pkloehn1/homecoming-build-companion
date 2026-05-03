@@ -1,0 +1,26 @@
+{
+  "name": "Claws_Cadaver",
+  "display_name": "Claws_Cadaver",
+  "display_fullname": "Freaklok.Claws Cadaver",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/CLAWS_CADAVER.POWERSETS",
+  "icon": "claws_cadaver_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Claws_Cadaver.Swipe",
+    "Freaklok.Claws_Cadaver.Slash"
+  ],
+  "power_display_names": [
+    "Swipe",
+    "Slash"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Lethal)",
+    "Melee, Heavy DMG(Lethal), Foe -DEF"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Labyrinth_Minotaur_TW",
+  "display_name": "Labyrinth Minotaur TW",
+  "display_fullname": "Event.Labyrinth Minotaur TW",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_MINOTAUR_TW.POWERSETS",
+  "icon": "werewolf_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Minotaur_TW.Defensive_Sweep",
+    "Event.Labyrinth_Minotaur_TW.Crushing_Blow",
+    "Event.Labyrinth_Minotaur_TW.Follow_Through",
+    "Event.Labyrinth_Minotaur_TW.Sweeping_Strike",
+    "Event.Labyrinth_Minotaur_TW.Shatter_Armor",
+    "Event.Labyrinth_Minotaur_TW.Whirling_Smash",
+    "Event.Labyrinth_Minotaur_TW.Arc_of_Destruction"
+  ],
+  "power_display_names": [
+    "Defensive Sweep",
+    "Crushing Blow",
+    "Follow Through",
+    "Titan Sweep",
+    "Rend Armor",
+    "Whirling Smash",
+    "Arc of Destruction"
+  ],
+  "power_short_helps": [
+    "Melee (Cone), Moderate DMG(Negative), Self +DEF(Melee, Negative)",
+    "Melee, High DMG(Negative), Foe -DEF",
+    "Melee, Superior DMG(Negative), Foe Disorient, Knockback",
+    "Melee (Cone), Heavy DMG(Negative), Foe Knockback",
+    "Melee, Extreme DMG(Negative), Foe -DEF, -Res(All)",
+    "PBAoE Melee, Moderate DMG(Negative), Foe Knockback",
+    "Melee (Cone), Superior DMG(Negative), Foe Knockback"
+  ]
+}

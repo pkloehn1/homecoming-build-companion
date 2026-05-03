@@ -1,0 +1,46 @@
+{
+  "name": "Altruist_Shining_Diamond_Offense",
+  "display_name": "Shining Diamond Offense",
+  "display_fullname": "Crey Altruist.Shining Diamond Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SHINING_DIAMOND_OFFENSE.POWERSETS",
+  "icon": "altruist_shining_diamond_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Shining_Diamond_Offense.Heavy_Blow",
+    "Crey_Altruist.Altruist_Shining_Diamond_Offense.Sweeping_Cross",
+    "Crey_Altruist.Altruist_Shining_Diamond_Offense.Throat_Strike",
+    "Crey_Altruist.Altruist_Shining_Diamond_Offense.Shin_Breaker",
+    "Crey_Altruist.Altruist_Shining_Diamond_Offense.Crushing_Uppercut",
+    "Crey_Altruist.Altruist_Shining_Diamond_Offense.Burst_of_Speed",
+    "Crey_Altruist.Altruist_Shining_Diamond_Offense.Taunt"
+  ],
+  "power_display_names": [
+    "Heavy Blow",
+    "Sweeping Cross",
+    "Rib Cracker",
+    "Shin Breaker",
+    "Crushing Uppercut",
+    "Burst of Speed",
+    "Taunt"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Smash), Foe Knockdown",
+    "Melee (Cone), Heavy DMG(Smash), Foe Disorient",
+    "Melee, Heavy DMG(Smash), Foe -DMG, -Res(All)",
+    "Melee, High DMG(Smash), Foe -SPD, -DEF, -Fly",
+    "Melee, Extreme DMG(Smash), Foe Knockup, Disorient",
+    "Ranged (Location AoE), Moderate DMG(Smash), Self Teleport",
+    "Ranged (Targeted AoE), Foe Taunt, -Range"
+  ]
+}

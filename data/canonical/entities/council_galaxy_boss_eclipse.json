@@ -1,0 +1,124 @@
+{
+  "name": "Council_Galaxy_Boss_Eclipse",
+  "gender": "GENDER_MALE",
+  "group_name": "Council",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 1,
+    "spawn_limit_mission": 1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "boss_grunt",
+    "description": "The Galaxy Band of the Council has been trained by Arakhn in stealth and infiltration. They have also been conditioned by Kheldian mind control techniques to be loyal to her above all others.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.4,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Council.Galaxy_Base.Star_Punch",
+      "Council.Galaxy_Base.Absorption",
+      "Council.Galaxy_Base_2.Gravimetric_Snare",
+      "Council.Galaxy_Base_2.Shadow_Blast",
+      "Council.Galaxy_Boss.Shadow_Slip",
+      "Council.Galaxy_Boss.Sunless_Mire",
+      "Council.Galaxy_Boss.Gravitic_Emanation",
+      "Council.Galaxy_Boss.Gravity_Well",
+      "Council.Galaxy_Lt_Boss.Essence_Drain",
+      "Council.Galaxy_Lt_Boss.Umbral_Shield",
+      "Council.Galaxy_Boss_High.Eclipse"
+    ],
+    "power_display_names": [
+      "Star Punch",
+      "Absorption",
+      "Gravimetric Snare",
+      "Shadow Blast",
+      "Shadow Slip",
+      "Sunless Mire",
+      "Gravitic Emanation",
+      "Gravity Well",
+      "Essence Drain",
+      "Umbral Shield",
+      "Eclipse"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Council",
+        "power_set": "Galaxy_Base",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Council",
+        "power_set": "Galaxy_Base_2",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Council",
+        "power_set": "Galaxy_Boss",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Council",
+        "power_set": "Galaxy_Lt_Boss",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Council",
+        "power_set": "Galaxy_Boss_High",
+        "power": "Eclipse",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Eclipse Galaxy Archon"
+      ],
+      "costumes": [
+        "Council_Galaxy_Boss_HighLevel"
+      ]
+    }
+  ]
+}

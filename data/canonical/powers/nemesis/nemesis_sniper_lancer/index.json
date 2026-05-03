@@ -1,0 +1,26 @@
+{
+  "name": "Nemesis_Sniper_Lancer",
+  "display_name": "Nemesis_Sniper_Lancer",
+  "display_fullname": "Nemesis.Nemesis Sniper Lancer",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_SNIPER_LANCER.POWERSETS",
+  "icon": "nemesis_sniper_lancer_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Sniper_Lancer.Lance_Rifle",
+    "Nemesis.Nemesis_Sniper_Lancer.Vengeance"
+  ],
+  "power_display_names": [
+    "Lance Rifle",
+    "Vengeance"
+  ],
+  "power_short_helps": [
+    "Ranged (Sniper AoE), Heavy DMG(Fire/Lethal), Foe Knockdown",
+    "Post Death Special: PBAoE, Team +DEF(Melee, Ranged, AoE), +ToHit, +DMG, Heal"
+  ]
+}

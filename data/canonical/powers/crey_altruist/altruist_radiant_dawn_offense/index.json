@@ -1,0 +1,46 @@
+{
+  "name": "Altruist_Radiant_Dawn_Offense",
+  "display_name": "Radiant Dawn Offense",
+  "display_fullname": "Crey Altruist.Radiant Dawn Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_RADIANT_DAWN_OFFENSE.POWERSETS",
+  "icon": "altruist_radiant_dawn_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Electron_Haze",
+    "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Proton_Volley",
+    "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Cosmic_Burst",
+    "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Neutron_Bomb",
+    "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Atomic_Blast",
+    "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Contaminated_Strike",
+    "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Radioactive_Smash"
+  ],
+  "power_display_names": [
+    "Electron Haze",
+    "Proton Volley",
+    "Cosmic Burst",
+    "Neutron Bomb",
+    "Atomic Blast",
+    "Contaminated Strike",
+    "Radioactive Smash"
+  ],
+  "power_short_helps": [
+    "Ranged (Cone), Heavy DMG(Energy), Foe -DEF, Knockback",
+    "Ranged (Sniper), Extreme DMG(Energy), Foe -DEF",
+    "Close, Superior DMG(Energy), Foe Disorient, -DEF",
+    "Ranged (Targeted AoE), Moderate DMG(Energy), Foe -DEF",
+    "PBAoE, Extreme DMG(Energy/Smash), Foe Hold, -DEF",
+    "Melee, Light DMG(Energy/Smash), Foe -DEF",
+    "Melee, Heavy DMG(Energy/Smash), Foe Knockdown, -DEF"
+  ]
+}

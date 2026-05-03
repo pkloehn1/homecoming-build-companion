@@ -1,0 +1,30 @@
+{
+  "name": "Altruist_Hermit_Turtle_Defense",
+  "display_name": "Hermit Turtle Defense",
+  "display_fullname": "Crey Altruist.Hermit Turtle Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_HERMIT_TURTLE_DEFENSE.POWERSETS",
+  "icon": "altruist_hermit_turtle_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Hermit_Turtle_Defense.Dull_Pain",
+    "Crey_Altruist.Altruist_Hermit_Turtle_Defense.Invincibility",
+    "Crey_Altruist.Altruist_Hermit_Turtle_Defense.Unstoppable"
+  ],
+  "power_display_names": [
+    "Dull Pain",
+    "Invincibility",
+    "Unstoppable"
+  ],
+  "power_short_helps": [
+    "Self Heal, +MaxHP",
+    "Toggle: Self +Res(Smash, Lethal), +DEF(All but Psionics), +ToHit(Special)",
+    "Self +Res(Disorient, Sleep, Hold, Immobilize, Knockback, All DMG but Psionics), +Recovery, Delayed Weaken(Self -End, -HP)"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Murk_Eidolon",
+  "display_name": "Murk_Eidolon",
+  "display_fullname": "Freaklok.Murk Eidolon",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/MURK_EIDOLON.POWERSETS",
+  "icon": "murk_eidolon_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Murk_Eidolon.Shadow_Punch",
+    "Freaklok.Murk_Eidolon.Midnight_Grasp",
+    "Freaklok.Murk_Eidolon.Dark_Blast",
+    "Freaklok.Murk_Eidolon.Dark_Embrace"
+  ],
+  "power_display_names": [
+    "Shadow Punch",
+    "Midnight Grasp",
+    "Dark Blast",
+    "Dark Embrace"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Negative/Smash), Foe -ToHit",
+    "Melee, Extreme DoT(Negative), Foe Immobilize, -ToHit",
+    "Ranged, Moderate DMG(Negative), Foe -ToHit",
+    "Toggle: Self +Res(Smash, Lethal, Negative, Toxic)"
+  ]
+}

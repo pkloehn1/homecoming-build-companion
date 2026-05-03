@@ -1,0 +1,34 @@
+{
+  "name": "Altruist_Crimson_King_Support",
+  "display_name": "Crimson King Support",
+  "display_fullname": "Crey Altruist.Crimson King Support",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_CRIMSON_KING_SUPPORT.POWERSETS",
+  "icon": "altruist_crimson_king_support_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Crimson_King_Support.Weaken",
+    "Crey_Altruist.Altruist_Crimson_King_Support.Envenom",
+    "Crey_Altruist.Altruist_Crimson_King_Support.Neurotoxic_Breath",
+    "Crey_Altruist.Altruist_Crimson_King_Support.Paralytic_Poison"
+  ],
+  "power_display_names": [
+    "Weaken",
+    "Envenom",
+    "Neurotoxic Breath",
+    "Paralytic Poison"
+  ],
+  "power_short_helps": [
+    "Ranged (Targeted AoE), Foe -DMG, -ToHit, -Special",
+    "Ranged (Targeted AoE), Foe -Res(All), -DEF, -Regen, -Heal",
+    "Ranged (Cone), Foe -SPD, -Recharge, Chance for Hold",
+    "Ranged, Foe Hold"
+  ]
+}

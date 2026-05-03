@@ -1,0 +1,30 @@
+{
+  "name": "Warrior_Mace_Lt",
+  "display_name": "Warrior_Mace_Lt",
+  "display_fullname": "Warriors New.Warrior Mace Lt",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_MACE_LT.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Mace_Lt.Pulverize",
+    "Warriors_New.Warrior_Mace_Lt.Clobber",
+    "Warriors_New.Warrior_Mace_Lt.Shatter"
+  ],
+  "power_display_names": [
+    "Pulverize",
+    "Clobber",
+    "Shatter"
+  ],
+  "power_short_helps": [
+    "Melee, High DMG(Smash), Foe Disorient",
+    "Melee, Extreme DMG(Smash), Foe Disorient",
+    "Melee (Cone), Extreme DMG(Smash), Foe Knockback"
+  ]
+}

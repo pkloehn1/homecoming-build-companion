@@ -1,0 +1,22 @@
+{
+  "name": "Warrior_Brawl_Lt",
+  "display_name": "Warrior_Brawl_Lt",
+  "display_fullname": "Warriors New.Warrior Brawl Lt",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_BRAWL_LT.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Brawl_Lt.Spinning_Strike"
+  ],
+  "power_display_names": [
+    "Spinning Strike"
+  ],
+  "power_short_helps": [
+    "Melee (Targeted AoE), High DMG(Smash), Foe Knockdown"
+  ]
+}

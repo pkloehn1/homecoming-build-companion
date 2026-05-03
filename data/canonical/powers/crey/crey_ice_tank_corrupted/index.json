@@ -1,0 +1,30 @@
+{
+  "name": "Crey_Ice_Tank_Corrupted",
+  "display_name": "Crey_Ice_Tank_Corrupted",
+  "display_fullname": "Crey.Crey Ice Tank Corrupted",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY/CREY_ICE_TANK_CORRUPTED.POWERSETS",
+  "icon": "crey_ice_tank_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey.Crey_Ice_Tank_Corrupted.Haymaker",
+    "Crey.Crey_Ice_Tank_Corrupted.Jab",
+    "Crey.Crey_Ice_Tank_Corrupted.Throw"
+  ],
+  "power_display_names": [
+    "Frozen Haymaker",
+    "Frozen Jab",
+    "Throw"
+  ],
+  "power_short_helps": [
+    "Melee Cold, Knockback, Foe -Recharge, -SPD",
+    "Melee, Minor DMG(Cold), Foe Stun, Foe -Recharge, -SPD",
+    "Ranged, Moderate DMG(Smash)"
+  ]
+}

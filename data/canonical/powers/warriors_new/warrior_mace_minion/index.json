@@ -1,0 +1,22 @@
+{
+  "name": "Warrior_Mace_Minion",
+  "display_name": "Warrior_Mace_Minion",
+  "display_fullname": "Warriors New.Warrior Mace Minion",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_MACE_MINION.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Mace_Minion.Bash"
+  ],
+  "power_display_names": [
+    "Bash"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Smash), Foe Disorient"
+  ]
+}

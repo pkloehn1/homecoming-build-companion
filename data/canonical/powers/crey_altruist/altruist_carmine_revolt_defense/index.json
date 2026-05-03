@@ -1,0 +1,26 @@
+{
+  "name": "Altruist_Carmine_Revolt_Defense",
+  "display_name": "Carmine Revolt Defense",
+  "display_fullname": "Crey Altruist.Carmine Revolt Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_CARMINE_REVOLT_DEFENSE.POWERSETS",
+  "icon": "altruist_carmine_revolt_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Carmine_Revolt_Defense.Rock_Armor",
+    "Crey_Altruist.Altruist_Carmine_Revolt_Defense.Earths_Embrace"
+  ],
+  "power_display_names": [
+    "Rock Armor",
+    "Earth's Embrace"
+  ],
+  "power_short_helps": [
+    "Toggle: Self +DEF(Smash, Lethal), +Res(Hold, Immobilize, Disorient, Sleep, Knockback, End Drain), +Regeneration",
+    "Self Heal, +MaxHP, +Res(Toxic)"
+  ]
+}

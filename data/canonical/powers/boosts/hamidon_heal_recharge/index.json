@@ -1,0 +1,22 @@
+{
+  "name": "Hamidon_Heal_Recharge",
+  "display_name": "Hamidon Heal Recharge",
+  "display_fullname": "Boosts.Hamidon Heal Recharge",
+  "display_help": "Enhances the healing ability and increases the attack rate of a power.",
+  "display_short_help": "Hamidon (All Origins)",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/HAMIDON_HEAL_RECHARGE.POWERSETS",
+  "icon": "hamidon_heal_endurance_discount_set.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Hamidon_Heal_Recharge.Hamidon_Heal_Recharge"
+  ],
+  "power_display_names": [
+    "Amyloplast Exposure (Rech/Heal/Absorb)"
+  ],
+  "power_short_helps": [
+    "Enhances Heal, Enhances Absorb, and Increases Attack Rate"
+  ]
+}

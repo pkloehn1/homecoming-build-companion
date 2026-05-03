@@ -1,0 +1,26 @@
+{
+  "name": "Freaklok_Boom",
+  "display_name": "Freaklok_Fire",
+  "display_fullname": "Pets.Freaklok Fire",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/FREAKLOK_BOOM.POWERSETS",
+  "icon": "freaklok_boom_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Freaklok_Boom.Freaklok_Explosion",
+    "Pets.Freaklok_Boom.Freaklok_Explosion_Fire"
+  ],
+  "power_display_names": [
+    "Propane Blast",
+    "Propane"
+  ],
+  "power_short_helps": [
+    "Suicide Special: PBAoE, Extreme DMG(Toxic/Fire), Foe Knockback",
+    "Location AoE, DoT(Fire), Foe Knockdown"
+  ]
+}

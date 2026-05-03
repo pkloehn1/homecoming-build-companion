@@ -1,0 +1,97 @@
+{
+  "name": "Crey_Altruist_White_Spider",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Crey_Altruists",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "boss_grunt",
+    "description": "One of Crey's new Real-ID Protectors with the Altruist Division, White Spider is the reincarnation of a juvenile arachnid-like creature from another world who died in a terrible accident. She was born with four spider-like limbs on her back, which attracted Arachnos to her. After enduring years of horrible experiments, including grafting cybernetic components onto her spider limbs, she was rescued by Crey personnel during a daring raid. Once she recovered, she decided to repay Crey by joining the Altruist Division. [Note from Ms. West: Is the Crey part too much? I think it might raise a few... are you typing that into the FBSA registration form? Stop that, you id -]",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Crey_Altruist.Altruist_White_Spider_Offense.Slice",
+      "Crey_Altruist.Altruist_White_Spider_Offense.Venom_Barb",
+      "Crey_Altruist.Altruist_White_Spider_Offense.Arm_Lash",
+      "Crey_Altruist.Altruist_White_Spider_Offense.Web_Spitter",
+      "Crey_Altruist.Altruist_White_Spider_Offense.Entrap",
+      "Crey_Altruist.Altruist_White_Spider_Offense.Cocoon",
+      "Crey_Altruist.Altruist_White_Spider_Defense.Ablative_Carapace",
+      "Crey_Altruist.Altruist_White_Spider_Defense.Hardened_Carapace"
+    ],
+    "power_display_names": [
+      "Slice",
+      "Venom Barb",
+      "Arm Lash",
+      "Web",
+      "Entrap",
+      "Cocoon",
+      "Ablative Carapace",
+      "Hardened Carapace"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_White_Spider_Offense",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_White_Spider_Defense",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "White Spider"
+      ],
+      "costumes": [
+        "Model_Altruist_White_Spider"
+      ]
+    }
+  ]
+}

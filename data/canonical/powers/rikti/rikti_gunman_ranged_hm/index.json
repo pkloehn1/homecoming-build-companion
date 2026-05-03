@@ -1,0 +1,26 @@
+{
+  "name": "Rikti_Gunman_Ranged_HM",
+  "display_name": "Rikti Gunman Ranged (Advanced Mode)",
+  "display_fullname": "Rikti.Rikti Gunman Ranged (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIKTI_GUNMAN_RANGED_HM.POWERSETS",
+  "icon": "rikti_gunman_ranged_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rikti_Gunman_Ranged_HM.Rikti_Rifle",
+    "Rikti.Rikti_Gunman_Ranged_HM.Rikti_Rifle_Blast"
+  ],
+  "power_display_names": [
+    "Rikti Rifle",
+    "Rikti Rifle Blast"
+  ],
+  "power_short_helps": [
+    "Ranged, High DMG(Energy), Foe Knockback, Disorient",
+    "Ranged (Targeted AoE), Moderate DMG(Energy), Foe Knockback, Disorient"
+  ]
+}

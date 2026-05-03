@@ -1,0 +1,42 @@
+{
+  "name": "Endgame_LT_Katana",
+  "display_name": "Endgame_LT_Katana",
+  "display_fullname": "Tsoo.Endgame LT Katana",
+  "display_help": "Tsoo",
+  "display_short_help": "Tsoo",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/TSOO/ENDGAME_LT_KATANA.POWERSETS",
+  "icon": "endgame_lt_katana_set.png",
+  "requires": "",
+  "power_names": [
+    "Tsoo.Endgame_LT_Katana.Sting_of_the_Wasp",
+    "Tsoo.Endgame_LT_Katana.Gamblers_Cut",
+    "Tsoo.Endgame_LT_Katana.Shuriken",
+    "Tsoo.Endgame_LT_Katana.Divine_Avalanche",
+    "Tsoo.Endgame_LT_Katana.The_Lotus_Drops",
+    "Tsoo.Endgame_LT_Katana.Blinding_Vision"
+  ],
+  "power_display_names": [
+    "Sting of the Wasp",
+    "Gambler's Cut",
+    "Shuriken",
+    "Divine Avalanche",
+    "The Lotus Drops",
+    "Blinding Vision"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal), Foe -DEF",
+    "Melee, Light DMG(Lethal), Foe -DEF",
+    "Ranged, Light DMG(Lethal)",
+    "Melee, Light DMG(Lethal), Self +DEF(Melee, Lethal)",
+    "PBAoE Melee, Moderate DMG(Lethal), Minor DoT(Lethal), Foe -DEF",
+    "PBAoE, Foe Placate, -Resist(All)"
+  ]
+}

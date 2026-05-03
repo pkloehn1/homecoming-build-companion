@@ -1,0 +1,22 @@
+{
+  "name": "Hamidon_Slow_Recharge_Endurance_Discount",
+  "display_name": "Hamidon Slow Recharge Endurance Discount",
+  "display_fullname": "Boosts.Hamidon Slow Recharge Endurance Discount",
+  "display_help": "Enhances slows, increases the attack rate, and reduces the endurance cost of a power.",
+  "display_short_help": "Hamidon (All Origins)",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/HAMIDON_SLOW_RECHARGE_ENDURANCE_DISCOUNT.POWERSETS",
+  "icon": "hamidon_damage_mez_set.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Hamidon_Slow_Recharge_Endurance_Discount.Hamidon_Slow_Recharge_Endurance_Discount"
+  ],
+  "power_display_names": [
+    "Stereocilia Exposure (Slow/Rech/End)"
+  ],
+  "power_short_helps": [
+    "Enhances Slows, Increases Attack Rate, and Reduces Endurance Cost"
+  ]
+}

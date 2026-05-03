@@ -1,0 +1,164 @@
+{
+  "name": "Miscellaneous_Labyrinth_Goddess",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 60,
+    "max_level": 60,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BIGMONSTER",
+    "ai_config": "Signatures_LabyrinthAvatar",
+    "character_class_name": "boss_challengearchvillain",
+    "description": "The Goddess Achlys is known as the Fog of Catastrophe, also called the mist that blinds mortal eyes at death. Throughout mythology she has been referred to as the personification of sorrow. Some even credit her as the mother of Chaos.<br><br>Imprisoned eons ago inside an artificial prison known as the Labyrinth of Fog. Historical evidence suggests she was once the undisputed ruler of the maze and its children, but eventually lost the ability to control her own power and soon after the fog began to mingle with deepest darkness.",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": "Divine",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 10.0,
+    "additional_rewards": [
+      "LabyrinthObol100"
+    ],
+    "power_full_names": [
+      "Event.Labyrinth_Aether.Stamina",
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Avatar.Health",
+      "Event.Labyrinth_Avatar.Toxic_Aura",
+      "Event.Labyrinth_Avatar.Fly",
+      "Event.Labyrinth_Avatar.Aim",
+      "Event.Labyrinth_Avatar.Fog_Fist",
+      "Event.Labyrinth_Avatar.Fog_Flattening",
+      "Event.Labyrinth_Avatar.Fog_Frisk",
+      "Event.Labyrinth_Avatar.Fog_Flurry",
+      "Event.Labyrinth_Avatar.Shot",
+      "Event.Labyrinth_Avatar.Procession",
+      "Event.Labyrinth_Avatar.Malevolent_Tell",
+      "Event.Labyrinth_Avatar.Malevolent_Lock",
+      "Event.Labyrinth_Avatar.Malevolent_Explosion",
+      "Event.Labyrinth_Avatar.Spectral_Tell",
+      "Event.Labyrinth_Avatar.Spectral_Lock",
+      "Event.Labyrinth_Avatar.Spectral_Pull",
+      "Event.Labyrinth_Avatar.Beckon",
+      "Event.Labyrinth_Guardian.Constitution",
+      "Temporary_Powers.Temporary_Powers.Labyrinth_FX",
+      "V_GenericVillains.Mastermind_Leadership.Maneuvers"
+    ],
+    "power_display_names": [
+      "Pollution of Catastrophe",
+      "Swift",
+      "Font of Malevolence",
+      "Putrescent Aura",
+      "Putrescence Elemental",
+      "Spectral Hands",
+      "Fog Fist",
+      "Fog Flattening",
+      "Fog Frisk",
+      "Fog Flurry",
+      "Shot of Putrescence",
+      "Procession of Putrescence",
+      "Malevolent Explosion Tell",
+      "Malevolent Explosion Lock",
+      "Malevolent Explosion",
+      "Spectral Pull Tell",
+      "Spectral Pull Lock",
+      "Spectral Pull",
+      "Beckon Guardians",
+      "Constitution",
+      "Fog Guardians",
+      "Leadership"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Aether",
+        "power": "Stamina",
+        "level": 0
+      },
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Avatar",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Guardian",
+        "power": "Constitution",
+        "level": 0
+      },
+      {
+        "power_category": "Temporary_Powers",
+        "power_set": "Temporary_Powers",
+        "power": "Labyrinth_FX",
+        "level": 0
+      },
+      {
+        "power_category": "V_GenericVillains",
+        "power_set": "Mastermind_Leadership",
+        "power": "Maneuvers",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 60,
+      "max_level": 60,
+      "experience": 0,
+      "display_names": [
+        "P4287939665"
+      ],
+      "costumes": [
+        "Labyrinth_Goddess_Achyls_01_NoRing"
+      ]
+    }
+  ]
+}

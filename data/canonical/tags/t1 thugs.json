@@ -1,0 +1,14 @@
+{
+  "tag": "T1 Thugs",
+  "bears": [
+    [
+      "Mastermind Summon.Thugs.Equip Thugs",
+      "mastermind_summon.thugs.equip_thugs"
+    ],
+    [
+      "Mastermind Summon.Thugs.Upgrade Equipment",
+      "mastermind_summon.thugs.upgrade_equipment"
+    ]
+  ],
+  "affects": []
+}

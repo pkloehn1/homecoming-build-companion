@@ -1,0 +1,26 @@
+{
+  "name": "Regeneration",
+  "display_name": "Regeneration",
+  "display_fullname": "Freaklok.Regeneration",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/REGENERATION.POWERSETS",
+  "icon": "macro_button_01.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Regeneration.Instant_Healing",
+    "Freaklok.Regeneration.Dull_Pain"
+  ],
+  "power_display_names": [
+    "Instant Healing",
+    "Dull Pain"
+  ],
+  "power_short_helps": [
+    "Self +Regeneration",
+    "Self Heal, +MaxHP"
+  ]
+}

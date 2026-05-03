@@ -1,0 +1,22 @@
+{
+  "name": "Warrior_Forgemaster_Boss",
+  "display_name": "Warrior_Forgemaster_Boss",
+  "display_fullname": "Warriors New.Warrior Forgemaster Boss",
+  "display_help": "Forgemaster",
+  "display_short_help": "Forgemaster",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_FORGEMASTER_BOSS.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Forgemaster_Boss.Clarity_of_Purpose"
+  ],
+  "power_display_names": [
+    "Clarity of Purpose"
+  ],
+  "power_short_helps": [
+    "PBAoE, Ally +Res(Teleport, Placate, Confuse, Fear, Hold, Immobilize, Disorient, Sleep, Knockback, Slow), +ToHit, +DMG"
+  ]
+}

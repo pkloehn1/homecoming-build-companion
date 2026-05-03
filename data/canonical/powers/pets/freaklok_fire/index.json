@@ -1,0 +1,22 @@
+{
+  "name": "Freaklok_Fire",
+  "display_name": "Freaklok_Fire",
+  "display_fullname": "Pets.Freaklok Fire",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/FREAKLOK_FIRE.POWERSETS",
+  "icon": "freaklok_fire_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Freaklok_Fire.Freaklok_Fire"
+  ],
+  "power_display_names": [
+    "Propane"
+  ],
+  "power_short_helps": [
+    "Location AoE, DoT(Fire), Foe Knockdown"
+  ]
+}

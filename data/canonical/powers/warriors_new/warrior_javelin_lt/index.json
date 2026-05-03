@@ -1,0 +1,26 @@
+{
+  "name": "Warrior_Javelin_Lt",
+  "display_name": "Warrior_Javelin_Lt",
+  "display_fullname": "Warriors New.Warrior Javelin Lt",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    39
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_JAVELIN_LT.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Javelin_Lt.Pilum",
+    "Warriors_New.Warrior_Javelin_Lt.Wither_Pilum"
+  ],
+  "power_display_names": [
+    "Pilum",
+    "Withering Pilum"
+  ],
+  "power_short_helps": [
+    "Ranged, High DMG(Lethal)",
+    "Ranged, High DMG(Lethal)"
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "name": "Warriors_Bow_Lt",
+  "gender": "GENDER_MALE",
+  "group_name": "Warriors",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 1,
+    "spawn_limit_mission": 1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_LIEUTENANT",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "lt_grunt",
+    "description": "Those that have excelled in the School of Toxo are inducted into the inner circles as Hunters. They are gifted with a few additional techniques to hinder their targets.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.4,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Warriors_New.Warrior_Ranged.Hand_Crossbow",
+      "Warriors_New.Warrior_Ranged.Aimed_Shot",
+      "Warriors_New.Warrior_Ranged_Lt.Bow",
+      "Warriors_New.Warrior_Ranged_Lt.Flaming_Arrow",
+      "Warriors_New.Warrior_Ranged_Lt_2.Crossbow",
+      "Warriors_New.Warrior_Ranged_Lt_2.Crystal_Arrow",
+      "Warriors_New.Warrior_Archery.Entangling_Arrow",
+      "Warriors_New.Warrior_Boxing_Minion.Brawl",
+      "Warriors_New.Warrior_Reflexes.Dodge",
+      "Warriors_New.Warrior_Reflexes.Practiced_Brawler",
+      "Warriors_New.Warrior_Defense.LT_Resistance"
+    ],
+    "power_display_names": [
+      "Hand Crossbow",
+      "Aimed Shot",
+      "Bow",
+      "Blazing Arrow",
+      "Crossbow",
+      "Ice Arrow",
+      "Entangling Arrow",
+      "Brawl",
+      "Reflexes",
+      "Practiced Brawler",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Ranged",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Ranged_Lt",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Ranged_Lt_2",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Archery",
+        "power": "Entangling_Arrow",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Boxing_Minion",
+        "power": "Brawl",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Reflexes",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Defense",
+        "power": "LT_Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Hunter Champion"
+      ],
+      "costumes": [
+        "Warrior_New_Brawl_05",
+        "Warrior_New_Brawl_06",
+        "Warrior_New_Brawl_07",
+        "Warrior_New_Brawl_08",
+        "Warrior_New_Brawl_09"
+      ]
+    }
+  ]
+}

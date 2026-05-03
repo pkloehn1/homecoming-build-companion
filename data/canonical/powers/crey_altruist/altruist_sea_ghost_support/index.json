@@ -1,0 +1,34 @@
+{
+  "name": "Altruist_Sea_Ghost_Support",
+  "display_name": "Sea Ghost Support",
+  "display_fullname": "Crey Altruist.Sea Ghost Support",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SEA_GHOST_SUPPORT.POWERSETS",
+  "icon": "altruist_sea_ghost_support_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Sea_Ghost_Support.Brine",
+    "Crey_Altruist.Altruist_Sea_Ghost_Support.Shoal_Rush",
+    "Crey_Altruist.Altruist_Sea_Ghost_Support.Soothing_Wave",
+    "Crey_Altruist.Altruist_Sea_Ghost_Support.Whitecap"
+  ],
+  "power_display_names": [
+    "Brine",
+    "Shoal Rush",
+    "Soothing Wave",
+    "Whitecap"
+  ],
+  "power_short_helps": [
+    "Ranged, Foe -Resist(All), -MaxHP",
+    "Ranged (Targeted AoE), Foe -DEF, -SPD",
+    "Ranged (Cone), Team Heal, Foe -DMG",
+    "Ranged (Targeted AoE), Minor DMG(Cold), Foe Knockdown, -Resist(All), Self Teleport"
+  ]
+}

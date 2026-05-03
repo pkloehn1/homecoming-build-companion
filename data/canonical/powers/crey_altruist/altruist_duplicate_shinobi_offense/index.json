@@ -1,0 +1,50 @@
+{
+  "name": "Altruist_Duplicate_Shinobi_Offense",
+  "display_name": "Duplicate Shinobi Offense",
+  "display_fullname": "Crey Altruist.Duplicate Shinobi Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_DUPLICATE_SHINOBI_OFFENSE.POWERSETS",
+  "icon": "altruist_duplicate_shinobi_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Duplicate_Shinobi_Offense.Fire_Blast",
+    "Crey_Altruist.Altruist_Duplicate_Shinobi_Offense.Hurl",
+    "Crey_Altruist.Altruist_Duplicate_Shinobi_Offense.Ice_Blast",
+    "Crey_Altruist.Altruist_Duplicate_Shinobi_Offense.Lightning_Bolt",
+    "Crey_Altruist.Altruist_Duplicate_Shinobi_Offense.Charged_Brawl",
+    "Crey_Altruist.Altruist_Duplicate_Shinobi_Offense.Fire_Sword",
+    "Crey_Altruist.Altruist_Duplicate_Shinobi_Offense.Ice_Sword",
+    "Crey_Altruist.Altruist_Duplicate_Shinobi_Offense.Phantom_Army"
+  ],
+  "power_display_names": [
+    "Fire Blast",
+    "Hurl",
+    "Ice Blast",
+    "Lightning Bolt",
+    "Charged Brawl",
+    "Fire Sword",
+    "Ice Sword",
+    "Phantom Army"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Fire), DoT(Fire)",
+    "Ranged, High DMG(Smash), Foe -Fly, Knockback",
+    "Ranged, High DMG(Cold/Smash), Foe -SPD, -Recharge",
+    "Ranged, High DMG(Energy), Foe -End, -Recovery",
+    "Sleep",
+    "Melee, Heavy DMG(Fire/Lethal), DoT(Fire)",
+    "Melee, Heavy DMG(Cold/Lethal), Foe -SPD, -Recharge",
+    "Summon Decoys: Ranged Minor DMG(Energy/Special)"
+  ]
+}

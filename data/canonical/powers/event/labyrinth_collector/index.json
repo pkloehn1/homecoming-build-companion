@@ -1,0 +1,22 @@
+{
+  "name": "Labyrinth_Collector",
+  "display_name": "Labyrinth Collector",
+  "display_fullname": "Event.Labyrinth Collector",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_COLLECTOR.POWERSETS",
+  "icon": "dust_devil_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Collector.Suction"
+  ],
+  "power_display_names": [
+    "Spectral Pull"
+  ],
+  "power_short_helps": [
+    "Foe: Pull Inwards"
+  ]
+}

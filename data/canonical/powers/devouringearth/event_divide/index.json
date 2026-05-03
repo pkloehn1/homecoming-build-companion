@@ -1,0 +1,30 @@
+{
+  "name": "Event_Divide",
+  "display_name": "Devouring Earth Rock Divide",
+  "display_fullname": "DevouringEarth.Devouring Earth Rock Divide",
+  "display_help": "Devouring Earth",
+  "display_short_help": "Devouring Earth",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/DEVOURINGEARTH/EVENT_DIVIDE.POWERSETS",
+  "icon": "event_divide_set.png",
+  "requires": "",
+  "power_names": [
+    "DevouringEarth.Event_Divide.Rubble",
+    "DevouringEarth.Event_Divide.Red_Shatter",
+    "DevouringEarth.Event_Divide.Purple_Shatter"
+  ],
+  "power_display_names": [
+    "Rubble",
+    "Shatter",
+    "Shatter"
+  ],
+  "power_short_helps": [
+    "Summon Rockbeast",
+    "Summon Crystalbeast",
+    "Summon Crystalbeast"
+  ]
+}

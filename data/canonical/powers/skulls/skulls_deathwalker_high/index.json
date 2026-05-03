@@ -1,0 +1,58 @@
+{
+  "name": "Skulls_Deathwalker_High",
+  "display_name": "Skulls_Deathwalker_High",
+  "display_fullname": "Skulls.Skulls Deathwalker High",
+  "display_help": "Skulls",
+  "display_short_help": "Skulls",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/SKULLS_DEATHWALKER_HIGH.POWERSETS",
+  "icon": "skulls_deathwalker_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Skulls_Deathwalker_High.Deadly_Blast",
+    "Skulls.Skulls_Deathwalker_High.Deadly_Torrent",
+    "Skulls.Skulls_Deathwalker_High.Deadly_Beam",
+    "Skulls.Skulls_Deathwalker_High.Blackstar",
+    "Skulls.Skulls_Deathwalker_High.Deadly_Smite",
+    "Skulls.Skulls_Deathwalker_High.Soul_Drain",
+    "Skulls.Skulls_Deathwalker_High.Deadly_Grasp",
+    "Skulls.Skulls_Deathwalker_High.Touch_of_the_Beyond",
+    "Skulls.Skulls_Deathwalker_High.Deadly_Shroud",
+    "Skulls.Skulls_Deathwalker_High.Murky_Cloud"
+  ],
+  "power_display_names": [
+    "Deadly Blast",
+    "Deadly Torrent",
+    "Deadly Beam",
+    "Blackstar",
+    "Deadly Smite",
+    "Soul Drain",
+    "Deadly Grasp",
+    "Touch of the Beyond",
+    "Deadly Shroud",
+    "Murky Cloud"
+  ],
+  "power_short_helps": [
+    "Ranged, High DoT(Negative/Cold), Foe -SPD, -Recharge, -ToHit",
+    "Ranged (Cone), Light DMG(Negative/Cold), Foe Knockback, -SPD, -Recharge, -ToHit",
+    "Ranged, Extreme DMG(Negative/Cold), Foe -SPD, -Rech, -ToHit",
+    "PBAoE, Extreme DMG(Negative/Cold), Foe -SPD, -Recharge, -ToHit",
+    "Melee, Heavy DMG(Negative/Cold), Foe -SPD, -Recharge, -ToHit",
+    "PBAoE Melee, Moderate DMG(Negative/Cold), Self +DMG, +ToHit",
+    "Ranged, Extreme DoT(Negative/Cold), Foe Immobilize, -SPD, -Recharge, -ToHit",
+    "Ranged, Foe Fear, -ToHit; Self +Regen, +Recovery, +Res(Fear)",
+    "Toggle: PBAoE, Minor DoT(Negative/Cold)",
+    "Toggle: Self +Res(Fire, Cold, Negative)"
+  ]
+}

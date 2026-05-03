@@ -1,0 +1,46 @@
+{
+  "name": "Virus",
+  "display_name": "Virus",
+  "display_fullname": "Freaklok.Virus",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/VIRUS.POWERSETS",
+  "icon": "virus_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Virus.Cryo_Freeze_Ray",
+    "Freaklok.Virus.Sleep_Grenade",
+    "Freaklok.Virus.Flash_Bang",
+    "Freaklok.Virus.Burst",
+    "Freaklok.Virus.Buckshot",
+    "Freaklok.Virus.Ignite",
+    "Freaklok.Virus.Cloaking_Device"
+  ],
+  "power_display_names": [
+    "Cryo Freeze Ray",
+    "Sleep Grenade",
+    "Flash Bang",
+    "Burst",
+    "Buckshot",
+    "Ignite",
+    "Cloaking Device"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Cold), Foe Hold",
+    "Ranged (Targeted AoE), Minor DMG(Smash), Foe Sleep",
+    "Ranged (Targeted AoE), Minor DMG(Energy), Foe Disorient, -ToHit",
+    "Ranged, Moderate DMG(Lethal), Foe -DEF",
+    "Ranged (Cone), Moderate DMG(Lethal), Foe Knockdown",
+    "Ranged, Extreme DoT(Fire), Location AoE, DoT(Fire)",
+    "Toggle: Self Stealth, +DEF(Melee, Ranged, AoE)"
+  ]
+}

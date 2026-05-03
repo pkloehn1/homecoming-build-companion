@@ -1,0 +1,26 @@
+{
+  "name": "Epic_LRMRocket",
+  "display_name": "Epic_LRMRocket",
+  "display_fullname": "Pets.Epic LRMRocket",
+  "display_help": "Munitions Mastery",
+  "display_short_help": "Munitions Mastery",
+  "available_level": [
+    43,
+    43
+  ],
+  "source_file": "DEFS/POWERS/PETS/EPIC_LRMROCKET.POWERSETS",
+  "icon": "defender_ar_snipe_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Epic_LRMRocket.LRM_Rocket_Quick",
+    "Pets.Epic_LRMRocket.LRM_Rocket_Normal"
+  ],
+  "power_display_names": [
+    "LRM Rocket",
+    "LRM Rocket"
+  ],
+  "power_short_helps": [
+    "Interruptible (Targeted AoE), Superior DMG(Lethal/Smash), Foe Knockback",
+    "Interruptible (Targeted AoE), Superior DMG(Lethal/Smash), Foe Knockback"
+  ]
+}

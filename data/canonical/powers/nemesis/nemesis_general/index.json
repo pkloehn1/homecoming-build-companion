@@ -1,0 +1,22 @@
+{
+  "name": "Nemesis_General",
+  "display_name": "Nemesis_General",
+  "display_fullname": "Nemesis.Nemesis General",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_GENERAL.POWERSETS",
+  "icon": "nemesis_medic_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_General.Vengeance"
+  ],
+  "power_display_names": [
+    "Loss of Morale"
+  ],
+  "power_short_helps": [
+    "Team Vengeance Loss"
+  ]
+}

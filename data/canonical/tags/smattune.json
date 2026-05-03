@@ -1,0 +1,63 @@
+{
+  "tag": "SMAttune",
+  "bears": [
+    [
+      "Brute Melee.Sonic Melee.Sonic Thrust",
+      "brute_melee.sonic_melee.sonic_thrust"
+    ],
+    [
+      "Brute Melee.Sonic Melee.Strident Echo",
+      "brute_melee.sonic_melee.strident_echo"
+    ],
+    [
+      "Redirects.Sonic Melee.Sonic Thrust",
+      "redirects.sonic_melee.sonic_thrust"
+    ],
+    [
+      "Redirects.Sonic Melee.Strident Echo",
+      "redirects.sonic_melee.strident_echo"
+    ],
+    [
+      "Scrapper Melee.Sonic Melee.Sonic Thrust",
+      "scrapper_melee.sonic_melee.sonic_thrust"
+    ],
+    [
+      "Scrapper Melee.Sonic Melee.Strident Echo",
+      "scrapper_melee.sonic_melee.strident_echo"
+    ],
+    [
+      "Stalker Melee.Sonic Melee.Sonic Thrust",
+      "stalker_melee.sonic_melee.sonic_thrust"
+    ],
+    [
+      "Stalker Melee.Sonic Melee.Strident Echo",
+      "stalker_melee.sonic_melee.strident_echo"
+    ],
+    [
+      "Tanker Melee.Sonic Melee.Sonic Thrust",
+      "tanker_melee.sonic_melee.sonic_thrust"
+    ],
+    [
+      "Tanker Melee.Sonic Melee.Strident Echo",
+      "tanker_melee.sonic_melee.strident_echo"
+    ]
+  ],
+  "affects": [
+    [
+      "Brute Melee.Sonic Melee.Attune",
+      "brute_melee.sonic_melee.attune"
+    ],
+    [
+      "Scrapper Melee.Sonic Melee.Attune",
+      "scrapper_melee.sonic_melee.attune"
+    ],
+    [
+      "Stalker Melee.Sonic Melee.Attune",
+      "stalker_melee.sonic_melee.attune"
+    ],
+    [
+      "Tanker Melee.Sonic Melee.Attune",
+      "tanker_melee.sonic_melee.attune"
+    ]
+  ]
+}

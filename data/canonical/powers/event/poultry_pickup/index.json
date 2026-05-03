@@ -1,0 +1,22 @@
+{
+  "name": "Poultry_Pickup",
+  "display_name": "Poultry Pickup",
+  "display_fullname": "Event.Poultry Pickup",
+  "display_help": "Mapserver",
+  "display_short_help": "Mapserver",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/POULTRY_PICKUP.POWERSETS",
+  "icon": "statesman_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Poultry_Pickup.Poultry_Pickup"
+  ],
+  "power_display_names": [
+    "Poultry Pickup"
+  ],
+  "power_short_helps": [
+    "PBAoE Ranged, Foe Sent Into Sky"
+  ]
+}

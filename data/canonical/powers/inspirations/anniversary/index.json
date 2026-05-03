@@ -1,0 +1,38 @@
+{
+  "name": "Anniversary",
+  "display_name": "Anniversary",
+  "display_fullname": "Inspirations.Anniversary",
+  "display_help": "Inspirations are one time use powers that have a variety of effects.",
+  "display_short_help": "Anniversary",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/INSPIRATIONS/ANNIVERSARY.POWERSETS",
+  "icon": "holiday_set.png",
+  "requires": "",
+  "power_names": [
+    "Inspirations.Anniversary.Anniversary_Experience",
+    "Inspirations.Anniversary.Anniversary_Life",
+    "Inspirations.Anniversary.Anniversary_Power",
+    "Inspirations.Anniversary.Anniversary_Defense",
+    "Inspirations.Anniversary.Anniversary_Energy"
+  ],
+  "power_display_names": [
+    "Happy Anniversary!",
+    "Happy Anniversary!",
+    "Happy Anniversary!",
+    "Happy Anniversary!",
+    "Happy Anniversary!"
+  ],
+  "power_short_helps": [
+    "Happy Anniversary!",
+    "Happy Anniversary!",
+    "Happy Anniversary!",
+    "Happy Anniversary!",
+    "Happy Anniversary!"
+  ]
+}

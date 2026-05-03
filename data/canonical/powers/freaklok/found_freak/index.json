@@ -1,0 +1,42 @@
+{
+  "name": "Found_Freak",
+  "display_name": "Found_Freak",
+  "display_fullname": "Freaklok.Found Freak",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/FOUND_FREAK.POWERSETS",
+  "icon": "found_freak_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Found_Freak.Subdue",
+    "Freaklok.Found_Freak.Telekinetic_Blast",
+    "Freaklok.Found_Freak.Psychic_Scream",
+    "Freaklok.Found_Freak.Will_Domination",
+    "Freaklok.Found_Freak.Mental_Strike",
+    "Freaklok.Found_Freak.Rikti_Sword"
+  ],
+  "power_display_names": [
+    "Subdue",
+    "Telekinetic Blast",
+    "Psychic Scream",
+    "Will Domination",
+    "Mental Strike",
+    "Rikti Sword"
+  ],
+  "power_short_helps": [
+    "Ranged, Heavy DMG(Psionic), Foe Immobilize",
+    "Ranged, High DMG(Psionic/Smash), Foe Knockback",
+    "Ranged (Cone), Moderate DMG(Psionic), Foe -Recharge",
+    "Ranged, Superior DMG(Psionic), Foe Sleep",
+    "Melee, Light DMG(Psionic/Smash), DoT(Psionic), Foe -Recharge",
+    "Melee, Heavy DMG(Energy/Lethal), Foe Knockback"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "name": "Miscellaneous_Labyrinth_Icarus",
+  "gender": "GENDER_MALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Raid",
+    "Ghost",
+    "Undead"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 54,
+    "max_level": 54,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": true,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ELITE",
+    "ai_config": "Signatures_Ranged",
+    "character_class_name": "boss_praetorianelite",
+    "description": "An enigmatic phantom clad in what appears to be Daedalus' armor is lending their aid in challenging the Minotaur In The Fog to trial by combat.",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": "Hero",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 0.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "V_Vindicators.Vindicator_Resistances.Resistance",
+      "Event.Labyrinth_Daedalus.Neutrino_Bolt",
+      "Event.Labyrinth_Daedalus.Irradiate",
+      "Event.Labyrinth_Daedalus.Electron_Haze",
+      "Event.Labyrinth_Daedalus.Cosmic_Burst",
+      "Event.Labyrinth_Daedalus.Neutron_Bomb",
+      "Event.Labyrinth_Daedalus.Atomic_Blast",
+      "Event.Labyrinth_Daedalus.Enervating__Field",
+      "Event.Labyrinth_Daedalus.Lingering_Radiation",
+      "Event.Labyrinth_Daedalus.Choking_Cloud",
+      "Event.Labyrinth_Daedalus.EM_Pulse",
+      "Event.Labyrinth_Daedalus.Overcharge",
+      "Event.Labyrinth_Daedalus.Resistance",
+      "Event.Labyrinth_Daedalus.Fly",
+      "Event.Labyrinth_Daedalus.Fly_fx",
+      "Event.Labyrinth_Daedalus.Radiant_Aura",
+      "Event.Labyrinth_Daedalus.Accelerate_Metabolism",
+      "Event.Labyrinth_Guardian.Resistance"
+    ],
+    "power_display_names": [
+      "Resistance",
+      "Neutrino Fog Bolt",
+      "Irradiate in Fog",
+      "Electron Fog Haze",
+      "Cosmic Fog Burst",
+      "Neutron Fog Bomb",
+      "Atomic Fog Blast",
+      "Enervating Field of Fog",
+      "Lingering Fog Radiation",
+      "Choking Cloud of Fog",
+      "EM Fog Pulse",
+      "Overcharge",
+      "Resistance",
+      "Fly",
+      "Fly fx",
+      "Radiant Fog Aura",
+      "Accelerate Metabolism",
+      "Dissolve"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "V_Vindicators",
+        "power_set": "Vindicator_Resistances",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Daedalus",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Guardian",
+        "power": "Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 54,
+      "max_level": 54,
+      "experience": 0,
+      "display_names": [
+        "Benefactor In The Fog"
+      ],
+      "costumes": [
+        "Labyrinth_Icarus_02"
+      ]
+    }
+  ]
+}

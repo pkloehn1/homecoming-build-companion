@@ -1,0 +1,38 @@
+{
+  "name": "Skulls_DeathPriest",
+  "display_name": "Skulls_DeathPriest",
+  "display_fullname": "Skulls.Skulls DeathPriest",
+  "display_help": "Skulls",
+  "display_short_help": "Skulls",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/SKULLS_DEATHPRIEST.POWERSETS",
+  "icon": "skulls_deathpriest_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Skulls_DeathPriest.Blackwand_Bolt",
+    "Skulls.Skulls_DeathPriest.Blackwand_Gloom",
+    "Skulls.Skulls_DeathPriest.Chilling_Burst",
+    "Skulls.Skulls_DeathPriest.Twilight_Boon",
+    "Skulls.Skulls_DeathPriest.Summon_Zombies"
+  ],
+  "power_display_names": [
+    "Blackwand Bolt",
+    "Blackwand Gloom",
+    "Chilling Burst",
+    "Twilight Boon",
+    "Summon Zombies"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Negative), Foe -ToHit",
+    "Ranged, High DoT(Negative), Foe -ToHit",
+    "PBAoE, Minor DMG(Cold/Negative), Foe -ToHit",
+    "Ranged, Ally Heal",
+    "Summon 2 Zombies"
+  ]
+}

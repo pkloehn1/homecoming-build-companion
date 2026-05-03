@@ -1,0 +1,22 @@
+{
+  "name": "Altruist_Super_Saying_Defense",
+  "display_name": "Super Saying Defense",
+  "display_fullname": "Crey Altruist.Super Saying Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SUPER_SAYING_DEFENSE.POWERSETS",
+  "icon": "altruist_super_saying_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Super_Saying_Defense.Sound_Barrier"
+  ],
+  "power_display_names": [
+    "Sound Barrier"
+  ],
+  "power_short_helps": [
+    "Toggle: Self +Absorb, +Recovery, +Res(Smash, Energy, Sleep)"
+  ]
+}

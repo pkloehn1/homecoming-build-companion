@@ -1,0 +1,50 @@
+{
+  "name": "Generic_Claws_Pattern_Protector",
+  "display_name": "Generic_Claws_Pattern_Protector",
+  "display_fullname": "Crey Altruist.Generic Claws Pattern Protector",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/GENERIC_CLAWS_PATTERN_PROTECTOR.POWERSETS",
+  "icon": "generic_claws_pattern_protector_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Generic_Claws_Pattern_Protector.Swipe",
+    "Crey_Altruist.Generic_Claws_Pattern_Protector.Strike",
+    "Crey_Altruist.Generic_Claws_Pattern_Protector.Slash",
+    "Crey_Altruist.Generic_Claws_Pattern_Protector.Spin",
+    "Crey_Altruist.Generic_Claws_Pattern_Protector.Eviscerate",
+    "Crey_Altruist.Generic_Claws_Pattern_Protector.Focus",
+    "Crey_Altruist.Generic_Claws_Pattern_Protector.Focused_Fighting",
+    "Crey_Altruist.Generic_Claws_Pattern_Protector.Unstoppable"
+  ],
+  "power_display_names": [
+    "Swipe",
+    "Strike",
+    "Slash",
+    "Spin",
+    "Eviscerate",
+    "Focus",
+    "Focused Fighting",
+    "Unstoppable"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Lethal)",
+    "Melee, Moderate DMG(Lethal)",
+    "Melee, Heavy DMG(Lethal), Foe -DEF",
+    "PBAoE Melee, Moderate DMG(Lethal)",
+    "Melee (Cone), High DMG(Lethal), Chance for Critical Hit",
+    "Ranged, High DMG(Lethal), Foe Knockdown",
+    "Toggle: Self +DEF(Melee, Ranged), +Res(Confuse), +Perception",
+    "Self +Res(Disorient, Sleep, Hold, Immobilize, Knockback, All DMG but Psionics), +Recovery, Delayed Weaken(Self -End, -HP)"
+  ]
+}

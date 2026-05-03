@@ -1,0 +1,26 @@
+{
+  "name": "Warrior_Javelin_Boss",
+  "display_name": "Warrior_Javelin_Boss",
+  "display_fullname": "Warriors New.Warrior Javelin Boss",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    39
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_JAVELIN_BOSS.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Javelin_Boss.Pilum",
+    "Warriors_New.Warrior_Javelin_Boss.Blinding_Pilum"
+  ],
+  "power_display_names": [
+    "Pilum",
+    "Shining Pilum"
+  ],
+  "power_short_helps": [
+    "Ranged, High DMG(Lethal)",
+    "Ranged, High DMG(Lethal/Energy), Foe -ToHit, -Recovery"
+  ]
+}

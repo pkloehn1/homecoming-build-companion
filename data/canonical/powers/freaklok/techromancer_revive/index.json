@@ -1,0 +1,22 @@
+{
+  "name": "Techromancer_Revive",
+  "display_name": "Techromancer_Revive",
+  "display_fullname": "Freaklok.Techromancer Revive",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/TECHROMANCER_REVIVE.POWERSETS",
+  "icon": "techromancer_revive_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Techromancer_Revive.Defibrillate_Revive"
+  ],
+  "power_display_names": [
+    "Defibrillate"
+  ],
+  "power_short_helps": [
+    "Melee (Targeted AoE), Superior DMG(Energy/Smash), Foe Knockback, Disorient, -End, -Recovery, Ally Rez, Self Disorient"
+  ]
+}

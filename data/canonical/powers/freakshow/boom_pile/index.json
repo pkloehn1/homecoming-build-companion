@@ -1,0 +1,38 @@
+{
+  "name": "Boom_Pile",
+  "display_name": "Boom Pile",
+  "display_fullname": "Freakshow.Boom Pile",
+  "display_help": "Freakshow",
+  "display_short_help": "Freakshow",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKSHOW/BOOM_PILE.POWERSETS",
+  "icon": "boom_pile_set.png",
+  "requires": "",
+  "power_names": [
+    "Freakshow.Boom_Pile.Shotgun",
+    "Freakshow.Boom_Pile.Dynamite",
+    "Freakshow.Boom_Pile.Frag_Grenade",
+    "Freakshow.Boom_Pile.Incendiary_Grenade",
+    "Freakshow.Boom_Pile.Glue_Grenade"
+  ],
+  "power_display_names": [
+    "Shotgun",
+    "Dynamite",
+    "Frag Grenade",
+    "Molotov Cocktail",
+    "Glue Grenade"
+  ],
+  "power_short_helps": [
+    "Ranged (Cone), Moderate DMG(Lethal), Foe Knockdown",
+    "Ranged (Targeted AoE), Heavy DMG(Fire/Lethal), Foe Disorient, Knockback",
+    "Ranged (Targeted AoE), High DMG(Fire/Lethal), Foe Knockback",
+    "Ranged (Targeted AoE), High DoT(Fire)",
+    "Ranged (Location AoE), Foe -SPD, -Recharge, -Fly, -Jump"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Hamidon_Threat_Accuracy_Recharge",
+  "display_name": "Hamidon Threat Accuracy Recharge",
+  "display_fullname": "Boosts.Hamidon Threat Accuracy Recharge",
+  "display_help": "Enhances the threat duration, accuracy, and increases the attack rate of a power.",
+  "display_short_help": "Hamidon (All Origins)",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/HAMIDON_THREAT_ACCURACY_RECHARGE.POWERSETS",
+  "icon": "hamidon_accuracy_mez_set.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Hamidon_Threat_Accuracy_Recharge.Hamidon_Threat_Accuracy_Recharge"
+  ],
+  "power_display_names": [
+    "Ectosome Exposure (Threat/Acc/Rech)"
+  ],
+  "power_short_helps": [
+    "Enhances Threat Duration, Accuracy, and Increases Attack Rate"
+  ]
+}

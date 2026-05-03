@@ -1,0 +1,46 @@
+{
+  "name": "Heracles",
+  "display_name": "Heracles",
+  "display_fullname": "Warriors New.Heracles",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/HERACLES.POWERSETS",
+  "icon": "heracles_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Heracles.Hack",
+    "Warriors_New.Heracles.Slash",
+    "Warriors_New.Heracles.Parry",
+    "Warriors_New.Heracles.Whirling_Sword",
+    "Warriors_New.Heracles.Head_Splitter",
+    "Warriors_New.Heracles.Exploding_Bolt",
+    "Warriors_New.Heracles.Resistance"
+  ],
+  "power_display_names": [
+    "Hack",
+    "Slash",
+    "Parry",
+    "Whirling Sword",
+    "Head Splitter",
+    "Exploding Bolt",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Melee, High DMG(Lethal), Foe -DEF",
+    "Melee, Moderate DMG(Lethal), Foe -DEF",
+    "Melee, Light DMG(Lethal), Self +DEF(Melee, Smash, Lethal)",
+    "PBAoE Melee, Moderate DMG(Lethal), Minor DoT(Lethal), Foe -DEF",
+    "Melee (Cone), Extreme DMG(Lethal), Foe Knockdown, -DEF",
+    "Ranged (Targeted AoE), Moderate DMG(Fire/Lethal), Foe Knockback",
+    "Auto: Self +Res(Smash, Lethal, Fire, Hold, Disorient, Sleep, Knock), +Recovery"
+  ]
+}

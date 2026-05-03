@@ -1,0 +1,34 @@
+{
+  "name": "Altruist_Shadow_Dragon_Support",
+  "display_name": "Shadow Dragon Support",
+  "display_fullname": "Crey Altruist.Shadow Dragon Support",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SHADOW_DRAGON_SUPPORT.POWERSETS",
+  "icon": "altruist_shadow_dragon_support_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Shadow_Dragon_Support.Tar_Patch",
+    "Crey_Altruist.Altruist_Shadow_Dragon_Support.Darkest_Night",
+    "Crey_Altruist.Altruist_Shadow_Dragon_Support.Fearsome_Stare",
+    "Crey_Altruist.Altruist_Shadow_Dragon_Support.Petrifying_Gaze"
+  ],
+  "power_display_names": [
+    "Tar Patch",
+    "Darkest Night",
+    "Fearsome Stare",
+    "Petrifying Gaze"
+  ],
+  "power_short_helps": [
+    "Ranged (Location AoE), Target -Speed, -Res, -Fly",
+    "Toggle: Ranged (Targeted AoE), Foe -DMG -To-hit",
+    "Ranged (Cone), Foe Fear, -To-hit",
+    "Ranged Hold"
+  ]
+}

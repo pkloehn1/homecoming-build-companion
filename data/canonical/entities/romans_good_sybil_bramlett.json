@@ -1,0 +1,115 @@
+{
+  "name": "Romans_Good_Sybil_Bramlett",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Romans_Good",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Humanoid",
+    "HumanSkeleton"
+  ],
+  "ally": "Villain",
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "boss_grunt",
+    "description": "Fortunata Bramlett has come to Cimerora and disguised herself as a Sybil to aid Sister Airlia's plans.",
+    "group_description": "Arachnos",
+    "display_class_name": "Villain",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.2,
+    "additional_rewards": [],
+    "power_full_names": [
+      "V_Arachnos.Fortunata_Mistress.Psychic_Scream",
+      "V_Arachnos.Fortunata_Mistress.Telekinetic_Blast",
+      "V_Arachnos.Fortunata_Mistress.Dominate",
+      "V_Arachnos.Fortunata_Mistress.Psionic_Tornado",
+      "V_Arachnos.Fortunata_Mistress.Mind_Link",
+      "V_Arachnos.Fortunata_Mistress_High.Scramble_Thoughts",
+      "V_Arachnos.Fortunata_Mistress_High.Psychic_Wail",
+      "V_Arachnos.Fortunata_Defense.Combat_Training",
+      "V_Arachnos.Fortunata_Defense.Foresight",
+      "V_Arachnos.Fortunata_Seer_Defense.Indomitable_Will"
+    ],
+    "power_display_names": [
+      "Psychic Scream",
+      "Telekinetic Blast",
+      "Dominate",
+      "Psionic Tornado",
+      "Mind Link",
+      "Scramble Thoughts",
+      "Psychic Wail",
+      "Combat Training",
+      "Foresight",
+      "Indomitable Will"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Fortunata_Mistress",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Fortunata_Mistress_High",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Fortunata_Defense",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Fortunata_Seer_Defense",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Sybil Bramlett"
+      ],
+      "costumes": [
+        "Roman_Sybil_01"
+      ]
+    }
+  ]
+}

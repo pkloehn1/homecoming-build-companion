@@ -1,0 +1,46 @@
+{
+  "name": "Adamastor",
+  "display_name": "Adamastor",
+  "display_fullname": "BanishedPantheon.Adamastor",
+  "display_help": "Banished Pantheon",
+  "display_short_help": "Banished Pantheon",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/BANISHEDPANTHEON/ADAMASTOR.POWERSETS",
+  "icon": "adamastor_set.png",
+  "requires": "",
+  "power_names": [
+    "BanishedPantheon.Adamastor.Dry_Heave",
+    "BanishedPantheon.Adamastor.Shockwave_Stomp",
+    "BanishedPantheon.Adamastor.Blast_of_Decay",
+    "BanishedPantheon.Adamastor.Earthen_Prison",
+    "BanishedPantheon.Adamastor.Begone",
+    "BanishedPantheon.Adamastor.Siphon_Souls_Tell",
+    "BanishedPantheon.Adamastor.Siphon_Souls_Hit"
+  ],
+  "power_display_names": [
+    "Frigid Blast",
+    "Shockwave Stomp",
+    "Blast of Decay",
+    "Earthen Prison",
+    "Begone!",
+    "Siphon Souls",
+    "Siphon Souls"
+  ],
+  "power_short_helps": [
+    "Ranged (Targeted AoE), Heavy DMG(Cold), Light DoT(Negative Energy), Foe -DMG",
+    "PBAoE Melee, Heavy DMG (Smash), Foe Knockback, Disorient",
+    "Ranged, Heavy DMG(Cold), Light DoT(Negative), Foe -DMG",
+    "Ranged, Moderate DoT(Smash), Foe Hold, -DEF, -Fly",
+    "Melee, Superior DMG(Smash), Foe Knockback, Chance for Critical Knockback/Repel",
+    "Autohit: PBAoE, Superior DMG(Negative), Self Heal",
+    "Autohit: PBAoE, Superior DMG(Negative), Self Heal"
+  ]
+}

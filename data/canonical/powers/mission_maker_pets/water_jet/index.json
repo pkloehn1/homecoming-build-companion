@@ -1,0 +1,26 @@
+{
+  "name": "Water_Jet",
+  "display_name": "Water Blast",
+  "display_fullname": "Mission Maker Pets.Water Blast",
+  "display_help": "Water Blast",
+  "display_short_help": "Water Blast",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/MISSION_MAKER_PETS/WATER_JET.POWERSETS",
+  "icon": "water_jet_set.png",
+  "requires": "",
+  "power_names": [
+    "Mission_Maker_Pets.Water_Jet.Water_Jet_Normal",
+    "Mission_Maker_Pets.Water_Jet.Water_Jet_Fast"
+  ],
+  "power_display_names": [
+    "Water Jet",
+    "Enhanced Water Jet"
+  ],
+  "power_short_helps": [
+    "Ranged, DMG(Cold/Smash), Foe -Speed, +Wet, Self +/-Tidal Power",
+    "Ranged, DMG(Cold/Smash), Foe -Speed, +Wet, Self +/-Tidal Power"
+  ]
+}

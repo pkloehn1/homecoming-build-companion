@@ -1,0 +1,42 @@
+{
+  "name": "Altruist_Cerulean_Soul_Offense",
+  "display_name": "Cerulean Soul Offense",
+  "display_fullname": "Crey Altruist.Cerulean Soul Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_CERULEAN_SOUL_OFFENSE.POWERSETS",
+  "icon": "altruist_cerulean_soul_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Cerulean_Soul_Offense.Nimble_Slash",
+    "Crey_Altruist.Altruist_Cerulean_Soul_Offense.Power_Slice",
+    "Crey_Altruist.Altruist_Cerulean_Soul_Offense.Ablating_Strike",
+    "Crey_Altruist.Altruist_Cerulean_Soul_Offense.Typhoons_Edge",
+    "Crey_Altruist.Altruist_Cerulean_Soul_Offense.Sweeping_Strike",
+    "Crey_Altruist.Altruist_Cerulean_Soul_Offense.Throwing_Knives"
+  ],
+  "power_display_names": [
+    "Nimble Slash",
+    "Power Slice",
+    "Ablating Strike",
+    "Typhoon's Edge",
+    "Sweeping Strike",
+    "Throwing Knives"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Lethal)",
+    "Melee, Moderate DMG(Lethal)",
+    "Melee, Heavy DMG(Lethal), Foe -DEF",
+    "PBAoE Melee, High DMG(Lethal), Foe Knockdown, -DEF, -ToHit",
+    "Melee (Cone), High DMG(Lethal), Moderate DoT(Lethal)",
+    "Ranged, Moderate DMG(Lethal), Light DoT(Lethal)"
+  ]
+}

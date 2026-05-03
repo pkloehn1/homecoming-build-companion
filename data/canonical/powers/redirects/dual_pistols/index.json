@@ -1,0 +1,26 @@
+{
+  "name": "Dual_Pistols",
+  "display_name": "Dual Pistols",
+  "display_fullname": "Redirects.Dual Pistols",
+  "display_help": "These powers are used by Dual Pistol powers.",
+  "display_short_help": "Assault Rifle",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/REDIRECTS/DUAL_PISTOLS.POWERSETS",
+  "icon": "tanker_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Redirects.Dual_Pistols.Suppressive_Fire_Lethal",
+    "Redirects.Dual_Pistols.Suppressive_Fire"
+  ],
+  "power_display_names": [
+    "Suppressive Fire",
+    "Suppressive Fire"
+  ],
+  "power_short_helps": [
+    "Ranged, DMG(Lethal/Special), Foe Disorient/Special",
+    "Ranged, DMG(Lethal/Special), Foe Disorient/Special"
+  ]
+}

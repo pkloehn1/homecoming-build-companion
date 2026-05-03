@@ -1,0 +1,93 @@
+{
+  "name": "Miscellaneous_Labyrinth_Nightmare_Spider_Boss_Summon",
+  "gender": "GENDER_NEUTER",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 55,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Melee_NeverAfraid",
+    "character_class_name": "boss_praetoriangrunt",
+    "description": "These massive arachnids are composed of pure darkness. The Dark Weavers have fed steadily on the dreams of the lucid, and as a result have begun to evolve. These monstrosities are amalgamates of nightmare, merely a fragmented aspect of the greater whole.<br><br><color Black>'You see the writhing masses crawling about, you hear their skittering along in the dark, and you feel them spinning threads around your mind...'</color>",
+    "group_description": "Labyrinthine Nightmare",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 0.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_BigSpider.Frigid_Slash",
+      "Event.Labyrinth_BigSpider.Frigid_Slice",
+      "Event.Labyrinth_BigSpider.Frigid_Burst",
+      "Event.Labyrinth_Guardian.Assault"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Nightmare Slash",
+      "Nightmare Slice",
+      "Nightmare Burst",
+      "Dreamer's Euphoria"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_BigSpider",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Guardian",
+        "power": "Assault",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 55,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Dark Weaver"
+      ],
+      "costumes": [
+        "Labyrinth_Nightmare_SpiderBig_01",
+        "Labyrinth_Nightmare_SpiderBig_02",
+        "Labyrinth_Nightmare_SpiderBig_03"
+      ]
+    }
+  ]
+}

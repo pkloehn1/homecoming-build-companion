@@ -1,0 +1,171 @@
+{
+  "name": "Miscellaneous_Labyrinth_Sunstorm",
+  "gender": "GENDER_MALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Humanoid",
+    "HumanSkeleton",
+    "Kheldian",
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Miscellaneous_Labyrinth_Memories",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 55,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "Signatures_Ranged",
+    "character_class_name": "boss_praetorianarchvillain",
+    "description": "This malevolent fog has become thick and warped... Taking on a powerful physical form; A manifestation of the collective memory's strongest. These beings exist on the fringes of reality and grow stronger by breathing deep of the surrounding fog's pollution.",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": "Memory",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.0,
+    "additional_rewards": [
+      "LabyrinthMemoryAether",
+      "LabyrinthObol3"
+    ],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Aether.Stamina",
+      "V_GenericVillains.Mastermind_Leadership.Maneuvers",
+      "Temporary_Powers.Temporary_Powers.Labyrinth_FX",
+      "V_Vindicators.Vindicator_Resistances.Resistance",
+      "V_ParagonPolice.Awakened_Common.Gleaming_Blast",
+      "V_ParagonPolice.Awakened_Common.Radiant_Strike",
+      "V_ParagonPolice.Awakened_Common.Energy_Flight",
+      "V_ParagonPolice.Awakened_Common.Incandescence",
+      "V_ParagonPolice.Quantum.Restore_Essence",
+      "V_ParagonPolice.Quantum.Proton_Scatter",
+      "V_ParagonPolice.Quantum.Luminous_Detonation",
+      "V_ParagonPolice.Quantum.Incandescent_Strike",
+      "V_ParagonPolice.Quantum.Pulsar",
+      "V_ParagonPolice.Quantum.Photon_Seekers",
+      "V_ParagonPolice.Quantum.Shining_Shield",
+      "V_ParagonPolice.Quantum.Maneuvers",
+      "V_ParagonPolice.Quantum.Assault",
+      "V_ParagonPolice.Quantum.Tactics",
+      "V_ParagonPolice.Quantum.Light_Form",
+      "V_ParagonPolice.Quantum.White_Dwarf"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Pollution of Catastrophe",
+      "Leadership",
+      "Fog Guardians",
+      "Resistance",
+      "Gleaming Blast",
+      "Radiant Strike",
+      "Energy Flight",
+      "Incandescence",
+      "Restore Essence",
+      "Proton Scatter",
+      "Luminous Detonation",
+      "Incandescent Strike",
+      "Pulsar",
+      "Photon Seekers",
+      "Shining Shield",
+      "Maneuvers",
+      "Assault",
+      "Tactics",
+      "Light Form",
+      "White Dwarf"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Aether",
+        "power": "Stamina",
+        "level": 0
+      },
+      {
+        "power_category": "V_GenericVillains",
+        "power_set": "Mastermind_Leadership",
+        "power": "Maneuvers",
+        "level": 0
+      },
+      {
+        "power_category": "Temporary_Powers",
+        "power_set": "Temporary_Powers",
+        "power": "Labyrinth_FX",
+        "level": 0
+      },
+      {
+        "power_category": "V_Vindicators",
+        "power_set": "Vindicator_Resistances",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_ParagonPolice",
+        "power_set": "Awakened_Common",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_ParagonPolice",
+        "power_set": "Quantum",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 55,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Coagulated Pollution"
+      ],
+      "costumes": [
+        "Model_Sunstorm_NoRing"
+      ]
+    }
+  ]
+}

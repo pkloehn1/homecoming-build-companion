@@ -1,0 +1,22 @@
+{
+  "name": "Nemesis_Mini_Bombs",
+  "display_name": "Nemesis_Mini_Bombs",
+  "display_fullname": "Nemesis.Nemesis Mini Bombs",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_MINI_BOMBS.POWERSETS",
+  "icon": "nemesis_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Mini_Bombs.Summon"
+  ],
+  "power_display_names": [
+    "Summon Mini Nemesis Bombs"
+  ],
+  "power_short_helps": [
+    "Summon Mini Nemesis Bombs"
+  ]
+}

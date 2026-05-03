@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-04-27T18:44:54.8934814-07:00",
+  "source_zip": {
+    "path": "C:\\Users\\petek\\Downloads\\raw_data_homecoming-20251209_7415.zip",
+    "size": 96681843,
+    "modified": "2026-04-27T18:38:40.8560020-07:00",
+    "sha256": "B32E1ED805538F5D45F12FBBCB00771007AE54474B881899845B78418CB86083"
+  },
+  "extraction": {
+    "out_dir": "C:\\Users\\petek\\repos\\homecoming-build-companion\\data\\canonical",
+    "file_count": 44051.0,
+    "total_bytes": 431511117.0,
+    "directories": [
+      {
+        "directory": "archetypes",
+        "file_count": 72,
+        "total_bytes": 47406495.0
+      },
+      {
+        "directory": "boost_sets",
+        "file_count": 228,
+        "total_bytes": 3112751.0
+      },
+      {
+        "directory": "entities",
+        "file_count": 8945,
+        "total_bytes": 24272862.0
+      },
+      {
+        "directory": "entity_tags",
+        "file_count": 31,
+        "total_bytes": 1287510.0
+      },
+      {
+        "directory": "exclusion_groups",
+        "file_count": 25,
+        "total_bytes": 88627.0
+      },
+      {
+        "directory": "powers",
+        "file_count": 34319,
+        "total_bytes": 343260988.0
+      },
+      {
+        "directory": "recharge_groups",
+        "file_count": 4,
+        "total_bytes": 1587.0
+      },
+      {
+        "directory": "tables",
+        "file_count": 71,
+        "total_bytes": 10448543.0
+      },
+      {
+        "directory": "tags",
+        "file_count": 356,
+        "total_bytes": 1631754.0
+      }
+    ]
+  },
+  "notes": [
+    "Canonical Homecoming game data from City of Data v3 raw-data export.",
+    "Format is CoD's snake_case JSON. See docs/canonical-data-shape.md for field reference.",
+    "Powers reference each other and set bonuses by full path (e.g. set_bonus.set_bonus.luck_of_the_gambler)."
+  ]
+}

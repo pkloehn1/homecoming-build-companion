@@ -1,0 +1,96 @@
+{
+  "name": "Blackwing_Elite_PEACE_Pilot",
+  "gender": "GENDER_MALE",
+  "group_name": "Blackwing",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 54,
+    "max_level": 54,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": true,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ELITE",
+    "ai_config": "BWI_Engineer",
+    "character_class_name": "boss_elite",
+    "description": "Blackwing Industries is a private military company which has been contracted by Paragon City to replace the police in Kallisti Wharf.<br><br><b>P.E.A.C.E.</b> <i>(Police Emergency Action & Crisis Engagement)</i> is their heavy response division.<br><br>This terrified pilot has just seen his P.E.A.C.E. Keeper mech destroyed and is likely in a serious pickle!",
+    "group_description": "Blackwing Industries",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 10.0,
+    "additional_rewards": [
+      "PetRecipe_BlackwingDrone"
+    ],
+    "power_full_names": [
+      "BlackwingIndustries.Officer.Psi_Grenade",
+      "BlackwingIndustries.Officer.ShockRod",
+      "BlackwingIndustries.Officer.ShockRod_Sweep",
+      "BlackwingIndustries.Officer.Assault_Rifle",
+      "BlackwingIndustries.Officer.Assault_Rifle_Spray",
+      "BlackwingIndustries.Excelsion_Armor_Heavy.Heavy_ExcelsionArmor",
+      "BlackwingIndustries.Excelsion_Armor_Heavy.Military_Training"
+    ],
+    "power_display_names": [
+      "Psionic Grenade",
+      "Shock Rod",
+      "Shock Rod Sweep",
+      "Neurotoxin Assault Rifle",
+      "Neurotoxin Assault Rifle Spray",
+      "Heavy Excelsion Armor",
+      "Military Training"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "BlackwingIndustries",
+        "power_set": "Officer",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "BlackwingIndustries",
+        "power_set": "Excelsion_Armor_Heavy",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 54,
+      "max_level": 54,
+      "experience": 0,
+      "display_names": [
+        "P.E.A.C.E. Pilot"
+      ],
+      "costumes": [
+        "BWI_Pilot_M"
+      ]
+    }
+  ]
+}

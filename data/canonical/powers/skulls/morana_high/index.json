@@ -1,0 +1,62 @@
+{
+  "name": "Morana_High",
+  "display_name": "Morana_High",
+  "display_fullname": "Skulls.Morana High",
+  "display_help": "Morana",
+  "display_short_help": "Morana",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/MORANA_HIGH.POWERSETS",
+  "icon": "morana_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Morana_High.Smite",
+    "Skulls.Morana_High.Shadow_Maul",
+    "Skulls.Morana_High.Assassins_Eclipse",
+    "Skulls.Morana_High.Placate",
+    "Skulls.Morana_High.Siphon_Life",
+    "Skulls.Morana_High.Midnight_Grasp",
+    "Skulls.Morana_High.Dark_Blast",
+    "Skulls.Morana_High.Dark_Regeneration",
+    "Skulls.Morana_High.Aura_of_Fear",
+    "Skulls.Morana_High.Hide",
+    "Skulls.Morana_High.Dark_Embrace"
+  ],
+  "power_display_names": [
+    "Smite",
+    "Shadow Maul",
+    "Assassin's Eclipse",
+    "Placate",
+    "Siphon Life",
+    "Midnight Grasp",
+    "Dark Blast",
+    "Dark Regeneration",
+    "Aura of Fear",
+    "Hide",
+    "Dark Embrace"
+  ],
+  "power_short_helps": [
+    "Melee, Heavy DMG(Negative/Smash), Foe -ToHit",
+    "Melee (Cone), High DoT(Negative/Smash), Foe -ToHit",
+    "Melee, Extreme DMG(Negative/Smash)",
+    "Melee, Foe Placate, Self Stealth/Hide",
+    "Melee, Superior DMG(Negative), Foe -ToHit, Self Heal",
+    "Ranged, Extreme DoT(Negative), Foe Immobilize, -ToHit",
+    "Ranged, Moderate DMG(Negative), Foe -ToHit",
+    "PBAoE, Minor DMG(Negative), Self Heal",
+    "PBAoE, Foe Fear, -ToHit",
+    "Toggle: Self Stealth, +DEF",
+    "Toggle: Self +Res(All DMG, Fear, Hold, Disorient, Sleep, End Drain)"
+  ]
+}

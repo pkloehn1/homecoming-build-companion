@@ -1,0 +1,26 @@
+{
+  "name": "Hydra_Pod_Powers_NoAdds",
+  "display_name": "Hydra_Pod_Powers (Advanced Mode)",
+  "display_fullname": "Hydra.Hydra Pod Powers (Advanced Mode)",
+  "display_help": "Hydra",
+  "display_short_help": "Hydra",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/HYDRA/HYDRA_POD_POWERS_NOADDS.POWERSETS",
+  "icon": "hydra_pod_powers_set.png",
+  "requires": "",
+  "power_names": [
+    "Hydra.Hydra_Pod_Powers_NoAdds.Resistance",
+    "Hydra.Hydra_Pod_Powers_NoAdds.Self_Repair"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Self Repair"
+  ],
+  "power_short_helps": [
+    "Auto Res Knockback, Sleep, Disorient, Fear, Confuse, Teleport, Psionic",
+    "Self Rez"
+  ]
+}

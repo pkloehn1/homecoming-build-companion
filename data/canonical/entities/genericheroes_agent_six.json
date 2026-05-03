@@ -1,0 +1,130 @@
+{
+  "name": "GenericHeroes_Agent_Six",
+  "gender": "GENDER_FEMALE",
+  "group_name": "GenericHeroes",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Humanoid",
+    "HumanSkeleton"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 30,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "boss_grunt",
+    "description": "Agent Six works for a secret branch of the US CIA codenamed Omega Watch. Her past is a complete mystery, but rumors of her involvement in world-shaking events like the assassination of dictators always persists. She is exceptionally trained in all forms of Martial Arts and military fighting techniques. She even has a smattering of back street brawling under her belt to complete her skill set. Agent Six will help train natural-based heroes for the right price.",
+    "group_description": "Companion",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Blaster_Ranged.Assault_Rifle.Burst",
+      "Blaster_Ranged.Assault_Rifle.Tranquilizer_Dart",
+      "Blaster_Ranged.Assault_Rifle.Buckshot",
+      "Blaster_Ranged.Assault_Rifle.M30_Grenade",
+      "Blaster_Ranged.Assault_Rifle.Beanbag",
+      "Blaster_Ranged.Assault_Rifle.Sniper_Rifle",
+      "Blaster_Ranged.Assault_Rifle.Flamethrower",
+      "Blaster_Ranged.Assault_Rifle.Ignite",
+      "Blaster_Ranged.Assault_Rifle.Full_Auto",
+      "Blaster_Support.Martial_Manipulation.Ki_Push",
+      "Blaster_Support.Martial_Manipulation.Storm_Kick",
+      "Blaster_Support.Martial_Manipulation.Reach_for_the_Limit",
+      "Blaster_Support.Martial_Manipulation.Build_Up_Proc",
+      "Blaster_Support.Martial_Manipulation.Burst_of_Speed",
+      "Blaster_Support.Martial_Manipulation.Dragons_Tail",
+      "Blaster_Support.Martial_Manipulation.Reaction_Time",
+      "Blaster_Support.Martial_Manipulation.Inner_Will",
+      "Blaster_Support.Martial_Manipulation.Throw_Sand",
+      "Blaster_Support.Martial_Manipulation.Eagles_Claw"
+    ],
+    "power_display_names": [
+      "Burst",
+      "Slug",
+      "Buckshot",
+      "M30 Grenade",
+      "Beanbag",
+      "Sniper Rifle",
+      "Flamethrower",
+      "Ignite",
+      "Full Auto",
+      "Ki Push",
+      "Storm Kick",
+      "Reach for the Limit",
+      "Reach for the Limit",
+      "Burst of Speed",
+      "Dragon's Tail",
+      "Reaction Time",
+      "Inner Will",
+      "Throw Sand",
+      "Eagles Claw"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Blaster_Ranged",
+        "power_set": "Assault_Rifle",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Blaster_Support",
+        "power_set": "Martial_Manipulation",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 30,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Agent Six"
+      ],
+      "costumes": [
+        "Model_AgentSix_NoRing"
+      ]
+    }
+  ]
+}

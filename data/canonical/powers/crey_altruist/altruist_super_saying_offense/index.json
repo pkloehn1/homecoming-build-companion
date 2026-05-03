@@ -1,0 +1,46 @@
+{
+  "name": "Altruist_Super_Saying_Offense",
+  "display_name": "Super Saying Offense",
+  "display_fullname": "Crey Altruist.Super Saying Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SUPER_SAYING_OFFENSE.POWERSETS",
+  "icon": "altruist_super_saying_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Super_Saying_Offense.Barrage",
+    "Crey_Altruist.Altruist_Super_Saying_Offense.Energy_Punch",
+    "Crey_Altruist.Altruist_Super_Saying_Offense.Bone_Smasher",
+    "Crey_Altruist.Altruist_Super_Saying_Offense.Earsplitter",
+    "Crey_Altruist.Altruist_Super_Saying_Offense.Scream",
+    "Crey_Altruist.Altruist_Super_Saying_Offense.Dreadful_Wail",
+    "Crey_Altruist.Altruist_Super_Saying_Offense.Sound_Booster"
+  ],
+  "power_display_names": [
+    "Barrage",
+    "Energy Punch",
+    "Bone Smasher",
+    "Earsplitter",
+    "Scream",
+    "Dreadful Wail",
+    "Sound Booster"
+  ],
+  "power_short_helps": [
+    "Melee, Heavy DMG(Energy/Smash), Foe Disorient",
+    "Melee, Moderate DMG(Energy/Smash), Foe Disorient",
+    "Melee, High DMG(Energy/Smash), Foe Disorient",
+    "Melee, Extreme DMG(Energy/Smash), Chance for Hold",
+    "Ranged, Heavy DoT(Energy/Smash), Foe -Res(All)",
+    "PBAoE, Extreme DMG(Energy/Smash), Foe Disorient, -Res(All)",
+    "Self +DMG, +ToHit, +Special"
+  ]
+}

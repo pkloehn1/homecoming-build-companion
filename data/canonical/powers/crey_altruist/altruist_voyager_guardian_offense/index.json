@@ -1,0 +1,38 @@
+{
+  "name": "Altruist_Voyager_Guardian_Offense",
+  "display_name": "Voyager Guardian Offense",
+  "display_fullname": "Crey Altruist.Voyager Guardian Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_VOYAGER_GUARDIAN_OFFENSE.POWERSETS",
+  "icon": "altruist_voyager_guardian_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Voyager_Guardian_Offense.Gleaming_Bolt",
+    "Crey_Altruist.Altruist_Voyager_Guardian_Offense.Luminous_Detonation",
+    "Crey_Altruist.Altruist_Voyager_Guardian_Offense.Lightning_Bolt",
+    "Crey_Altruist.Altruist_Voyager_Guardian_Offense.Blazing_Bolt",
+    "Crey_Altruist.Altruist_Voyager_Guardian_Offense.Steam_Spray"
+  ],
+  "power_display_names": [
+    "Gleaming Bolt",
+    "Luminous Detonation",
+    "Lightning Bolt",
+    "Blazing Bolt",
+    "Steam Spray"
+  ],
+  "power_short_helps": [
+    "Ranged, Minor DMG(Energy), Foe -DEF",
+    "Ranged (Targeted AoE), Moderate DMG(Energy), Foe Knockback, -DEF",
+    "Ranged, High DMG(Energy), -End (Foe), -Rec (Foe)",
+    "Sniper, Extreme DMG(Fire)",
+    "Ranged (Cone), Extreme DMG (Fire), Minor DoT (Fire), -DEF (Foe, All)"
+  ]
+}

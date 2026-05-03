@@ -1,0 +1,34 @@
+{
+  "name": "DiscJockey",
+  "display_name": "DiscJockey",
+  "display_fullname": "Freaklok.DiscJockey",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/DISCJOCKEY.POWERSETS",
+  "icon": "macro_button_01.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.DiscJockey.Charged_Bolts",
+    "Freaklok.DiscJockey.Lightning_Bolt",
+    "Freaklok.DiscJockey.Ball_Lightning",
+    "Freaklok.DiscJockey.Short_Circuit"
+  ],
+  "power_display_names": [
+    "Charged Bolts",
+    "Lightning Bolt",
+    "Ball Lightning",
+    "Short Circuit"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Energy), Foe -End, -Recovery",
+    "Ranged, High DMG(Energy), Foe -End, -Recovery",
+    "Ranged (Targeted AoE), Moderate DoT(Energy), Foe -End, -Recovery",
+    "PBAoE, Moderate DoT(Energy), Foe -End, -Recovery, Special vs. Robots"
+  ]
+}

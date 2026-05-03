@@ -1,0 +1,38 @@
+{
+  "name": "Drop_Ship_HM",
+  "display_name": "Drop Ship (Advanced Mode)",
+  "display_fullname": "Rikti.Drop Ship (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/DROP_SHIP_HM.POWERSETS",
+  "icon": "drop_ship_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Drop_Ship_HM.Energy_Burst",
+    "Rikti.Drop_Ship_HM.Fly",
+    "Rikti.Drop_Ship_HM.Resistance",
+    "Rikti.Drop_Ship_HM.Transport",
+    "Rikti.Drop_Ship_HM.Bomb"
+  ],
+  "power_display_names": [
+    "Energy Burst",
+    "Fly",
+    "Resistance",
+    "Transport",
+    "Launch Bomb"
+  ],
+  "power_short_helps": [
+    "Ranged, Heavy DMG(Energy)",
+    "Self Travel",
+    "Resistance",
+    "Summon",
+    "Summon"
+  ]
+}

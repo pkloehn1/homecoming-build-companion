@@ -1,0 +1,42 @@
+{
+  "name": "Altruist_Moon_Fang_Offense",
+  "display_name": "Moon Fang Offense",
+  "display_fullname": "Crey Altruist.Moon Fang Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_MOON_FANG_OFFENSE.POWERSETS",
+  "icon": "altruist_moon_fang_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Moon_Fang_Offense.Maiming_Slash",
+    "Crey_Altruist.Altruist_Moon_Fang_Offense.Shred",
+    "Crey_Altruist.Altruist_Moon_Fang_Offense.Vicious_Slash",
+    "Crey_Altruist.Altruist_Moon_Fang_Offense.Rending_Flurry",
+    "Crey_Altruist.Altruist_Moon_Fang_Offense.Feral_Charge",
+    "Crey_Altruist.Altruist_Moon_Fang_Offense.Call_Hawk"
+  ],
+  "power_display_names": [
+    "Maiming Slash",
+    "Shred",
+    "Vicious Slash",
+    "Rending Flurry",
+    "Feral Charge",
+    "Call Hawk"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal), DoT(Lethal), Foe -SPD",
+    "Melee (Cone), Heavy DMG(Lethal), DoT(Lethal), Foe -DEF",
+    "Melee, High DMG(Lethal), DoT(Lethal), Foe Knockdown",
+    "PBAoE Melee, Moderate DMG(Lethal), DoT(Lethal)",
+    "Ranged (Targeted AoE), DMG(Lethal), DoT(Lethal), Self Teleport",
+    "Ranged, Heavy DMG(Lethal), Foe Knockdown, -ToHit, -Fly"
+  ]
+}

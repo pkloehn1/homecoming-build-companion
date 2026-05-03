@@ -1,0 +1,30 @@
+{
+  "name": "Nerva_Spectre_High",
+  "display_name": "Nerva_Spectre_High",
+  "display_fullname": "CircleOfThorns.Nerva Spectre High",
+  "display_help": "Circle of Thorns",
+  "display_short_help": "Circle of Thorns",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CIRCLEOFTHORNS/NERVA_SPECTRE_HIGH.POWERSETS",
+  "icon": "nerva_spectre_high_set.png",
+  "requires": "",
+  "power_names": [
+    "CircleOfThorns.Nerva_Spectre_High.Frost_Breath",
+    "CircleOfThorns.Nerva_Spectre_High.Cold_Snap",
+    "CircleOfThorns.Nerva_Spectre_High.Soul_Drain"
+  ],
+  "power_display_names": [
+    "Frost Breath",
+    "Cold Snap",
+    "Soul Drain"
+  ],
+  "power_short_helps": [
+    "Ranged (Cone), High DoT(Cold), Foe -Recharge, -SPD",
+    "Ranged (Cone), Foe Fear, -SPD, -Recharge",
+    "PBAoE Melee, Moderate DMG(Negative/Cold), Self +DMG, +ToHit, Heal"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Skulls_DeathDoll_High",
+  "display_name": "Skulls_DeathDoll_High",
+  "display_fullname": "Skulls.Skulls DeathDoll High",
+  "display_help": "Skulls",
+  "display_short_help": "Skulls",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/SKULLS_DEATHDOLL_HIGH.POWERSETS",
+  "icon": "skulls_deathdoll_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Skulls_DeathDoll_High.Deadly_Obliteration",
+    "Skulls.Skulls_DeathDoll_High.Fearsome_Stare",
+    "Skulls.Skulls_DeathDoll_High.Dark_Pit",
+    "Skulls.Skulls_DeathDoll_High.Haunt",
+    "Skulls.Skulls_DeathDoll_High.Murky_Cloud"
+  ],
+  "power_display_names": [
+    "Deadly Obliteration",
+    "Fearsome Stare",
+    "Dark Pit",
+    "Haunt",
+    "Murky Cloud"
+  ],
+  "power_short_helps": [
+    "Ranged (Targeted AoE), Moderate DMG(Negative/Cold), Foe -SPD, -Rech, -ToHit",
+    "Ranged (Cone), Foe Fear, -ToHit",
+    "Ranged (Targeted AoE), Minor DoT(Negative), Foe Disorient, -ToHit",
+    "Ranged, Summon Shades",
+    "Toggle: Self +Res(Fire, Cold, Negative)"
+  ]
+}

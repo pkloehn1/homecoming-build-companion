@@ -1,0 +1,42 @@
+{
+  "name": "Altruist_Hermit_Turtle_Offense",
+  "display_name": "Hermit Turtle Offense",
+  "display_fullname": "Crey Altruist.Hermit Turtle Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_HERMIT_TURTLE_OFFENSE.POWERSETS",
+  "icon": "altruist_hermit_turtle_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Ki_Push",
+    "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Storm_Kick",
+    "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Spinning_Kick",
+    "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Burst_of_Speed",
+    "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Power_Blast",
+    "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Explosive_Blast"
+  ],
+  "power_display_names": [
+    "Ki Push",
+    "Storm Kick",
+    "Spinning Kick",
+    "Burst of Speed",
+    "Power Blast",
+    "Explosive Blast"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Smash), Foe Knockback/Repel",
+    "Melee, Heavy DMG(Smash), Foe Knockdown",
+    "Melee (Cone), Heavy DMG(Smash), Foe Knockdown",
+    "Ranged (Location AoE), Moderate DMG(Smash), Self Teleport",
+    "Ranged, High DMG(Energy/Smash), Foe Knockback",
+    "Ranged (Targeted AoE), Moderate DMG(Energy/Smash), Foe Knockback"
+  ]
+}

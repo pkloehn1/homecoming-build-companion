@@ -1,0 +1,42 @@
+{
+  "name": "Labyrinth_Minotaur_Staff",
+  "display_name": "Labyrinth Minotaur Staff",
+  "display_fullname": "Event.Labyrinth Minotaur Staff",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_MINOTAUR_STAFF.POWERSETS",
+  "icon": "werewolf_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Minotaur_Staff.Mercurial_Blow",
+    "Event.Labyrinth_Minotaur_Staff.Precise_Strike",
+    "Event.Labyrinth_Minotaur_Staff.Guarded_Spin",
+    "Event.Labyrinth_Minotaur_Staff.Serpents_Reach",
+    "Event.Labyrinth_Minotaur_Staff.Innocuous_Strikes",
+    "Event.Labyrinth_Minotaur_Staff.Sky_Splitter"
+  ],
+  "power_display_names": [
+    "Mercurial Blow",
+    "Precise Strike",
+    "Guarded Spin",
+    "Serpent's Reach",
+    "Innocuous Strike",
+    "Sky Splitter"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Smashing), -DEF(Foe,All), Chance for Critical DMG",
+    "Melee, Moderate DMG(Smashing), Chance for Stun(Foe), Critical DMG",
+    "Melee (Cone), Moderate DMG (Smashing), +DEF(Self, Melee, Lethal), Chance for Critical DMG",
+    "Ranged, High DMG(Smashing), Chance for Knockdown, Critical Hit",
+    "Melee (Cone), High DMG(Smashing), -Speed(Foe,All), Chance for Immobilize(Foe), Critical DMG",
+    "Melee, Extreme DMG(Smashing), +RES(Self,All), +ToHit(Self), +Regen(Self), +Rec(Self), Knockdown(Foe), Stun(Foe), Chance for Critical DMG"
+  ]
+}

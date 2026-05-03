@@ -1,0 +1,3702 @@
+{
+  "tag": "Henchmen",
+  "bears": [
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Accuracy Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.accuracy_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Confuse Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_dur_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Confuse Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Endurance Discount",
+      "set_bonus.pvp_set_bonus.endurance_discount_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Energy and Neg Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Energy and Neg Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Energy, Negative Energy and Mez Resistance",
+      "set_bonus.pvp_set_bonus.energy_neg_mez_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Fear Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_dur_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Fear Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Fire and Cold Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Fire and Cold Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Fire, Cold and Mez Resistance",
+      "set_bonus.pvp_set_bonus.fire_cold_mez_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Hold Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_dur_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Hold Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Immobilize Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_dur_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Immobilize Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Improved Flight Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedflying_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Improved Heal Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_heal_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Improved Jumping Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedjumping_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Improved Knockback Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_knockback_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Improved Movement Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_move_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Improved Recharge Time Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recharge_time_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Improved Recovery Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recovery_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Improved Regeneration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_regeneration_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Improved Run Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_runspeed_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Improved Slow Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_slow_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased AoE/Fire/Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_fire_cold_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Cold Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Damage Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_damage_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Debt Prot Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.debt_prot_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Endurance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_endurance_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Energy/Negative Energy/Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_neg_ranged_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Fire Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Fire Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Fire/Cold/AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_aoe_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Health Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_health_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Lethal Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Lethal Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Lethal/Smashing/Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_smash_melee_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Melee/Lethal/Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_lethal_smash_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Negative Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Psionic Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Psionic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Range (PVP)",
+      "set_bonus.pvp_set_bonus.increased_range_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Ranged/Energy/Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_energy_neg_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Smashing Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Increased Toxic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Knockback Protection Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.knockback_protection_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Lethal, Smash and Mez Resistance",
+      "set_bonus.pvp_set_bonus.lethal_smash_mez_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Sleep Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_dur_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Sleep Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Smashing and Lethal Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_def_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Smashing and Lethal Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Stun Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_dur_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Stun Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Toxic and Psionic Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_psionic_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Gargantuan Toxic, Psionic and Mez Resistance",
+      "set_bonus.pvp_set_bonus.toxic_psi_mez_res_6"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Accuracy Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.accuracy_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Confuse Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_dur_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Confuse Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Endurance Discount",
+      "set_bonus.pvp_set_bonus.endurance_discount_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Energy and Neg Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Energy and Neg Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Energy, Negative Energy and Mez Resistance",
+      "set_bonus.pvp_set_bonus.energy_neg_mez_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Fear Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_dur_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Fear Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Fire and Cold Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Fire and Cold Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Fire, Cold and Mez Resistance",
+      "set_bonus.pvp_set_bonus.fire_cold_mez_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Hold Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_dur_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Hold Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Immobilize Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_dur_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Immobilize Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Improved Flight Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedflying_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Improved Heal Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_heal_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Improved Jumping Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedjumping_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Improved Knockback Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_knockback_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Improved Movement Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_move_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Improved Recharge Time Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recharge_time_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Improved Recovery Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recovery_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Improved Regeneration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_regeneration_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Improved Run Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_runspeed_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Improved Slow Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_slow_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased AoE/Fire/Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_fire_cold_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Cold Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Damage Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_damage_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Debt Prot Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.debt_prot_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Endurance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_endurance_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Energy/Negative Energy/Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_neg_ranged_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Fire Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Fire Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Fire/Cold/AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_aoe_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Health Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_health_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Lethal Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Lethal Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Lethal/Smashing/Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_smash_melee_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Melee/Lethal/Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_lethal_smash_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Negative Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Psionic Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Psionic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Range (PVP)",
+      "set_bonus.pvp_set_bonus.increased_range_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Ranged/Energy/Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_energy_neg_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Repel Resistance (PVP)",
+      "set_bonus.pvp_set_bonus.repel_resist_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Smashing Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Increased Toxic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Knockback Protection Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.knockback_protection_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Lethal, Smash and Mez Resistance",
+      "set_bonus.pvp_set_bonus.lethal_smash_mez_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Sleep Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_dur_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Sleep Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Slow Resist (PVP)",
+      "set_bonus.pvp_set_bonus.slow_resist_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Smashing and Lethal Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_def_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Smashing and Lethal Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Stun Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_dur_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Stun Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Toxic and Psionic Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_psionic_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Huge Toxic, Psionic and Mez Resistance",
+      "set_bonus.pvp_set_bonus.toxic_psi_mez_res_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Accuracy Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.accuracy_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Confuse Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_dur_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Confuse Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Endurance Discount",
+      "set_bonus.pvp_set_bonus.endurance_discount_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Energy and Neg Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Energy and Neg Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Energy, Negative Energy and Mez Resistance",
+      "set_bonus.pvp_set_bonus.energy_neg_mez_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Fear Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_dur_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Fear Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Fire and Cold Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Fire and Cold Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Fire, Cold and Mez Resistance",
+      "set_bonus.pvp_set_bonus.fire_cold_mez_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Hold Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_dur_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Hold Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Immobilize Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_dur_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Immobilize Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Improved Flight Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedflying_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Improved Heal Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_heal_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Improved Jumping Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedjumping_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Improved Knockback Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_knockback_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Improved Movement Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_move_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Improved Recharge Time Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recharge_time_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Improved Recovery Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recovery_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Improved Regeneration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_regeneration_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Improved Run Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_runspeed_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Improved Slow Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_slow_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased AoE/Fire/Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_fire_cold_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Cold Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Damage Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_damage_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Debt Prot Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.debt_prot_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Endurance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_endurance_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Energy/Negative Energy/Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_neg_ranged_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Fire Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Fire Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Fire/Cold/AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_aoe_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Health Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_health_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Lethal Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Lethal Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Lethal/Smashing/Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_smash_melee_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Melee/Lethal/Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_lethal_smash_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Negative Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Psionic Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Psionic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Range (PVP)",
+      "set_bonus.pvp_set_bonus.increased_range_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Ranged/Energy/Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_energy_neg_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Repel Resistance (PVP)",
+      "set_bonus.pvp_set_bonus.repel_resist_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Smashing Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Increased Toxic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Knockback Protection Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.knockback_protection_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Lethal, Smash and Mez Resistance",
+      "set_bonus.pvp_set_bonus.lethal_smash_mez_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Sleep Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_dur_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Sleep Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Slow Resist (PVP)",
+      "set_bonus.pvp_set_bonus.slow_resist_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Smashing and Lethal Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_def_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Smashing and Lethal Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Status Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.mez_resist_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Stun Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_dur_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Stun Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Toxic and Psionic Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_psionic_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Large Toxic, Psionic and Mez Resistance",
+      "set_bonus.pvp_set_bonus.toxic_psi_mez_res_4"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Accuracy Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.accuracy_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Confuse Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_dur_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Confuse Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Endurance Discount",
+      "set_bonus.pvp_set_bonus.endurance_discount_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Energy and Neg Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Energy and Neg Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Energy, Negative Energy and Mez Resistance",
+      "set_bonus.pvp_set_bonus.energy_neg_mez_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Fear Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_dur_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Fear Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Fire and Cold Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Fire and Cold Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Fire, Cold and Mez Resistance",
+      "set_bonus.pvp_set_bonus.fire_cold_mez_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Hold Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_dur_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Hold Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Immobilize Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_dur_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Immobilize Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Improved Flight Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedflying_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Improved Heal Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_heal_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Improved Jumping Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedjumping_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Improved Knockback Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_knockback_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Improved Movement Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_move_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Improved Recharge Time Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recharge_time_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Improved Recovery Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recovery_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Improved Regeneration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_regeneration_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Improved Run Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_runspeed_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Improved Slow Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_slow_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased AoE/Fire/Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_fire_cold_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Cold Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Damage Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_damage_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Debt Prot Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.debt_prot_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Endurance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_endurance_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Energy/Negative Energy/Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_neg_ranged_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Fire Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Fire Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Fire/Cold/AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_aoe_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Health Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_health_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Lethal Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Lethal Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Lethal/Smashing/Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_smash_melee_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Melee/Lethal/Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_lethal_smash_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Negative Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Psionic Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Psionic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Range (PVP)",
+      "set_bonus.pvp_set_bonus.increased_range_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Ranged/Energy/Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_energy_neg_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Repel Resistance (PVP)",
+      "set_bonus.pvp_set_bonus.repel_resist_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Smashing Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Increased Toxic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Knockback Protection Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.knockback_protection_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Lethal, Smash and Mez Resistance",
+      "set_bonus.pvp_set_bonus.lethal_smash_mez_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Sleep Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_dur_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Sleep Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Slow Resist (PVP)",
+      "set_bonus.pvp_set_bonus.slow_resist_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Smashing and Lethal Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_def_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Smashing and Lethal Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Stun Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_dur_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Stun Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Toxic and Psionic Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_psionic_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Moderate Toxic, Psionic and Mez Resistance",
+      "set_bonus.pvp_set_bonus.toxic_psi_mez_res_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Accuracy Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.accuracy_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Confuse Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_dur_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Confuse Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Endurance Discount",
+      "set_bonus.pvp_set_bonus.endurance_discount_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Energy and Neg Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Energy and Neg Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Energy, Negative Energy and Mez Resistance",
+      "set_bonus.pvp_set_bonus.energy_neg_mez_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Fear Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_dur_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Fear Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Fire and Cold Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Fire and Cold Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Fire, Cold and Mez Resistance",
+      "set_bonus.pvp_set_bonus.fire_cold_mez_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Hold Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_dur_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Hold Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Immobilize Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_dur_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Immobilize Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Improved Flight Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedflying_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Improved Heal Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_heal_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Improved Jumping Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedjumping_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Improved Knockback Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_knockback_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Improved Movement Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_move_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Improved Recharge Time Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recharge_time_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Improved Recovery Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recovery_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Improved Regeneration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_regeneration_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Improved Run Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_runspeed_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Improved Slow Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_slow_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased AoE/Fire/Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_fire_cold_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Cold Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Damage Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_damage_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Debt Prot Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.debt_prot_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Endurance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_endurance_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Energy/Negative Energy/Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_neg_ranged_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Fire Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Fire Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Fire/Cold/AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_aoe_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Health Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_health_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Lethal Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Lethal Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Lethal/Smashing/Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_smash_melee_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Melee/Lethal/Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_lethal_smash_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Negative Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Psionic Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Psionic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Range (PVP)",
+      "set_bonus.pvp_set_bonus.increased_range_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Ranged/Energy/Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_energy_neg_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Smashing Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Increased Toxic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Knockback Protection Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.knockback_protection_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Lethal, Smash and Mez Resistance",
+      "set_bonus.pvp_set_bonus.lethal_smash_mez_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Sleep Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_dur_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Sleep Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Smashing and Lethal Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_def_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Smashing and Lethal Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Stun Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_dur_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Stun Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Toxic and Psionic Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_psionic_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Small Toxic, Psionic and Mez Resistance",
+      "set_bonus.pvp_set_bonus.toxic_psi_mez_res_2"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Accuracy Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.accuracy_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Confuse Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_dur_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Confuse Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Endurance Discount",
+      "set_bonus.pvp_set_bonus.endurance_discount_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Energy and Neg Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Energy and Neg Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Energy, Negative Energy and Mez Resistance",
+      "set_bonus.pvp_set_bonus.energy_neg_mez_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Fear Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_dur_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Fear Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Fire and Cold Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Fire and Cold Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Fire, Cold and Mez Resistance",
+      "set_bonus.pvp_set_bonus.fire_cold_mez_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Hold Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_dur_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Hold Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Immobilize Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_dur_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Immobilize Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Improved Flight Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedflying_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Improved Heal Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_heal_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Improved Jumping Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedjumping_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Improved Knockback Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_knockback_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Improved Movement Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_move_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Improved Recharge Time Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recharge_time_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Improved Recovery Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recovery_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Improved Regeneration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_regeneration_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Improved Run Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_runspeed_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Improved Slow Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_slow_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased AoE/Fire/Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_fire_cold_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Cold Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Damage Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_damage_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Debt Prot Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.debt_prot_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Endurance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_endurance_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Energy/Negative Energy/Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_neg_ranged_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Fire Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Fire Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Fire/Cold/AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_aoe_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Health Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_health_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Lethal Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Lethal Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Lethal/Smashing/Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_smash_melee_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Melee/Lethal/Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_lethal_smash_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Negative Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Psionic Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Psionic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Range (PVP)",
+      "set_bonus.pvp_set_bonus.increased_range_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Ranged/Energy/Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_energy_neg_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Repel Resistance (PVP)",
+      "set_bonus.pvp_set_bonus.repel_resist_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Smashing Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Increased Toxic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Knockback Protection Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.knockback_protection_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Lethal, Smash and Mez Resistance",
+      "set_bonus.pvp_set_bonus.lethal_smash_mez_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Sleep Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_dur_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Sleep Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Slow Resist (PVP)",
+      "set_bonus.pvp_set_bonus.slow_resist_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Smashing and Lethal Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_def_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Smashing and Lethal Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Status Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.mez_resist_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Stun Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_dur_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Stun Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Toxic and Psionic Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_psionic_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Tiny Toxic, Psionic and Mez Resistance",
+      "set_bonus.pvp_set_bonus.toxic_psi_mez_res_1"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Accuracy Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.accuracy_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Confuse Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_dur_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Confuse Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.confuse_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Endurance Discount",
+      "set_bonus.pvp_set_bonus.endurance_discount_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Energy and Neg Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Energy and Neg Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_pos_neg_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Energy, Negative Energy and Mez Resistance",
+      "set_bonus.pvp_set_bonus.energy_neg_mez_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Fear Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_dur_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Fear Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.fear_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Fire and Cold Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Fire and Cold Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Fire, Cold and Mez Resistance",
+      "set_bonus.pvp_set_bonus.fire_cold_mez_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Hold Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_dur_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Hold Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.hold_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Immobilize Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_dur_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Immobilize Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.immob_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Improved Flight Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedflying_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Improved Heal Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_heal_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Improved Jumping Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_speedjumping_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Improved Knockback Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_knockback_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Improved Movement Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_move_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Improved Recharge Time Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recharge_time_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Improved Recovery Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_recovery_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Improved Regeneration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_regeneration_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Improved Run Speed Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_runspeed_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Improved Slow Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.improved_slow_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased AoE/Fire/Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_aoe_fire_cold_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Cold Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Cold Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_cold_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Damage Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_damage_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Debt Prot Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.debt_prot_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Endurance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_endurance_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Energy/Negative Energy/Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_energy_neg_ranged_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Fire Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Fire Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Fire/Cold/AoE Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_fire_cold_aoe_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Health Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_health_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Lethal Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Lethal Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Lethal/Smashing/Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_lethal_smash_melee_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Melee Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Melee/Lethal/Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_melee_lethal_smash_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Negative Energy Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_negative_energy_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Psionic Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Psionic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_psionic_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Range (PVP)",
+      "set_bonus.pvp_set_bonus.increased_range_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Ranged Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Ranged/Energy/Negative Energy Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_ranged_energy_neg_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Repel Resistance (PVP)",
+      "set_bonus.pvp_set_bonus.repel_resist_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Smashing Def Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Smashing Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Increased Toxic Res Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Knockback Protection Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.knockback_protection_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Lethal, Smash and Mez Resistance",
+      "set_bonus.pvp_set_bonus.lethal_smash_mez_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Sleep Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_dur_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Sleep Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.sleep_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Slow Resist (PVP)",
+      "set_bonus.pvp_set_bonus.slow_resist_5"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Smashing and Lethal Defense Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_def_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Smashing and Lethal Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_smashing_lethal_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Status Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.mez_resist_3"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Stun Duration Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_dur_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Stun Resistance Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.stun_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Toxic and Psionic Resist Bonus (PVP)",
+      "set_bonus.pvp_set_bonus.increased_toxic_psionic_res_7"
+    ],
+    [
+      "Set Bonus.PVP Set Bonus.Ultimate Toxic, Psionic and Mez Resistance",
+      "set_bonus.pvp_set_bonus.toxic_psi_mez_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Accuracy Bonus",
+      "set_bonus.set_bonus.accuracy_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Confuse Duration Bonus",
+      "set_bonus.set_bonus.confuse_dur_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Confuse Resistance Bonus",
+      "set_bonus.set_bonus.confuse_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Endurance Discount",
+      "set_bonus.set_bonus.endurance_discount_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Energy and Neg Energy Def Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Energy and Neg Energy Res Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Energy, Negative Energy and Mez Resistance",
+      "set_bonus.set_bonus.energy_neg_mez_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Fear Duration Bonus",
+      "set_bonus.set_bonus.fear_dur_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Fear Resistance Bonus",
+      "set_bonus.set_bonus.fear_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Fire and Cold Defense Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Fire and Cold Resist Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Fire, Cold and Mez Resistance",
+      "set_bonus.set_bonus.fire_cold_mez_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Hold Duration Bonus",
+      "set_bonus.set_bonus.hold_dur_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Hold Resistance Bonus",
+      "set_bonus.set_bonus.hold_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Immobilize Duration Bonus",
+      "set_bonus.set_bonus.immob_dur_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Immobilize Resistance Bonus",
+      "set_bonus.set_bonus.immob_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Improved Flight Speed Bonus",
+      "set_bonus.set_bonus.improved_speedflying_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Improved Heal Bonus",
+      "set_bonus.set_bonus.improved_heal_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Improved Jumping Bonus",
+      "set_bonus.set_bonus.improved_speedjumping_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Improved Knockback Bonus",
+      "set_bonus.set_bonus.improved_knockback_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Improved Movement Bonus",
+      "set_bonus.set_bonus.increased_move_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Improved Recovery Bonus",
+      "set_bonus.set_bonus.improved_recovery_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Improved Regeneration Bonus",
+      "set_bonus.set_bonus.improved_regeneration_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Improved Run Speed Bonus",
+      "set_bonus.set_bonus.improved_runspeed_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Improved Slow Bonus",
+      "set_bonus.set_bonus.improved_slow_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased AoE Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased AoE/Fire/Cold Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_fire_cold_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Cold Def Bonus",
+      "set_bonus.set_bonus.increased_cold_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Cold Res Bonus",
+      "set_bonus.set_bonus.increased_cold_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Damage Bonus",
+      "set_bonus.set_bonus.increased_damage_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Debt Prot Bonus",
+      "set_bonus.set_bonus.debt_prot_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Endurance Bonus",
+      "set_bonus.set_bonus.increased_endurance_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Energy Def Bonus",
+      "set_bonus.set_bonus.increased_energy_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Energy Res Bonus",
+      "set_bonus.set_bonus.increased_energy_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Energy/Negative Energy/Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_energy_neg_ranged_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Fire Def Bonus",
+      "set_bonus.set_bonus.increased_fire_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Fire Res Bonus",
+      "set_bonus.set_bonus.increased_fire_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Fire/Cold/AoE Def Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_aoe_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Health Bonus",
+      "set_bonus.set_bonus.increased_health_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Lethal Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Lethal Res Bonus",
+      "set_bonus.set_bonus.increased_lethal_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Lethal/Smashing/Melee Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_smash_melee_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Melee Def Bonus",
+      "set_bonus.set_bonus.increased_melee_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Melee/Lethal/Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_melee_lethal_smash_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Negative Energy Res Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Psionic Def Bonus",
+      "set_bonus.set_bonus.increased_psionic_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Psionic Res Bonus",
+      "set_bonus.set_bonus.increased_psionic_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Range",
+      "set_bonus.set_bonus.increased_range_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Ranged/Energy/Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_energy_neg_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_smashing_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Smashing Res Bonus",
+      "set_bonus.set_bonus.increased_smashing_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Increased Toxic Res Bonus",
+      "set_bonus.set_bonus.increased_toxic_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Knockback Protection Bonus",
+      "set_bonus.set_bonus.knockback_protection_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Lethal, Smash and Mez Resistance",
+      "set_bonus.set_bonus.lethal_smash_mez_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Sleep Duration Bonus",
+      "set_bonus.set_bonus.sleep_dur_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Sleep Resistance Bonus",
+      "set_bonus.set_bonus.sleep_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Smashing and Lethal Defense Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_def_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Smashing and Lethal Resist Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Stun Duration Bonus",
+      "set_bonus.set_bonus.stun_dur_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Stun Resistance Bonus",
+      "set_bonus.set_bonus.stun_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Toxic and Psionic Resist Bonus",
+      "set_bonus.set_bonus.increased_toxic_psionic_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Gargantuan Toxic, Psionic and Mez Resistance",
+      "set_bonus.set_bonus.toxic_psi_mez_res_6"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Accuracy Bonus",
+      "set_bonus.set_bonus.accuracy_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Confuse Duration Bonus",
+      "set_bonus.set_bonus.confuse_dur_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Confuse Resistance Bonus",
+      "set_bonus.set_bonus.confuse_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Endurance Discount",
+      "set_bonus.set_bonus.endurance_discount_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Energy and Neg Energy Def Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Energy and Neg Energy Res Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Energy, Negative Energy and Mez Resistance",
+      "set_bonus.set_bonus.energy_neg_mez_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Fear Duration Bonus",
+      "set_bonus.set_bonus.fear_dur_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Fear Resistance Bonus",
+      "set_bonus.set_bonus.fear_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Fire and Cold Defense Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Fire and Cold Resist Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Fire, Cold and Mez Resistance",
+      "set_bonus.set_bonus.fire_cold_mez_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Hold Duration Bonus",
+      "set_bonus.set_bonus.hold_dur_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Hold Resistance Bonus",
+      "set_bonus.set_bonus.hold_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Immobilize Duration Bonus",
+      "set_bonus.set_bonus.immob_dur_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Immobilize Resistance Bonus",
+      "set_bonus.set_bonus.immob_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Improved Flight Speed Bonus",
+      "set_bonus.set_bonus.improved_speedflying_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Improved Heal Bonus",
+      "set_bonus.set_bonus.improved_heal_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Improved Jumping Bonus",
+      "set_bonus.set_bonus.improved_speedjumping_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Improved Knockback Bonus",
+      "set_bonus.set_bonus.improved_knockback_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Improved Movement Bonus",
+      "set_bonus.set_bonus.increased_move_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Improved Recovery Bonus",
+      "set_bonus.set_bonus.improved_recovery_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Improved Regeneration Bonus",
+      "set_bonus.set_bonus.improved_regeneration_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Improved Run Speed Bonus",
+      "set_bonus.set_bonus.improved_runspeed_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Improved Slow Bonus",
+      "set_bonus.set_bonus.improved_slow_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased AoE Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased AoE/Fire/Cold Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_fire_cold_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Cold Def Bonus",
+      "set_bonus.set_bonus.increased_cold_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Cold Res Bonus",
+      "set_bonus.set_bonus.increased_cold_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Damage Bonus",
+      "set_bonus.set_bonus.increased_damage_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Debt Prot Bonus",
+      "set_bonus.set_bonus.debt_prot_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Endurance Bonus",
+      "set_bonus.set_bonus.increased_endurance_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Energy Def Bonus",
+      "set_bonus.set_bonus.increased_energy_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Energy Res Bonus",
+      "set_bonus.set_bonus.increased_energy_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Energy/Negative Energy/Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_energy_neg_ranged_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Fire Def Bonus",
+      "set_bonus.set_bonus.increased_fire_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Fire Res Bonus",
+      "set_bonus.set_bonus.increased_fire_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Fire/Cold/AoE Def Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_aoe_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Health Bonus",
+      "set_bonus.set_bonus.increased_health_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Lethal Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Lethal Res Bonus",
+      "set_bonus.set_bonus.increased_lethal_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Lethal/Smashing/Melee Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_smash_melee_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Melee Def Bonus",
+      "set_bonus.set_bonus.increased_melee_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Melee/Lethal/Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_melee_lethal_smash_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Negative Energy Res Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Psionic Def Bonus",
+      "set_bonus.set_bonus.increased_psionic_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Psionic Res Bonus",
+      "set_bonus.set_bonus.increased_psionic_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Range",
+      "set_bonus.set_bonus.increased_range_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Ranged/Energy/Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_energy_neg_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_smashing_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Smashing Res Bonus",
+      "set_bonus.set_bonus.increased_smashing_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Increased Toxic Res Bonus",
+      "set_bonus.set_bonus.increased_toxic_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Knockback Protection Bonus",
+      "set_bonus.set_bonus.knockback_protection_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Lethal, Smash and Mez Resistance",
+      "set_bonus.set_bonus.lethal_smash_mez_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Sleep Duration Bonus",
+      "set_bonus.set_bonus.sleep_dur_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Sleep Resistance Bonus",
+      "set_bonus.set_bonus.sleep_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Slow Resist",
+      "set_bonus.set_bonus.slow_resist_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Smashing and Lethal Defense Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_def_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Smashing and Lethal Resist Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Stun Duration Bonus",
+      "set_bonus.set_bonus.stun_dur_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Stun Resistance Bonus",
+      "set_bonus.set_bonus.stun_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Toxic and Psionic Resist Bonus",
+      "set_bonus.set_bonus.increased_toxic_psionic_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Huge Toxic, Psionic and Mez Resistance",
+      "set_bonus.set_bonus.toxic_psi_mez_res_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Accuracy Bonus",
+      "set_bonus.set_bonus.accuracy_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Confuse Duration Bonus",
+      "set_bonus.set_bonus.confuse_dur_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Confuse Resistance Bonus",
+      "set_bonus.set_bonus.confuse_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Endurance Discount",
+      "set_bonus.set_bonus.endurance_discount_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Energy and Neg Energy Def Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Energy and Neg Energy Res Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Energy, Negative Energy and Mez Resistance",
+      "set_bonus.set_bonus.energy_neg_mez_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Fear Duration Bonus",
+      "set_bonus.set_bonus.fear_dur_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Fear Resistance Bonus",
+      "set_bonus.set_bonus.fear_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Fire and Cold Defense Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Fire and Cold Resist Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Fire, Cold and Mez Resistance",
+      "set_bonus.set_bonus.fire_cold_mez_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Hold Duration Bonus",
+      "set_bonus.set_bonus.hold_dur_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Hold Resistance Bonus",
+      "set_bonus.set_bonus.hold_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Immobilize Duration Bonus",
+      "set_bonus.set_bonus.immob_dur_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Immobilize Resistance Bonus",
+      "set_bonus.set_bonus.immob_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Improved Flight Speed Bonus",
+      "set_bonus.set_bonus.improved_speedflying_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Improved Heal Bonus",
+      "set_bonus.set_bonus.improved_heal_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Improved Jumping Bonus",
+      "set_bonus.set_bonus.improved_speedjumping_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Improved Knockback Bonus",
+      "set_bonus.set_bonus.improved_knockback_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Improved Movement Bonus",
+      "set_bonus.set_bonus.increased_move_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Improved Recovery Bonus",
+      "set_bonus.set_bonus.improved_recovery_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Improved Regeneration Bonus",
+      "set_bonus.set_bonus.improved_regeneration_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Improved Run Speed Bonus",
+      "set_bonus.set_bonus.improved_runspeed_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Improved Slow Bonus",
+      "set_bonus.set_bonus.improved_slow_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased AoE Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased AoE/Fire/Cold Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_fire_cold_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Cold Def Bonus",
+      "set_bonus.set_bonus.increased_cold_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Cold Res Bonus",
+      "set_bonus.set_bonus.increased_cold_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Damage Bonus",
+      "set_bonus.set_bonus.increased_damage_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Debt Prot Bonus",
+      "set_bonus.set_bonus.debt_prot_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Endurance Bonus",
+      "set_bonus.set_bonus.increased_endurance_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Energy Def Bonus",
+      "set_bonus.set_bonus.increased_energy_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Energy Res Bonus",
+      "set_bonus.set_bonus.increased_energy_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Energy/Negative Energy/Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_energy_neg_ranged_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Fire Def Bonus",
+      "set_bonus.set_bonus.increased_fire_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Fire Res Bonus",
+      "set_bonus.set_bonus.increased_fire_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Fire/Cold/AoE Def Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_aoe_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Health Bonus",
+      "set_bonus.set_bonus.increased_health_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Lethal Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Lethal Res Bonus",
+      "set_bonus.set_bonus.increased_lethal_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Lethal/Smashing/Melee Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_smash_melee_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Melee Def Bonus",
+      "set_bonus.set_bonus.increased_melee_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Melee/Lethal/Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_melee_lethal_smash_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Negative Energy Res Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Psionic Def Bonus",
+      "set_bonus.set_bonus.increased_psionic_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Psionic Res Bonus",
+      "set_bonus.set_bonus.increased_psionic_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Range",
+      "set_bonus.set_bonus.increased_range_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Ranged/Energy/Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_energy_neg_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_smashing_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Smashing Res Bonus",
+      "set_bonus.set_bonus.increased_smashing_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Increased Toxic Res Bonus",
+      "set_bonus.set_bonus.increased_toxic_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Knockback Protection Bonus",
+      "set_bonus.set_bonus.knockback_protection_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Lethal, Smash and Mez Resistance",
+      "set_bonus.set_bonus.lethal_smash_mez_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Sleep Duration Bonus",
+      "set_bonus.set_bonus.sleep_dur_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Sleep Resistance Bonus",
+      "set_bonus.set_bonus.sleep_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Slow Resist",
+      "set_bonus.set_bonus.slow_resist_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Smashing and Lethal Defense Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_def_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Smashing and Lethal Resist Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Status Resistance Bonus",
+      "set_bonus.set_bonus.mez_resist_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Stun Duration Bonus",
+      "set_bonus.set_bonus.stun_dur_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Stun Resistance Bonus",
+      "set_bonus.set_bonus.stun_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Toxic and Psionic Resist Bonus",
+      "set_bonus.set_bonus.increased_toxic_psionic_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Large Toxic, Psionic and Mez Resistance",
+      "set_bonus.set_bonus.toxic_psi_mez_res_4"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Accuracy Bonus",
+      "set_bonus.set_bonus.accuracy_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Confuse Duration Bonus",
+      "set_bonus.set_bonus.confuse_dur_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Confuse Resistance Bonus",
+      "set_bonus.set_bonus.confuse_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Endurance Discount",
+      "set_bonus.set_bonus.endurance_discount_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Energy and Neg Energy Def Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Energy and Neg Energy Res Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Energy, Negative Energy and Mez Resistance",
+      "set_bonus.set_bonus.energy_neg_mez_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Fear Duration Bonus",
+      "set_bonus.set_bonus.fear_dur_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Fear Resistance Bonus",
+      "set_bonus.set_bonus.fear_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Fire and Cold Defense Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Fire and Cold Resist Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Fire, Cold and Mez Resistance",
+      "set_bonus.set_bonus.fire_cold_mez_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Hold Duration Bonus",
+      "set_bonus.set_bonus.hold_dur_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Hold Resistance Bonus",
+      "set_bonus.set_bonus.hold_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Immobilize Duration Bonus",
+      "set_bonus.set_bonus.immob_dur_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Immobilize Resistance Bonus",
+      "set_bonus.set_bonus.immob_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Improved Flight Speed Bonus",
+      "set_bonus.set_bonus.improved_speedflying_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Improved Heal Bonus",
+      "set_bonus.set_bonus.improved_heal_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Improved Jumping Bonus",
+      "set_bonus.set_bonus.improved_speedjumping_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Improved Knockback Bonus",
+      "set_bonus.set_bonus.improved_knockback_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Improved Movement Bonus",
+      "set_bonus.set_bonus.increased_move_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Improved Recovery Bonus",
+      "set_bonus.set_bonus.improved_recovery_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Improved Regeneration Bonus",
+      "set_bonus.set_bonus.improved_regeneration_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Improved Run Speed Bonus",
+      "set_bonus.set_bonus.improved_runspeed_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Improved Slow Bonus",
+      "set_bonus.set_bonus.improved_slow_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased AoE Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased AoE/Fire/Cold Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_fire_cold_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Cold Def Bonus",
+      "set_bonus.set_bonus.increased_cold_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Cold Res Bonus",
+      "set_bonus.set_bonus.increased_cold_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Damage Bonus",
+      "set_bonus.set_bonus.increased_damage_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Debt Prot Bonus",
+      "set_bonus.set_bonus.debt_prot_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Endurance Bonus",
+      "set_bonus.set_bonus.increased_endurance_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Energy Def Bonus",
+      "set_bonus.set_bonus.increased_energy_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Energy Res Bonus",
+      "set_bonus.set_bonus.increased_energy_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Energy/Negative Energy/Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_energy_neg_ranged_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Fire Def Bonus",
+      "set_bonus.set_bonus.increased_fire_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Fire Res Bonus",
+      "set_bonus.set_bonus.increased_fire_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Fire/Cold/AoE Def Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_aoe_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Health Bonus",
+      "set_bonus.set_bonus.increased_health_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Lethal Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Lethal Res Bonus",
+      "set_bonus.set_bonus.increased_lethal_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Lethal/Smashing/Melee Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_smash_melee_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Melee Def Bonus",
+      "set_bonus.set_bonus.increased_melee_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Melee/Lethal/Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_melee_lethal_smash_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Negative Energy Res Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Psionic Def Bonus",
+      "set_bonus.set_bonus.increased_psionic_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Psionic Res Bonus",
+      "set_bonus.set_bonus.increased_psionic_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Range",
+      "set_bonus.set_bonus.increased_range_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Ranged/Energy/Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_energy_neg_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_smashing_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Smashing Res Bonus",
+      "set_bonus.set_bonus.increased_smashing_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Increased Toxic Res Bonus",
+      "set_bonus.set_bonus.increased_toxic_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Knockback Protection Bonus",
+      "set_bonus.set_bonus.knockback_protection_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Lethal, Smash and Mez Resistance",
+      "set_bonus.set_bonus.lethal_smash_mez_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Sleep Duration Bonus",
+      "set_bonus.set_bonus.sleep_dur_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Sleep Resistance Bonus",
+      "set_bonus.set_bonus.sleep_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Slow Resist",
+      "set_bonus.set_bonus.slow_resist_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Smashing and Lethal Defense Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_def_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Smashing and Lethal Resist Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Stun Duration Bonus",
+      "set_bonus.set_bonus.stun_dur_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Stun Resistance Bonus",
+      "set_bonus.set_bonus.stun_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Toxic and Psionic Resist Bonus",
+      "set_bonus.set_bonus.increased_toxic_psionic_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Moderate Toxic, Psionic and Mez Resistance",
+      "set_bonus.set_bonus.toxic_psi_mez_res_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Accuracy Bonus",
+      "set_bonus.set_bonus.accuracy_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Confuse Duration Bonus",
+      "set_bonus.set_bonus.confuse_dur_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Confuse Resistance Bonus",
+      "set_bonus.set_bonus.confuse_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Endurance Discount",
+      "set_bonus.set_bonus.endurance_discount_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Energy and Neg Energy Def Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Energy and Neg Energy Res Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Energy, Negative Energy and Mez Resistance",
+      "set_bonus.set_bonus.energy_neg_mez_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Fear Duration Bonus",
+      "set_bonus.set_bonus.fear_dur_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Fear Resistance Bonus",
+      "set_bonus.set_bonus.fear_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Fire and Cold Defense Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Fire and Cold Resist Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Fire, Cold and Mez Resistance",
+      "set_bonus.set_bonus.fire_cold_mez_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Hold Duration Bonus",
+      "set_bonus.set_bonus.hold_dur_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Hold Resistance Bonus",
+      "set_bonus.set_bonus.hold_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Immobilize Duration Bonus",
+      "set_bonus.set_bonus.immob_dur_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Immobilize Resistance Bonus",
+      "set_bonus.set_bonus.immob_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Improved Flight Speed Bonus",
+      "set_bonus.set_bonus.improved_speedflying_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Improved Heal Bonus",
+      "set_bonus.set_bonus.improved_heal_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Improved Jumping Bonus",
+      "set_bonus.set_bonus.improved_speedjumping_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Improved Knockback Bonus",
+      "set_bonus.set_bonus.improved_knockback_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Improved Movement Bonus",
+      "set_bonus.set_bonus.increased_move_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Improved Recovery Bonus",
+      "set_bonus.set_bonus.improved_recovery_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Improved Regeneration Bonus",
+      "set_bonus.set_bonus.improved_regeneration_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Improved Run Speed Bonus",
+      "set_bonus.set_bonus.improved_runspeed_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Improved Slow Bonus",
+      "set_bonus.set_bonus.improved_slow_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased AoE Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased AoE/Fire/Cold Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_fire_cold_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Cold Def Bonus",
+      "set_bonus.set_bonus.increased_cold_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Cold Res Bonus",
+      "set_bonus.set_bonus.increased_cold_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Damage Bonus",
+      "set_bonus.set_bonus.increased_damage_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Debt Prot Bonus",
+      "set_bonus.set_bonus.debt_prot_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Endurance Bonus",
+      "set_bonus.set_bonus.increased_endurance_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Energy Def Bonus",
+      "set_bonus.set_bonus.increased_energy_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Energy Res Bonus",
+      "set_bonus.set_bonus.increased_energy_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Energy/Negative Energy/Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_energy_neg_ranged_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Fire Def Bonus",
+      "set_bonus.set_bonus.increased_fire_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Fire Res Bonus",
+      "set_bonus.set_bonus.increased_fire_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Fire/Cold/AoE Def Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_aoe_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Health Bonus",
+      "set_bonus.set_bonus.increased_health_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Lethal Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Lethal Res Bonus",
+      "set_bonus.set_bonus.increased_lethal_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Lethal/Smashing/Melee Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_smash_melee_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Melee Def Bonus",
+      "set_bonus.set_bonus.increased_melee_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Melee/Lethal/Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_melee_lethal_smash_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Negative Energy Res Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Psionic Def Bonus",
+      "set_bonus.set_bonus.increased_psionic_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Psionic Res Bonus",
+      "set_bonus.set_bonus.increased_psionic_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Range",
+      "set_bonus.set_bonus.increased_range_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Ranged/Energy/Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_energy_neg_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_smashing_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Smashing Res Bonus",
+      "set_bonus.set_bonus.increased_smashing_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Increased Toxic Res Bonus",
+      "set_bonus.set_bonus.increased_toxic_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Knockback Protection Bonus",
+      "set_bonus.set_bonus.knockback_protection_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Lethal, Smash and Mez Resistance",
+      "set_bonus.set_bonus.lethal_smash_mez_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Sleep Duration Bonus",
+      "set_bonus.set_bonus.sleep_dur_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Sleep Resistance Bonus",
+      "set_bonus.set_bonus.sleep_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Smashing and Lethal Defense Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_def_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Smashing and Lethal Resist Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Stun Duration Bonus",
+      "set_bonus.set_bonus.stun_dur_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Stun Resistance Bonus",
+      "set_bonus.set_bonus.stun_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Toxic and Psionic Resist Bonus",
+      "set_bonus.set_bonus.increased_toxic_psionic_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Small Toxic, Psionic and Mez Resistance",
+      "set_bonus.set_bonus.toxic_psi_mez_res_2"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Accuracy Bonus",
+      "set_bonus.set_bonus.accuracy_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Confuse Duration Bonus",
+      "set_bonus.set_bonus.confuse_dur_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Confuse Resistance Bonus",
+      "set_bonus.set_bonus.confuse_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Endurance Discount",
+      "set_bonus.set_bonus.endurance_discount_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Energy and Neg Energy Def Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Energy and Neg Energy Res Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Energy, Negative Energy and Mez Resistance",
+      "set_bonus.set_bonus.energy_neg_mez_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Fear Duration Bonus",
+      "set_bonus.set_bonus.fear_dur_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Fear Resistance Bonus",
+      "set_bonus.set_bonus.fear_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Fire and Cold Defense Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Fire and Cold Resist Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Fire, Cold and Mez Resistance",
+      "set_bonus.set_bonus.fire_cold_mez_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Hold Duration Bonus",
+      "set_bonus.set_bonus.hold_dur_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Hold Resistance Bonus",
+      "set_bonus.set_bonus.hold_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Immobilize Duration Bonus",
+      "set_bonus.set_bonus.immob_dur_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Immobilize Resistance Bonus",
+      "set_bonus.set_bonus.immob_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Improved Flight Speed Bonus",
+      "set_bonus.set_bonus.improved_speedflying_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Improved Heal Bonus",
+      "set_bonus.set_bonus.improved_heal_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Improved Jumping Bonus",
+      "set_bonus.set_bonus.improved_speedjumping_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Improved Knockback Bonus",
+      "set_bonus.set_bonus.improved_knockback_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Improved Movement Bonus",
+      "set_bonus.set_bonus.increased_move_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Improved Recovery Bonus",
+      "set_bonus.set_bonus.improved_recovery_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Improved Regeneration Bonus",
+      "set_bonus.set_bonus.improved_regeneration_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Improved Run Speed Bonus",
+      "set_bonus.set_bonus.improved_runspeed_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Improved Slow Bonus",
+      "set_bonus.set_bonus.improved_slow_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased AoE Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased AoE/Fire/Cold Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_fire_cold_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Cold Def Bonus",
+      "set_bonus.set_bonus.increased_cold_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Cold Res Bonus",
+      "set_bonus.set_bonus.increased_cold_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Damage Bonus",
+      "set_bonus.set_bonus.increased_damage_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Debt Prot Bonus",
+      "set_bonus.set_bonus.debt_prot_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Endurance Bonus",
+      "set_bonus.set_bonus.increased_endurance_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Energy Def Bonus",
+      "set_bonus.set_bonus.increased_energy_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Energy Res Bonus",
+      "set_bonus.set_bonus.increased_energy_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Energy/Negative Energy/Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_energy_neg_ranged_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Fire Def Bonus",
+      "set_bonus.set_bonus.increased_fire_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Fire Res Bonus",
+      "set_bonus.set_bonus.increased_fire_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Fire/Cold/AoE Def Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_aoe_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Health Bonus",
+      "set_bonus.set_bonus.increased_health_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Lethal Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Lethal Res Bonus",
+      "set_bonus.set_bonus.increased_lethal_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Lethal/Smashing/Melee Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_smash_melee_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Melee Def Bonus",
+      "set_bonus.set_bonus.increased_melee_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Melee/Lethal/Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_melee_lethal_smash_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Negative Energy Res Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Psionic Def Bonus",
+      "set_bonus.set_bonus.increased_psionic_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Psionic Res Bonus",
+      "set_bonus.set_bonus.increased_psionic_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Range",
+      "set_bonus.set_bonus.increased_range_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Ranged/Energy/Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_energy_neg_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_smashing_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Smashing Res Bonus",
+      "set_bonus.set_bonus.increased_smashing_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Increased Toxic Res Bonus",
+      "set_bonus.set_bonus.increased_toxic_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Knockback Protection Bonus",
+      "set_bonus.set_bonus.knockback_protection_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Lethal, Smash and Mez Resistance",
+      "set_bonus.set_bonus.lethal_smash_mez_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Sleep Duration Bonus",
+      "set_bonus.set_bonus.sleep_dur_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Sleep Resistance Bonus",
+      "set_bonus.set_bonus.sleep_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Slow Resist",
+      "set_bonus.set_bonus.slow_resist_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Smashing and Lethal Defense Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_def_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Smashing and Lethal Resist Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Status Resistance Bonus",
+      "set_bonus.set_bonus.mez_resist_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Stun Duration Bonus",
+      "set_bonus.set_bonus.stun_dur_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Stun Resistance Bonus",
+      "set_bonus.set_bonus.stun_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Toxic and Psionic Resist Bonus",
+      "set_bonus.set_bonus.increased_toxic_psionic_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Tiny Toxic, Psionic and Mez Resistance",
+      "set_bonus.set_bonus.toxic_psi_mez_res_1"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Accuracy Bonus",
+      "set_bonus.set_bonus.accuracy_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Confuse Duration Bonus",
+      "set_bonus.set_bonus.confuse_dur_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Confuse Resistance Bonus",
+      "set_bonus.set_bonus.confuse_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Endurance Discount",
+      "set_bonus.set_bonus.endurance_discount_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Energy and Neg Energy Def Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Energy and Neg Energy Res Bonus",
+      "set_bonus.set_bonus.increased_pos_neg_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Energy, Negative Energy and Mez Resistance",
+      "set_bonus.set_bonus.energy_neg_mez_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Fear Duration Bonus",
+      "set_bonus.set_bonus.fear_dur_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Fear Resistance Bonus",
+      "set_bonus.set_bonus.fear_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Fire and Cold Defense Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Fire and Cold Resist Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Fire, Cold and Mez Resistance",
+      "set_bonus.set_bonus.fire_cold_mez_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Hold Duration Bonus",
+      "set_bonus.set_bonus.hold_dur_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Hold Resistance Bonus",
+      "set_bonus.set_bonus.hold_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Immobilize Duration Bonus",
+      "set_bonus.set_bonus.immob_dur_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Immobilize Resistance Bonus",
+      "set_bonus.set_bonus.immob_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Improved Flight Speed Bonus",
+      "set_bonus.set_bonus.improved_speedflying_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Improved Heal Bonus",
+      "set_bonus.set_bonus.improved_heal_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Improved Jumping Bonus",
+      "set_bonus.set_bonus.improved_speedjumping_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Improved Knockback Bonus",
+      "set_bonus.set_bonus.improved_knockback_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Improved Movement Bonus",
+      "set_bonus.set_bonus.increased_move_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Improved Recovery Bonus",
+      "set_bonus.set_bonus.improved_recovery_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Improved Regeneration Bonus",
+      "set_bonus.set_bonus.improved_regeneration_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Improved Run Speed Bonus",
+      "set_bonus.set_bonus.improved_runspeed_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Improved Slow Bonus",
+      "set_bonus.set_bonus.improved_slow_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased AoE Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased AoE/Fire/Cold Def Bonus",
+      "set_bonus.set_bonus.increased_aoe_fire_cold_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Cold Def Bonus",
+      "set_bonus.set_bonus.increased_cold_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Cold Res Bonus",
+      "set_bonus.set_bonus.increased_cold_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Damage Bonus",
+      "set_bonus.set_bonus.increased_damage_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Debt Prot Bonus",
+      "set_bonus.set_bonus.debt_prot_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Endurance Bonus",
+      "set_bonus.set_bonus.increased_endurance_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Energy Def Bonus",
+      "set_bonus.set_bonus.increased_energy_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Energy Res Bonus",
+      "set_bonus.set_bonus.increased_energy_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Energy/Negative Energy/Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_energy_neg_ranged_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Fire Def Bonus",
+      "set_bonus.set_bonus.increased_fire_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Fire Res Bonus",
+      "set_bonus.set_bonus.increased_fire_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Fire/Cold/AoE Def Bonus",
+      "set_bonus.set_bonus.increased_fire_cold_aoe_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Health Bonus",
+      "set_bonus.set_bonus.increased_health_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Lethal Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Lethal Res Bonus",
+      "set_bonus.set_bonus.increased_lethal_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Lethal/Smashing/Melee Def Bonus",
+      "set_bonus.set_bonus.increased_lethal_smash_melee_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Melee Def Bonus",
+      "set_bonus.set_bonus.increased_melee_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Melee/Lethal/Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_melee_lethal_smash_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Negative Energy Res Bonus",
+      "set_bonus.set_bonus.increased_negative_energy_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Psionic Def Bonus",
+      "set_bonus.set_bonus.increased_psionic_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Psionic Res Bonus",
+      "set_bonus.set_bonus.increased_psionic_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Range",
+      "set_bonus.set_bonus.increased_range_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Ranged Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Ranged/Energy/Negative Energy Def Bonus",
+      "set_bonus.set_bonus.increased_ranged_energy_neg_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Smashing Def Bonus",
+      "set_bonus.set_bonus.increased_smashing_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Smashing Res Bonus",
+      "set_bonus.set_bonus.increased_smashing_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Increased Toxic Res Bonus",
+      "set_bonus.set_bonus.increased_toxic_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Knockback Protection Bonus",
+      "set_bonus.set_bonus.knockback_protection_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Lethal, Smash and Mez Resistance",
+      "set_bonus.set_bonus.lethal_smash_mez_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Sleep Duration Bonus",
+      "set_bonus.set_bonus.sleep_dur_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Sleep Resistance Bonus",
+      "set_bonus.set_bonus.sleep_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Slow Resist",
+      "set_bonus.set_bonus.slow_resist_5"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Smashing and Lethal Defense Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_def_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Smashing and Lethal Resist Bonus",
+      "set_bonus.set_bonus.increased_smashing_lethal_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Status Resistance Bonus",
+      "set_bonus.set_bonus.mez_resist_3"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Stun Duration Bonus",
+      "set_bonus.set_bonus.stun_dur_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Stun Resistance Bonus",
+      "set_bonus.set_bonus.stun_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Toxic and Psionic Resist Bonus",
+      "set_bonus.set_bonus.increased_toxic_psionic_res_7"
+    ],
+    [
+      "Set Bonus.Set Bonus.Ultimate Toxic, Psionic and Mez Resistance",
+      "set_bonus.set_bonus.toxic_psi_mez_res_7"
+    ]
+  ],
+  "affects": []
+}

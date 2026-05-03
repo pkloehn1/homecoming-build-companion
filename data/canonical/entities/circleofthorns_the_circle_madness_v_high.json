@@ -1,0 +1,116 @@
+{
+  "name": "CircleOfThorns_The_Circle_Madness_V_High",
+  "gender": "GENDER_MALE",
+  "group_name": "CircleOfThorns",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.CircleOfThorns_The_Circle_Madness",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 45,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "boss_grunt",
+    "description": "The Masters of Madness can control every aspect of the psyche. For their friends, they provide a constant aura of mental fortitude that helps them in all endeavors. In battle, their enemies suffer complete mental domination that leaves them incapable of any action at all.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.3,
+    "additional_rewards": [],
+    "power_full_names": [
+      "CircleOfThorns.Circle_Melee.Falchion",
+      "CircleOfThorns.Circle_Madness_Ranged.Dominate",
+      "CircleOfThorns.Circle_Madness_Ranged.Mesmerize",
+      "CircleOfThorns.Circle_Madness_Ranged.Psychic_Scream",
+      "CircleOfThorns.Circle_Madness_Ranged.Scramble_Thoughts",
+      "CircleOfThorns.Circle_Madness_Ranged.Fortitude",
+      "CircleOfThorns.Circle_Madness_High.Farsight",
+      "CircleOfThorns.Circle_Madness_High.Total_Domination",
+      "CircleOfThorns.Circle_Madness_High.Mind_Over_Body",
+      "CircleOfThorns.CoT_Resistance_High.Resistance"
+    ],
+    "power_display_names": [
+      "Falchion",
+      "Dominate",
+      "Mesmerize",
+      "Psychic Scream",
+      "Scramble Thoughts",
+      "Fortitude",
+      "Farsight",
+      "Total Domination",
+      "Mind Over Body",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "CircleOfThorns",
+        "power_set": "Circle_Melee",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "CircleOfThorns",
+        "power_set": "Circle_Madness_Ranged",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "CircleOfThorns",
+        "power_set": "Circle_Madness_High",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "CircleOfThorns",
+        "power_set": "CoT_Resistance_High",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 45,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Master of Madness"
+      ],
+      "costumes": [
+        "CoT_Madness_High",
+        "CoT_Madness_High_2"
+      ]
+    }
+  ]
+}

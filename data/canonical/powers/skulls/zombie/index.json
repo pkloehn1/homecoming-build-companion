@@ -1,0 +1,38 @@
+{
+  "name": "Zombie",
+  "display_name": "Zombie",
+  "display_fullname": "Skulls.Zombie",
+  "display_help": "Zombie",
+  "display_short_help": "Zombie",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/ZOMBIE.POWERSETS",
+  "icon": "zombie_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Zombie.Zombie_Brawl",
+    "Skulls.Zombie.Projectile_Vomit",
+    "Skulls.Zombie.Zombie_Vomit",
+    "Skulls.Zombie.Super_Leap",
+    "Skulls.Zombie.Resistance"
+  ],
+  "power_display_names": [
+    "Zombie Brawl",
+    "Projectile Vomit",
+    "Zombie Vomit",
+    "Super Leap",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Smash)",
+    "Ranged (Cone), Moderate DMG(Toxic), DoT(Toxic)",
+    "Melee (Targeted AoE), Moderate DMG(Toxic), DoT(Toxic)",
+    "Self (Auto), Super Leap",
+    "Auto Res Sleep, Fear, Disorient, Immobilize, Hold, Slow, Smash, Cold, Negative, Toxic, Psionic"
+  ]
+}

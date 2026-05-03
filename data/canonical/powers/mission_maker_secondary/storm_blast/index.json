@@ -1,0 +1,54 @@
+{
+  "name": "Storm_Blast",
+  "display_name": "Storm Blast",
+  "display_fullname": "Mission Maker Secondary.Storm Blast",
+  "display_help": "Storm Blast conjures violent weather to attack your foes. The use of your storm attacks will empower your created storm cells.",
+  "display_short_help": "Storm Blast",
+  "available_level": [
+    0,
+    1,
+    3,
+    9,
+    15,
+    19,
+    27,
+    34,
+    37
+  ],
+  "source_file": "DEFS/POWERS/MISSION_MAKER_SECONDARY/STORM_BLAST.POWERSETS",
+  "icon": "storm_summoning_set.png",
+  "requires": "",
+  "power_names": [
+    "Mission_Maker_Secondary.Storm_Blast.Gust",
+    "Mission_Maker_Secondary.Storm_Blast.Hailstones",
+    "Mission_Maker_Secondary.Storm_Blast.Jet_Stream",
+    "Mission_Maker_Secondary.Storm_Blast.Storm_Cell",
+    "Mission_Maker_Secondary.Storm_Blast.Aim",
+    "Mission_Maker_Secondary.Storm_Blast.Direct_Strike",
+    "Mission_Maker_Secondary.Storm_Blast.Chain_Lightning",
+    "Mission_Maker_Secondary.Storm_Blast.Cloudburst",
+    "Mission_Maker_Secondary.Storm_Blast.Category_Five"
+  ],
+  "power_display_names": [
+    "Gust",
+    "Hailstones",
+    "Jet Stream",
+    "Storm Cell",
+    "Intensify",
+    "Direct Strike",
+    "Chain Lightning",
+    "Cloudburst",
+    "Category Five"
+  ],
+  "power_short_helps": [
+    "Ranged, DMG(Smash), -Fly",
+    "Ranged, DMG(Cold), Chance for Knockdown",
+    "Ranged (Cone), DMG(Smashing), Foe Knockdown or Repel",
+    "Ranged (Location AoE), Foe -Recharge, -SPD, +Wet, Special",
+    "Self +To Hit, +DMG, Special",
+    "Sniper, DMG(Energy), Foe -End, Special",
+    "Ranged Chain, DoT(Energy), Foe -End",
+    "Ranged, DoT(Cold), +Wet, Special",
+    "Ranged (Location AoE), DoT(Energy), +Wet"
+  ]
+}

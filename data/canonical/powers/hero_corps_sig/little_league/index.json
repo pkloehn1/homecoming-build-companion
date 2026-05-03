@@ -1,0 +1,62 @@
+{
+  "name": "Little_League",
+  "display_name": "Little_League",
+  "display_fullname": "Hero Corps Sig.Little League",
+  "display_help": "Little League",
+  "display_short_help": "Little League",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/HERO_CORPS_SIG/LITTLE_LEAGUE.POWERSETS",
+  "icon": "crey_boss_hero_clone_power_set.png",
+  "requires": "",
+  "power_names": [
+    "Hero_Corps_Sig.Little_League.Brawl",
+    "Hero_Corps_Sig.Little_League.Bash",
+    "Hero_Corps_Sig.Little_League.Pulverize",
+    "Hero_Corps_Sig.Little_League.Jawbreaker",
+    "Hero_Corps_Sig.Little_League.Build_Up",
+    "Hero_Corps_Sig.Little_League.Clobber",
+    "Hero_Corps_Sig.Little_League.Shatter",
+    "Hero_Corps_Sig.Little_League.Ki_Push",
+    "Hero_Corps_Sig.Little_League.Throw_Sand",
+    "Hero_Corps_Sig.Little_League.Dodge",
+    "Hero_Corps_Sig.Little_League.Power_Crash"
+  ],
+  "power_display_names": [
+    "Brawl",
+    "Bash",
+    "Pulverize",
+    "Jawbreaker",
+    "Build Up",
+    "Clobber",
+    "Shatter",
+    "Ki Push",
+    "Throw Sand",
+    "Super Dodge",
+    "Line Drive"
+  ],
+  "power_short_helps": [
+    "Melee Smash",
+    "Melee, Moderate DMG(Smash), Minor Disorient",
+    "Melee, High DMG(Smash), Minor Disorient",
+    "Melee, Superior DMG(Smash), Knockup",
+    "Self +DMG, +To Hit",
+    "Melee, Extreme DMG(Smash), Disorient",
+    "Melee, Extreme DMG(Smash), High Knockback",
+    "Melee, Light DMG(Smash), Foe Repel, KB",
+    "Ranged (Cone), Foe Disorient, -Perception",
+    "Auto: Self +DEF(Melee), Res(DeBuff DEF), Res(Damage, Special)",
+    "Ranged, Moderate DMG(Smash), Foe Disorient, -Fly"
+  ]
+}

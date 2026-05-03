@@ -1,0 +1,26 @@
+{
+  "name": "Nemesis_Doomsday_Devices",
+  "display_name": "Nemesis_Doomsday_Devices",
+  "display_fullname": "Nemesis.Nemesis Doomsday Devices",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_DOOMSDAY_DEVICES.POWERSETS",
+  "icon": "nemesis_doomsday_devices_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Doomsday_Devices.Poison_Trap",
+    "Nemesis.Nemesis_Doomsday_Devices.Weather_Machine"
+  ],
+  "power_display_names": [
+    "Nerve Gas Trap",
+    "Weather Machine"
+  ],
+  "power_short_helps": [
+    "Place Trap: PBAoE, Minor DoT(Toxic), Foe Choke/Vomit, -Regen, -Heal, -SPD, -Recharge",
+    "Place Trap: Summon Lightning Storm/Tornado"
+  ]
+}

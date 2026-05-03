@@ -1,0 +1,23 @@
+{
+  "tag": "Attuned",
+  "bears": [
+    [
+      "V Arachnos Proxy.Sonic Melee.Sonic Thrust",
+      "v_arachnos_proxy.sonic_melee.sonic_thrust"
+    ],
+    [
+      "V Arachnos Proxy.Sonic Melee.Strident Echo",
+      "v_arachnos_proxy.sonic_melee.strident_echo"
+    ]
+  ],
+  "affects": [
+    [
+      "Redirects.Sonic Melee.Attune",
+      "redirects.sonic_melee.attune"
+    ],
+    [
+      "V Arachnos Proxy.Sonic Melee.Attune",
+      "v_arachnos_proxy.sonic_melee.attune"
+    ]
+  ]
+}

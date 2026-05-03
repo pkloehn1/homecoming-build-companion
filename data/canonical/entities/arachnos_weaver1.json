@@ -1,0 +1,206 @@
+{
+  "name": "Arachnos_Weaver1",
+  "gender": "GENDER_MALE",
+  "group_name": "Arachnos",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Electronic"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 55,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BIGMONSTER",
+    "ai_config": "Arachnos_Weaver1",
+    "character_class_name": "boss_challengearchvillain",
+    "description": "The Arachnos roboticist known only as 'Weaver-1' lives skittering in the dark, always tinkering in the wetworks below Grandville. He is very rarely seen, even by his own people, the Orb Weavers, and is said to be constantly improving and upgrading his \"shell\".<br><br>Rumored to be a bit of an eccentric, the recent effort by Lord Recluse to re-focus on establishing their technocracy has greatly pleased Weaver-1, as has the return of Red Widow whom he adored.<br><br>This incarnation of Weaver-1 comes with the body of a massive Arachnobot tank, specifically customized to collect intruders who find themselves ensnared in the various traps underground.",
+    "group_description": null,
+    "display_class_name": "Monstrosity",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.4,
+    "additional_rewards": [
+      "HardModeEmpyreanMerit1"
+    ],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "V_Arachnos.Arachnobot_Weaver1.Armored_Exoskeleton",
+      "V_Arachnos.Arachnobot_Weaver1.Claw_Pierce",
+      "V_Arachnos.Arachnobot_Weaver1.Cocoon",
+      "V_Arachnos.Arachnobot_Weaver1.Disruptor_Blast",
+      "V_Arachnos.Arachnobot_Weaver1.Disruptor_Bolt",
+      "V_Arachnos.Arachnobot_Weaver1.Disruptor_Tesla",
+      "V_Arachnos.Arachnobot_Weaver1.Power_Jumping",
+      "V_Arachnos.Arachnobot_Weaver1.Telegraph_Tell",
+      "V_Arachnos.Arachnobot_Weaver1.Telegraph_Lock",
+      "V_Arachnos.Arachnobot_Weaver1.Static_Overload",
+      "V_Arachnos.Arachnobot_Weaver1.Toxic_Claws",
+      "V_Arachnos.Arachnobot_Weaver1.Web_Spitter",
+      "V_Arachnos.AV_Resistances.Resistance",
+      "Challenge_Empowerment.Constitution_HM.HM_Constitution",
+      "Temporary_Powers.Temporary_Powers.LevelShift01"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Reinforced Armored Exoskeleton",
+      "Pain Claw Pierce",
+      "Weaver of Cocoons",
+      "Disruptor Blast",
+      "Disruptor Bolt",
+      "Disruptor Tesla",
+      "Power Jumping",
+      "Pain Overload Tell",
+      "Pain Overload Lock",
+      "Pain Engine Overload",
+      "Pain Claws",
+      "Web Weaver",
+      "Resistance",
+      "Constitution",
+      "Level Shift +1"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Armored_Exoskeleton",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Claw_Pierce",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Cocoon",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Disruptor_Blast",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Disruptor_Bolt",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Disruptor_Tesla",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Power_Jumping",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Telegraph_Tell",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Telegraph_Lock",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Static_Overload",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Toxic_Claws",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Arachnobot_Weaver1",
+        "power": "Web_Spitter",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "AV_Resistances",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Challenge_Empowerment",
+        "power_set": "Constitution_HM",
+        "power": "HM_Constitution",
+        "level": 0
+      },
+      {
+        "power_category": "Temporary_Powers",
+        "power_set": "Temporary_Powers",
+        "power": "LevelShift01",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 55,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Weaver-1"
+      ],
+      "costumes": [
+        "Model_Weaver1_01"
+      ]
+    }
+  ]
+}

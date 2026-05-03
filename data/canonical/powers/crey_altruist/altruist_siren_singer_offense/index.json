@@ -1,0 +1,38 @@
+{
+  "name": "Altruist_Siren_Singer_Offense",
+  "display_name": "Siren Singer Offense",
+  "display_fullname": "Crey Altruist.Siren Singer Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SIREN_SINGER_OFFENSE.POWERSETS",
+  "icon": "altruist_siren_singer_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Siren_Singer_Offense.Melodic_Binding",
+    "Crey_Altruist.Altruist_Siren_Singer_Offense.Enfeebling_Lullaby",
+    "Crey_Altruist.Altruist_Siren_Singer_Offense.Confounding_Chant",
+    "Crey_Altruist.Altruist_Siren_Singer_Offense.Scream",
+    "Crey_Altruist.Altruist_Siren_Singer_Offense.Howl"
+  ],
+  "power_display_names": [
+    "Melodic Binding",
+    "Enfeebling Lullaby",
+    "Confounding Chant",
+    "Scream",
+    "Howl"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Psionic), Foe Immobilize, -SPD",
+    "Ranged (Cone), Minor DMG(Psionic), Foe Sleep, -DMG",
+    "Ranged (Cone), Extreme DoT(Psionic), Foe Disorient",
+    "Ranged, Heavy DoT(Energy/Smash), Foe -Res(All DMG)",
+    "Ranged (Cone), Light DMG(Energy/Smash), Foe -Res(All DMG)"
+  ]
+}

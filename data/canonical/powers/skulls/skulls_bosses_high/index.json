@@ -1,0 +1,50 @@
+{
+  "name": "Skulls_Bosses_High",
+  "display_name": "Skulls_Bosses_High",
+  "display_fullname": "Skulls.Skulls Bosses High",
+  "display_help": "Skulls",
+  "display_short_help": "Skulls",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/SKULLS_BOSSES_HIGH.POWERSETS",
+  "icon": "skulls_bosses_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Skulls_Bosses_High.Deadly_Crush",
+    "Skulls.Skulls_Bosses_High.Deadly_Rend",
+    "Skulls.Skulls_Bosses_High.Deadly_Arc",
+    "Skulls.Skulls_Bosses_High.Deadly_Slice",
+    "Skulls.Skulls_Bosses_High.Deadly_Bolt",
+    "Skulls.Skulls_Bosses_High.Deadly_Blast",
+    "Skulls.Skulls_Bosses_High.Boon_of_Death",
+    "Skulls.Skulls_Bosses_High.Murky_Cloud"
+  ],
+  "power_display_names": [
+    "Deadly Crush",
+    "Deadly Rend",
+    "Deadly Arc",
+    "Deadly Slice",
+    "Deadly Bolt",
+    "Deadly Blast",
+    "Boon of Death",
+    "Murky Cloud"
+  ],
+  "power_short_helps": [
+    "Melee, High DMG(Cold/Negative), Foe -ToHit, -SPD, -Recharge",
+    "Melee, Extreme DMG(Cold/Negative), Foe -ToHit, -SPD, -Recharge",
+    "Melee (Cone), Extreme DMG(Cold/Negative), Foe -ToHit, -SPD, -Recharge",
+    "PBAoE Melee, Moderate DMG(Cold/Negative), DoT(Cold), Foe Knockdown, -ToHit, -SPD, -Recharge",
+    "Ranged, Moderate DMG(Negative/Cold), Foe -ToHit, -SPD, -Recharge",
+    "Ranged, High DMG(Negative/Cold), Foe -ToHit, -SPD, -Recharge",
+    "Ranged, Light DMG(Cold), Foe -DMG, -ToHit, -Regen, Team Heal",
+    "Toggle: Self +Res(Fire, Cold, Negative)"
+  ]
+}

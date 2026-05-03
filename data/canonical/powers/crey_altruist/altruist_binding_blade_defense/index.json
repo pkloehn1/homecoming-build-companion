@@ -1,0 +1,30 @@
+{
+  "name": "Altruist_Binding_Blade_Defense",
+  "display_name": "Binding Blade Defense",
+  "display_fullname": "Crey Altruist.Binding Blade Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_BINDING_BLADE_DEFENSE.POWERSETS",
+  "icon": "altruist_binding_blade_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Binding_Blade_Defense.Inner_Focus",
+    "Crey_Altruist.Altruist_Binding_Blade_Defense.Reflexes",
+    "Crey_Altruist.Altruist_Binding_Blade_Defense.Elude"
+  ],
+  "power_display_names": [
+    "Inner Focus",
+    "Reflexes",
+    "Elude"
+  ],
+  "power_short_helps": [
+    "Toggle: Self +DEF(Melee, Ranged, AoE), +Res(Confuse), +Perception",
+    "Auto: Self +DEF(Ranged, Melee, AoE), Scaling Damage Resistance",
+    "Self +DEF(Melee, Ranged, AoE), +SPD, +Jump, +Recovery, +Res(DeBuff DEF), Delayed Weaken(Self -End, -Recovery)"
+  ]
+}

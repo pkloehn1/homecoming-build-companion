@@ -1,0 +1,30 @@
+{
+  "name": "Nemesis_Nerve_Gas",
+  "display_name": "Nemesis_Nerve_Gas",
+  "display_fullname": "Nemesis.Nemesis Nerve Gas",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_NERVE_GAS.POWERSETS",
+  "icon": "nemesis_nerve_gas_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Nerve_Gas.Initial_Poison_Gas",
+    "Nemesis.Nemesis_Nerve_Gas.Poison_Trap",
+    "Nemesis.Nemesis_Nerve_Gas.Self_Destruct"
+  ],
+  "power_display_names": [
+    "Poison Gas",
+    "Poison Trap",
+    "Self Destruct"
+  ],
+  "power_short_helps": [
+    "PBAoE, Foe Hold",
+    "Auto: PBAoE, Minor DoT(Toxic), Foe Choke/Vomit, -Regen, -Heal, -SPD, -Recharge",
+    "Self Destruct"
+  ]
+}

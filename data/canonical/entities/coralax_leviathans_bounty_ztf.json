@@ -1,0 +1,159 @@
+{
+  "name": "Coralax_Leviathans_Bounty_ZTF",
+  "gender": "GENDER_NEUTER",
+  "group_name": "Coralax",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 1,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": true,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_PET",
+    "ai_config": "Pets_Base",
+    "character_class_name": "minion_unkillablenpc",
+    "description": "This essence is a boon gifted to Calystix the Shaper by the Leviathan. It is immune to all damage and does not attack, however it will follow Calystix around to heal and buff him.<br><br><color Yellow>Keep this pet mezzed in order to interrupt support!</color>",
+    "group_description": null,
+    "display_class_name": "Pet",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 0.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Redirects.Marine_Affinity.Wellspring_Skin",
+      "V_Coralax.Leviathans_Bounty.Adrenalin_Boost",
+      "V_Coralax.Leviathans_Bounty.Assault",
+      "V_Coralax.Leviathans_Bounty.Clear_Mind",
+      "V_Coralax.Leviathans_Bounty.Fortitude",
+      "V_Coralax.Leviathans_Bounty.Heal_Other",
+      "V_Coralax.Leviathans_Bounty.Healing_Aura",
+      "V_Coralax.Leviathans_Bounty.Hurricane",
+      "V_Coralax.Leviathans_Bounty.Resistance",
+      "Mission_Maker_Movement.Flight.Fly",
+      "Challenge_Empowerment.Constitution_HM.HM_Constitution"
+    ],
+    "power_display_names": [
+      "Tempest",
+      "Adrenalin Shot",
+      "Grant Recovery Aura",
+      "Clear Mind",
+      "Fortitude",
+      "Heal Other",
+      "Healing Aura",
+      "Hurricane",
+      "Resistance",
+      "Fly",
+      "Constitution"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Redirects",
+        "power_set": "Marine_Affinity",
+        "power": "Wellspring_Skin",
+        "level": 0
+      },
+      {
+        "power_category": "V_Coralax",
+        "power_set": "Leviathans_Bounty",
+        "power": "Adrenalin_Boost",
+        "level": 0
+      },
+      {
+        "power_category": "V_Coralax",
+        "power_set": "Leviathans_Bounty",
+        "power": "Assault",
+        "level": 0
+      },
+      {
+        "power_category": "V_Coralax",
+        "power_set": "Leviathans_Bounty",
+        "power": "Clear_Mind",
+        "level": 0
+      },
+      {
+        "power_category": "V_Coralax",
+        "power_set": "Leviathans_Bounty",
+        "power": "Fortitude",
+        "level": 0
+      },
+      {
+        "power_category": "V_Coralax",
+        "power_set": "Leviathans_Bounty",
+        "power": "Heal_Other",
+        "level": 0
+      },
+      {
+        "power_category": "V_Coralax",
+        "power_set": "Leviathans_Bounty",
+        "power": "Healing_Aura",
+        "level": 0
+      },
+      {
+        "power_category": "V_Coralax",
+        "power_set": "Leviathans_Bounty",
+        "power": "Hurricane",
+        "level": 0
+      },
+      {
+        "power_category": "V_Coralax",
+        "power_set": "Leviathans_Bounty",
+        "power": "Resistance",
+        "level": 0
+      },
+      {
+        "power_category": "Mission_Maker_Movement",
+        "power_set": "Flight",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Challenge_Empowerment",
+        "power_set": "Constitution_HM",
+        "power": "HM_Constitution",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 1,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Leviathan's Bounty"
+      ],
+      "costumes": [
+        "Galvanic_Sentinel"
+      ]
+    }
+  ]
+}

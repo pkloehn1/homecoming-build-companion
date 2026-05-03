@@ -1,0 +1,22 @@
+{
+  "name": "Circle_Thorn_Caster_Storm_Block",
+  "display_name": "",
+  "display_fullname": "CircleOfThorns.Circle Thorn Caster Storm Block",
+  "display_help": "Circle of Thorns",
+  "display_short_help": "Circle of Thorns",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/CIRCLEOFTHORNS/CIRCLE_THORN_CASTER_STORM_BLOCK.POWERSETS",
+  "icon": "circle_thorn_caster_storm_block_set.png",
+  "requires": "",
+  "power_names": [
+    "CircleOfThorns.Circle_Thorn_Caster_Storm_Block.Block_of_Ice"
+  ],
+  "power_display_names": [
+    "Block of Ice"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Cold), Foe Hold, -SPD, -Recharge"
+  ]
+}

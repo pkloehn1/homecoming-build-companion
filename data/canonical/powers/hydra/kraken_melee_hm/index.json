@@ -1,0 +1,26 @@
+{
+  "name": "Kraken_Melee_HM",
+  "display_name": "Kraken_Melee (Advanced Mode)",
+  "display_fullname": "Hydra.Kraken Melee (Advanced Mode)",
+  "display_help": "Hydra",
+  "display_short_help": "Hydra",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/HYDRA/KRAKEN_MELEE_HM.POWERSETS",
+  "icon": "kraken_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Hydra.Kraken_Melee_HM.Pummel",
+    "Hydra.Kraken_Melee_HM.Foot_Stomp"
+  ],
+  "power_display_names": [
+    "Pummel",
+    "Foot Stomp"
+  ],
+  "power_short_helps": [
+    "Melee (Cone), Heavy DMG(Smash/Toxic), Foe Knockback",
+    "PBAoE Melee, Moderate DMG(Smash/Toxic), Foe Knockback"
+  ]
+}

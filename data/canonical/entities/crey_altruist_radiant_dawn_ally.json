@@ -1,0 +1,97 @@
+{
+  "name": "Crey_Altruist_Radiant_Dawn_Ally",
+  "gender": "GENDER_MALE",
+  "group_name": "Crey_Altruists",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Signatures_Ranged",
+    "character_class_name": "boss_grunt",
+    "description": "Light Cannon is a member of the Altruist Division, a public-facing super group comprised of Crey's new Real ID Protectors, heroes recruited from outside of Paragon City. Originally a small-timer from Boulder, Colorado, he is eager to prove himself on the biggest hero stage in the world. He is able to produce powerful blasts of radiation from his body, allowing him to rain destruction down on foes from afar.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Electron_Haze",
+      "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Proton_Volley",
+      "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Cosmic_Burst",
+      "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Neutron_Bomb",
+      "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Atomic_Blast",
+      "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Contaminated_Strike",
+      "Crey_Altruist.Altruist_Radiant_Dawn_Offense.Radioactive_Smash",
+      "Crey_Altruist.Altruist_Radiant_Dawn_Defense.Alpha_Barrier"
+    ],
+    "power_display_names": [
+      "Electron Haze",
+      "Proton Volley",
+      "Cosmic Burst",
+      "Neutron Bomb",
+      "Atomic Blast",
+      "Contaminated Strike",
+      "Radioactive Smash",
+      "Alpha Barrier"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_Radiant_Dawn_Offense",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_Radiant_Dawn_Defense",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Light Cannon"
+      ],
+      "costumes": [
+        "Model_Radiant_Dawn_Ally"
+      ]
+    }
+  ]
+}

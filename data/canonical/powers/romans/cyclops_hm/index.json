@@ -1,0 +1,22 @@
+{
+  "name": "Cyclops_HM",
+  "display_name": "Cyclops (Advanced Mode)",
+  "display_fullname": "Romans.Cyclops (Advanced Mode)",
+  "display_help": "Cyclops HM",
+  "display_short_help": "Cyclops HM",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/ROMANS/CYCLOPS_HM.POWERSETS",
+  "icon": "macro_button_01.png",
+  "requires": "",
+  "power_names": [
+    "Romans.Cyclops_HM.Rage"
+  ],
+  "power_display_names": [
+    "Rage"
+  ],
+  "power_short_helps": [
+    "Self +DMG, +To Hit, Delayed Self(Weaken, Special)"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "name": "RogueArachnos_Tarantula_Queen",
+  "gender": "GENDER_FEMALE",
+  "group_name": "RogueArachnos",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Electronic"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 29,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "boss_grunt",
+    "description": "What terrible process pushes a woman to become one of these unholy terrors is a subject of much speculation. What is known is that their suits are little different from Tarantula Mistresses. Instead, it seems the user somehow suffers the upgrade. Tarantula Queens are all incredibly powerful, but also quite mad.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "V_Arachnos.Tarantula_Queen.Psychic_Scream",
+      "V_Arachnos.Tarantula_Queen.Telekinetic_blast",
+      "V_Arachnos.Tarantula_Queen.Scramble_Thoughts",
+      "V_Arachnos.Tarantula_Queen.Dominate",
+      "V_Arachnos.Tarantula_Queen.Total_Domination",
+      "V_Arachnos.Tarantula_Queen.Psychic_Wail",
+      "V_Arachnos.Tarantula_Queen.Claw_Pierce",
+      "V_Arachnos.Tarantula_Queen.Claw_Shred",
+      "V_Arachnos.Tarantula_Queen.Armored_Exoskeleton",
+      "V_Arachnos.Fortunata_Mistress.Mind_Link"
+    ],
+    "power_display_names": [
+      "Psychic Scream",
+      "Telekinetic Blast",
+      "Scramble Thoughts",
+      "Dominate",
+      "Total Domination",
+      "Psychic Wail",
+      "Claw Pierce",
+      "Claw Shred",
+      "Armored Exoskeleton",
+      "Mind Link"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Tarantula_Queen",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_Arachnos",
+        "power_set": "Fortunata_Mistress",
+        "power": "Mind_Link",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 29,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Rogue Tarantula Queen"
+      ],
+      "costumes": [
+        "Rogue_Tarantulas_Queen"
+      ]
+    }
+  ]
+}

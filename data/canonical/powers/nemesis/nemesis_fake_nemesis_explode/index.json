@@ -1,0 +1,26 @@
+{
+  "name": "Nemesis_Fake_Nemesis_Explode",
+  "display_name": "Nemesis_Fake_Nemesis_Explode (Advanced Mode)",
+  "display_fullname": "Nemesis.Nemesis Fake Nemesis Explode (Advanced Mode)",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_FAKE_NEMESIS_EXPLODE.POWERSETS",
+  "icon": "macro_button_01.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Fake_Nemesis_Explode.Nemesis_Countdown",
+    "Nemesis.Nemesis_Fake_Nemesis_Explode.Nemesis_SelfDestruction"
+  ],
+  "power_display_names": [
+    "Nemesis Self-Destruct Countdown",
+    "Nemesis Self-Destruct"
+  ],
+  "power_short_helps": [
+    "Countdown",
+    "Extreme-Accuracy, PBAoE, Fatal DMG(Lethal/Fire) Self Kill, Foe DoT(Toxic), KB"
+  ]
+}

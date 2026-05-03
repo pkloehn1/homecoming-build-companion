@@ -1,0 +1,34 @@
+{
+  "name": "Altruist_Deadly_Queen_Control",
+  "display_name": "Deadly Queen Control",
+  "display_fullname": "Crey Altruist.Deadly Queen Control",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_DEADLY_QUEEN_CONTROL.POWERSETS",
+  "icon": "altruist_deadly_queen_control_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Deadly_Queen_Control.Mass_Hypnosis",
+    "Crey_Altruist.Altruist_Deadly_Queen_Control.Mesmerize",
+    "Crey_Altruist.Altruist_Deadly_Queen_Control.Terrify",
+    "Crey_Altruist.Altruist_Deadly_Queen_Control.Dominate"
+  ],
+  "power_display_names": [
+    "Mass Hypnosis",
+    "Mesmerize",
+    "Terrify",
+    "Dominate"
+  ],
+  "power_short_helps": [
+    "Ranged (Targeted AoE), Foe Sleep",
+    "Ranged, Moderate DMG(Psionic), Foe Sleep",
+    "Ranged (Cone), Moderate DMG(Psionic), Foe Fear",
+    "Ranged, Moderate DMG(Psionic), Foe Hold"
+  ]
+}

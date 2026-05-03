@@ -1,0 +1,26 @@
+{
+  "name": "Skulls_Minion_Knife",
+  "display_name": "Skulls_Minion_Knife",
+  "display_fullname": "Skulls.Skulls Minion Knife",
+  "display_help": "Skulls",
+  "display_short_help": "Skulls",
+  "available_level": [
+    0,
+    39
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/SKULLS_MINION_KNIFE.POWERSETS",
+  "icon": "skulls_minion_knife_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Skulls_Minion_Knife.Knife",
+    "Skulls.Skulls_Minion_Knife.Slash"
+  ],
+  "power_display_names": [
+    "Knife",
+    "Slash"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Lethal)",
+    "Melee, Light DMG(Lethal), Foe -DEF"
+  ]
+}

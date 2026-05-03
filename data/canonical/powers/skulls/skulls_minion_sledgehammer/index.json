@@ -1,0 +1,26 @@
+{
+  "name": "Skulls_Minion_Sledgehammer",
+  "display_name": "Skulls_Minion_Sledgehammer",
+  "display_fullname": "Skulls.Skulls Minion Sledgehammer",
+  "display_help": "Skulls",
+  "display_short_help": "Skulls",
+  "available_level": [
+    0,
+    39
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/SKULLS_MINION_SLEDGEHAMMER.POWERSETS",
+  "icon": "skulls_minion_sledgehammer_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Skulls_Minion_Sledgehammer.Sledgehammer",
+    "Skulls.Skulls_Minion_Sledgehammer.Cursed_Staff"
+  ],
+  "power_display_names": [
+    "Sledgehammer",
+    "Cursed Staff"
+  ],
+  "power_short_helps": [
+    "Low-Accuracy, Melee, Superior DMG(Smash), Foe Knockdown",
+    "Melee, Superior DMG(Smash/Negative), Foe Knockback"
+  ]
+}

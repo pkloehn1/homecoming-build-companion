@@ -1,0 +1,22 @@
+{
+  "name": "Warrior_Enchantress_Boss",
+  "display_name": "Warrior_Enchantress_Boss",
+  "display_fullname": "Warriors New.Warrior Enchantress Boss",
+  "display_help": "Enchantress",
+  "display_short_help": "Enchantress",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_ENCHANTRESS_BOSS.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Enchantress_Boss.Enchant_Weapon"
+  ],
+  "power_display_names": [
+    "Weapon Imbuement"
+  ],
+  "power_short_helps": [
+    "Close, Ally +DMG(Fire, Cold, or Energy)"
+  ]
+}

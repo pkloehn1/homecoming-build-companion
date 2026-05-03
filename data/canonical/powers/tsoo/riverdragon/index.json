@@ -1,0 +1,46 @@
+{
+  "name": "RiverDragon",
+  "display_name": "RiverDragon",
+  "display_fullname": "Tsoo.RiverDragon",
+  "display_help": "Tsoo",
+  "display_short_help": "Tsoo",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/TSOO/RIVERDRAGON.POWERSETS",
+  "icon": "riverdragon_set.png",
+  "requires": "",
+  "power_names": [
+    "Tsoo.RiverDragon.Quick_Strike",
+    "Tsoo.RiverDragon.Smashing_Blow",
+    "Tsoo.RiverDragon.Power_Siphon",
+    "Tsoo.RiverDragon.Repulsing_Torrent",
+    "Tsoo.RiverDragon.Burst",
+    "Tsoo.RiverDragon.Focused_Burst",
+    "Tsoo.RiverDragon.Concentrated_Strike"
+  ],
+  "power_display_names": [
+    "Quick Strike",
+    "Smashing Blow",
+    "Power Siphon",
+    "Repulsing Torrent",
+    "Burst",
+    "Focused Burst",
+    "Concentrated Strike"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Energy/Smash), Foe Knockdown, -DMG",
+    "Melee, Heavy DMG(Energy/Smash), Foe Disorient, -DMG",
+    "Self +ToHit, +Special",
+    "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback",
+    "PBAoE Melee, Heavy DMG(Energy), Foe Knockdown, -DMG",
+    "Ranged, High DMG(Energy/Smash), Foe Knockdown, -DMG",
+    "Melee, Extreme DMG(Energy/Smash), Foe Disorient, -DMG"
+  ]
+}

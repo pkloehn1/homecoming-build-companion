@@ -1,0 +1,30 @@
+{
+  "name": "Rikti_Kong_Melee",
+  "display_name": "Rikti Kong Melee",
+  "display_fullname": "Rikti.Rikti Kong Melee",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIKTI_KONG_MELEE.POWERSETS",
+  "icon": "rikti_monkey_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rikti_Kong_Melee.Monkey_Brawl",
+    "Rikti.Rikti_Kong_Melee.Psychic_Dart",
+    "Rikti.Rikti_Kong_Melee.Gas"
+  ],
+  "power_display_names": [
+    "Simian Strike",
+    "Psychic Drill",
+    "Gas"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Smash/Toxic), Foe -Recharge",
+    "Ranged, Moderate DMG(Psionic), Foe -Recharge, -Fly",
+    "Post Death AoE Special"
+  ]
+}

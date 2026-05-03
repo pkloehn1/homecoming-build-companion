@@ -1,0 +1,58 @@
+{
+  "name": "Keeper",
+  "display_name": "BWI PEACE Keeper",
+  "display_fullname": "BlackwingIndustries.BWI PEACE Keeper",
+  "display_help": "Blackwing Industries",
+  "display_short_help": "Blackwing Industries",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/BLACKWINGINDUSTRIES/KEEPER.POWERSETS",
+  "icon": "bwi_keeper_set.png",
+  "requires": "",
+  "power_names": [
+    "BlackwingIndustries.Keeper.Reinforcements",
+    "BlackwingIndustries.Keeper.Eject",
+    "BlackwingIndustries.Keeper.Fly",
+    "BlackwingIndustries.Keeper.Hack",
+    "BlackwingIndustries.Keeper.Slice",
+    "BlackwingIndustries.Keeper.Disembowel",
+    "BlackwingIndustries.Keeper.Head_Splitter",
+    "BlackwingIndustries.Keeper.Refractor_Beam",
+    "BlackwingIndustries.Keeper.Overcharged_Beam",
+    "BlackwingIndustries.Keeper.Siege_ExcelsionArmor"
+  ],
+  "power_display_names": [
+    "Squad Assembly",
+    "Eject Pilot",
+    "Fly",
+    "Plasma Hack",
+    "Plasma Slice",
+    "Plasma Disembowel",
+    "Plasma Head Splitter",
+    "Refractor Beam",
+    "Overcharged Beam",
+    "Siege Excelsion Armor"
+  ],
+  "power_short_helps": [
+    "Summon 2 PEACE Ballistiers, 2 PEACE Drones",
+    "Post-Death Special: Summon PEACE Pilot",
+    "Self Travel",
+    "Melee, High DMG(Energy/Lethal), Foe -Regen, Special",
+    "Melee (Cone), Moderate DMG(Energy/Lethal), Foe -Regen, Special",
+    "Melee, Superior DMG(Energy/Lethal), Foe Knockup, -Regen",
+    "Melee (Cone), Extreme DMG(Energy/Lethal), Foe Knockback, -Regen",
+    "Ranged (Targeted AoE), Moderate DMG(Energy), Foe -DEF, Special",
+    "Ranged (Targeted AoE), Extreme DMG(Energy), Foe Disorient, -DEF, Special",
+    "Resistance"
+  ]
+}

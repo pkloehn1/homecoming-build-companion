@@ -1,0 +1,22 @@
+{
+  "name": "Boomer_Cadaver",
+  "display_name": "Claws_Cadaver",
+  "display_fullname": "Freaklok.Claws Cadaver",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/BOOMER_CADAVER.POWERSETS",
+  "icon": "boomer_cadaver_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Boomer_Cadaver.Kamikaze"
+  ],
+  "power_display_names": [
+    "Kamikaze"
+  ],
+  "power_short_helps": [
+    "Suicide Special"
+  ]
+}

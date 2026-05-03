@@ -1,0 +1,149 @@
+{
+  "name": "Warriors_Staff_Boss",
+  "gender": "GENDER_MALE",
+  "group_name": "Warriors",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Warriors_Axe_Boss",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 20,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 1,
+    "spawn_limit_mission": 1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Melee",
+    "character_class_name": "boss_grunt",
+    "description": "Hoplite Elites are fully inducted into the inner circles of the Warriors, with updated tattoo designs to reflect. Top-ranking Hoplites are fast, evasive, and hit with the force of a dozen initiates. Do not underestimate them.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.2,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Warriors_New.Warrior_Staff_Minion.Mercurial_Blow",
+      "Warriors_New.Warrior_Staff_Minion.Precise_Strike",
+      "Warriors_New.Warrior_Staff_Lt.Eye_of_the_Storm",
+      "Warriors_New.Warrior_Staff_Lt.Serpents_Reach",
+      "Warriors_New.Warrior_Staff_Lt.Guarded_Spin",
+      "Warriors_New.Warrior_Staff_Boss.Sky_Splitter",
+      "Warriors_New.Warrior_Javelin_Boss.Pilum",
+      "Warriors_New.Warrior_Javelin_Boss.Blinding_Pilum",
+      "Warriors_New.Warrior_Reflexes.Dodge",
+      "Warriors_New.Warrior_Reflexes.Practiced_Brawler",
+      "Warriors_New.Warrior_Defense.BS_Resistance"
+    ],
+    "power_display_names": [
+      "Mercurial Blow",
+      "Precise Strike",
+      "Eye of the Storm",
+      "Serpent's Reach",
+      "Guarded Spin",
+      "Sky Splitter",
+      "Pilum",
+      "Shining Pilum",
+      "Reflexes",
+      "Practiced Brawler",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Staff_Minion",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Staff_Lt",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Staff_Boss",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Javelin_Boss",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Reflexes",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Defense",
+        "power": "BS_Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 20,
+      "max_level": 39,
+      "experience": 0,
+      "display_names": [
+        "Hoplite Elite"
+      ],
+      "costumes": [
+        "Warrior_New_Staff_10",
+        "Warrior_New_Staff_11",
+        "Warrior_New_Staff_12",
+        "Warrior_New_Staff_13",
+        "Warrior_New_Staff_14"
+      ]
+    },
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Hoplite Gladiator"
+      ],
+      "costumes": [
+        "Warrior_New_Staff_10",
+        "Warrior_New_Staff_11",
+        "Warrior_New_Staff_12",
+        "Warrior_New_Staff_13",
+        "Warrior_New_Staff_14"
+      ]
+    }
+  ]
+}

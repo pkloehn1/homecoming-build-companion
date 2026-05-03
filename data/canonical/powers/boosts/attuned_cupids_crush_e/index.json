@@ -1,0 +1,22 @@
+{
+  "name": "Attuned_Cupids_Crush_E",
+  "display_name": "Attuned Cupids Crush E",
+  "display_fullname": "Boosts.Attuned Cupids Crush E",
+  "display_help": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Increases accuracy by {Boost.Attrib.Accuracy.Scale}%. Enhances damage by {Boost.Attrib.Damage.Scale}%. Reduces endurance cost by {Boost.Attrib.Endurance.Scale}%. Increases recharge rate by {Boost.Attrib.RechargeTime.Scale}%.",
+  "display_short_help": "Set: Cupid's Crush",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/ATTUNED_CUPIDS_CRUSH_E.POWERSETS",
+  "icon": "e_icon_cupids_crush.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Attuned_Cupids_Crush_E.Attuned_Cupids_Crush_E"
+  ],
+  "power_display_names": [
+    "Cupid's Crush: Accuracy/Damage/Endurance/Recharge"
+  ],
+  "power_short_helps": [
+    "+ACC, +DMG, -End Cost, +Rech"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Bomb_Corruptor",
+  "display_name": "Bomb Corruptor",
+  "display_fullname": "Pets.Bomb Corruptor",
+  "display_help": "Devices",
+  "display_short_help": "Devices",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/BOMB_CORRUPTOR.POWERSETS",
+  "icon": "bomb_controller_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Bomb_Corruptor.Time_Bomb",
+    "Pets.Bomb_Corruptor.Self_Destruct",
+    "Pets.Bomb_Corruptor.Resistance"
+  ],
+  "power_display_names": [
+    "Time Bomb",
+    "Self Destruct",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "AoE Lethal/Fire, Knockback",
+    "Resistance",
+    "Resistance"
+  ]
+}

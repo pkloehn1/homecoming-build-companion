@@ -1,0 +1,62 @@
+{
+  "name": "Labyrinth_Shifts",
+  "display_name": "Labyrinth Shifts",
+  "display_fullname": "Event.Labyrinth Shifts",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_SHIFTS.POWERSETS",
+  "icon": "werewolf_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Shifts.Labyrinth_Shift_01",
+    "Event.Labyrinth_Shifts.Labyrinth_Shift_02",
+    "Event.Labyrinth_Shifts.Labyrinth_Shift_03",
+    "Event.Labyrinth_Shifts.Labyrinth_Shift_04",
+    "Event.Labyrinth_Shifts.Labyrinth_Shift_05",
+    "Event.Labyrinth_Shifts.Labyrinth_Shift_06",
+    "Event.Labyrinth_Shifts.Labyrinth_Shift_07",
+    "Event.Labyrinth_Shifts.Labyrinth_Shift_08",
+    "Event.Labyrinth_Shifts.Labyrinth_Shift_09",
+    "Event.Labyrinth_Shifts.Labyrinth_Shift_10",
+    "Event.Labyrinth_Shifts.Labyrinth_Death"
+  ],
+  "power_display_names": [
+    "+1 Aether Fluctuations",
+    "+2 Aether Fluctuations",
+    "+3 Aether Fluctuations",
+    "+4 Aether Fluctuations",
+    "+5 Aether Fluctuations",
+    "+6 Aether Fluctuations",
+    "+7 Aether Fluctuations",
+    "+8 Aether Fluctuations",
+    "+9 Aether Fluctuations",
+    "+10 Aether Fluctuations",
+    "Aether Death"
+  ],
+  "power_short_helps": [
+    "Self: +1 Level Shift, +Special",
+    "Self: +2 Level Shift, +Special",
+    "Self: +3 Level Shift, +Special",
+    "Self: +4 Level Shift, +Special",
+    "Self: +5 Level Shift, +Special",
+    "Self: +6 Level Shift, +Special",
+    "Self: +7 Level Shift, +Special",
+    "Self: +8 Level Shift, +Special",
+    "Self: +9 Level Shift, +Special",
+    "Self: +10 Level Shift, +Special",
+    "Self: Kill"
+  ]
+}

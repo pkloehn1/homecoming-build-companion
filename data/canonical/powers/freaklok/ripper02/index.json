@@ -1,0 +1,42 @@
+{
+  "name": "Ripper02",
+  "display_name": "Ripper02",
+  "display_fullname": "Freaklok.Ripper02",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/RIPPER02.POWERSETS",
+  "icon": "ripper02_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Ripper02.Thorny_Darts",
+    "Freaklok.Ripper02.Skewer",
+    "Freaklok.Ripper02.Impale",
+    "Freaklok.Ripper02.Ripper",
+    "Freaklok.Ripper02.Thorn_Barrage",
+    "Freaklok.Ripper02.Savage_Leap"
+  ],
+  "power_display_names": [
+    "Thorny Darts",
+    "Skewer",
+    "Impale",
+    "Ripper",
+    "Thorn Barrage",
+    "Savage Leap"
+  ],
+  "power_short_helps": [
+    "Ranged, Light DMG(Lethal), Minor DoT(Toxic), Foe -DEF",
+    "Melee, Heavy DMG(Lethal), Minor DoT(Toxic), Foe -DEF",
+    "Ranged, High DMG(Lethal), DoT(Toxic), Foe Immobilize, -SPD, -Fly, -DEF",
+    "Melee (Cone), Superior DMG(Lethal), DoT(Toxic), Foe Knockdown, -DEF",
+    "Ranged, Superior DMG(Lethal), Minor DoT(Toxic), Foe Knockback, -DEF",
+    "PBAoE, Superior DMG(Lethal), Foe Minor DoT(Lethal), Self 1 to 3 Blood Frenzy, Teleport"
+  ]
+}

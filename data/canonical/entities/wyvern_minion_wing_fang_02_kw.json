@@ -1,0 +1,124 @@
+{
+  "name": "Wyvern_Minion_Wing_Fang_02_KW",
+  "gender": "GENDER_MALE",
+  "group_name": "Wyvern",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Humanoid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_MINION",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "minion_grunt",
+    "description": "Wyvern is a private agency dedicated to eliminating problems Freedom Corps hasn't or won't deal with. Wing Agents act as air support for their companions.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.6,
+    "additional_rewards": [],
+    "power_full_names": [
+      "V_Wyvern.Fang_VHigh.Talon_Snap_Shot",
+      "V_Wyvern.Fang_VHigh.Talon_Fistful_of_Arrows",
+      "V_Wyvern.Sting_VHigh.Talon_Entangling_Arrow",
+      "V_Wyvern.Sting_VHigh.Talon_Flash_Arrow",
+      "V_Wyvern.Wyvern_VHigh.Knock_Away",
+      "V_Wyvern.Wyvern_VHigh.Eagle_Eye",
+      "V_Wyvern.Wing_Agent.Fly",
+      "V_Wyvern.Wing_Agent.Body_Armor"
+    ],
+    "power_display_names": [
+      "Talon Snap Shot",
+      "Talon Fistful of Arrows",
+      "Talon Entangling Arrow",
+      "Talon Flash Arrow",
+      "Knock Away",
+      "Eagle Eye",
+      "Fly",
+      "Body Armor"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "V_Wyvern",
+        "power_set": "Fang_VHigh",
+        "power": "Talon_Snap_Shot",
+        "level": 0
+      },
+      {
+        "power_category": "V_Wyvern",
+        "power_set": "Fang_VHigh",
+        "power": "Talon_Fistful_of_Arrows",
+        "level": 0
+      },
+      {
+        "power_category": "V_Wyvern",
+        "power_set": "Sting_VHigh",
+        "power": "Talon_Entangling_Arrow",
+        "level": 0
+      },
+      {
+        "power_category": "V_Wyvern",
+        "power_set": "Sting_VHigh",
+        "power": "Talon_Flash_Arrow",
+        "level": 0
+      },
+      {
+        "power_category": "V_Wyvern",
+        "power_set": "Wyvern_VHigh",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_Wyvern",
+        "power_set": "Wing_Agent",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Wing Fang Agent"
+      ],
+      "costumes": [
+        "Villain_Wyvern_Wing_Fang_Agent_01",
+        "Villain_Wyvern_Wing_Fang_Agent_02",
+        "Villain_Wyvern_Wing_Fang_Agent_03",
+        "Villain_Wyvern_Wing_Fang_Agent_04"
+      ]
+    }
+  ]
+}

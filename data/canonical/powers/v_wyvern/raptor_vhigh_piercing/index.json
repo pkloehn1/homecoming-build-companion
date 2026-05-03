@@ -1,0 +1,50 @@
+{
+  "name": "Raptor_VHigh_Piercing",
+  "display_name": "Raptor VHigh Piercing",
+  "display_fullname": "V Wyvern.Raptor VHigh Piercing",
+  "display_help": "Wyvern",
+  "display_short_help": "Wyvern",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    39,
+    39,
+    39
+  ],
+  "source_file": "DEFS/POWERS/V_WYVERN/RAPTOR_VHIGH_PIERCING.POWERSETS",
+  "icon": "raptor_vhigh_piercing_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Wyvern.Raptor_VHigh_Piercing.Talon_Aimed_Shot",
+    "V_Wyvern.Raptor_VHigh_Piercing.Talon_Blazing_Arrow",
+    "V_Wyvern.Raptor_VHigh_Piercing.Talon_Rain_of_Arrows",
+    "V_Wyvern.Raptor_VHigh_Piercing.Talon_Entangling_Arrow",
+    "V_Wyvern.Raptor_VHigh_Piercing.Talon_Ice_Arrow",
+    "V_Wyvern.Raptor_VHigh_Piercing.Talon_Disruption_Arrow",
+    "V_Wyvern.Raptor_VHigh_Piercing.Talon_Oil_Slick_Arrow",
+    "V_Wyvern.Raptor_VHigh_Piercing.Talon_EMP_Arrow"
+  ],
+  "power_display_names": [
+    "Talon Aimed Shot",
+    "Talon Blazing Arrow",
+    "Talon Rain of Arrows",
+    "Talon Entangling Arrow",
+    "Talon Ice Arrow",
+    "Talon Disruption Arrow",
+    "Talon Oil Slick Arrow",
+    "Talon EMP Arrow"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Lethal), Foe -Res(All)",
+    "Ranged, Moderate DMG(Lethal), High DoT(Fire), Foe -Res(All)",
+    "Ranged (Location AoE), Extreme DoT(Lethal), Foe -Res(All)",
+    "Ranged, Foe Immobilize, -SPD, -Recharge, -Fly, -Jump",
+    "Ranged, Foe Hold, -SPD, -Recharge, -DMG, -Special",
+    "Ranged (Location AoE), Foe -Res(All), -MaxEnd",
+    "Ranged (Location AoE), Foe Knockdown, -SPD, -DEF, +Special",
+    "Ranged (Targeted AoE), Foe Hold, -End, -Regeneration, Special vs. Robots"
+  ]
+}

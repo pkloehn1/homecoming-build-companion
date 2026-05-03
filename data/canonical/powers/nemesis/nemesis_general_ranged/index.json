@@ -1,0 +1,34 @@
+{
+  "name": "Nemesis_General_Ranged",
+  "display_name": "Nemesis_General_Ranged",
+  "display_fullname": "Nemesis.Nemesis General Ranged",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_GENERAL_RANGED.POWERSETS",
+  "icon": "nemesis_general_ranged_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_General_Ranged.Atomic_Rifle",
+    "Nemesis.Nemesis_General_Ranged.Atomic_Rifle_Refraction",
+    "Nemesis.Nemesis_General_Ranged.Atomic_Rifle_Beam",
+    "Nemesis.Nemesis_General_Ranged.Atomic_Rifle_Ray"
+  ],
+  "power_display_names": [
+    "Atomic Rifle",
+    "Atomic Rifle Refraction",
+    "Atomic Rifle Beam",
+    "Atomic Rifle Ray"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Energy), Foe Knockdown, -Regeneration",
+    "Ranged (Targeted AoE), High DoT(Energy), Foe -DEF",
+    "Ranged (Cone), High DoT(Energy), Foe -DEF",
+    "Ranged (Narrow Cone), Superior DMG(Energy), Foe -Res(All)"
+  ]
+}

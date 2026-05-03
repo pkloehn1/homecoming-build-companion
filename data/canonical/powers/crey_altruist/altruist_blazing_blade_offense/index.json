@@ -1,0 +1,38 @@
+{
+  "name": "Altruist_Blazing_Blade_Offense",
+  "display_name": "Blazing Blade Offense",
+  "display_fullname": "Crey Altruist.Blazing Blade Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_BLAZING_BLADE_OFFENSE.POWERSETS",
+  "icon": "altruist_blazing_blade_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Blazing_Blade_Offense.Hack",
+    "Crey_Altruist.Altruist_Blazing_Blade_Offense.Slice",
+    "Crey_Altruist.Altruist_Blazing_Blade_Offense.Parry",
+    "Crey_Altruist.Altruist_Blazing_Blade_Offense.Whirling_Sword",
+    "Crey_Altruist.Altruist_Blazing_Blade_Offense.Fire_Blast"
+  ],
+  "power_display_names": [
+    "Hack",
+    "Slice",
+    "Parry",
+    "Whirling Sword",
+    "Fire Blast"
+  ],
+  "power_short_helps": [
+    "Melee, High DMG(Lethal), Foe -DEF",
+    "Melee (Cone), Moderate DMG(Lethal), Foe -DEF",
+    "Melee, Light DMG(Lethal), Self +DEF(Melee, Lethal)",
+    "PBAoE Melee, Moderate DMG(Lethal), Minor DoT(Lethal), Foe -DEF",
+    "Ranged, Moderate DMG(Fire), DoT(Fire)"
+  ]
+}

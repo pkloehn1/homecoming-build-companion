@@ -1,0 +1,26 @@
+{
+  "name": "Juicer_Cadaver",
+  "display_name": "Juicer_Cadaver",
+  "display_fullname": "Freaklok.Juicer Cadaver",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/JUICER_CADAVER.POWERSETS",
+  "icon": "juicer_cadaver_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Juicer_Cadaver.Charged_Brawl",
+    "Freaklok.Juicer_Cadaver.Jacobs_Ladder"
+  ],
+  "power_display_names": [
+    "Charged Brawl",
+    "Jacobs Ladder"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Energy/Smash), Foe Sleep, -End, -Recovery",
+    "Melee (Cone), Heavy DMG(Energy), Foe Sleep, -End, -Recovery"
+  ]
+}

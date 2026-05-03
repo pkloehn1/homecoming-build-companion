@@ -1,0 +1,22 @@
+{
+  "name": "UnnamedOne_Mission",
+  "display_name": "UnnamedOne",
+  "display_fullname": "BanishedPantheon.UnnamedOne",
+  "display_help": "Banished Pantheon",
+  "display_short_help": "Banished Pantheon",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BANISHEDPANTHEON/UNNAMEDONE_MISSION.POWERSETS",
+  "icon": "unnamedone_mission_set.png",
+  "requires": "",
+  "power_names": [
+    "BanishedPantheon.UnnamedOne_Mission.Unbounded"
+  ],
+  "power_display_names": [
+    "Unbounded"
+  ],
+  "power_short_helps": [
+    "Auto: Self +Res(All DMG, Regeneration Debuff), +Regeneration, Special"
+  ]
+}

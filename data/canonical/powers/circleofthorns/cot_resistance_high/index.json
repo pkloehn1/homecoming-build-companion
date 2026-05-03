@@ -1,0 +1,22 @@
+{
+  "name": "CoT_Resistance_High",
+  "display_name": "CoT_Resistance_High",
+  "display_fullname": "CircleOfThorns.CoT Resistance High",
+  "display_help": "Circle of Thorns",
+  "display_short_help": "Circle of Thorns",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/CIRCLEOFTHORNS/COT_RESISTANCE_HIGH.POWERSETS",
+  "icon": "cot_resistance_set.png",
+  "requires": "",
+  "power_names": [
+    "CircleOfThorns.CoT_Resistance_High.Resistance"
+  ],
+  "power_display_names": [
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Auto: +Res(Negative)"
+  ]
+}

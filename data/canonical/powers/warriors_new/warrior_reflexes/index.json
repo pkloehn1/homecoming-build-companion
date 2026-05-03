@@ -1,0 +1,26 @@
+{
+  "name": "Warrior_Reflexes",
+  "display_name": "Warrior_Reflexes",
+  "display_fullname": "Warriors New.Warrior Reflexes",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    39,
+    39
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_REFLEXES.POWERSETS",
+  "icon": "warrior_reflexes_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Reflexes.Dodge",
+    "Warriors_New.Warrior_Reflexes.Practiced_Brawler"
+  ],
+  "power_display_names": [
+    "Reflexes",
+    "Practiced Brawler"
+  ],
+  "power_short_helps": [
+    "Auto: Self +DEF(Melee, Ranged, AoE), +Res(DeBuff DEF, Slow), Scaling Damage Resistance, +SPD, +Recharge",
+    "Toggle: Self +DEF(Melee, Ranged, AoE), +Res(Knockback, Disorient, Hold, Sleep, Immobilize, Confuse)"
+  ]
+}

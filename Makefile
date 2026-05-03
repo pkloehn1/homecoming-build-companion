@@ -1,0 +1,74 @@
+# homecoming-build-companion - project shortcuts
+# Usage: make lint | make fix | make test | make cov
+
+# ---------------------------------------------------------------------------
+# Environment detection
+# ---------------------------------------------------------------------------
+
+# Auto-detect venv bin path and executable suffix (Linux/macOS vs Windows)
+ifneq ($(wildcard .venv/bin/python),)
+	VENV_BIN ?= .venv/bin
+	EXE :=
+else
+	VENV_BIN ?= .venv/Scripts
+	EXE := .exe
+endif
+
+PYTHON  := $(VENV_BIN)/python$(EXE)
+RUFF    := $(VENV_BIN)/ruff$(EXE)
+MYPY    := $(VENV_BIN)/mypy$(EXE)
+PYTEST  := $(PYTHON) -m pytest
+
+COV_PACKAGE ?= tools
+
+# ---------------------------------------------------------------------------
+# Lint / Format / Type
+# ---------------------------------------------------------------------------
+
+.PHONY: lint
+lint: ## Run ruff check + format --check + mypy
+	$(RUFF) check .
+	$(RUFF) format --check .
+	$(MYPY) tools
+
+.PHONY: fix
+fix: ## Auto-fix ruff lint issues and reformat
+	$(RUFF) check --fix .
+	$(RUFF) format .
+
+# ---------------------------------------------------------------------------
+# Test / Coverage
+# ---------------------------------------------------------------------------
+
+.PHONY: test
+test: ## Run all tests (fast, no coverage)
+	$(PYTEST)
+
+.PHONY: cov
+cov: ## Run tests with coverage gate (--cov-fail-under=100)
+	$(PYTEST) --cov=$(COV_PACKAGE) --cov-report=term-missing
+
+.PHONY: cov-html
+cov-html: ## Run tests with HTML coverage report
+	$(PYTEST) --cov=$(COV_PACKAGE) --cov-report=html
+	@echo "Open htmlcov/index.html"
+
+# ---------------------------------------------------------------------------
+# Validator (Phase 6)
+# ---------------------------------------------------------------------------
+
+.PHONY: validate
+validate: ## Validate a build JSON. Usage: make validate BUILD=path/to/build.json
+	@if [ -z "$(BUILD)" ]; then echo "Usage: make validate BUILD=path/to/build.json"; exit 1; fi
+	$(PYTHON) -m tools.build_validator $(BUILD)
+
+# ---------------------------------------------------------------------------
+# Help
+# ---------------------------------------------------------------------------
+
+.PHONY: help
+help: ## Show this help
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
+		awk 'BEGIN {FS = ":.*?## "}; {printf "  %-15s %s\n", $$1, $$2}'
+
+.DEFAULT_GOAL := help

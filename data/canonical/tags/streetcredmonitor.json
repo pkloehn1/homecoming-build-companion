@@ -1,0 +1,15 @@
+{
+  "tag": "StreetCredMonitor",
+  "bears": [
+    [
+      "Temporary Powers.Temporary Powers.Street Cred",
+      "temporary_powers.temporary_powers.street_cred_monitor"
+    ]
+  ],
+  "affects": [
+    [
+      "Temporary Powers.Temporary Powers.Street Cred",
+      "temporary_powers.temporary_powers.street_cred"
+    ]
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Warrior_Sniper",
+  "display_name": "Warrior_Sniper",
+  "display_fullname": "Warriors New.Warrior Sniper",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_SNIPER.POWERSETS",
+  "icon": "warrior_sniper_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Sniper.Ranged_Shot"
+  ],
+  "power_display_names": [
+    "Ranged Shot"
+  ],
+  "power_short_helps": [
+    "Ranged (Sniper), Extreme DMG(Lethal)"
+  ]
+}

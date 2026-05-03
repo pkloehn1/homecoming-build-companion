@@ -1,0 +1,46 @@
+{
+  "name": "Generic_Quill_Pattern_Protector",
+  "display_name": "Generic_Quill_Pattern_Protector",
+  "display_fullname": "Crey Altruist.Generic Quill Pattern Protector",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/GENERIC_QUILL_PATTERN_PROTECTOR.POWERSETS",
+  "icon": "generic_quill_pattern_protector_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Generic_Quill_Pattern_Protector.Barb_Swipe",
+    "Crey_Altruist.Generic_Quill_Pattern_Protector.Lunge",
+    "Crey_Altruist.Generic_Quill_Pattern_Protector.Impale",
+    "Crey_Altruist.Generic_Quill_Pattern_Protector.Spine_Throwing",
+    "Crey_Altruist.Generic_Quill_Pattern_Protector.Ripper",
+    "Crey_Altruist.Generic_Quill_Pattern_Protector.Temp_Invulnerability",
+    "Crey_Altruist.Generic_Quill_Pattern_Protector.Elude"
+  ],
+  "power_display_names": [
+    "Barb Swipe",
+    "Lunge",
+    "Impale",
+    "Spine Throwing",
+    "Ripper",
+    "Temp Invulnerability",
+    "Elude"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Lethal), DoT(Toxic), Foe -SPD, -Recharge",
+    "Melee, Heavy DMG(Lethal), DoT(Toxic), Foe -SPD, -Recharge",
+    "Ranged, High DMG(Lethal), DoT(Toxic), Foe Immobilize, -SPD, -Recharge",
+    "Ranged (Cone), Moderate DMG(Lethal), DoT(Toxic), Foe -SPD, -Recharge",
+    "Melee (Cone), High DMG(Lethal), DoT(Toxic), Foe Knockdown, -SPD, -Recharge",
+    "Toggle: Self +Res(Smash, Lethal)",
+    "Self +DEF(Melee, Ranged, AoE), +Res(DeBuff DEF), +SPD, +Jump, +Recovery, Delayed Weaken(Self -End, -Recovery)"
+  ]
+}

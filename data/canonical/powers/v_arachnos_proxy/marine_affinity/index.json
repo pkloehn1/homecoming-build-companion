@@ -1,0 +1,54 @@
+{
+  "name": "Marine_Affinity",
+  "display_name": "Marine Affinity",
+  "display_fullname": "V Arachnos Proxy.Marine Affinity",
+  "display_help": "Command the various powers of the ocean to buff your allies, and wash away your enemies.",
+  "display_short_help": "Marine Affinity",
+  "available_level": [
+    0,
+    0,
+    1,
+    5,
+    7,
+    11,
+    17,
+    25,
+    31
+  ],
+  "source_file": "DEFS/POWERS/V_ARACHNOS_PROXY/MARINE_AFFINITY.POWERSETS",
+  "icon": "nature_affinity_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Arachnos_Proxy.Marine_Affinity.Shoal_Rush",
+    "V_Arachnos_Proxy.Marine_Affinity.Soothing_Wave",
+    "V_Arachnos_Proxy.Marine_Affinity.Toroidal_Bubble",
+    "V_Arachnos_Proxy.Marine_Affinity.Whitecap",
+    "V_Arachnos_Proxy.Marine_Affinity.Tide_Pool",
+    "V_Arachnos_Proxy.Marine_Affinity.Brine",
+    "V_Arachnos_Proxy.Marine_Affinity.Shifting_Tides",
+    "V_Arachnos_Proxy.Marine_Affinity.Wellspring",
+    "V_Arachnos_Proxy.Marine_Affinity.Call_Depths"
+  ],
+  "power_display_names": [
+    "Shoal Rush",
+    "Soothing Wave",
+    "Toroidal Bubble",
+    "Whitecap",
+    "Tide Pool",
+    "Brine",
+    "Shifting Tides",
+    "Barrier Reef",
+    "Power of the Depths"
+  ],
+  "power_short_helps": [
+    "Targeted AoE, Foe -DEF, -SPD, Special",
+    "Ranged (Cone), Team Heal, Enemy Damage Debuff",
+    "PBAoE, Team +Res(All, End Drain), +Endurance, +Recovery, +Jump",
+    "Targeted AoE, Minor DMG(Cold), Foe Knockdown, -Resist(All), Self Teleport, Special",
+    "Location AoE, Team +DMG, Foe -DMG, -SPD, -Jump, -Stealth, Special",
+    "Ranged, Foe -Resist(All), -MaxHP",
+    "Toggle: Targeted AoE, Team +Damage, +To Hit, +Recharge, Special Damage",
+    "Summon Barrier Reef: Team +Absorb, +Defense (All)",
+    "PBAoE, Team +MaxHP, +MaxEnd, +Regen, +Range"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Arachnos_Selenops_Main_Cannon",
+  "gender": "GENDER_MALE",
+  "group_name": "Arachnos",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Electronic"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 55,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "ScriptNoSleep_Default_Ranged",
+    "character_class_name": "boss_praetorianarchvillain",
+    "description": "The main cannon on the L.R.S. Selenops is very clearly Praetorian technology in origin, a trophy claimed from the falling dimension when Lord Recluse's final gambit paid dividends.<br><br>This cannon has been improved in almost every functional capacity, including callibrations to calculate and fire accurate, long-distance barrages.<br>Rumors have it that this weapon is more than simply a ballistic firearm, and has some kind of secondary firing-mode that scientists are insisting will <i>'secure Arachnos domination'</i>.",
+    "group_description": null,
+    "display_class_name": "Artillery",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [],
+    "power_display_names": [],
+    "power_levels": [],
+    "is_dynamic": false,
+    "powers": [],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 55,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Selenops Main Cannon"
+      ],
+      "costumes": [
+        "Arachnos_Selenops_Cannon"
+      ]
+    }
+  ]
+}

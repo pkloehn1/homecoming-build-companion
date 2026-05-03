@@ -1,0 +1,42 @@
+{
+  "name": "Altruist_White_Spider_Offense",
+  "display_name": "White Spider Offense",
+  "display_fullname": "Crey Altruist.White Spider Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_WHITE_SPIDER_OFFENSE.POWERSETS",
+  "icon": "altruist_white_spider_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_White_Spider_Offense.Slice",
+    "Crey_Altruist.Altruist_White_Spider_Offense.Venom_Barb",
+    "Crey_Altruist.Altruist_White_Spider_Offense.Arm_Lash",
+    "Crey_Altruist.Altruist_White_Spider_Offense.Web_Spitter",
+    "Crey_Altruist.Altruist_White_Spider_Offense.Entrap",
+    "Crey_Altruist.Altruist_White_Spider_Offense.Cocoon"
+  ],
+  "power_display_names": [
+    "Slice",
+    "Venom Barb",
+    "Arm Lash",
+    "Web",
+    "Entrap",
+    "Cocoon"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal/Toxic), Foe -DEF",
+    "Ranged, Minor DMG(Lethal), Moderate DoT(Toxic), Foe -DEF, -SPD, -Recharge",
+    "Melee (Cone), High DMG(Lethal/Toxic), Foe -DEF",
+    "Ranged (Targeted AoE), Foe Immobilize, -SPD, -Recharge, -Fly, -Jump",
+    "Melee, Extreme DoT(Toxic), Foe Hold, -SPD, -Recharge, -Fly, -Jump",
+    "Ranged, Moderate DoT(Toxic), Foe Hold, -SPD, -Recharge, -Fly, -Jump"
+  ]
+}

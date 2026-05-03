@@ -1,0 +1,26 @@
+{
+  "name": "Freakshow_Metal_Tank_Swiper_High",
+  "display_name": "Freakshow_Metal_Tank_Swiper_High",
+  "display_fullname": "Freakshow.Freakshow Metal Tank Swiper High",
+  "display_help": "Freakshow",
+  "display_short_help": "Freakshow",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKSHOW/FREAKSHOW_METAL_TANK_SWIPER_HIGH.POWERSETS",
+  "icon": "freakshow_metal_tank_swiper_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Freakshow.Freakshow_Metal_Tank_Swiper_High.Cybernetic_Flurry",
+    "Freakshow.Freakshow_Metal_Tank_Swiper_High.Cybernetic_Hemorrhage"
+  ],
+  "power_display_names": [
+    "Cybernetic Flurry",
+    "Cybernetic Hemorrhage"
+  ],
+  "power_short_helps": [
+    "PBAoE, Variable DMG(Lethal), Minor DoT(Lethal), -Blood Frenzy",
+    "Melee, Light DMG(Lethal), Foe Special DoT(Lethal), -Blood Frenzy"
+  ]
+}

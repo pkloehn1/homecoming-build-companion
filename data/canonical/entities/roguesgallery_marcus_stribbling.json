@@ -1,0 +1,160 @@
+{
+  "name": "RoguesGallery_Marcus_Stribbling",
+  "gender": "GENDER_MALE",
+  "group_name": "RoguesGallery",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Humanoid",
+    "HumanSkeleton"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 30,
+    "max_level": 40,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ELITE",
+    "ai_config": "Signatures_Melee",
+    "character_class_name": "boss_elite",
+    "description": "Marcus is a young mutant with tremendous power over time. For several years, he has been imprisoned by his father, Dr. Chris Stribbling, after his powers first manifested and caused the death of his infant brother. Embittered by his treatment, he wishes now to escape to the Rogue Isles.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "RoguesGallery.Marcus_Stribbling.Temporal_Mending",
+      "RoguesGallery.Marcus_Stribbling.Distortion_Field",
+      "RoguesGallery.Marcus_Stribbling.Time_Stop",
+      "RoguesGallery.Marcus_Stribbling.Slowed_Response",
+      "RoguesGallery.Marcus_Stribbling.Time_Wall",
+      "RoguesGallery.Marcus_Stribbling.Aging_Touch",
+      "RoguesGallery.Marcus_Stribbling.Chronological_Selection",
+      "RoguesGallery.Marcus_Stribbling.Time_Shift",
+      "RoguesGallery.Marcus_Stribbling.Temporal_Healing",
+      "RoguesGallery.Marcus_Stribbling.Flurry",
+      "RoguesGallery.Marcus_Stribbling.Resistances"
+    ],
+    "power_display_names": [
+      "Temporal Mending",
+      "Distortion Field",
+      "Time Stop",
+      "Slowed Response",
+      "Time Wall",
+      "Aging Touch",
+      "Chronos",
+      "Time Shift",
+      "Temporal Healing",
+      "Flurry",
+      "Resistances"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "RoguesGallery",
+        "power_set": "Marcus_Stribbling",
+        "power": "Temporal_Mending",
+        "level": 0
+      },
+      {
+        "power_category": "RoguesGallery",
+        "power_set": "Marcus_Stribbling",
+        "power": "Distortion_Field",
+        "level": 0
+      },
+      {
+        "power_category": "RoguesGallery",
+        "power_set": "Marcus_Stribbling",
+        "power": "Time_Stop",
+        "level": 0
+      },
+      {
+        "power_category": "RoguesGallery",
+        "power_set": "Marcus_Stribbling",
+        "power": "Slowed_Response",
+        "level": 0
+      },
+      {
+        "power_category": "RoguesGallery",
+        "power_set": "Marcus_Stribbling",
+        "power": "Time_Wall",
+        "level": 0
+      },
+      {
+        "power_category": "RoguesGallery",
+        "power_set": "Marcus_Stribbling",
+        "power": "Aging_Touch",
+        "level": 0
+      },
+      {
+        "power_category": "RoguesGallery",
+        "power_set": "Marcus_Stribbling",
+        "power": "Chronological_Selection",
+        "level": 0
+      },
+      {
+        "power_category": "RoguesGallery",
+        "power_set": "Marcus_Stribbling",
+        "power": "Time_Shift",
+        "level": 0
+      },
+      {
+        "power_category": "RoguesGallery",
+        "power_set": "Marcus_Stribbling",
+        "power": "Temporal_Healing",
+        "level": 0
+      },
+      {
+        "power_category": "RoguesGallery",
+        "power_set": "Marcus_Stribbling",
+        "power": "Flurry",
+        "level": 0
+      },
+      {
+        "power_category": "RoguesGallery",
+        "power_set": "Marcus_Stribbling",
+        "power": "Resistances",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 30,
+      "max_level": 40,
+      "experience": 0,
+      "display_names": [
+        "Marcus Stribbling"
+      ],
+      "costumes": [
+        "Model_Marcus_Stribbling"
+      ]
+    }
+  ]
+}

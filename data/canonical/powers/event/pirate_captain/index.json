@@ -1,0 +1,54 @@
+{
+  "name": "Pirate_Captain",
+  "display_name": "Pirate Captain",
+  "display_fullname": "Event.Pirate Captain",
+  "display_help": "Spectral Pirates",
+  "display_short_help": "Spectral Pirates",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/PIRATE_CAPTAIN.POWERSETS",
+  "icon": "broad_sword_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Pirate_Captain.Call_Hawk",
+    "Event.Pirate_Captain.Hack",
+    "Event.Pirate_Captain.Slash",
+    "Event.Pirate_Captain.Slice",
+    "Event.Pirate_Captain.Build_Up",
+    "Event.Pirate_Captain.Parry",
+    "Event.Pirate_Captain.Whirling_Sword",
+    "Event.Pirate_Captain.Disembowel",
+    "Event.Pirate_Captain.Head_Splitter"
+  ],
+  "power_display_names": [
+    "Call Parrot",
+    "Hack",
+    "Slash",
+    "Vorpal Throw",
+    "Build Up",
+    "Parry",
+    "Whirling Sword",
+    "Disembowel",
+    "Head Splitter"
+  ],
+  "power_short_helps": [
+    "Ranged, Foe DoT (Lethal), -To Hit, Knockdown, -Fly",
+    "Melee, High Dam(Lethal/Negative), Foe -DEF",
+    "Melee, Moderate Dam(Lethal/Negative), Foe -DEF",
+    "Melee (Cone), Moderate Dam(Lethal/Negative), Foe -DEF",
+    "Self +DMG, +To-hit",
+    "Melee, Minor DMG(Lethal/Negative), Self +DEF(Melee,Lethal)",
+    "PBAoE Melee, Moderate DMG(Lethal/Negative), Foe -Def",
+    "Melee, Superior DMG(Lethal/Negative), Knockup, Foe -DEF",
+    "Melee, Extreme DMG(Lethal/Negative), Foe Knockback, -DEF"
+  ]
+}

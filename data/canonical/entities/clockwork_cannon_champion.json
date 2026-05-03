@@ -1,0 +1,109 @@
+{
+  "name": "Clockwork_Cannon_Champion",
+  "gender": "GENDER_MALE",
+  "group_name": "Clockwork",
+  "commandable_pet": 0,
+  "power_tags": [],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 15,
+    "max_level": 20,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Clockwork_Champion",
+    "character_class_name": "boss_grunt",
+    "description": "P2138681820",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.4,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Clockwork.Clockwork_Champion.Resistance",
+      "Clockwork.Clockwork_Champion.Charged_Bolts",
+      "Clockwork.Clockwork_Champion.Bash",
+      "Clockwork.Clockwork_Champion.Pulverize",
+      "Clockwork.Clockwork_Champion.Jawbreaker",
+      "Clockwork.Clockwork_Champion.Clobber",
+      "Clockwork.Clockwork_Champion.Build_Up",
+      "Clockwork.Clockwork_Champion.Whirling_Mace",
+      "Clockwork.Clockwork_Champion.Shatter",
+      "Clockwork.Clockwork_Champion.Crowd_Control",
+      "Clockwork.Clockwork_Champion.Push_Back",
+      "Clockwork.Clockwork_Champion.Phalanx_Fighting",
+      "Clockwork.Clockwork_Champion.Energized_Shield",
+      "Clockwork.Clockwork_Champion.Reassemble",
+      "Clockwork.Clockwork_Champion.Taunt"
+    ],
+    "power_display_names": [
+      "Resistance",
+      "Charged Bolts",
+      "Bolt Bash",
+      "Power Pulverize",
+      "Jolting Jawbreaker",
+      "Charged Clobber",
+      "Build Up",
+      "Whirling Sprocket",
+      "Shocking Shatter",
+      "Crowd Conduction",
+      "Push Back",
+      "Scrap Armor",
+      "The Clock Works",
+      "Reassemble",
+      "Taunt"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Clockwork",
+        "power_set": "Clockwork_Champion",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 15,
+      "max_level": 20,
+      "experience": 0,
+      "display_names": [
+        "P2132083281"
+      ],
+      "costumes": [
+        "Clockwork_Champion"
+      ]
+    }
+  ]
+}

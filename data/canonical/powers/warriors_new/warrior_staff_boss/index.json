@@ -1,0 +1,22 @@
+{
+  "name": "Warrior_Staff_Boss",
+  "display_name": "Warrior_Staff_Boss",
+  "display_fullname": "Warriors New.Warrior Staff Boss",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    39
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_STAFF_BOSS.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Staff_Boss.Sky_Splitter"
+  ],
+  "power_display_names": [
+    "Sky Splitter"
+  ],
+  "power_short_helps": [
+    "Melee, Extreme DMG(Smash), Foe Knockup, Disorient"
+  ]
+}

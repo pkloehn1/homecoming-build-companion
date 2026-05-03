@@ -1,0 +1,22 @@
+{
+  "name": "Psychic_Blast",
+  "display_name": "Psychic Blast",
+  "display_fullname": "Redirects.Psychic Blast",
+  "display_help": "Trick Arrow",
+  "display_short_help": "Trick Arrow",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/REDIRECTS/PSYCHIC_BLAST.POWERSETS",
+  "icon": "tanker_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Redirects.Psychic_Blast.Psionic_Dart"
+  ],
+  "power_display_names": [
+    "Psionic Dart"
+  ],
+  "power_short_helps": [
+    "Ranged, Light DMG(Psionic), Target -Recharge"
+  ]
+}

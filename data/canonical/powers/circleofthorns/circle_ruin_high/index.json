@@ -1,0 +1,26 @@
+{
+  "name": "Circle_Ruin_High",
+  "display_name": "Circle_Ruin_High",
+  "display_fullname": "CircleOfThorns.Circle Ruin High",
+  "display_help": "Circle of Thorns",
+  "display_short_help": "Circle of Thorns",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CIRCLEOFTHORNS/CIRCLE_RUIN_HIGH.POWERSETS",
+  "icon": "circle_ruin_ranged_set.png",
+  "requires": "",
+  "power_names": [
+    "CircleOfThorns.Circle_Ruin_High.Meteor",
+    "CircleOfThorns.Circle_Ruin_High.Rock_Armor"
+  ],
+  "power_display_names": [
+    "Meteor",
+    "Rock Armor"
+  ],
+  "power_short_helps": [
+    "Ranged (Location AoE), Extreme DMG(Smash/Fire), Foe Knockback",
+    "Toggle: Self +DEF(Smash, Lethal)"
+  ]
+}

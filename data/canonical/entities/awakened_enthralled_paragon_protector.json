@@ -1,0 +1,88 @@
+{
+  "name": "Awakened_Enthralled_Paragon_Protector",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Awakened",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Humanoid",
+    "HumanSkeleton"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Crey_CoV_Clone_Psychic_Defender_21-30",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 50,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "boss_grunt",
+    "description": "These psychics have been reduced to batteries for their parent Paragon Subjugator. The Awakened have found ripe orchards to pick amongst the clones in Crey's ranks.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 0.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "P_Seers.Seer_Minion_Resistance.Resistance",
+      "P_Seers.Seeker_Powers.Fortitude",
+      "P_Seers.Seeker_Powers.Soothe_Mind"
+    ],
+    "power_display_names": [
+      "Resistance",
+      "Fortitude",
+      "Soothe Mind"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "P_Seers",
+        "power_set": "Seer_Minion_Resistance",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "P_Seers",
+        "power_set": "Seeker_Powers",
+        "power": "Fortitude",
+        "level": 0
+      },
+      {
+        "power_category": "P_Seers",
+        "power_set": "Seeker_Powers",
+        "power": "Soothe_Mind",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 50,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Enthralled Paragon Protector"
+      ],
+      "costumes": [
+        "Paragon_Protector_Thrall_01"
+      ]
+    }
+  ]
+}

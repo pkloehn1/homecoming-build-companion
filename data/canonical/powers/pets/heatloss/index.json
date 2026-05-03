@@ -1,0 +1,30 @@
+{
+  "name": "HeatLoss",
+  "display_name": "Heat Loss",
+  "display_fullname": "Pets.Heat Loss",
+  "display_help": "Cold Domination",
+  "display_short_help": "Cold Domination",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/HEATLOSS.POWERSETS",
+  "icon": "heatlossbuff_defender_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.HeatLoss.Heat_Loss_Buff_Self",
+    "Pets.HeatLoss.Heat_Loss_Debuff",
+    "Pets.HeatLoss.Heat_Loss_Buff_Target"
+  ],
+  "power_display_names": [
+    "Heat Loss",
+    "Heat Loss",
+    "Heat Loss"
+  ],
+  "power_short_helps": [
+    "+Recovery",
+    "-DMG, Slow",
+    "+Recovery"
+  ]
+}

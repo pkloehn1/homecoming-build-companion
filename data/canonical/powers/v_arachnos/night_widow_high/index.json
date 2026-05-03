@@ -1,0 +1,38 @@
+{
+  "name": "Night_Widow_High",
+  "display_name": "Night_Widow_High",
+  "display_fullname": "V Arachnos.Night Widow High",
+  "display_help": "Arachnos",
+  "display_short_help": "Arachnos",
+  "available_level": [
+    0,
+    0,
+    33,
+    33,
+    33
+  ],
+  "source_file": "DEFS/POWERS/V_ARACHNOS/NIGHT_WIDOW_HIGH.POWERSETS",
+  "icon": "night_widow_high_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Arachnos.Night_Widow_High.Eviscerate",
+    "V_Arachnos.Night_Widow_High.Indomitable_Will",
+    "V_Arachnos.Night_Widow_High.Assassins_Slash",
+    "V_Arachnos.Night_Widow_High.Placate",
+    "V_Arachnos.Night_Widow_High.Mental_Training"
+  ],
+  "power_display_names": [
+    "Eviscerate",
+    "Indomitable Will",
+    "Assassin's Slash",
+    "Placate",
+    "Mental Training"
+  ],
+  "power_short_helps": [
+    "Melee (Cone), Superior DMG(Lethal), Minor DoT(Toxic), Foe -SPD, -Recharge",
+    "Toggle: Self +Res(Confuse, Fear, Hold, Immobilize, Disorient, Sleep, Knockback, Repel, Psionic)",
+    "Melee, Extreme DMG(Lethal), Minor DoT(Toxic), Foe -SPD, -Recharge",
+    "Melee, Foe Placate, Self Stealth, +ToHit, +DMG",
+    "Auto: Self +Recharge, +SPD, +Res(Slow)"
+  ]
+}

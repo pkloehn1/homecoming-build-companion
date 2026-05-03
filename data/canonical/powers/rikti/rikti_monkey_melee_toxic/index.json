@@ -1,0 +1,38 @@
+{
+  "name": "Rikti_Monkey_Melee_Toxic",
+  "display_name": "Rikti Monkey Melee Toxic",
+  "display_fullname": "Rikti.Rikti Monkey Melee Toxic",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIKTI_MONKEY_MELEE_TOXIC.POWERSETS",
+  "icon": "rikti_monkey_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rikti_Monkey_Melee_Toxic.Monkey_Brawl2",
+    "Rikti.Rikti_Monkey_Melee_Toxic.Monkey_Brawl",
+    "Rikti.Rikti_Monkey_Melee_Toxic.Psychic_Dart",
+    "Rikti.Rikti_Monkey_Melee_Toxic.Gas",
+    "Rikti.Rikti_Monkey_Melee_Toxic.Resistance"
+  ],
+  "power_display_names": [
+    "Poison Simian Strike",
+    "Poison Primate Punch",
+    "Psychic Dart",
+    "Gas",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Toxic/Smash), Foe -Heal",
+    "Melee, Light DMG(Toxic/Smash), Foe -Heal",
+    "Ranged, Moderate DMG(Psionic), Foe -Recharge",
+    "Post Death AoE Special",
+    "Auto Res Toxic"
+  ]
+}

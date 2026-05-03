@@ -1,0 +1,90 @@
+{
+  "name": "Rikti_Generator_SpaceStation_B",
+  "gender": "GENDER_MALE",
+  "group_name": "Rikti",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Electronic"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 1,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_PET",
+    "ai_config": "Hydra_ForceFieldGenerator",
+    "character_class_name": "lt_grunt",
+    "description": "These high-end microbial-electric reactors produce a network of on-demand power cleanly through the natural processes of bacteria native only to the Rikti dimension. The attached floor-lines carry the generator's current to their destinations.<br><br><color Orange>Destroying this particular generator will deprive any connected devices of additional power to function.</color>",
+    "group_description": "Rikti",
+    "display_class_name": "Generator",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 0.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Hydra.Hydra_Pod_Powers_NoAdds.Resistance",
+      "Hydra.Hydra_Pod_Powers_NoAdds.Self_Repair",
+      "Rikti.Rikti_HM_LGTF.Generator",
+      "Rikti.Rikti_HM_LGTF.Shield_B"
+    ],
+    "power_display_names": [
+      "Resistance",
+      "Self Repair",
+      "Microbial Power Generator",
+      "Microbial Power Connection"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Hydra",
+        "power_set": "Hydra_Pod_Powers_NoAdds",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Rikti",
+        "power_set": "Rikti_HM_LGTF",
+        "power": "Generator",
+        "level": 0
+      },
+      {
+        "power_category": "Rikti",
+        "power_set": "Rikti_HM_LGTF",
+        "power": "Shield_B",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 1,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Power Micro-Reactor"
+      ],
+      "costumes": [
+        "Rikti_PowerGenerator"
+      ]
+    }
+  ]
+}

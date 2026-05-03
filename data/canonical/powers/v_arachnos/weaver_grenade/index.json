@@ -1,0 +1,26 @@
+{
+  "name": "Weaver_Grenade",
+  "display_name": "Weaver_Grenade",
+  "display_fullname": "V Arachnos.Weaver Grenade",
+  "display_help": "Arachnos",
+  "display_short_help": "Arachnos",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_ARACHNOS/WEAVER_GRENADE.POWERSETS",
+  "icon": "weaver_grenade_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Arachnos.Weaver_Grenade.Glue_Grenade",
+    "V_Arachnos.Weaver_Grenade.Weaver_Grenade"
+  ],
+  "power_display_names": [
+    "Glue Grenade",
+    "Weaver Grenade"
+  ],
+  "power_short_helps": [
+    "Location AoE, Foe -SPD, -Recharge, -Jump, -Fly",
+    "Location AoE, Special: Stage One: DoT(Toxic), Stage Two: Foe Immobilize, Stage Three: Foe Absolute Immobilize, -SPD, -Recharge"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Paladin_Pull",
+  "display_name": "Paladin Pull",
+  "display_fullname": "Clockwork.Paladin Pull",
+  "display_help": "",
+  "display_short_help": "",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/CLOCKWORK/PALADIN_PULL.POWERSETS",
+  "icon": "paladin_pull_set.png",
+  "requires": "",
+  "power_names": [
+    "Clockwork.Paladin_Pull.Coil_Pulse_Pull"
+  ],
+  "power_display_names": [
+    "Coil Pulse Pull"
+  ],
+  "power_short_helps": [
+    "Auto: PBAoE, Foe Attract"
+  ]
+}

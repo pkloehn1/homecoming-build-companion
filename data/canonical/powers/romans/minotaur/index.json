@@ -1,0 +1,54 @@
+{
+  "name": "Minotaur",
+  "display_name": "Minotaur",
+  "display_fullname": "Romans.Minotaur",
+  "display_help": "Minotaur",
+  "display_short_help": "Minotaur",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/ROMANS/MINOTAUR.POWERSETS",
+  "icon": "minotaur_set.png",
+  "requires": "",
+  "power_names": [
+    "Romans.Minotaur.Chop",
+    "Romans.Minotaur.Beheader",
+    "Romans.Minotaur.Whirling_Axe",
+    "Romans.Minotaur.Cleave",
+    "Romans.Minotaur.Pendulum",
+    "Romans.Minotaur.Unyielding",
+    "Romans.Minotaur.Unstoppable",
+    "Romans.Minotaur.Fetid_Howl",
+    "Romans.Minotaur.Resistance"
+  ],
+  "power_display_names": [
+    "Chop",
+    "Beheader",
+    "Whirling Axe",
+    "Cleave",
+    "Pendulum",
+    "Unyielding",
+    "Unstoppable",
+    "Fetid Howl",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Melee, High DMG(Lethal), Foe Knockdown",
+    "Melee, Superior DMG(Lethal), Foe Knockdown",
+    "PBAoE Melee, Moderate DMG(Lethal), Foe Knockdown",
+    "Melee (Cone), Extreme DMG(Lethal), Foe Knockdown",
+    "Melee (Cone), Superior DMG(Lethal), Foe Knockback",
+    "Auto: Self +Res(Knockback, Sleep, Disorient, Hold, Immobilize, Fire, Cold, Energy, Negative, Toxic), Self -DEF",
+    "Self, +Res(Disorient, Sleep, Hold, Immobilize, All DMG but Psionics)",
+    "Ranged (Cone), Light DMG(Toxic), Foe -Resist(All), Special: Diseased",
+    "Auto: Res(Lethal, Smash, Fire, Cold, Energy, Negative Energy, Toxic)"
+  ]
+}

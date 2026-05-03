@@ -1,0 +1,62 @@
+{
+  "name": "Minotaur_Endgame",
+  "display_name": "Minotaur Endgame",
+  "display_fullname": "Romans.Minotaur Endgame",
+  "display_help": "Minotaur",
+  "display_short_help": "Minotaur",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/ROMANS/MINOTAUR_ENDGAME.POWERSETS",
+  "icon": "macro_button_01.png",
+  "requires": "",
+  "power_names": [
+    "Romans.Minotaur_Endgame.Resistance",
+    "Romans.Minotaur_Endgame.Chop",
+    "Romans.Minotaur_Endgame.Beheader",
+    "Romans.Minotaur_Endgame.Whirling_Axe",
+    "Romans.Minotaur_Endgame.Cleave",
+    "Romans.Minotaur_Endgame.Pendulum",
+    "Romans.Minotaur_Endgame.Unyielding",
+    "Romans.Minotaur_Endgame.Unstoppable",
+    "Romans.Minotaur_Endgame.Fetid_Howl",
+    "Romans.Minotaur_Endgame.Essence_Drain",
+    "Romans.Minotaur_Endgame.Shadow_Slip"
+  ],
+  "power_display_names": [
+    "Nictus Imbuement",
+    "Chop",
+    "Beheader",
+    "Whirling Axe",
+    "Cleave",
+    "Pendulum",
+    "Unyielding",
+    "Unstoppable",
+    "Fetid Howl",
+    "Essence Drain",
+    "Shadow Slip"
+  ],
+  "power_short_helps": [
+    "Auto: Res(Lethal, Smash, Fire, Cold, Energy, Negative Energy, Toxic), +MaxHP",
+    "Melee, High DMG(Lethal/Negative), Foe Knockdown",
+    "Melee, Superior DMG(Lethal/Negative), Foe Knockdown",
+    "PBAoE Melee, Moderate DMG(Lethal/Negative), Foe Knockdown",
+    "Melee (Cone), Extreme DMG(Lethal/Negative), Foe Knockdown",
+    "Melee (Cone), Superior DMG(Lethal/Negative), Foe Knockback",
+    "Auto: Self +Res(Knockback, Sleep, Disorient, Hold, Immobilize, Fire, Cold, Energy, Negative, Toxic), Self -DEF",
+    "Self, +Res(Disorient, Sleep, Hold, Immobilize, All DMG but Psionics)",
+    "Ranged (Cone), Light DMG(Toxic), Foe -Resist(All), Special: Diseased",
+    "Melee, High DMG(Negative), Foe -Recharge, -SPD; Self Heal",
+    "Melee (PBAoE), Foe Teleport"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Altruist_Slaughterscape_Control",
+  "display_name": "Slaughterscape Control",
+  "display_fullname": "Crey Altruist.Slaughterscape Control",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SLAUGHTERSCAPE_CONTROL.POWERSETS",
+  "icon": "altruist_slaughterscape_control_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Slaughterscape_Control.Entangling_Thorns",
+    "Crey_Altruist.Altruist_Slaughterscape_Control.Rooting_Thorns",
+    "Crey_Altruist.Altruist_Slaughterscape_Control.Paralytic_Thorns",
+    "Crey_Altruist.Altruist_Slaughterscape_Control.Thorntrops"
+  ],
+  "power_display_names": [
+    "Entangling Thorns",
+    "Rooting Thorns",
+    "Paralytic Thorns",
+    "Thorntrops"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DoT(Toxic/Lethal), Foe Immobilize, -Fly",
+    "Ranged (Cone), Minor DoT(Toxic/Lethal), Foe Immobilize, -Fly",
+    "PBAoE, Moderate DMG(Lethal), Foe Hold",
+    "Ranged (Location AoE), Minor DoT(Lethal), Foe -SPD, -Jump"
+  ]
+}

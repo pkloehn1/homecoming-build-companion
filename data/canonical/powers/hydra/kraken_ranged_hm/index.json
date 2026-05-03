@@ -1,0 +1,34 @@
+{
+  "name": "Kraken_Ranged_HM",
+  "display_name": "Kraken_Ranged (Advanced Mode)",
+  "display_fullname": "Hydra.Kraken Ranged (Advanced Mode)",
+  "display_help": "Hydra",
+  "display_short_help": "Hydra",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/HYDRA/KRAKEN_RANGED_HM.POWERSETS",
+  "icon": "kraken_ranged_set.png",
+  "requires": "",
+  "power_names": [
+    "Hydra.Kraken_Ranged_HM.Spit",
+    "Hydra.Kraken_Ranged_HM.Spit_2",
+    "Hydra.Kraken_Ranged_HM.Neurotoxic_Breath",
+    "Hydra.Kraken_Ranged_HM.Paralytic_Poison"
+  ],
+  "power_display_names": [
+    "Loogie Bomb",
+    "Spit",
+    "Neurotoxic Breath",
+    "Paralytic Poison"
+  ],
+  "power_short_helps": [
+    "Ranged (Targeted AoE), Minor DoT(Toxic), Foe -Fly",
+    "Ranged, Moderate DMG(Toxic), Minor DoT(Toxic), Foe -Fly",
+    "High-Accuracy, Ranged (Cone), Foe -SPD, -Recharge, Chance for Hold",
+    "High-Accuracy, Ranged, Moderate DMG(Toxic), Foe Hold"
+  ]
+}

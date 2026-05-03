@@ -1,0 +1,26 @@
+{
+  "name": "Wyvern_VHigh",
+  "display_name": "Wyvern VHigh",
+  "display_fullname": "V Wyvern.Wyvern VHigh",
+  "display_help": "Wyvern",
+  "display_short_help": "Wyvern",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_WYVERN/WYVERN_VHIGH.POWERSETS",
+  "icon": "wyvern_vhigh_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Wyvern.Wyvern_VHigh.Knock_Away",
+    "V_Wyvern.Wyvern_VHigh.Eagle_Eye"
+  ],
+  "power_display_names": [
+    "Knock Away",
+    "Eagle Eye"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Smash), Foe Knockback",
+    "Toggle: Self +ACC, +Perception, +Res(DeBuff ToHit), +Regeneration, +Recovery"
+  ]
+}

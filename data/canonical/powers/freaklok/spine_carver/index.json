@@ -1,0 +1,38 @@
+{
+  "name": "Spine_Carver",
+  "display_name": "Spine_Carver",
+  "display_fullname": "Freaklok.Spine Carver",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/SPINE_CARVER.POWERSETS",
+  "icon": "spine_carver_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Spine_Carver.Fling_Thorns",
+    "Freaklok.Spine_Carver.Thorn_Barrage",
+    "Freaklok.Spine_Carver.Transfusion",
+    "Freaklok.Spine_Carver.Siphon_Speed",
+    "Freaklok.Spine_Carver.Speed_Boost"
+  ],
+  "power_display_names": [
+    "Fling Thorns",
+    "Thorn Barrage",
+    "Transfusion",
+    "Siphon Speed",
+    "Speed Boost"
+  ],
+  "power_short_helps": [
+    "Ranged (Cone), Moderate DMG(Lethal), Minor DoT(Toxic), Foe -DEF",
+    "Ranged, Superior DMG(Lethal), Minor DoT(Toxic), Foe Knockback, -DEF",
+    "Ranged, Foe -End, -Regen, Team Heal",
+    "Ranged, Foe -SPD, -Recharge, Self +SPD, +Recharge",
+    "Ranged (Targeted AoE), Ally +SPD, +Recharge, +Recovery, +Res(Slow)"
+  ]
+}

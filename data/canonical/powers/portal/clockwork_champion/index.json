@@ -1,0 +1,62 @@
+{
+  "name": "Clockwork_Champion",
+  "display_name": "Clockwork Champion",
+  "display_fullname": "Portal.Clockwork Champion",
+  "display_help": "Psychic Clockwork",
+  "display_short_help": "Clockwork",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PORTAL/CLOCKWORK_CHAMPION.POWERSETS",
+  "icon": "clockwork_champion_powers_set.png",
+  "requires": "",
+  "power_names": [
+    "Portal.Clockwork_Champion.Resistance",
+    "Portal.Clockwork_Champion.Reassemble",
+    "Portal.Clockwork_Champion.Charged_Bolts",
+    "Portal.Clockwork_Champion.Bash",
+    "Portal.Clockwork_Champion.Pulverize",
+    "Portal.Clockwork_Champion.Whirling_Mace",
+    "Portal.Clockwork_Champion.Crowd_Control",
+    "Portal.Clockwork_Champion.Push_Back",
+    "Portal.Clockwork_Champion.Phalanx_Fighting",
+    "Portal.Clockwork_Champion.Energized_Shield",
+    "Portal.Clockwork_Champion.Taunt"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Reassemble",
+    "Psionic Lightning",
+    "Psycholectric Bash",
+    "Psycholectric Pulverize",
+    "Whirling Sprocket",
+    "Crowd Conduction",
+    "Push Back",
+    "Phalanx Fighting",
+    "The Clock Works",
+    "Taunt"
+  ],
+  "power_short_helps": [
+    "Auto: Res(Lethal, Psionic, Disorient, Sleep, Knockback)",
+    "Post Death Special: Summon Psychic Clockwork",
+    "Ranged, Moderate DMG(Psionic), Foe -End, -Rech",
+    "Melee, Moderate DMG(Smash/Psionic), Foe Disorient, -End, -Rech",
+    "Melee, High DMG(Smash/Psionic), Foe Disorient, -End, -Rech",
+    "PBAoE Melee, Moderate DMG(Smash/Psionic), Foe Disorient, -End, -Rech",
+    "Melee (Cone), High DMG(Smash/Psionic), Foe Knockback, -End, -Rech",
+    "Melee (Cone), Extreme DMG(Smash), Foe Knockdown",
+    "Auto: Self +DEF(All but Psionic, Toxic), +Res(Confuse, Terrorize, Hold, Immobilize, Disorient, Sleep, Knockback, Repel), Special",
+    "Toggle: Self +DEF(All but Psionic, Toxic), +Res(Smash, Lethal, DEF Debuff)",
+    "Ranged (Targeted AoE), Foe Taunt"
+  ]
+}

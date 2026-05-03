@@ -1,0 +1,54 @@
+{
+  "name": "Marine_Affinity",
+  "display_name": "Marine Affinity",
+  "display_fullname": "Mission Maker Secondary.Marine Affinity",
+  "display_help": "Command the various powers of the ocean to buff your allies, and wash away your enemies.",
+  "display_short_help": "Marine Affinity",
+  "available_level": [
+    0,
+    1,
+    3,
+    9,
+    15,
+    19,
+    27,
+    34,
+    37
+  ],
+  "source_file": "DEFS/POWERS/MISSION_MAKER_SECONDARY/MARINE_AFFINITY.POWERSETS",
+  "icon": "nature_affinity_set.png",
+  "requires": "",
+  "power_names": [
+    "Mission_Maker_Secondary.Marine_Affinity.Shoal_Rush",
+    "Mission_Maker_Secondary.Marine_Affinity.Soothing_Wave",
+    "Mission_Maker_Secondary.Marine_Affinity.Toroidal_Bubble",
+    "Mission_Maker_Secondary.Marine_Affinity.Whitecap",
+    "Mission_Maker_Secondary.Marine_Affinity.Tide_Pool",
+    "Mission_Maker_Secondary.Marine_Affinity.Brine",
+    "Mission_Maker_Secondary.Marine_Affinity.Shifting_Tides",
+    "Mission_Maker_Secondary.Marine_Affinity.Wellspring",
+    "Mission_Maker_Secondary.Marine_Affinity.Call_Depths"
+  ],
+  "power_display_names": [
+    "Shoal Rush",
+    "Soothing Wave",
+    "Toroidal Bubble",
+    "Whitecap",
+    "Tide Pool",
+    "Brine",
+    "Shifting Tides",
+    "Barrier Reef",
+    "Power of the Depths"
+  ],
+  "power_short_helps": [
+    "Targeted AoE, Foe -DEF, -SPD, Special",
+    "Ranged (Cone), Team Heal, Enemy Damage Debuff",
+    "PBAoE, Team +Res(All, End Drain), +Endurance, +Recovery, +Jump",
+    "Targeted AoE, Minor DMG(Cold), Foe Knockdown, -Resist(All), Self Teleport, Special",
+    "Location AoE, Team +DMG, Foe -DMG, -SPD, -Jump, -Stealth, Special",
+    "Ranged, Foe -Resist(All), -MaxHP",
+    "Toggle: Targeted AoE, Team +Damage, +To Hit, +Recharge, Special Damage",
+    "Summon Barrier Reef: Team +Absorb, +Defense (All)",
+    "PBAoE, Team +MaxHP, +MaxEnd, +Regen, +Range"
+  ]
+}

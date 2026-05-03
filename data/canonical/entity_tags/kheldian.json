@@ -1,0 +1,30 @@
+{
+  "tag": "Kheldian",
+  "bears": [
+    [
+      "miscellaneous_labyrinth_shadowstar",
+      [
+        "Coagulated Pollution"
+      ]
+    ],
+    [
+      "miscellaneous_labyrinth_sunstorm",
+      [
+        "Coagulated Pollution"
+      ]
+    ],
+    [
+      "peacebringers_moonfire_boss",
+      [
+        "Moonfire"
+      ]
+    ],
+    [
+      "peacebringers_sunstorm",
+      [
+        "Sunstorm"
+      ]
+    ]
+  ],
+  "affects": []
+}

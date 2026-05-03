@@ -1,0 +1,26 @@
+{
+  "name": "Electric_Armor",
+  "display_name": "Electric Armor",
+  "display_fullname": "Redirects.Electric Armor",
+  "display_help": "Electric Armor",
+  "display_short_help": "Electric Armor",
+  "available_level": [
+    31,
+    29
+  ],
+  "source_file": "DEFS/POWERS/REDIRECTS/ELECTRIC_ARMOR.POWERSETS",
+  "icon": "blind_set.png",
+  "requires": "",
+  "power_names": [
+    "Redirects.Electric_Armor.EM_Pulse",
+    "Redirects.Electric_Armor.Power_Surge"
+  ],
+  "power_display_names": [
+    "EM Pulse",
+    "Power Surge"
+  ],
+  "power_short_helps": [
+    "Hold, -Regen",
+    "Self, +Res(Special)"
+  ]
+}

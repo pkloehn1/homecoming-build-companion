@@ -1,0 +1,26 @@
+{
+  "name": "Warrior_Ranged_Lt_2",
+  "display_name": "Warrior_Ranged_Lt_2",
+  "display_fullname": "Warriors New.Warrior Ranged Lt 2",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    39
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_RANGED_LT_2.POWERSETS",
+  "icon": "warrior_ranged_lt_2_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Ranged_Lt_2.Crossbow",
+    "Warriors_New.Warrior_Ranged_Lt_2.Crystal_Arrow"
+  ],
+  "power_display_names": [
+    "Crossbow",
+    "Ice Arrow"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Lethal), Foe Knockback",
+    "Ranged, Moderate DMG(Cold/Lethal), Foe Sleep"
+  ]
+}

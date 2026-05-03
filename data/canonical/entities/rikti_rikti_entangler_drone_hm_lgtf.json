@@ -1,0 +1,90 @@
+{
+  "name": "Rikti_Rikti_Entangler_Drone_HM_LGTF",
+  "gender": "GENDER_MALE",
+  "group_name": "Rikti",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Electronic"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 50,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_MINION",
+    "ai_config": "Rikti_Drone",
+    "character_class_name": "minion_praetoriangrunt",
+    "description": "These extremely advanced defensive chasers utilize technology foreign to Primal Earth, using Rikti dimension-native 'time-eater' microbes as a source of entropic nullification and then channeling that into an energy beam that can leave the target suspended in slower time dilation.<br><br>For anything that moves, this will leave them slower and less quickly able to respond while the chaser is focusing it's beam on them.",
+    "group_description": "Rikti",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 0.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Rikti.Rikti_Entangler_Turret.Rikti_Plasma_Turret",
+      "Rikti.Rikti_Drone_Movement.Fly",
+      "Rikti.Rikti_Drone_Movement.Fly_fx",
+      "Rikti.Rikti_Drone_Defense.Resistance"
+    ],
+    "power_display_names": [
+      "Microbial Entropic Entanglement",
+      "Fly",
+      "Fly fx",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Rikti",
+        "power_set": "Rikti_Entangler_Turret",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Rikti",
+        "power_set": "Rikti_Drone_Movement",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Rikti",
+        "power_set": "Rikti_Drone_Defense",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 50,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Entropic Entangler Chaser"
+      ],
+      "costumes": [
+        "RiftRunners_Rikti_Chaser_01"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Nemesis_Tactician",
+  "display_name": "Nemesis_Tactician",
+  "display_fullname": "Nemesis.Nemesis Tactician",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_TACTICIAN.POWERSETS",
+  "icon": "nemesis_medic_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Tactician.Vengeance",
+    "Nemesis.Nemesis_Tactician.Resistance"
+  ],
+  "power_display_names": [
+    "Tactical Failure",
+    "Tactical Defense"
+  ],
+  "power_short_helps": [
+    "Team Confusion",
+    "Auto: Self +DEF(AoE), Vulnerable(Melee)"
+  ]
+}

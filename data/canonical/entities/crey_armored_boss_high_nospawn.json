@@ -1,0 +1,99 @@
+{
+  "name": "Crey_Armored_Boss_High_NoSpawn",
+  "gender": "GENDER_MALE",
+  "group_name": "Crey",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 35,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Crey_Protector",
+    "character_class_name": "boss_grunt",
+    "description": "With their powerful force fields, heavy weapons, and advanced training, these armor clad leaders carry enough firepower to stop a tank. They're also almost as hard to hurt, though they are vulnerable to mental assaults.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.5,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Crey.Crey_Protector_High.Heavy_Cryo_Rifle",
+      "Crey.Crey_Protector_High.Sleep_Grenade",
+      "Crey.Crey_Protector_High.Liquid_Nitrogen",
+      "Crey.Crey_Protector_High.Buttstroke",
+      "Crey.Crey_Protector_High.Elbow_Strike",
+      "Crey.Crey_Protector_High.Dispersion_Bubble",
+      "Crey.Crey_Lt_Boss_Armored_Defense.Resistance"
+    ],
+    "power_display_names": [
+      "Heavy Cryo Rifle",
+      "Sleep Grenade",
+      "Liquid Nitrogen",
+      "Buttstroke",
+      "Elbow Strike",
+      "Dispersion Bubble",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Crey",
+        "power_set": "Crey_Protector_High",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Crey",
+        "power_set": "Crey_Lt_Boss_Armored_Defense",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 35,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Crey Security Chief"
+      ],
+      "costumes": [
+        "CRE_06",
+        "CRE_07",
+        "CRE_08",
+        "CRE_09",
+        "CRE_10",
+        "CRE_11"
+      ]
+    }
+  ]
+}

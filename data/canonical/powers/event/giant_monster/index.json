@@ -1,0 +1,22 @@
+{
+  "name": "Giant_Monster",
+  "display_name": "Giant Monster",
+  "display_fullname": "Event.Giant Monster",
+  "display_help": "Giant Monster",
+  "display_short_help": "Giant Monster",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/GIANT_MONSTER.POWERSETS",
+  "icon": "giant_monster_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Giant_Monster.GM_HP"
+  ],
+  "power_display_names": [
+    "Colossal"
+  ],
+  "power_short_helps": [
+    "Scaling MaxHP (Special)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Galaxy_Lt",
+  "display_name": "Galaxy_Lt",
+  "display_fullname": "Council.Galaxy Lt",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    39,
+    39,
+    39
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/GALAXY_LT.POWERSETS",
+  "icon": "galaxy_lt_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Galaxy_Lt.Dark_Detonation",
+    "Council.Galaxy_Lt.Gravitic_Emanation",
+    "Council.Galaxy_Lt.Stygian_Return"
+  ],
+  "power_display_names": [
+    "Dark Detonation",
+    "Gravitic Emanation",
+    "Stygian Return"
+  ],
+  "power_short_helps": [
+    "Ranged (Targeted AoE), Moderate DMG(Negative), Foe Knockback, -Recharge, -SPD",
+    "Ranged (Cone), Moderate DMG(Negative), Foe Disorient, Knockback, -Recharge, -SPD",
+    "Self Rez, Special"
+  ]
+}

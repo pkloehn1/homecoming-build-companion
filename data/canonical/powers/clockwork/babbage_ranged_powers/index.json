@@ -1,0 +1,42 @@
+{
+  "name": "Babbage_Ranged_Powers",
+  "display_name": "Babbage_Ranged_Powers",
+  "display_fullname": "Clockwork.Babbage Ranged Powers",
+  "display_help": "Clockwork",
+  "display_short_help": "Clockwork",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CLOCKWORK/BABBAGE_RANGED_POWERS.POWERSETS",
+  "icon": "babbage_ranged_powers_set.png",
+  "requires": "",
+  "power_names": [
+    "Clockwork.Babbage_Ranged_Powers.Lightning_Bolt",
+    "Clockwork.Babbage_Ranged_Powers.Tesla_Cage",
+    "Clockwork.Babbage_Ranged_Powers.Summon_Clockwork",
+    "Clockwork.Babbage_Ranged_Powers.Lightning_Field",
+    "Clockwork.Babbage_Ranged_Powers.Ball_Lightning",
+    "Clockwork.Babbage_Ranged_Powers.Short_Circuit"
+  ],
+  "power_display_names": [
+    "Lightning Bolt",
+    "Tesla Cage",
+    "Summon Clockwork",
+    "Lightning Field",
+    "Ball Lightning",
+    "Short Circuit"
+  ],
+  "power_short_helps": [
+    "Ranged, High DMG(Energy), Foe -End, -Recovery",
+    "Ranged (Chain AoE), Heavy DMG(Energy), Foe Hold, -End, -Recovery",
+    "Summon Clockwork",
+    "Toggle: PBAoE, Minor DoT(Energy), Foe -End",
+    "Ranged (Targeted AoE), Moderate DoT(Energy), Foe -End, -Recovery",
+    "PBAoE, Moderate DoT(Energy), Foe -End, -Recovery, Special vs. Robots"
+  ]
+}

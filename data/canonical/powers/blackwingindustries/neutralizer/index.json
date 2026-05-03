@@ -1,0 +1,58 @@
+{
+  "name": "Neutralizer",
+  "display_name": "BWI PEACE Neutralizer",
+  "display_fullname": "BlackwingIndustries.BWI PEACE Neutralizer",
+  "display_help": "Blackwing Industries",
+  "display_short_help": "Blackwing Industries",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/BLACKWINGINDUSTRIES/NEUTRALIZER.POWERSETS",
+  "icon": "bwi_neutralizer_set.png",
+  "requires": "",
+  "power_names": [
+    "BlackwingIndustries.Neutralizer.Missile_Volley",
+    "BlackwingIndustries.Neutralizer.Burst",
+    "BlackwingIndustries.Neutralizer.Plasma_Strafe",
+    "BlackwingIndustries.Neutralizer.Focused_Burst",
+    "BlackwingIndustries.Neutralizer.Penetrate",
+    "BlackwingIndustries.Neutralizer.Missile_Barrage",
+    "BlackwingIndustries.Neutralizer.EMP_Rockets",
+    "BlackwingIndustries.Neutralizer.Targeted_Strike",
+    "BlackwingIndustries.Neutralizer.Nerve_Gas_Rockets",
+    "BlackwingIndustries.Neutralizer.Assault"
+  ],
+  "power_display_names": [
+    "Missile Volley",
+    "Burst",
+    "Plasma Strafe",
+    "Focused Burst",
+    "Penetrate",
+    "Missile Barrage",
+    "EMP Rockets",
+    "Targeted Strike",
+    "Nerve Gas Rockets",
+    "Assault"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Fire/Lethal), Minor DoT(Toxic), Foe Knockdown",
+    "Ranged, High DMG(Energy/Fire), Foe Knockback, -Regen",
+    "Ranged (Cone), Moderate DMG(Energy/Fire), Minor DoT(Energy), Foe Knockback, -Regen",
+    "Ranged, Heavy DMG(Energy/Fire), Minor DoT(Energy), Foe Knockback, -Regen",
+    "Ranged (Narrow Cone), Extreme DMG(Energy/Lethal), Foe Knockdown, -Res(All)",
+    "Ranged (Targeted AoE), Moderate DMG(Fire/Lethal), Minor DoT(Toxic), Foe Knockback",
+    "Ranged (Targeted AoE), Moderate DMG(Energy/Lethal), Foe -End, -Regeneration, -Recovery",
+    "Ranged (Targeted AoE), Extreme DMG(Energy/Lethal), Foe Knockback, -Res(All)",
+    "Ranged (Targeted AoE), Minor DMG(Fire/Lethal), Moderate DoT(Toxic), Foe Hold, -DMG",
+    "Toggle: PBAoE, Team +DMG, +Res(Taunt, Placate)"
+  ]
+}

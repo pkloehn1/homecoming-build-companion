@@ -1,0 +1,26 @@
+{
+  "name": "Rikti_Monkey_Movement_HM",
+  "display_name": "Rikti Monkey Movement (Advanced Mode)",
+  "display_fullname": "Rikti.Rikti Monkey Movement (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIKTI_MONKEY_MOVEMENT_HM.POWERSETS",
+  "icon": "rikti_monkey_movement_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rikti_Monkey_Movement_HM.Monkey_Jumping",
+    "Rikti.Rikti_Monkey_Movement_HM.Fly"
+  ],
+  "power_display_names": [
+    "Simian Schmoovement",
+    "Fly"
+  ],
+  "power_short_helps": [
+    "Self Auto, +Jump, +Speed",
+    "Self Travel"
+  ]
+}

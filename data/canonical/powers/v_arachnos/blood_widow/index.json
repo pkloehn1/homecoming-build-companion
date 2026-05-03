@@ -1,0 +1,34 @@
+{
+  "name": "Blood_Widow",
+  "display_name": "Blood_Widow",
+  "display_fullname": "V Arachnos.Blood Widow",
+  "display_help": "Arachnos",
+  "display_short_help": "Arachnos",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_ARACHNOS/BLOOD_WIDOW.POWERSETS",
+  "icon": "blood_widow_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Arachnos.Blood_Widow.Poison_Dart",
+    "V_Arachnos.Blood_Widow.Swipe",
+    "V_Arachnos.Blood_Widow.Lunge",
+    "V_Arachnos.Blood_Widow.Combat_Training"
+  ],
+  "power_display_names": [
+    "Poison Dart",
+    "Swipe",
+    "Lunge",
+    "Combat Training"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Lethal), Minor DoT(Toxic), Foe -Regeneration",
+    "Melee, Light DMG(Lethal), Minor DoT(Toxic), Foe -SPD, -Recharge",
+    "Melee, High DMG(Lethal), Minor DoT(Toxic), Foe -SPD, -Recharge",
+    "Auto: Self +DEF(Melee), +ACC, +Res(Debuff ToHit), Scaling DMG Resistance"
+  ]
+}

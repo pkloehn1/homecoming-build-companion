@@ -1,0 +1,42 @@
+{
+  "name": "Freak_Psycho",
+  "display_name": "Freak_Psycho",
+  "display_fullname": "Freaklok.Freak Psycho",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/FREAK_PSYCHO.POWERSETS",
+  "icon": "freak_psycho_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Freak_Psycho.Levitate",
+    "Freaklok.Freak_Psycho.Dominate",
+    "Freaklok.Freak_Psycho.Subdue",
+    "Freaklok.Freak_Psycho.Psychic_Scream",
+    "Freaklok.Freak_Psycho.Psychic_Shockwave",
+    "Freaklok.Freak_Psycho.Mass_Levitate"
+  ],
+  "power_display_names": [
+    "Levitate",
+    "Dominate",
+    "Subdue",
+    "Psychic Scream",
+    "Psychic Shockwave",
+    "Mass Levitate"
+  ],
+  "power_short_helps": [
+    "Ranged, Heavy DMG(Smash), Foe Knockup, -Fly",
+    "Ranged, Moderate DMG(Psionic), Foe Hold",
+    "Ranged, Heavy DMG(Psionic), Foe Immobilize",
+    "Ranged (Cone), Moderate DMG(Psionic), Foe -Recharge",
+    "PBAoE Melee, Moderate DMG(Psionic), Foe Disorient, -Recharge",
+    "PBAoE Melee, Heavy DMG(Smash), DoT(Psionic), Foe Knockup"
+  ]
+}

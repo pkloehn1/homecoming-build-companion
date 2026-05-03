@@ -1,0 +1,54 @@
+{
+  "name": "Labyrinth_Cyclops",
+  "display_name": "Labyrinth Cyclops",
+  "display_fullname": "Event.Labyrinth Cyclops",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_CYCLOPS.POWERSETS",
+  "icon": "war_mace_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Cyclops.Bash",
+    "Event.Labyrinth_Cyclops.Pulverize",
+    "Event.Labyrinth_Cyclops.Jawbreaker",
+    "Event.Labyrinth_Cyclops.Build_Up",
+    "Event.Labyrinth_Cyclops.Clobber",
+    "Event.Labyrinth_Cyclops.Whirling_Mace",
+    "Event.Labyrinth_Cyclops.Shatter",
+    "Event.Labyrinth_Cyclops.Crowd_Control",
+    "Event.Labyrinth_Cyclops.Taunt"
+  ],
+  "power_display_names": [
+    "Bash",
+    "Pulverize",
+    "Jawbreaker",
+    "Build Up",
+    "Clobber",
+    "Whirling Mace",
+    "Shatter",
+    "Crowd Control",
+    "General's Challenge"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Negative), Minor Disorient, -MaxHP",
+    "Melee, High DMG(Negative), Minor Disorient, -MaxHP",
+    "Melee, Superior DMG(Negative), Knockup, -MaxHP",
+    "Self +DMG, +To Hit",
+    "Melee, Extreme DMG(Negative), Disorient, -MaxHP",
+    "PBAoE Melee, Moderate DMG(Negative), Minor Disorient, -MaxHP",
+    "Melee (Cone), DMG(Negative), Knockback, -MaxHP",
+    "Melee (Cone), Moderate DMG(Negative), Knockback, -MaxHP",
+    "Autohit, Ranged (Targeted AoE), Foe Taunt"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Fortunata_Defense",
+  "display_name": "Fortunata_Defense",
+  "display_fullname": "V Arachnos.Fortunata Defense",
+  "display_help": "Arachnos",
+  "display_short_help": "Arachnos",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_ARACHNOS/FORTUNATA_DEFENSE.POWERSETS",
+  "icon": "fortunata_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Arachnos.Fortunata_Defense.Combat_Training",
+    "V_Arachnos.Fortunata_Defense.Foresight"
+  ],
+  "power_display_names": [
+    "Combat Training",
+    "Foresight"
+  ],
+  "power_short_helps": [
+    "Auto: Self +DEF(Melee), +ACC, +Res(ToHit Debuff), Scaling DMG Resistance",
+    "Auto: Self +Res(Confuse, Fear, Hold, Immobilize, Disorient, Sleep, Psionic), +DEF(Melee, Ranged, AoE), Scaling DMG Resistance"
+  ]
+}

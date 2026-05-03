@@ -1,0 +1,22 @@
+{
+  "name": "Attuned_Cupids_Crush_A",
+  "display_name": "Attuned Cupids Crush A",
+  "display_fullname": "Boosts.Attuned Cupids Crush A",
+  "display_help": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances damage by {Boost.Attrib.Damage.Scale}%. Increases recharge rate by {Boost.Attrib.RechargeTime.Scale}%.",
+  "display_short_help": "Set: Cupid's Crush",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/ATTUNED_CUPIDS_CRUSH_A.POWERSETS",
+  "icon": "e_icon_cupids_crush.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Attuned_Cupids_Crush_A.Attuned_Cupids_Crush_A"
+  ],
+  "power_display_names": [
+    "Cupid's Crush: Damage/Recharge"
+  ],
+  "power_short_helps": [
+    "+DMG, +Rech"
+  ]
+}

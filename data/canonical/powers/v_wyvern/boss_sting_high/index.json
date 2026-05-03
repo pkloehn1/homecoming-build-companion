@@ -1,0 +1,26 @@
+{
+  "name": "Boss_Sting_High",
+  "display_name": "Boss Sting High",
+  "display_fullname": "V Wyvern.Boss Sting High",
+  "display_help": "Wyvern",
+  "display_short_help": "Wyvern",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_WYVERN/BOSS_STING_HIGH.POWERSETS",
+  "icon": "boss_sting_high_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Wyvern.Boss_Sting_High.Talon_Stunning_Shot",
+    "V_Wyvern.Boss_Sting_High.Talon_Entangling_Arrow"
+  ],
+  "power_display_names": [
+    "Talon Stunning Shot",
+    "Talon Entangling Arrow"
+  ],
+  "power_short_helps": [
+    "Ranged, High DMG(Smash), Foe Disorient",
+    "Ranged, Foe Immobilize, -SPD, -Recharge, -Fly, -Jump"
+  ]
+}

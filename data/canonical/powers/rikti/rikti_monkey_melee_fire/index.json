@@ -1,0 +1,38 @@
+{
+  "name": "Rikti_Monkey_Melee_Fire",
+  "display_name": "Rikti Monkey Melee Fire",
+  "display_fullname": "Rikti.Rikti Monkey Melee Fire",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIKTI_MONKEY_MELEE_FIRE.POWERSETS",
+  "icon": "rikti_monkey_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rikti_Monkey_Melee_Fire.Monkey_Brawl2",
+    "Rikti.Rikti_Monkey_Melee_Fire.Monkey_Brawl",
+    "Rikti.Rikti_Monkey_Melee_Fire.Psychic_Dart",
+    "Rikti.Rikti_Monkey_Melee_Fire.Gas",
+    "Rikti.Rikti_Monkey_Melee_Fire.Resistance"
+  ],
+  "power_display_names": [
+    "Burning Simian Strike",
+    "Burning Primate Punch",
+    "Psychic Dart",
+    "Gas",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Fire/Smash)",
+    "Melee, Light DMG(Fire/Smash)",
+    "Ranged, Moderate DMG(Psionic), Foe -Recharge",
+    "Post Death AoE Special",
+    "Auto Res Fire"
+  ]
+}

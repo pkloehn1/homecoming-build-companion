@@ -1,0 +1,30 @@
+{
+  "name": "Warrior_Sword_Lt",
+  "display_name": "Warrior_Sword_Lt",
+  "display_fullname": "Warriors New.Warrior Sword Lt",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_SWORD_LT.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Sword_Lt.Parry",
+    "Warriors_New.Warrior_Sword_Lt.Whirling_Sword",
+    "Warriors_New.Warrior_Sword_Lt.Hack"
+  ],
+  "power_display_names": [
+    "Parry",
+    "Whirling Sword",
+    "Hack"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Lethal), Self +DEF(Melee, Smash, Lethal)",
+    "PBAoE Melee, Moderate DMG(Lethal), Minor DoT(Lethal), Foe -DEF",
+    "Melee, High DMG(Lethal), Foe -DEF"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Freaklok_Pets_Gremlin",
+  "display_name": "Freaklok_Pets_Gremlin",
+  "display_fullname": "Freaklok.Freaklok Pets Gremlin",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/FREAKLOK_PETS_GREMLIN.POWERSETS",
+  "icon": "freaklok_pets_gremlin_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Freaklok_Pets_Gremlin.Electric_Brawl",
+    "Freaklok.Freaklok_Pets_Gremlin.Jolting_Chain",
+    "Freaklok.Freaklok_Pets_Gremlin.Shock",
+    "Freaklok.Freaklok_Pets_Gremlin.Resist_Energy"
+  ],
+  "power_display_names": [
+    "Electric Brawl",
+    "Jolting Chain",
+    "Shock",
+    "Resist Energy"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Energy), Foe -End, -Recovery",
+    "Ranged (Chain AoE), Minor DMG(Energy), Foe Knockdown, -End, -Recovery",
+    "Auto: PBAoE, Minor DoT(Energy)",
+    "Auto: Self +Res(Smash, Lethal, Energy), +SPD, +Jump"
+  ]
+}

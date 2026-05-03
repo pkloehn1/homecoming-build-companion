@@ -1,0 +1,34 @@
+{
+  "name": "Circle_Agony_High",
+  "display_name": "Circle_Agony_High",
+  "display_fullname": "CircleOfThorns.Circle Agony High",
+  "display_help": "Circle of Thorns",
+  "display_short_help": "Circle of Thorns",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CIRCLEOFTHORNS/CIRCLE_AGONY_HIGH.POWERSETS",
+  "icon": "circle_agony_ranged_set.png",
+  "requires": "",
+  "power_names": [
+    "CircleOfThorns.Circle_Agony_High.Dreadful_Wail",
+    "CircleOfThorns.Circle_Agony_High.Fulcrum_Shift",
+    "CircleOfThorns.Circle_Agony_High.World_of_Pain",
+    "CircleOfThorns.Circle_Agony_High.Sonic_Shield"
+  ],
+  "power_display_names": [
+    "Dreadful Wail",
+    "Fulcrum Shift",
+    "World of Pain",
+    "Sonic Shield"
+  ],
+  "power_short_helps": [
+    "PBAoE, Extreme DMG(Energy/Smash), Foe Disorient, -Resist(All)",
+    "Ranged (Targeted AoE), Foe -DMG, Team +DMG",
+    "PBAoE, Team +ToHit, +DMG, +Res(All DMG, Placate)",
+    "Toggle: Self +Res(Smashing/Lethal/Energy)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Kraken_Defense_HM",
+  "display_name": "Kraken Defense (Advanced Mode)",
+  "display_fullname": "Hydra.Kraken Defense (Advanced Mode)",
+  "display_help": "Hydra",
+  "display_short_help": "Hydra",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/HYDRA/KRAKEN_DEFENSE_HM.POWERSETS",
+  "icon": "kraken_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Hydra.Kraken_Defense_HM.Resistance",
+    "Hydra.Kraken_Defense_HM.Toxic_Aura",
+    "Hydra.Kraken_Defense_HM.Wolf_Jumping"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Toxic Aura",
+    "Morphing Flesh"
+  ],
+  "power_short_helps": [
+    "Resistance",
+    "Toggle: PBAoE, Minor DoT(Toxic), Foe -DMG",
+    "Auto: Self +Jump, +Speed"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "UnnamedOne",
+  "display_name": "UnnamedOne",
+  "display_fullname": "BanishedPantheon.UnnamedOne",
+  "display_help": "Banished Pantheon",
+  "display_short_help": "Banished Pantheon",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/BANISHEDPANTHEON/UNNAMEDONE.POWERSETS",
+  "icon": "unnamedone_set.png",
+  "requires": "",
+  "power_names": [
+    "BanishedPantheon.UnnamedOne.Pummel",
+    "BanishedPantheon.UnnamedOne.Poison_Spears",
+    "BanishedPantheon.UnnamedOne.Foot_Stomp",
+    "BanishedPantheon.UnnamedOne.Dark_Obliteration",
+    "BanishedPantheon.UnnamedOne.Psychic_Scream",
+    "BanishedPantheon.UnnamedOne.Explosive_Blast",
+    "BanishedPantheon.UnnamedOne.Neutron_Bomb",
+    "BanishedPantheon.UnnamedOne.Resistance"
+  ],
+  "power_display_names": [
+    "Pummel",
+    "Poison Spears",
+    "Foot Stomp",
+    "Dark Obliteration",
+    "Psychic Scream",
+    "Explosive Blast",
+    "Neutron Bomb",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Melee (Cone), High DMG(Smash), Foe Disorient, Knockback",
+    "Ranged (Cone), Heavy DMG(Lethal), Minor DoT(Toxic)",
+    "PBAoE, Heavy DMG(Smash), Foe Knockback, Disorient",
+    "Ranged (Targeted AoE), DMG(Negative), Foe -ACC",
+    "Ranged (Cone), Light DMG(Psionic), Foe -Recharge",
+    "Ranged (Targeted AoE), DMG(Smash/Energy), Foe Knockback",
+    "-DEF",
+    "Resistance"
+  ]
+}

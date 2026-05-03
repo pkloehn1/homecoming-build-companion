@@ -1,0 +1,34 @@
+{
+  "name": "Labyrinth_Aether",
+  "display_name": "Labyrinth Aether",
+  "display_fullname": "Event.Labyrinth Aether",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_AETHER.POWERSETS",
+  "icon": "werewolf_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Aether.Fast_Healing",
+    "Event.Labyrinth_Aether.Fly",
+    "Event.Labyrinth_Aether.Health",
+    "Event.Labyrinth_Aether.Stamina"
+  ],
+  "power_display_names": [
+    "Unstable Energy",
+    "Fly",
+    "Fog of Catastrophe",
+    "Pollution of Catastrophe"
+  ],
+  "power_short_helps": [
+    "Auto: No Regeneration, +RES(Debuffs)",
+    "Self Travel",
+    "Scaling Health",
+    "Scaling Health"
+  ]
+}

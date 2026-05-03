@@ -1,0 +1,46 @@
+{
+  "name": "Giant_Ghost_of_Scrapyard",
+  "display_name": "Giant Ghost of Scrapyard",
+  "display_fullname": "V Scrapyarders.Giant Ghost of Scrapyard",
+  "display_help": "Scrapyarders",
+  "display_short_help": "Scrapyarders",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_SCRAPYARDERS/GIANT_GHOST_OF_SCRAPYARD.POWERSETS",
+  "icon": "giant_ghost_of_scrapyard_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Scrapyarders.Giant_Ghost_of_Scrapyard.Maul",
+    "V_Scrapyarders.Giant_Ghost_of_Scrapyard.Fissure",
+    "V_Scrapyarders.Giant_Ghost_of_Scrapyard.Spirit_Wrack",
+    "V_Scrapyarders.Giant_Ghost_of_Scrapyard.Wave_of_Shadows",
+    "V_Scrapyarders.Giant_Ghost_of_Scrapyard.Life_Drain",
+    "V_Scrapyarders.Giant_Ghost_of_Scrapyard.Necroplasmic_Grasp",
+    "V_Scrapyarders.Giant_Ghost_of_Scrapyard.Resistance"
+  ],
+  "power_display_names": [
+    "Maul",
+    "Fissure",
+    "Spirit Wrack",
+    "Wave of Shadows",
+    "Life Drain",
+    "Necroplasmic Grasp",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Melee (Cone), Heavy DMG(Smash), Foe Knockback, Disorient",
+    "Close (Targeted AoE), Heavy DMG(Smash), Foe Knockdown, Disorient",
+    "Ranged, High DMG(Negative), Foe -ToHit",
+    "Ranged (Cone), Moderate DoT(Negative), Foe -ToHit",
+    "Ranged, High DMG(Negative), Foe -ToHit, Self Heal",
+    "Melee, Extreme DoT(Negative), Foe Hold",
+    "Resistance"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "name": "Crey_Altruist_Slaughterscape",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Crey_Altruists",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Signatures_Ranged",
+    "character_class_name": "boss_grunt",
+    "description": "Slaughterscape is a member of the Altruist Division, a public-facing super group comprised of Crey's new Real ID Protectors, heroes recruited from outside of Paragon City. She was recruited to take the place of a team member who was removed by their leader. She can grow metallic shrapnel from her body, allowing her to pelt enemies from afar, tearing into them while pinning them in place.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Crey_Altruist.Altruist_Slaughterscape_Offense.Skewer",
+      "Crey_Altruist.Altruist_Slaughterscape_Offense.Impale",
+      "Crey_Altruist.Altruist_Slaughterscape_Offense.Ripper",
+      "Crey_Altruist.Altruist_Slaughterscape_Offense.Thorn_Barrage",
+      "Crey_Altruist.Altruist_Slaughterscape_Control.Entangling_Thorns",
+      "Crey_Altruist.Altruist_Slaughterscape_Control.Rooting_Thorns",
+      "Crey_Altruist.Altruist_Slaughterscape_Control.Paralytic_Thorns",
+      "Crey_Altruist.Altruist_Slaughterscape_Control.Thorntrops"
+    ],
+    "power_display_names": [
+      "Skewer",
+      "Impale",
+      "Ripper",
+      "Thorn Barrage",
+      "Entangling Thorns",
+      "Rooting Thorns",
+      "Paralytic Thorns",
+      "Thorntrops"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_Slaughterscape_Offense",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_Slaughterscape_Control",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Slaughterscape"
+      ],
+      "costumes": [
+        "Model_Slaughterscape"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "tag": "T2 Hellfire Gargoyle",
+  "bears": [
+    [
+      "Mastermind Summon.Demon Summoning.Abyssal Empowerment",
+      "mastermind_summon.demon_summoning.abyssal_empowerment"
+    ],
+    [
+      "Mastermind Summon.Demon Summoning.Enchant Demon",
+      "mastermind_summon.demon_summoning.enchant_demon"
+    ]
+  ],
+  "affects": []
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Rikti_Entangler_Turret",
+  "display_name": "Rikti Entangler Turret",
+  "display_fullname": "Rikti.Rikti Entangler Turret",
+  "display_help": "Rikti",
+  "display_short_help": "Base Defenses",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIKTI_ENTANGLER_TURRET.POWERSETS",
+  "icon": "rikti_plasma_turret_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rikti_Entangler_Turret.Rikti_Plasma_Turret"
+  ],
+  "power_display_names": [
+    "Microbial Entropic Entanglement"
+  ],
+  "power_short_helps": [
+    "Ranged: Foe Slow, -Recharge, -Def, -Regeneration, -Heal"
+  ]
+}

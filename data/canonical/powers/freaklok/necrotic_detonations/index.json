@@ -1,0 +1,42 @@
+{
+  "name": "Necrotic_Detonations",
+  "display_name": "Necrotic_Detonations",
+  "display_fullname": "Freaklok.Necrotic Detonations",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/NECROTIC_DETONATIONS.POWERSETS",
+  "icon": "necrotic_detonations_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Necrotic_Detonations.Immolation",
+    "Freaklok.Necrotic_Detonations.Lok_Reboot",
+    "Freaklok.Necrotic_Detonations.Corpse_Gas",
+    "Freaklok.Necrotic_Detonations.Propane",
+    "Freaklok.Necrotic_Detonations.Sticky_Corpse",
+    "Freaklok.Necrotic_Detonations.Propane_Male_Cinematic"
+  ],
+  "power_display_names": [
+    "Immolation",
+    "Lok Reboot",
+    "Corpse Gas",
+    "Propane Blast",
+    "Sticky Corpse Puddle",
+    "Propane Blast"
+  ],
+  "power_short_helps": [
+    "Post Death Special: PBAoE, Ally +ToHit, +DMG, +Recharge",
+    "Post Death Special: PBAoE, Foe -End, -Recovery",
+    "Post Death Special: Location AoE, DoT(Toxic), Foe -DEF",
+    "Post Death Special: PBAoE, Heavy DMG(Fire), Location AoE, DoT(Fire), Foe Knockdown",
+    "Post Death Special: PBAoE, Foe -SPD, -Recharge, -Fly, -Jump",
+    "Post Death Special: PBAoE, Heavy DMG(Fire), Location AoE, DoT(Fire), Foe Knockdown"
+  ]
+}

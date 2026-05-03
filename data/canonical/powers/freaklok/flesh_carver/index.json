@@ -1,0 +1,46 @@
+{
+  "name": "Flesh_Carver",
+  "display_name": "Flesh_Carver",
+  "display_fullname": "Freaklok.Flesh Carver",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/FLESH_CARVER.POWERSETS",
+  "icon": "flesh_carver_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Flesh_Carver.Surgical_Electric_Saw",
+    "Freaklok.Flesh_Carver.Chop",
+    "Freaklok.Flesh_Carver.Eviscerate",
+    "Freaklok.Flesh_Carver.Pendulum",
+    "Freaklok.Flesh_Carver.Lightning_Bolt",
+    "Freaklok.Flesh_Carver.Heal_Other",
+    "Freaklok.Flesh_Carver.Resurrect_Int"
+  ],
+  "power_display_names": [
+    "Surgical Electric Saw",
+    "Chop",
+    "Eviscerate",
+    "Pendulum",
+    "Lightning Bolt",
+    "Heal Other",
+    "Resurrect Freaklok"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal)",
+    "Melee, High DMG(Lethal), Foe Knockback",
+    "Melee (Cone), Superior DMG(Lethal), Chance for Critical Hit",
+    "Melee (Targeted AoE), Heavy DMG(Lethal), Foe Knockback",
+    "Ranged, High DMG(Energy), Foe -End, -Recovery",
+    "Melee, Ally Heal",
+    "Melee, Ally Rez"
+  ]
+}

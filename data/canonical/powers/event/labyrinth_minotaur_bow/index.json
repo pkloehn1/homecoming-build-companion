@@ -1,0 +1,42 @@
+{
+  "name": "Labyrinth_Minotaur_Bow",
+  "display_name": "Labyrinth Minotaur Bow",
+  "display_fullname": "Event.Labyrinth Minotaur Bow",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_MINOTAUR_BOW.POWERSETS",
+  "icon": "werewolf_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Minotaur_Bow.Aimed_Shot",
+    "Event.Labyrinth_Minotaur_Bow.Fistful_of_Arrows",
+    "Event.Labyrinth_Minotaur_Bow.Blazing_Arrow",
+    "Event.Labyrinth_Minotaur_Bow.Explosive_Arrow",
+    "Event.Labyrinth_Minotaur_Bow.Ranged_Shot",
+    "Event.Labyrinth_Minotaur_Bow.Rain_of_Arrows"
+  ],
+  "power_display_names": [
+    "Aimed Shot",
+    "Fistful of Arrows",
+    "Blazing Arrow",
+    "Explosive Arrow",
+    "Ranged Shot",
+    "Rain of Arrows"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Negative), Foe -MaxHP",
+    "Ranged (Cone), Moderate DMG(Negative), Foe -MaxHP",
+    "Ranged, Superior DMG(Negative), Light DoT(Fire), Foe -MaxHP",
+    "Ranged (Targeted AoE), Moderate DMG(Negative), Foe Knockback, -MaxHP",
+    "Ranged (Sniper), Extreme DMG(Negative), Foe -MaxHP",
+    "Ranged (Location AoE), Extreme DoT(Negative), Foe -MaxHP"
+  ]
+}

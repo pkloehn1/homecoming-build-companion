@@ -1,0 +1,116 @@
+{
+  "name": "Miscellaneous_Labyrinth_Gladiator_Minotaur_Blades",
+  "gender": "GENDER_NEUTER",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Raid",
+    "Ghost",
+    "Undead"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Miscellaneous_Labyrinth_Gladiator",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 54,
+    "max_level": 54,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": true,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ELITE",
+    "ai_config": "Signatures",
+    "character_class_name": "boss_praetorianelite",
+    "description": "The Labyrinth of Fog's legion of immortal phantoms are a mystery unto themselves.<br><br>The Gladiators In The Fog participate in an eternal blood sport, honing their combat skills in the phantasmagorical maze that they call home. An eternity of testing themselves against the Labyrinth's mirages, at times even challenging the mighty Minotaur itself to trial by combat.<br><br>Their's is an existence not unlike a bloody gladius, weapons that only exist to hone their sharpness and prove themselves, iron tempered on the field of battle.<br><br><color Orange>The Minotaur In The Fog is anchoring itself behind the existence of these Gladiators, every single one must be defeated before the Minotaur can be vanquished!</color><br><br><color Burlywood>Blood and strength unseen, Gladiator.</color>",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.0,
+    "additional_rewards": [
+      "LabyrinthInspiration",
+      "LabyrinthObol1"
+    ],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Minotaur_DB.Power_Slice",
+      "Event.Labyrinth_Minotaur_DB.Ablating_Strike",
+      "Event.Labyrinth_Minotaur_DB.Typhoons_Edge",
+      "Event.Labyrinth_Minotaur_DB.Blinding_Feint",
+      "Event.Labyrinth_Minotaur_DB.Sweeping_Strike",
+      "Event.Labyrinth_Minotaur_DB.One_Thousand_Cuts",
+      "Event.Labyrinth_Minotaur_DB.Air_Cutter",
+      "Event.Labyrinth_Guardian.Constitution"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Power Slice",
+      "Ablating Strike",
+      "Typhoon's Edge",
+      "Blinding Feint",
+      "Sweeping Strike",
+      "One Thousand Cuts",
+      "Air Cutter",
+      "Constitution"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Minotaur_DB",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Guardian",
+        "power": "Constitution",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 54,
+      "max_level": 54,
+      "experience": 0,
+      "display_names": [
+        "Gladiator In The Fog"
+      ],
+      "costumes": [
+        "Labyrinth_Fog_Gladiator_01_M_DB",
+        "Labyrinth_Fog_Gladiator_02_M_DB",
+        "Labyrinth_Fog_Gladiator_01_F_DB",
+        "Labyrinth_Fog_Gladiator_02_F_DB",
+        "Labyrinth_Fog_Gladiator_01_H_DB",
+        "Labyrinth_Fog_Gladiator_02_H_DB"
+      ]
+    }
+  ]
+}

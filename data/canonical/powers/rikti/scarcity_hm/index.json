@@ -1,0 +1,26 @@
+{
+  "name": "Scarcity_HM",
+  "display_name": "Scarcity (Hard Mode)",
+  "display_fullname": "Rikti.Scarcity (Hard Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/SCARCITY_HM.POWERSETS",
+  "icon": "scarcity_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Scarcity_HM.Paralytic_Blast",
+    "Rikti.Scarcity_HM.Paralytic_Aura"
+  ],
+  "power_display_names": [
+    "Consuming Blast",
+    "Starvation Aura"
+  ],
+  "power_short_helps": [
+    "Ranged, Heavy DMG(Cold), Foe Fear, -SPD, -Recharge, -End, -Recovery",
+    "Auto: PBAoE, Minor DoT(Cold), Foe Fear, -SPD, -Recharge, -End, -Recovery"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Snowbeast_Monster",
+  "display_name": "Snowbeast Monster",
+  "display_fullname": "Event.Snowbeast Monster",
+  "display_help": "Winter Horde",
+  "display_short_help": "Winter Horde",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/SNOWBEAST_MONSTER.POWERSETS",
+  "icon": "snowbeast_monster_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Snowbeast_Monster.Chill",
+    "Event.Snowbeast_Monster.Ice_Shield",
+    "Event.Snowbeast_Monster.Foot_Stomp",
+    "Event.Snowbeast_Monster.Greater_Ice_Sword",
+    "Event.Snowbeast_Monster.Ice_Blast",
+    "Event.Snowbeast_Monster.Freeze_Ray",
+    "Event.Snowbeast_Monster.Blizzard",
+    "Event.Snowbeast_Monster.Shiver",
+    "Event.Snowbeast_Monster.Ice_Slick"
+  ],
+  "power_display_names": [
+    "Chill",
+    "Ice Shield",
+    "Foot Stomp",
+    "Greater Ice Sword",
+    "Ice Blast",
+    "Freeze Ray",
+    "Blizzard",
+    "Cold Snap",
+    "Ice Slick"
+  ],
+  "power_short_helps": [
+    "Auto: PBAoE, Foe -Recharge, -SPD, -DMG",
+    "Self +Res(Hold, Immobilize, Disorient, Sleep, Knockback, All DMG but Psionic, Toxic), +Regeneration, +Recovery",
+    "PBAoE Melee, Heavy DMG(Smash), Foe Knockback",
+    "Melee (Cone), High DMG(Cold/Lethal), Foe Knockback, -Recharge, -SPD",
+    "Ranged, High DMG(Cold/Smash), Foe -Recharge, -SPD",
+    "Ranged, Heavy DoT(Cold), Foe Hold",
+    "Ranged (Location AoE), Extreme DoT(Cold), Foe Knockdown, -ToHit, -SPD, -Recharge",
+    "Ranged (Cone), Foe Fear, -Recharge, -SPD",
+    "Ranged (Location AoE), Minor DoT(Cold), Foe Knockdown, -SPD, -Recharge"
+  ]
+}

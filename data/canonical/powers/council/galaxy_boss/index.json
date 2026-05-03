@@ -1,0 +1,34 @@
+{
+  "name": "Galaxy_Boss",
+  "display_name": "Galaxy_Boss",
+  "display_fullname": "Council.Galaxy Boss",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    39,
+    39,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/GALAXY_BOSS.POWERSETS",
+  "icon": "galaxy_boss_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Galaxy_Boss.Shadow_Slip",
+    "Council.Galaxy_Boss.Sunless_Mire",
+    "Council.Galaxy_Boss.Gravitic_Emanation",
+    "Council.Galaxy_Boss.Gravity_Well"
+  ],
+  "power_display_names": [
+    "Shadow Slip",
+    "Sunless Mire",
+    "Gravitic Emanation",
+    "Gravity Well"
+  ],
+  "power_short_helps": [
+    "Melee (PBAoE), Foe Teleport",
+    "PBAoE, Moderate DMG(Negative), Foe -Recharge, -SPD, Self +DMG, +ToHit",
+    "Ranged (Cone), Moderate DMG(Negative), Foe Disorient, Knockback, -Recharge, -SPD",
+    "Melee, Extreme DoT(Negative), Foe Hold, -Recharge, -SPD"
+  ]
+}

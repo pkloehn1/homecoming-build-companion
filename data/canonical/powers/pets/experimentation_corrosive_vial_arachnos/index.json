@@ -1,0 +1,22 @@
+{
+  "name": "Experimentation_Corrosive_Vial_Arachnos",
+  "display_name": "ROT Turret Shot",
+  "display_fullname": "Pets.ROT Turret Shot",
+  "display_help": "Experimentation",
+  "display_short_help": "Experimentation",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/EXPERIMENTATION_CORROSIVE_VIAL_ARACHNOS.POWERSETS",
+  "icon": "experimentation_corrosive_vial_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Experimentation_Corrosive_Vial_Arachnos.Corrosive_Vial_Splat"
+  ],
+  "power_display_names": [
+    "Corrosive Blast"
+  ],
+  "power_short_helps": [
+    "Ranged (Location AoE), High DoT(Toxic), -Defense, -Healing, -Regen"
+  ]
+}

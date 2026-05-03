@@ -1,0 +1,34 @@
+{
+  "name": "Altruist_Shadow_Dragon_Offense",
+  "display_name": "Shadow Dragon Offense",
+  "display_fullname": "Crey Altruist.Shadow Dragon Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SHADOW_DRAGON_OFFENSE.POWERSETS",
+  "icon": "altruist_shadow_dragon_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Shadow_Dragon_Offense.Tenebrous_Tentacles",
+    "Crey_Altruist.Altruist_Shadow_Dragon_Offense.Dark_Blast",
+    "Crey_Altruist.Altruist_Shadow_Dragon_Offense.Gloom",
+    "Crey_Altruist.Altruist_Shadow_Dragon_Offense.Life_Drain"
+  ],
+  "power_display_names": [
+    "Tenebrous Tentacles",
+    "Dark Blast",
+    "Gloom",
+    "Life Drain"
+  ],
+  "power_short_helps": [
+    "Ranged (Cone), Moderate DMG(Negative), Foe Immobilize, -To-hit",
+    "Ranged, Moderate DMG(Negative), Foe -To-hit",
+    "Ranged, High DoT(Negative), Foe -To-hit",
+    "Ranged, Moderate DMG(Negative), Target -To-hit, Self +HP"
+  ]
+}

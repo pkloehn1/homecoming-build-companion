@@ -1,0 +1,46 @@
+{
+  "name": "Labyrinth_Guardian",
+  "display_name": "Labyrinth Guardian",
+  "display_fullname": "Event.Labyrinth Guardian",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_GUARDIAN.POWERSETS",
+  "icon": "werewolf_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Guardian.Untouchable",
+    "Event.Labyrinth_Guardian.Constitution",
+    "Event.Labyrinth_Guardian.Resistance",
+    "Event.Labyrinth_Guardian.Traveler",
+    "Event.Labyrinth_Guardian.Tactics",
+    "Event.Labyrinth_Guardian.Assault",
+    "Event.Labyrinth_Guardian.Vengeance"
+  ],
+  "power_display_names": [
+    "Shrouded By Fog",
+    "Constitution",
+    "Dissolve",
+    "Warrior's Resilience",
+    "Warrior's Bravado",
+    "Dreamer's Euphoria",
+    "Glykeria's Vow"
+  ],
+  "power_short_helps": [
+    "Auto: Minotaur Untouchable",
+    "+KB Immunity",
+    "Auto: Self-Death",
+    "Auto: Self +RES(All)",
+    "Auto: Self +KB Immunity",
+    "Auto: Self Sleep, +DMG(All), +RES(All), -RES(Sleep)",
+    "Auto: +DMG(All)"
+  ]
+}

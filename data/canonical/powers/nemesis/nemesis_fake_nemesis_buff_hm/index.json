@@ -1,0 +1,22 @@
+{
+  "name": "Nemesis_Fake_Nemesis_Buff_HM",
+  "display_name": "Nemesis_Fake_Nemesis_Buff (Advanced Mode)",
+  "display_fullname": "Nemesis.Nemesis Fake Nemesis Buff (Advanced Mode)",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_FAKE_NEMESIS_BUFF_HM.POWERSETS",
+  "icon": "nemesis_fake_nemesis_buff_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Fake_Nemesis_Buff_HM.Personal_Force_Field"
+  ],
+  "power_display_names": [
+    "Personal Neo Force Field"
+  ],
+  "power_short_helps": [
+    "Self Toggle Invulnerable, Vulnerable to KB"
+  ]
+}

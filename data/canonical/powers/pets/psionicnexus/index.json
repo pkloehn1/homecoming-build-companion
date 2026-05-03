@@ -1,0 +1,42 @@
+{
+  "name": "PsionicNexus",
+  "display_name": "Psionic Nexus",
+  "display_fullname": "Pets.Psionic Nexus",
+  "display_help": "Psionic Nexus",
+  "display_short_help": "Psionic Nexus",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/PSIONICNEXUS.POWERSETS",
+  "icon": "psionicnexus_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.PsionicNexus.Psionic_Link_Self",
+    "Pets.PsionicNexus.Self_Destruct",
+    "Pets.PsionicNexus.Telekinetic_Blast",
+    "Pets.PsionicNexus.Subdue",
+    "Pets.PsionicNexus.Will_Domination",
+    "Pets.PsionicNexus.Scramble_Thoughts"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Self Destruct",
+    "Telekinetic Blast",
+    "Subdue",
+    "Will Domination",
+    "Scramble Thoughts"
+  ],
+  "power_short_helps": [
+    "PBAoE, Heal (Self and Owner)",
+    "Self Destruct",
+    "Ranged, Moderate DMG(Smash/Psionic), Foe Knockback",
+    "Immobilize",
+    "Sleep",
+    "Disorient"
+  ]
+}

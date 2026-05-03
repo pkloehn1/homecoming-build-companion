@@ -1,0 +1,42 @@
+{
+  "name": "Nemesis_Warhulk_Marine",
+  "display_name": "Nemesis_Warhulk_Marine",
+  "display_fullname": "Nemesis.Nemesis Warhulk Marine",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_WARHULK_MARINE.POWERSETS",
+  "icon": "nemesis_warhulk_marine_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Warhulk_Marine.Steamquake",
+    "Nemesis.Nemesis_Warhulk_Marine.Steam_Stomp",
+    "Nemesis.Nemesis_Warhulk_Marine.Aqua_Pump_Burst",
+    "Nemesis.Nemesis_Warhulk_Marine.Toroidal_Bubble",
+    "Nemesis.Nemesis_Warhulk_Marine.Barrier_Reef",
+    "Nemesis.Nemesis_Warhulk_Marine.Resistance"
+  ],
+  "power_display_names": [
+    "Steamquake",
+    "Steam Stomp",
+    "Aqua Pump Burst",
+    "Toroidal Bubble",
+    "Barrier Reef",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "High-Accuracy: Ranged (Targeted AoE), Moderate DMG(Fire/Smash), DoT(Fire)",
+    "High-Accuracy: Close (Targeted AoE), Heavy DMG(Fire/Smash), DoT(Fire), Foe Disorient",
+    "High-Accuracy: Ranged (Targeted AoE), Moderate DMG(Cold), Foe -SPD, -Recharge, -Fly",
+    "PBAoE, Team +Absorb, +End, +Recovery, +Jump",
+    "Summon Barrier Reef: Team +Resist(All DMG), +Heal Over Time",
+    "Resistance"
+  ]
+}

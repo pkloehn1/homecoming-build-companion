@@ -1,0 +1,50 @@
+{
+  "name": "JackInIrons",
+  "display_name": "Jack in Irons",
+  "display_fullname": "RedCaps.Jack in Irons",
+  "display_help": "RedCaps",
+  "display_short_help": "RedCaps",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/REDCAPS/JACKINIRONS.POWERSETS",
+  "icon": "jackinirons_set.png",
+  "requires": "",
+  "power_names": [
+    "RedCaps.JackInIrons.Resistance",
+    "RedCaps.JackInIrons.Sweeping_Blow",
+    "RedCaps.JackInIrons.Overhead_Smash",
+    "RedCaps.JackInIrons.Noxious_Odor",
+    "RedCaps.JackInIrons.Skull_Stare",
+    "RedCaps.JackInIrons.Dry_Heave",
+    "RedCaps.JackInIrons.Howling_Skull",
+    "RedCaps.JackInIrons.Ambush"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Sweeping Blow",
+    "Overhead Smash",
+    "Noxious Odor",
+    "Skull Stare",
+    "Dry Heave",
+    "Howling Skull",
+    "Ambush"
+  ],
+  "power_short_helps": [
+    "Resistance",
+    "Melee (Cone), Moderate DMG(Smash), Foe Knockback",
+    "Melee (Targeted AoE), High DMG(Smash), Foe Disorient, Knockup, -DEF, -ToHit, -Jump",
+    "Auto: PBAoE, Minor DoT(Toxic)",
+    "Ranged (Cone), Foe Fear, -ToHit",
+    "Ranged (Targeted AoE), High DMG(Toxic), Light DoT(Toxic), Foe -DMG",
+    "Ranged, Superior DMG(Energy/Smash), Foe -Resist(All)",
+    "Summon Red Caps"
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "name": "Miscellaneous_Labyrinth_Hopkins",
+  "gender": "GENDER_MALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human",
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Miscellaneous_Labyrinth_Memories",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 55,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "Signatures_Melee",
+    "character_class_name": "boss_praetorianarchvillain",
+    "description": "This malevolent fog has become thick and warped... Taking on a powerful physical form; A manifestation of the collective memory's strongest. These beings exist on the fringes of reality and grow stronger by breathing deep of the surrounding fog's pollution.",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": "Memory",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.0,
+    "additional_rewards": [
+      "LabyrinthMemoryAether",
+      "LabyrinthObol3"
+    ],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Aether.Stamina",
+      "V_GenericVillains.Mastermind_Leadership.Maneuvers",
+      "Temporary_Powers.Temporary_Powers.Labyrinth_FX",
+      "Crey.Hopkins_Melee.Energy_Punch",
+      "Crey.Hopkins_Melee.Whirling_Hands",
+      "Crey.Hopkins_Melee.Bone_Smasher",
+      "Crey.Hopkins_Melee.Foot_Stomp",
+      "Crey.Hopkins_Ranged.Cryo_Rifle",
+      "Crey.Hopkins_Ranged.N2_Cannon",
+      "Crey.Hopkins_Defense.Resistance",
+      "Crey.Crey_Minion_Lt_Agent_Melee.Barrage",
+      "Crey.Crey_Boss_Hero_Clone_Power.Total_Focus",
+      "Crey.Crey_Tank_Defense.Resistance"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Pollution of Catastrophe",
+      "Leadership",
+      "Fog Guardians",
+      "Energy Punch",
+      "Whirling Hands",
+      "Bone Smasher",
+      "Foot Stomp",
+      "Cryo Rifle",
+      "N2 Cannon",
+      "Resistance",
+      "Barrage",
+      "Total Focus",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Aether",
+        "power": "Stamina",
+        "level": 0
+      },
+      {
+        "power_category": "V_GenericVillains",
+        "power_set": "Mastermind_Leadership",
+        "power": "Maneuvers",
+        "level": 0
+      },
+      {
+        "power_category": "Temporary_Powers",
+        "power_set": "Temporary_Powers",
+        "power": "Labyrinth_FX",
+        "level": 0
+      },
+      {
+        "power_category": "Crey",
+        "power_set": "Hopkins_Melee",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Crey",
+        "power_set": "Hopkins_Ranged",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Crey",
+        "power_set": "Hopkins_Defense",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Crey",
+        "power_set": "Crey_Minion_Lt_Agent_Melee",
+        "power": "Barrage",
+        "level": 0
+      },
+      {
+        "power_category": "Crey",
+        "power_set": "Crey_Boss_Hero_Clone_Power",
+        "power": "Total_Focus",
+        "level": 0
+      },
+      {
+        "power_category": "Crey",
+        "power_set": "Crey_Tank_Defense",
+        "power": "Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 55,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Coagulated Pollution"
+      ],
+      "costumes": [
+        "CreyHopkins"
+      ]
+    }
+  ]
+}

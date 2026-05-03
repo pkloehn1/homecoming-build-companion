@@ -1,0 +1,34 @@
+{
+  "name": "Sentient_Blob",
+  "display_name": "Sentient Blob",
+  "display_fullname": "Event.Sentient Blob",
+  "display_help": "Sentient Blob",
+  "display_short_help": "Sentient Blob",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/SENTIENT_BLOB.POWERSETS",
+  "icon": "experimentation_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Sentient_Blob.Viscous_Fluid",
+    "Event.Sentient_Blob.Fly",
+    "Event.Sentient_Blob.Fly_fx",
+    "Event.Sentient_Blob.Stamina"
+  ],
+  "power_display_names": [
+    "Viscous Fluid",
+    "Fly",
+    "Fly fx",
+    "Squishy"
+  ],
+  "power_short_helps": [
+    "Self Auto: +Res(All), +Mez Immunity, +Speed, +Jump, -Regen",
+    "Self Travel",
+    "Special",
+    "Auto: Self +Recovery"
+  ]
+}

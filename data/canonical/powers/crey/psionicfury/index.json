@@ -1,0 +1,22 @@
+{
+  "name": "PsionicFury",
+  "display_name": "Psionic Fury",
+  "display_fullname": "Crey.Psionic Fury",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY/PSIONICFURY.POWERSETS",
+  "icon": "psionicfury_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey.PsionicFury.Psionic_Fury"
+  ],
+  "power_display_names": [
+    "Psionic Fury"
+  ],
+  "power_short_helps": [
+    "Ranged (Location AoE), DoT(Psionic), -End, -Regen, -Recovery, -Recharge"
+  ]
+}

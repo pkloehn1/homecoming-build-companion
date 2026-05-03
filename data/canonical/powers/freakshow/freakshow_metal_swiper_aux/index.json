@@ -1,0 +1,26 @@
+{
+  "name": "Freakshow_Metal_Swiper_Aux",
+  "display_name": "Freakshow_Metal_Swiper_Aux",
+  "display_fullname": "Freakshow.Freakshow Metal Swiper Aux",
+  "display_help": "Freakshow",
+  "display_short_help": "Freakshow",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKSHOW/FREAKSHOW_METAL_SWIPER_AUX.POWERSETS",
+  "icon": "freakshow_metal_swiper_aux_set.png",
+  "requires": "",
+  "power_names": [
+    "Freakshow.Freakshow_Metal_Swiper_Aux.Cybernetic_Flurry_Large",
+    "Freakshow.Freakshow_Metal_Swiper_Aux.Cybernetic_Flurry_Normal"
+  ],
+  "power_display_names": [
+    "Cybernetic Flurry Large",
+    "Cybernetic Flurry Normal"
+  ],
+  "power_short_helps": [
+    "PBAoE, Heavy DMG(Lethal), Minor DoT(Lethal), -Blood Frenzy",
+    "PBAoE, Moderate DMG(Lethal), Minor DoT(Lethal)"
+  ]
+}

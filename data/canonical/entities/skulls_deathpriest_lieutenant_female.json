@@ -1,0 +1,93 @@
+{
+  "name": "Skulls_DeathPriest_Lieutenant_Female",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Skulls",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Skulls_SubmachineGun_Lieutenant",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 1,
+    "spawn_limit_mission": 1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_LIEUTENANT",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "lt_grunt",
+    "description": "Unlike the nihilistic gangsters and drug peddlers that make up the rest of the Skulls, these women are much more connected to the gang's death worshipping rituals. They seem to regard Morana's status as an aspect of a goddess as true, and have taken on the title of Volkhv to deepen themselves closer to their Slavic roots.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.6,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Skulls.Skulls_DeathPriest.Blackwand_Bolt",
+      "Skulls.Skulls_DeathPriest.Blackwand_Gloom",
+      "Skulls.Skulls_DeathPriest.Chilling_Burst",
+      "Skulls.Skulls_DeathPriest.Twilight_Boon",
+      "Skulls.Skulls_DeathPriest.Summon_Zombies",
+      "Skulls.Skulls_Inherent_Defense.Resistance"
+    ],
+    "power_display_names": [
+      "Blackwand Bolt",
+      "Blackwand Gloom",
+      "Chilling Burst",
+      "Twilight Boon",
+      "Summon Zombies",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Skulls",
+        "power_set": "Skulls_DeathPriest",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Skulls",
+        "power_set": "Skulls_Inherent_Defense",
+        "power": "Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Volkhv Priestess"
+      ],
+      "costumes": [
+        "Thug_Skull_Female_Priest_01",
+        "Thug_Skull_Female_Priest_02",
+        "Thug_Skull_Female_Priest_03"
+      ]
+    }
+  ]
+}

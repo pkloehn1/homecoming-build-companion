@@ -1,0 +1,158 @@
+{
+  "name": "Miscellaneous_Labyrinth_Serpent_Drummer",
+  "gender": "GENDER_MALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Humanoid",
+    "HumanSkeleton",
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Miscellaneous_Labyrinth_Memories",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 55,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "Signatures_Melee",
+    "character_class_name": "boss_praetorianarchvillain",
+    "description": "This malevolent fog has become thick and warped... Taking on a powerful physical form; A manifestation of the collective memory's strongest. These beings exist on the fringes of reality and grow stronger by breathing deep of the surrounding fog's pollution.",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": "Memory",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.0,
+    "additional_rewards": [
+      "LabyrinthMemoryAether",
+      "LabyrinthObol3"
+    ],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Aether.Stamina",
+      "V_GenericVillains.Mastermind_Leadership.Maneuvers",
+      "Temporary_Powers.Temporary_Powers.Labyrinth_FX",
+      "Vanguard.Serpent_Drummer.Resistance",
+      "Vanguard.Serpent_Drummer.Thunder_Kick",
+      "Vanguard.Serpent_Drummer.Storm_Kick",
+      "Vanguard.Serpent_Drummer.Shurikens",
+      "Vanguard.Serpent_Drummer.Cobra_Strike",
+      "Vanguard.Serpent_Drummer.Focused_Fighting",
+      "Vanguard.Serpent_Drummer.Inner_Focus",
+      "Vanguard.Serpent_Drummer.Crane_Kick",
+      "Vanguard.Serpent_Drummer.Exploding_Shuriken",
+      "Vanguard.Serpent_Drummer.Dragons_Tail",
+      "Vanguard.Serpent_Drummer.Quickness",
+      "Vanguard.Serpent_Drummer.Elude",
+      "Vanguard.Serpent_Drummer.Eagles_Claw",
+      "Vanguard.Serpent_Drummer.Fire_Spirit",
+      "Vanguard.Light_Armor.Impervium_Armor"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Pollution of Catastrophe",
+      "Leadership",
+      "Fog Guardians",
+      "Resistance",
+      "Thunder Kick",
+      "Storm Kick",
+      "Shurikens",
+      "Cobra Strike",
+      "Focused Fighting",
+      "Inner Focus",
+      "Crane Kick",
+      "Exploding Shuriken",
+      "Dragons Tail",
+      "Quickness",
+      "Elude",
+      "Eagles Claw",
+      "Fire Spirit",
+      "Impervium Armor"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Aether",
+        "power": "Stamina",
+        "level": 0
+      },
+      {
+        "power_category": "V_GenericVillains",
+        "power_set": "Mastermind_Leadership",
+        "power": "Maneuvers",
+        "level": 0
+      },
+      {
+        "power_category": "Temporary_Powers",
+        "power_set": "Temporary_Powers",
+        "power": "Labyrinth_FX",
+        "level": 0
+      },
+      {
+        "power_category": "Vanguard",
+        "power_set": "Serpent_Drummer",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Vanguard",
+        "power_set": "Light_Armor",
+        "power": "Impervium_Armor",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 55,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Coagulated Pollution"
+      ],
+      "costumes": [
+        "Vanguard_Serpent_Drummer_01_No_Ring"
+      ]
+    }
+  ]
+}

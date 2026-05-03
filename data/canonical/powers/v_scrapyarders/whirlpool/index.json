@@ -1,0 +1,22 @@
+{
+  "name": "Whirlpool",
+  "display_name": "Whirlpool",
+  "display_fullname": "V Scrapyarders.Whirlpool",
+  "display_help": "Scrapyarders",
+  "display_short_help": "Scrapyarders",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_SCRAPYARDERS/WHIRLPOOL.POWERSETS",
+  "icon": "whirlpool_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Scrapyarders.Whirlpool.Whirlpool"
+  ],
+  "power_display_names": [
+    "Torrential Galeforce"
+  ],
+  "power_short_helps": [
+    "Special: -Health, -Rech, Knockback"
+  ]
+}

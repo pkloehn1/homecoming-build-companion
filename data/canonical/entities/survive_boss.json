@@ -1,0 +1,283 @@
+{
+  "name": "Survive_Boss",
+  "gender": "GENDER_NEUTER",
+  "group_name": "5thColumn",
+  "commandable_pet": 0,
+  "power_tags": [],
+  "ally": "Monster",
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 1,
+    "max_level": 60,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Turrets_Base",
+    "character_class_name": "boss_grunt",
+    "description": "This unit will test your survival skills.",
+    "group_description": null,
+    "display_class_name": "Boss",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 0.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Objects.Debug.Resistance",
+      "Objects.Debug.Ranged_Smashing",
+      "Objects.Debug.Ranged_Lethal",
+      "Objects.Debug.Ranged_Fire",
+      "Objects.Debug.Ranged_Cold",
+      "Objects.Debug.Ranged_Energy",
+      "Objects.Debug.Ranged_Negative",
+      "Objects.Debug.Ranged_Toxic",
+      "Objects.Debug.Ranged_Psi",
+      "Objects.Debug.Melee_Smashing",
+      "Objects.Debug.Melee_Lethal",
+      "Objects.Debug.Melee_Fire",
+      "Objects.Debug.Melee_Cold",
+      "Objects.Debug.Melee_Energy",
+      "Objects.Debug.Melee_Negative",
+      "Objects.Debug.Melee_Toxic",
+      "Objects.Debug.Melee_Psi",
+      "Objects.Debug.AoE_Smashing",
+      "Objects.Debug.AoE_Lethal",
+      "Objects.Debug.AoE_Fire",
+      "Objects.Debug.AoE_Cold",
+      "Objects.Debug.AoE_Energy",
+      "Objects.Debug.AoE_Negative",
+      "Objects.Debug.AoE_Toxic",
+      "Objects.Debug.AoE_Psi"
+    ],
+    "power_display_names": [
+      "Resistance",
+      "Ranged Smashing",
+      "Ranged Lethal",
+      "Ranged Fire",
+      "Ranged Cold",
+      "Ranged Energy",
+      "Ranged Negative",
+      "Ranged Toxic",
+      "Ranged Psi",
+      "Melee Smashing",
+      "Melee Lethal",
+      "Melee Fire",
+      "Melee Cold",
+      "Melee Energy",
+      "Melee Negative",
+      "Melee Toxic",
+      "Melee Psi",
+      "AoE Smashing",
+      "AoE Lethal",
+      "AoE Fire",
+      "AoE Cold",
+      "AoE Energy",
+      "AoE Negative",
+      "AoE Toxic",
+      "AoE Psi"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Resistance",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Ranged_Smashing",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Ranged_Lethal",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Ranged_Fire",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Ranged_Cold",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Ranged_Energy",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Ranged_Negative",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Ranged_Toxic",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Ranged_Psi",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Melee_Smashing",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Melee_Lethal",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Melee_Fire",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Melee_Cold",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Melee_Energy",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Melee_Negative",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Melee_Toxic",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "Melee_Psi",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "AoE_Smashing",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "AoE_Lethal",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "AoE_Fire",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "AoE_Cold",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "AoE_Energy",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "AoE_Negative",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "AoE_Toxic",
+        "level": 0
+      },
+      {
+        "power_category": "Objects",
+        "power_set": "Debug",
+        "power": "AoE_Psi",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 1,
+      "max_level": 60,
+      "experience": 0,
+      "display_names": [
+        "DPS Dummy"
+      ],
+      "costumes": [
+        "Male_TargetDummy150"
+      ]
+    }
+  ]
+}

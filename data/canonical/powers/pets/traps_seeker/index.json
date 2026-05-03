@@ -1,0 +1,30 @@
+{
+  "name": "Traps_Seeker",
+  "display_name": "Seeker",
+  "display_fullname": "Pets.Seeker",
+  "display_help": "Traps",
+  "display_short_help": "Traps",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/TRAPS_SEEKER.POWERSETS",
+  "icon": "traps_seeker1_controller_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Traps_Seeker.FlashPulse",
+    "Pets.Traps_Seeker.Self_Destruct",
+    "Pets.Traps_Seeker.Fly"
+  ],
+  "power_display_names": [
+    "FlashPulse",
+    "Self Destruct",
+    "Fly"
+  ],
+  "power_short_helps": [
+    "Disorient, -DMG, -ACC, -Perception",
+    "Self Destruct",
+    "Movement"
+  ]
+}

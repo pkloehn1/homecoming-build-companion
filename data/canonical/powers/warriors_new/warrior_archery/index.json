@@ -1,0 +1,26 @@
+{
+  "name": "Warrior_Archery",
+  "display_name": "Warrior_Archery",
+  "display_fullname": "Warriors New.Warrior Archery",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_ARCHERY.POWERSETS",
+  "icon": "warrior_archery_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Archery.Entangling_Arrow",
+    "Warriors_New.Warrior_Archery.Stunning_Shot"
+  ],
+  "power_display_names": [
+    "Entangling Arrow",
+    "Stunning Shot"
+  ],
+  "power_short_helps": [
+    "Ranged, Foe Immobilize, -Resist(All), -Fly, -SPD",
+    "Ranged, High DMG(Smash), Foe Disorient"
+  ]
+}

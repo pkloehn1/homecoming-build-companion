@@ -1,0 +1,46 @@
+{
+  "name": "Awakened_Eidola",
+  "display_name": "Awakened_Eidola",
+  "display_fullname": "Freaklok.Awakened Eidola",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/AWAKENED_EIDOLA.POWERSETS",
+  "icon": "awakened_eidola_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Awakened_Eidola.Mesmerize",
+    "Freaklok.Awakened_Eidola.Terrify",
+    "Freaklok.Awakened_Eidola.Psi_Blade",
+    "Freaklok.Awakened_Eidola.Telekinetic_Thrust",
+    "Freaklok.Awakened_Eidola.Psionic_Lance",
+    "Freaklok.Awakened_Eidola.Psychic_Shockwave",
+    "Freaklok.Awakened_Eidola.Fortune"
+  ],
+  "power_display_names": [
+    "Mesmerize",
+    "Terrify",
+    "Psi Blade",
+    "Telekinetic Thrust",
+    "Psionic Lance",
+    "Psychic Shockwave",
+    "Fortune"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Psionic), Foe Sleep",
+    "Ranged (Cone), Moderate DMG(Psionic), Foe Fear",
+    "Melee, Moderate DMG(Psionic/Lethal), Foe -Recharge",
+    "Melee, High DMG(Psionic/Smash), Foe Knockback",
+    "Ranged, Extreme DMG(Psionic), Foe -Recharge",
+    "PBAoE Melee, Moderate DMG(Psionic), Foe Disorient, -Recharge",
+    "Toggle: PBAoE, Team +ToHit, +Res(Status Effects)"
+  ]
+}

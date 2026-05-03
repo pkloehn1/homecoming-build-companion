@@ -1,0 +1,30 @@
+{
+  "name": "Comeback",
+  "display_name": "Comeback",
+  "display_fullname": "Redirects.Comeback",
+  "display_help": "Comeback",
+  "display_short_help": "Comeback",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/REDIRECTS/COMEBACK.POWERSETS",
+  "icon": "tanker_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Redirects.Comeback.Comeback",
+    "Redirects.Comeback.Debt_Protection",
+    "Redirects.Comeback.Delegate"
+  ],
+  "power_display_names": [
+    "Untouchable",
+    "Debt Protection",
+    "Comeback"
+  ],
+  "power_short_helps": [
+    "Untouchable",
+    "Debt Protection",
+    "Delegate"
+  ]
+}

@@ -1,0 +1,1717 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-04-27T21:16:29.5625597-07:00",
+  "note": "Latest-wins consolidation of structured numeric changes from Homecoming I26P1 through I28P3 patch notes. Parser: tools/parse-patches.ps1. When a (entity, field) pair is in this map, the canonical zip value is stale; prefer this override.",
+  "source_chronology": [
+    "Issue_26_Page_1",
+    "Issue_26_Page_2",
+    "Issue_26_Page_3",
+    "Issue_26_Page_4",
+    "Issue_26_Page_5",
+    "Issue_27_Page_1",
+    "Issue_27_Page_2",
+    "Issue_27_Page_3",
+    "Issue_27_Page_4",
+    "Issue_27_Page_5",
+    "Issue_27_Page_6",
+    "Issue_27_Page_7",
+    "Issue_28_Page_1",
+    "Issue_28_Page_2",
+    "Issue_28_Page_3"
+  ],
+  "total_distinct_overrides": 103,
+  "total_extracted_records": 127,
+  "fields_overridden_summary": [
+    {
+      "field": "accuracy",
+      "count": 3
+    },
+    {
+      "field": "activation_time",
+      "count": 8
+    },
+    {
+      "field": "arc",
+      "count": 4
+    },
+    {
+      "field": "damage_scale",
+      "count": 22
+    },
+    {
+      "field": "defense_scale",
+      "count": 3
+    },
+    {
+      "field": "duration",
+      "count": 3
+    },
+    {
+      "field": "endurance_cost",
+      "count": 9
+    },
+    {
+      "field": "heal_scale",
+      "count": 1
+    },
+    {
+      "field": "magnitude",
+      "count": 3
+    },
+    {
+      "field": "max_targets_hit",
+      "count": 56
+    },
+    {
+      "field": "recharge_time",
+      "count": 15
+    }
+  ],
+  "overrides": {
+    "Tanker.Savage_Melee.Rending_Flurry": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Martial_Arts.Dragons_Tail": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Enemies.Skulls.Death_Walkers_Death_Dolls": {
+      "duration": {
+        "value": 1.0,
+        "source_patch": "Issue_28_Page_2",
+        "previous_value": 1.15,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 1.15,
+            "to": 1.0
+          }
+        ]
+      }
+    },
+    "Tanker.Super_Strength.Foot_Stomp": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.War_Mace.Whirling_Mace": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Blaster_Secondary_Revamp.Aging_Touch": {
+      "damage_scale": {
+        "value": 1.02,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 1.32,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 1.32,
+            "to": 1.02
+          }
+        ]
+      }
+    },
+    "Tanker.Psionic_Melee.Mass_Levitate": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Battle_Axe.Whirling_Axe": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Dual_Blades.One_Thousand_Cuts": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Fiery_Melee.Fire_Sword_Circle": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Titan_Weapons.Whirling_Smash": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Pool_Powerset_Update_Sorcery.Mystic_Flight.Mystic_Flight_Translocation": {
+      "endurance_cost": {
+        "value": 9.75,
+        "source_patch": "Issue_27_Page_2",
+        "previous_value": 13.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_2",
+            "from": 13.0,
+            "to": 9.75
+          }
+        ]
+      }
+    },
+    "Tanker.Dark_Melee.Shadwo_Maul": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Spines.Ripper": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Shadow_Maul": {
+      "arc": {
+        "value": 120.0,
+        "source_patch": "Issue_26_Page_5",
+        "previous_value": 45.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_5",
+            "from": 45.0,
+            "to": 120.0
+          }
+        ]
+      },
+      "recharge_time": {
+        "value": 11.0,
+        "source_patch": "Issue_26_Page_5",
+        "previous_value": 8.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_5",
+            "from": 8.0,
+            "to": 11.0
+          }
+        ]
+      },
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_5",
+        "previous_value": 5.0,
+        "change_count": 2,
+        "history": [
+          {
+            "patch": "Issue_26_Page_5",
+            "from": 10.0,
+            "to": 16.0
+          },
+          {
+            "patch": "Issue_26_Page_5",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      },
+      "activation_time": {
+        "value": 2.35,
+        "source_patch": "Issue_26_Page_5",
+        "previous_value": 3.07,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_5",
+            "from": 3.07,
+            "to": 2.35
+          }
+        ]
+      }
+    },
+    "Martial_Assault": {
+      "recharge_time": {
+        "value": 86.4,
+        "source_patch": "Issue_26_Page_2",
+        "previous_value": 95.8,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 95.8,
+            "to": 86.4
+          }
+        ]
+      },
+      "damage_scale": {
+        "value": 0.8985,
+        "source_patch": "Issue_26_Page_2",
+        "previous_value": 1.1,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 1.1,
+            "to": 0.8985
+          }
+        ]
+      }
+    },
+    "Enemies.Crey_Industries.Cryogenicist": {
+      "heal_scale": {
+        "value": 4.0,
+        "source_patch": "Issue_28_Page_2",
+        "previous_value": 8.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 8.0,
+            "to": 4.0
+          }
+        ]
+      },
+      "duration": {
+        "value": 1.0,
+        "source_patch": "Issue_28_Page_2",
+        "previous_value": 1.6,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 1.6,
+            "to": 1.0
+          }
+        ]
+      }
+    },
+    "Disruption_Arrow": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Enemies.Skulls.Gravediggers": {
+      "accuracy": {
+        "value": 0.95,
+        "source_patch": "Issue_28_Page_2",
+        "previous_value": 1.216,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 1.216,
+            "to": 0.95
+          }
+        ]
+      },
+      "defense_scale": {
+        "value": 1.67,
+        "source_patch": "Issue_28_Page_2",
+        "previous_value": 1.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 1.0,
+            "to": 1.67
+          }
+        ]
+      }
+    },
+    "Tanker.Broad_Sword.Whirling_Sword": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Enemy_Group_Revamp_The_Warriors": {
+      "damage_scale": {
+        "value": 0.966,
+        "source_patch": "Issue_28_Page_1",
+        "previous_value": 0.84,
+        "change_count": 10,
+        "history": [
+          {
+            "patch": "Issue_28_Page_1",
+            "from": 0.25,
+            "to": 2.92
+          },
+          {
+            "patch": "Issue_28_Page_1",
+            "from": 1.96,
+            "to": 2.28
+          },
+          {
+            "patch": "Issue_28_Page_1",
+            "from": 1.16,
+            "to": 1.0
+          },
+          {
+            "patch": "Issue_28_Page_1",
+            "from": 1.96,
+            "to": 1.64
+          },
+          {
+            "patch": "Issue_28_Page_1",
+            "from": 2.28,
+            "to": 1.96
+          },
+          {
+            "patch": "Issue_28_Page_1",
+            "from": 1.9,
+            "to": 1.35
+          },
+          {
+            "patch": "Issue_28_Page_1",
+            "from": 0.84,
+            "to": 1.64
+          },
+          {
+            "patch": "Issue_28_Page_1",
+            "from": 1.32,
+            "to": 1.0
+          },
+          {
+            "patch": "Issue_28_Page_1",
+            "from": 0.76,
+            "to": 0.874
+          },
+          {
+            "patch": "Issue_28_Page_1",
+            "from": 0.84,
+            "to": 0.966
+          }
+        ]
+      }
+    },
+    "Tanker.Energy_Melee.Whirling_Hands": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Dark_Melee.Dark_Consumption": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Story_Arcs": {
+      "duration": {
+        "value": 18.0,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 30.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 30.0,
+            "to": 18.0
+          }
+        ]
+      }
+    },
+    "PvP-Specific_Changes.Other_PvP_Power_Changes.Stalker_Staff_Melee_Sky_Splitter": {
+      "damage_scale": {
+        "value": 2.981,
+        "source_patch": "Issue_27_Page_2",
+        "previous_value": 1.4905,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_2",
+            "from": 1.4905,
+            "to": 2.981
+          }
+        ]
+      }
+    },
+    "Thorny_Assault": {
+      "recharge_time": {
+        "value": 18.0,
+        "source_patch": "Issue_26_Page_2",
+        "previous_value": 11.0,
+        "change_count": 5,
+        "history": [
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 3.0,
+            "to": 4.0
+          },
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 114.45,
+            "to": 77.1
+          },
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 12.0,
+            "to": 10.0
+          },
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 13.0,
+            "to": 15.0
+          },
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 11.0,
+            "to": 18.0
+          }
+        ]
+      },
+      "activation_time": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_2",
+        "previous_value": 8.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 8.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Kinetic_Melee.Burst": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Placate": {
+      "max_targets_hit": {
+        "value": 5.0,
+        "source_patch": "Issue_27_Page_3",
+        "previous_value": 1.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_3",
+            "from": 1.0,
+            "to": 5.0
+          }
+        ]
+      }
+    },
+    "Stalker_Crit_Consistency_Pass.Staff_Fighting.Guarded_Spin": {
+      "damage_scale": {
+        "value": 1.2085,
+        "source_patch": "Issue_27_Page_2",
+        "previous_value": 1.39,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_2",
+            "from": 1.39,
+            "to": 1.2085
+          }
+        ]
+      }
+    },
+    "Tanker.Super_Strength.Hand_Clap": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Savage_Melee_Bug_Sweep.Maiming_Slash_Scrapper_only": {
+      "damage_scale": {
+        "value": 1.4188,
+        "source_patch": "Issue_27_Page_3",
+        "previous_value": 1.2839,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_3",
+            "from": 1.2839,
+            "to": 1.4188
+          }
+        ]
+      }
+    },
+    "Tanker.Savage_Melee.Shred": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Savage_Melee_Bug_Sweep.Hemorrhage": {
+      "damage_scale": {
+        "value": 1.17,
+        "source_patch": "Issue_27_Page_3",
+        "previous_value": 0.342,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_3",
+            "from": 0.342,
+            "to": 1.17
+          }
+        ]
+      }
+    },
+    "Savage_Assault": {
+      "recharge_time": {
+        "value": 123.8,
+        "source_patch": "Issue_26_Page_2",
+        "previous_value": 105.1,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 105.1,
+            "to": 123.8
+          }
+        ]
+      }
+    },
+    "Blaster_Secondary_Revamp.Electrified_Net_Arrow": {
+      "endurance_cost": {
+        "value": 7.8,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 5.2,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 5.2,
+            "to": 7.8
+          }
+        ]
+      }
+    },
+    "Tanker.Ice_Melee.Frozen_Aura": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Radioactive_Assault": {
+      "recharge_time": {
+        "value": 207.9,
+        "source_patch": "Issue_26_Page_2",
+        "previous_value": 189.2,
+        "change_count": 3,
+        "history": [
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 67.7,
+            "to": 95.7
+          },
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 103.5,
+            "to": 112.0
+          },
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 189.2,
+            "to": 207.9
+          }
+        ]
+      }
+    },
+    "Enemies.Crey_Industries.Crey_Agents": {
+      "max_targets_hit": {
+        "value": 1.0,
+        "source_patch": "Issue_28_Page_2",
+        "previous_value": 0.72,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 0.72,
+            "to": 1.0
+          }
+        ]
+      }
+    },
+    "Blaster_Secondary_Revamp.End_of_Time": {
+      "endurance_cost": {
+        "value": 16.016,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 20.176,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 20.176,
+            "to": 16.016
+          }
+        ]
+      }
+    },
+    "Other_VEAT_Changes": {
+      "max_targets_hit": {
+        "value": 15.6,
+        "source_patch": "Issue_27_Page_7",
+        "previous_value": 7.28,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_7",
+            "from": 7.28,
+            "to": 15.6
+          }
+        ]
+      }
+    },
+    "Savage_Melee_Bug_Sweep.Shred": {
+      "damage_scale": {
+        "value": 0.2991,
+        "source_patch": "Issue_27_Page_3",
+        "previous_value": 0.1479,
+        "change_count": 2,
+        "history": [
+          {
+            "patch": "Issue_27_Page_3",
+            "from": 0.195,
+            "to": 0.21
+          },
+          {
+            "patch": "Issue_27_Page_3",
+            "from": 0.1479,
+            "to": 0.2991
+          }
+        ]
+      }
+    },
+    "Tanker.Street_Justice.Sweeping_Cross": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Spines.Spine_Burst": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Other_Powers_Changes.Shadow_Maul": {
+      "max_targets_hit": {
+        "value": 5.0,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 10.0,
+            "to": 5.0
+          }
+        ]
+      }
+    },
+    "Tanker.Stone_Melee.Tremor": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Battle_Axe.Cleave": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Savage_Melee_Bug_Sweep.Rending_Flurry": {
+      "endurance_cost": {
+        "value": 13.52,
+        "source_patch": "Issue_27_Page_3",
+        "previous_value": 20.8,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_3",
+            "from": 20.8,
+            "to": 13.52
+          }
+        ]
+      }
+    },
+    "Energy_Assault": {
+      "activation_time": {
+        "value": 1.67,
+        "source_patch": "Issue_26_Page_2",
+        "previous_value": 2.0,
+        "change_count": 2,
+        "history": [
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 3.3,
+            "to": 2.5
+          },
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 2.0,
+            "to": 1.67
+          }
+        ]
+      }
+    },
+    "Tanker.Claws.Eviscerate": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Radiation_Melee.Proton_Sweep": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Icy_Assault": {
+      "recharge_time": {
+        "value": 17.0,
+        "source_patch": "Issue_26_Page_2",
+        "previous_value": 10.0,
+        "change_count": 3,
+        "history": [
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 52.9,
+            "to": 61.3
+          },
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 95.8,
+            "to": 114.5
+          },
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 10.0,
+            "to": 17.0
+          }
+        ]
+      }
+    },
+    "Sentinel_Archetype_Revamp": {
+      "damage_scale": {
+        "value": 1.1,
+        "source_patch": "Issue_27_Page_5",
+        "previous_value": 0.95,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_5",
+            "from": 0.95,
+            "to": 1.1
+          }
+        ]
+      }
+    },
+    "Tanker.Fiery_Melee.Breath_of_Fire": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Blast_Power_Set_Updates.Full_Auto": {
+      "arc": {
+        "value": 90.0,
+        "source_patch": "Issue_27_Page_6",
+        "previous_value": 20.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_6",
+            "from": 20.0,
+            "to": 90.0
+          }
+        ]
+      }
+    },
+    "Tanker.Katana.Flashing_Steel": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Kinetic_Melee.Repulsing_Torrent": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Claws.Spin": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Enemies.Gold_Brickers.Breaker": {
+      "defense_scale": {
+        "value": 1.0,
+        "source_patch": "Issue_28_Page_2",
+        "previous_value": 1.3,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 1.3,
+            "to": 1.0
+          }
+        ]
+      }
+    },
+    "Tanker.Fiery_Melee.Combustion": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Blaster_Secondary_Revamp.Frigid_Protection": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 11.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 11.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Earth_Manipulation.Seismic_Smash": {
+      "magnitude": {
+        "value": 3.0,
+        "source_patch": "Issue_27_Page_3",
+        "previous_value": 4.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_3",
+            "from": 4.0,
+            "to": 3.0
+          }
+        ]
+      }
+    },
+    "Power_Bug_Fixes": {
+      "damage_scale": {
+        "value": 1.1818,
+        "source_patch": "Issue_27_Page_4",
+        "previous_value": 1.18,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_4",
+            "from": 1.18,
+            "to": 1.1818
+          }
+        ]
+      }
+    },
+    "Enemies.Skulls.Death_Heads": {
+      "arc": {
+        "value": 0.91,
+        "source_patch": "Issue_28_Page_2",
+        "previous_value": 0.82,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 0.82,
+            "to": 0.91
+          }
+        ]
+      },
+      "accuracy": {
+        "value": 2.5,
+        "source_patch": "Issue_28_Page_2",
+        "previous_value": 4.0,
+        "change_count": 2,
+        "history": [
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 1.6,
+            "to": 1.08
+          },
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 4.0,
+            "to": 2.5
+          }
+        ]
+      }
+    },
+    "Tanker.Street_Justice.Spinning_Strike": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Blaster_Secondary_Revamp.Blinding_Powder": {
+      "magnitude": {
+        "value": 3.0,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 2.0,
+        "change_count": 2,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 2.0,
+            "to": 3.0
+          },
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 2.0,
+            "to": 3.0
+          }
+        ]
+      }
+    },
+    "Tanker.Staff_Fighting.Innocuous_Strikes": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Pool_Powerset_Revamp_Teleportation.Team_Teleport": {
+      "endurance_cost": {
+        "value": 16.0,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 20.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 20.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Staff_Fighting.Eye_of_the_Storm": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Earth_Assault": {
+      "recharge_time": {
+        "value": 14.0,
+        "source_patch": "Issue_26_Page_2",
+        "previous_value": 12.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 12.0,
+            "to": 14.0
+          }
+        ]
+      },
+      "activation_time": {
+        "value": 120.5,
+        "source_patch": "Issue_26_Page_2",
+        "previous_value": 86.64,
+        "change_count": 2,
+        "history": [
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 3.3,
+            "to": 2.5
+          },
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 86.64,
+            "to": 120.5
+          }
+        ]
+      }
+    },
+    "Travel_Power_Updates.Sorcery_Pool.Mystic_Flight.Mystic_Flight_Translocation": {
+      "endurance_cost": {
+        "value": 9.75,
+        "source_patch": "Issue_27_Page_2",
+        "previous_value": 13.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_2",
+            "from": 13.0,
+            "to": 9.75
+          }
+        ]
+      }
+    },
+    "Blaster_Secondary_Revamp.Future_Pain": {
+      "endurance_cost": {
+        "value": 16.848,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 11.024,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 11.024,
+            "to": 16.848
+          }
+        ]
+      }
+    },
+    "Tanker.Electrical_Melee.Thunder_Strike": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Broad_Sword.Slice": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Titan_Weapons.Arc_of_Destruction": {
+      "arc": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Blaster_Secondary_Revamp.Dark_Pit": {
+      "endurance_cost": {
+        "value": 20.18,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 13.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 13.0,
+            "to": 20.18
+          }
+        ]
+      }
+    },
+    "Tanker.Broad_Sword.Head_Splitter": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Ice_Melee.Frost": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Enemies.Warriors": {
+      "damage_scale": {
+        "value": 1.32,
+        "source_patch": "Issue_28_Page_2",
+        "previous_value": 1.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 1.0,
+            "to": 1.32
+          }
+        ]
+      },
+      "defense_scale": {
+        "value": 3.46,
+        "source_patch": "Issue_28_Page_2",
+        "previous_value": 5.19,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_28_Page_2",
+            "from": 5.19,
+            "to": 3.46
+          }
+        ]
+      }
+    },
+    "Thunder_Strike_consistency_pass": {
+      "endurance_cost": {
+        "value": 18.512,
+        "source_patch": "Issue_27_Page_7",
+        "previous_value": 10.192,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_7",
+            "from": 10.192,
+            "to": 18.512
+          }
+        ]
+      }
+    },
+    "Tanker.Katana.Golden_Dragonfly": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 16.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 16.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Psionic_Assault": {
+      "activation_time": {
+        "value": 1.0,
+        "source_patch": "Issue_26_Page_2",
+        "previous_value": 2.07,
+        "change_count": 2,
+        "history": [
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 1.33,
+            "to": 0.83
+          },
+          {
+            "patch": "Issue_26_Page_2",
+            "from": 2.07,
+            "to": 1.0
+          }
+        ]
+      }
+    },
+    "Tanker.Staff_Fighting.Guarded_Spin": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Psionic_Melee.Psi_Blade_Sweep": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Radiation_Melee.Atom_Smasher": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Blaster_Secondary_Revamp.Cauterizing_Aura": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 11.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 11.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Katana.The_Lotus_Drops": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Battle_Axe.Pendulum": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Electrical_Melee.Lightning_Clap": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.Dual_Blades.Sweeping_Strike": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Tanker.Dual_Blades.Typhoons_Edge": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    },
+    "Tanker.War_Mace.Shatter": {
+      "max_targets_hit": {
+        "value": 10.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 5.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 5.0,
+            "to": 10.0
+          }
+        ]
+      }
+    },
+    "Blaster_Secondary_Revamp.Telekinetic_Thrust": {
+      "damage_scale": {
+        "value": 2.92,
+        "source_patch": "Issue_27_Page_1",
+        "previous_value": 0.8,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_27_Page_1",
+            "from": 0.8,
+            "to": 2.92
+          }
+        ]
+      }
+    },
+    "Tanker.Stone_Melee.Fault": {
+      "max_targets_hit": {
+        "value": 16.0,
+        "source_patch": "Issue_26_Page_4",
+        "previous_value": 10.0,
+        "change_count": 1,
+        "history": [
+          {
+            "patch": "Issue_26_Page_4",
+            "from": 10.0,
+            "to": 16.0
+          }
+        ]
+      }
+    }
+  }
+}

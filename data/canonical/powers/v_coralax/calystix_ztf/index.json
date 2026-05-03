@@ -1,0 +1,62 @@
+{
+  "name": "Calystix_ZTF",
+  "display_name": "Calystix_ZTF",
+  "display_fullname": "V Coralax.Calystix ZTF",
+  "display_help": "Coralax",
+  "display_short_help": "Coralax",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    39,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_CORALAX/CALYSTIX_ZTF.POWERSETS",
+  "icon": "calystix_ztf_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Coralax.Calystix_ZTF.Aqua_Bolt",
+    "V_Coralax.Calystix_ZTF.Water_Burst",
+    "V_Coralax.Calystix_ZTF.Dehydrate",
+    "V_Coralax.Calystix_ZTF.Water_Jet",
+    "V_Coralax.Calystix_ZTF.Steam_Spray",
+    "V_Coralax.Calystix_ZTF.Psychic_Scream",
+    "V_Coralax.Calystix_ZTF.Psychic_Wail",
+    "V_Coralax.Calystix_ZTF.Tide_Pool",
+    "V_Coralax.Calystix_ZTF.Brine",
+    "V_Coralax.Calystix_ZTF.Power_of_the_Depths",
+    "V_Coralax.Calystix_ZTF.Resistance"
+  ],
+  "power_display_names": [
+    "Aqua Bolt",
+    "Water Burst",
+    "Dehydrate",
+    "Water Jet",
+    "Wave of Cold",
+    "Psychic Scream",
+    "Psychic Wail",
+    "Tide Pool",
+    "Brine",
+    "Power of the Depths",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Ranged, Light DMG(Cold/Lethal), Foe -DEF",
+    "Ranged (Targeted AoE), Moderate DMG(Cold/Smash), Foe Knockdown, -SPD",
+    "Ranged, Moderate DMG(Cold/Smash), DoT(Cold), Foe -SPD, -DEF, Self Heal Over Time",
+    "Ranged, Superior DMG(Cold/Smash), Foe -SPD",
+    "Ranged (Cone), High DMG(Cold), DoT(Cold), Foe -DEF",
+    "Ranged (Cone), Moderate DMG(Psionic), Foe -Recharge",
+    "PBAoE, Extreme DMG(Psionic), Foe Disorient, -Recharge",
+    "Ranged (Location AoE), Team +DMG, Foe -DMG, -SPD, -Jump, -Stealth, Special",
+    "Ranged, Foe -Resist(All), -MaxHP",
+    "PBAoE, Team +MaxHP, +MaxEnd, +Regeneration, +Range",
+    "Resistance"
+  ]
+}

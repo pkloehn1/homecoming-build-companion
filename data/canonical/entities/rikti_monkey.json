@@ -1,0 +1,260 @@
+{
+  "name": "Rikti_Monkey",
+  "gender": "GENDER_MALE",
+  "group_name": "Rikti",
+  "commandable_pet": 0,
+  "power_tags": [],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 30,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_SMALL",
+    "ai_config": "Default_Melee",
+    "character_class_name": "minion_small",
+    "description": "Often referred to as ruin monkeys, these horrible creatures were created by the Rikti, then let loose in the city to wreak havoc. They roam in packs and pounce with tremendous speed and ferocity. Unfortunately, the Rikti seem to have a never-ending supply of them.",
+    "group_description": "Rikti",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Rikti.Rikti_Monkey_Movement.Monkey_Jumping"
+    ],
+    "power_display_names": [
+      "Monkey Jumping"
+    ],
+    "power_levels": [
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Rikti",
+        "power_set": "Rikti_Monkey_Movement",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [
+    {
+      "min_level": -1,
+      "max_level": -1,
+      "requires": "!Challenge?(HardMode)",
+      "spawn_limit": -1,
+      "spawn_limit_mission": -2,
+      "ignore_combat_mods": true,
+      "ignore_av_to_eb_scaling": true,
+      "rank": "VR_NONE",
+      "ai_config": null,
+      "character_class_name": null,
+      "description": null,
+      "group_description": null,
+      "display_class_name": null,
+      "display_name": null,
+      "costume": null,
+      "reward_scale": -1.0,
+      "additional_rewards": [],
+      "power_full_names": [
+        "Rikti.Rikti_Monkey_Melee.Monkey_Brawl",
+        "Rikti.Rikti_Monkey_Melee.Psychic_Dart",
+        "Rikti.Rikti_Monkey_Melee.Gas"
+      ],
+      "power_display_names": [
+        "Monkey Brawl",
+        "Psychic Dart",
+        "Gas"
+      ],
+      "power_levels": [
+        0,
+        0,
+        0
+      ],
+      "is_dynamic": false,
+      "powers": [
+        {
+          "power_category": "Rikti",
+          "power_set": "Rikti_Monkey_Melee",
+          "power": "*",
+          "level": 0
+        }
+      ],
+      "condition_hash": "57757ac41f1af3991e723ec396180398"
+    },
+    {
+      "min_level": -1,
+      "max_level": -1,
+      "requires": "Challenge?(HardMode)",
+      "spawn_limit": -1,
+      "spawn_limit_mission": -2,
+      "ignore_combat_mods": true,
+      "ignore_av_to_eb_scaling": true,
+      "rank": "VR_NONE",
+      "ai_config": "Rikti_DeltaMonkey",
+      "character_class_name": null,
+      "description": null,
+      "group_description": null,
+      "display_class_name": null,
+      "display_name": null,
+      "costume": null,
+      "reward_scale": -1.0,
+      "additional_rewards": [],
+      "power_full_names": [
+        "Rikti.Rikti_Monkey_Melee_HM.Monkey_Brawl2",
+        "Rikti.Rikti_Monkey_Melee_HM.Monkey_Brawl",
+        "Rikti.Rikti_Monkey_Melee_HM.Psychic_Dart",
+        "Rikti.Rikti_Monkey_Melee_HM.Gas"
+      ],
+      "power_display_names": [
+        "Simian Strike",
+        "Primate Punch",
+        "Psychic Dart",
+        "Gas"
+      ],
+      "power_levels": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "is_dynamic": false,
+      "powers": [
+        {
+          "power_category": "Rikti",
+          "power_set": "Rikti_Monkey_Melee_HM",
+          "power": "*",
+          "level": 0
+        }
+      ],
+      "condition_hash": "cc36a24500a3bf8b1cb70a7091c921c7"
+    },
+    {
+      "min_level": -1,
+      "max_level": -1,
+      "requires": "Challenge?(HardMode1)",
+      "spawn_limit": -1,
+      "spawn_limit_mission": -2,
+      "ignore_combat_mods": true,
+      "ignore_av_to_eb_scaling": true,
+      "rank": "VR_NONE",
+      "ai_config": null,
+      "character_class_name": null,
+      "description": null,
+      "group_description": null,
+      "display_class_name": null,
+      "display_name": null,
+      "costume": null,
+      "reward_scale": 1.2,
+      "additional_rewards": [],
+      "power_full_names": [],
+      "power_display_names": [],
+      "power_levels": [],
+      "is_dynamic": false,
+      "powers": [],
+      "condition_hash": "f77e55fbd8b6bfe94d9c921bf72a8e6f"
+    },
+    {
+      "min_level": -1,
+      "max_level": -1,
+      "requires": "Challenge?(HardMode2)",
+      "spawn_limit": -1,
+      "spawn_limit_mission": -2,
+      "ignore_combat_mods": true,
+      "ignore_av_to_eb_scaling": true,
+      "rank": "VR_NONE",
+      "ai_config": null,
+      "character_class_name": null,
+      "description": null,
+      "group_description": null,
+      "display_class_name": null,
+      "display_name": null,
+      "costume": null,
+      "reward_scale": 1.3,
+      "additional_rewards": [],
+      "power_full_names": [],
+      "power_display_names": [],
+      "power_levels": [],
+      "is_dynamic": false,
+      "powers": [],
+      "condition_hash": "488a58436f2919592ec798059e5f5f06"
+    },
+    {
+      "min_level": -1,
+      "max_level": -1,
+      "requires": "Challenge?(HardMode3)",
+      "spawn_limit": -1,
+      "spawn_limit_mission": -2,
+      "ignore_combat_mods": true,
+      "ignore_av_to_eb_scaling": true,
+      "rank": "VR_NONE",
+      "ai_config": null,
+      "character_class_name": null,
+      "description": null,
+      "group_description": null,
+      "display_class_name": null,
+      "display_name": null,
+      "costume": null,
+      "reward_scale": 1.4,
+      "additional_rewards": [],
+      "power_full_names": [],
+      "power_display_names": [],
+      "power_levels": [],
+      "is_dynamic": false,
+      "powers": [],
+      "condition_hash": "237fc83e24e6fbd65522ccf2835e543c"
+    }
+  ],
+  "levels": [
+    {
+      "min_level": 30,
+      "max_level": 33,
+      "experience": 0,
+      "display_names": [
+        "Rikti Monkey"
+      ],
+      "costumes": [
+        "Rikti_Monkey_01",
+        "Rikti_Monkey_02",
+        "Rikti_Monkey_03"
+      ]
+    },
+    {
+      "min_level": 34,
+      "max_level": 37,
+      "experience": 0,
+      "display_names": [
+        "Wild Rikti Monkey"
+      ],
+      "costumes": [
+        "Rikti_Monkey_04",
+        "Rikti_Monkey_05"
+      ]
+    },
+    {
+      "min_level": 38,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Vicious Rikti Monkey"
+      ],
+      "costumes": [
+        "Rikti_Monkey_06",
+        "Rikti_Monkey_07"
+      ]
+    }
+  ]
+}

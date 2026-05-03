@@ -1,0 +1,100 @@
+{
+  "name": "Crey_Infected_Hermit_Turtle",
+  "gender": "GENDER_MALE",
+  "group_name": "Crey_Infected",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Melee",
+    "character_class_name": "boss_grunt",
+    "description": "This Real-ID Protector looks identical to one of the many other \"unmasked heroes\" that Crey has supposedly recruited for the Altruist Division. Except, of course, for the strange fungus growing from their body. They move in a jerky, halting fashion, as if not entirely under their own control.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Ki_Push",
+      "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Storm_Kick",
+      "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Spinning_Kick",
+      "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Burst_of_Speed",
+      "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Power_Blast",
+      "Crey_Altruist.Altruist_Hermit_Turtle_Offense.Explosive_Blast",
+      "Crey_Altruist.Altruist_Hermit_Turtle_Defense.Dull_Pain",
+      "Crey_Altruist.Altruist_Hermit_Turtle_Defense.Invincibility",
+      "Crey_Altruist.Altruist_Hermit_Turtle_Defense.Unstoppable"
+    ],
+    "power_display_names": [
+      "Ki Push",
+      "Storm Kick",
+      "Spinning Kick",
+      "Burst of Speed",
+      "Power Blast",
+      "Explosive Blast",
+      "Dull Pain",
+      "Invincibility",
+      "Unstoppable"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_Hermit_Turtle_Offense",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_Hermit_Turtle_Defense",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Hermit Turtle"
+      ],
+      "costumes": [
+        "Model_Altruist_Hermit_Turtle_Infected"
+      ]
+    }
+  ]
+}

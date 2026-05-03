@@ -1,0 +1,26 @@
+{
+  "name": "UXB_HM",
+  "display_name": "UXB (Advanced Mode)",
+  "display_fullname": "Rikti.UXB (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/UXB_HM.POWERSETS",
+  "icon": "uxb_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.UXB_HM.Resistance",
+    "Rikti.UXB_HM.Nuke"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Psionic Core Blast"
+  ],
+  "power_short_helps": [
+    "Resistance",
+    "Ranged AoE, Extreme DoT(Psionic), Foe -End, -Recovery"
+  ]
+}

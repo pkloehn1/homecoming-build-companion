@@ -1,0 +1,30 @@
+{
+  "name": "Circle_Death_High",
+  "display_name": "Circle_Death_High",
+  "display_fullname": "CircleOfThorns.Circle Death High",
+  "display_help": "Circle of Thorns",
+  "display_short_help": "Circle of Thorns",
+  "available_level": [
+    44,
+    44,
+    44
+  ],
+  "source_file": "DEFS/POWERS/CIRCLEOFTHORNS/CIRCLE_DEATH_HIGH.POWERSETS",
+  "icon": "circle_death_ranged_set.png",
+  "requires": "",
+  "power_names": [
+    "CircleOfThorns.Circle_Death_High.Tar_Patch",
+    "CircleOfThorns.Circle_Death_High.Blackstar",
+    "CircleOfThorns.Circle_Death_High.Dark_Embrace"
+  ],
+  "power_display_names": [
+    "Tar Patch",
+    "Blackstar",
+    "Dark Embrace"
+  ],
+  "power_short_helps": [
+    "Ranged (Location AoE), Foe -Speed, -Resist(All), -Fly",
+    "PBAoE, Extreme DMG(Negative/Smash), Foe -ToHit",
+    "Toggle: Self +Res(Smash, Lethal, Negative, Toxic)"
+  ]
+}

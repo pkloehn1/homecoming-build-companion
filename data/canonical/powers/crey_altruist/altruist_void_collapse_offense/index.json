@@ -1,0 +1,42 @@
+{
+  "name": "Altruist_Void_Collapse_Offense",
+  "display_name": "Void Collapse Offense",
+  "display_fullname": "Crey Altruist.Void Collapse Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_VOID_COLLAPSE_OFFENSE.POWERSETS",
+  "icon": "altruist_void_collapse_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Void_Collapse_Offense.Toxic_Cysts",
+    "Crey_Altruist.Altruist_Void_Collapse_Offense.Degenerative_Smash",
+    "Crey_Altruist.Altruist_Void_Collapse_Offense.Bursting_Boils",
+    "Crey_Altruist.Altruist_Void_Collapse_Offense.Siphon_Biomass",
+    "Crey_Altruist.Altruist_Void_Collapse_Offense.Reap_Genome",
+    "Crey_Altruist.Altruist_Void_Collapse_Offense.Cytoplast_Tendrils"
+  ],
+  "power_display_names": [
+    "Toxic Cysts",
+    "Degenerative Smash",
+    "Bursting Boils",
+    "Siphon Biomass",
+    "Reap Genome",
+    "Cytoplast Tendrils"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Toxic/Smash), Foe Disorient, -Regen; Self +Regen",
+    "Melee, Heavy DMG(Toxic/Smash), Foe Knockdown, -Regen; Self +Regen",
+    "PBAoE Melee, Heavy DMG(Toxic), Foe -Regen; Self -HP",
+    "Close, High DMG(Toxic), Foe -Regen; Self Heal",
+    "Melee, Extreme DMG(Toxic/Smash), Foe -Regen; Self -HP",
+    "Ranged (Cone), Heavy DMG(Toxic), Self +Res(All DMG), -HP"
+  ]
+}

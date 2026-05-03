@@ -1,0 +1,26 @@
+{
+  "name": "Altruist_Duplicate_Shinobi_Defense",
+  "display_name": "Duplicate Shinobi Defense",
+  "display_fullname": "Crey Altruist.Duplicate Shinobi Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_DUPLICATE_SHINOBI_DEFENSE.POWERSETS",
+  "icon": "altruist_duplicate_shinobi_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Duplicate_Shinobi_Defense.Hide",
+    "Crey_Altruist.Altruist_Duplicate_Shinobi_Defense.Kuji-In_Rin"
+  ],
+  "power_display_names": [
+    "Ninjitsu",
+    "Kuji-In Rin"
+  ],
+  "power_short_helps": [
+    "Toggle: Self Stealth, +DEF(Melee, Ranged, AoE), +Perception",
+    "Self +Res(Disorient, Hold, Sleep, Immobilize, Confuse, Fear, Psionics, Toxic), +SPD, +End, Heal"
+  ]
+}

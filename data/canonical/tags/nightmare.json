@@ -1,0 +1,35 @@
+{
+  "tag": "Nightmare",
+  "bears": [
+    [
+      "Event.Labyrinth Dreamer.Lucid Hemorrhage",
+      "event.labyrinth_corrupted.hemorrhage"
+    ],
+    [
+      "Event.Labyrinth Dreamer.Nightmare Slash",
+      "event.labyrinth_corrupted.maiming_slash"
+    ],
+    [
+      "Event.Labyrinth Dreamer.Shred Sanity",
+      "event.labyrinth_corrupted.shred"
+    ],
+    [
+      "Event.Labyrinth Dreamer.Sleepless Strike",
+      "event.labyrinth_corrupted.savage_strike"
+    ],
+    [
+      "Event.Labyrinth Dreamer.Vision Slash",
+      "event.labyrinth_corrupted.vicious_slash"
+    ],
+    [
+      "Mission Maker Pets.Savage Melee.Dreamer's Flurry",
+      "mission_maker_pets.savage_melee.rending_flurry_labyrinth"
+    ]
+  ],
+  "affects": [
+    [
+      "Event.Labyrinth Dreamer.Soul's Thirst",
+      "event.labyrinth_corrupted.blood_thirst"
+    ]
+  ]
+}

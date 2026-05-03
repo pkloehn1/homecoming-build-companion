@@ -1,0 +1,46 @@
+{
+  "name": "Rider_Death_HM",
+  "display_name": "Rider Death (Advanced Mode)",
+  "display_fullname": "Rikti.Rider Death (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIDER_DEATH_HM.POWERSETS",
+  "icon": "heavy_assault_suit_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rider_Death_HM.Fly",
+    "Rikti.Rider_Death_HM.Laser_Lance",
+    "Rikti.Rider_Death_HM.Sweeping_Laser",
+    "Rikti.Rider_Death_HM.Fusion_Pulse",
+    "Rikti.Rider_Death_HM.Fusion_Explosion",
+    "Rikti.Rider_Death_HM.Fusion_Overload",
+    "Rikti.Rider_Death_HM.Armored_Exoskeleton"
+  ],
+  "power_display_names": [
+    "Fly",
+    "Laser Lance: Death",
+    "Sweeping Laser: Death",
+    "Fusion Pulse: Death",
+    "Fusion Explosion: Death",
+    "Fusion Overload: Death",
+    "Armored Exoskeleton: Death"
+  ],
+  "power_short_helps": [
+    "Self Travel",
+    "Ranged (Narrow Cone), Light DMG(Negative/Energy), Foe -DEF, -ToHit",
+    "Ranged (Cone), Moderate DMG(Negative/Energy), Foe -DEF, -ToHit",
+    "Ranged (Narrow Cone), Moderate DMG(Negative/Energy), Minor DoT(Negative), Foe -Resist(All), -Regen, -ToHit",
+    "Ranged (Targeted AoE), Moderate DMG(Negative/Energy), Minor DoT(Negative), Foe -Resist(All), -Regen, -ToHit",
+    "Post Death Special: PBAoE, High DMG(Negative/Energy), Minor DoT(Negative), Foe -Resist(All), -Regen, -ToHit",
+    "Resistance"
+  ]
+}

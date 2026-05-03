@@ -1,0 +1,54 @@
+{
+  "name": "Labyrinth_Corrupted",
+  "display_name": "Labyrinth Dreamer",
+  "display_fullname": "Event.Labyrinth Dreamer",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_CORRUPTED.POWERSETS",
+  "icon": "savage_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Corrupted.Savage_Strike",
+    "Event.Labyrinth_Corrupted.Maiming_Slash",
+    "Event.Labyrinth_Corrupted.Shred",
+    "Event.Labyrinth_Corrupted.Blood_Thirst",
+    "Event.Labyrinth_Corrupted.Vicious_Slash",
+    "Event.Labyrinth_Corrupted.Rending_Flurry",
+    "Event.Labyrinth_Corrupted.Hemorrhage",
+    "Event.Labyrinth_Corrupted.Savage_Leap",
+    "Event.Labyrinth_Corrupted.Sleep"
+  ],
+  "power_display_names": [
+    "Sleepless Strike",
+    "Nightmare Slash",
+    "Shred Sanity",
+    "Soul's Thirst",
+    "Vision Slash",
+    "Dreamer's Flurry",
+    "Lucid Hemorrhage",
+    "Leap of Faith",
+    "Sleeper's Blessing"
+  ],
+  "power_short_helps": [
+    "Melee, Heal(Special), DMG(Psionic), Foe DoT (Negative), -RES(All), Self +1 Blood Frenzy",
+    "Melee, Heal(Special), DMG(Psionic), DoT (Negative), Foe -Speed",
+    "Melee Heal(Special), DMG(Psionic), Foe DoT (Negative), -Def(All)",
+    "Self +DMG, +To Hit, +Special",
+    "Melee, Heal(Special), DMG(Psionic), Foe DoT (Negative), Knockdown",
+    "PBAoE, Heal(Special), DMG(Psionic), Foe DoT (Negative)",
+    "Melee, Heal(Special), DMG(Psionic), Foe DoT (Negative)",
+    "PBAoE, Heal(Special), DMG(Psionic), Foe DoT (Negative), Self Teleport",
+    "Ranged, Foe Deep Sleep(Special)"
+  ]
+}

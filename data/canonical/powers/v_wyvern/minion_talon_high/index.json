@@ -1,0 +1,22 @@
+{
+  "name": "Minion_Talon_High",
+  "display_name": "Minion Talon High",
+  "display_fullname": "V Wyvern.Minion Talon High",
+  "display_help": "Wyvern",
+  "display_short_help": "Wyvern",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_WYVERN/MINION_TALON_HIGH.POWERSETS",
+  "icon": "minion_talon_high_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Wyvern.Minion_Talon_High.Talon_Aimed_Shot"
+  ],
+  "power_display_names": [
+    "Talon Aimed Shot"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Lethal)"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Labyrinth_Minotaur_Axe",
+  "display_name": "Labyrinth Minotaur Axe",
+  "display_fullname": "Event.Labyrinth Minotaur Axe",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_MINOTAUR_AXE.POWERSETS",
+  "icon": "werewolf_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Minotaur_Axe.Chop",
+    "Event.Labyrinth_Minotaur_Axe.Gash",
+    "Event.Labyrinth_Minotaur_Axe.Pendulum",
+    "Event.Labyrinth_Minotaur_Axe.Swoop",
+    "Event.Labyrinth_Minotaur_Axe.Whirling_Axe",
+    "Event.Labyrinth_Minotaur_Axe.Cleave",
+    "Event.Labyrinth_Minotaur_Axe.Deflection"
+  ],
+  "power_display_names": [
+    "Chop",
+    "Gash",
+    "Pendulum",
+    "Swoop",
+    "Axe Cyclone",
+    "Cleave",
+    "Deflection"
+  ],
+  "power_short_helps": [
+    "Melee, High DMG(Negative), Foe Knockdown, -DEF, -MaxHP",
+    "Melee, Superior DMG(Negative), Foe Knockback, -MaxHP",
+    "Melee (Targeted AoE), Heavy DMG(Negative), Foe Knockback, -MaxHP",
+    "Melee, Extreme DMG(Negative), Foe Knockup, -MaxHP",
+    "PBAoE Melee, Moderate DMG(Negative), Foe Knockback, -MaxHP",
+    "Ranged (Targeted AoE), Extreme DMG(Negative), Foe Knockdown, -MaxHP",
+    "Toggle: Self +DEF(Smash, Lethal, Fire, Cold, Energy, Negative), +Res(Smash, Lethal)"
+  ]
+}

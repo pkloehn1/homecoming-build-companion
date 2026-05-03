@@ -1,0 +1,26 @@
+{
+  "name": "BossMissileLauncher",
+  "display_name": "Boss Missile Launcher",
+  "display_fullname": "Council.Boss Missile Launcher",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    29
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/BOSSMISSILELAUNCHER.POWERSETS",
+  "icon": "bossmissilelauncher_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.BossMissileLauncher.Missile_Launcher",
+    "Council.BossMissileLauncher.Missile_Launcher_2"
+  ],
+  "power_display_names": [
+    "Missile Launcher",
+    "Missile Launcher"
+  ],
+  "power_short_helps": [
+    "Ranged (Targeted AoE), Heavy DMG(Fire/Lethal), Foe Knockback",
+    "Ranged (Targeted AoE), Heavy DMG(Fire/Lethal), Foe Knockback"
+  ]
+}

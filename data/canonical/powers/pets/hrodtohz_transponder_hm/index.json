@@ -1,0 +1,38 @@
+{
+  "name": "HroDtohz_Transponder_HM",
+  "display_name": "HroDtohz Transponder (Advanced Difficulty)",
+  "display_fullname": "Pets.HroDtohz Transponder (Advanced Difficulty)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/HRODTOHZ_TRANSPONDER_HM.POWERSETS",
+  "icon": "hrodtohz_transponder_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.HroDtohz_Transponder_HM.Transport",
+    "Pets.HroDtohz_Transponder_HM.Expel",
+    "Pets.HroDtohz_Transponder_HM.Fade",
+    "Pets.HroDtohz_Transponder_HM.Resistance",
+    "Pets.HroDtohz_Transponder_HM.Backup_Assigned"
+  ],
+  "power_display_names": [
+    "Transport",
+    "Expel",
+    "Fade",
+    "Resistance",
+    "Backup Assigned"
+  ],
+  "power_short_helps": [
+    "Summon",
+    "Expel",
+    "Clear Damage",
+    "Res (Lethal/Smashing)",
+    "Check for Reinforcements"
+  ]
+}

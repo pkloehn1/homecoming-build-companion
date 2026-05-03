@@ -1,0 +1,19 @@
+{
+  "tag": "StreetCred1",
+  "bears": [
+    [
+      "Mastermind Summon.Thugs.Pistols",
+      "mastermind_summon.thugs.pistols"
+    ]
+  ],
+  "affects": [
+    [
+      "Mastermind Summon.Thugs.Gang War",
+      "mastermind_summon.thugs.gang_war"
+    ],
+    [
+      "Mastermind Summon.Thugs.Pistols",
+      "mastermind_summon.thugs.pistols"
+    ]
+  ]
+}

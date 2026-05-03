@@ -1,0 +1,30 @@
+{
+  "name": "Nemesis_Nemesis_Cavalier_Buff",
+  "display_name": "Nemesis_Nemesis_Cavalier_Buff",
+  "display_fullname": "Nemesis.Nemesis Nemesis Cavalier Buff",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_NEMESIS_CAVALIER_BUFF.POWERSETS",
+  "icon": "nemesis_fake_nemesis_buff_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Nemesis_Cavalier_Buff.Release_Pressure",
+    "Nemesis.Nemesis_Nemesis_Cavalier_Buff.Personal_Force_Field",
+    "Nemesis.Nemesis_Nemesis_Cavalier_Buff.Draw_Power"
+  ],
+  "power_display_names": [
+    "Release Pressure",
+    "Neo Force Field Emitters",
+    "Neo Force Field Emitters"
+  ],
+  "power_short_helps": [
+    "PBAoE, Heavy DoT(Fire)",
+    "Self Toggle Invulnerable",
+    "Self Toggle Invulnerable"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "tag": "TimeBombRestricted",
+  "bears": [
+    [
+      "pets_oilslickoil",
+      [
+        "Oil Slick"
+      ]
+    ],
+    [
+      "pets_oilslickoil_blaster",
+      [
+        "Oil Slick"
+      ]
+    ],
+    [
+      "pets_oilslickoil_corruptor",
+      [
+        "Oil Slick"
+      ]
+    ],
+    [
+      "practicerobots_trigger_labyrinthdummy",
+      [
+        "Oil Slick"
+      ]
+    ],
+    [
+      "practicerobots_trigger_vanguarddummy",
+      [
+        "Oil Slick"
+      ]
+    ],
+    [
+      "practicerobots_trigger_vanguarddummy_asf",
+      [
+        "Oil Slick"
+      ]
+    ]
+  ],
+  "affects": []
+}

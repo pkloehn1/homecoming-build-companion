@@ -1,0 +1,50 @@
+{
+  "name": "Endgame_BS_Kinetic",
+  "display_name": "Endgame_BS_Kinetic",
+  "display_fullname": "Tsoo.Endgame BS Kinetic",
+  "display_help": "Tsoo",
+  "display_short_help": "Tsoo",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    7,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/TSOO/ENDGAME_BS_KINETIC.POWERSETS",
+  "icon": "endgame_bs_kinetic_set.png",
+  "requires": "",
+  "power_names": [
+    "Tsoo.Endgame_BS_Kinetic.Quick_Strike",
+    "Tsoo.Endgame_BS_Kinetic.Body_Blow",
+    "Tsoo.Endgame_BS_Kinetic.Smashing_Blow",
+    "Tsoo.Endgame_BS_Kinetic.Power_Siphon",
+    "Tsoo.Endgame_BS_Kinetic.Repulsing_Torrent",
+    "Tsoo.Endgame_BS_Kinetic.Burst",
+    "Tsoo.Endgame_BS_Kinetic.Focused_Burst",
+    "Tsoo.Endgame_BS_Kinetic.Total_Focus"
+  ],
+  "power_display_names": [
+    "Quick Strike",
+    "Body Blow",
+    "Smashing Blow",
+    "Power Siphon",
+    "Repulsing Torrent",
+    "Burst",
+    "Focused Burst",
+    "Total Focus"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Energy/Smash), Foe Knockdown, -DMG",
+    "Melee, Moderate DMG(Energy/Smash), Foe Disorient, -DMG",
+    "Melee, Moderate DMG(Energy/Smash), Foe Disorient, -DMG",
+    "Self +ToHit, +Special",
+    "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback",
+    "PBAoE Melee, Heavy DMG(Energy/Smash), Foe Knockdown, -DMG",
+    "Ranged, Heavy DMG(Energy/Smash), Foe Knockdown, -DMG",
+    "Melee, Superior DMG(Energy/Smash), Foe Disorient, -DMG"
+  ]
+}

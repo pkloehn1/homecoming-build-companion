@@ -1,0 +1,38 @@
+{
+  "name": "Altruist_Sea_Ghost_Offense",
+  "display_name": "Sea Ghost Offense",
+  "display_fullname": "Crey Altruist.Sea Ghost Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SEA_GHOST_OFFENSE.POWERSETS",
+  "icon": "altruist_sea_ghost_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Sea_Ghost_Offense.Aqua_Bolt",
+    "Crey_Altruist.Altruist_Sea_Ghost_Offense.Dehydrate",
+    "Crey_Altruist.Altruist_Sea_Ghost_Offense.Hydro_Blast",
+    "Crey_Altruist.Altruist_Sea_Ghost_Offense.Water_Burst",
+    "Crey_Altruist.Altruist_Sea_Ghost_Offense.Water_Jet"
+  ],
+  "power_display_names": [
+    "Aqua Bolt",
+    "Dehydrate",
+    "Hydro Blast",
+    "Water Burst",
+    "Water Jet"
+  ],
+  "power_short_helps": [
+    "Ranged, Light DMG(Cold/Smash), Foe -DEF",
+    "Ranged, High DoT(Cold/Smash), Foe -DEF, -SPD, Self Heal Over Time",
+    "Ranged, Heavy DMG(Cold/Smash), Foe Knockdown, -SPD",
+    "Ranged (Targeted AoE), Moderate DMG(Cold/Smash), Foe Knockdown, -SPD",
+    "Ranged, Superior DMG(Cold/Smash), Foe -SPD"
+  ]
+}

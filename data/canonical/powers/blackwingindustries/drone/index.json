@@ -1,0 +1,34 @@
+{
+  "name": "Drone",
+  "display_name": "BWI PEACE Drone",
+  "display_fullname": "BlackwingIndustries.BWI PEACE Drone",
+  "display_help": "Blackwing Industries",
+  "display_short_help": "Blackwing Industries",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/BLACKWINGINDUSTRIES/DRONE.POWERSETS",
+  "icon": "bwi_drone_set.png",
+  "requires": "",
+  "power_names": [
+    "BlackwingIndustries.Drone.Fly",
+    "BlackwingIndustries.Drone.Disintegration_Beam",
+    "BlackwingIndustries.Drone.Resistance",
+    "BlackwingIndustries.Drone.Excelsion_FieldEmitter"
+  ],
+  "power_display_names": [
+    "Fly",
+    "Disintegration Beam",
+    "Reinforced Engineering",
+    "Excelsion Field Emitter"
+  ],
+  "power_short_helps": [
+    "Auto: Self +Fly",
+    "Ranged, Moderate DMG(Energy)",
+    "Auto: Self +Res(Psionic, Confuse, Fear, Sleep, Taunt), +DEF(Melee, Ranged), -Res(Energy)",
+    "Auto: PBAoE, Team +Res(All DMG but Psionics, Hold, Immobilize, Disorient)"
+  ]
+}

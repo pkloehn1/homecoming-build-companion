@@ -1,0 +1,30 @@
+{
+  "name": "Skulls_Minions_High",
+  "display_name": "Skulls_Minions_High",
+  "display_fullname": "Skulls.Skulls Minions High",
+  "display_help": "Skulls",
+  "display_short_help": "Skulls",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/SKULLS/SKULLS_MINIONS_HIGH.POWERSETS",
+  "icon": "skulls_minions_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Skulls.Skulls_Minions_High.Deadly_Fists",
+    "Skulls.Skulls_Minions_High.Deadly_Maul",
+    "Skulls.Skulls_Minions_High.Deadly_Bolt"
+  ],
+  "power_display_names": [
+    "Deadly Fists",
+    "Deadly Maul",
+    "Deadly Bolt"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Negative/Cold), Foe -SPD, -Recharge, -ToHit",
+    "Melee (Cone), High DoT(Negative/Cold), Foe -SPD, -Recharge, -ToHit",
+    "Ranged, Moderate DMG(Negative/Cold), Foe -SPD, -Recharge, -ToHit"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Clockwork_King_Ranged_Powers_HM",
+  "display_name": "Clockwork King Ranged Powers (Hard Mode)",
+  "display_fullname": "Portal.Clockwork King Ranged Powers (Hard Mode)",
+  "display_help": "Psychic Clockwork",
+  "display_short_help": "Psychic Clockwork",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PORTAL/CLOCKWORK_KING_RANGED_POWERS_HM.POWERSETS",
+  "icon": "clockwork_king_ranged_powers_set.png",
+  "requires": "",
+  "power_names": [
+    "Portal.Clockwork_King_Ranged_Powers_HM.Mental_Blast",
+    "Portal.Clockwork_King_Ranged_Powers_HM.Psionic_Tornado",
+    "Portal.Clockwork_King_Ranged_Powers_HM.Psychic_Wail",
+    "Portal.Clockwork_King_Ranged_Powers_HM.Mesmerize",
+    "Portal.Clockwork_King_Ranged_Powers_HM.Dominate"
+  ],
+  "power_display_names": [
+    "Mental Blast",
+    "Psionic Tornado",
+    "Psychic Wail",
+    "Mesmerize",
+    "Dominate"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Psionic), Foe -Recharge",
+    "Ranged (Targeted AoE), Moderate DMG(Psionic), Foe Knockup, -Recharge",
+    "PBAoE, Extreme DMG(Psionic), Foe Disorient, -Recharge",
+    "Ranged, Moderate DMG(Psionic), Foe Sleep",
+    "Ranged, Moderate DMG(Psionic), Foe Hold"
+  ]
+}

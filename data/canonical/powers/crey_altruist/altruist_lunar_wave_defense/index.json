@@ -1,0 +1,26 @@
+{
+  "name": "Altruist_Lunar_Wave_Defense",
+  "display_name": "Lunar Wave Defense",
+  "display_fullname": "Crey Altruist.Lunar Wave Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_LUNAR_WAVE_DEFENSE.POWERSETS",
+  "icon": "altruist_lunar_wave_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Lunar_Wave_Defense.Dull_Pain",
+    "Crey_Altruist.Altruist_Lunar_Wave_Defense.Integration"
+  ],
+  "power_display_names": [
+    "Dull Pain",
+    "Integration"
+  ],
+  "power_short_helps": [
+    "Self Heal, +MaxHP",
+    "Toggle: Self +Res(Knockback, Disorient, Hold, Sleep, Immobilize), +Regeneration"
+  ]
+}

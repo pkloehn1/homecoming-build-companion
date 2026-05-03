@@ -1,0 +1,22 @@
+{
+  "name": "Event_Fire_Imps",
+  "display_name": "Outcast_Boss_Fire",
+  "display_fullname": "Outcasts.Outcast Boss Fire",
+  "display_help": "Outcast",
+  "display_short_help": "Outcast",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/OUTCASTS/EVENT_FIRE_IMPS.POWERSETS",
+  "icon": "event_fire_imps_set.png",
+  "requires": "",
+  "power_names": [
+    "Outcasts.Event_Fire_Imps.Fire_Imps"
+  ],
+  "power_display_names": [
+    "Fire Imps"
+  ],
+  "power_short_helps": [
+    "Summon 4 Imps"
+  ]
+}

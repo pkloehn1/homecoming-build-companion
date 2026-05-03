@@ -1,0 +1,30 @@
+{
+  "name": "Warrior_Defense",
+  "display_name": "Warrior Defense",
+  "display_fullname": "Warriors New.Warrior Defense",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_DEFENSE.POWERSETS",
+  "icon": "warrior_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Defense.MN_Resistance",
+    "Warriors_New.Warrior_Defense.LT_Resistance",
+    "Warriors_New.Warrior_Defense.BS_Resistance"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Resistance",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Auto: Res(Fire)",
+    "Auto: Res(Smash, Lethal, Fire, Knockback)",
+    "Auto: Res(Smash, Lethal, Fire, Knockback), +Recovery"
+  ]
+}

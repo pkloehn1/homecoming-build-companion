@@ -1,0 +1,26 @@
+{
+  "name": "Combat_Dummy",
+  "display_name": "Combat Dummy",
+  "display_fullname": "Prestige.Combat Dummy",
+  "display_help": "Just for Fun",
+  "display_short_help": "Just for Fun",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PRESTIGE/COMBAT_DUMMY.POWERSETS",
+  "icon": "temporary_powers_set.png",
+  "requires": "",
+  "power_names": [
+    "Prestige.Combat_Dummy.Labyrinth_Dummy_Pet",
+    "Prestige.Combat_Dummy.Challenge_VanguardDummy_Pet"
+  ],
+  "power_display_names": [
+    "Dummy: Inert Fog",
+    "Dummy: Vanguard MDC"
+  ],
+  "power_short_helps": [
+    "Summon Inert Fog",
+    "Summon Vanguard MDC"
+  ]
+}

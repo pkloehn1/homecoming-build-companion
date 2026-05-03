@@ -1,0 +1,103 @@
+{
+  "folders": [
+    {
+      "name": "homecoming-build-companion",
+      "path": "."
+    },
+    {
+      "name": "MidsReborn (read-only reference)",
+      "path": "../MidsReborn"
+    }
+  ],
+  "settings": {
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+
+    "python.defaultInterpreterPath": "${workspaceFolder:homecoming-build-companion}/.venv/Scripts/python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": ["tools"],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.exclude": ["**/.venv/**", "**/__pycache__/**", "**/node_modules/**"],
+
+    "ruff.enable": true,
+    "ruff.organizeImports": true,
+    "[python]": {
+      "editor.defaultFormatter": "charliermarsh.ruff",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit"
+      }
+    },
+
+    "files.associations": {
+      "*.mhd": "binary",
+      "*.mxd": "binary"
+    },
+
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/.pytest_cache": true,
+      "**/.mypy_cache": true,
+      "**/.ruff_cache": true,
+      "**/scratch/build-archives": true
+    },
+
+    "search.exclude": {
+      "**/.venv": true,
+      "**/scratch": true,
+      "**/data/canonical/powers": true
+    },
+
+    "markdownlint.config": {
+      "MD013": false,
+      "MD024": false,
+      "MD033": false,
+      "MD041": false
+    },
+
+    "yaml.schemas": {
+      "https://json.schemastore.org/github-workflow.json": [".github/workflows/*.yml", ".github/workflows/*.yaml"]
+    },
+
+    "json.schemas": [
+      {
+        "fileMatch": ["build-format/samples/*.json", "samples/builds/*.json"],
+        "url": "./build-format/schema.json"
+      }
+    ],
+
+    "git.confirmSync": false,
+    "git.autofetch": true,
+
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#3b1f2b",
+      "titleBar.activeForeground": "#fce4ec",
+      "titleBar.inactiveBackground": "#2a161f",
+      "titleBar.inactiveForeground": "#9c8590"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "charliermarsh.ruff",
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-python.mypy-type-checker",
+      "tamasfe.even-better-toml",
+      "redhat.vscode-yaml",
+      "davidanson.vscode-markdownlint",
+      "yzhang.markdown-all-in-one",
+      "bierner.markdown-mermaid",
+      "github.vscode-github-actions",
+      "eamodio.gitlens",
+      "gruntfuggly.todo-tree",
+      "anthropic.claude-code",
+      "ms-dotnettools.csharp",
+      "ms-dotnettools.vscode-dotnet-runtime"
+    ]
+  }
+}

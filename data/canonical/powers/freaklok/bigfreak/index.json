@@ -1,0 +1,46 @@
+{
+  "name": "BigFreak",
+  "display_name": "BigFreak",
+  "display_fullname": "Freaklok.BigFreak",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/BIGFREAK.POWERSETS",
+  "icon": "macro_button_01.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.BigFreak.Genetic_Contamination",
+    "Freaklok.BigFreak.Punch",
+    "Freaklok.BigFreak.Haymaker",
+    "Freaklok.BigFreak.Hurl",
+    "Freaklok.BigFreak.Foot_Stomp",
+    "Freaklok.BigFreak.Repulsing_Torrent",
+    "Freaklok.BigFreak.Sawblade"
+  ],
+  "power_display_names": [
+    "Genetic Contamination",
+    "Punch",
+    "Haymaker",
+    "Hurl",
+    "Foot Stomp",
+    "Repulsing Torrent",
+    "Sawblade"
+  ],
+  "power_short_helps": [
+    "Toggle: PBAoE, Minor DoT(Toxic), Foe -DMG",
+    "Melee, Moderate DMG(Smash), Foe Knockback",
+    "Melee, High DMG(Smash), Foe Knockback",
+    "Ranged, High DMG(Smash), Foe Knockback, -Fly",
+    "PBAoE Melee, Heavy DMG(Smash), Foe Knockback",
+    "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback",
+    "Ranged, Heavy DMG(Lethal), Foe Knockback"
+  ]
+}

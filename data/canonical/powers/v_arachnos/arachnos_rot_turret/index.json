@@ -1,0 +1,26 @@
+{
+  "name": "Arachnos_ROT_Turret",
+  "display_name": "Arachnos ROT Turret",
+  "display_fullname": "V Arachnos.Arachnos ROT Turret",
+  "display_help": "Arachnos",
+  "display_short_help": "Arachnos",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_ARACHNOS/ARACHNOS_ROT_TURRET.POWERSETS",
+  "icon": "hydra_pod_powers_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Arachnos.Arachnos_ROT_Turret.Corrosive_Vial",
+    "V_Arachnos.Arachnos_ROT_Turret.Self_Repair"
+  ],
+  "power_display_names": [
+    "Corrosive Blast",
+    "Self Repair"
+  ],
+  "power_short_helps": [
+    "Ranged (Targeted AoE), High DoT(Toxic), -Defense",
+    "Self Rez"
+  ]
+}

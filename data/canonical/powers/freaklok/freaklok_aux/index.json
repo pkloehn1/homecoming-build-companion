@@ -1,0 +1,26 @@
+{
+  "name": "Freaklok_Aux",
+  "display_name": "Freaklok_Aux",
+  "display_fullname": "Freaklok.Freaklok Aux",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/FREAKLOK_AUX.POWERSETS",
+  "icon": "freaklok_aux_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Freaklok_Aux.Burst_of_Speed",
+    "Freaklok.Freaklok_Aux.Lightning_Rod"
+  ],
+  "power_display_names": [
+    "Burst of Speed",
+    "Lightning Rod"
+  ],
+  "power_short_helps": [
+    "PBAoE, Moderate DMG(Smash)",
+    "PBAoE, Superior DMG(Energy), Foe Knockback"
+  ]
+}

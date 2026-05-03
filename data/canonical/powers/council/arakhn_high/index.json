@@ -1,0 +1,54 @@
+{
+  "name": "Arakhn_high",
+  "display_name": "Arakhn High",
+  "display_fullname": "Council.Arakhn High",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/ARAKHN_HIGH.POWERSETS",
+  "icon": "arakhn_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Arakhn_high.Resistance",
+    "Council.Arakhn_high.Ebon_Eye",
+    "Council.Arakhn_high.Gravitic_Emanation",
+    "Council.Arakhn_high.Inky_Aspect",
+    "Council.Arakhn_high.Gravimetric_Snare",
+    "Council.Arakhn_high.Gravity_Well",
+    "Council.Arakhn_high.Stygian_Circle",
+    "Council.Arakhn_high.Essence_Drain",
+    "Council.Arakhn_high.Quasar"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Ebon Eye",
+    "Gravitic Emanation",
+    "Inky Aspect",
+    "Gravimetric Snare",
+    "Gravity Well",
+    "Stygian Circle",
+    "Essence Drain",
+    "Quasar"
+  ],
+  "power_short_helps": [
+    "Resistance",
+    "Ranged, Moderate DMG(Negative), Foe -Recharge, -SPD",
+    "Ranged (Cone), Moderate DMG(Negative), Foe Knockback, Disorient, -Recharge, -SPD",
+    "Toggle: PBAoE, Foe Disorient, Self -HP",
+    "Ranged, Moderate DoT(Negative), Foe Immobilize, -Recharge, -SPD",
+    "Melee, Extreme DoT(Negative), Foe Hold, -Recharge, -SPD",
+    "PBAoE, Foe -DMG, Self Heal (Special), +End",
+    "Melee, Superior DMG(Negative), Foe -Recharge, -SPD, Self Heal",
+    "PBAoE, Extreme DMG(Negative), Foe -Recharge, -SPD, Knockback"
+  ]
+}

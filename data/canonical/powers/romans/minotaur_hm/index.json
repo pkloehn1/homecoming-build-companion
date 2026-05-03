@@ -1,0 +1,22 @@
+{
+  "name": "Minotaur_HM",
+  "display_name": "Minotaur (Advanced Mode)",
+  "display_fullname": "Romans.Minotaur (Advanced Mode)",
+  "display_help": "Minotaur HM",
+  "display_short_help": "Minotaur HM",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/ROMANS/MINOTAUR_HM.POWERSETS",
+  "icon": "macro_button_01.png",
+  "requires": "",
+  "power_names": [
+    "Romans.Minotaur_HM.Rage"
+  ],
+  "power_display_names": [
+    "Rage"
+  ],
+  "power_short_helps": [
+    "Self +DMG, +To Hit, Delayed Self(Weaken, Special)"
+  ]
+}

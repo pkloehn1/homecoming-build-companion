@@ -1,0 +1,127 @@
+{
+  "name": "GenericHeroes_Penny_Preston",
+  "gender": "GENDER_FEMALE",
+  "group_name": "GenericHeroes",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Humanoid",
+    "HumanSkeleton"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 30,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "boss_grunt",
+    "description": "Penny Preston is a lot of things: straight A student, child prodigy, mutant. Penny wants to be like a normal teenager, but that is simply impossible based on how gifted she is. Her mutant power is a rare gift indeed, she has the power to unlock the potential found in other mutants. She can improve upon their natural powers by simply willing them to evolve. Doctors are astounded by this ability, and villain groups would love to get their hands on her, but so far she has stayed one step ahead of them, mostly through the help of mutant heroes she has evolved.",
+    "group_description": "Companion",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Defender_Buff.Empathy.Siphon_Energy",
+      "Defender_Buff.Empathy.Heal_Other",
+      "Defender_Buff.Empathy.Absorb_Pain",
+      "Defender_Buff.Empathy.Resurrect",
+      "Defender_Buff.Empathy.Clear_Mind",
+      "Defender_Buff.Empathy.Fortitude",
+      "Defender_Buff.Empathy.Recovery_Aura",
+      "Defender_Buff.Empathy.Regeneration_Aura",
+      "Defender_Buff.Empathy.Adrenalin_Boost",
+      "Defender_Ranged.Radiation_Blast.Neutrino_Bolt",
+      "Defender_Ranged.Radiation_Blast.X-Ray_Beam",
+      "Defender_Ranged.Radiation_Blast.Irradiate",
+      "Defender_Ranged.Radiation_Blast.Electron_Haze",
+      "Defender_Ranged.Radiation_Blast.Proton_Volley",
+      "Defender_Ranged.Radiation_Blast.Aim",
+      "Defender_Ranged.Radiation_Blast.Cosmic_Burst",
+      "Defender_Ranged.Radiation_Blast.Neutron_Bomb",
+      "Defender_Ranged.Radiation_Blast.Atomic_Blast"
+    ],
+    "power_display_names": [
+      "Healing Aura",
+      "Heal Other",
+      "Absorb Pain",
+      "Resurrect",
+      "Clear Mind",
+      "Fortitude",
+      "Recovery Aura",
+      "Regeneration Aura",
+      "Adrenalin Boost",
+      "Neutrino Bolt",
+      "X-Ray Beam",
+      "Irradiate",
+      "Electron Haze",
+      "Proton Volley",
+      "Aim",
+      "Cosmic Burst",
+      "Neutron Bomb",
+      "Atomic Blast"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Defender_Buff",
+        "power_set": "Empathy",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Defender_Ranged",
+        "power_set": "Radiation_Blast",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 30,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Penny Preston"
+      ],
+      "costumes": [
+        "Model_PennyPreston_NoRing"
+      ]
+    }
+  ]
+}

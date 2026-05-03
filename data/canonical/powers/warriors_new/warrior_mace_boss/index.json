@@ -1,0 +1,22 @@
+{
+  "name": "Warrior_Mace_Boss",
+  "display_name": "Warrior_Mace_Boss",
+  "display_fullname": "Warriors New.Warrior Mace Boss",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    39
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_MACE_BOSS.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Mace_Boss.Crowd_Control"
+  ],
+  "power_display_names": [
+    "Crowd Control"
+  ],
+  "power_short_helps": [
+    "Melee (Cone), High DMG(Smash), Foe Knockback"
+  ]
+}

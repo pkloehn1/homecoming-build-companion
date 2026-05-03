@@ -1,0 +1,50 @@
+{
+  "name": "Living_Armor",
+  "display_name": "Living Armor",
+  "display_fullname": "Midnight Squad.Living Armor",
+  "display_help": "Living Armor",
+  "display_short_help": "Living Armor",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/MIDNIGHT_SQUAD/LIVING_ARMOR.POWERSETS",
+  "icon": "living_armor_set.png",
+  "requires": "",
+  "power_names": [
+    "Midnight_Squad.Living_Armor.Energized_Shield",
+    "Midnight_Squad.Living_Armor.Push_Back",
+    "Midnight_Squad.Living_Armor.Slash",
+    "Midnight_Squad.Living_Armor.Slice",
+    "Midnight_Squad.Living_Armor.Whirling_Sword",
+    "Midnight_Squad.Living_Armor.Hack",
+    "Midnight_Squad.Living_Armor.Spear",
+    "Midnight_Squad.Living_Armor.Resistance"
+  ],
+  "power_display_names": [
+    "Deflection",
+    "Push Back",
+    "Slash",
+    "Slice",
+    "Whirling Sword",
+    "Hack",
+    "Spear",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Toggle: Self +DEF(Smash, Lethal, Fire, Cold, Energy, Negative), +Res(Hold, Immobilize, Disorient, Sleep, Knockback, Confuse, Fear, DeBuff DEF)",
+    "Melee (Cone), Extreme DMG(Smash), Foe Knockback",
+    "Melee, Moderate DMG(Lethal), Foe -DEF, Chance for Critical Hit",
+    "Melee (Cone), Moderate DMG(Lethal), Foe -DEF, Chance for Critical Hit",
+    "PBAoE Melee, Moderate DMG(Lethal), Minor DoT(Lethal), Foe -DEF, Chance for Critical Hit",
+    "Melee, High DMG(Lethal), Foe -DEF, Chance for Critical Hit",
+    "Ranged, High DMG(Lethal)",
+    "Auto: Self +Res(All DMG, Disorient, Sleep, Knockback, Confuse, Fear, DeBuffs), Immune(Heal)"
+  ]
+}

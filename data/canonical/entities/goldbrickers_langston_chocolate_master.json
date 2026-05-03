@@ -1,0 +1,122 @@
+{
+  "name": "GoldBrickers_Langston_Chocolate_Master",
+  "gender": "GENDER_MALE",
+  "group_name": "GoldBrickers",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Humanoid",
+    "HumanSkeleton",
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.GoldBrickers_Boss_Gold_Smelter",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "Goldbrickers_Smelter",
+    "character_class_name": "boss_archvillain",
+    "description": "One of the foremost responsibilities of the Gold Bricker's Cauldron Champion is overseeing the melted chocolate vats and ensuring that Langston Corp's signature Gold Brick candy bar is the one-of-a-kind taste experience that has made the company the face of sweets world-wide.<br><br>The effort involved in migrating Langston Corp's manufacturing capabilities overseas from the Rogue Isles to Paragon City has kept the entire company extremely busy, without time for a single fire-fighting tournament, but it's common knowledge that the champ and his Burnament organizers are eager to see the games return.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.6,
+    "additional_rewards": [],
+    "power_full_names": [
+      "V_GoldBrickers.Flight.Fly",
+      "V_GoldBrickers.Boss_Gold_Smelter.Gold_Skin",
+      "V_GoldBrickers.Boss_Gold_Smelter.Fire_Blast",
+      "V_GoldBrickers.Boss_Gold_Smelter.Blaze",
+      "V_GoldBrickers.Boss_Gold_Smelter.Char",
+      "V_GoldBrickers.Boss_Gold_Smelter.Fire_Shield",
+      "V_GoldBrickers.Boss_Gold_Smelter.Cauterize",
+      "V_GoldBrickers.Boss_Gold_Smelter.Forge",
+      "V_GoldBrickers.Boss_Gold_Smelter_HM.Smelting_Cauldron",
+      "V_GoldBrickers.Boss_Gold_Smelter_HM.Heat_Exhaustion",
+      "V_GoldBrickers.Boss_Gold_Smelter_HM.Melt_Armor",
+      "V_GoldBrickers.Zoe_Gold_Smelter.Resistance"
+    ],
+    "power_display_names": [
+      "Fly",
+      "Smelted Gold Skin",
+      "Fire Blast",
+      "Blaze",
+      "Char",
+      "Thermal Shield",
+      "Cauterize",
+      "Forge",
+      "Smelting Cauldron",
+      "Heat Exhaustion",
+      "Melt Armor",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "V_GoldBrickers",
+        "power_set": "Flight",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_GoldBrickers",
+        "power_set": "Boss_Gold_Smelter",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_GoldBrickers",
+        "power_set": "Boss_Gold_Smelter_HM",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_GoldBrickers",
+        "power_set": "Zoe_Gold_Smelter",
+        "power": "Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Langston Chocolate Master"
+      ],
+      "costumes": [
+        "Langston_Chocolate_Master_01"
+      ]
+    }
+  ]
+}

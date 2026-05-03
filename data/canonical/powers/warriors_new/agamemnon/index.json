@@ -1,0 +1,38 @@
+{
+  "name": "Agamemnon",
+  "display_name": "Agamemnon",
+  "display_fullname": "Warriors New.Agamemnon",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/AGAMEMNON.POWERSETS",
+  "icon": "agamemnon_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Agamemnon.Chop",
+    "Warriors_New.Agamemnon.Beheader",
+    "Warriors_New.Agamemnon.Pendulum",
+    "Warriors_New.Agamemnon.Swoop",
+    "Warriors_New.Agamemnon.Whirling_Axe"
+  ],
+  "power_display_names": [
+    "Chop",
+    "Gash",
+    "Pendulum",
+    "Swoop",
+    "Axe Cyclone"
+  ],
+  "power_short_helps": [
+    "Melee, High DMG(Lethal), Foe Knockback",
+    "Melee, Superior DMG(Lethal), Foe Knockback",
+    "Melee (Targeted AoE), Heavy DMG(Lethal), Foe Knockback",
+    "Melee, Extreme DMG(Lethal), Foe Knockup",
+    "PBAoE Melee, Moderate DMG(Lethal), Foe Knockback, Attract"
+  ]
+}

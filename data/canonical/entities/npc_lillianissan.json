@@ -1,0 +1,70 @@
+{
+  "name": "NPC_LillianIssan",
+  "gender": "GENDER_FEMALE",
+  "group_name": "NPC_Civilians",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 1,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_MINION",
+    "ai_config": "Default_PassiveFollower",
+    "character_class_name": "minion_grunt",
+    "description": "When you've been raised to be the next in a long line of reknowned heroes, you tend to throw things like caution into the wind. The daughter of the warshade Shadowstar, Lillian Issan isn't content to wait for her mother to pass on the mantle (and former Nictus inside her) to begin her fight against evil. Instead, she's become one of the city's many brave reporters, risking life and limb to expose villains before their plans can come to fruition.",
+    "group_description": "Citizen",
+    "display_class_name": "Civilian",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Generic.Brawl.Brawl"
+    ],
+    "power_display_names": [
+      "Brawl"
+    ],
+    "power_levels": [
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Generic",
+        "power_set": "Brawl",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 1,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Lillian Issan"
+      ],
+      "costumes": [
+        "FemaleNPC_34"
+      ]
+    }
+  ]
+}

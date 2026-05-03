@@ -1,0 +1,118 @@
+{
+  "name": "Warriors_Mace_Lt_Plainclothes",
+  "gender": "GENDER_MALE",
+  "group_name": "Warriors",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_LIEUTENANT",
+    "ai_config": "Default_Melee",
+    "character_class_name": "lt_grunt",
+    "description": "The Crushers are experienced members of the School of Skiptro, specialized in the mace. They are stronger and more durable than the initiates after a few months of conditioning, hitting harder and taking more hits.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.4,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Warriors_New.Warrior_Mace_Minion.Bash",
+      "Warriors_New.Warrior_Mace_Lt.Pulverize",
+      "Warriors_New.Warrior_Mace_Lt.Clobber",
+      "Warriors_New.Warrior_Mace_Lt.Shatter",
+      "Warriors_New.Warrior_Ranged_Lt_2.Crossbow",
+      "Warriors_New.Warrior_Ranged_Lt_2.Crystal_Arrow",
+      "Warriors_New.Warrior_Willpower.High_Pain_Tolerance",
+      "Warriors_New.Warrior_Willpower.Heightened_Senses",
+      "Warriors_New.Warrior_Defense.LT_Resistance"
+    ],
+    "power_display_names": [
+      "Bash",
+      "Pulverize",
+      "Clobber",
+      "Shatter",
+      "Crossbow",
+      "Ice Arrow",
+      "Willpower",
+      "Heightened Senses",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Mace_Minion",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Mace_Lt",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Ranged_Lt_2",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Willpower",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Warriors_New",
+        "power_set": "Warrior_Defense",
+        "power": "LT_Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Crusher Champion"
+      ],
+      "costumes": [
+        "Warrior_Mace_Plain_Lt"
+      ]
+    }
+  ]
+}

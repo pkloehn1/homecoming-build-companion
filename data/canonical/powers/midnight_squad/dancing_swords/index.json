@@ -1,0 +1,42 @@
+{
+  "name": "Dancing_Swords",
+  "display_name": "Dancing Swords",
+  "display_fullname": "Midnight Squad.Dancing Swords",
+  "display_help": "Powers assigned to Mortimer Kal's dancing swords.",
+  "display_short_help": "Dancing Swords",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/MIDNIGHT_SQUAD/DANCING_SWORDS.POWERSETS",
+  "icon": "dancing_swords_set.png",
+  "requires": "",
+  "power_names": [
+    "Midnight_Squad.Dancing_Swords.Dancing_Sword",
+    "Midnight_Squad.Dancing_Swords.Dancing_Sword_Fire",
+    "Midnight_Squad.Dancing_Swords.Dancing_Sword_Ice",
+    "Midnight_Squad.Dancing_Swords.Sword_Draw_Ice",
+    "Midnight_Squad.Dancing_Swords.Sword_Draw_Fire",
+    "Midnight_Squad.Dancing_Swords.Sword_Draw"
+  ],
+  "power_display_names": [
+    "Dancing Katana",
+    "Dancing Fire Sword",
+    "Dancing Ice Sword",
+    "Sword Draw",
+    "Sword Draw",
+    "Sword Draw"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Lethal), Foe -DEF, Taunt",
+    "Melee, Moderate DMG(Fire/Lethal), DoT(Fire), Foe Taunt",
+    "Melee, Moderate DMG(Cold/Lethal), Foe -SPD, -Recharge, Taunt",
+    "Grant",
+    "Grant",
+    "Grant"
+  ]
+}

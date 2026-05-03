@@ -1,0 +1,34 @@
+{
+  "name": "Vines",
+  "display_name": "Vines",
+  "display_fullname": "Villain Pets.Vines",
+  "display_help": "Plant Control",
+  "display_short_help": "Plant Control",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/VILLAIN_PETS/VINES.POWERSETS",
+  "icon": "creeper_entangle_set.png",
+  "requires": "",
+  "power_names": [
+    "Villain_Pets.Vines.Vines_OneShot",
+    "Villain_Pets.Vines.Vines_Pulse",
+    "Villain_Pets.Vines.Vines_Debuff",
+    "Villain_Pets.Vines.Self_Destruct"
+  ],
+  "power_display_names": [
+    "Vines",
+    "Vines",
+    "Vines",
+    "Self Destruct"
+  ],
+  "power_short_helps": [
+    "Ranged (Targeted AoE), Foe Hold, -DMG, -DoT(Toxic)",
+    "Ranged (Targeted AoE), Foe Hold, -DMG, -DoT(Toxic)",
+    "Ranged (Targeted AoE), Foe Hold, -DMG, -DoT(Toxic)",
+    "Self Destruct"
+  ]
+}

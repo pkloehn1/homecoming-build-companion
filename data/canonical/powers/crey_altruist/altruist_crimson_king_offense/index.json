@@ -1,0 +1,34 @@
+{
+  "name": "Altruist_Crimson_King_Offense",
+  "display_name": "Crimson King Offense",
+  "display_fullname": "Crey Altruist.Crimson King Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_CRIMSON_KING_OFFENSE.POWERSETS",
+  "icon": "altruist_crimson_king_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Crimson_King_Offense.Neutrino_Bolt",
+    "Crey_Altruist.Altruist_Crimson_King_Offense.X-Ray_Beam",
+    "Crey_Altruist.Altruist_Crimson_King_Offense.Irradiate",
+    "Crey_Altruist.Altruist_Crimson_King_Offense.Cosmic_Burst"
+  ],
+  "power_display_names": [
+    "Neutrino Bolt",
+    "X-Ray Beam",
+    "Irradiate",
+    "Cosmic Burst"
+  ],
+  "power_short_helps": [
+    "Ranged, Minor DMG(Energy), Foe -DEF",
+    "Ranged, Moderate DMG(Energy), Foe -DEF",
+    "PBAoE, Moderate DoT(Energy), Foe -DEF",
+    "Close, Superior DMG(Energy), Foe Disorient, -DEF"
+  ]
+}

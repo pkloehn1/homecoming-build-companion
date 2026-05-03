@@ -1,0 +1,38 @@
+{
+  "name": "Riktografter",
+  "display_name": "Riktografter",
+  "display_fullname": "Freaklok.Riktografter",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/RIKTOGRAFTER.POWERSETS",
+  "icon": "riktografter_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Riktografter.Teleport",
+    "Freaklok.Riktografter.Cybernetic_Rikti_Blade",
+    "Freaklok.Riktografter.Rikti_Rifle",
+    "Freaklok.Riktografter.Particle_Cannon",
+    "Freaklok.Riktografter.Thermite_Cannon"
+  ],
+  "power_display_names": [
+    "Teleport",
+    "Cybernetic Rikti Blade",
+    "Rikti Rifle",
+    "Particle Cannon",
+    "Thermite Cannon"
+  ],
+  "power_short_helps": [
+    "Self Travel",
+    "Melee, Heavy DMG(Energy/Lethal), Foe Knockback",
+    "Ranged, Heavy DMG(Energy), Foe Disorient, Knockback",
+    "Ranged, Extreme DoT(Toxic/Energy)",
+    "Ranged (Cone), Moderate DoT(Fire/Toxic)"
+  ]
+}

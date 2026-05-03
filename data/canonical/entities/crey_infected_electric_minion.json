@@ -1,0 +1,114 @@
+{
+  "name": "Crey_Infected_Electric_Minion",
+  "gender": "GENDER_MALE",
+  "group_name": "Crey_Infected",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_MINION",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "minion_grunt",
+    "description": "This Real-ID Protector looks identical to one of the many other \"unmasked heroes\" that Crey has supposedly recruited for the Altruist Division. Except, of course, for the strange fungus growing from their body. They move in a jerky, halting fashion, as if not entirely under their own control.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.4,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Crey_Altruist.Generic_Electric_Pattern_Protector.Charged_Bolts",
+      "Crey_Altruist.Generic_Electric_Pattern_Protector.Lightning_Bolt",
+      "Crey_Altruist.Generic_Electric_Pattern_Protector.Ball_Lightning",
+      "Crey_Altruist.Generic_Electric_Pattern_Protector.Charged_Brawl",
+      "Crey_Altruist.Generic_Electric_Pattern_Protector.Havoc_Punch",
+      "Crey_Altruist.Generic_Electric_Pattern_Protector.Thunder_Strike",
+      "Crey_Altruist.Generic_Electric_Pattern_Protector.Dull_Pain",
+      "Crey_Altruist.Generic_Electric_Pattern_Protector.Moment_of_Glory",
+      "Crey.Crey_Boss_Hero_Clone_Movement.Fly",
+      "Crey.Crey_Boss_Hero_Clone_Movement.Fly_fx"
+    ],
+    "power_display_names": [
+      "Charged Bolts",
+      "Lightning Bolt",
+      "Ball Lightning",
+      "Charged Brawl",
+      "Havoc Punch",
+      "Thunder Strike",
+      "Dull Pain",
+      "Moment of Glory",
+      "Fly",
+      "Fly fx"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Generic_Electric_Pattern_Protector",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Crey",
+        "power_set": "Crey_Boss_Hero_Clone_Movement",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Infected Altruist Team Leader"
+      ],
+      "costumes": [
+        "Crey_Male_Altruist_1_Infected",
+        "Crey_Male_Altruist_2_Infected",
+        "Crey_Male_Altruist_3_Infected",
+        "Crey_Male_Altruist_4_Infected",
+        "Crey_Male_Altruist_5_Infected",
+        "Crey_Male_Altruist_6_Infected",
+        "Crey_Male_Altruist_7_Infected",
+        "Crey_Male_Altruist_8_Infected",
+        "Crey_Male_Altruist_9_Infected",
+        "Crey_Male_Altruist_10_Infected",
+        "Crey_Male_Altruist_11_Infected",
+        "Crey_Male_Altruist_12_Infected"
+      ]
+    }
+  ]
+}

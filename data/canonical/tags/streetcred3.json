@@ -1,0 +1,19 @@
+{
+  "tag": "StreetCred3",
+  "bears": [
+    [
+      "Mastermind Summon.Thugs.Empty Clips",
+      "mastermind_summon.thugs.empty_clips"
+    ]
+  ],
+  "affects": [
+    [
+      "Mastermind Summon.Thugs.Empty Clips",
+      "mastermind_summon.thugs.empty_clips"
+    ],
+    [
+      "Mastermind Summon.Thugs.Gang War",
+      "mastermind_summon.thugs.gang_war"
+    ]
+  ]
+}

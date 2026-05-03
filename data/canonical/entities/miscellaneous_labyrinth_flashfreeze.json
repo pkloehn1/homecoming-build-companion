@@ -1,0 +1,150 @@
+{
+  "name": "Miscellaneous_Labyrinth_Flashfreeze",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human",
+    "Demon",
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Miscellaneous_Labyrinth_Memories",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 55,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "Ultimatum_Flashfreeze",
+    "character_class_name": "boss_praetorianarchvillain",
+    "description": "This malevolent fog has become thick and warped... Taking on a powerful physical form; A manifestation of the collective memory's strongest. These beings exist on the fringes of reality and grow stronger by breathing deep of the surrounding fog's pollution.",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": "Memory",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.0,
+    "additional_rewards": [
+      "LabyrinthMemoryAether",
+      "LabyrinthObol3"
+    ],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Aether.Stamina",
+      "V_GenericVillains.Mastermind_Leadership.Maneuvers",
+      "Temporary_Powers.Temporary_Powers.Labyrinth_FX",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Resistance",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.DemonTissue",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Hide",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Placate",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Assassins_Icicle",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Cutting_Cold",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Shivering_Slash",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Subzero_Shockwave",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Icy_Eviscerate",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Brain_Freeze",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Energy_Absorption",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Frozen_Armor",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Permafrost",
+      "BlackwingIndustries.Ultimatum_Flashfreeze.Icy_Bastion"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Pollution of Catastrophe",
+      "Leadership",
+      "Fog Guardians",
+      "Resistance",
+      "Demon Tissue Grafts",
+      "Hide",
+      "Placate",
+      "Assassin's Icicle",
+      "Cutting Cold",
+      "Shivering Slash",
+      "Subzero Shockwave",
+      "Icy Eviscerate",
+      "Brain Freeze",
+      "Energy Absorption",
+      "Frozen Armor",
+      "Permafrost",
+      "Icy Bastion"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Aether",
+        "power": "Stamina",
+        "level": 0
+      },
+      {
+        "power_category": "V_GenericVillains",
+        "power_set": "Mastermind_Leadership",
+        "power": "Maneuvers",
+        "level": 0
+      },
+      {
+        "power_category": "Temporary_Powers",
+        "power_set": "Temporary_Powers",
+        "power": "Labyrinth_FX",
+        "level": 0
+      },
+      {
+        "power_category": "BlackwingIndustries",
+        "power_set": "Ultimatum_Flashfreeze",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 55,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Coagulated Pollution"
+      ],
+      "costumes": [
+        "BWI_Ultimatum_FIashfreeze"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Guard_BWI",
+  "display_name": "Guard (Blackwing)",
+  "display_fullname": "Pets.Guard (Blackwing)",
+  "display_help": "Blackwing Industries",
+  "display_short_help": "Blackwing Industries",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/GUARD_BWI.POWERSETS",
+  "icon": "guard_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Guard_BWI.TransLocation_Beam"
+  ],
+  "power_display_names": [
+    "TransLocation Beam"
+  ],
+  "power_short_helps": [
+    "Remove Foe"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Wyvern_RainofArrows",
+  "display_name": "Wyvern RainofArrows",
+  "display_fullname": "V Wyvern.Wyvern RainofArrows",
+  "display_help": "Wyvern",
+  "display_short_help": "Wyvern",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_WYVERN/WYVERN_RAINOFARROWS.POWERSETS",
+  "icon": "wyvern_rainofarrows_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Wyvern.Wyvern_RainofArrows.RainofArrows_Piercing",
+    "V_Wyvern.Wyvern_RainofArrows.RainofArrows_Poison"
+  ],
+  "power_display_names": [
+    "RainofArrows",
+    "RainofArrows"
+  ],
+  "power_short_helps": [
+    "Heavy DoT(Lethal), Foe -Res(All)",
+    "DoT(Lethal/Toxic), Foe Immobilize, -SPD, -Recharge"
+  ]
+}

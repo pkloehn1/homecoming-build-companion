@@ -1,0 +1,22 @@
+{
+  "name": "Arakhn_Livia",
+  "display_name": "Arakhn_Livia",
+  "display_fullname": "Nictus.Arakhn Livia",
+  "display_help": "Nictus",
+  "display_short_help": "Nictus",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/NICTUS/ARAKHN_LIVIA.POWERSETS",
+  "icon": "arakhn_livia_set.png",
+  "requires": "",
+  "power_names": [
+    "Nictus.Arakhn_Livia.Darkstar_Collapse"
+  ],
+  "power_display_names": [
+    "Darkstar Collapse"
+  ],
+  "power_short_helps": [
+    "Autohit: Ranged, Variable DMG(Negative), Foe Knockback, -SPD, -Recharge"
+  ]
+}

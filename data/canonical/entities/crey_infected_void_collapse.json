@@ -1,0 +1,97 @@
+{
+  "name": "Crey_Infected_Void_Collapse",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Crey_Infected",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Melee",
+    "character_class_name": "boss_grunt",
+    "description": "This Real-ID Protector looks identical to one of the many other \"unmasked heroes\" that Crey has supposedly recruited for the Altruist Division. Except, of course, for the strange fungus growing from their body. They move in a jerky, halting fashion, as if not entirely under their own control.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Toxic_Cysts",
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Degenerative_Smash",
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Bursting_Boils",
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Siphon_Biomass",
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Reap_Genome",
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Cytoplast_Tendrils",
+      "Crey_Altruist.Altruist_Void_Collapse_Defense.DNA_Siphon",
+      "Crey_Altruist.Altruist_Void_Collapse_Defense.Eclipse"
+    ],
+    "power_display_names": [
+      "Toxic Cysts",
+      "Degenerative Smash",
+      "Bursting Boils",
+      "Siphon Biomass",
+      "Reap Genome",
+      "Cytoplast Tendrils",
+      "DNA Siphon",
+      "Eclipse"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_Void_Collapse_Offense",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_Void_Collapse_Defense",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Void Collapse"
+      ],
+      "costumes": [
+        "Model_Altruist_Void_Collapse_Infected"
+      ]
+    }
+  ]
+}

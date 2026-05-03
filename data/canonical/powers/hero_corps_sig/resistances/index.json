@@ -1,0 +1,30 @@
+{
+  "name": "Resistances",
+  "display_name": "Inherent Resists",
+  "display_fullname": "Hero Corps Sig.Inherent Resists",
+  "display_help": "Inherent Resists",
+  "display_short_help": "Inherent Resists",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/HERO_CORPS_SIG/RESISTANCES.POWERSETS",
+  "icon": "crey_boss_hero_clone_power_set.png",
+  "requires": "",
+  "power_names": [
+    "Hero_Corps_Sig.Resistances.HC_Minor_Res",
+    "Hero_Corps_Sig.Resistances.HC_Med_Res",
+    "Hero_Corps_Sig.Resistances.HC_High_Res"
+  ],
+  "power_display_names": [
+    "Minor Resists",
+    "Heavy Resists",
+    "Minor Resists"
+  ],
+  "power_short_helps": [
+    "Self Auto, Minor Res [All]",
+    "Self Auto, High Res [All]",
+    "Self Auto, Minor Res [All]"
+  ]
+}

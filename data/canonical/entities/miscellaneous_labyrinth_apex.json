@@ -1,0 +1,179 @@
+{
+  "name": "Miscellaneous_Labyrinth_Apex",
+  "gender": "GENDER_MALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human",
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Miscellaneous_Labyrinth_Memories",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 55,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "Signatures_Melee",
+    "character_class_name": "boss_praetorianarchvillain",
+    "description": "This malevolent fog has become thick and warped... Taking on a powerful physical form; A manifestation of the collective memory's strongest. These beings exist on the fringes of reality and grow stronger by breathing deep of the surrounding fog's pollution.",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": "Memory",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.0,
+    "additional_rewards": [
+      "LabyrinthMemoryAether",
+      "LabyrinthObol3"
+    ],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Aether.Stamina",
+      "V_GenericVillains.Mastermind_Leadership.Maneuvers",
+      "Temporary_Powers.Temporary_Powers.Labyrinth_FX",
+      "Vanguard.Apex.Resistance",
+      "Vanguard.Apex.Web_Grenade",
+      "Vanguard.Apex.Thunder_Kick",
+      "Vanguard.Apex.Storm_Kick",
+      "Vanguard.Apex.Cobra_Strike",
+      "Vanguard.Apex.Focus_Chi",
+      "Vanguard.Apex.Eagles_Claw",
+      "Vanguard.Apex.Crane_Kick",
+      "Vanguard.Apex.Dragons_Tail",
+      "Vanguard.Apex.Focused_Fighting",
+      "Vanguard.Apex.Inner_Focus",
+      "Vanguard.Apex.Quickness",
+      "Vanguard.Apex.Elude",
+      "Vanguard.Apex.Hack",
+      "Vanguard.Apex.Slash",
+      "Vanguard.Apex.Build_Up",
+      "Vanguard.Apex.Slice",
+      "Vanguard.Apex.Parry",
+      "Vanguard.Apex.Whirling_Sword",
+      "Vanguard.Apex.Disembowel",
+      "Vanguard.Apex.Head_Splitter",
+      "Vanguard.Heavy_Armor.Impervium_Armor"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Pollution of Catastrophe",
+      "Leadership",
+      "Fog Guardians",
+      "Resistance",
+      "Web Grenade",
+      "Thunder Kick",
+      "Storm Kick",
+      "Cobra Strike",
+      "Focus Chi",
+      "Eagles Claw",
+      "Crane Kick",
+      "Dragons Tail",
+      "Focused Fighting",
+      "Inner Focus",
+      "Quickness",
+      "Elude",
+      "Hack",
+      "Slash",
+      "Build Up",
+      "Slice",
+      "Parry",
+      "Whirling Sword",
+      "Disembowel",
+      "Head Splitter",
+      "Impervium Armor"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Aether",
+        "power": "Stamina",
+        "level": 0
+      },
+      {
+        "power_category": "V_GenericVillains",
+        "power_set": "Mastermind_Leadership",
+        "power": "Maneuvers",
+        "level": 0
+      },
+      {
+        "power_category": "Temporary_Powers",
+        "power_set": "Temporary_Powers",
+        "power": "Labyrinth_FX",
+        "level": 0
+      },
+      {
+        "power_category": "Vanguard",
+        "power_set": "Apex",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Vanguard",
+        "power_set": "Heavy_Armor",
+        "power": "Impervium_Armor",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 55,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Coagulated Pollution"
+      ],
+      "costumes": [
+        "Apex_Vanguard_NoRing"
+      ]
+    }
+  ]
+}

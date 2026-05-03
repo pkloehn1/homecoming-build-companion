@@ -1,0 +1,38 @@
+{
+  "name": "Rikti_Mentalist_Ranged_HM",
+  "display_name": "Rikti Mentalist Ranged (Advanced Mode)",
+  "display_fullname": "Rikti.Rikti Mentalist Ranged (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIKTI_MENTALIST_RANGED_HM.POWERSETS",
+  "icon": "rikti_mentalist_ranged_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rikti_Mentalist_Ranged_HM.Mental_Training",
+    "Rikti.Rikti_Mentalist_Ranged_HM.Mental_Blast",
+    "Rikti.Rikti_Mentalist_Ranged_HM.Intimidate",
+    "Rikti.Rikti_Mentalist_Ranged_HM.Dominate",
+    "Rikti.Rikti_Mentalist_Ranged_HM.Confuse"
+  ],
+  "power_display_names": [
+    "Mental Training",
+    "Mental Blast",
+    "Intimidate",
+    "Dominate",
+    "Confuse"
+  ],
+  "power_short_helps": [
+    "Auto: Self +Recharge, +SPD, +Res(Slow, Confuse, Fear, Sleep)",
+    "Ranged, Moderate DMG(Psionic), Foe -Recharge",
+    "Ranged, Moderate DMG(Psionic), Foe Fear",
+    "Ranged, Moderate DMG(Psionic), Foe Hold",
+    "Ranged, Foe Confuse"
+  ]
+}

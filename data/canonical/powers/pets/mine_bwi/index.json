@@ -1,0 +1,30 @@
+{
+  "name": "Mine_BWI",
+  "display_name": "Mine_BWI",
+  "display_fullname": "Pets.Mine BWI",
+  "display_help": "Devices",
+  "display_short_help": "Devices",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/MINE_BWI.POWERSETS",
+  "icon": "mine_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Mine_BWI.Trip_Mine",
+    "Pets.Mine_BWI.Self_Destruct",
+    "Pets.Mine_BWI.Resistance"
+  ],
+  "power_display_names": [
+    "Nitrogen Trip Mine",
+    "Self Destruct",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "PBAoE: Cold/Fire, Foe Knockback, Immobilize, Slow, -Rech",
+    "Self Destruct",
+    "Resistance"
+  ]
+}

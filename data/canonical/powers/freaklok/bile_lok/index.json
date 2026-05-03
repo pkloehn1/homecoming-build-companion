@@ -1,0 +1,50 @@
+{
+  "name": "Bile_Lok",
+  "display_name": "Bile_Lok",
+  "display_fullname": "Freaklok.Bile Lok",
+  "display_help": "Bile_Lok",
+  "display_short_help": "Bile_Lok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/BILE_LOK.POWERSETS",
+  "icon": "bile_lok_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Bile_Lok.Plasma_Blast",
+    "Freaklok.Bile_Lok.Plasma_Blast_Barrage",
+    "Freaklok.Bile_Lok.Plasma_Burst",
+    "Freaklok.Bile_Lok.Anti-Matter_Beam",
+    "Freaklok.Bile_Lok.Anti-Matter_Ray",
+    "Freaklok.Bile_Lok.Focused_Plasma_Strike",
+    "Freaklok.Bile_Lok.Plasma_Vortex",
+    "Freaklok.Bile_Lok.EM_Pulse"
+  ],
+  "power_display_names": [
+    "Corrosive Blast",
+    "Caustic Barrage",
+    "Vitriolic Burst",
+    "Anti-Matter Beam",
+    "Anti-Matter Ray",
+    "Focused Plasma Strike",
+    "Plasma Vortex",
+    "EM Pulse"
+  ],
+  "power_short_helps": [
+    "Ranged, Heavy DoT(Energy/Toxic), Foe -Regen",
+    "Ranged, High DoT(Energy/Toxic), Foe -Regen",
+    "Ranged (Targeted AoE), Moderate DoT(Energy/Toxic), Foe -Regen",
+    "Ranged (Narrow Cone), Extreme DMG(Energy), Foe Knockback, -DEF",
+    "Ranged (Targeted AoE), Extreme DoT(Energy), Foe Disorient, -DEF",
+    "Melee, Extreme DMG(Energy/Smash), Foe Disorient, -Regen",
+    "PBAoE Melee, Moderate DMG(Energy/Smash), Foe Disorient, -Regen",
+    "PBAoE, Foe Hold, -End, -Regen, Special vs. Robots"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Ultimatum_Flashfreeze_HM",
+  "display_name": "Ultimatum Flashfreeze (Advanced Mode)",
+  "display_fullname": "BlackwingIndustries.Ultimatum Flashfreeze (Advanced Mode)",
+  "display_help": "Ultimatum",
+  "display_short_help": "Ultimatum",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/BLACKWINGINDUSTRIES/ULTIMATUM_FLASHFREEZE_HM.POWERSETS",
+  "icon": "nemesis_monstrosity_set.png",
+  "requires": "",
+  "power_names": [
+    "BlackwingIndustries.Ultimatum_Flashfreeze_HM.Judgement_Tell",
+    "BlackwingIndustries.Ultimatum_Flashfreeze_HM.Judgement",
+    "BlackwingIndustries.Ultimatum_Flashfreeze_HM.Resistance"
+  ],
+  "power_display_names": [
+    "Cryonic Judgement Target",
+    "Cryonic Judgement",
+    "Hot Soup For Lunch"
+  ],
+  "power_short_helps": [
+    "Target of Cryonic Judgement",
+    "Ranged Facing Cone, Fatal DMG(Cold)",
+    "Auto: Self -Res(Cold)"
+  ]
+}

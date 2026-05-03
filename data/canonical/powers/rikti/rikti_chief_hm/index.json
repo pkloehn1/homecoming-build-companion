@@ -1,0 +1,34 @@
+{
+  "name": "Rikti_Chief_HM",
+  "display_name": "Rikti Chief (Advanced Mode)",
+  "display_fullname": "Rikti.Rikti Chief (Advanced Mode)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/RIKTI/RIKTI_CHIEF_HM.POWERSETS",
+  "icon": "rikti_chief_hm_set.png",
+  "requires": "",
+  "power_names": [
+    "Rikti.Rikti_Chief_HM.Blade_Swing",
+    "Rikti.Rikti_Chief_HM.Blade_Eviscerate",
+    "Rikti.Rikti_Chief_HM.Blade_Slice",
+    "Rikti.Rikti_Chief_HM.Blade_Carve"
+  ],
+  "power_display_names": [
+    "Blade Swing",
+    "Blade Eviscerate",
+    "Blade Slice",
+    "Blade Carve"
+  ],
+  "power_short_helps": [
+    "Melee, High DMG(Energy/Lethal), Foe Disorient",
+    "Melee, Moderate DMG(Energy/Lethal), Foe Disorient",
+    "Melee (Cone), Moderate DMG(Energy/Lethal), Foe Disorient",
+    "Melee (Cone), Extreme DMG(Energy/Lethal), Foe Disorient"
+  ]
+}

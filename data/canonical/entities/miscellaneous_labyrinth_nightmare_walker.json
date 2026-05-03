@@ -1,0 +1,172 @@
+{
+  "name": "Miscellaneous_Labyrinth_Nightmare_Walker",
+  "gender": "GENDER_NEUTER",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 55,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ELITE",
+    "ai_config": "Signatures",
+    "character_class_name": "boss_praetorianelite",
+    "description": "The creatures under your bed. The monsters hiding in the closet. Those who go bump in the night.<br><br>They go by many names, thriving on the fear that lingers in the darkness of humanity. These beings of pure nightmare exist to consume the lucid dreams of their prey and grow in power before returning to and melding into the greater whole. Thus the sleeping cycle of what defines fear is perpetuated indefinitely.<br><br><color Black>'What is fear? A lack of understanding? A failure to comprehend the true nature of something? What if a lack of possible comprehension is what defines the darker truth?'</color>",
+    "group_description": "Labyrinthine Nightmare",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Event.Labyrinth_Walker.Cocoon",
+      "Event.Labyrinth_Walker.Entrap",
+      "Event.Labyrinth_Corrupted.Blood_Thirst",
+      "Event.Labyrinth_Corrupted.Hemorrhage",
+      "Event.Labyrinth_Corrupted.Maiming_Slash",
+      "Event.Labyrinth_Corrupted.Rending_Flurry",
+      "Event.Labyrinth_Corrupted.Savage_Leap",
+      "Event.Labyrinth_Corrupted.Savage_Strike",
+      "Event.Labyrinth_Corrupted.Shred",
+      "Event.Labyrinth_Corrupted.Vicious_Slash",
+      "Event.Labyrinth_Guardian.Assault",
+      "Event.Labyrinth_Guardian.Constitution"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Nightmare Cocoon",
+      "Nightmare Entrap",
+      "Soul's Thirst",
+      "Lucid Hemorrhage",
+      "Nightmare Slash",
+      "Dreamer's Flurry",
+      "Leap of Faith",
+      "Sleepless Strike",
+      "Shred Sanity",
+      "Vision Slash",
+      "Dreamer's Euphoria",
+      "Constitution"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Walker",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Corrupted",
+        "power": "Blood_Thirst",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Corrupted",
+        "power": "Hemorrhage",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Corrupted",
+        "power": "Maiming_Slash",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Corrupted",
+        "power": "Rending_Flurry",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Corrupted",
+        "power": "Savage_Leap",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Corrupted",
+        "power": "Savage_Strike",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Corrupted",
+        "power": "Shred",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Corrupted",
+        "power": "Vicious_Slash",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Guardian",
+        "power": "Assault",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Guardian",
+        "power": "Constitution",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 55,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Dark Walker"
+      ],
+      "costumes": [
+        "Labyrinth_Nightmare_Walker_01",
+        "Labyrinth_Nightmare_Walker_02"
+      ]
+    }
+  ]
+}

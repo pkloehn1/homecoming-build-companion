@@ -1,0 +1,26 @@
+{
+  "name": "Flamethrower",
+  "display_name": "Flamethrower",
+  "display_fullname": "Council.Flamethrower",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    29
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/FLAMETHROWER.POWERSETS",
+  "icon": "flamethrower_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Flamethrower.Flamethrower",
+    "Council.Flamethrower.Flamethrower_Ignite"
+  ],
+  "power_display_names": [
+    "Flamethrower",
+    "Ignite"
+  ],
+  "power_short_helps": [
+    "Ranged (Cone), High DoT(Fire)",
+    "Ranged, Extreme DoT(Fire), Location AoE, DoT(Fire)"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Ripper01",
+  "display_name": "Ripper01",
+  "display_fullname": "Freaklok.Ripper01",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/RIPPER01.POWERSETS",
+  "icon": "ripper01_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Ripper01.Swipe",
+    "Freaklok.Ripper01.Slash",
+    "Freaklok.Ripper01.Follow_Up",
+    "Freaklok.Ripper01.Focus",
+    "Freaklok.Ripper01.Shockwave",
+    "Freaklok.Ripper01.Savage_Leap"
+  ],
+  "power_display_names": [
+    "Swipe",
+    "Slash",
+    "Follow Up",
+    "Focus",
+    "Shockwave",
+    "Savage Leap"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Lethal)",
+    "Melee, Heavy DMG(Lethal), Foe -DEF",
+    "Melee, Light DMG(Lethal), Self +DMG, +ToHit",
+    "Ranged, High DMG(Lethal), Foe Knockdown",
+    "Close (Cone), Moderate DMG(Lethal), Foe Knockdown",
+    "PBAoE, Superior DMG(Lethal), Foe Minor DoT(Lethal), Self 1 to 3 Blood Frenzy, Teleport"
+  ]
+}

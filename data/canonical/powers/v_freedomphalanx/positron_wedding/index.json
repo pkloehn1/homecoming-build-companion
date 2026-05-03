@@ -1,0 +1,22 @@
+{
+  "name": "Positron_Wedding",
+  "display_name": "Positron Wedding",
+  "display_fullname": "V FreedomPhalanx.Positron Wedding",
+  "display_help": "Freedom Phalanx",
+  "display_short_help": "Freedom Phalanx",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_FREEDOMPHALANX/POSITRON_WEDDING.POWERSETS",
+  "icon": "positron_set.png",
+  "requires": "",
+  "power_names": [
+    "V_FreedomPhalanx.Positron_Wedding.Overcharge"
+  ],
+  "power_display_names": [
+    "Overcharge"
+  ],
+  "power_short_helps": [
+    "Self +DEF(All but Psionics), +Recovery, +Max HP, Res(DeBuff DEF), +Special"
+  ]
+}

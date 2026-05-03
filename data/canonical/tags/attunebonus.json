@@ -1,0 +1,46 @@
+{
+  "tag": "AttuneBonus",
+  "bears": [
+    [
+      "Brute Melee.Sonic Melee.Sonic Thrust",
+      "brute_melee.sonic_melee.sonic_thrust"
+    ],
+    [
+      "Brute Melee.Sonic Melee.Strident Echo",
+      "brute_melee.sonic_melee.strident_echo"
+    ],
+    [
+      "Scrapper Melee.Sonic Melee.Sonic Thrust",
+      "scrapper_melee.sonic_melee.sonic_thrust"
+    ],
+    [
+      "Scrapper Melee.Sonic Melee.Strident Echo",
+      "scrapper_melee.sonic_melee.strident_echo"
+    ],
+    [
+      "Stalker Melee.Sonic Melee.Sonic Thrust",
+      "stalker_melee.sonic_melee.sonic_thrust"
+    ],
+    [
+      "Stalker Melee.Sonic Melee.Strident Echo",
+      "stalker_melee.sonic_melee.strident_echo"
+    ],
+    [
+      "Tanker Melee.Sonic Melee.Sonic Thrust",
+      "tanker_melee.sonic_melee.sonic_thrust"
+    ],
+    [
+      "Tanker Melee.Sonic Melee.Strident Echo",
+      "tanker_melee.sonic_melee.strident_echo"
+    ],
+    [
+      "V Arachnos Proxy.Sonic Melee.Sonic Thrust",
+      "v_arachnos_proxy.sonic_melee.sonic_thrust"
+    ],
+    [
+      "V Arachnos Proxy.Sonic Melee.Strident Echo",
+      "v_arachnos_proxy.sonic_melee.strident_echo"
+    ]
+  ],
+  "affects": []
+}

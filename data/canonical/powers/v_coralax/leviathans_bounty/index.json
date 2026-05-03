@@ -1,0 +1,54 @@
+{
+  "name": "Leviathans_Bounty",
+  "display_name": "Leviathan's Bounty",
+  "display_fullname": "V Coralax.Leviathan's Bounty",
+  "display_help": "Coralax",
+  "display_short_help": "Coralax",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_CORALAX/LEVIATHANS_BOUNTY.POWERSETS",
+  "icon": "empathy_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Coralax.Leviathans_Bounty.Healing_Aura",
+    "V_Coralax.Leviathans_Bounty.Heal_Other",
+    "V_Coralax.Leviathans_Bounty.Clear_Mind",
+    "V_Coralax.Leviathans_Bounty.Fortitude",
+    "V_Coralax.Leviathans_Bounty.Recovery_Aura",
+    "V_Coralax.Leviathans_Bounty.Adrenalin_Boost",
+    "V_Coralax.Leviathans_Bounty.Resistance",
+    "V_Coralax.Leviathans_Bounty.Hurricane",
+    "V_Coralax.Leviathans_Bounty.Assault"
+  ],
+  "power_display_names": [
+    "Healing Aura",
+    "Heal Other",
+    "Clear Mind",
+    "Fortitude",
+    "Recovery Aura",
+    "Adrenalin Shot",
+    "Resistance",
+    "Hurricane",
+    "Grant Recovery Aura"
+  ],
+  "power_short_helps": [
+    "PBAoE, Team +Heal",
+    "Ally Heal",
+    "Ally +Res(Disorient, Hold, Sleep, Immobilize, Fear, Confuse), +Perception",
+    "Ally +DEF(All), +DMG, +To-hit",
+    "PBAoE, Ally +Recovery",
+    "Ranged, Ally +End, +Recharge, Res (Slow)",
+    "Auto: No Damage",
+    "Auto: PBAoE, Foe Knockback, -Range, -ToHit",
+    "PBAoE, Ally +Recovery"
+  ]
+}

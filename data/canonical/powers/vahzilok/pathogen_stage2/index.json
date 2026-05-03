@@ -1,0 +1,46 @@
+{
+  "name": "Pathogen_Stage2",
+  "display_name": "Pathogen Stage2",
+  "display_fullname": "Vahzilok.Pathogen Stage2",
+  "display_help": "A collection of powers used by Pathogen and his mission.",
+  "display_short_help": "Pathogen Stage2",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/VAHZILOK/PATHOGEN_STAGE2.POWERSETS",
+  "icon": "macro_button_01.png",
+  "requires": "",
+  "power_names": [
+    "Vahzilok.Pathogen_Stage2.BoneSaw",
+    "Vahzilok.Pathogen_Stage2.Cleaver",
+    "Vahzilok.Pathogen_Stage2.Sleep_Dart",
+    "Vahzilok.Pathogen_Stage2.Weaken",
+    "Vahzilok.Pathogen_Stage2.Strength_of_Will",
+    "Vahzilok.Pathogen_Stage2.Quickness",
+    "Vahzilok.Pathogen_Stage2.Resistance"
+  ],
+  "power_display_names": [
+    "Bone Saw",
+    "Cleaver",
+    "Sleep Dart",
+    "Weaken",
+    "Strength of Will",
+    "Quickness",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal), Foe -SPD, -ToHit",
+    "Melee, High DMG(Lethal), Foe -SPD, -ToHit",
+    "Ranged, Moderate DMG(Lethal), Foe Sleep",
+    "Ranged (Targeted AoE), Foe -DMG -ToHit, -Special",
+    "Self +Res(Disorient, Sleep, Hold, Immobilize, Repel, Knockback, All DMG), +Recovery, Delayed Weaken(Self -End)",
+    "Auto: Self +Recharge, +SPD, +Res(Slow)",
+    "Resistance"
+  ]
+}

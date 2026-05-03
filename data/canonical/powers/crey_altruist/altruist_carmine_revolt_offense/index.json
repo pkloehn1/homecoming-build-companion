@@ -1,0 +1,42 @@
+{
+  "name": "Altruist_Carmine_Revolt_Offense",
+  "display_name": "Carmine Revolt Offense",
+  "display_fullname": "Crey Altruist.Carmine Revolt Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_CARMINE_REVOLT_OFFENSE.POWERSETS",
+  "icon": "altruist_carmine_revolt_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Carmine_Revolt_Offense.Encase",
+    "Crey_Altruist.Altruist_Carmine_Revolt_Offense.Shatter",
+    "Crey_Altruist.Altruist_Carmine_Revolt_Offense.Rock_Shards",
+    "Crey_Altruist.Altruist_Carmine_Revolt_Offense.Upthrust",
+    "Crey_Altruist.Altruist_Carmine_Revolt_Offense.Stalagmite",
+    "Crey_Altruist.Altruist_Carmine_Revolt_Offense.Stone_Fist"
+  ],
+  "power_display_names": [
+    "Encase",
+    "Shatter",
+    "Rock Shards",
+    "Upthrust",
+    "Stalagmite",
+    "Stone Fist"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Smash), Foe -DEF, -Fly, -Jump",
+    "Ranged, Heavy DMG(Smash), Foe -DEF, -Fly, -Jump",
+    "Ranged (Cone), Light DMG(Lethal), DoT(Lethal), Foe -DEF",
+    "Ranged (Targeted AoE), Moderate DMG(Smash), Foe Knockdown, -DEF, -Fly, -Jump",
+    "Ranged, Extreme DMG(Smash), Foe Disorient",
+    "Melee, Moderate DMG(Smash), Foe Disorient"
+  ]
+}

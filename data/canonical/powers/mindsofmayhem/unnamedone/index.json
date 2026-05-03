@@ -1,0 +1,38 @@
+{
+  "name": "UnnamedOne",
+  "display_name": "UnnamedOne",
+  "display_fullname": "MindsOfMayhem.UnnamedOne",
+  "display_help": "Nightmares",
+  "display_short_help": "Nightmares",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/MINDSOFMAYHEM/UNNAMEDONE.POWERSETS",
+  "icon": "unnamedone_set.png",
+  "requires": "",
+  "power_names": [
+    "MindsOfMayhem.UnnamedOne.Foot_Stomp",
+    "MindsOfMayhem.UnnamedOne.Dark_Obliteration",
+    "MindsOfMayhem.UnnamedOne.Explosive_Blast",
+    "MindsOfMayhem.UnnamedOne.Neutron_Bomb",
+    "MindsOfMayhem.UnnamedOne.Psychic_Scream"
+  ],
+  "power_display_names": [
+    "Foot Stomp",
+    "Dark Obliteration",
+    "Explosive Blast",
+    "Neutron Bomb",
+    "Psychic Scream"
+  ],
+  "power_short_helps": [
+    "PBAoE, Heavy DMG(Smash), Foe Knockback, Disorient",
+    "Ranged (Targeted AoE), Moderate DMG(Negative), Foe -ToHit",
+    "Ranged (Targeted AoE), Moderate DMG(Energy/Smash), Foe Knockback",
+    "Ranged (Targeted AoE), Moderate DMG(Energy), Foe -DEF",
+    "Ranged (Cone), Heavy DMG(Psionic), Foe -Recharge"
+  ]
+}

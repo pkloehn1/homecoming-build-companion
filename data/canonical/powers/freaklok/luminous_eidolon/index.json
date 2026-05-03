@@ -1,0 +1,34 @@
+{
+  "name": "Luminous_Eidolon",
+  "display_name": "Luminous_Eidolon",
+  "display_fullname": "Freaklok.Luminous Eidolon",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/LUMINOUS_EIDOLON.POWERSETS",
+  "icon": "luminous_eidolon_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Luminous_Eidolon.Neutrino_Bolt",
+    "Freaklok.Luminous_Eidolon.X-Ray_Beam",
+    "Freaklok.Luminous_Eidolon.Irradiate",
+    "Freaklok.Luminous_Eidolon.Contaminated_Strike"
+  ],
+  "power_display_names": [
+    "Neutrino Bolt",
+    "X-Ray Beam",
+    "Irradiate",
+    "Contaminated Strike"
+  ],
+  "power_short_helps": [
+    "Ranged, Minor DMG(Energy), Foe -DEF",
+    "Ranged, Moderate DMG(Energy), Foe -DEF",
+    "PBAoE, Moderate DoT(Energy), Foe -DEF",
+    "Melee, Light DMG(Energy/Smash), Foe -DEF"
+  ]
+}

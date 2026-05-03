@@ -1,0 +1,76 @@
+{
+  "name": "Miscellaneous_Ruin_Body_HM_LGTF",
+  "gender": "GENDER_MALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 54,
+    "max_level": 54,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "Default_Ranged",
+    "character_class_name": "boss_praetorianarchvillain",
+    "description": "Ruin was infamously known back on Primal Earth as the arch-nemesis of Hero 1.<br><br>It was with some irony that he found himself later volunteering to join the Omega Team, which was headed by the man he'd fought so many times.<br><br>Like most Omega Team members, nothing had been heard of him since that fateful day years ago, but Ruin's fate appears to have been death by some cruel Rikti experiment.",
+    "group_description": "Omega Team",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Objects.Inherent.Resistance",
+      "Temporary_Powers.Temporary_Powers.LevelShift06"
+    ],
+    "power_display_names": [
+      "Resistance",
+      "Level Shift +6"
+    ],
+    "power_levels": [
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Objects",
+        "power_set": "Inherent",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Temporary_Powers",
+        "power_set": "Temporary_Powers",
+        "power": "LevelShift06",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 54,
+      "max_level": 54,
+      "experience": 0,
+      "display_names": [
+        "Ruin"
+      ],
+      "costumes": [
+        "Model_Ruin_Corpse"
+      ]
+    }
+  ]
+}

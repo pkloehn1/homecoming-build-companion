@@ -1,0 +1,58 @@
+{
+  "name": "Blackwing_Ultimatum_Flashfreeze_Lurker",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Blackwing",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human",
+    "Demon"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 55,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "Ultimatum_Flashfreeze",
+    "character_class_name": "boss_archvillain",
+    "description": "Years ago, Flashfreeze was an ice-wielding Paragon City hero who specialized in demon hunting. The media used to love shipping her with the Vindicator's own Infernal, as the fire-and-ice demon hunter combo made for cute tabloid reading, but he eventually went on record commenting that her methods were <i>'dangerous and unbecoming'</i>.<br><br>Now she's a member of Ultimatum, amongst the government's most powerful operatives and their star black-ops assassin. A sudden drop in temperature is the calling card to her targets for their untimely demise.<br><br>Always carrying a dagger that she says is for 'special occasions', but what that means is unclear as nobody has ever seen her draw it.",
+    "group_description": "Ultimatum",
+    "display_class_name": "Hero",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 0.0,
+    "additional_rewards": [],
+    "power_full_names": [],
+    "power_display_names": [],
+    "power_levels": [],
+    "is_dynamic": false,
+    "powers": [],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 55,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Flashfreeze"
+      ],
+      "costumes": [
+        "BWI_Ultimatum_Flashfreeze"
+      ]
+    }
+  ]
+}

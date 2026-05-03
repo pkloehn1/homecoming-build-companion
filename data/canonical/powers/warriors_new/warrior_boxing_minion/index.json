@@ -1,0 +1,30 @@
+{
+  "name": "Warrior_Boxing_Minion",
+  "display_name": "Warrior_Boxing_Minion",
+  "display_fullname": "Warriors New.Warrior Boxing Minion",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_BOXING_MINION.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Boxing_Minion.Brawl",
+    "Warriors_New.Warrior_Boxing_Minion.Boxing",
+    "Warriors_New.Warrior_Boxing_Minion.Kick"
+  ],
+  "power_display_names": [
+    "Brawl",
+    "Boxing",
+    "Kick"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Smash), Fighting Synergy",
+    "Melee, Moderate DMG(Smash), Foe Disorient",
+    "Melee, Moderate DMG(Smash), Foe Knockdown"
+  ]
+}

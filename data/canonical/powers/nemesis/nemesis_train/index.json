@@ -1,0 +1,22 @@
+{
+  "name": "Nemesis_Train",
+  "display_name": "Nemesis_Train",
+  "display_fullname": "Nemesis.Nemesis Train",
+  "display_help": "Nemesis",
+  "display_short_help": "Nemesis",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/NEMESIS/NEMESIS_TRAIN.POWERSETS",
+  "icon": "nemesis_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Nemesis.Nemesis_Train.FallingOff"
+  ],
+  "power_display_names": [
+    "Falling Off The Train"
+  ],
+  "power_short_helps": [
+    "Fatality"
+  ]
+}

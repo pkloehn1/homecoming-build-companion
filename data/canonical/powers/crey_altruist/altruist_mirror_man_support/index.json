@@ -1,0 +1,34 @@
+{
+  "name": "Altruist_Mirror_Man_Support",
+  "display_name": "Mirror Man Support",
+  "display_fullname": "Crey Altruist.Mirror Man Support",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_MIRROR_MAN_SUPPORT.POWERSETS",
+  "icon": "altruist_mirror_man_support_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Mirror_Man_Support.Personal_Force_Field",
+    "Crey_Altruist.Altruist_Mirror_Man_Support.Deflection_Shield",
+    "Crey_Altruist.Altruist_Mirror_Man_Support.Dispersion_Bubble",
+    "Crey_Altruist.Altruist_Mirror_Man_Support.Force_Bubble"
+  ],
+  "power_display_names": [
+    "Personal Force Field",
+    "Deflection Shield",
+    "Dispersion Bubble",
+    "Damping Bubble"
+  ],
+  "power_short_helps": [
+    "Self +DEF(All), +Res(All DMG, Teleport)",
+    "Ranged, Ally +DEF(Smash, Lethal, Fire, Cold, Energy, Negative), +Res(Toxic, End Drain)",
+    "Toggle: PBAoE, Team +DEF(Smash, Lethal, Fire, Cold, Energy, Negative), +Res(Hold, Immobilize, Disorient)",
+    "Location (PBAoE), Team +Res(Accuracy, Defense, Perception, Recharge, Regen, Speed, ToHit), Foe -Str(Defense, Perception, Regen, Speed, ToHit)"
+  ]
+}

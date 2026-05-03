@@ -1,0 +1,30 @@
+{
+  "tag": "RefreshReminder",
+  "bears": [
+    [
+      "Mastermind Summon.Mercenaries.Burst",
+      "mastermind_summon.mercenaries.burst"
+    ],
+    [
+      "Mastermind Summon.Mercenaries.M30 Grenade",
+      "mastermind_summon.mercenaries.m30_grenade"
+    ],
+    [
+      "Mastermind Summon.Mercenaries.Slug",
+      "mastermind_summon.mercenaries.slug"
+    ],
+    [
+      "Mastermind Summon.Robotics.Photon Grenade",
+      "mastermind_summon.robotics.photon_grenade"
+    ],
+    [
+      "Mastermind Summon.Robotics.Pulse Rifle Blast",
+      "mastermind_summon.robotics.pulse_rifle_blast"
+    ],
+    [
+      "Mastermind Summon.Robotics.Pulse Rifle Burst",
+      "mastermind_summon.robotics.pulse_rifle_burst"
+    ]
+  ],
+  "affects": []
+}

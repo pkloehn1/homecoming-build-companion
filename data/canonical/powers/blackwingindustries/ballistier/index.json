@@ -1,0 +1,58 @@
+{
+  "name": "Ballistier",
+  "display_name": "BWI PEACE Ballistier",
+  "display_fullname": "BlackwingIndustries.BWI PEACE Ballistier",
+  "display_help": "Blackwing Industries",
+  "display_short_help": "Blackwing Industries",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/BLACKWINGINDUSTRIES/BALLISTIER.POWERSETS",
+  "icon": "bwi_ballistier_set.png",
+  "requires": "",
+  "power_names": [
+    "BlackwingIndustries.Ballistier.Fly",
+    "BlackwingIndustries.Ballistier.Sonic_Grenade",
+    "BlackwingIndustries.Ballistier.Glue_Grenade",
+    "BlackwingIndustries.Ballistier.Web_Grenade",
+    "BlackwingIndustries.Ballistier.Incendiary_Grenade",
+    "BlackwingIndustries.Ballistier.Heavy_Grenade",
+    "BlackwingIndustries.Ballistier.Grenade",
+    "BlackwingIndustries.Ballistier.Thunder_Kick",
+    "BlackwingIndustries.Ballistier.Crane_Kick",
+    "BlackwingIndustries.Ballistier.Assault"
+  ],
+  "power_display_names": [
+    "Fly",
+    "Sonic Grenade",
+    "Glue Grenade",
+    "Web Grenade",
+    "Incendiary Grenade",
+    "Heavy Grenade",
+    "Grenade",
+    "Jet Booster Kick",
+    "Jet Launcher Kick",
+    "Assault"
+  ],
+  "power_short_helps": [
+    "Auto: Self +Fly",
+    "Ranged (Location AoE), Foe -Res(All)",
+    "Ranged (Location AoE), Foe -SPD, -Recharge, -Fly, -Jump",
+    "Ranged, Foe Immobilize, -SPD, -Recharge, -Fly, -Jump",
+    "Ranged (Targeted AoE), High DoT(Fire), Location AoE, DoT(Fire)",
+    "Ranged (Targeted AoE), Superior DMG(Fire/Lethal), Foe Knockback",
+    "Ranged (Targeted AoE), Moderate DMG(Fire/Lethal), Foe Knockback",
+    "Melee, Light DMG(Fire/Smash), DoT(Fire), Foe Disorient",
+    "Melee, Superior DMG(Fire/Smash), DoT(Fire), Foe Knockback",
+    "Toggle: PBAoE, Team +DMG, +Res(Taunt, Placate)"
+  ]
+}

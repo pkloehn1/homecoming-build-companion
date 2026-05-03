@@ -1,0 +1,22 @@
+{
+  "name": "Hamidon_Accuracy_Range",
+  "display_name": "Hamidon Accuracy Range",
+  "display_fullname": "Boosts.Hamidon Accuracy Range",
+  "display_help": "Enhances the accuracy and range of a power.",
+  "display_short_help": "Hamidon (All Origins)",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/BOOSTS/HAMIDON_ACCURACY_RANGE.POWERSETS",
+  "icon": "hamidon_accuracy_mez_set.png",
+  "requires": "",
+  "power_names": [
+    "Boosts.Hamidon_Accuracy_Range.Hamidon_Accuracy_Range"
+  ],
+  "power_display_names": [
+    "Microvillus Exposure (Acc/Range)"
+  ],
+  "power_short_helps": [
+    "Enhances Accuracy and Range"
+  ]
+}

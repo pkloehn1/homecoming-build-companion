@@ -1,0 +1,42 @@
+{
+  "name": "Requiem",
+  "display_name": "Requiem",
+  "display_fullname": "Council.Requiem",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/REQUIEM.POWERSETS",
+  "icon": "requiem_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Requiem.Resistance",
+    "Council.Requiem.Shadow_Blast",
+    "Council.Requiem.Gravitic_Emanation",
+    "Council.Requiem.Dark_Matter_Detonation",
+    "Council.Requiem.Power_Drain",
+    "Council.Requiem.Umbral_Shield"
+  ],
+  "power_display_names": [
+    "Resistance",
+    "Shadow Blast",
+    "Gravitic Emanation",
+    "Dark Detonation",
+    "Sunless Mire",
+    "Umbral Shield"
+  ],
+  "power_short_helps": [
+    "Resistance",
+    "Ranged, High DMG(Negative), Foe -Recharge, -SPD",
+    "Ranged (Cone), Moderate DMG(Negative), Foe Knockback, Disorient, -Recharge, -SPD",
+    "Ranged (Targeted AoE), Moderate DMG(Negative), Foe Knockback, -Recharge, -SPD",
+    "PBAoE, Moderate DMG(Negative), Foe -Recharge, -SPD, Self +DMG, +ToHit",
+    "Toggle: Self +Res(All DMG but Psionics)"
+  ]
+}

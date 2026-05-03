@@ -1,0 +1,26 @@
+{
+  "name": "Labyrinth_Spider",
+  "display_name": "Labyrinth Spider",
+  "display_fullname": "Event.Labyrinth Spider",
+  "display_help": "Labryinth of Fog",
+  "display_short_help": "Labryinth of Fog",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_SPIDER.POWERSETS",
+  "icon": "banespawn_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Spider.Frigid_Slash",
+    "Event.Labyrinth_Spider.Frigid_Slice"
+  ],
+  "power_display_names": [
+    "Nightmare Slash",
+    "Nightmare Slice"
+  ],
+  "power_short_helps": [
+    "Melee, Heal(Special), Moderate DMG (Negative Energy), -RES(Foe, Negative Energy), Deep Sleep(Foe)",
+    "Melee (Cone), Heal(Special), Moderate DMG (Negative Energy), -RES(Foe, Negative Energy), Chance for Deep Sleep(Foe)"
+  ]
+}

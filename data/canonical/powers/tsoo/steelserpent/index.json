@@ -1,0 +1,46 @@
+{
+  "name": "SteelSerpent",
+  "display_name": "SteelSerpent",
+  "display_fullname": "Tsoo.SteelSerpent",
+  "display_help": "Tsoo",
+  "display_short_help": "Tsoo",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/TSOO/STEELSERPENT.POWERSETS",
+  "icon": "steelserpent_set.png",
+  "requires": "",
+  "power_names": [
+    "Tsoo.SteelSerpent.Katana_Hack",
+    "Tsoo.SteelSerpent.Katana_Slash",
+    "Tsoo.SteelSerpent.Katana_Slice",
+    "Tsoo.SteelSerpent.Whirling_Katana",
+    "Tsoo.SteelSerpent.Shuriken",
+    "Tsoo.SteelSerpent.Mesmerize",
+    "Tsoo.SteelSerpent.Dominate"
+  ],
+  "power_display_names": [
+    "Sting of the Wasp",
+    "Gambler's Cut",
+    "Flashing Steel",
+    "The Lotus Drops",
+    "Shuriken",
+    "Mesmerize",
+    "Dominate"
+  ],
+  "power_short_helps": [
+    "Melee, Moderate DMG(Lethal), Foe -DEF, Chance for Critical Hit",
+    "Melee, Light DMG(Lethal), Foe -DEF, Chance for Critical Hit",
+    "Melee (Cone), Moderate DMG(Lethal), Foe -DEF, Chance for Critical Hit",
+    "PBAoE Melee, Moderate DMG(Lethal), Minor DoT(Lethal), Foe -DEF, Chance for Critical Hit",
+    "Ranged, Light DMG(Lethal)",
+    "Melee, Moderate DMG(Psionic), Foe Sleep",
+    "Ranged, Moderate DMG(Psionic), Foe Hold"
+  ]
+}

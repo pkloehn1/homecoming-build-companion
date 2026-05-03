@@ -1,0 +1,22 @@
+{
+  "name": "Peebles",
+  "display_name": "Peebles",
+  "display_fullname": "V LegacyChain.Peebles",
+  "display_help": "Hero",
+  "display_short_help": "Hero",
+  "available_level": [
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_LEGACYCHAIN/PEEBLES.POWERSETS",
+  "icon": "peebles_set.png",
+  "requires": "",
+  "power_names": [
+    "V_LegacyChain.Peebles.Wedding_Band"
+  ],
+  "power_display_names": [
+    "Wedding Band"
+  ],
+  "power_short_helps": [
+    "Self +Res(All DMG)"
+  ]
+}

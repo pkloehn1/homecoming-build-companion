@@ -1,0 +1,42 @@
+{
+  "tag": "Resistances",
+  "bears": [
+    [
+      "Mastermind Pets.Mercenary Commando 2.Equip",
+      "mastermind_pets.commando_2.equip"
+    ],
+    [
+      "Mastermind Pets.Mercenary Commando.Resistance",
+      "mastermind_pets.commando.resistance"
+    ],
+    [
+      "Mastermind Pets.Mercenary Medic 2.Equip",
+      "mastermind_pets.medic_2.equip"
+    ],
+    [
+      "Mastermind Pets.Mercenary Medic.Resistance",
+      "mastermind_pets.medic.resistance"
+    ],
+    [
+      "Mastermind Pets.Mercenary Soldier 2.Equip",
+      "mastermind_pets.soldier_2.equip"
+    ],
+    [
+      "Mastermind Pets.Mercenary Soldier.Resistance",
+      "mastermind_pets.soldier.resistance"
+    ],
+    [
+      "Mastermind Pets.Mercenary Spec Ops 2.Equip",
+      "mastermind_pets.spec_ops_2.equip"
+    ],
+    [
+      "Mastermind Pets.Mercenary Spec Ops.Resistance",
+      "mastermind_pets.spec_ops.resistance"
+    ],
+    [
+      "Mastermind Summon.Mercenaries.Serum",
+      "mastermind_summon.mercenaries.serum"
+    ]
+  ],
+  "affects": []
+}

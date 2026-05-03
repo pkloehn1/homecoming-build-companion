@@ -1,0 +1,105 @@
+{
+  "name": "CircleOfThorns_Thorn_Blizzard_Caster",
+  "gender": "GENDER_MALE",
+  "group_name": "CircleOfThorns",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 50,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": -1,
+    "spawn_limit_mission": -1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_MINION",
+    "ai_config": "CircleOfThorns_Thorn_Caster",
+    "character_class_name": "minion_grunt",
+    "description": "At the highest levels of elemental mastery, certain Casters are able to harness multiple techniques and combine them into more devastating powers. Blizzard Casters have mastered the arts of Air and Ice casting, and can manipulate gusts of chill wind and atmospheric energies.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.1,
+    "additional_rewards": [],
+    "power_full_names": [
+      "CircleOfThorns.Circle_Thorn_Caster_Storm.Gust",
+      "CircleOfThorns.Circle_Thorn_Caster_Storm.Hailstones",
+      "CircleOfThorns.Circle_Thorn_Caster_Storm.Charged_Brawl",
+      "CircleOfThorns.Circle_Thorn_Caster_Storm.Lightning_Strike",
+      "CircleOfThorns.Circle_Thorn_Caster_Storm.Frozen_Armor",
+      "CircleOfThorns.Circle_Thorn_Caster_Air_Movement.Fly",
+      "CircleOfThorns.Circle_Thorn_Caster_Air_Movement.Fly_fx",
+      "CircleOfThorns.CoT_Resistance_High.Resistance"
+    ],
+    "power_display_names": [
+      "Gust",
+      "Hailstones",
+      "Charged Brawl",
+      "Lightning Strike",
+      "Frozen Armor",
+      "Fly",
+      "Fly fx",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "CircleOfThorns",
+        "power_set": "Circle_Thorn_Caster_Storm",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "CircleOfThorns",
+        "power_set": "Circle_Thorn_Caster_Air_Movement",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "CircleOfThorns",
+        "power_set": "CoT_Resistance_High",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 50,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Blizzard Thorn Caster"
+      ],
+      "costumes": [
+        "CoT_StormCaster_01",
+        "CoT_StormCaster_02",
+        "CoT_StormCaster_03"
+      ]
+    }
+  ]
+}

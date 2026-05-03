@@ -1,0 +1,26 @@
+{
+  "name": "Savage_Cadaver",
+  "display_name": "Savage_Cadaver",
+  "display_fullname": "Freaklok.Savage Cadaver",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/SAVAGE_CADAVER.POWERSETS",
+  "icon": "savage_cadaver_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Savage_Cadaver.Savage_Strike",
+    "Freaklok.Savage_Cadaver.Maiming_Slash"
+  ],
+  "power_display_names": [
+    "Savage Strike",
+    "Maiming Slash"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Lethal), Minor DoT(Lethal), Self +1 Blood Frenzy",
+    "Melee, Moderate DMG(Lethal), Minor DoT(Lethal), Foe -SPD, Self +1 Blood Frenzy"
+  ]
+}

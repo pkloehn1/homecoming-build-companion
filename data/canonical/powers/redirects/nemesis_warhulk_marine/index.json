@@ -1,0 +1,26 @@
+{
+  "name": "Nemesis_Warhulk_Marine",
+  "display_name": "Nemesis Warhulk Marine",
+  "display_fullname": "Redirects.Nemesis Warhulk Marine",
+  "display_help": "Marine Affinity",
+  "display_short_help": "Marine Affinity",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/REDIRECTS/NEMESIS_WARHULK_MARINE.POWERSETS",
+  "icon": "nemesis_warhulk_marine_set.png",
+  "requires": "",
+  "power_names": [
+    "Redirects.Nemesis_Warhulk_Marine.Steamquake",
+    "Redirects.Nemesis_Warhulk_Marine.Barrier_Reef"
+  ],
+  "power_display_names": [
+    "Steamquake",
+    "Barrier Reef"
+  ],
+  "power_short_helps": [
+    "High-Accuracy: Ranged (Targeted AoE), Moderate DMG(Fire/Smash), DoT(Fire)",
+    "PBAoE, Team +Resist(All DMG), +Heal Over Time"
+  ]
+}

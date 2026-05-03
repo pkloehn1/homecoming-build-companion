@@ -1,0 +1,34 @@
+{
+  "name": "Mire_Eidolon",
+  "display_name": "Mire_Eidolon",
+  "display_fullname": "Freaklok.Mire Eidolon",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/MIRE_EIDOLON.POWERSETS",
+  "icon": "mire_eidolon_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Mire_Eidolon.Dark_Blast",
+    "Freaklok.Mire_Eidolon.Night_Fall",
+    "Freaklok.Mire_Eidolon.Tenebrous_Tentacles",
+    "Freaklok.Mire_Eidolon.Shadow_Punch"
+  ],
+  "power_display_names": [
+    "Dark Blast",
+    "Night Fall",
+    "Tenebrous Tentacles",
+    "Shadow Punch"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Negative), Foe -ToHit",
+    "Ranged (Cone), Moderate DoT(Negative), Foe -ToHit",
+    "Ranged (Cone), Moderate DoT(Negative), Foe Immobilize, -ToHit",
+    "Melee, Light DMG(Negative/Smash), Foe -ToHit"
+  ]
+}

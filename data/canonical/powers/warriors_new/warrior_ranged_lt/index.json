@@ -1,0 +1,26 @@
+{
+  "name": "Warrior_Ranged_Lt",
+  "display_name": "Warrior_Ranged_Lt",
+  "display_fullname": "Warriors New.Warrior Ranged Lt",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    39
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_RANGED_LT.POWERSETS",
+  "icon": "warrior_ranged_lt_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Ranged_Lt.Bow",
+    "Warriors_New.Warrior_Ranged_Lt.Flaming_Arrow"
+  ],
+  "power_display_names": [
+    "Bow",
+    "Blazing Arrow"
+  ],
+  "power_short_helps": [
+    "Ranged, Heavy DMG(Lethal)",
+    "Ranged, High DMG(Lethal/Fire), Minor DoT(Fire)"
+  ]
+}

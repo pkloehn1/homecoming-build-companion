@@ -1,0 +1,18 @@
+{
+  "tag": "Sensei's Guidance",
+  "bears": [
+    [
+      "Mastermind Summon.Ninjas.Aimed Shot",
+      "mastermind_summon.ninjas.aimed_shot"
+    ],
+    [
+      "Mastermind Summon.Ninjas.Fistful of Arrows",
+      "mastermind_summon.ninjas.fistful_of_arrows"
+    ],
+    [
+      "Mastermind Summon.Ninjas.Snap Shot",
+      "mastermind_summon.ninjas.snap_shot"
+    ]
+  ],
+  "affects": []
+}

@@ -1,0 +1,44 @@
+---
+# Pre-commit hooks for homecoming-build-companion.
+# Install: pre-commit install
+# Run all on demand: pre-commit run --all-files
+
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # v0.15.x supports target-version = "py314"; v0.8.0 caps at py313.
+    rev: v0.15.12
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.13.0
+    hooks:
+      - id: mypy
+        files: ^tools/
+        additional_dependencies:
+          - types-PyYAML
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.43.0
+    hooks:
+      - id: markdownlint
+        args: [--config, .markdownlint.yaml]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-added-large-files
+        # 15MB ceiling — canonical game data files (data/canonical/) include
+        # multi-MB index JSONs harvested from the game install, and the
+        # repo-wide manifest.json catalogs every file (~10MB). 15MB still
+        # catches accidental binary commits while accommodating real data.
+        args: [--maxkb=15360]
+      - id: mixed-line-ending
+        args: [--fix=lf]

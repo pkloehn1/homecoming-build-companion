@@ -1,0 +1,30 @@
+{
+  "name": "Warrior_Axe_Lt",
+  "display_name": "Warrior_Axe_Lt",
+  "display_fullname": "Warriors New.Warrior Axe Lt",
+  "display_help": "Warriors",
+  "display_short_help": "Warriors",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/WARRIORS_NEW/WARRIOR_AXE_LT.POWERSETS",
+  "icon": "warrior_lt_boss_battleaxe_melee_set.png",
+  "requires": "",
+  "power_names": [
+    "Warriors_New.Warrior_Axe_Lt.Chop",
+    "Warriors_New.Warrior_Axe_Lt.Beheader",
+    "Warriors_New.Warrior_Axe_Lt.Pendulum"
+  ],
+  "power_display_names": [
+    "Chop",
+    "Gash",
+    "Pendulum"
+  ],
+  "power_short_helps": [
+    "Melee, High DMG(Lethal), Foe Knockback",
+    "Melee, Superior DMG(Lethal), Foe Knockback",
+    "Melee (Targeted AoE), Heavy DMG(Lethal), Foe Knockback"
+  ]
+}

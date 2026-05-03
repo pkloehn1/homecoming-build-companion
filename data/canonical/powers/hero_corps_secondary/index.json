@@ -1,0 +1,15 @@
+{
+  "name": "Hero_Corps_Secondary",
+  "display_name": "Secondary",
+  "source_file": "DEFS/POWERS/HERO_CORPS_SECONDARY.CATEGORIES",
+  "archetypes": [],
+  "display_help": null,
+  "display_short_help": null,
+  "powerset_names": [
+    "hero_corps_secondary.storm_summoning"
+  ],
+  "powerset_display_names": [
+    "Storm Summoning"
+  ],
+  "powersets_with_requirements": []
+}

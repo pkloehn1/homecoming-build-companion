@@ -1,0 +1,50 @@
+{
+  "name": "Chi_Master",
+  "display_name": "Chi Master",
+  "display_fullname": "Tsoo.Chi Master",
+  "display_help": "Chi Master",
+  "display_short_help": "Chi Master",
+  "available_level": [
+    0,
+    0,
+    29,
+    0,
+    0,
+    0,
+    0,
+    29
+  ],
+  "source_file": "DEFS/POWERS/TSOO/CHI_MASTER.POWERSETS",
+  "icon": "chi_master_set.png",
+  "requires": "",
+  "power_names": [
+    "Tsoo.Chi_Master.Quick_Strike",
+    "Tsoo.Chi_Master.Smashing_Blow",
+    "Tsoo.Chi_Master.Repulsing_Torrent",
+    "Tsoo.Chi_Master.Burst",
+    "Tsoo.Chi_Master.Focused_Burst",
+    "Tsoo.Chi_Master.High_Pain_Tolerance",
+    "Tsoo.Chi_Master.Quick_Recovery",
+    "Tsoo.Chi_Master.Heightened_Senses"
+  ],
+  "power_display_names": [
+    "Quick Strike",
+    "Smashing Blow",
+    "Repulsing Torrent",
+    "Burst",
+    "Focused Burst",
+    "High Pain Tolerance",
+    "Quick Recovery",
+    "Heightened Senses"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Energy/Smash), Foe Knockdown, -DMG",
+    "Melee, Heavy DMG(Energy/Smash), Foe Disorient, -DMG",
+    "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback",
+    "PBAoE Melee, Moderate DMG(Energy/Smash), Foe Knockdown, -DMG",
+    "Ranged, High DMG(Energy/Smash), Foe Knockdown, -DMG",
+    "Auto: Self +Res(All DMG), +MaxHP",
+    "Auto: Self +Recovery",
+    "Toggle: Self +DEF(Smash, Lethal, Fire, Cold, Energy, Negative), +Perception"
+  ]
+}

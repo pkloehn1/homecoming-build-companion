@@ -1,0 +1,58 @@
+{
+  "name": "Mortimer_Kal",
+  "display_name": "Mortimer Kal",
+  "display_fullname": "Midnight Squad.Mortimer Kal",
+  "display_help": "Powers given to the Wizard, Mortimer Kal",
+  "display_short_help": "Mortimer Kal",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/MIDNIGHT_SQUAD/MORTIMER_KAL.POWERSETS",
+  "icon": "mortimer_kal_set.png",
+  "requires": "",
+  "power_names": [
+    "Midnight_Squad.Mortimer_Kal.Lash",
+    "Midnight_Squad.Mortimer_Kal.Crack_Whip",
+    "Midnight_Squad.Mortimer_Kal.Fire_Ball",
+    "Midnight_Squad.Mortimer_Kal.Hells_Judgement",
+    "Midnight_Squad.Mortimer_Kal.Terrify",
+    "Midnight_Squad.Mortimer_Kal.Frigid_Smash",
+    "Midnight_Squad.Mortimer_Kal.Earthquake",
+    "Midnight_Squad.Mortimer_Kal.Summon_Spirits",
+    "Midnight_Squad.Mortimer_Kal.Dancing_Infernal_Swords",
+    "Midnight_Squad.Mortimer_Kal.Resistance"
+  ],
+  "power_display_names": [
+    "Lash",
+    "Crack Whip",
+    "Fire Ball",
+    "Hell's Judgement",
+    "Terrify",
+    "Frigid Slam",
+    "Earthquake",
+    "Summon Spirits",
+    "Dancing Infernal Swords",
+    "Resistance"
+  ],
+  "power_short_helps": [
+    "Close, High DMG(Fire), DoT(Toxic), Foe Knockdown, -Res(All)",
+    "Close (Cone), Heavy DMG(Fire), DoT(Toxic), Foe Knockdown, -Res(All)",
+    "Ranged (Targeted AoE), Moderate DMG(Fire/Toxic), DoT(Fire)",
+    "Ranged, Moderate DoT(Fire), Foe Hold, -Res(All)",
+    "Ranged (Cone), Moderate DMG(Psionic), Foe Fear",
+    "PBAoE Melee, Heavy DMG(Cold), Foe Sleep",
+    "Ranged (Location AoE), Foe Knockdown, -DEF, -ToHit, -Jump",
+    "Summon 2 Spirits, 1 Living Armor",
+    "Summon 9-13 Dancing Swords",
+    "Auto: Self +Res(Fire, Cold, Energy, Negative, Confuse, Fear, Taunt, Placate)"
+  ]
+}

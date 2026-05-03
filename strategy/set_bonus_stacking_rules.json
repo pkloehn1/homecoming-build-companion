@@ -1,0 +1,50 @@
+{
+  "$comment": "Rule of Five caps + canonical unique-bonus list. Each bonus value caps at 5 stacks. Populated initially from community knowledge; cross-check against data/mids/database/EnhancementSets.json once Lane A is harvested.",
+  "schema_version": 1,
+  "rule_of_five": {
+    "rule": "Any single numeric set-bonus value caps at 5 stacks across the entire build.",
+    "examples": [
+      "5x +7.5% Recharge from LotG global → 6th gives nothing.",
+      "5x +5% Recharge from set 5-piece bonuses (e.g. Decimation 4-piece) cap independently of LotG.",
+      "5x +1.88% S/L Defense from Decimation 2-piece cap independently of any other 1.88% bonus."
+    ],
+    "stacking_strategy": "Mix sets that grant the same aspect at different values. e.g. recharge: 5x LotG (+7.5%) + 5x 5%-rech bonuses + 5x 6.25%-rech bonuses + 5x 7.5%-rech bonuses (different sources)."
+  },
+  "common_global_recharge_bonuses": [
+    {"value": 7.5, "source": "Luck of the Gambler: Defense/Increased Recharge Speed (the LotG +Rech global)"},
+    {"value": 7.5, "source": "Apocalypse 6-piece bonus"},
+    {"value": 7.5, "source": "Hecatomb 6-piece bonus"},
+    {"value": 7.5, "source": "Ragnarok 6-piece bonus"},
+    {"value": 7.5, "source": "Armageddon 6-piece bonus"},
+    {"value": 7.5, "source": "Coercive Persuasion 6-piece bonus"},
+    {"value": 6.25, "source": "Various 5-piece purple bonuses (regen + recharge clusters)"},
+    {"value": 5.0, "source": "Crushing Impact 4-piece bonus"},
+    {"value": 5.0, "source": "Decimation 4-piece bonus"},
+    {"value": 5.0, "source": "Doctored Wounds 4-piece bonus"},
+    {"value": 5.0, "source": "Numerous 4-piece set bonuses across most damage/utility sets"}
+  ],
+  "common_unique_globals": {
+    "$comment": "Each unique global may be slotted only once per build. They give large, easy bonuses.",
+    "Numina_Convalescence_Plus_Regen_Recovery": {"slot_in": "Health", "effect": "+12% Regen + +12% Recovery"},
+    "Miracle_Plus_Recovery": {"slot_in": "Health", "effect": "+15% Recovery"},
+    "Panacea_Plus_HitPoints_Endurance": {"slot_in": "Health", "effect": "+12% HP + +12% End/Recovery"},
+    "Regenerative_Tissue_Plus_Regeneration": {"slot_in": "Health", "effect": "+25% Regen"},
+    "Performance_Shifter_Chance_for_Endurance": {"slot_in": "Stamina", "effect": "~10%/tick chance to refund 10 end (effective +20% recovery)"},
+    "Power_Transfer_Chance_for_Self_Heal": {"slot_in": "any toggle/auto/click", "effect": "~10%/activation chance to heal a small amount"},
+    "Steadfast_Protection_Resistance_Plus_Defense": {"slot_in": "any defense set", "effect": "+3% Defense (All)"},
+    "Shield_Wall_Plus_Resist_All": {"slot_in": "any defense set", "effect": "+5% Resist (All)"},
+    "Gladiators_Armor_Teleport_Protection_Plus_Resist_All": {"slot_in": "any defense set", "effect": "+3% Resist (All) + TP protection"},
+    "Reactive_Defenses_Scaling_Damage_Resistance": {"slot_in": "any defense set", "effect": "Up to +9% Resist scaling as HP drops"}
+  },
+  "common_LotG_mules": {
+    "$comment": "Powers good for slotting one LotG +Rech global as a 1-slot mule. Stack up to 5 across the build.",
+    "Combat_Jumping": "Cheap; auto-ED-bypassing defense",
+    "Hover": "KB protection slottable",
+    "Maneuvers": "Larger defense base",
+    "Stealth": "Defense + utility",
+    "Weave": "+3.5% defense; pair with Tough",
+    "Force_of_Will_Wall_of_Force": "If taking the pool",
+    "Sorcery_Rune_of_Protection": "If taking Sorcery"
+  },
+  "$populate_from_canonical": "Run tools/regen-bonus-stacking.ps1 (TODO) once data/canonical/boost_sets/*.json is in place to enumerate every set bonus value across the dataset for the diff/spotcheck workflow."
+}

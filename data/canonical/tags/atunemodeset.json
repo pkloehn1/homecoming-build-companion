@@ -1,0 +1,30 @@
+{
+  "tag": "AtuneModeSet",
+  "bears": [
+    [
+      "Brute Melee.Sonic Melee.Attune",
+      "brute_melee.sonic_melee.attune"
+    ],
+    [
+      "Redirects.Sonic Melee.Attune",
+      "redirects.sonic_melee.attune"
+    ],
+    [
+      "Scrapper Melee.Sonic Melee.Attune",
+      "scrapper_melee.sonic_melee.attune"
+    ],
+    [
+      "Stalker Melee.Sonic Melee.Attune",
+      "stalker_melee.sonic_melee.attune"
+    ],
+    [
+      "Tanker Melee.Sonic Melee.Attune",
+      "tanker_melee.sonic_melee.attune"
+    ],
+    [
+      "V Arachnos Proxy.Sonic Melee.Attune",
+      "v_arachnos_proxy.sonic_melee.attune"
+    ]
+  ],
+  "affects": []
+}

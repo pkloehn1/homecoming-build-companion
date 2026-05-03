@@ -1,0 +1,38 @@
+{
+  "name": "Transponder_HM",
+  "display_name": "Transponder (Advanced Difficulty)",
+  "display_fullname": "Pets.Transponder (Advanced Difficulty)",
+  "display_help": "Rikti",
+  "display_short_help": "Rikti",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/PETS/TRANSPONDER_HM.POWERSETS",
+  "icon": "transponder_set.png",
+  "requires": "",
+  "power_names": [
+    "Pets.Transponder_HM.Transport",
+    "Pets.Transponder_HM.Expel",
+    "Pets.Transponder_HM.Fade",
+    "Pets.Transponder_HM.Resistance",
+    "Pets.Transponder_HM.Collapse"
+  ],
+  "power_display_names": [
+    "Transport",
+    "Expel",
+    "Fade",
+    "Resistance",
+    "Portal Collapse"
+  ],
+  "power_short_helps": [
+    "Summon",
+    "Expel",
+    "Clear Damage",
+    "Auto: Self +RES(All), Weak(Hold, Stun, Fear, Sleep)",
+    "Summon"
+  ]
+}

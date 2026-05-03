@@ -1,0 +1,50 @@
+{
+  "name": "Eidolon_Male",
+  "display_name": "Eidolon_Male",
+  "display_fullname": "Freaklok.Eidolon Male",
+  "display_help": "Freaklok",
+  "display_short_help": "Freaklok",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKLOK/EIDOLON_MALE.POWERSETS",
+  "icon": "eidolon_male_set.png",
+  "requires": "",
+  "power_names": [
+    "Freaklok.Eidolon_Male.Smite",
+    "Freaklok.Eidolon_Male.Siphon_Life",
+    "Freaklok.Eidolon_Male.Midnight_Grasp",
+    "Freaklok.Eidolon_Male.Shadow_Maul",
+    "Freaklok.Eidolon_Male.Gloom",
+    "Freaklok.Eidolon_Male.Tenebrous_Tentacles",
+    "Freaklok.Eidolon_Male.Tar_Patch",
+    "Freaklok.Eidolon_Male.Dark_Embrace"
+  ],
+  "power_display_names": [
+    "Smite",
+    "Siphon Life",
+    "Midnight Grasp",
+    "Shadow Maul",
+    "Gloom",
+    "Tenebrous Tentacles",
+    "Tar Patch",
+    "Dark Embrace"
+  ],
+  "power_short_helps": [
+    "Melee, Heavy DMG(Negative/Smash), Foe -ToHit",
+    "Melee, Superior DMG(Negative), Foe -ToHit, Self Heal",
+    "Melee, Extreme DoT(Negative), Foe Immobilize, -ToHit",
+    "Melee (Cone), High DoT(Negative/Smash), Foe -ToHit",
+    "Ranged, High DoT(Negative), Foe -ToHit",
+    "Ranged (Cone), Moderate DoT(Negative), Foe Immobilize, -ToHit",
+    "Ranged (Location AoE), Foe -SPD, -Res(All), -Fly, -Jump",
+    "Toggle: Self +Res(Smash, Lethal, Negative, Toxic)"
+  ]
+}

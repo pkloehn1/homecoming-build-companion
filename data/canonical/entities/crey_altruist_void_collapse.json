@@ -1,0 +1,97 @@
+{
+  "name": "Crey_Altruist_Void_Collapse",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Crey_Altruists",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 40,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "Default_Melee",
+    "character_class_name": "boss_grunt",
+    "description": "One of Crey's new Real-ID Protectors with the Altruist Division, Void Collapse is able to gain a mutant's powers by devouring a small portion of their DNA. Aside from this being fairly unsettling, some of them can mix in... unpredictable ways, so she avoids doing so unless necessary.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.0,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Toxic_Cysts",
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Degenerative_Smash",
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Bursting_Boils",
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Siphon_Biomass",
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Reap_Genome",
+      "Crey_Altruist.Altruist_Void_Collapse_Offense.Cytoplast_Tendrils",
+      "Crey_Altruist.Altruist_Void_Collapse_Defense.DNA_Siphon",
+      "Crey_Altruist.Altruist_Void_Collapse_Defense.Eclipse"
+    ],
+    "power_display_names": [
+      "Toxic Cysts",
+      "Degenerative Smash",
+      "Bursting Boils",
+      "Siphon Biomass",
+      "Reap Genome",
+      "Cytoplast Tendrils",
+      "DNA Siphon",
+      "Eclipse"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_Void_Collapse_Offense",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Crey_Altruist",
+        "power_set": "Altruist_Void_Collapse_Defense",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 40,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Void Collapse"
+      ],
+      "costumes": [
+        "Model_Altruist_Void_Collapse"
+      ]
+    }
+  ]
+}

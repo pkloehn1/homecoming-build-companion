@@ -1,0 +1,26 @@
+{
+  "name": "Labyrinth_Walker",
+  "display_name": "Labyrinth Walker",
+  "display_fullname": "Event.Labyrinth Walker",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_WALKER.POWERSETS",
+  "icon": "super_arachnoid_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Walker.Cocoon",
+    "Event.Labyrinth_Walker.Entrap"
+  ],
+  "power_display_names": [
+    "Nightmare Cocoon",
+    "Nightmare Entrap"
+  ],
+  "power_short_helps": [
+    "Ranged, Foe Deep Sleep",
+    "Ranged, Foe Deep Sleep"
+  ]
+}

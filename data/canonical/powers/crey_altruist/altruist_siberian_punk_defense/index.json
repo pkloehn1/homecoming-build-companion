@@ -1,0 +1,26 @@
+{
+  "name": "Altruist_Siberian_Punk_Defense",
+  "display_name": "Siberian Punk Defense",
+  "display_fullname": "Crey Altruist.Siberian Punk Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_SIBERIAN_PUNK_DEFENSE.POWERSETS",
+  "icon": "altruist_siberian_punk_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Siberian_Punk_Defense.Ninja_Reflexes",
+    "Crey_Altruist.Altruist_Siberian_Punk_Defense.Kuji-In_Retsu"
+  ],
+  "power_display_names": [
+    "Ninja Reflexes",
+    "Kuji-In Retsu"
+  ],
+  "power_short_helps": [
+    "Toggle: Self +DEF(Melee, Ranged, AoE), +Perception",
+    "Self +DEF(Melee, Ranged, AoE), +SPD, +Jump, +Recovery, +Res(DeBuff DEF), Delayed Weaken(Self -End, -Recovery)"
+  ]
+}

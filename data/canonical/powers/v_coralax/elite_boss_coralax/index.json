@@ -1,0 +1,54 @@
+{
+  "name": "Elite_Boss_Coralax",
+  "display_name": "Elite_Boss_Coralax",
+  "display_fullname": "V Coralax.Elite Boss Coralax",
+  "display_help": "Coralax",
+  "display_short_help": "Coralax",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/V_CORALAX/ELITE_BOSS_CORALAX.POWERSETS",
+  "icon": "elite_boss_coralax_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Coralax.Elite_Boss_Coralax.Aqua_Bolt",
+    "V_Coralax.Elite_Boss_Coralax.Water_Burst",
+    "V_Coralax.Elite_Boss_Coralax.Water_Jet",
+    "V_Coralax.Elite_Boss_Coralax.Spirit_Shark",
+    "V_Coralax.Elite_Boss_Coralax.Arctic_Breath",
+    "V_Coralax.Elite_Boss_Coralax.Haymaker",
+    "V_Coralax.Elite_Boss_Coralax.Tide_Pool",
+    "V_Coralax.Elite_Boss_Coralax.Brine",
+    "V_Coralax.Elite_Boss_Coralax.Icy_Bastion"
+  ],
+  "power_display_names": [
+    "Aqua Bolt",
+    "Water Burst",
+    "Water Jet",
+    "Spirit Shark",
+    "Arctic Breath",
+    "Haymaker",
+    "Tide Pool",
+    "Brine",
+    "Icy Bastion"
+  ],
+  "power_short_helps": [
+    "Ranged, Light DMG(Cold/Lethal), Foe -DEF",
+    "Ranged (Targeted AoE), Moderate DMG(Cold/Smash), Foe Knockdown, -SPD",
+    "Ranged, Superior DMG(Cold/Smash), Foe -SPD",
+    "Ranged, Superior DoT(Negative), Foe Knockdown",
+    "Ranged (Cone), Moderate DoT(Cold), Foe Knockdown, -SPD, -Recharge, -DEF, -Resist(All)",
+    "Melee, High DMG(Smash), Foe Knockback",
+    "Ranged (Location AoE), Team +DMG, Foe -DMG, -SPD, -Jump, -Stealth, Special",
+    "Ranged, Foe -Resist(All), -MaxHP",
+    "Self +Res(All DMG but Psionics, Knockback, Repel, Disorient, Hold, Immobilize, Sleep), +Regen, +Recovery"
+  ]
+}

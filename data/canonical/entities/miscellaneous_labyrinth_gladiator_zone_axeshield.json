@@ -1,0 +1,125 @@
+{
+  "name": "Miscellaneous_Labyrinth_Gladiator_Zone_AxeShield",
+  "gender": "GENDER_NEUTER",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 1,
+  "power_tags": [
+    "HumanSkeleton",
+    "Raid",
+    "Ghost",
+    "Undead"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Miscellaneous_Labyrinth_Gladiator",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 54,
+    "max_level": 54,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": true,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ELITE",
+    "ai_config": "Pets_Melee",
+    "character_class_name": "boss_praetorianelite",
+    "description": "The Labyrinth of Fog's legion of immortal phantoms are a mystery unto themselves.<br><br>The Gladiators In The Fog participate in an eternal blood sport, honing their combat skills in the phantasmagorical maze that they call home. An eternity of testing themselves against the Labyrinth's mirages, at times even challenging the mighty Minotaur itself to trial by combat.<br><br>Their's is an existence not unlike a bloody gladius, weapons that only exist to hone their sharpness and prove themselves, iron tempered on the field of battle.<br><br><color Orange>Like the Minotaur, they wield weapons coalesced of pure nightmares given substance, the blows from which slowly sap the sanity from those who sustain too many consecutive hits.</color><br><br><color Burlywood>Blood and strength unseen, Gladiator.</color>",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.0,
+    "additional_rewards": [
+      "LabyrinthInspiration",
+      "LabyrinthObol1"
+    ],
+    "power_full_names": [
+      "Inherent.Fitness.Swift",
+      "Temporary_Powers.Temporary_Powers.Labyrinth_FX",
+      "Event.Labyrinth_Minotaur_Axe.Chop",
+      "Event.Labyrinth_Minotaur_Axe.Gash",
+      "Event.Labyrinth_Minotaur_Axe.Pendulum",
+      "Event.Labyrinth_Minotaur_Axe.Swoop",
+      "Event.Labyrinth_Minotaur_Axe.Whirling_Axe",
+      "Event.Labyrinth_Minotaur_Axe.Cleave",
+      "Event.Labyrinth_Minotaur_Axe.Deflection",
+      "Event.Labyrinth_Guardian.Constitution"
+    ],
+    "power_display_names": [
+      "Swift",
+      "Fog Guardians",
+      "Chop",
+      "Gash",
+      "Pendulum",
+      "Swoop",
+      "Axe Cyclone",
+      "Cleave",
+      "Deflection",
+      "Constitution"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "Temporary_Powers",
+        "power_set": "Temporary_Powers",
+        "power": "Labyrinth_FX",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Minotaur_Axe",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Guardian",
+        "power": "Constitution",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 54,
+      "max_level": 54,
+      "experience": 0,
+      "display_names": [
+        "Gladiator In The Fog"
+      ],
+      "costumes": [
+        "Labyrinth_Fog_Gladiator_01_M_AS",
+        "Labyrinth_Fog_Gladiator_02_M_AS",
+        "Labyrinth_Fog_Gladiator_01_F_AS",
+        "Labyrinth_Fog_Gladiator_02_F_AS",
+        "Labyrinth_Fog_Gladiator_01_H_AS",
+        "Labyrinth_Fog_Gladiator_02_H_AS"
+      ]
+    }
+  ]
+}

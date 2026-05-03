@@ -1,0 +1,26 @@
+{
+  "name": "Crab_Spider_Longfang",
+  "display_name": "Crab_Spider_Longfang",
+  "display_fullname": "V Arachnos.Crab Spider Longfang",
+  "display_help": "Arachnos",
+  "display_short_help": "Arachnos",
+  "available_level": [
+    0,
+    39
+  ],
+  "source_file": "DEFS/POWERS/V_ARACHNOS/CRAB_SPIDER_LONGFANG.POWERSETS",
+  "icon": "crab_spider_longfang_set.png",
+  "requires": "",
+  "power_names": [
+    "V_Arachnos.Crab_Spider_Longfang.Longfang",
+    "V_Arachnos.Crab_Spider_Longfang.Web_Grenade"
+  ],
+  "power_display_names": [
+    "Longfang",
+    "Web Grenade"
+  ],
+  "power_short_helps": [
+    "Ranged, High DMG(Lethal), Foe -DEF",
+    "Ranged, Foe Immobilize, -Fly, -Recharge, -SPD, -Jump"
+  ]
+}

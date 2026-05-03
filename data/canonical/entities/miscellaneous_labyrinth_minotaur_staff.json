@@ -1,0 +1,134 @@
+{
+  "name": "Miscellaneous_Labyrinth_Minotaur_Staff",
+  "gender": "GENDER_MALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Human",
+    "Raid"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": "kills.Miscellaneous_Labyrinth_Minotaur",
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 54,
+    "max_level": 54,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "Signatures_LabyrinthMinotaur",
+    "character_class_name": "boss_praetorianarchvillain",
+    "description": "The Minotaur In The Fog is the fabled guardian of the labyrinth, who relentlessly hunts down any soul who trespasses within these passages.<br><br>Few are the mighty that have held their own against the Minotaur, most of which are considered legends by today's historians.<br><br><color Orange>Fleeing would be the best choice for those who want to live.</color><br><br><color Burlywood>The Labyrinth of Fog's champion could percieve the souls of those who did not belong within, making it nearly impossible to evade its keen awareness.</color>",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": "Monster",
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 10.0,
+    "additional_rewards": [
+      "LabyrinthMinotaur",
+      "LabyrinthObol10"
+    ],
+    "power_full_names": [
+      "Event.Labyrinth_Minotaur.Fly",
+      "Event.Labyrinth_Minotaur.Fetid_Howl",
+      "Event.Labyrinth_Minotaur.Pilum",
+      "Event.Labyrinth_Minotaur.Quick",
+      "Event.Labyrinth_Minotaur.Stamina",
+      "Event.Labyrinth_Minotaur.Resistance",
+      "Event.Labyrinth_Minotaur.FogGivenForm",
+      "Event.Labyrinth_Minotaur.FogArena",
+      "Event.Labyrinth_Minotaur.Aim",
+      "Event.Labyrinth_Minotaur.Hoof_Stomp_Lock",
+      "Event.Labyrinth_Minotaur.Hoof_Stomp_Tell",
+      "Event.Labyrinth_Minotaur.Hoof_Stomp",
+      "Event.Labyrinth_Minotaur.Health",
+      "Event.Labyrinth_Minotaur_Staff.Mercurial_Blow",
+      "Event.Labyrinth_Minotaur_Staff.Precise_Strike",
+      "Event.Labyrinth_Minotaur_Staff.Guarded_Spin",
+      "Event.Labyrinth_Minotaur_Staff.Serpents_Reach",
+      "Event.Labyrinth_Minotaur_Staff.Innocuous_Strikes",
+      "Event.Labyrinth_Minotaur_Staff.Sky_Splitter"
+    ],
+    "power_display_names": [
+      "Fly",
+      "Cursed Plague Howl",
+      "Netted Pilums",
+      "Beefy",
+      "Lean",
+      "Resistance",
+      "Fog Given Form",
+      "Trial By Combat",
+      "Third Eye",
+      "Hoof Stomp Lock",
+      "Hoof Stomp Tell",
+      "Hoof Stomp",
+      "Avatar of Achlys",
+      "Mercurial Blow",
+      "Precise Strike",
+      "Guarded Spin",
+      "Serpent's Reach",
+      "Innocuous Strike",
+      "Sky Splitter"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Minotaur",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Minotaur_Staff",
+        "power": "*",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 54,
+      "max_level": 54,
+      "experience": 0,
+      "display_names": [
+        "The Minotaur In The Fog"
+      ],
+      "costumes": [
+        "Labyrinth_Minotaur_01_S"
+      ]
+    }
+  ]
+}

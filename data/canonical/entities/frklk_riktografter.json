@@ -1,0 +1,109 @@
+{
+  "name": "FRKLK_Riktografter",
+  "gender": "GENDER_MALE",
+  "group_name": "Freaklok",
+  "commandable_pet": 0,
+  "power_tags": [
+    "HumanSkeleton",
+    "Electronic"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 29,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 1,
+    "spawn_limit_mission": 1,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_BOSS",
+    "ai_config": "SkyRaiders_Porter",
+    "character_class_name": "boss_grunt",
+    "description": "Doc Buzzsaw was no stranger to Rikti technological appropriation and happily handed her notes to Pierce once the lab was cleared and the tech was inventoried. The Freaklok Riktografter has gone a step further and begun to utilize some of the teleportation technology as well, making them an unpredictable lot.",
+    "group_description": null,
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 1.2,
+    "additional_rewards": [],
+    "power_full_names": [
+      "Freaklok.Riktografter.Teleport",
+      "Freaklok.Riktografter.Cybernetic_Rikti_Blade",
+      "Freaklok.Riktografter.Rikti_Rifle",
+      "Freaklok.Riktografter.Particle_Cannon",
+      "Freaklok.Riktografter.Thermite_Cannon",
+      "Freaklok.Regeneration.Dull_Pain",
+      "Freaklok.Necrotic_Detonations.Corpse_Gas",
+      "Freaklok.Resistances.Tank_Resistance"
+    ],
+    "power_display_names": [
+      "Teleport",
+      "Cybernetic Rikti Blade",
+      "Rikti Rifle",
+      "Particle Cannon",
+      "Thermite Cannon",
+      "Dull Pain",
+      "Corpse Gas",
+      "Resistance"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Freaklok",
+        "power_set": "Riktografter",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Regeneration",
+        "power": "Dull_Pain",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Necrotic_Detonations",
+        "power": "Corpse_Gas",
+        "level": 0
+      },
+      {
+        "power_category": "Freaklok",
+        "power_set": "Resistances",
+        "power": "Tank_Resistance",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 29,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "Freaklok Riktografter"
+      ],
+      "costumes": [
+        "FRKLK_Riktofreak"
+      ]
+    }
+  ]
+}

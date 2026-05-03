@@ -1,0 +1,34 @@
+{
+  "name": "Altruist_Mirror_Man_Offense",
+  "display_name": "Mirror Man Offense",
+  "display_fullname": "Crey Altruist.Mirror Man Offense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_MIRROR_MAN_OFFENSE.POWERSETS",
+  "icon": "altruist_mirror_man_offense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_Mirror_Man_Offense.Power_Blast",
+    "Crey_Altruist.Altruist_Mirror_Man_Offense.Power_Bolt",
+    "Crey_Altruist.Altruist_Mirror_Man_Offense.Power_Burst",
+    "Crey_Altruist.Altruist_Mirror_Man_Offense.Energy_Torrent"
+  ],
+  "power_display_names": [
+    "Power Blast",
+    "Power Bolt",
+    "Power Burst",
+    "Energy Torrent"
+  ],
+  "power_short_helps": [
+    "Ranged, High DMG(Energy/Smash), Foe Knockback",
+    "Ranged, Moderate DMG(Energy/Smash), Foe Knockback",
+    "Close, Superior DMG(Energy/Smash), Foe Knockback",
+    "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback"
+  ]
+}

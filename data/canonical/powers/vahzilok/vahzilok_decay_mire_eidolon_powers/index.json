@@ -1,0 +1,38 @@
+{
+  "name": "Vahzilok_Decay_Mire_Eidolon_Powers",
+  "display_name": "Vahzilok_Decay_Mire_Eidolon_Powers",
+  "display_fullname": "Vahzilok.Vahzilok Decay Mire Eidolon Powers",
+  "display_help": "Vahzilok_Decay_Mire_Eidolon_Powers",
+  "display_short_help": "Vahzilok_Decay_Mire_Eidolon_Powers",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/VAHZILOK/VAHZILOK_DECAY_MIRE_EIDOLON_POWERS.POWERSETS",
+  "icon": "macro_button_01.png",
+  "requires": "",
+  "power_names": [
+    "Vahzilok.Vahzilok_Decay_Mire_Eidolon_Powers.Dark_Blast",
+    "Vahzilok.Vahzilok_Decay_Mire_Eidolon_Powers.Night_Fall",
+    "Vahzilok.Vahzilok_Decay_Mire_Eidolon_Powers.Dark_Regeneration",
+    "Vahzilok.Vahzilok_Decay_Mire_Eidolon_Powers.Tenebrous_Tentacles",
+    "Vahzilok.Vahzilok_Decay_Mire_Eidolon_Powers.Heart_of_Darkness"
+  ],
+  "power_display_names": [
+    "Dark Blast",
+    "Night Fall",
+    "Dark Regeneration",
+    "Tenebrous Tentacles",
+    "Heart of Darkness"
+  ],
+  "power_short_helps": [
+    "Ranged, Moderate DMG(Negative), Foe -ToHit",
+    "Ranged (Cone), Moderate DoT(Negative), Foe -ToHit",
+    "PBAoE, Minor DMG(Negative), Self Heal",
+    "Ranged (Cone), Moderate DoT(Negative), Foe Immobilize, -ToHit",
+    "PBAoE, Minor DoT(Negative), Foe Disorient, -ToHit"
+  ]
+}

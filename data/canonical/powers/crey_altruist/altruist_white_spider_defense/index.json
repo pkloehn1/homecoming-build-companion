@@ -1,0 +1,26 @@
+{
+  "name": "Altruist_White_Spider_Defense",
+  "display_name": "White Spider Defense",
+  "display_fullname": "Crey Altruist.White Spider Defense",
+  "display_help": "Crey",
+  "display_short_help": "Crey",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/CREY_ALTRUIST/ALTRUIST_WHITE_SPIDER_DEFENSE.POWERSETS",
+  "icon": "altruist_white_spider_defense_set.png",
+  "requires": "",
+  "power_names": [
+    "Crey_Altruist.Altruist_White_Spider_Defense.Ablative_Carapace",
+    "Crey_Altruist.Altruist_White_Spider_Defense.Hardened_Carapace"
+  ],
+  "power_display_names": [
+    "Ablative Carapace",
+    "Hardened Carapace"
+  ],
+  "power_short_helps": [
+    "Self +Absorption, +Regen",
+    "Toggle: Self +Res(Smash, Lethal, Toxic, Hold, Immobilize, Disorient, Sleep, Knockback), +DEF(Energy, Negative, Fire, Cold, Psionic)"
+  ]
+}

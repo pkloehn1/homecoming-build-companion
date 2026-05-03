@@ -1,0 +1,62 @@
+{
+  "name": "DrTodd_High",
+  "display_name": "DrTodd_High",
+  "display_fullname": "Mission Pets.DrTodd High",
+  "display_help": "Dr. Todd",
+  "display_short_help": "Dr. Todd",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    7,
+    25,
+    19,
+    1
+  ],
+  "source_file": "DEFS/POWERS/MISSION_PETS/DRTODD_HIGH.POWERSETS",
+  "icon": "drtodd_set.png",
+  "requires": "",
+  "power_names": [
+    "Mission_Pets.DrTodd_High.Speed_Boost",
+    "Mission_Pets.DrTodd_High.Fulcrum_Shift",
+    "Mission_Pets.DrTodd_High.Power_Blast",
+    "Mission_Pets.DrTodd_High.Energy_Torrent",
+    "Mission_Pets.DrTodd_High.Quick_Strike",
+    "Mission_Pets.DrTodd_High.Body_Blow",
+    "Mission_Pets.DrTodd_High.Power_Siphon",
+    "Mission_Pets.DrTodd_High.Repulsing_Torrent",
+    "Mission_Pets.DrTodd_High.Focused_Burst",
+    "Mission_Pets.DrTodd_High.Ice_Patch",
+    "Mission_Pets.DrTodd_High.Ice_Sword"
+  ],
+  "power_display_names": [
+    "Speed Boost",
+    "Fulcrum Shift",
+    "Power Blast",
+    "Energy Torrent",
+    "Quick Strike",
+    "Body Blow",
+    "Power Siphon",
+    "Repulsing Torrent",
+    "Focused Burst",
+    "Ice Patch",
+    "Ice Sword"
+  ],
+  "power_short_helps": [
+    "Ranged, Ally +SPD, +Recharge, +Recovery, Res Slow",
+    "Ranged (Foe AoE), Foe -DMG, Team +DMG",
+    "Ranged, Moderate DMG(Energy/Smash), Foe Knockback",
+    "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback",
+    "Melee, Light DMG(Smash/Energy), Foe -DMG, 33%% KD",
+    "Melee, Moderate DMG(Smash/Energy), +Stun",
+    "Self: +To Hit, +Special",
+    "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback",
+    "Ranged, High DMG(Smash/Energy), Knockdown",
+    "Location (PBAoE), Foe Knockdown",
+    "Melee, Moderate DMG(Cold/Lethal), Foe -Recharge, -SPD"
+  ]
+}

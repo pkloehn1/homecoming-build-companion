@@ -1,0 +1,157 @@
+{
+  "name": "Miscellaneous_Labyrinth_General_Fang",
+  "gender": "GENDER_FEMALE",
+  "group_name": "Miscellaneous",
+  "commandable_pet": 0,
+  "power_tags": [
+    "Raid",
+    "Ghost",
+    "Undead"
+  ],
+  "ally": null,
+  "gang": null,
+  "game_exclusion": "None",
+  "inactive_state_weapon": null,
+  "copy_creator_mods": false,
+  "can_zone": false,
+  "custom_badge_stat": null,
+  "badge_stat_flags": "DefaultBadgeStat",
+  "defaults": {
+    "min_level": 45,
+    "max_level": 55,
+    "requires": "",
+    "spawn_limit": 0,
+    "spawn_limit_mission": 0,
+    "ignore_combat_mods": false,
+    "ignore_av_to_eb_scaling": false,
+    "rank": "VR_ARCHVILLAIN",
+    "ai_config": "Signatures_Synapse",
+    "character_class_name": "boss_praetorianarchvillain",
+    "description": "The Fang is one of four ancient monsters who are the eldest of the Goddess' adherents. Ios is the most reserved of the generals, often hiding away in the shadows, waiting to ambush their prey with deadly poisons and blade. When not serving their master, this serpentine assassin finds enjoyment in sculpting from marble.",
+    "group_description": "Labyrinth of Fog",
+    "display_class_name": null,
+    "display_name": null,
+    "costume": null,
+    "reward_scale": 2.0,
+    "additional_rewards": [
+      "PetRecipe_AchlysGeneral_Fang"
+    ],
+    "power_full_names": [
+      "Event.Labyrinth_Gorgon.Stab",
+      "Event.Labyrinth_Gorgon.Venomous_Spit",
+      "Event.Labyrinth_Gorgon.Poison_Bite",
+      "Event.Labyrinth_Gorgon.Hide",
+      "Event.Labyrinth_Gorgon.Jump_Stab",
+      "V_Snakes.Resistance.Resistance",
+      "V_Snakes.Snakes_Speed.Quick",
+      "V_GenericHeroes.Spines_Scrapper.Regeneration",
+      "V_GenericHeroes.Spines_Scrapper_High.Reconstruction",
+      "V_Vindicators.Vindicator_Resistances.Resistance",
+      "Inherent.Fitness.Swift",
+      "V_GenericVillains.Mastermind_Leadership.Maneuvers",
+      "Event.Labyrinth_Guardian.Constitution"
+    ],
+    "power_display_names": [
+      "Stab",
+      "Venomous Spit",
+      "Poison Bite",
+      "Hide",
+      "Jump Stab",
+      "Resistance",
+      "Quick",
+      "Regeneration",
+      "Reconstruction",
+      "Resistance",
+      "Swift",
+      "Leadership",
+      "Constitution"
+    ],
+    "power_levels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "is_dynamic": false,
+    "powers": [
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Gorgon",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_Snakes",
+        "power_set": "Resistance",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_Snakes",
+        "power_set": "Snakes_Speed",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "V_GenericHeroes",
+        "power_set": "Spines_Scrapper",
+        "power": "Regeneration",
+        "level": 0
+      },
+      {
+        "power_category": "V_GenericHeroes",
+        "power_set": "Spines_Scrapper_High",
+        "power": "Reconstruction",
+        "level": 0
+      },
+      {
+        "power_category": "V_Vindicators",
+        "power_set": "Vindicator_Resistances",
+        "power": "*",
+        "level": 0
+      },
+      {
+        "power_category": "Inherent",
+        "power_set": "Fitness",
+        "power": "Swift",
+        "level": 0
+      },
+      {
+        "power_category": "V_GenericVillains",
+        "power_set": "Mastermind_Leadership",
+        "power": "Maneuvers",
+        "level": 0
+      },
+      {
+        "power_category": "Event",
+        "power_set": "Labyrinth_Guardian",
+        "power": "Constitution",
+        "level": 0
+      }
+    ],
+    "condition_hash": null
+  },
+  "conditions": [],
+  "levels": [
+    {
+      "min_level": 45,
+      "max_level": 55,
+      "experience": 0,
+      "display_names": [
+        "The Fang, Ios"
+      ],
+      "costumes": [
+        "Labyrinth_Fog_Gorgon_01"
+      ]
+    }
+  ]
+}

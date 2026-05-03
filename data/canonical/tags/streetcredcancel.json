@@ -1,0 +1,15 @@
+{
+  "tag": "StreetCredCancel",
+  "bears": [
+    [
+      "Temporary Powers.Temporary Powers.Street Cred",
+      "temporary_powers.temporary_powers.street_cred"
+    ]
+  ],
+  "affects": [
+    [
+      "Mastermind Summon.Thugs.Gang War",
+      "mastermind_summon.thugs.gang_war"
+    ]
+  ]
+}

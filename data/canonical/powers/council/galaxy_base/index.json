@@ -1,0 +1,26 @@
+{
+  "name": "Galaxy_Base",
+  "display_name": "Galaxy_Base",
+  "display_fullname": "Council.Galaxy Base",
+  "display_help": "Council",
+  "display_short_help": "Council",
+  "available_level": [
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/COUNCIL/GALAXY_BASE.POWERSETS",
+  "icon": "galaxy_base_set.png",
+  "requires": "",
+  "power_names": [
+    "Council.Galaxy_Base.Star_Punch",
+    "Council.Galaxy_Base.Absorption"
+  ],
+  "power_display_names": [
+    "Star Punch",
+    "Absorption"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Negative/Smash), Foe Disorient, -Recharge, -SPD",
+    "Auto: Self +Res(Energy, Negative)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Labyrinth_Reaper",
+  "display_name": "Labyrinth Reaper",
+  "display_fullname": "Event.Labyrinth Reaper",
+  "display_help": "Labyrinth of Fog",
+  "display_short_help": "Labyrinth of Fog",
+  "available_level": [
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/EVENT/LABYRINTH_REAPER.POWERSETS",
+  "icon": "avatar_set.png",
+  "requires": "",
+  "power_names": [
+    "Event.Labyrinth_Reaper.Crush",
+    "Event.Labyrinth_Reaper.Crush2",
+    "Event.Labyrinth_Reaper.Damage_Resistance"
+  ],
+  "power_display_names": [
+    "Nightmare Crush",
+    "Nightmare Crush",
+    "Damage Resistance"
+  ],
+  "power_short_helps": [
+    "DMG (Negative/Psionic)",
+    "DMG (Negative/Psionic)",
+    "Resistance"
+  ]
+}

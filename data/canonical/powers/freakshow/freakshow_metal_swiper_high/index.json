@@ -1,0 +1,38 @@
+{
+  "name": "Freakshow_Metal_Swiper_High",
+  "display_name": "Freakshow_Metal_Swiper_High",
+  "display_fullname": "Freakshow.Freakshow Metal Swiper High",
+  "display_help": "Freakshow",
+  "display_short_help": "Freakshow",
+  "available_level": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_file": "DEFS/POWERS/FREAKSHOW/FREAKSHOW_METAL_SWIPER_HIGH.POWERSETS",
+  "icon": "freakshow_metal_swiper_high_set.png",
+  "requires": "",
+  "power_names": [
+    "Freakshow.Freakshow_Metal_Swiper_High.Cybernetic_Strike",
+    "Freakshow.Freakshow_Metal_Swiper_High.Cybernetic_Slash",
+    "Freakshow.Freakshow_Metal_Swiper_High.Cybernetic_Shred",
+    "Freakshow.Freakshow_Metal_Swiper_High.Sawblade",
+    "Freakshow.Freakshow_Metal_Swiper_High.Blood_Frenzy"
+  ],
+  "power_display_names": [
+    "Cybernetic Strike",
+    "Cybernetic Slash",
+    "Cybernetic Shred",
+    "Sawblade",
+    "Blood Frenzy"
+  ],
+  "power_short_helps": [
+    "Melee, Light DMG(Lethal), Minor DoT(Lethal)",
+    "Melee, Moderate DMG(Lethal), Minor DoT(Lethal), Foe -SPD",
+    "Melee (Cone), Heavy DMG(Lethal), Minor DoT(Lethal), Foe -DEF",
+    "Ranged, Moderate DMG(Lethal), Light DoT(Lethal), Foe -DEF, -SPD",
+    "Self, +End Discount, +Rech, +Special"
+  ]
+}
