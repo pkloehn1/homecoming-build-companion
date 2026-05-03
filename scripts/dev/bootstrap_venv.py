@@ -2,10 +2,10 @@
 """Bootstrap the repo venv and dev tooling (cross-platform).
 
 Usage:
-    python -m tools.dev.bootstrap_venv
-    python3 -m tools.dev.bootstrap_venv
-    py -3 -m tools.dev.bootstrap_venv
-    python -m tools.dev.bootstrap_venv --dry-run
+    python -m scripts.dev.bootstrap_venv
+    python3 -m scripts.dev.bootstrap_venv
+    py -3 -m scripts.dev.bootstrap_venv
+    python -m scripts.dev.bootstrap_venv --dry-run
 """
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ import tomllib
 from collections.abc import Callable, Mapping
 from pathlib import Path
 
-from tools.dev.check_git_signing import check_git_signing
+from scripts.testing.hooks.check_git_signing import check_git_signing
 
 EXIT_OK = 0
 EXIT_FAILED = 1
@@ -555,12 +555,12 @@ def _run_bootstrap_actions(*, repo_root: Path, venv_python: Path, plan: list[str
     return EXIT_OK
 
 
-BOOTSTRAP_LOCAL_MODULE = "tools.dev.bootstrap_local"
-BOOTSTRAP_LOCAL_PATH = Path("tools/dev/bootstrap_local.py")
+BOOTSTRAP_LOCAL_MODULE = "scripts.dev.bootstrap_local"
+BOOTSTRAP_LOCAL_PATH = Path("scripts/dev/bootstrap_local.py")
 
 
 def _run_local_bootstrap(*, repo_root: Path, venv_python: Path) -> int:
-    """Run spoke-local bootstrap if tools/dev/bootstrap_local.py exists.
+    """Run spoke-local bootstrap if scripts/dev/bootstrap_local.py exists.
 
     Hub-and-spoke extension point: spokes place repo-specific setup
     (e.g., ansible-galaxy collection install) in bootstrap_local.py.
@@ -581,7 +581,7 @@ def _describe_local_bootstrap(repo_root: Path) -> str:
     local_script = repo_root / BOOTSTRAP_LOCAL_PATH
     if local_script.exists():
         return f"run_local_bootstrap: would run {BOOTSTRAP_LOCAL_PATH}"
-    return "run_local_bootstrap: no-op (tools/dev/bootstrap_local.py not found)"
+    return "run_local_bootstrap: no-op (scripts/dev/bootstrap_local.py not found)"
 
 
 def _report_git_signing(signing_status: tuple[bool, str]) -> None:
@@ -590,7 +590,7 @@ def _report_git_signing(signing_status: tuple[bool, str]) -> None:
         print("[OK] Git signing is configured.")
         return
     print(f"[WARN] Git signing is not configured: {message}")
-    print("Run: python -m tools.devops.setup_git_signing")
+    print("Run: python -m scripts.devops.setup_git_signing")
 
 
 def _verify_packages(venv_python: Path, requirements: list[str]) -> list[str]:
@@ -701,7 +701,7 @@ def _check_bootstrap_state(repo_root: Path) -> tuple[bool, str, str, str]:
     )
     if matches:
         return (True, "matches", "matches", "")
-    return (False, "matches", "drift", "Run: python -m tools.dev.bootstrap_venv")
+    return (False, "matches", "drift", "Run: python -m scripts.dev.bootstrap_venv")
 
 
 def _check_pre_commit_hooks(repo_root: Path) -> tuple[bool, str, str, str]:
@@ -709,7 +709,7 @@ def _check_pre_commit_hooks(repo_root: Path) -> tuple[bool, str, str, str]:
     hook_path = repo_root / ".git" / "hooks" / "pre-commit"
     if hook_path.exists():
         return (True, "installed", "installed", "")
-    return (False, "installed", "missing", "Run: python -m tools.dev.bootstrap_venv")
+    return (False, "installed", "missing", "Run: python -m scripts.dev.bootstrap_venv")
 
 
 def _check_git_signing_health() -> tuple[bool, str, str, str]:
