@@ -1,6 +1,6 @@
 # Capture Workflow — concrete steps
 
-How to take one forum URL from [community/CAPTURE_QUEUE.md](../../homecoming-build-companion/community/CAPTURE_QUEUE.md) and end up with an ingested markdown file in `community/`. Every step is spelled out — no hand-waving on where to click or where to type.
+How to take one forum URL from [`community/CAPTURE_QUEUE.md`](../community/CAPTURE_QUEUE.md) and ingest it as a markdown file in `community/`. Every step spelled out — no hand-waving.
 
 Time per capture: 2-4 minutes once you've done one. First time: ~10 minutes including extension setup.
 
@@ -22,16 +22,16 @@ Time per capture: 2-4 minutes once you've done one. First time: ~10 minutes incl
 
 Open **PowerShell** (not bash, not cmd):
 
-- Press <kbd>Win</kbd>+<kbd>X</kbd> → click **Terminal** (Windows 11) or **Windows PowerShell**.
-- Or press <kbd>Win</kbd>, type `powershell`, hit <kbd>Enter</kbd>.
+- Press `Win+X` → click **Terminal** (Windows 11) or **Windows PowerShell**.
+- Or press `Win`, type `powershell`, hit `Enter`.
 
-Paste this and hit <kbd>Enter</kbd>:
+Paste this and hit `Enter`:
 
 ```powershell
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\generate-prompts.ps1"
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\generate-prompts.ps1"
 ```
 
-It writes [`homecoming-build-companion/inbox/PROMPTS.md`](../inbox/PROMPTS.md) — 24 ready-to-copy prompt blocks, one per URL in the queue, with the URL, today's date, topic tags, and trust level pre-filled.
+Writes [`inbox/PROMPTS.md`](../inbox/PROMPTS.md) — 24 ready-to-copy prompt blocks, one per URL in the queue, with URL, today's date, tags, and trust level pre-filled.
 
 Re-run this any time you change `CAPTURE_QUEUE.md` (add new URLs from the Guide Index, etc.). The `inbox/PROMPTS.md` file is the workbench.
 
@@ -61,25 +61,30 @@ If this is the first time on a forum page: Claude may ask permission to read thi
 
 ### Step 3 — Copy the prompt block from `PROMPTS.md`
 
-Back in your editor, on the same `## N. <Title>` section, find the fenced block that starts with `You're reading a Homecoming City of Heroes forum thread...`. The block is wrapped in triple-backticks for display — **copy everything BETWEEN the backticks**, not the backticks themselves.
+In the matching `## N. ...` section, find the block starting `You're reading a Homecoming City of Heroes forum thread...`. **Copy everything BETWEEN the backticks**.
 
-In VS Code: hover your cursor inside the block, press <kbd>Ctrl</kbd>+<kbd>A</kbd> on the block (or click the small "Copy" icon that appears at top-right of the code block on hover) to copy. In Notepad / Notepad++: select with the mouse from the line `You're reading a Homecoming...` to the closing `\`\`\`markdown` block (right before the closing backticks of the outer fence). Copy.
+Copy methods:
+
+- VS Code: click inside the block, hover for the **Copy** icon at top-right of the code block; or use `Ctrl+A` after clicking inside.
+- Notepad / Notepad++: select from `You're reading a Homecoming...` to just before the outer fence's closing backticks, then Ctrl+C.
 
 Now your clipboard holds the prompt with the URL pre-filled.
 
 ### Step 4 — Paste into the Claude for Chrome side panel
 
-In the Claude side panel: click the message input box at the bottom. Press <kbd>Ctrl</kbd>+<kbd>V</kbd>. Press <kbd>Enter</kbd> (or click the send button).
+In the Claude side panel: click the message input box at the bottom. Press `Ctrl+V`. Press `Enter` (or click the send button).
 
 Claude reads the page DOM (because that's what the extension does — it has access to the active tab's content) and produces a markdown block matching the format you sent.
 
-Wait for the response to finish streaming. It'll be a single fenced markdown block starting with `\`\`\`markdown` and ending with `\`\`\``, containing `---` frontmatter at the top followed by `## Summary`, `## Verbatim excerpt`, and `## Build attachments` sections.
+Wait for the response to finish streaming. It's a fenced markdown block containing `---` frontmatter, `## Summary`, `## Verbatim excerpt`, and `## Build attachments` sections.
 
-If Claude **refuses** or **summarizes instead of extracting**: re-send the prompt and add at the end "Output ONLY the markdown block, no preamble." If still wrong: try the claude.ai fallback — copy the forum thread's text into a Claude.ai chat with the same prompt.
+If Claude **refuses** or **summarizes instead of extracting**: re-send and add "Output ONLY the markdown block, no preamble."
+
+If still wrong: use the claude.ai fallback — paste the forum text into a Claude.ai chat with the same prompt.
 
 ### Step 5 — Copy Claude's response
 
-In the side panel, hover over Claude's reply. A row of icons appears (usually at the bottom of the message). Click the **copy** icon (looks like two overlapping squares). The whole assistant message goes to your clipboard.
+In the side panel, hover over Claude's reply. A row of icons appears at the bottom. Click **copy** (overlapping-squares icon). The full reply goes to your clipboard.
 
 Alternative: select the response with the mouse (click at the start, shift-click at the end), Ctrl+C.
 
@@ -87,15 +92,15 @@ Alternative: select the response with the mouse (click at the start, shift-click
 
 Switch to your **PowerShell** window (the one from one-time setup B; reopen if you closed it).
 
-Paste this and hit <kbd>Enter</kbd>:
+Paste this and hit `Enter`:
 
 ```powershell
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\capture.ps1" -Paste
 ```
 
 What you'll see if it works:
 
-```
+```text
 Saved → C:\Users\petek\repos\homecoming-build-companion\inbox\<slug>.md
 Target derived from topic_tags[0]='mechanics': mechanics/<slug>.md
 Copied → C:\Users\petek\repos\homecoming-build-companion\community\mechanics\<slug>.md
@@ -109,7 +114,7 @@ If you want to be paranoid and also pass the URL for a sanity check (the script 
 
 ```powershell
 $url = "https://forums.homecomingservers.com/topic/5290-procs-per-minute-ppm-information-guide/"
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste -Url $url
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\capture.ps1" -Paste -Url $url
 ```
 
 Move on to the next URL.
@@ -124,10 +129,10 @@ You either didn't copy Claude's response, or you copied something that wasn't ma
 
 ### "Frontmatter missing required field(s): ..."
 
-Claude's response didn't have all required fields. The fields are: `title`, `url`, `source`, `date_captured`, `captured_by`, `topic_tags`, `trust`. Open the file in `homecoming-build-companion/inbox/<slug>.md`, fix the frontmatter by hand, then run:
+Claude's response missed required fields: `title`, `url`, `source`, `date_captured`, `captured_by`, `topic_tags`, `trust`. Open the file in `inbox/`, fix the frontmatter by hand, then run:
 
 ```powershell
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Drain
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\capture.ps1" -Drain
 ```
 
 This processes every file in `inbox/` — yours plus any others that previously failed.
@@ -137,12 +142,12 @@ This processes every file in `inbox/` — yours plus any others that previously 
 You already captured this URL. Either skip it, or pass `-Force` to overwrite:
 
 ```powershell
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste -Force
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\capture.ps1" -Paste -Force
 ```
 
 ### Claude in the extension produces a long preamble before the markdown
 
-The script tries to peel a `\`\`\`markdown` fence if present. If there's text before/after the fence and it strips correctly, you're fine. If not, edit the saved `inbox/<slug>.md` to remove the preamble (everything before the first `---`), then `-Drain`.
+The script peels a markdown fence if present. If stripped correctly, you're fine. Otherwise edit the file in `inbox/` to remove the preamble (everything before `---`), then `-Drain`.
 
 ### Forum is rate-limiting / asking for login
 
@@ -160,7 +165,7 @@ If you want to grind through 5-10 captures in a row without switching to PowerSh
 4. Once done, run:
 
 ```powershell
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Drain
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\capture.ps1" -Drain
 ```
 
 It ingests every `inbox/*.md` in turn, moves successful ones to `inbox/.processed/`, and leaves any that fail validation in `inbox/` for fixing.
@@ -169,6 +174,6 @@ It ingests every `inbox/*.md` in turn, moves successful ones to `inbox/.processe
 
 ## When you're done with a session
 
-Tell me (Claude Code in this terminal) "I've captured guides X, Y, Z, ready to read them." I'll glob `community/**/*.md` and pull them into context for the next task — typically synthesizing the Top 5 by AT, or whatever else we're working on.
+Tell me (Claude Code) "I've captured guides X, Y, Z." I'll glob `community/**/*.md` and pull them into context for the next task — typically synthesizing Top 5 by AT.
 
 You don't need to do anything special to "link" the sessions — the captures live on disk. I just need to know to read them.
