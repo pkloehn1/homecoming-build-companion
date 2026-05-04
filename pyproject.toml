@@ -115,7 +115,6 @@ module = "tests.*"
 disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
-testpaths = ["scripts"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
 addopts = "-q --tb=short"
