@@ -24,7 +24,13 @@ A build that satisfies these is playable at exemplar 10. That's the bar.
 
 - **Power availability — the +5 rule.** Exemplared to N, you have access to powers picked at level ≤ N + 5. At exemplar 10 → picks at levels 1, 1, 2, 4, 6, 8, 10, 12, 14 are available.
 - **Slot availability — also the +5 rule.** Slots placed at level X are available while effective level ≥ X − 5. Slots placed at level 16 and later don't exist on the character at exemplar 10.
-- **IO set bonuses — the −3 rule (regular sets).** Bonuses persist while effective level ≥ (set min level − 3). Most meta sets (min 30+) lose bonuses at exemplar 10. *That's expected* — the build's level-50 set bonuses still work at level 50, where the character lives most of the time.
+- **IO set bonuses — the −3 rule (regular sets).** Bonuses persist while effective level ≥ (set min level − 3).
+  Most meta sets (min 30+) lose bonuses at exemplar 10.
+  *That's expected* — the build's level-50 set bonuses still work at level 50, where the character lives most of the time.
+  - **Engine note (Mids-modeled vs actual):** This −3 rule is *actual in-game* behavior and remains the guidance for human build-authoring.
+    MidsReborn does **not** implement it — Mids retains a power's set bonuses whenever the power's pick level ≤ the exemplar (Force) level, with no −3 offset.
+    The build-calculation engine (see [`docs/engine/mids-port-spec.md`](../../docs/engine/mids-port-spec.md)) matches Mids as its oracle,
+    so any exemplar totals it reports are labeled *Mids-modeled* and are optimistic at deep exemplar relative to live CoH.
 - **PvP IO set bonuses — informational exception.** Persist at every exemplar level. Slot PvP sets when their level-50 bonuses are competitive with the alternative; never as an exemplar-driven choice.
 - **ATO sets, Winter-O sets** — min level 10, persist at exemplar 10 by the −3 rule. ATOs slot at level 10; Winter-Os are attuned-only.
 - **Purples** — min 50; lose bonuses below effective 47. Slot freely at level 50; loss on exemplar is acceptable.
@@ -32,7 +38,8 @@ A build that satisfies these is playable at exemplar 10. That's the bar.
 
 ## What this rule actually constrains
 
-The constraint is almost entirely on **pick ordering**, which matches normal leveling anyway. A character that levels through 1–50 *naturally* picks attacks early, gets a defensive layer online by 8–10, takes a travel power around 12.
+The constraint is almost entirely on **pick ordering**, which matches normal leveling anyway.
+A character that levels through 1–50 *naturally* picks attacks early, gets a defensive layer online by 8–10, takes a travel power around 12.
 
 The rule's job is to confirm the build doesn't deliberately *defer* essentials to chase some level-50 trick.
 
@@ -47,7 +54,11 @@ The order of *enhancement aspects* in attack slots matters as much as the order 
 3. **Slots 3–5:** damage-bearing combos without accuracy (`Dmg/Rchg`, `Dmg/EndRdx/Rchg`).
 4. **Slot 6:** the set's proc, the AT-set crit proc, or a slot-in proc (FF +Recharge, AchHee -Res, etc.).
 
-**Why accuracy-first:** at exemplar 10–20, set bonuses below their −3 cutoff are gone, IOs work at their minimum-level enhancement values, and global to-hit buffs (Tactics, Kismet, Focused Accuracy) may not yet be available. The slotted Acc enhancement is what holds the attack above the +0 ToHit floor (75% with default 50% chance + 25% built-in attacker bonus). Missed attacks waste the same endurance as landed ones; a 75%-hit attack at 10 end is effectively 13.3 end per landed hit, a 95%-hit attack at 10 end is 10.5. Endurance bottlenecks a build long before damage ceilings do.
+**Why accuracy-first:** at exemplar 10–20, set bonuses below their −3 cutoff are gone, IOs work at their minimum-level enhancement values,
+and global to-hit buffs (Tactics, Kismet, Focused Accuracy) may not yet be available.
+The slotted Acc enhancement is what holds the attack above the +0 ToHit floor (75% with default 50% chance + 25% built-in attacker bonus).
+Missed attacks waste the same endurance as landed ones; a 75%-hit attack at 10 end is effectively 13.3 end per landed hit, a 95%-hit attack at 10 end is 10.5.
+Endurance bottlenecks a build long before damage ceilings do.
 
 **Exceptions, flag explicitly:**
 
