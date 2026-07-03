@@ -15,7 +15,7 @@ from typing import Any
 
 import pytest
 
-from coh_engine.maths import MathTables, f32, load_maths
+from coh_engine.maths import MathTables, f32
 
 ORACLE = Path(__file__).parent / "fixtures" / "oracle"
 
@@ -25,11 +25,6 @@ def oracle_maths() -> dict[str, Any]:
     with open(ORACLE / "maths.json", encoding="utf-8") as fh:
         data: dict[str, Any] = json.load(fh)
     return data
-
-
-@pytest.fixture(scope="module")
-def tables(maths_path: Path) -> MathTables:
-    return load_maths(maths_path)
 
 
 def test_mult_ed_matches_oracle(oracle_maths: dict[str, Any], tables: MathTables) -> None:

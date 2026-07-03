@@ -5,23 +5,11 @@ Expected values transcribed from docs/engine/mids-port-spec.md
 DatabaseAPI.LoadMaths, MidsReborn fork).
 """
 
-import struct
 from pathlib import Path
 
 import pytest
 
-from coh_engine.maths import MathTables, _strip, load_maths
-
-
-def f32(x: float) -> float:
-    """Round-trip a value through IEEE-754 single precision (C# float storage)."""
-    quantized: float = struct.unpack("f", struct.pack("f", x))[0]
-    return quantized
-
-
-@pytest.fixture(scope="module")
-def tables(maths_path: Path) -> MathTables:
-    return load_maths(maths_path)
+from coh_engine.maths import MathTables, _strip, f32, load_maths
 
 
 class TestEDThresholds:
@@ -118,19 +106,57 @@ class TestLoaderErrors:
 
 
 class TestTokenStripping:
-    """_strip mirrors FileIO.IOStrip (Core/FileIO.cs:35-40)."""
+    """_strip mirrors FileIO.IOStrip (Core/FileIO.cs:35-40) — including its quirk.
 
-    def test_leading_apostrophe_dropped(self) -> None:
-        assert _strip("'0.700") == "0.700"
+    In the C# source, the Substring(1) leading-strip result feeds only the
+    EndsWith(" ") test; both return branches use the ORIGINAL string. Mids
+    therefore never removes a leading apostrophe/space from the returned token,
+    and strips at most ONE trailing character.
+    """
 
-    def test_leading_space_dropped(self) -> None:
-        assert _strip(" 0.700") == "0.700"
+    def test_leading_apostrophe_kept(self) -> None:
+        assert _strip("'0.700") == "'0.700"
+
+    def test_leading_space_kept(self) -> None:
+        assert _strip(" 0.700") == " 0.700"
 
     def test_trailing_space_dropped(self) -> None:
         assert _strip("0.700 ") == "0.700"
+
+    def test_only_one_trailing_space_dropped(self) -> None:
+        assert _strip("0.700  ") == "0.700 "
+
+    def test_single_space_unchanged(self) -> None:
+        """probe = ''[1:] is empty, EndsWith(' ') is false -> original returned."""
+        assert _strip(" ") == " "
 
     def test_quotes_removed(self) -> None:
         assert _strip('"0.700"') == "0.700"
 
     def test_plain_token_unchanged(self) -> None:
         assert _strip("EDRT") == "EDRT"
+
+
+class TestTryParseSemantics:
+    """float.TryParse failure stores 0.0 and load continues, exactly like Mids."""
+
+    def test_apostrophe_prefixed_cell_parses_as_zero(self, tmp_path: Path) -> None:
+        """An Excel-style '0.083 cell fails TryParse in Mids and stores 0.0."""
+        quirky = tmp_path / "quirky.mhd"
+        quirky.write_text(
+            "Version:\t1.000\n"
+            "EDRT\tA\tB\tC\tD\n"
+            "EDThresh_1\t0.700\t0.400\t0.800\t1.200\n"
+            "EDThresh_2\t0.900\t0.500\t1.000\t1.500\n"
+            "EDThresh_3\t1.000\t0.600\t1.200\t1.800\n"
+            "EGE\tA\tB\tC\tD\n"
+            "TO:\t'0.083\t0.050\t0.100\t0.150\n"
+            "DO:\t0.167\t0.100\t0.200\t0.300\n"
+            "SO:\t0.333\t0.200\t0.400\t0.600\n"
+            "HO:\t0.333\t0.200\t0.400\t0.600\n"
+            "LBIOE\tA\tB\tC\tD\n" + "".join(f"{n}\t0.000\t0.000\t0.000\t0.000\n" for n in range(1, 54)),
+            encoding="utf-8",
+        )
+        tables = load_maths(quirky)
+        assert tables.mult_to[0] == 0.0
+        assert tables.mult_to[1] == f32(0.050)

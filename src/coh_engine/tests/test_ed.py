@@ -7,17 +7,10 @@ worked assertions (oracle: MidsReborn Enhancement.ApplyED, Enhancement.cs:450-47
 - Hasten with 2x level-50 recharge IOs: pre-ED 0.848 -> 0.8332 (83.32%).
 """
 
-from pathlib import Path
-
 import pytest
 
 from coh_engine.ed import Aspect, Schedule, apply_ed, schedule_for
-from coh_engine.maths import MathTables, load_maths
-
-
-@pytest.fixture(scope="module")
-def tables(maths_path: Path) -> MathTables:
-    return load_maths(maths_path)
+from coh_engine.maths import MathTables
 
 
 class TestApplyED:

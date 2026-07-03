@@ -54,12 +54,32 @@ def _grab(stream: TextIO) -> list[str]:
 
 
 def _strip(token: str) -> str:
-    """Mirror ``FileIO.IOStrip``: drop one leading ``'``/space, one trailing space, all quotes."""
-    if token.startswith(("'", " ")):
-        token = token[1:]
-    if token.endswith(" "):
+    """Mirror ``FileIO.IOStrip`` exactly, including its quirk (FileIO.cs:35-40).
+
+    In the C# source the ``Substring(1)`` leading-strip result feeds only the
+    ``EndsWith(" ")`` test — both return branches use the ORIGINAL string. Mids
+    therefore never removes a leading apostrophe/space from the returned token
+    and strips at most one trailing character. Reproduce, don't fix: an
+    apostrophe-prefixed cell must fail numeric parsing here exactly as it fails
+    ``float.TryParse`` in Mids.
+    """
+    probe = token[1:] if token.startswith(("'", " ")) else token
+    if probe.endswith(" "):
         token = token[:-1]
     return token.replace('"', "")
+
+
+def _try_parse_float(token: str) -> float:
+    """Mirror C# ``float.TryParse`` as the loaders use it: parse failure yields 0.0.
+
+    ``DatabaseAPI.LoadMaths`` records a load-error flag on TryParse failure but
+    keeps the default 0 value and continues loading; matching that keeps the
+    port's tables identical to the oracle's for the same quirky input file.
+    """
+    try:
+        return f32(float(token))
+    except ValueError:
+        return 0.0
 
 
 def _seek(stream: TextIO, label: str) -> None:
@@ -73,7 +93,7 @@ def _seek(stream: TextIO, label: str) -> None:
 
 def _row4(stream: TextIO) -> Row4:
     tokens = _grab(stream)
-    a, b, c, d = (f32(float(t)) for t in tokens[1:5])
+    a, b, c, d = (_try_parse_float(t) for t in tokens[1:5])
     return (a, b, c, d)
 
 
@@ -91,7 +111,7 @@ def load_maths(path: Path | str) -> MathTables:
         # File rows are thresholds 1..3; columns are schedules A..D. Mids stores the
         # transpose: MultED[schedule][threshold] (DatabaseAPI.cs:2461 index order).
         threshold_rows = [_grab(stream) for _ in range(3)]
-        mult_ed = tuple(tuple(f32(float(threshold_rows[t][s + 1])) for t in range(3)) for s in range(4))
+        mult_ed = tuple(tuple(_try_parse_float(threshold_rows[t][s + 1]) for t in range(3)) for s in range(4))
         _seek(stream, "EGE")
         mult_to = _row4(stream)
         mult_do = _row4(stream)
