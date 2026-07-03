@@ -5,6 +5,7 @@
   "ignore": [
     "**/*.yml",
     "**/*.yaml",
+    "**/*.md",
     "**/.venv/**",
     "**/.tox/**",
     "**/.pytest_cache/**",

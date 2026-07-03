@@ -8,6 +8,11 @@
 # 30-minute timeout.
 framework:
   - github_actions
+skip-check:
+  # CKV_GHA_7 forbids workflow_dispatch inputs. super-linter.yml's full_scan
+  # input is a boolean scope toggle for a read-only lint job - it cannot
+  # affect build outputs.
+  - CKV_GHA_7
 skip-path:
   - data/canonical
   - samples

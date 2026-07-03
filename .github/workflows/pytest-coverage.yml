@@ -88,14 +88,12 @@ jobs:
           TEST_PATH: ${{ matrix.test_path }}
           COV_PATH: ${{ matrix.cov_path }}
           PACKAGE: ${{ matrix.package }}
-          COV_CONFIG_FLAG: ${{ matrix.cov_config && format('--cov-config={0}', matrix.cov_config) || '' }}
         run: |
           mkdir -p reports
           python -m pytest -vv \
             "${TEST_PATH}" \
             --log-cli-level=INFO \
             --cov="${COV_PATH}" \
-            ${COV_CONFIG_FLAG:+"${COV_CONFIG_FLAG}"} \
             --cov-report=term-missing \
             --cov-fail-under=100 \
             --junitxml="reports/pytest-${PACKAGE}.xml"
