@@ -100,7 +100,14 @@ jobs:
 
       # dorny/test-reporter (JUnit rendering) removed: unverified creator,
       # blocked by this repo's Actions policy (GitHub-owned + verified only).
-      # The junitxml artifact is still produced by the pytest step above.
+      # The junitxml report is uploaded as a run artifact instead.
+      - name: Upload JUnit report (${{ matrix.display }})
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: pytest-junit-${{ matrix.package }}
+          path: reports/pytest-${{ matrix.package }}.xml
+          retention-days: 14
 
       - name: Report status context
         if: ${{ !cancelled() && github.event_name == 'pull_request' }}
@@ -122,6 +129,13 @@ jobs:
       pull-requests: read
       statuses: write
     steps:
+      # Checkout must precede the gate step: the report step below runs on
+      # failure too (!cancelled()) and needs the local composite action on disk.
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
       - name: Check test results
         env:
           MATRIX_RESULT: ${{ needs.test.result }}
@@ -130,11 +144,6 @@ jobs:
             printf 'Test matrix failed: %s\n' "${MATRIX_RESULT}"
             exit 1
           fi
-
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          persist-credentials: false
 
       - name: Report status context
         if: ${{ !cancelled() && github.event_name == 'pull_request' }}

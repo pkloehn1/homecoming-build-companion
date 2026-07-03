@@ -13,7 +13,12 @@ skip-check:
   # input is a boolean scope toggle for a read-only lint job - it cannot
   # affect build outputs.
   - CKV_GHA_7
+# Single source of truth for Checkov carve-outs (the workflow sets no
+# CHECKOV_SKIP_PATH): the harvested game-data trees are the documented
+# 30-minute-hang risk, tmp dirs are scratch.
 skip-path:
+  - /tmp
+  - tmp
   - data/canonical
   - samples
   - src/coh_engine/tests/fixtures

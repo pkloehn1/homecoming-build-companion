@@ -38,8 +38,9 @@ runs:
         STATUS_CONTEXT: ${{ inputs.status-context }}
         TARGET_URL: ${{ inputs.target-url }}
       run: |
+        # Token is consumed from the GH_TOKEN env var (exported above) so the
+        # secret never appears in the runner's process argv.
         python3 -m scripts.ci.report_status_context \
-          --github-token "$GH_TOKEN" \
           --pr-number "$PR_NUMBER" \
           --job-status "$JOB_STATUS" \
           --status-context "$STATUS_CONTEXT" \

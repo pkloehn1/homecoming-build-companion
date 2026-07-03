@@ -103,7 +103,10 @@ jobs:
         if: steps.hooks.outputs.exit_code != '0'
         shell: bash
         run: |
-          grep -E '\.{3,}Failed\s*$' /tmp/pre-commit-output.txt | while IFS= read -r line; do
+          # `|| true`: pre-commit can fail with no per-hook 'Failed' lines
+          # (hook-env install error, malformed config); under pipefail a
+          # no-match grep would otherwise fail this annotation step itself.
+          { grep -E '\.{3,}Failed\s*$' /tmp/pre-commit-output.txt || true; } | while IFS= read -r line; do
             hook_name="${line%%.*}"
             echo "::error title=pre-commit: ${hook_name}::Hook '${hook_name}' failed"
           done

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Report a required status context using the GitHub CLI.
 
-Used by the report-status-context composite action on Windows runners
-(via ``python -m scripts.ci.report_status_context``). On Linux runners,
-the bash script ``scripts/ci/report_status_context.sh`` is used instead.
+Executed by the report-status-context composite action on every runner OS
+(via ``python -m scripts.ci.report_status_context``). The bash companion
+``scripts/ci/report_status_context.sh`` is the upstream (kloehnwars-homelab)
+variant retained for re-import parity; it is not wired into this repo's action.
 """
 
 from __future__ import annotations
@@ -16,7 +17,9 @@ import sys
 
 def _parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Report a required status context to merge_commit_sha")
-    parser.add_argument("--github-token", required=True)
+    # Optional: prefer the GH_TOKEN env var so the secret never appears in the
+    # runner's process argv. The flag remains for upstream compatibility.
+    parser.add_argument("--github-token", default=None)
     parser.add_argument("--pr-number", required=True, type=int)
     parser.add_argument("--job-status", required=True)
     parser.add_argument("--status-context", required=True)
@@ -34,6 +37,9 @@ def _job_status_to_state(job_status: str) -> str:
 
 
 def _run_gh(args: list[str], env: dict[str, str]) -> str:
+    # Deliberately NOT consolidated with scripts.github.gh_cli's runner: this
+    # module must stay a standalone CI entry point, and it injects an explicit
+    # env (token scoping) that GhRunner.run() does not model.
     result = subprocess.run(
         args,
         check=False,
@@ -57,8 +63,13 @@ def main(argv: list[str]) -> int:
         print("Error: GITHUB_REPOSITORY is required (owner/repo)", file=sys.stderr)
         return 2
 
+    token = args.github_token or (os.environ.get("GH_TOKEN") or "").strip()
+    if not token:
+        print("Error: GH_TOKEN env var (or --github-token) is required", file=sys.stderr)
+        return 2
+
     env = dict(os.environ)
-    env["GH_TOKEN"] = args.github_token
+    env["GH_TOKEN"] = token
 
     try:
         sha = _run_gh(
