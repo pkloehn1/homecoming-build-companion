@@ -19,7 +19,8 @@ RUFF    := $(VENV_BIN)/ruff$(EXE)
 MYPY    := $(VENV_BIN)/mypy$(EXE)
 PYTEST  := $(PYTHON) -m pytest
 
-COV_PACKAGE ?= scripts
+# Bare --cov defers to [tool.coverage.run] source in pyproject.toml (scripts + src).
+COV_PACKAGE ?=
 
 # ---------------------------------------------------------------------------
 # Bootstrap (cross-platform venv + dev tooling)
@@ -41,7 +42,7 @@ endif
 lint: ## Run ruff check + format --check + mypy
 	$(RUFF) check .
 	$(RUFF) format --check .
-	$(MYPY) scripts
+	$(MYPY) scripts src
 
 .PHONY: fix
 fix: ## Auto-fix ruff lint issues and reformat
@@ -58,11 +59,11 @@ test: ## Run all tests (fast, no coverage)
 
 .PHONY: cov
 cov: ## Run tests with coverage gate (--cov-fail-under=100)
-	$(PYTEST) --cov=$(COV_PACKAGE) --cov-report=term-missing
+	$(PYTEST) --cov$(if $(COV_PACKAGE),=$(COV_PACKAGE)) --cov-report=term-missing
 
 .PHONY: cov-html
 cov-html: ## Run tests with HTML coverage report
-	$(PYTEST) --cov=$(COV_PACKAGE) --cov-report=html
+	$(PYTEST) --cov$(if $(COV_PACKAGE),=$(COV_PACKAGE)) --cov-report=html
 	@echo "Open htmlcov/index.html"
 
 # ---------------------------------------------------------------------------

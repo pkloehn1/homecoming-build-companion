@@ -27,7 +27,7 @@ repos:
     rev: v1.13.0
     hooks:
       - id: mypy
-        files: ^scripts/
+        files: ^(scripts|src)/
         additional_dependencies:
           - types-PyYAML
 
@@ -40,8 +40,12 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
+      # Verbatim game-data fixtures and sample builds must stay byte-identical
+      # to their MidsReborn/Homecoming sources — exempt from whitespace fixers.
       - id: trailing-whitespace
+        exclude: ^(src/coh_engine/tests/fixtures/|samples/)
       - id: end-of-file-fixer
+        exclude: ^(src/coh_engine/tests/fixtures/|samples/)
       - id: check-yaml
       - id: check-json
       - id: check-toml
@@ -53,3 +57,4 @@ repos:
         args: [--maxkb=15360]
       - id: mixed-line-ending
         args: [--fix=lf]
+        exclude: ^(src/coh_engine/tests/fixtures/|samples/)

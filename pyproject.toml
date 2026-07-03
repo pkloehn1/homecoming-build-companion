@@ -34,7 +34,7 @@ exclude = ["scripts.*.tests*", "scripts.*.fixtures*"]
 [tool.coverage.run]
 relative_files = true
 branch = true
-source = ["scripts"]
+source = ["scripts", "src"]
 omit = [
     "*/test_*.py",
     "*/tests/*",
@@ -90,7 +90,7 @@ ignore = [
 "**/conftest.py" = ["D"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["scripts"]
+known-first-party = ["scripts", "coh_engine"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
@@ -103,6 +103,7 @@ line-ending = "lf"
 
 [tool.mypy]
 python_version = "3.14"
+mypy_path = "src"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = false
@@ -118,6 +119,7 @@ disallow_untyped_defs = false
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
 addopts = "-q --tb=short"
+pythonpath = [".", "src"]
 
 [tool.pylint.main]
 # Pylint disabled - ruff is the standard linter for this repository
