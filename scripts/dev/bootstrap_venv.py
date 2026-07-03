@@ -411,7 +411,7 @@ def describe_plan(state: State) -> list[str]:
     lines = []
     if not state.get("venv_python"):
         lines.append("create_venv: would create .venv")
-    elif state.get("venv_exists") or state.get("venv_python"):
+    elif state.get("venv_exists") or state.get("venv_python"):  # pragma: no branch
         lines.append("create_venv: no-op (venv already exists)")
 
     venv_missing = not state.get("venv_python")
