@@ -71,9 +71,9 @@ cov-html: ## Run tests with HTML coverage report
 # ---------------------------------------------------------------------------
 
 .PHONY: validate
-validate: ## Validate a build JSON. Usage: make validate BUILD=path/to/build.json
+validate: ## Validate a build JSON (validator not yet implemented). Usage: make validate BUILD=path/to/build.json
 	@if [ -z "$(BUILD)" ]; then echo "Usage: make validate BUILD=path/to/build.json"; exit 1; fi
-	$(PYTHON) -m scripts.build_validator $(BUILD)
+	@echo "error: E01: build validator not yet implemented (Phase 6); no scripts.build_validator module exists — track progress in docs/engine/mids-port-spec.md (CP6 legality)"; exit 1
 
 # ---------------------------------------------------------------------------
 # Help

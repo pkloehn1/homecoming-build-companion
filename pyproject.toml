@@ -24,10 +24,13 @@ dev = [
     "types-PyYAML>=6.0.12",
 ]
 
+[tool.setuptools.package-dir]
+coh_engine = "src/coh_engine"
+
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["scripts*"]
-exclude = ["scripts.*.tests*", "scripts.*.fixtures*"]
+where = [".", "src"]
+include = ["scripts*", "coh_engine*"]
+exclude = ["scripts.*.tests*", "scripts.*.fixtures*", "coh_engine.tests*"]
 
 [tool.setuptools-scm]
 
@@ -120,6 +123,9 @@ python_files = ["test_*.py"]
 python_functions = ["test_*"]
 addopts = "-q --tb=short"
 pythonpath = [".", "src"]
+# Without testpaths, bare pytest walks the whole repo — including the huge
+# harvested game-data trees (data/canonical/) and prose dirs.
+testpaths = ["scripts", "src"]
 
 [tool.pylint.main]
 # Pylint disabled - ruff is the standard linter for this repository
