@@ -2,7 +2,9 @@
 
 **Status:** MUST. Applies to every Markdown file authored or edited in this project — README, rule files, knowledge tree files, lessons docs, captures, plan files, frontmatter content.
 
-This is the auto-loaded summary. The full canonical guide is at [`docs/repository-standards/style-guides/markdown-style-guide.md`](../../docs/repository-standards/style-guides/markdown-style-guide.md), imported from `repo-template` as the SSOT.
+This is the auto-loaded summary.
+The full canonical guide, imported from `repo-template` as the SSOT, is at
+[`docs/repository-standards/style-guides/markdown-style-guide.md`](../../docs/repository-standards/style-guides/markdown-style-guide.md).
 
 ## Lint conformance
 
@@ -14,6 +16,10 @@ The repo's `.markdownlint.yaml` is the single source of truth for lint rules. Au
 - `MD033/no-inline-html` — `div`, `span`, `img`, `br`, `p`, `a` allowed; other inline HTML is rejected.
 
 Run the lint check before committing markdown. Pre-commit hook will enforce this once Phase 3 wires it in.
+
+**Exemption (user-directed, 2026-07-02):** generated engine-extraction docs under [`docs/engine/`](../../docs/engine/) carry a file-level `<!-- markdownlint-disable -->`.
+The assembler normalizes their heading flow; the body is verbatim deep-math extraction (long cited lines, dense tables) and is not hand-lint-fixed.
+Keep the disable comment when regenerating.
 
 ## Core requirements (summary — see canonical guide for full text)
 
