@@ -9,7 +9,7 @@ In conversation: use **"you"** and **"your"**. The user is the one we're talking
 In code, comments, prose, frontmatter values, log output, and tooling strings: use **generic placeholders**:
 
 | Context | Use |
-|---|---|
+| --- | --- |
 | `captured_by:` frontmatter | `local-capture` |
 | Prose attribution | "house rule," "standing rule," "the user" |
 | Code template defaults | `<your_handle>`, `local-capture`, or omit |
@@ -20,7 +20,9 @@ These placeholders are the canonical replacements. Apply them consistently.
 
 ## Why
 
-The user has explicitly directed that their first name (or any other personally identifying name) stays out of project artifacts. They reinforced this is a MUST rule and instructed both this Claude session and the browser-extension Claude the same way. Following it is part of working with this project.
+The user has explicitly directed that their first name (or any other personally identifying name) stays out of project artifacts.
+They reinforced this is a MUST rule and instructed both this Claude session and the browser-extension Claude the same way.
+Following it is part of working with this project.
 
 ## How to apply
 
@@ -58,4 +60,6 @@ source: forums.homecomingservers.com
 
 ## Audit hook
 
-Future maintenance: any tool that walks the project flags presence of a real name in `captured_by`, prose, or comments as a violation to fix. The frontmatter parser accepts `local-capture` (or any non-name value) as the canonical value. The capture-ingestion script ([`tools/ingest-forum-capture.ps1`](../../tools/ingest-forum-capture.ps1)) treats any non-canonical value as a soft warning.
+Future maintenance: any tool that walks the project flags presence of a real name in `captured_by`, prose, or comments as a violation to fix.
+The frontmatter parser accepts `local-capture` (or any non-name value) as the canonical value.
+The capture-ingestion script ([`scripts/ingest-forum-capture.ps1`](../../scripts/ingest-forum-capture.ps1)) treats any non-canonical value as a soft warning.

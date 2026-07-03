@@ -6,9 +6,9 @@ Procedure for harvesting MidsReborn-derived data from the running app. Walk it o
 >
 > Lane A and Lane B run independently; both give Claude cross-checkable sources.
 
-**Install path:** `C:\Users\petek\AppData\Roaming\LoadedCamel\MidsReborn\` (a.k.a. `%APPDATA%\LoadedCamel\MidsReborn`)
+**Install path:** `%APPDATA%\LoadedCamel\MidsReborn\`
 
-**Output path:** `C:\Users\petek\repos\homecoming-build-companion\data\mids\` (everything we collect lands here)
+**Output path:** `%USERPROFILE%\repos\homecoming-build-companion\data\mids\` (everything we collect lands here)
 
 ---
 

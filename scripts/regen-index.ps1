@@ -82,7 +82,7 @@ foreach ($c in $captures) {
 $lines = @()
 $lines += "# Community Knowledge Index"
 $lines += ""
-$lines += "Auto-generated from frontmatter in community/**/*.md by ``tools/regen-index.ps1``."
+$lines += "Auto-generated from frontmatter in community/**/*.md by ``scripts/regen-index.ps1``."
 $lines += "Do not hand-edit — your changes will be overwritten."
 $lines += ""
 $lines += "Last regenerated: $(Get-Date -Format 'yyyy-MM-dd HH:mm')"

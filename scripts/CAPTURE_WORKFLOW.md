@@ -101,9 +101,9 @@ Paste this and hit `Enter`:
 What you'll see if it works:
 
 ```text
-Saved → C:\Users\petek\repos\homecoming-build-companion\inbox\<slug>.md
+Saved → %USERPROFILE%\repos\homecoming-build-companion\inbox\<slug>.md
 Target derived from topic_tags[0]='mechanics': mechanics/<slug>.md
-Copied → C:\Users\petek\repos\homecoming-build-companion\community\mechanics\<slug>.md
+Copied → %USERPROFILE%\repos\homecoming-build-companion\community\mechanics\<slug>.md
 Re-generating community/INDEX.md ...
 Wrote ...\community\INDEX.md  (N captures indexed)
 ```

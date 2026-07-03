@@ -479,7 +479,7 @@ foreach ($key in $historyByKey.Keys) {
 $out = [ordered]@{
     schema_version = 1
     generated_at   = (Get-Date -Format 'o')
-    note           = 'Latest-wins consolidation of structured numeric changes from Homecoming I26P1 through I28P3 patch notes. Parser: tools/parse-patches.ps1. When a (entity, field) pair is in this map, the canonical zip value is stale; prefer this override.'
+    note           = 'Latest-wins consolidation of structured numeric changes from Homecoming I26P1 through I28P3 patch notes. Parser: scripts/parse-patches.ps1. When a (entity, field) pair is in this map, the canonical zip value is stale; prefer this override.'
     source_chronology = $Patches
     total_distinct_overrides = $historyByKey.Count
     total_extracted_records  = $AllChanges.Count
@@ -504,7 +504,7 @@ if ($Unresolved_Lines.Count -gt 0) {
     $unresolvedMd = @"
 # Unresolved patch lines — needs manual review
 
-Lines that matched a numeric-change pattern but couldn't be classified by entity path. Walk these manually and either: add to current_overrides.json by hand, or extend tools/parse-patches.ps1 to handle the pattern.
+Lines that matched a numeric-change pattern but couldn't be classified by entity path. Walk these manually and either: add to current_overrides.json by hand, or extend scripts/parse-patches.ps1 to handle the pattern.
 
 Generated: $(Get-Date -Format 'yyyy-MM-dd HH:mm')
 Total: $($Unresolved_Lines.Count)

@@ -332,7 +332,7 @@ $unresolved_table
   Likely causes: (a) patch refers to an inherent or non-power feature
   (e.g. "Tanker_AT_inherent_changes"), (b) parsed entity prefix is a date or
   section heading that wasn't filtered out, (c) typo in the patch notes
-  (e.g. "Shadwo Maul" misspelled). Walk the unresolved list and fix tools/
+  (e.g. "Shadwo Maul" misspelled). Walk the unresolved list and fix scripts/
   parse-patches.ps1's Build-EntityPath skip list, or add manual aliases.
 "@
 Set-Content -Path (Join-Path $DiffDir 'SUMMARY.md') -Value $summary -Encoding UTF8

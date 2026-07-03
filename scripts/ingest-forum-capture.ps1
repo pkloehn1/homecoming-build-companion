@@ -18,7 +18,7 @@
     archetypes, powersets, mechanics, meta-builds, tools, patches, validation,
     _meta.
 
-  After copy, runs tools/regen-index.ps1 so community/INDEX.md is fresh.
+  After copy, runs scripts/regen-index.ps1 so community/INDEX.md is fresh.
 #>
 [CmdletBinding()]
 param(

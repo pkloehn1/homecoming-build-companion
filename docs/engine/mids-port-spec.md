@@ -2,7 +2,7 @@
 
 <!-- markdownlint-disable -->
 
-> Generated 2026-07-02 from the MidsReborn fork at `C:/Users/petek/repos/MidsReborn/MidsReborn` by the `mids-port-spec` extraction workflow (run `wf_04edd3dd-bb9`). Language-neutral SSOT the Python port implements against. Mids is the oracle: every numeric claim is validated against MidsReborn's own output via golden fixtures. Regenerate and re-baseline after any Homecoming DB update.
+> Generated 2026-07-02 from the MidsReborn fork at `<repos>/MidsReborn/MidsReborn` by the `mids-port-spec` extraction workflow (run `wf_04edd3dd-bb9`). Language-neutral SSOT the Python port implements against. Mids is the oracle: every numeric claim is validated against MidsReborn's own output via golden fixtures. Regenerate and re-baseline after any Homecoming DB update.
 
 ## Synthesis
 
@@ -57,25 +57,25 @@ Target CP2 = data ingestion, and adopt the sections' explicit recommendation: bu
 
 **Source files:**
 
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/AppDataPaths.cs` (11-129) — File name constants (I12.mhd, EnhDB.mhd, SData.mhd, GlobalMods.mhd, NLevels/RLevels, etc.) and all header magic strings (Db/EnhDb/ServerData/Save.*).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (1175-1459, 1628-1761, 2099-2130, 2163-2344, 2356-2585) — All Load*/Save* routines for the .mhd data files: main DB container (I12), ServerData (SData), EffectIds (GlobalMods), Levels (N/RLevels text), EnhancementDb, EnhancementClasses (EClasses text), TypeGrades (json), Maths (text), ReplacementTable.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/MidsCharacterFileFormat.cs` (32-268, 338-750, 1353-1425) — .mxd (legacy) binary build format: write buffer (MxDBuildSaveBuffer), read (MxDReadSaveData), slot read/write, share-string wrapper, hardcoded migrations, IOLevel<=49 clamp, version/format gating.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/BuildFile/BuildManager.cs` (37-218, 308-433) — Build-file load/save orchestration: .mbd plain-JSON file load/save, share-data header parsing (5-item ';' header), MXD hex path vs MBD base64 path, size-mismatch rejects, DB-name gating.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/BuildFile/CharacterBuildData.cs` (37-71, 75-202, 273-494) — .mbd JSON model (source of truth): Update (serialize, +1 level offsets), LoadBuild (deserialize, -1 offsets), slot/alt-slot mapping, GenerateChunkData/GenerateShareData (header + Brotli+Base64).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/BuildFile/DataModels` (all) — JSON DTOs: MetaData, PowerData, SubPowerData, SlotData, EnhancementData (field names + defaults).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/BuildFile/EnhancementDataConverter.cs` (1-80) — Custom Newtonsoft converter fixing EnhancementData JSON key order/names and legacy 'Enhancement'->Uid fallback.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Utils/Compression.cs` (12-37) — MBD compression = Brotli (SmallestSize) + Base64.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Utils/ModernZlib.cs` (13-120) — MXD compression = zlib (Z_BEST_COMPRESSION) + Hex; BreakString 67-char bookended line format; Hex encode/decode.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Utils/DataClassifier.cs` (36-54) — Regex classification of pasted share data into Mxd / Mbd / UnkBase64.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/FileIO.cs` (21-79) — Text-file tokenizer for N/RLevels, EClasses, Maths: IOGrab (tab split + strip quotes), IOSeek/IOSeekReturn.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/LevelMap.cs` (12-28) — Per-level Powers/Slots record parsed from Levels text rows.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Power.cs` (213-374) — I12.mhd Power record binary reader (~60 sequential fields, enums as Int32, nested Requirement + Effect[]).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Effect.cs` (87-172) — I12.mhd Effect record binary reader (nested inside each Power).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Archetype.cs` (89-115) — I12.mhd Archetype record binary reader.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Powerset.cs` (66-94) — I12.mhd Powerset record binary reader.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Requirement.cs` (67-90) — Requirement sub-record binary reader embedded in Power.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Enhancement.cs` (86-142) — EnhDB.mhd Enhancement record binary reader.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/EnhancementSet.cs` (61-107) — EnhDB.mhd EnhancementSet record binary reader.
+- `<repos>/MidsReborn/MidsReborn/Core/AppDataPaths.cs` (11-129) — File name constants (I12.mhd, EnhDB.mhd, SData.mhd, GlobalMods.mhd, NLevels/RLevels, etc.) and all header magic strings (Db/EnhDb/ServerData/Save.*).
+- `<repos>/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (1175-1459, 1628-1761, 2099-2130, 2163-2344, 2356-2585) — All Load*/Save* routines for the .mhd data files: main DB container (I12), ServerData (SData), EffectIds (GlobalMods), Levels (N/RLevels text), EnhancementDb, EnhancementClasses (EClasses text), TypeGrades (json), Maths (text), ReplacementTable.
+- `<repos>/MidsReborn/MidsReborn/Core/MidsCharacterFileFormat.cs` (32-268, 338-750, 1353-1425) — .mxd (legacy) binary build format: write buffer (MxDBuildSaveBuffer), read (MxDReadSaveData), slot read/write, share-string wrapper, hardcoded migrations, IOLevel<=49 clamp, version/format gating.
+- `<repos>/MidsReborn/MidsReborn/Core/BuildFile/BuildManager.cs` (37-218, 308-433) — Build-file load/save orchestration: .mbd plain-JSON file load/save, share-data header parsing (5-item ';' header), MXD hex path vs MBD base64 path, size-mismatch rejects, DB-name gating.
+- `<repos>/MidsReborn/MidsReborn/Core/BuildFile/CharacterBuildData.cs` (37-71, 75-202, 273-494) — .mbd JSON model (source of truth): Update (serialize, +1 level offsets), LoadBuild (deserialize, -1 offsets), slot/alt-slot mapping, GenerateChunkData/GenerateShareData (header + Brotli+Base64).
+- `<repos>/MidsReborn/MidsReborn/Core/BuildFile/DataModels` (all) — JSON DTOs: MetaData, PowerData, SubPowerData, SlotData, EnhancementData (field names + defaults).
+- `<repos>/MidsReborn/MidsReborn/Core/BuildFile/EnhancementDataConverter.cs` (1-80) — Custom Newtonsoft converter fixing EnhancementData JSON key order/names and legacy 'Enhancement'->Uid fallback.
+- `<repos>/MidsReborn/MidsReborn/Core/Utils/Compression.cs` (12-37) — MBD compression = Brotli (SmallestSize) + Base64.
+- `<repos>/MidsReborn/MidsReborn/Core/Utils/ModernZlib.cs` (13-120) — MXD compression = zlib (Z_BEST_COMPRESSION) + Hex; BreakString 67-char bookended line format; Hex encode/decode.
+- `<repos>/MidsReborn/MidsReborn/Core/Utils/DataClassifier.cs` (36-54) — Regex classification of pasted share data into Mxd / Mbd / UnkBase64.
+- `<repos>/MidsReborn/MidsReborn/Core/FileIO.cs` (21-79) — Text-file tokenizer for N/RLevels, EClasses, Maths: IOGrab (tab split + strip quotes), IOSeek/IOSeekReturn.
+- `<repos>/MidsReborn/MidsReborn/Core/LevelMap.cs` (12-28) — Per-level Powers/Slots record parsed from Levels text rows.
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Power.cs` (213-374) — I12.mhd Power record binary reader (~60 sequential fields, enums as Int32, nested Requirement + Effect[]).
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Effect.cs` (87-172) — I12.mhd Effect record binary reader (nested inside each Power).
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Archetype.cs` (89-115) — I12.mhd Archetype record binary reader.
+- `<repos>/MidsReborn/MidsReborn/Core/Powerset.cs` (66-94) — I12.mhd Powerset record binary reader.
+- `<repos>/MidsReborn/MidsReborn/Core/Requirement.cs` (67-90) — Requirement sub-record binary reader embedded in Power.
+- `<repos>/MidsReborn/MidsReborn/Core/Enhancement.cs` (86-142) — EnhDB.mhd Enhancement record binary reader.
+- `<repos>/MidsReborn/MidsReborn/Core/EnhancementSet.cs` (61-107) — EnhDB.mhd EnhancementSet record binary reader.
 
 **Key constants / tables:**
 
@@ -363,22 +363,22 @@ Definitive, from code:
 
 **Source files:**
 
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (2609-2647) — GetModifier(IEffect) public entry + private GetModifier(iClass,iTable,iLevel) table lookup with bounds checks
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (98-119) — NidFromUidAttribMod: table-name string to table index
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (122-133) — NidFromUidClass: class-name string to class index
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (3001-3010) — MatchModifierIDs: resolves every effect.ModifierTable string to nModifierTable int at load
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Modifiers.cs` (124-184) — ModifierTable class: Table=List<List<float>> [level][classColumn], BaseIndex, ID; JSON + binary loaders
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Effect.cs` (390-403) — Effect.Mag: (Damage?-1:1)*Scale*nMagnitude*GetModifier(this); the caller that turns a table cell into a number
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Effect.cs` (409-422) — Effect.Duration: Duration attribType uses Scale*GetModifier(this)
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Master_Classes/MidsContext.cs` (21-26) — MathLevelBase=49 constant; static Archetype used as default class
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Archetype.cs` (89-115) — Archetype binary read order incl. Column int and all caps (HP/Res/Recharge/Damage/Recovery/Regen)
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Archetype.cs` (30-58) — Archetype default constructor cap fallbacks (HPCap 5000, ResCap 90, DamageCap 4, RechargeCap 5, RecoveryCap 5, RegenCap 20, PerceptionCap 1153)
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/ServerData.cs` (26-110) — ServerData constants: BaseToHit 0.75, MaxSlots 67, EnableInherentSlotting false, Health/Stamina slots, speed caps
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Build.cs` (85-95) — TotalSlotsAvailable resolves 67 (EnableInherentSlotting false path)
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Expressions.cs` (540-568) — Alternate lookup ModifierCaster: row 49 (maxPlayerLevel-1) x column = index within PLAYABLE-filtered class list
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Expressions.cs` (627-634) — Alternate lookup GetModifier(expr): row=Character.Level (not 49), col=Archetype.Column
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Databases/Homecoming/AttribMod.json` (1-346889) — The 102 modifier tables themselves (data payload to port verbatim)
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/UI/Forms/OptionsMenuItems/DbEditor/frmPowerBrowser.cs` (279-279) — Commented-out `Classes[index].Column = index` confirming Column normally equals class index
+- `<repos>/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (2609-2647) — GetModifier(IEffect) public entry + private GetModifier(iClass,iTable,iLevel) table lookup with bounds checks
+- `<repos>/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (98-119) — NidFromUidAttribMod: table-name string to table index
+- `<repos>/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (122-133) — NidFromUidClass: class-name string to class index
+- `<repos>/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (3001-3010) — MatchModifierIDs: resolves every effect.ModifierTable string to nModifierTable int at load
+- `<repos>/MidsReborn/MidsReborn/Core/Modifiers.cs` (124-184) — ModifierTable class: Table=List<List<float>> [level][classColumn], BaseIndex, ID; JSON + binary loaders
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Effect.cs` (390-403) — Effect.Mag: (Damage?-1:1)*Scale*nMagnitude*GetModifier(this); the caller that turns a table cell into a number
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Effect.cs` (409-422) — Effect.Duration: Duration attribType uses Scale*GetModifier(this)
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Master_Classes/MidsContext.cs` (21-26) — MathLevelBase=49 constant; static Archetype used as default class
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Archetype.cs` (89-115) — Archetype binary read order incl. Column int and all caps (HP/Res/Recharge/Damage/Recovery/Regen)
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Archetype.cs` (30-58) — Archetype default constructor cap fallbacks (HPCap 5000, ResCap 90, DamageCap 4, RechargeCap 5, RecoveryCap 5, RegenCap 20, PerceptionCap 1153)
+- `<repos>/MidsReborn/MidsReborn/Core/ServerData.cs` (26-110) — ServerData constants: BaseToHit 0.75, MaxSlots 67, EnableInherentSlotting false, Health/Stamina slots, speed caps
+- `<repos>/MidsReborn/MidsReborn/Core/Build.cs` (85-95) — TotalSlotsAvailable resolves 67 (EnableInherentSlotting false path)
+- `<repos>/MidsReborn/MidsReborn/Core/Expressions.cs` (540-568) — Alternate lookup ModifierCaster: row 49 (maxPlayerLevel-1) x column = index within PLAYABLE-filtered class list
+- `<repos>/MidsReborn/MidsReborn/Core/Expressions.cs` (627-634) — Alternate lookup GetModifier(expr): row=Character.Level (not 49), col=Archetype.Column
+- `<repos>/MidsReborn/MidsReborn/Databases/Homecoming/AttribMod.json` (1-346889) — The 102 modifier tables themselves (data payload to port verbatim)
+- `<repos>/MidsReborn/MidsReborn/UI/Forms/OptionsMenuItems/DbEditor/frmPowerBrowser.cs` (279-279) — Commented-out `Classes[index].Column = index` confirming Column normally equals class index
 
 **Key constants / tables:**
 
@@ -664,12 +664,12 @@ def effect_mag(effect):
 
 **Source files:**
 
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/I9Slot.cs` (38-153) — Per-slot value: GetScheduleMult (schedule tables + relative-level + Superior), GetRelativeLevelMultiplier, GetEnhancementEffect (per-effect aspect sum).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Enhancement.cs` (424-476) — ApplyED (breakpoints + slopes 1.0/0.9/0.7/0.15) and GetSchedule (aspect->schedule mapping).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/clsToonX.cs` (1732-1919) — Pipeline orchestration: Pass1 aggregate-per-aspect-across-slots (ForceLevel exemplar gate), Pass2 ApplyED-once, pass ordering in GenerateBuffedPowerArray.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (2356-2549) — InitializeMaths defaults + LoadMaths parser confirming MultED[sched][bp], MultTO/DO/SO[0][sched], MultIO[level-1][sched] and 53-row / 4-column layout.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Databases/Homecoming/Maths.mhd` (9-76) — Actual numeric tables: ED thresholds (11-13), grade effectiveness (17-20), 53-row level IO effectiveness (24-76).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Enums.cs` (645-677) — Enum integer values: eEnhGrade, eEnhRelative, eSchedule (None=-1,A=0..D=3,Multiple=4), eType.
+- `<repos>/MidsReborn/MidsReborn/Core/I9Slot.cs` (38-153) — Per-slot value: GetScheduleMult (schedule tables + relative-level + Superior), GetRelativeLevelMultiplier, GetEnhancementEffect (per-effect aspect sum).
+- `<repos>/MidsReborn/MidsReborn/Core/Enhancement.cs` (424-476) — ApplyED (breakpoints + slopes 1.0/0.9/0.7/0.15) and GetSchedule (aspect->schedule mapping).
+- `<repos>/MidsReborn/MidsReborn/clsToonX.cs` (1732-1919) — Pipeline orchestration: Pass1 aggregate-per-aspect-across-slots (ForceLevel exemplar gate), Pass2 ApplyED-once, pass ordering in GenerateBuffedPowerArray.
+- `<repos>/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (2356-2549) — InitializeMaths defaults + LoadMaths parser confirming MultED[sched][bp], MultTO/DO/SO[0][sched], MultIO[level-1][sched] and 53-row / 4-column layout.
+- `<repos>/MidsReborn/MidsReborn/Databases/Homecoming/Maths.mhd` (9-76) — Actual numeric tables: ED thresholds (11-13), grade effectiveness (17-20), 53-row level IO effectiveness (24-76).
+- `<repos>/MidsReborn/MidsReborn/Core/Enums.cs` (645-677) — Enum integer values: eEnhGrade, eEnhRelative, eSchedule (None=-1,A=0..D=3,Multiple=4), eType.
 
 **Key constants / tables:**
 
@@ -870,12 +870,12 @@ result = 0.70 + (0.848-0.70)*0.9 = 0.8332  -> 83.32%
 
 **Source files:**
 
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Effect.cs` (87-172, 390-407, 1856-2000, 2610-2616) — Effect record: field set, BinaryReader field order (87-172), Mag getter (390-403), BuffedMag/MagPercent (405-407), CanInclude/SpecialCase (1856+), PvXInclude (2610-2616)
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (2609-2647) — GetModifier public+private: AttribMod table lookup, MathLevelBase level, class-column indirection, bounds->0
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Power.cs` (1433-1626) — GetEnhancementMagSum (1433-1462), GetEffectMagSum x2 (1464-1596), GetDamageMagSum toggle /10 rule (1598-1626)
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Enums.cs` (36-50, 935-940, 1081-1085, 1151-1157, 1760-1815) — ShortFX struct Add/Sum/Max/Present (1760-1815); enum orderings eAspect(36) eAttribType(45) ePvX(935) eStacking(1081) eToWho(1151)
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/clsToonX.cs` (48-59, 335-338, 980) — ApplyPvpDr guard+Def loop (48-59), CalculatePvpDr atan formula (335-338), call site (980)
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Master_Classes/MidsContext.cs` (21) — MathLevelBase constant = 49
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Effect.cs` (87-172, 390-407, 1856-2000, 2610-2616) — Effect record: field set, BinaryReader field order (87-172), Mag getter (390-403), BuffedMag/MagPercent (405-407), CanInclude/SpecialCase (1856+), PvXInclude (2610-2616)
+- `<repos>/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (2609-2647) — GetModifier public+private: AttribMod table lookup, MathLevelBase level, class-column indirection, bounds->0
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Power.cs` (1433-1626) — GetEnhancementMagSum (1433-1462), GetEffectMagSum x2 (1464-1596), GetDamageMagSum toggle /10 rule (1598-1626)
+- `<repos>/MidsReborn/MidsReborn/Core/Enums.cs` (36-50, 935-940, 1081-1085, 1151-1157, 1760-1815) — ShortFX struct Add/Sum/Max/Present (1760-1815); enum orderings eAspect(36) eAttribType(45) ePvX(935) eStacking(1081) eToWho(1151)
+- `<repos>/MidsReborn/MidsReborn/clsToonX.cs` (48-59, 335-338, 980) — ApplyPvpDr guard+Def loop (48-59), CalculatePvpDr atan formula (335-338), call site (980)
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Master_Classes/MidsContext.cs` (21) — MathLevelBase constant = 49
 
 **Key constants / tables:**
 
@@ -1085,11 +1085,11 @@ This is the standard CoH PvP defense DR curve. No other attribute is passed thro
 
 **Source files:**
 
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Expressions.cs` (1-843) — PRIMARY. Entire expression subsystem: command/constant table (CommandsList UI metadata + CommandsDict runtime), function table (FunctionsDict), custom Jace functions, Parse/InternalParsing evaluator, Validate.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Effect.cs` (15,100-149,372-422,940-975,1220,1273,1591-1607) — Call sites. Effect.Probability (378-388), Effect.Mag (390-403), Effect.Duration (409-422) getters invoke Parse when AttribType==Expression; clamping/sign rules live here. Rand field (15). Expressions deserialized (128-133).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (2609-2630) — DatabaseAPI.GetModifier(IEffect) — what modifier>current resolves to (class x level attrib-mod table lookup). Separate subsystem, referenced not transcribed.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/BooleanExprPreprocessor.cs` (1-570) — SIBLING subsystem (out of strict scope): the Requires/conditional expression evaluator. Also Jace-based; converts infix &&/|| to prefix AND()/OR() functions. Confirms Jace operator handling limitations.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/MidsReborn.csproj` (721) — Dependency pin: Jace4fc 1.0.2 is the underlying infix math engine.
+- `<repos>/MidsReborn/MidsReborn/Core/Expressions.cs` (1-843) — PRIMARY. Entire expression subsystem: command/constant table (CommandsList UI metadata + CommandsDict runtime), function table (FunctionsDict), custom Jace functions, Parse/InternalParsing evaluator, Validate.
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Effect.cs` (15,100-149,372-422,940-975,1220,1273,1591-1607) — Call sites. Effect.Probability (378-388), Effect.Mag (390-403), Effect.Duration (409-422) getters invoke Parse when AttribType==Expression; clamping/sign rules live here. Rand field (15). Expressions deserialized (128-133).
+- `<repos>/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (2609-2630) — DatabaseAPI.GetModifier(IEffect) — what modifier>current resolves to (class x level attrib-mod table lookup). Separate subsystem, referenced not transcribed.
+- `<repos>/MidsReborn/MidsReborn/Core/BooleanExprPreprocessor.cs` (1-570) — SIBLING subsystem (out of strict scope): the Requires/conditional expression evaluator. Also Jace-based; converts infix &&/|| to prefix AND()/OR() functions. Confirms Jace operator handling limitations.
+- `<repos>/MidsReborn/MidsReborn/MidsReborn.csproj` (721) — Dependency pin: Jace4fc 1.0.2 is the underlying infix math engine.
 
 **Key constants / tables:**
 
@@ -1273,7 +1273,7 @@ def parse(fx, kind):            # kind in {duration, magnitude, probability}
 
 **Source files:**
 
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/clsToonX.cs` (380-1002, 1004-2236) — Sole source. Contains GenerateBuffedPowerArray orchestrator (2194-2236) and every GBPA_* pass plus GenerateBuffData/CalculateAndApplyEffects/GBD_Totals bucket routing.
+- `<repos>/MidsReborn/MidsReborn/clsToonX.cs` (380-1002, 1004-2236) — Sole source. Contains GenerateBuffedPowerArray orchestrator (2194-2236) and every GBPA_* pass plus GenerateBuffData/CalculateAndApplyEffects/GBD_Totals bucket routing.
 
 **Key constants / tables:**
 
@@ -1460,12 +1460,12 @@ Runs after Pass6. Inventories `GrantPower` effects on main-set (Primary/Secondar
 
 **Source files:**
 
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/clsToonX.cs` (48-59, 335-338, 839-1002) — GBD_Totals (839-1002): builds Totals from aggregated self-buffs/self-enhance and produces TotalsCapped by applying AT/server caps. ApplyPvpDr (48-59) + CalculatePvpDr (335-338).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Statistics.cs` (1-254) — Derived stat accessors (endurance recovery/regen per sec, defense, resist, HP, movement, buff haste/damage) computed from Totals/TotalsCapped and Archetype base values.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Character.cs` (1857-1970) — TotalStatistics class: field list (Def/Res/Mez arrays, HPRegen, HPMax, EndRec, movement, buffs), Init and Assign.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/ServerData.cs` (26-110) — Server-wide base/max movement/perception constants, BaseToHit 0.75, MaxSlots 67.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Archetype.cs` (23-45, 92-140) — AT cap fields (DamageCap/RechargeCap/RegenCap/RecoveryCap/ResCap/HPCap/PerceptionCap) and base values (BaseRegen/BaseRecovery/BaseThreat/Hitpoints).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Enums.cs` (1222-1254) — eStatType enum indices into _selfBuffs.Effect / _selfEnhance.Effect arrays.
+- `<repos>/MidsReborn/MidsReborn/clsToonX.cs` (48-59, 335-338, 839-1002) — GBD_Totals (839-1002): builds Totals from aggregated self-buffs/self-enhance and produces TotalsCapped by applying AT/server caps. ApplyPvpDr (48-59) + CalculatePvpDr (335-338).
+- `<repos>/MidsReborn/MidsReborn/Core/Statistics.cs` (1-254) — Derived stat accessors (endurance recovery/regen per sec, defense, resist, HP, movement, buff haste/damage) computed from Totals/TotalsCapped and Archetype base values.
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Character.cs` (1857-1970) — TotalStatistics class: field list (Def/Res/Mez arrays, HPRegen, HPMax, EndRec, movement, buffs), Init and Assign.
+- `<repos>/MidsReborn/MidsReborn/Core/ServerData.cs` (26-110) — Server-wide base/max movement/perception constants, BaseToHit 0.75, MaxSlots 67.
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Archetype.cs` (23-45, 92-140) — AT cap fields (DamageCap/RechargeCap/RegenCap/RecoveryCap/ResCap/HPCap/PerceptionCap) and base values (BaseRegen/BaseRecovery/BaseThreat/Hitpoints).
+- `<repos>/MidsReborn/MidsReborn/Core/Enums.cs` (1222-1254) — eStatType enum indices into _selfBuffs.Effect / _selfEnhance.Effect arrays.
 
 **Key constants / tables:**
 
@@ -1785,13 +1785,13 @@ No exemplar level-shift, `-3` set-bonus cutoff, or build-legality accept/reject 
 
 **Source files:**
 
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Build.cs` (1151-1226,1236-1313) — Set-bonus accumulation entry points: GenerateSetBonusData (exemplar gate + PvMode selection), GetSetBonusVirtualPower (Rule of Five + MyPet skip), GetCumulativeSetBonuses (effect folding for display).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/I9SetData.cs` (31-128) — Per-power set accumulator: Add (SetO filter, per-set slotted-count tally), BuildEffects (tier activation by Slotted<=count and PvMode match; special/unique bonus activation at count>=1).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/EnhancementSet.cs` (12-107,363-371) — EnhancementSet + BonusItem struct definitions: Bonus[] (tiered set bonuses), SpecialBonus[] (per-enhancement globals/uniques), fields Slotted, PvMode, Index[].
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Enums.cs` (935-940) — ePvX enum: Any=0, PvE=1, PvP=2.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/ConfigData.cs` (121,582) — ForceLevel default 50 (exemplar level control); Inc.DisablePvE bool (PvE/PvP toggle).
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/clsToonX.cs` (2177-2178,2194-2196) — Consumption: GenerateBuffedPowerArray calls GenerateSetBonusData, then CalculateAndApplyEffects on the SetBonusVirtualPower folds the bonus effects into character totals.
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (242-261) — NidPowers("set_bonus") returns global Power-array indexes of the set_bonus virtual powerset; sizes the Rule-of-Five counter array.
+- `<repos>/MidsReborn/MidsReborn/Core/Build.cs` (1151-1226,1236-1313) — Set-bonus accumulation entry points: GenerateSetBonusData (exemplar gate + PvMode selection), GetSetBonusVirtualPower (Rule of Five + MyPet skip), GetCumulativeSetBonuses (effect folding for display).
+- `<repos>/MidsReborn/MidsReborn/Core/I9SetData.cs` (31-128) — Per-power set accumulator: Add (SetO filter, per-set slotted-count tally), BuildEffects (tier activation by Slotted<=count and PvMode match; special/unique bonus activation at count>=1).
+- `<repos>/MidsReborn/MidsReborn/Core/EnhancementSet.cs` (12-107,363-371) — EnhancementSet + BonusItem struct definitions: Bonus[] (tiered set bonuses), SpecialBonus[] (per-enhancement globals/uniques), fields Slotted, PvMode, Index[].
+- `<repos>/MidsReborn/MidsReborn/Core/Enums.cs` (935-940) — ePvX enum: Any=0, PvE=1, PvP=2.
+- `<repos>/MidsReborn/MidsReborn/Core/ConfigData.cs` (121,582) — ForceLevel default 50 (exemplar level control); Inc.DisablePvE bool (PvE/PvP toggle).
+- `<repos>/MidsReborn/MidsReborn/clsToonX.cs` (2177-2178,2194-2196) — Consumption: GenerateBuffedPowerArray calls GenerateSetBonusData, then CalculateAndApplyEffects on the SetBonusVirtualPower folds the bonus effects into character totals.
+- `<repos>/MidsReborn/MidsReborn/Core/DatabaseAPI.cs` (242-261) — NidPowers("set_bonus") returns global Power-array indexes of the set_bonus virtual powerset; sizes the Rule-of-Five counter array.
 
 **Key constants / tables:**
 
@@ -1970,13 +1970,13 @@ Consequence for a faithful port: a set slotted in a power picked at level ≤ ex
 
 **Source files:**
 
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Base/Data_Classes/Power.cs` (2104-2127, 2348-2354, 492, 506) — Standard-enh validity (GetValidEnhancements non-SetO branch), SetO validity (GetValidEnhancementsFromSets), IsEnhancementValid, and Power.Enhancements/Power.SetTypes field decls
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Build.cs` (1026-1149, 608-654, 211-241) — EnhancementTest (SetO set-type gate + unique/superior/mutex/dup build-wide rules), CheckAndFixAllEnhancements (load-time strip via IsEnhancementValid), ValidateEnhancements
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/UI/Forms/MainWindow2.cs` (2737-2799, 2762, 2546-2618) — Actual placement path: I9Picker_EnhancementPicked gates placement through EnhancementTest; GetRepeatEnhancement/GetFirstValidSetEnh repeat-placement paths
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/UI/Controls/I9Picker.cs` (1645-1719) — Picker population: GetValidSetTypes=Power.SetTypes (which set tabs shown), GetValidEnhancements(type)=Power.GetValidEnhancements (which standard enh shown) — the presentation-layer filter
-- `C:/Users/petek/repos/MidsReborn/MidsReborn/Core/Enums.cs` (1159-1166, 952-1004, 653-663) — eType (None/Normal/InventO/SpecialO/SetO), eSetType (Knockback=23 etc.), eEnhMutex (None/Stealth/ArchetypeA..F)
-- `C:/Users/petek/repos/homecoming-build-companion/data/canonical/powers/scrapper_melee/dark_melee/soul_drain.json` (boosts_allowed, allowed_boostset_cats) — Empirical data for the Soul Drain flagged case
-- `C:/Users/petek/repos/homecoming-build-companion/data/canonical/powers/scrapper_defense/shield_defense/one_with_the_shield.json` (boosts_allowed, allowed_boostset_cats) — Empirical data for the One with the Shield flagged case
+- `<repos>/MidsReborn/MidsReborn/Core/Base/Data_Classes/Power.cs` (2104-2127, 2348-2354, 492, 506) — Standard-enh validity (GetValidEnhancements non-SetO branch), SetO validity (GetValidEnhancementsFromSets), IsEnhancementValid, and Power.Enhancements/Power.SetTypes field decls
+- `<repos>/MidsReborn/MidsReborn/Core/Build.cs` (1026-1149, 608-654, 211-241) — EnhancementTest (SetO set-type gate + unique/superior/mutex/dup build-wide rules), CheckAndFixAllEnhancements (load-time strip via IsEnhancementValid), ValidateEnhancements
+- `<repos>/MidsReborn/MidsReborn/UI/Forms/MainWindow2.cs` (2737-2799, 2762, 2546-2618) — Actual placement path: I9Picker_EnhancementPicked gates placement through EnhancementTest; GetRepeatEnhancement/GetFirstValidSetEnh repeat-placement paths
+- `<repos>/MidsReborn/MidsReborn/UI/Controls/I9Picker.cs` (1645-1719) — Picker population: GetValidSetTypes=Power.SetTypes (which set tabs shown), GetValidEnhancements(type)=Power.GetValidEnhancements (which standard enh shown) — the presentation-layer filter
+- `<repos>/MidsReborn/MidsReborn/Core/Enums.cs` (1159-1166, 952-1004, 653-663) — eType (None/Normal/InventO/SpecialO/SetO), eSetType (Knockback=23 etc.), eEnhMutex (None/Stealth/ArchetypeA..F)
+- `<repos>/homecoming-build-companion/data/canonical/powers/scrapper_melee/dark_melee/soul_drain.json` (boosts_allowed, allowed_boostset_cats) — Empirical data for the Soul Drain flagged case
+- `<repos>/homecoming-build-companion/data/canonical/powers/scrapper_defense/shield_defense/one_with_the_shield.json` (boosts_allowed, allowed_boostset_cats) — Empirical data for the One with the Shield flagged case
 
 **Key constants / tables:**
 
