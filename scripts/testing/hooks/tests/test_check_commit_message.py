@@ -96,6 +96,19 @@ class TestValidateCommitMessage:
         is_valid, _reason = mod.validate_commit_message("Fix: resolve crash")
         assert not is_valid
 
+    @pytest.mark.parametrize("commit_type", ["feat", "fix", "docs", "chore", "refactor", "test", "ci", "build"])
+    def test_all_gitops_types_accepted(self, commit_type: str) -> None:
+        """Every type gitops.md permits is accepted, with and without scope."""
+        assert mod.validate_commit_message(f"{commit_type}: do the thing")[0]
+        assert mod.validate_commit_message(f"{commit_type}(scope): do the thing")[0]
+
+    @pytest.mark.parametrize("commit_type", ["feature", "wip", "hotfix", "perf", "style"])
+    def test_unlisted_type_rejected(self, commit_type: str) -> None:
+        """Types outside the gitops.md allowlist are rejected (local adaptation)."""
+        is_valid, reason = mod.validate_commit_message(f"{commit_type}: something")
+        assert not is_valid
+        assert "Allowed types:" in reason
+
 
 # ---------------------------------------------------------------------------
 # main (CLI entry point)

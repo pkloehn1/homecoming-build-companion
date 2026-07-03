@@ -22,7 +22,6 @@ from scripts.dev.bootstrap_venv import (
     _format_version_table,
     _hash_file,
     _is_executable_path,
-    _load_dev_requirements,
     _load_dev_requirements_with_specifiers,
     _load_requires_python,
     _normalize_package_name,
@@ -38,7 +37,6 @@ from scripts.dev.bootstrap_venv import (
     _state_file_path,
     _venv_python_candidates,
     _verify_bootstrap,
-    _verify_packages,
     build_desired_state,
     build_plan,
     collect_state,
@@ -211,7 +209,11 @@ class TestExtractRequirementName:
 
 
 class TestLoadDevRequirements:
-    """Test Load Dev Requirements."""
+    """Dev-dep loading edge cases, exercised through _load_dev_requirements_with_specifiers.
+
+    (The plain _load_dev_requirements helper was removed when _verify_bootstrap
+    consolidated onto the specifier-preserving loader.)
+    """
 
     def test_loads_from_pyproject(self, tmp_path: Path) -> None:
         """Test loads from pyproject."""
@@ -220,31 +222,27 @@ class TestLoadDevRequirements:
             '[project.optional-dependencies]\ndev = ["pytest>=8.0", "ruff>=0.8"]\n',
             encoding="utf-8",
         )
-        result = _load_dev_requirements(tmp_path)
-        assert "pytest" in result
-        assert "ruff" in result
-
-    def test_returns_empty_when_no_pyproject(self, tmp_path: Path) -> None:
-        """Test returns empty when no pyproject."""
-        assert _load_dev_requirements(tmp_path) == []
+        names = [name for name, _ in _load_dev_requirements_with_specifiers(tmp_path)]
+        assert "pytest" in names
+        assert "ruff" in names
 
     def test_returns_empty_when_no_project_key(self, tmp_path: Path) -> None:
         """Test returns empty when no project key."""
         pyproject = tmp_path / "pyproject.toml"
         pyproject.write_text("[tool.ruff]\n", encoding="utf-8")
-        assert _load_dev_requirements(tmp_path) == []
+        assert _load_dev_requirements_with_specifiers(tmp_path) == []
 
     def test_returns_empty_when_no_optional_deps(self, tmp_path: Path) -> None:
         """Test returns empty when no optional deps."""
         pyproject = tmp_path / "pyproject.toml"
         pyproject.write_text('[project]\nname = "foo"\n', encoding="utf-8")
-        assert _load_dev_requirements(tmp_path) == []
+        assert _load_dev_requirements_with_specifiers(tmp_path) == []
 
     def test_returns_empty_when_no_dev_key(self, tmp_path: Path) -> None:
         """Test returns empty when no dev key."""
         pyproject = tmp_path / "pyproject.toml"
         pyproject.write_text('[project.optional-dependencies]\ntest = ["pytest"]\n', encoding="utf-8")
-        assert _load_dev_requirements(tmp_path) == []
+        assert _load_dev_requirements_with_specifiers(tmp_path) == []
 
     def test_skips_non_string_entries(self, tmp_path: Path) -> None:
         """Test skips non string entries."""
@@ -261,8 +259,8 @@ class TestLoadDevRequirements:
             },
         }
         with patch("scripts.dev.bootstrap_venv.tomllib.loads", return_value=fake_data):
-            result = _load_dev_requirements(tmp_path)
-        assert result == ["pytest"]
+            result = _load_dev_requirements_with_specifiers(tmp_path)
+        assert result == [("pytest", ">=8.0")]
 
 
 class TestBuildDesiredState:
@@ -677,37 +675,6 @@ class TestReportGitSigning:
         assert "setup_git_signing" in output
 
 
-class TestVerifyPackages:
-    """Test Verify Packages."""
-
-    def test_returns_empty_for_no_requirements(self, tmp_path: Path) -> None:
-        """Test returns empty for no requirements."""
-        assert _verify_packages(tmp_path / "python", []) == []
-
-    def test_returns_empty_when_all_present(self, tmp_path: Path) -> None:
-        """Test returns empty when all present."""
-        with patch("scripts.dev.bootstrap_venv.subprocess.run") as mock_run:
-            mock_run.return_value = subprocess.CompletedProcess(args=[], returncode=0, stdout="", stderr="")
-            result = _verify_packages(tmp_path / "python", ["pytest"])
-            assert result == []
-
-    def test_returns_missing_packages(self, tmp_path: Path) -> None:
-        """Test returns missing packages."""
-        with patch("scripts.dev.bootstrap_venv.subprocess.run") as mock_run:
-            mock_run.return_value = subprocess.CompletedProcess(
-                args=[], returncode=1, stdout="pytest\nruff\n", stderr=""
-            )
-            result = _verify_packages(tmp_path / "python", ["pytest", "ruff"])
-            assert result == ["pytest", "ruff"]
-
-    def test_returns_all_when_no_stdout(self, tmp_path: Path) -> None:
-        """Test returns all when no stdout."""
-        with patch("scripts.dev.bootstrap_venv.subprocess.run") as mock_run:
-            mock_run.return_value = subprocess.CompletedProcess(args=[], returncode=1, stdout="", stderr="")
-            result = _verify_packages(tmp_path / "python", ["pytest"])
-            assert result == ["pytest"]
-
-
 class TestCheckPipVersion:
     """Test _check_pip_version warning logic."""
 
@@ -771,7 +738,6 @@ class TestVerifyBootstrap:
         pyproject = tmp_path / "pyproject.toml"
         pyproject.write_text('[project.optional-dependencies]\ndev = ["testpkg>=1.0.0"]\n')
         with (
-            patch("scripts.dev.bootstrap_venv._verify_packages", return_value=[]),
             patch("scripts.dev.bootstrap_venv._query_installed_versions", return_value={"testpkg": "9.9.9"}),
             patch("scripts.dev.bootstrap_venv._query_python_version", return_value="3.13.0"),
             patch("scripts.dev.bootstrap_venv.check_git_signing", return_value=(True, "ok")),
@@ -787,7 +753,6 @@ class TestVerifyBootstrap:
         pyproject = tmp_path / "pyproject.toml"
         pyproject.write_text('[project.optional-dependencies]\ndev = ["testpkg>=1.0.0"]\n')
         with (
-            patch("scripts.dev.bootstrap_venv._verify_packages", return_value=["testpkg"]),
             patch("scripts.dev.bootstrap_venv._query_installed_versions", return_value={"testpkg": None}),
             patch("scripts.dev.bootstrap_venv._query_python_version", return_value="3.13.0"),
             patch("scripts.dev.bootstrap_venv.check_git_signing", return_value=(True, "ok")),
@@ -1149,7 +1114,6 @@ def _patch_verify_bootstrap_deps(*, git_signing_detail: str = "ok") -> Any:
     from contextlib import ExitStack
 
     stack = ExitStack()
-    stack.enter_context(patch("scripts.dev.bootstrap_venv._verify_packages", return_value=[]))
     stack.enter_context(
         patch("scripts.dev.bootstrap_venv._query_installed_versions", return_value={"testpkg": "9.9.9"})
     )

@@ -125,15 +125,6 @@ def _load_dev_dep_strings(repo_root: Path) -> list[str]:
     return [entry for entry in dev_deps if isinstance(entry, str)]
 
 
-def _load_dev_requirements(repo_root: Path) -> list[str]:
-    names: list[str] = []
-    for entry in _load_dev_dep_strings(repo_root):
-        name = _extract_requirement_name(entry)
-        if name:
-            names.append(_normalize_package_name(name))
-    return sorted(set(names))
-
-
 def _extract_specifier(requirement: str) -> str:
     """Return the version specifier portion of a PEP 508 requirement string."""
     base = requirement.split(";", 1)[0].strip()
@@ -593,47 +584,15 @@ def _report_git_signing(signing_status: tuple[bool, str]) -> None:
     print("Run: python -m scripts.devops.setup_git_signing")
 
 
-def _verify_packages(venv_python: Path, requirements: list[str]) -> list[str]:
-    if not requirements:
-        return []
-    script = (
-        "import json, sys\n"
-        "from importlib import metadata\n"
-        "reqs = json.loads(sys.argv[1])\n"
-        "missing = []\n"
-        "for name in reqs:\n"
-        "    try:\n"
-        "        metadata.distribution(name)\n"
-        "    except metadata.PackageNotFoundError:\n"
-        "        missing.append(name)\n"
-        "if missing:\n"
-        "    print('\\n'.join(missing))\n"
-        "    sys.exit(1)\n"
-    )
-    proc = subprocess.run(
-        [str(venv_python), "-c", script, json.dumps(requirements)],
-        check=False,
-        capture_output=True,
-        text=True,
-    )
-    if proc.returncode == 0:
-        return []
-    stdout = (proc.stdout or "").strip()
-    if stdout:
-        return stdout.splitlines()
-    return requirements
-
-
 def _verify_bootstrap(*, repo_root: Path, platform: str) -> int:
     venv_python = _resolve_venv_python(repo_root, platform)
     if venv_python is None:
         print("[FAIL] Repo venv python not found.", file=sys.stderr)
         return EXIT_FAILED
-    requirements = _load_dev_requirements(repo_root)
-    if not requirements:
+    specs = _load_dev_requirements_with_specifiers(repo_root)
+    if not specs:
         print("[OK] No dev requirements found to verify.")
         return EXIT_OK
-    specs = _load_dev_requirements_with_specifiers(repo_root)
     installed = _query_installed_versions(venv_python, [name for name, _ in specs])
     table_rows: list[tuple[str, str | None, str]] = [
         (name, installed.get(name), specifier) for name, specifier in specs
@@ -644,7 +603,9 @@ def _verify_bootstrap(*, repo_root: Path, platform: str) -> int:
     health_checks = _build_health_checks(repo_root=repo_root, venv_python=venv_python)
     print(_format_health_summary(health_checks, use_color=_should_use_color()))
 
-    missing = _verify_packages(venv_python, requirements)
+    # The version query above already identifies missing packages; a query
+    # failure returns {} and therefore reports every package missing.
+    missing = [name for name, _ in specs if installed.get(name) is None]
     if missing:
         print("[FAIL] Missing dev dependencies in repo venv:", file=sys.stderr)
         for name in missing:
@@ -755,9 +716,11 @@ def run_bootstrap(
 
     state = collect_state(repo_root=repo_root, platform=platform, which=which)
     plan = build_plan(state)
-    signing_status = check_git_signing()
     if verify:
+        # --verify runs its own signing health check via _build_health_checks;
+        # checking here too would double the ssh-keygen smoke test.
         return _verify_bootstrap(repo_root=repo_root, platform=platform)
+    signing_status = check_git_signing()
     if dry_run:
         _print_dry_run(state, git_signing_status=signing_status)
         return EXIT_OK

@@ -18,7 +18,6 @@ import subprocess
 import sys
 from collections.abc import Callable, Mapping
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Any, Protocol
 
 
@@ -219,13 +218,6 @@ class SubprocessGhRunner:
                 print_gh_cli_error(err, max_chars=gh_diagnostics_max_chars())
             raise err
         return GhResult(stdout=result.stdout, stderr=result.stderr)
-
-
-def repo_root() -> Path:
-    """Repo root."""
-    from scripts.common.paths import repo_root as _repo_root
-
-    return _repo_root()
 
 
 def _strip_json_output(text: str) -> str:

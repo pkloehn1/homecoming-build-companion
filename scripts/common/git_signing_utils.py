@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
-import subprocess
 import sys
 from pathlib import Path
+
+from scripts.common.git_runner import run_git
 
 
 def is_windows(*, platform: str | None = None) -> bool:
@@ -14,12 +15,7 @@ def is_windows(*, platform: str | None = None) -> bool:
 
 def git_config_value(key: str) -> str | None:
     """Fetch a git config value or None."""
-    result = subprocess.run(
-        ["git", "config", "--get", key],
-        capture_output=True,
-        text=True,
-        check=False,
-    )
+    result = run_git(["config", "--get", key])
     return result.stdout.strip() if result.returncode == 0 else None
 
 

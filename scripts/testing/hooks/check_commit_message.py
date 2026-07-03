@@ -20,7 +20,11 @@ from pathlib import Path
 
 _DEPENDABOT_RE = re.compile(r"^Bump (the\b|[a-z])", re.IGNORECASE)
 _MERGE_RE = re.compile(r"^Merge ")
-_CONVENTIONAL_RE = re.compile(r"^[a-z]+(\([^)]+\))?: .+")
+# Local adaptation from the kloehnwars-homelab import: the type set is
+# restricted to the types .claude/rules/gitops.md permits, rather than any
+# lowercase word.
+_ALLOWED_TYPES = ("feat", "fix", "docs", "chore", "refactor", "test", "ci", "build")
+_CONVENTIONAL_RE = re.compile(rf"^({'|'.join(_ALLOWED_TYPES)})(\([^)]+\))?: .+")
 
 
 def validate_commit_message(message: str) -> tuple[bool, str]:
@@ -49,6 +53,7 @@ def validate_commit_message(message: str) -> tuple[bool, str]:
     return False, (
         f"Subject line does not follow conventional commit format: {subject!r}\n"
         "Expected: type(scope): summary  or  type: summary\n"
+        f"Allowed types: {', '.join(_ALLOWED_TYPES)}\n"
         "Examples: feat(ci): add auto-summary, fix: resolve crash, docs: update README"
     )
 

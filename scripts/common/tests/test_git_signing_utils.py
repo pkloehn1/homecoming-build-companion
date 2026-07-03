@@ -32,7 +32,7 @@ class TestGitConfigValue:
         mock_proc = MagicMock()
         mock_proc.returncode = 0
         mock_proc.stdout = "user@example.com\n"
-        with patch("scripts.common.git_signing_utils.subprocess.run", return_value=mock_proc):
+        with patch("scripts.common.git_signing_utils.run_git", return_value=mock_proc):
             result = git_config_value("user.email")
         assert result == "user@example.com"
 
@@ -41,7 +41,7 @@ class TestGitConfigValue:
         mock_proc = MagicMock()
         mock_proc.returncode = 1
         mock_proc.stdout = ""
-        with patch("scripts.common.git_signing_utils.subprocess.run", return_value=mock_proc):
+        with patch("scripts.common.git_signing_utils.run_git", return_value=mock_proc):
             result = git_config_value("user.signingkey")
         assert result is None
 
@@ -50,7 +50,7 @@ class TestGitConfigValue:
         mock_proc = MagicMock()
         mock_proc.returncode = 0
         mock_proc.stdout = "/home/user/.ssh/id_ed25519\n"
-        with patch("scripts.common.git_signing_utils.subprocess.run", return_value=mock_proc):
+        with patch("scripts.common.git_signing_utils.run_git", return_value=mock_proc):
             result = git_config_value("user.signingkey")
         assert result == "/home/user/.ssh/id_ed25519"
 

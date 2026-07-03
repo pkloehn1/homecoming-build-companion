@@ -6,8 +6,6 @@ import json
 from dataclasses import dataclass
 from typing import Any
 
-import pytest
-
 from scripts.github.gh_cli import GhResult
 
 # ---------------------------------------------------------------------------
@@ -67,74 +65,3 @@ def make_call(argv: list[str], stdout: Any = "") -> ExpectedCall:
 def make_runner(*calls: ExpectedCall) -> QueueRunner:
     """Build a :class:`QueueRunner` from positional expected calls."""
     return QueueRunner(list(calls))
-
-
-# ---------------------------------------------------------------------------
-# Smart stub runner (auto-responds based on endpoint pattern)
-# ---------------------------------------------------------------------------
-
-
-class _StubGhRunner:
-    def run(self, argv: list[str], *, input_text: str | None = None) -> GhResult:
-        """Run."""
-        _ = input_text
-        endpoint = _extract_endpoint(argv)
-        payload = _payload_for(endpoint, argv)
-        return GhResult(stdout=json.dumps(payload), stderr="")
-
-
-def _extract_endpoint(argv: list[str]) -> str:
-    if "--method" in argv:
-        method_index = argv.index("--method")
-        endpoint_index = method_index + 2
-        if endpoint_index < len(argv):
-            return argv[endpoint_index]
-        return ""
-    if len(argv) > 2:
-        return argv[2]
-    return ""
-
-
-def _payload_for(endpoint: str, argv: list[str]) -> object:
-    if endpoint == "/user":
-        return {"login": "testuser"}
-    if "/pulls/comments/" in endpoint:
-        return {
-            "node_id": "NODE123",
-            "pull_request_url": "https://api.github.com/repos/octo/widgets/pulls/45",
-        }
-    if "/pulls/" in endpoint and "/comments" in endpoint:
-        if "--method" in argv:
-            return {"id": 333, "node_id": "NODE333"}
-        return []
-    return {}
-
-
-@pytest.fixture
-def runner() -> _StubGhRunner:
-    """Runner."""
-    return _StubGhRunner()
-
-
-@pytest.fixture
-def repo() -> str:
-    """Repo."""
-    return "octo/widgets"
-
-
-@pytest.fixture
-def pr_number() -> int:
-    """Pr number."""
-    return 45
-
-
-@pytest.fixture
-def comment_id() -> int:
-    """Comment id."""
-    return 999
-
-
-@pytest.fixture
-def test_body() -> str:
-    """Test body."""
-    return "Test reply"

@@ -132,7 +132,7 @@ def _email_from_git_config() -> str | None:
         return None
     if not email_cfg:
         return None
-    if "@users.noreply.github.com" in email_cfg or "@" in email_cfg:
+    if "@" in email_cfg:
         return email_cfg
     return None
 
@@ -329,7 +329,7 @@ def _verify_git_config(config: Mapping[str, str | None]) -> bool:
 
 
 def _verify_signature_capability() -> None:
-    """Verify Git can attempt signature verification."""
+    """Verify Git can attempt signature verification (informational only)."""
     try:
         result = subprocess.run(
             ["git", "log", "--show-signature", "-n", "1"],
@@ -339,9 +339,12 @@ def _verify_signature_capability() -> None:
         )
         if "Good signature" in result.stdout or "No signature" in result.stdout:
             print("[OK] Git can verify signatures")
-    except Exception:
-        # Best-effort fallback when git/gh email lookup fails
-        pass
+        else:
+            print("[WARN] Could not confirm signature verification from git log output")
+    except OSError as exc:
+        # Informational check only: a missing/broken git must not fail setup,
+        # but say so instead of reporting nothing.
+        print(f"[WARN] Signature-capability check skipped: {exc}")
 
 
 def verify_setup(key_path: Path) -> bool:

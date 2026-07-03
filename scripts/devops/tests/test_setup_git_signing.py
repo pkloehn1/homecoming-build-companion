@@ -776,20 +776,22 @@ def test_verify_signature_capability_no_signature(capsys: pytest.CaptureFixture[
 
 
 def test_verify_signature_capability_other_output(capsys: pytest.CaptureFixture[str]) -> None:
-    """Test verify signature capability other output."""
+    """Unrecognized git log output produces an explicit warning, not silence."""
     fake_result = MagicMock()
     fake_result.stdout = "commit abc123\n"
 
     with patch("subprocess.run", return_value=fake_result):
         mod._verify_signature_capability()
 
-    assert capsys.readouterr().out == ""
+    assert "[WARN] Could not confirm signature verification" in capsys.readouterr().out
 
 
 def test_verify_signature_capability_exception(capsys: pytest.CaptureFixture[str]) -> None:
-    """Test verify signature capability exception."""
+    """A missing/broken git is reported as a skipped check, not swallowed silently."""
     with patch("subprocess.run", side_effect=OSError("git not found")):
         mod._verify_signature_capability()  # should not raise
+
+    assert "[WARN] Signature-capability check skipped: git not found" in capsys.readouterr().out
 
 
 # -- verify_setup --------------------------------------------------------------

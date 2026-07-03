@@ -106,11 +106,9 @@ def main() -> int:
     if is_configured:
         return 0
 
-    print("=" * 70)
-    print("ERROR: Git commit signing is not properly configured")
-    print("=" * 70)
-    print(f"\n{message}\n")
-    print("This repository requires all commits to be signed.")
+    # Machine-parseable diagnostic first (error-output.md), remediation after.
+    print(f".git/config:1:1: error: H-SIGN-001: git commit signing is not configured - {message}")
+    print("\nThis repository requires all commits to be signed.")
     print("\nTo configure Git commit signing (preferred):")
     print("  # If using the repo virtualenv")
     print("  python -m scripts.devops.setup_git_signing")
@@ -121,7 +119,6 @@ def main() -> int:
     print("  git config --global user.signingkey ~/.ssh/id_ed25519_signing.pub")
     print("  git config --global commit.gpgsign true")
     print("\nSee: docs/automation/runbooks/fix-unsigned-commits-in-pr.md")
-    print("=" * 70)
     return 1
 
 

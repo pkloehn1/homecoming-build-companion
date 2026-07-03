@@ -13,7 +13,7 @@ from unittest.mock import MagicMock, patch
 from scripts.dev.bootstrap_venv import (
     EXIT_OK,
     _check_pip_version,
-    _load_dev_requirements,
+    _load_dev_requirements_with_specifiers,
     run_bootstrap,
 )
 
@@ -24,7 +24,7 @@ class TestLoadDevRequirementsSkipsNamelessEntries:
             '[project]\nname = "x"\n[project.optional-dependencies]\ndev = ["pytest>=8.0.0", "==1.0"]\n',
             encoding="utf-8",
         )
-        assert _load_dev_requirements(tmp_path) == ["pytest"]
+        assert _load_dev_requirements_with_specifiers(tmp_path) == [("pytest", ">=8.0.0")]
 
 
 class TestCheckPipVersionShortOutput:

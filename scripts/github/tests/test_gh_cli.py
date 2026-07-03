@@ -25,7 +25,6 @@ from scripts.github.gh_cli import (
     gh_diagnostics_max_chars,
     parse_repo,
     print_gh_cli_error,
-    repo_root,
     run_json,
     run_text,
 )
@@ -395,18 +394,6 @@ def test_subprocess_gh_runner_error_with_diagnostics(monkeypatch: Any) -> None:
     runner = SubprocessGhRunner()
     with pytest.raises(GhCliError):
         runner.run(["gh", "api", "/fail"])
-
-
-# -- repo_root ----------------------------------------------------------------
-
-
-def test_repo_root_delegates_to_common_paths(monkeypatch: Any) -> None:
-    """Test repo root delegates to common paths."""
-    from pathlib import Path
-
-    sentinel = Path("/fake/repo/root")
-    monkeypatch.setattr("scripts.common.paths.repo_root", lambda: sentinel)
-    assert repo_root() == sentinel
 
 
 # -- active_pr_number ----------------------------------------------------------
