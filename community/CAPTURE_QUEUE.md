@@ -6,7 +6,7 @@ extension workflow](CAPTURE.md).
 After saving each markdown file, run:
 
 ```powershell
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\ingest-forum-capture.ps1" -Path <saved-md-file>
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\ingest-forum-capture.ps1" -Path <saved-md-file>
 ```
 
 That validates frontmatter, drops it into the right folder, and re-runs `regen-index.ps1`.
@@ -83,10 +83,10 @@ This one is special: it's an index of guides on the forum. Capture it, then walk
 Short version:
 
 ```powershell
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\generate-prompts.ps1"
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\generate-prompts.ps1"
 # Open inbox/PROMPTS.md, copy the block for URL N, paste in Claude for Chrome,
 # copy Claude's response, then:
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\capture.ps1" -Paste
 ```
 
 **Manual path** (if you'd rather hand-craft the prompt): in Chrome with the Claude extension, on the forum thread, give Claude this prompt:
@@ -123,7 +123,7 @@ Short version:
 Save the markdown locally. Then in PowerShell:
 
 ```powershell
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\ingest-forum-capture.ps1" -Path <local-md> -Target <one-of-target-paths-from-the-table>
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\ingest-forum-capture.ps1" -Path <local-md> -Target <one-of-target-paths-from-the-table>
 ```
 
 The script validates the frontmatter, copies the file to `community/<target>/<slug>.md`, and re-runs the index regenerator.

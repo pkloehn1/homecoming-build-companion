@@ -29,13 +29,13 @@ Out of scope:
 1. **Browse the forum/wiki page in Chrome.** You're already logged in if needed.
 2. **Open the Claude browser extension** alongside the page.
 3. **Ask Claude to extract the post** as a markdown file with the frontmatter format below. Be explicit about what to keep (substantive content) and what to skip (signatures, off-topic replies,
-   flames).
+    flames).
 4. **Save the markdown** to `community/<topic>/<short-slug>.md` — pick the topic folder by primary tag.
 5. **Re-run the index regenerator** so the new file shows up:
 
-   ```powershell
-   & "$env:USERPROFILE\repos\homecoming-build-companion\tools\regen-index.ps1"
-   ```
+    ```powershell
+    & "$env:USERPROFILE\repos\homecoming-build-companion\scripts\regen-index.ps1"
+    ```
 
 6. (If the post includes a build file or DataLink) **Save the build attachment** to `community/<topic>/attachments/<slug>.mxd` (or `.txt` for DataLink URLs / MBD chunks).
 
@@ -116,7 +116,7 @@ The `trust:` frontmatter drives how Claude weights the content when sources disa
 When community wisdom contradicts the canonical data:
 
 1. **Game data wins on numbers.** If a post says "Foot Stomp recharge is 18 sec" and `data/canonical/powers/.../foot_stomp.json` says 20 sec, the canonical wins. Set `contradicts_data:` and add a
-   note.
+    note.
 2. **Posts older than 2 years** should be re-checked against current data before relying on them. Tag age via `topic_tags: [aged]`.
 3. **Strategy claims** are weighted higher when they cite their methodology (parsing, Pylon test, formula derivation) or are referenced by multiple authors.
 4. **If a reputable post still disagrees with canonical data** after a check, the post may have caught a Mids data lag. Worth flagging in `data/diff/SUMMARY.md` for the user to investigate later.

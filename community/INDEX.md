@@ -1,6 +1,6 @@
 # Community Knowledge Index
 
-Auto-generated from frontmatter in community/**/*.md by `tools/regen-index.ps1`.
+Auto-generated from frontmatter in community/**/*.md by `scripts/regen-index.ps1`.
 Do not hand-edit — your changes will be overwritten.
 
 Last regenerated: 2026-04-29 20:14
@@ -33,7 +33,8 @@ Last regenerated: 2026-04-29 20:14
 
 ## io-enhancements
 
-- [Instant Improvements: A Cheat Sheet for IO Enhancements](mechanics/instant-improvements-io-cheat-sheet.md) — Gulbasaur, Erydanus, Machariel, Warmagon, Mageman, Zandishere, NihilXAOS, 2019-11-05 [multi-post: 6]
+- [Instant Improvements: A Cheat Sheet for IO Enhancements](mechanics/instant-improvements-io-cheat-sheet.md) — Gulbasaur, Erydanus, Machariel, Warmagon, Mageman, Zandishere, NihilXAOS, 2019-11-05
+  [multi-post: 6]
 
 ## io-sets
 
