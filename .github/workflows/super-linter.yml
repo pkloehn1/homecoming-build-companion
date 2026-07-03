@@ -44,15 +44,6 @@ jobs:
       - name: Load shared Super-Linter configuration
         run: grep -v '^#' .github/super-linter.env >> "$GITHUB_ENV"
 
-      # --- Spoke-specific: Ansible collection install for VALIDATE_ANSIBLE ---
-      - name: Install Ansible collections
-        run: |
-          pip install --quiet ansible-core
-          ansible-galaxy collection install -r automation/requirements.yml \
-            -p automation/collections --force
-        env:
-          ANSIBLE_COLLECTIONS_PATH: automation/collections
-
       - name: Super-Linter
         uses: super-linter/super-linter@v8
         env:
@@ -60,10 +51,9 @@ jobs:
           DEFAULT_BRANCH: origin/${{ github.event.repository.default_branch }}
           # --- Environment-specific overrides (not in shared .env) ---
           VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'workflow_dispatch' && fromJSON(github.event.inputs.full_scan) }}
-          FILTER_REGEX_EXCLUDE: '(.*/)?automation/collections/.*'
-          JSCPD_LINTER_RULES: /github/workspace/.github/linters/.jscpd.json
-          CHECKOV_SKIP_PATH: /tmp,/github/workspace/tmp,/github/workspace/automation/collections
-          ANSIBLE_COLLECTIONS_PATH: /github/workspace/automation/collections
+          # Verbatim game-data files must stay byte-identical to their
+          # MidsReborn/Homecoming sources - exempt from lint fixups.
+          FILTER_REGEX_EXCLUDE: '(.*/)?(samples/|src/coh_engine/tests/fixtures/).*'
           SAVE_SUPER_LINTER_SUMMARY: true
           ENABLE_GITHUB_ACTIONS_STEP_SUMMARY: true
 
