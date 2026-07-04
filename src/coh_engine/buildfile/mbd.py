@@ -5,9 +5,9 @@ and ``EnhancementDataConverter`` (``Core/BuildFile/EnhancementDataConverter.cs``
 
 Offsets, reproduced exactly (spec § data-and-build-formats, B.4 + gotchas):
 - Power ``Level`` and slot ``Level`` are stored **+1** and get **-1** on load, so
-  the model holds MidsReborn's internal 0-based level (character level = level + 1).
+    the model holds MidsReborn's internal 0-based level (character level = level + 1).
 - ``LastPower`` is assigned **raw** on ``.mbd`` load — no ``-1`` (CharacterBuildData.cs:284),
-  unlike the ``.mxd`` path.
+    unlike the ``.mxd`` path.
 - The top-level character ``Level`` is a raw integer, no offset.
 
 An ``Enhancement`` object carries five keys; ``EnhancementDataConverter`` also

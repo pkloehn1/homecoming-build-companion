@@ -1,5 +1,6 @@
 """Tests for the .mbd (modern JSON) build reader (CP2)."""
 
+import json
 from pathlib import Path
 
 import pytest
@@ -52,22 +53,36 @@ def test_power_and_slot_level_minus_one_offset() -> None:
 
 
 def test_empty_slot_enhancement_is_none(tmp_path: Path) -> None:
+    data = {
+        "BuiltWith": {
+            "App": "Mids Reborn",
+            "Version": "3.8.6.0",
+            "Database": "Homecoming",
+            "DatabaseVersion": "2026.1.1242",
+        },
+        "Level": "50",
+        "Class": "Class_Blaster",
+        "Origin": "Magic",
+        "Alignment": "Hero",
+        "Name": "T",
+        "Comment": "",
+        "PowerSets": ["A"],
+        "LastPower": 0,
+        "PowerEntries": [
+            {
+                "PowerName": "A.B.C",
+                "Level": 2,
+                "StatInclude": True,
+                "ProcInclude": False,
+                "VariableValue": 0,
+                "InherentSlotsUsed": 0,
+                "SubPowerEntries": [],
+                "SlotEntries": [{"Level": 2, "IsInherent": False, "Enhancement": None, "FlippedEnhancement": None}],
+            }
+        ],
+    }
     mbd = tmp_path / "empty.mbd"
-    mbd.write_text(
-        """
-        {
-          "BuiltWith": {"App":"Mids Reborn","Version":"3.8.6.0","Database":"Homecoming","DatabaseVersion":"2026.1.1242"},
-          "Level":"50","Class":"Class_Blaster","Origin":"Magic","Alignment":"Hero",
-          "Name":"T","Comment":"","PowerSets":["A"],"LastPower":0,
-          "PowerEntries":[
-            {"PowerName":"A.B.C","Level":2,"StatInclude":true,"ProcInclude":false,
-             "VariableValue":0,"InherentSlotsUsed":0,"SubPowerEntries":[],
-             "SlotEntries":[{"Level":2,"IsInherent":false,"Enhancement":null,"FlippedEnhancement":null}]}
-          ]
-        }
-        """,
-        encoding="utf-8",
-    )
+    mbd.write_text(json.dumps(data), encoding="utf-8")
     build = load_mbd(mbd)
     slot = build.power_entries[0].slot_entries[0]
     assert slot.enhancement is None

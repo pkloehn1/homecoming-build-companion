@@ -3,11 +3,11 @@
 Covers the format's outer envelope (spec § data-and-build-formats, B.1-B.2):
 
 - **Share wrapper** (``BuildManager.cs:320-351``): a ``|MxDz;u;c;e;HEX;|`` header line
-  followed by ``BreakString``-wrapped payload lines. Exactly 5 ``;``-items; integer
-  sizes; payload is every line after the header joined with ``|`` bookends stripped.
+    followed by ``BreakString``-wrapped payload lines. Exactly 5 ``;``-items; integer
+    sizes; payload is every line after the header joined with ``|`` bookends stripped.
 - **Payload decode** (``BuildManager.cs:364-382`` + ``ModernZlib.cs``): validate hex,
-  decode to bytes, reject if byte length != the header compressed size, then zlib
-  (RFC1950, ``Z_BEST_COMPRESSION``) inflate and resize to the uncompressed size.
+    decode to bytes, reject if byte length != the header compressed size, then zlib
+    (RFC1950, ``Z_BEST_COMPRESSION``) inflate and resize to the uncompressed size.
 
 The semantic parse of the decompressed buffer (``MxDReadSaveData`` -> power/slot
 records, StaticIndex resolution, Homecoming migrations) is :func:`read_mxd_build`,

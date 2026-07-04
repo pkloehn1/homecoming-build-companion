@@ -6,8 +6,8 @@ harness:
 
 - ``power_static_index.json`` — ``StaticIndex`` -> power ``FullName``.
 - ``enhancements.json`` — ``StaticIndex`` -> ``{UID, TypeID}``. The ``TypeID`` is
-  essential: ``ReadSlotData`` branches on it to know how many bytes follow each
-  enhancement reference.
+    essential: ``ReadSlotData`` branches on it to know how many bytes follow each
+    enhancement reference.
 
 Entries with a negative ``StaticIndex`` are dropped: ``-1`` is the .mxd sentinel
 for an empty reference, so it must resolve to "not found".

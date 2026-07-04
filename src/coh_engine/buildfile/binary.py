@@ -4,7 +4,7 @@ All MidsReborn binary files use little-endian .NET ``BinaryReader``/``BinaryWrit
 (spec § data-and-build-formats, "Primitive encoding conventions"):
 
 - ``Int32`` = 4 bytes LE signed; ``Single`` = 4 bytes IEEE-754 LE; ``Int64`` = 8 LE;
-  ``Boolean`` = 1 byte; ``SByte`` = 1 byte signed.
+    ``Boolean`` = 1 byte; ``SByte`` = 1 byte signed.
 - ``String`` = 7-bit-encoded (LEB128) unsigned byte length, then that many UTF-8 bytes.
 - Array counts are written as ``length - 1`` and read back as ``read_int32() + 1``.
 

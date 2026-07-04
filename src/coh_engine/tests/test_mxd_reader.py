@@ -6,6 +6,7 @@ per-TypeID slot paths that the sample builds do not all hit.
 """
 
 import struct
+from typing import Self
 
 import pytest
 
@@ -35,27 +36,27 @@ class _Buf:
     def __init__(self) -> None:
         self.b = bytearray()
 
-    def raw(self, data: bytes) -> _Buf:
+    def raw(self, data: bytes) -> Self:
         self.b += data
         return self
 
-    def i32(self, v: int) -> _Buf:
+    def i32(self, v: int) -> Self:
         self.b += struct.pack("<i", v)
         return self
 
-    def f32(self, v: float) -> _Buf:
+    def f32(self, v: float) -> Self:
         self.b += struct.pack("<f", v)
         return self
 
-    def boolean(self, v: bool) -> _Buf:
+    def boolean(self, v: bool) -> Self:
         self.b += b"\x01" if v else b"\x00"
         return self
 
-    def sbyte(self, v: int) -> _Buf:
+    def sbyte(self, v: int) -> Self:
         self.b += struct.pack("<b", v)
         return self
 
-    def string(self, s: str) -> _Buf:
+    def string(self, s: str) -> Self:
         raw = s.encode("utf-8")
         n = len(raw)
         while True:

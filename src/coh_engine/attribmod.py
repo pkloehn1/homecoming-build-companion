@@ -7,7 +7,7 @@ Cells are C# ``float`` (single precision) and are quantized to f32 on load.
 Mirrors:
 - ``Modifiers.ModifierTable`` (``Core/Modifiers.cs:124-153``) — ``{Table, BaseIndex, ID}``.
 - ``DatabaseAPI.GetModifier(iClass, iTable, iLevel)`` (``Core/DatabaseAPI.cs:2632-2647``)
-  — the private bounds-checked lookup, reproduced in :func:`get_modifier`.
+    — the private bounds-checked lookup, reproduced in :func:`get_modifier`.
 - ``DatabaseAPI.NidFromUidAttribMod`` (``Core/DatabaseAPI.cs:98-119``) — name -> table index.
 
 Every out-of-range condition returns ``0.0`` exactly as the C# does. The class
