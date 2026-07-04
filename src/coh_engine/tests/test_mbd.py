@@ -8,12 +8,15 @@ from coh_engine.buildfile.mbd import Build, load_mbd, parse_mbd
 
 REPO = Path(__file__).resolve().parents[3]
 SAMPLES = REPO / "samples" / "builds"
-DARK_SHIELD = SAMPLES / "Scrapper - Dark-Shield.mbd"
+# samples/builds is split into community/ and operator-builds/ subfolders.
+DARK_SHIELD = SAMPLES / "community" / "Scrapper - Dark-Shield.mbd"
 
 
 def test_loads_all_sample_builds() -> None:
-    files = sorted(SAMPLES.glob("*.mbd"))
-    assert len(files) == 6
+    # Recursively discover every .mbd under samples/builds (community/,
+    # operator-builds/, and any future subfolders); each must parse.
+    files = sorted(SAMPLES.rglob("*.mbd"))
+    assert files, "no sample .mbd builds found"
     for f in files:
         build = load_mbd(f)
         assert isinstance(build, Build)

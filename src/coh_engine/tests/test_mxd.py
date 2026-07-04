@@ -64,6 +64,13 @@ def test_decode_share_block_needs_payload_line() -> None:
         decode_share_block("|MxDz;100;40;80;HEX;|")
 
 
+def test_decode_share_block_stops_at_trailing_banner() -> None:
+    # A pipes-only separator line is skipped; payload collection then halts at the
+    # trailing "|----|" banner rather than treating its dashes as payload.
+    block = decode_share_block("|MxDz;10;4;8;HEX;|\r\n||\r\n|DEADBEEF|\r\n|--------|")
+    assert block.payload == "DEADBEEF"
+
+
 def test_hex_decode_rejects_non_hex() -> None:
     with pytest.raises(ValueError, match="not valid hex"):
         hex_decode("XYZ123")
@@ -90,3 +97,29 @@ def test_decode_mxd_rejects_bad_zlib() -> None:
     bad = f"|MxDz;10;{len(junk)};{len(encoded)};HEX;|\r\n" + _break_string(encoded)
     with pytest.raises(ValueError, match="zlib inflate failed"):
         decode_mxd(bad)
+
+
+def test_classify_no_header_and_not_base64() -> None:
+    assert classify("|----|\r\n|garbage line with spaces|") is None
+
+
+def test_decode_share_block_no_header_raises() -> None:
+    with pytest.raises(ValueError, match=r"no .* header line found"):
+        decode_share_block("|----|\r\n|AABBCC|")
+
+
+def test_read_mxd_build_missing_magic_raises() -> None:
+    from coh_engine.buildfile.mxd import read_mxd_build
+
+    with pytest.raises(ValueError, match="magic number"):
+        read_mxd_build(b"\x00" * 8, {}, {})
+
+
+def test_read_mxd_build_newer_version_raises() -> None:
+    import struct
+
+    from coh_engine.buildfile.mxd import _MAGIC, read_mxd_build
+
+    buf = _MAGIC + struct.pack("<f", 9.99)
+    with pytest.raises(ValueError, match="newer version"):
+        read_mxd_build(buf, {}, {})

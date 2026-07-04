@@ -1,0 +1,9417 @@
+[
+  {
+    "Nid": 0,
+    "StaticIndex": 0,
+    "UID": "Magic_Accuracy",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 1,
+    "StaticIndex": 1,
+    "UID": "Magic_Interrupt",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 2,
+    "StaticIndex": 2,
+    "UID": "Magic_Confuse",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 3,
+    "StaticIndex": 3,
+    "UID": "Magic_Damage",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 4,
+    "StaticIndex": 4,
+    "UID": "Magic_Defense_Buff",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 5,
+    "StaticIndex": 5,
+    "UID": "Magic_Defense_DeBuff",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 6,
+    "StaticIndex": 6,
+    "UID": "Magic_Recovery",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 7,
+    "StaticIndex": 7,
+    "UID": "Magic_Endurance_Discount",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 8,
+    "StaticIndex": 8,
+    "UID": "Magic_Fear",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 9,
+    "StaticIndex": 9,
+    "UID": "Magic_Fly",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 10,
+    "StaticIndex": 10,
+    "UID": "Magic_Heal",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 11,
+    "StaticIndex": 11,
+    "UID": "Magic_Hold",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 12,
+    "StaticIndex": 12,
+    "UID": "Magic_Immobilize",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 13,
+    "StaticIndex": 13,
+    "UID": "Magic_Intangible",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 14,
+    "StaticIndex": 14,
+    "UID": "Magic_Jump",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 15,
+    "StaticIndex": 15,
+    "UID": "Magic_Knockback",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 16,
+    "StaticIndex": 16,
+    "UID": "Magic_Range",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 17,
+    "StaticIndex": 17,
+    "UID": "Magic_Recharge",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 18,
+    "StaticIndex": 18,
+    "UID": "Magic_Res_Damage",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 19,
+    "StaticIndex": 19,
+    "UID": "Magic_Run",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 20,
+    "StaticIndex": 20,
+    "UID": "Magic_Sleep",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 21,
+    "StaticIndex": 21,
+    "UID": "Magic_Snare",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 22,
+    "StaticIndex": 22,
+    "UID": "Magic_Stun",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 23,
+    "StaticIndex": 23,
+    "UID": "Magic_Taunt",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 24,
+    "StaticIndex": 24,
+    "UID": "Magic_ToHit_Buff",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 25,
+    "StaticIndex": 25,
+    "UID": "Magic_ToHit_DeBuff",
+    "TypeId": 1,
+    "TypeName": "Normal"
+  },
+  {
+    "Nid": 26,
+    "StaticIndex": 26,
+    "UID": "Crafted_Accuracy",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 27,
+    "StaticIndex": 27,
+    "UID": "Crafted_Interrupt",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 28,
+    "StaticIndex": 28,
+    "UID": "Crafted_Confuse",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 29,
+    "StaticIndex": 29,
+    "UID": "Crafted_Damage",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 30,
+    "StaticIndex": 30,
+    "UID": "Crafted_Defense_Buff",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 31,
+    "StaticIndex": 31,
+    "UID": "Crafted_Defense_DeBuff",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 32,
+    "StaticIndex": 32,
+    "UID": "Crafted_Recovery",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 33,
+    "StaticIndex": 33,
+    "UID": "Crafted_Endurance_Discount",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 34,
+    "StaticIndex": 34,
+    "UID": "Crafted_Fear",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 35,
+    "StaticIndex": 35,
+    "UID": "Crafted_Fly",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 36,
+    "StaticIndex": 36,
+    "UID": "Crafted_Heal",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 37,
+    "StaticIndex": 37,
+    "UID": "Crafted_Hold",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 38,
+    "StaticIndex": 38,
+    "UID": "Crafted_Immobilize",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 39,
+    "StaticIndex": 39,
+    "UID": "Crafted_Intangible",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 40,
+    "StaticIndex": 40,
+    "UID": "Crafted_Jump",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 41,
+    "StaticIndex": 41,
+    "UID": "Crafted_Knockback",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 42,
+    "StaticIndex": 42,
+    "UID": "Crafted_Range",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 43,
+    "StaticIndex": 43,
+    "UID": "Crafted_Recharge",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 44,
+    "StaticIndex": 44,
+    "UID": "Crafted_Res_Damage",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 45,
+    "StaticIndex": 45,
+    "UID": "Crafted_Run",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 46,
+    "StaticIndex": 46,
+    "UID": "Crafted_Sleep",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 47,
+    "StaticIndex": 47,
+    "UID": "Crafted_Snare",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 48,
+    "StaticIndex": 48,
+    "UID": "Crafted_Stun",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 49,
+    "StaticIndex": 49,
+    "UID": "Crafted_Taunt",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 50,
+    "StaticIndex": 50,
+    "UID": "Crafted_ToHit_Buff",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 51,
+    "StaticIndex": 51,
+    "UID": "Crafted_ToHit_DeBuff",
+    "TypeId": 2,
+    "TypeName": "InventO"
+  },
+  {
+    "Nid": 52,
+    "StaticIndex": 52,
+    "UID": "Hamidon_Damage_Range",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 53,
+    "StaticIndex": 53,
+    "UID": "Hamidon_Buff_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 54,
+    "StaticIndex": 54,
+    "UID": "Hamidon_Accuracy_Mez",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 55,
+    "StaticIndex": 55,
+    "UID": "Hamidon_DeBuff_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 56,
+    "StaticIndex": 56,
+    "UID": "Hamidon_Heal_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 57,
+    "StaticIndex": 57,
+    "UID": "Hamidon_DeBuff_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 58,
+    "StaticIndex": 58,
+    "UID": "Hamidon_Buff_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 59,
+    "StaticIndex": 59,
+    "UID": "Hamidon_Travel_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 60,
+    "StaticIndex": 60,
+    "UID": "Hamidon_Damage_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 61,
+    "StaticIndex": 61,
+    "UID": "Hamidon_Damage_Mez",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 62,
+    "StaticIndex": 62,
+    "UID": "Hamidon_Res_Damage_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 63,
+    "StaticIndex": 63,
+    "UID": "Crafted_Bonesnap_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 64,
+    "StaticIndex": 64,
+    "UID": "Crafted_Bonesnap_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 65,
+    "StaticIndex": 65,
+    "UID": "Crafted_Bonesnap_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 66,
+    "StaticIndex": 66,
+    "UID": "Crafted_Pulverizing_Fisticuffs_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 67,
+    "StaticIndex": 67,
+    "UID": "Crafted_Pulverizing_Fisticuffs_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 68,
+    "StaticIndex": 68,
+    "UID": "Crafted_Pulverizing_Fisticuffs_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 69,
+    "StaticIndex": 69,
+    "UID": "Crafted_Bruising_Blow_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 70,
+    "StaticIndex": 70,
+    "UID": "Crafted_Bruising_Blow_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 71,
+    "StaticIndex": 71,
+    "UID": "Crafted_Bruising_Blow_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 72,
+    "StaticIndex": 72,
+    "UID": "Crafted_Pounding_Slugfest_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 73,
+    "StaticIndex": 73,
+    "UID": "Crafted_Pounding_Slugfest_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 74,
+    "StaticIndex": 74,
+    "UID": "Crafted_Pounding_Slugfest_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 75,
+    "StaticIndex": 75,
+    "UID": "Crafted_Pounding_Slugfest_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 76,
+    "StaticIndex": 76,
+    "UID": "Crafted_Smashing_Haymaker_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 77,
+    "StaticIndex": 77,
+    "UID": "Crafted_Smashing_Haymaker_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 78,
+    "StaticIndex": 78,
+    "UID": "Crafted_Smashing_Haymaker_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 79,
+    "StaticIndex": 79,
+    "UID": "Crafted_Smashing_Haymaker_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 80,
+    "StaticIndex": 80,
+    "UID": "Crafted_Kinetic_Combat_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 81,
+    "StaticIndex": 81,
+    "UID": "Crafted_Kinetic_Combat_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 82,
+    "StaticIndex": 82,
+    "UID": "Crafted_Kinetic_Combat_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 83,
+    "StaticIndex": 83,
+    "UID": "Crafted_Kinetic_Combat_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 84,
+    "StaticIndex": 84,
+    "UID": "Crafted_Kinetic_Combat_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 85,
+    "StaticIndex": 85,
+    "UID": "Crafted_Focused_Smite_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 86,
+    "StaticIndex": 86,
+    "UID": "Crafted_Focused_Smite_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 87,
+    "StaticIndex": 87,
+    "UID": "Crafted_Focused_Smite_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 88,
+    "StaticIndex": 88,
+    "UID": "Crafted_Focused_Smite_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 89,
+    "StaticIndex": 89,
+    "UID": "Crafted_Focused_Smite_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 90,
+    "StaticIndex": 90,
+    "UID": "Crafted_Touch_of_Death_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 91,
+    "StaticIndex": 91,
+    "UID": "Crafted_Touch_of_Death_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 92,
+    "StaticIndex": 92,
+    "UID": "Crafted_Touch_of_Death_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 93,
+    "StaticIndex": 93,
+    "UID": "Crafted_Touch_of_Death_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 94,
+    "StaticIndex": 94,
+    "UID": "Crafted_Touch_of_Death_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 95,
+    "StaticIndex": 95,
+    "UID": "Crafted_Touch_of_Death_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 96,
+    "StaticIndex": 96,
+    "UID": "Crafted_Crushing_Impact_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 97,
+    "StaticIndex": 97,
+    "UID": "Crafted_Crushing_Impact_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 98,
+    "StaticIndex": 98,
+    "UID": "Crafted_Crushing_Impact_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 99,
+    "StaticIndex": 99,
+    "UID": "Crafted_Crushing_Impact_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 100,
+    "StaticIndex": 100,
+    "UID": "Crafted_Crushing_Impact_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 101,
+    "StaticIndex": 101,
+    "UID": "Crafted_Crushing_Impact_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 102,
+    "StaticIndex": 102,
+    "UID": "Crafted_Makos_Bite_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 103,
+    "StaticIndex": 103,
+    "UID": "Crafted_Makos_Bite_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 104,
+    "StaticIndex": 104,
+    "UID": "Crafted_Makos_Bite_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 105,
+    "StaticIndex": 105,
+    "UID": "Crafted_Makos_Bite_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 106,
+    "StaticIndex": 106,
+    "UID": "Crafted_Makos_Bite_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 107,
+    "StaticIndex": 107,
+    "UID": "Crafted_Makos_Bite_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 108,
+    "StaticIndex": 108,
+    "UID": "Crafted_Cleaving_Blow_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 109,
+    "StaticIndex": 109,
+    "UID": "Crafted_Cleaving_Blow_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 110,
+    "StaticIndex": 110,
+    "UID": "Crafted_Cleaving_Blow_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 111,
+    "StaticIndex": 111,
+    "UID": "Crafted_Cleaving_Blow_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 112,
+    "StaticIndex": 112,
+    "UID": "Crafted_Multi_Strike_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 113,
+    "StaticIndex": 113,
+    "UID": "Crafted_Multi_Strike_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 114,
+    "StaticIndex": 114,
+    "UID": "Crafted_Multi_Strike_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 115,
+    "StaticIndex": 115,
+    "UID": "Crafted_Multi_Strike_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 116,
+    "StaticIndex": 116,
+    "UID": "Crafted_Multi_Strike_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 117,
+    "StaticIndex": 117,
+    "UID": "Crafted_Multi_Strike_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 118,
+    "StaticIndex": 118,
+    "UID": "Crafted_Sciroccos_Dervish_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 119,
+    "StaticIndex": 119,
+    "UID": "Crafted_Sciroccos_Dervish_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 120,
+    "StaticIndex": 120,
+    "UID": "Crafted_Sciroccos_Dervish_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 121,
+    "StaticIndex": 121,
+    "UID": "Crafted_Sciroccos_Dervish_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 122,
+    "StaticIndex": 122,
+    "UID": "Crafted_Sciroccos_Dervish_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 123,
+    "StaticIndex": 123,
+    "UID": "Crafted_Sciroccos_Dervish_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 124,
+    "StaticIndex": 124,
+    "UID": "Crafted_Far_Strike_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 125,
+    "StaticIndex": 125,
+    "UID": "Crafted_Far_Strike_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 126,
+    "StaticIndex": 126,
+    "UID": "Crafted_Far_Strike_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 127,
+    "StaticIndex": 127,
+    "UID": "Crafted_Salvo_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 128,
+    "StaticIndex": 128,
+    "UID": "Crafted_Salvo_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 129,
+    "StaticIndex": 129,
+    "UID": "Crafted_Salvo_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 130,
+    "StaticIndex": 130,
+    "UID": "Crafted_Volley_Fire_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 131,
+    "StaticIndex": 131,
+    "UID": "Crafted_Volley_Fire_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 132,
+    "StaticIndex": 132,
+    "UID": "Crafted_Volley_Fire_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 133,
+    "StaticIndex": 133,
+    "UID": "Crafted_Tempest_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 134,
+    "StaticIndex": 134,
+    "UID": "Crafted_Tempest_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 135,
+    "StaticIndex": 135,
+    "UID": "Crafted_Tempest_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 136,
+    "StaticIndex": 136,
+    "UID": "Crafted_Tempest_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 137,
+    "StaticIndex": 137,
+    "UID": "Crafted_Maelstroms_Fury_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 138,
+    "StaticIndex": 138,
+    "UID": "Crafted_Maelstroms_Fury_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 139,
+    "StaticIndex": 139,
+    "UID": "Crafted_Maelstroms_Fury_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 140,
+    "StaticIndex": 140,
+    "UID": "Crafted_Maelstroms_Fury_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 141,
+    "StaticIndex": 141,
+    "UID": "Crafted_Entropic_Chaos_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 142,
+    "StaticIndex": 142,
+    "UID": "Crafted_Entropic_Chaos_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 143,
+    "StaticIndex": 143,
+    "UID": "Crafted_Entropic_Chaos_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 144,
+    "StaticIndex": 144,
+    "UID": "Crafted_Entropic_Chaos_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 145,
+    "StaticIndex": 145,
+    "UID": "Crafted_Entropic_Chaos_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 146,
+    "StaticIndex": 146,
+    "UID": "Crafted_Ruin_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 147,
+    "StaticIndex": 147,
+    "UID": "Crafted_Ruin_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 148,
+    "StaticIndex": 148,
+    "UID": "Crafted_Ruin_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 149,
+    "StaticIndex": 149,
+    "UID": "Crafted_Ruin_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 150,
+    "StaticIndex": 150,
+    "UID": "Crafted_Ruin_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 151,
+    "StaticIndex": 151,
+    "UID": "Crafted_Decimation_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 152,
+    "StaticIndex": 152,
+    "UID": "Crafted_Decimation_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 153,
+    "StaticIndex": 153,
+    "UID": "Crafted_Decimation_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 154,
+    "StaticIndex": 154,
+    "UID": "Crafted_Decimation_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 155,
+    "StaticIndex": 155,
+    "UID": "Crafted_Decimation_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 156,
+    "StaticIndex": 156,
+    "UID": "Crafted_Decimation_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 157,
+    "StaticIndex": 157,
+    "UID": "Crafted_Thunderstrike_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 158,
+    "StaticIndex": 158,
+    "UID": "Crafted_Thunderstrike_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 159,
+    "StaticIndex": 159,
+    "UID": "Crafted_Thunderstrike_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 160,
+    "StaticIndex": 160,
+    "UID": "Crafted_Thunderstrike_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 161,
+    "StaticIndex": 161,
+    "UID": "Crafted_Thunderstrike_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 162,
+    "StaticIndex": 162,
+    "UID": "Crafted_Thunderstrike_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 163,
+    "StaticIndex": 163,
+    "UID": "Crafted_Devastation_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 164,
+    "StaticIndex": 164,
+    "UID": "Crafted_Devastation_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 165,
+    "StaticIndex": 165,
+    "UID": "Crafted_Devastation_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 166,
+    "StaticIndex": 166,
+    "UID": "Crafted_Devastation_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 167,
+    "StaticIndex": 167,
+    "UID": "Crafted_Devastation_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 168,
+    "StaticIndex": 168,
+    "UID": "Crafted_Devastation_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 169,
+    "StaticIndex": 169,
+    "UID": "Crafted_Air_Burst_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 170,
+    "StaticIndex": 170,
+    "UID": "Crafted_Air_Burst_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 171,
+    "StaticIndex": 171,
+    "UID": "Crafted_Air_Burst_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 172,
+    "StaticIndex": 172,
+    "UID": "Crafted_Air_Burst_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 173,
+    "StaticIndex": 173,
+    "UID": "Crafted_Detonation_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 174,
+    "StaticIndex": 174,
+    "UID": "Crafted_Detonation_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 175,
+    "StaticIndex": 175,
+    "UID": "Crafted_Detonation_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 176,
+    "StaticIndex": 176,
+    "UID": "Crafted_Detonation_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 177,
+    "StaticIndex": 177,
+    "UID": "Crafted_Detonation_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 178,
+    "StaticIndex": 178,
+    "UID": "Crafted_Detonation_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 179,
+    "StaticIndex": 179,
+    "UID": "Crafted_Positrons_Blast_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 180,
+    "StaticIndex": 180,
+    "UID": "Crafted_Positrons_Blast_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 181,
+    "StaticIndex": 181,
+    "UID": "Crafted_Positrons_Blast_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 182,
+    "StaticIndex": 182,
+    "UID": "Crafted_Positrons_Blast_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 183,
+    "StaticIndex": 183,
+    "UID": "Crafted_Positrons_Blast_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 184,
+    "StaticIndex": 184,
+    "UID": "Crafted_Positrons_Blast_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 185,
+    "StaticIndex": 185,
+    "UID": "Crafted_Exploit_Weakness_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 186,
+    "StaticIndex": 186,
+    "UID": "Crafted_Exploit_Weakness_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 187,
+    "StaticIndex": 187,
+    "UID": "Crafted_Exploit_Weakness_c",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 188,
+    "StaticIndex": 188,
+    "UID": "Crafted_Exploit_Weakness_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 189,
+    "StaticIndex": 189,
+    "UID": "Crafted_Calibrated_Accuracy_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 190,
+    "StaticIndex": 190,
+    "UID": "Crafted_Calibrated_Accuracy_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 191,
+    "StaticIndex": 191,
+    "UID": "Crafted_Calibrated_Accuracy_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 192,
+    "StaticIndex": 192,
+    "UID": "Crafted_Calibrated_Accuracy_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 193,
+    "StaticIndex": 193,
+    "UID": "Crafted_Calibrated_Accuracy_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 194,
+    "StaticIndex": 194,
+    "UID": "Crafted_Calibrated_Accuracy_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 195,
+    "StaticIndex": 195,
+    "UID": "Crafted_Executioners_Contract_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 196,
+    "StaticIndex": 196,
+    "UID": "Crafted_Executioners_Contract_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 197,
+    "StaticIndex": 197,
+    "UID": "Crafted_Executioners_Contract_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 198,
+    "StaticIndex": 198,
+    "UID": "Crafted_Executioners_Contract_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 199,
+    "StaticIndex": 199,
+    "UID": "Crafted_Executioners_Contract_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 200,
+    "StaticIndex": 200,
+    "UID": "Crafted_Executioners_Contract_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 201,
+    "StaticIndex": 201,
+    "UID": "Crafted_Extreme_Measures_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 202,
+    "StaticIndex": 202,
+    "UID": "Crafted_Extreme_Measures_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 203,
+    "StaticIndex": 203,
+    "UID": "Crafted_Extreme_Measures_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 204,
+    "StaticIndex": 204,
+    "UID": "Crafted_Extreme_Measures_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 205,
+    "StaticIndex": 205,
+    "UID": "Crafted_Extreme_Measures_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 206,
+    "StaticIndex": 206,
+    "UID": "Crafted_Extreme_Measures_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 207,
+    "StaticIndex": 207,
+    "UID": "Crafted_Sting_of_the_Manticore_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 208,
+    "StaticIndex": 208,
+    "UID": "Crafted_Sting_of_the_Manticore_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 209,
+    "StaticIndex": 209,
+    "UID": "Crafted_Sting_of_the_Manticore_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 210,
+    "StaticIndex": 210,
+    "UID": "Crafted_Sting_of_the_Manticore_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 211,
+    "StaticIndex": 211,
+    "UID": "Crafted_Sting_of_the_Manticore_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 212,
+    "StaticIndex": 212,
+    "UID": "Crafted_Sting_of_the_Manticore_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 213,
+    "StaticIndex": 213,
+    "UID": "Crafted_Unquestioning_Loyalty_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 214,
+    "StaticIndex": 214,
+    "UID": "Crafted_Unquestioning_Loyalty_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 215,
+    "StaticIndex": 215,
+    "UID": "Crafted_Unquestioning_Loyalty_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 216,
+    "StaticIndex": 216,
+    "UID": "Crafted_Unquestioning_Loyalty_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 217,
+    "StaticIndex": 217,
+    "UID": "Crafted_Commanding_Presence_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 218,
+    "StaticIndex": 218,
+    "UID": "Crafted_Commanding_Presence_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 219,
+    "StaticIndex": 219,
+    "UID": "Crafted_Commanding_Presence_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 220,
+    "StaticIndex": 220,
+    "UID": "Crafted_Commanding_Presence_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 221,
+    "StaticIndex": 221,
+    "UID": "Crafted_Commanding_Presence_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 222,
+    "StaticIndex": 222,
+    "UID": "Crafted_Brilliant_Leadership_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 223,
+    "StaticIndex": 223,
+    "UID": "Crafted_Brilliant_Leadership_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 224,
+    "StaticIndex": 224,
+    "UID": "Crafted_Brilliant_Leadership_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 225,
+    "StaticIndex": 225,
+    "UID": "Crafted_Brilliant_Leadership_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 226,
+    "StaticIndex": 226,
+    "UID": "Crafted_Brilliant_Leadership_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 227,
+    "StaticIndex": 227,
+    "UID": "Crafted_Brilliant_Leadership_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 228,
+    "StaticIndex": 228,
+    "UID": "Crafted_Edict_of_the_Master_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 229,
+    "StaticIndex": 229,
+    "UID": "Crafted_Edict_of_the_Master_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 230,
+    "StaticIndex": 230,
+    "UID": "Crafted_Edict_of_the_Master_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 231,
+    "StaticIndex": 231,
+    "UID": "Crafted_Edict_of_the_Master_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 232,
+    "StaticIndex": 232,
+    "UID": "Crafted_Edict_of_the_Master_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 233,
+    "StaticIndex": 233,
+    "UID": "Crafted_Edict_of_the_Master_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 234,
+    "StaticIndex": 234,
+    "UID": "Crafted_Blood_Mandate_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 235,
+    "StaticIndex": 235,
+    "UID": "Crafted_Blood_Mandate_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 236,
+    "StaticIndex": 236,
+    "UID": "Crafted_Blood_Mandate_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 237,
+    "StaticIndex": 237,
+    "UID": "Crafted_Blood_Mandate_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 238,
+    "StaticIndex": 238,
+    "UID": "Crafted_Blood_Mandate_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 239,
+    "StaticIndex": 239,
+    "UID": "Crafted_Blood_Mandate_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 240,
+    "StaticIndex": 240,
+    "UID": "Crafted_Sovereign_Right_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 241,
+    "StaticIndex": 241,
+    "UID": "Crafted_Sovereign_Right_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 242,
+    "StaticIndex": 242,
+    "UID": "Crafted_Sovereign_Right_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 243,
+    "StaticIndex": 243,
+    "UID": "Crafted_Sovereign_Right_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 244,
+    "StaticIndex": 244,
+    "UID": "Crafted_Sovereign_Right_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 245,
+    "StaticIndex": 245,
+    "UID": "Crafted_Sovereign_Right_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 246,
+    "StaticIndex": 246,
+    "UID": "Crafted_Karma_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 247,
+    "StaticIndex": 247,
+    "UID": "Crafted_Karma_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 248,
+    "StaticIndex": 248,
+    "UID": "Crafted_Karma_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 249,
+    "StaticIndex": 249,
+    "UID": "Crafted_Kismet_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 250,
+    "StaticIndex": 250,
+    "UID": "Crafted_Kismet_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 251,
+    "StaticIndex": 251,
+    "UID": "Crafted_Kismet_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 252,
+    "StaticIndex": 252,
+    "UID": "Crafted_Kismet_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 253,
+    "StaticIndex": 253,
+    "UID": "Crafted_Kismet_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 254,
+    "StaticIndex": 254,
+    "UID": "Crafted_Serendipity_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 255,
+    "StaticIndex": 255,
+    "UID": "Crafted_Serendipity_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 256,
+    "StaticIndex": 256,
+    "UID": "Crafted_Serendipity_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 257,
+    "StaticIndex": 257,
+    "UID": "Crafted_Serendipity_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 258,
+    "StaticIndex": 258,
+    "UID": "Crafted_Serendipity_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 259,
+    "StaticIndex": 259,
+    "UID": "Crafted_Serendipity_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 260,
+    "StaticIndex": 260,
+    "UID": "Crafted_Gift_of_the_Ancients_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 261,
+    "StaticIndex": 261,
+    "UID": "Crafted_Gift_of_the_Ancients_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 262,
+    "StaticIndex": 262,
+    "UID": "Crafted_Gift_of_the_Ancients_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 263,
+    "StaticIndex": 263,
+    "UID": "Crafted_Gift_of_the_Ancients_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 264,
+    "StaticIndex": 264,
+    "UID": "Crafted_Gift_of_the_Ancients_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 265,
+    "StaticIndex": 265,
+    "UID": "Crafted_Gift_of_the_Ancients_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 266,
+    "StaticIndex": 266,
+    "UID": "Crafted_Red_Fortune_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 267,
+    "StaticIndex": 267,
+    "UID": "Crafted_Red_Fortune_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 268,
+    "StaticIndex": 268,
+    "UID": "Crafted_Red_Fortune_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 269,
+    "StaticIndex": 269,
+    "UID": "Crafted_Red_Fortune_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 270,
+    "StaticIndex": 270,
+    "UID": "Crafted_Red_Fortune_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 271,
+    "StaticIndex": 271,
+    "UID": "Crafted_Red_Fortune_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 272,
+    "StaticIndex": 272,
+    "UID": "Crafted_Luck_of_the_Gambler_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 273,
+    "StaticIndex": 273,
+    "UID": "Crafted_Luck_of_the_Gambler_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 274,
+    "StaticIndex": 274,
+    "UID": "Crafted_Luck_of_the_Gambler_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 275,
+    "StaticIndex": 275,
+    "UID": "Crafted_Luck_of_the_Gambler_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 276,
+    "StaticIndex": 276,
+    "UID": "Crafted_Luck_of_the_Gambler_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 277,
+    "StaticIndex": 277,
+    "UID": "Crafted_Luck_of_the_Gambler_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 278,
+    "StaticIndex": 278,
+    "UID": "Crafted_Steadfast_Protection_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 279,
+    "StaticIndex": 279,
+    "UID": "Crafted_Steadfast_Protection_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 280,
+    "StaticIndex": 280,
+    "UID": "Crafted_Steadfast_Protection_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 281,
+    "StaticIndex": 281,
+    "UID": "Crafted_Impervious_Skin_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 282,
+    "StaticIndex": 282,
+    "UID": "Crafted_Impervious_Skin_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 283,
+    "StaticIndex": 283,
+    "UID": "Crafted_Impervious_Skin_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 284,
+    "StaticIndex": 284,
+    "UID": "Crafted_Impervious_Skin_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 285,
+    "StaticIndex": 285,
+    "UID": "Crafted_Impervious_Skin_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 286,
+    "StaticIndex": 286,
+    "UID": "Crafted_Reactive_Armor_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 287,
+    "StaticIndex": 287,
+    "UID": "Crafted_Reactive_Armor_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 288,
+    "StaticIndex": 288,
+    "UID": "Crafted_Reactive_Armor_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 289,
+    "StaticIndex": 289,
+    "UID": "Crafted_Reactive_Armor_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 290,
+    "StaticIndex": 290,
+    "UID": "Crafted_Reactive_Armor_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 291,
+    "StaticIndex": 291,
+    "UID": "Crafted_Reactive_Armor_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 292,
+    "StaticIndex": 292,
+    "UID": "Crafted_Impervium_Armor_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 293,
+    "StaticIndex": 293,
+    "UID": "Crafted_Impervium_Armor_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 294,
+    "StaticIndex": 294,
+    "UID": "Crafted_Impervium_Armor_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 295,
+    "StaticIndex": 295,
+    "UID": "Crafted_Impervium_Armor_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 296,
+    "StaticIndex": 296,
+    "UID": "Crafted_Impervium_Armor_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 297,
+    "StaticIndex": 297,
+    "UID": "Crafted_Impervium_Armor_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 298,
+    "StaticIndex": 298,
+    "UID": "Crafted_Titanium_Coating_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 299,
+    "StaticIndex": 299,
+    "UID": "Crafted_Titanium_Coating_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 300,
+    "StaticIndex": 300,
+    "UID": "Crafted_Titanium_Coating_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 301,
+    "StaticIndex": 301,
+    "UID": "Crafted_Titanium_Coating_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 302,
+    "StaticIndex": 302,
+    "UID": "Crafted_Titanium_Coating_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 303,
+    "StaticIndex": 303,
+    "UID": "Crafted_Titanium_Coating_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 304,
+    "StaticIndex": 304,
+    "UID": "Crafted_Aegis_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 305,
+    "StaticIndex": 305,
+    "UID": "Crafted_Aegis_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 306,
+    "StaticIndex": 306,
+    "UID": "Crafted_Aegis_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 307,
+    "StaticIndex": 307,
+    "UID": "Crafted_Aegis_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 308,
+    "StaticIndex": 308,
+    "UID": "Crafted_Aegis_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 309,
+    "StaticIndex": 309,
+    "UID": "Crafted_Aegis_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 310,
+    "StaticIndex": 310,
+    "UID": "Crafted_Triage_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 311,
+    "StaticIndex": 311,
+    "UID": "Crafted_Triage_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 312,
+    "StaticIndex": 312,
+    "UID": "Crafted_Triage_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 313,
+    "StaticIndex": 313,
+    "UID": "Crafted_Triage_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 314,
+    "StaticIndex": 314,
+    "UID": "Crafted_Regenerative_Tissue_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 315,
+    "StaticIndex": 315,
+    "UID": "Crafted_Regenerative_Tissue_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 316,
+    "StaticIndex": 316,
+    "UID": "Crafted_Regenerative_Tissue_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 317,
+    "StaticIndex": 317,
+    "UID": "Crafted_Regenerative_Tissue_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 318,
+    "StaticIndex": 318,
+    "UID": "Crafted_Regenerative_Tissue_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 319,
+    "StaticIndex": 319,
+    "UID": "Crafted_Harmonized_Healing_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 320,
+    "StaticIndex": 320,
+    "UID": "Crafted_Harmonized_Healing_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 321,
+    "StaticIndex": 321,
+    "UID": "Crafted_Harmonized_Healing_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 322,
+    "StaticIndex": 322,
+    "UID": "Crafted_Harmonized_Healing_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 323,
+    "StaticIndex": 323,
+    "UID": "Crafted_Harmonized_Healing_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 324,
+    "StaticIndex": 324,
+    "UID": "Crafted_Harmonized_Healing_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 325,
+    "StaticIndex": 325,
+    "UID": "Crafted_Miracle_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 326,
+    "StaticIndex": 326,
+    "UID": "Crafted_Miracle_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 327,
+    "StaticIndex": 327,
+    "UID": "Crafted_Miracle_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 328,
+    "StaticIndex": 328,
+    "UID": "Crafted_Miracle_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 329,
+    "StaticIndex": 329,
+    "UID": "Crafted_Miracle_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 330,
+    "StaticIndex": 330,
+    "UID": "Crafted_Miracle_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 331,
+    "StaticIndex": 331,
+    "UID": "Crafted_Doctored_Wounds_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 332,
+    "StaticIndex": 332,
+    "UID": "Crafted_Doctored_Wounds_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 333,
+    "StaticIndex": 333,
+    "UID": "Crafted_Doctored_Wounds_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 334,
+    "StaticIndex": 334,
+    "UID": "Crafted_Doctored_Wounds_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 335,
+    "StaticIndex": 335,
+    "UID": "Crafted_Doctored_Wounds_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 336,
+    "StaticIndex": 336,
+    "UID": "Crafted_Doctored_Wounds_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 337,
+    "StaticIndex": 337,
+    "UID": "Crafted_Numinas_Convalesence_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 338,
+    "StaticIndex": 338,
+    "UID": "Crafted_Numinas_Convalesence_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 339,
+    "StaticIndex": 339,
+    "UID": "Crafted_Numinas_Convalesence_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 340,
+    "StaticIndex": 340,
+    "UID": "Crafted_Numinas_Convalesence_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 341,
+    "StaticIndex": 341,
+    "UID": "Crafted_Numinas_Convalesence_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 342,
+    "StaticIndex": 342,
+    "UID": "Crafted_Numinas_Convalesence_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 343,
+    "StaticIndex": 343,
+    "UID": "Crafted_Paralytic_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 344,
+    "StaticIndex": 344,
+    "UID": "Crafted_Paralytic_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 345,
+    "StaticIndex": 345,
+    "UID": "Crafted_Paralytic_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 346,
+    "StaticIndex": 346,
+    "UID": "Crafted_Paralytic_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 347,
+    "StaticIndex": 347,
+    "UID": "Crafted_Paralytic_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 348,
+    "StaticIndex": 348,
+    "UID": "Crafted_Neuronic_Shutdown_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 349,
+    "StaticIndex": 349,
+    "UID": "Crafted_Neuronic_Shutdown_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 350,
+    "StaticIndex": 350,
+    "UID": "Crafted_Neuronic_Shutdown_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 351,
+    "StaticIndex": 351,
+    "UID": "Crafted_Neuronic_Shutdown_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 352,
+    "StaticIndex": 352,
+    "UID": "Crafted_Neuronic_Shutdown_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 353,
+    "StaticIndex": 353,
+    "UID": "Crafted_Neuronic_Shutdown_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 354,
+    "StaticIndex": 354,
+    "UID": "Crafted_Essence_of_Curare_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 355,
+    "StaticIndex": 355,
+    "UID": "Crafted_Essence_of_Curare_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 356,
+    "StaticIndex": 356,
+    "UID": "Crafted_Essence_of_Curare_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 357,
+    "StaticIndex": 357,
+    "UID": "Crafted_Essence_of_Curare_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 358,
+    "StaticIndex": 358,
+    "UID": "Crafted_Essence_of_Curare_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 359,
+    "StaticIndex": 359,
+    "UID": "Crafted_Essence_of_Curare_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 360,
+    "StaticIndex": 360,
+    "UID": "Crafted_Ghost_Widows_Embrace_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 361,
+    "StaticIndex": 361,
+    "UID": "Crafted_Ghost_Widows_Embrace_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 362,
+    "StaticIndex": 362,
+    "UID": "Crafted_Ghost_Widows_Embrace_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 363,
+    "StaticIndex": 363,
+    "UID": "Crafted_Ghost_Widows_Embrace_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 364,
+    "StaticIndex": 364,
+    "UID": "Crafted_Ghost_Widows_Embrace_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 365,
+    "StaticIndex": 365,
+    "UID": "Crafted_Ghost_Widows_Embrace_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 366,
+    "StaticIndex": 366,
+    "UID": "Crafted_Stagger_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 367,
+    "StaticIndex": 367,
+    "UID": "Crafted_Stagger_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 368,
+    "StaticIndex": 368,
+    "UID": "Crafted_Stagger_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 369,
+    "StaticIndex": 369,
+    "UID": "Crafted_Stagger_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 370,
+    "StaticIndex": 370,
+    "UID": "Crafted_Stagger_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 371,
+    "StaticIndex": 371,
+    "UID": "Crafted_Razzle_Dazzle_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 372,
+    "StaticIndex": 372,
+    "UID": "Crafted_Razzle_Dazzle_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 373,
+    "StaticIndex": 373,
+    "UID": "Crafted_Razzle_Dazzle_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 374,
+    "StaticIndex": 374,
+    "UID": "Crafted_Razzle_Dazzle_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 375,
+    "StaticIndex": 375,
+    "UID": "Crafted_Razzle_Dazzle_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 376,
+    "StaticIndex": 376,
+    "UID": "Crafted_Razzle_Dazzle_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 377,
+    "StaticIndex": 377,
+    "UID": "Crafted_Rope_A_Dope_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 378,
+    "StaticIndex": 378,
+    "UID": "Crafted_Rope_A_Dope_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 379,
+    "StaticIndex": 379,
+    "UID": "Crafted_Rope_A_Dope_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 380,
+    "StaticIndex": 380,
+    "UID": "Crafted_Rope_A_Dope_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 381,
+    "StaticIndex": 381,
+    "UID": "Crafted_Rope_A_Dope_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 382,
+    "StaticIndex": 382,
+    "UID": "Crafted_Rope_A_Dope_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 383,
+    "StaticIndex": 383,
+    "UID": "Crafted_Stupefy_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 384,
+    "StaticIndex": 384,
+    "UID": "Crafted_Stupefy_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 385,
+    "StaticIndex": 385,
+    "UID": "Crafted_Stupefy_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 386,
+    "StaticIndex": 386,
+    "UID": "Crafted_Stupefy_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 387,
+    "StaticIndex": 387,
+    "UID": "Crafted_Stupefy_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 388,
+    "StaticIndex": 388,
+    "UID": "Crafted_Stupefy_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 389,
+    "StaticIndex": 389,
+    "UID": "Crafted_Rooting_Grasp_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 390,
+    "StaticIndex": 390,
+    "UID": "Crafted_Rooting_Grasp_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 391,
+    "StaticIndex": 391,
+    "UID": "Crafted_Rooting_Grasp_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 392,
+    "StaticIndex": 392,
+    "UID": "Crafted_Rooting_Grasp_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 393,
+    "StaticIndex": 393,
+    "UID": "Crafted_Rooting_Grasp_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 394,
+    "StaticIndex": 394,
+    "UID": "Crafted_Debiliative_Action_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 395,
+    "StaticIndex": 395,
+    "UID": "Crafted_Debiliative_Action_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 396,
+    "StaticIndex": 396,
+    "UID": "Crafted_Debiliative_Action_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 397,
+    "StaticIndex": 397,
+    "UID": "Crafted_Debiliative_Action_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 398,
+    "StaticIndex": 398,
+    "UID": "Crafted_Debiliative_Action_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 399,
+    "StaticIndex": 399,
+    "UID": "Crafted_Debiliative_Action_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 400,
+    "StaticIndex": 400,
+    "UID": "Crafted_Enfeebled_Operation_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 401,
+    "StaticIndex": 401,
+    "UID": "Crafted_Enfeebled_Operation_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 402,
+    "StaticIndex": 402,
+    "UID": "Crafted_Enfeebled_Operation_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 403,
+    "StaticIndex": 403,
+    "UID": "Crafted_Enfeebled_Operation_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 404,
+    "StaticIndex": 404,
+    "UID": "Crafted_Enfeebled_Operation_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 405,
+    "StaticIndex": 405,
+    "UID": "Crafted_Enfeebled_Operation_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 406,
+    "StaticIndex": 406,
+    "UID": "Crafted_Trap_of_the_Hunter_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 407,
+    "StaticIndex": 407,
+    "UID": "Crafted_Trap_of_the_Hunter_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 408,
+    "StaticIndex": 408,
+    "UID": "Crafted_Trap_of_the_Hunter_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 409,
+    "StaticIndex": 409,
+    "UID": "Crafted_Trap_of_the_Hunter_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 410,
+    "StaticIndex": 410,
+    "UID": "Crafted_Trap_of_the_Hunter_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 411,
+    "StaticIndex": 411,
+    "UID": "Crafted_Trap_of_the_Hunter_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 412,
+    "StaticIndex": 412,
+    "UID": "Crafted_Curtail_Speed_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 413,
+    "StaticIndex": 413,
+    "UID": "Crafted_Curtail_Speed_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 414,
+    "StaticIndex": 414,
+    "UID": "Crafted_Curtail_Speed_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 415,
+    "StaticIndex": 415,
+    "UID": "Crafted_Curtail_Speed_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 416,
+    "StaticIndex": 416,
+    "UID": "Crafted_Curtail_Speed_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 417,
+    "StaticIndex": 417,
+    "UID": "Crafted_Impeded_Swiftness_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 418,
+    "StaticIndex": 418,
+    "UID": "Crafted_Impeded_Swiftness_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 419,
+    "StaticIndex": 419,
+    "UID": "Crafted_Impeded_Swiftness_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 420,
+    "StaticIndex": 420,
+    "UID": "Crafted_Impeded_Swiftness_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 421,
+    "StaticIndex": 421,
+    "UID": "Crafted_Impeded_Swiftness_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 422,
+    "StaticIndex": 422,
+    "UID": "Crafted_Impeded_Swiftness_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 423,
+    "StaticIndex": 423,
+    "UID": "Crafted_Tempered_Readiness_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 424,
+    "StaticIndex": 424,
+    "UID": "Crafted_Tempered_Readiness_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 425,
+    "StaticIndex": 425,
+    "UID": "Crafted_Tempered_Readiness_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 426,
+    "StaticIndex": 426,
+    "UID": "Crafted_Tempered_Readiness_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 427,
+    "StaticIndex": 427,
+    "UID": "Crafted_Tempered_Readiness_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 428,
+    "StaticIndex": 428,
+    "UID": "Crafted_Tempered_Readiness_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 429,
+    "StaticIndex": 429,
+    "UID": "Crafted_Pacing_of_the_Turtle_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 430,
+    "StaticIndex": 430,
+    "UID": "Crafted_Pacing_of_the_Turtle_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 431,
+    "StaticIndex": 431,
+    "UID": "Crafted_Pacing_of_the_Turtle_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 432,
+    "StaticIndex": 432,
+    "UID": "Crafted_Pacing_of_the_Turtle_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 433,
+    "StaticIndex": 433,
+    "UID": "Crafted_Pacing_of_the_Turtle_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 434,
+    "StaticIndex": 434,
+    "UID": "Crafted_Pacing_of_the_Turtle_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 435,
+    "StaticIndex": 435,
+    "UID": "Crafted_Hibernation_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 436,
+    "StaticIndex": 436,
+    "UID": "Crafted_Hibernation_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 437,
+    "StaticIndex": 437,
+    "UID": "Crafted_Hibernation_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 438,
+    "StaticIndex": 438,
+    "UID": "Crafted_Hibernation_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 439,
+    "StaticIndex": 439,
+    "UID": "Crafted_Hibernation_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 440,
+    "StaticIndex": 440,
+    "UID": "Crafted_Induced_Coma_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 441,
+    "StaticIndex": 441,
+    "UID": "Crafted_Induced_Coma_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 442,
+    "StaticIndex": 442,
+    "UID": "Crafted_Induced_Coma_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 443,
+    "StaticIndex": 443,
+    "UID": "Crafted_Induced_Coma_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 444,
+    "StaticIndex": 444,
+    "UID": "Crafted_Induced_Coma_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 445,
+    "StaticIndex": 445,
+    "UID": "Crafted_Induced_Coma_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 446,
+    "StaticIndex": 446,
+    "UID": "Crafted_Lethargic_Repose_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 447,
+    "StaticIndex": 447,
+    "UID": "Crafted_Lethargic_Repose_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 448,
+    "StaticIndex": 448,
+    "UID": "Crafted_Lethargic_Repose_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 449,
+    "StaticIndex": 449,
+    "UID": "Crafted_Lethargic_Repose_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 450,
+    "StaticIndex": 450,
+    "UID": "Crafted_Lethargic_Repose_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 451,
+    "StaticIndex": 451,
+    "UID": "Crafted_Lethargic_Repose_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 452,
+    "StaticIndex": 452,
+    "UID": "Crafted_Call_of_the_Sandman_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 453,
+    "StaticIndex": 453,
+    "UID": "Crafted_Call_of_the_Sandman_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 454,
+    "StaticIndex": 454,
+    "UID": "Crafted_Call_of_the_Sandman_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 455,
+    "StaticIndex": 455,
+    "UID": "Crafted_Call_of_the_Sandman_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 456,
+    "StaticIndex": 456,
+    "UID": "Crafted_Call_of_the_Sandman_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 457,
+    "StaticIndex": 457,
+    "UID": "Crafted_Call_of_the_Sandman_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 458,
+    "StaticIndex": 458,
+    "UID": "Crafted_Horror_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 459,
+    "StaticIndex": 459,
+    "UID": "Crafted_Horror_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 460,
+    "StaticIndex": 460,
+    "UID": "Crafted_Horror_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 461,
+    "StaticIndex": 461,
+    "UID": "Crafted_Horror_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 462,
+    "StaticIndex": 462,
+    "UID": "Crafted_Horror_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 463,
+    "StaticIndex": 463,
+    "UID": "Crafted_Unspeakable_Terror_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 464,
+    "StaticIndex": 464,
+    "UID": "Crafted_Unspeakable_Terror_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 465,
+    "StaticIndex": 465,
+    "UID": "Crafted_Unspeakable_Terror_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 466,
+    "StaticIndex": 466,
+    "UID": "Crafted_Unspeakable_Terror_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 467,
+    "StaticIndex": 467,
+    "UID": "Crafted_Unspeakable_Terror_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 468,
+    "StaticIndex": 468,
+    "UID": "Crafted_Unspeakable_Terror_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 469,
+    "StaticIndex": 469,
+    "UID": "Crafted_Nightmare_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 470,
+    "StaticIndex": 470,
+    "UID": "Crafted_Nightmare_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 471,
+    "StaticIndex": 471,
+    "UID": "Crafted_Nightmare_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 472,
+    "StaticIndex": 472,
+    "UID": "Crafted_Nightmare_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 473,
+    "StaticIndex": 473,
+    "UID": "Crafted_Nightmare_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 474,
+    "StaticIndex": 474,
+    "UID": "Crafted_Nightmare_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 475,
+    "StaticIndex": 475,
+    "UID": "Crafted_Glimpse_of_the_Abyss_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 476,
+    "StaticIndex": 476,
+    "UID": "Crafted_Glimpse_of_the_Abyss_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 477,
+    "StaticIndex": 477,
+    "UID": "Crafted_Glimpse_of_the_Abyss_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 478,
+    "StaticIndex": 478,
+    "UID": "Crafted_Glimpse_of_the_Abyss_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 479,
+    "StaticIndex": 479,
+    "UID": "Crafted_Glimpse_of_the_Abyss_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 480,
+    "StaticIndex": 480,
+    "UID": "Crafted_Glimpse_of_the_Abyss_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 481,
+    "StaticIndex": 481,
+    "UID": "Crafted_Befuddling_Aura_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 482,
+    "StaticIndex": 482,
+    "UID": "Crafted_Befuddling_Aura_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 483,
+    "StaticIndex": 483,
+    "UID": "Crafted_Befuddling_Aura_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 484,
+    "StaticIndex": 484,
+    "UID": "Crafted_Befuddling_Aura_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 485,
+    "StaticIndex": 485,
+    "UID": "Crafted_Befuddling_Aura_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 486,
+    "StaticIndex": 486,
+    "UID": "Crafted_Cacophany_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 487,
+    "StaticIndex": 487,
+    "UID": "Crafted_Cacophany_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 488,
+    "StaticIndex": 488,
+    "UID": "Crafted_Cacophany_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 489,
+    "StaticIndex": 489,
+    "UID": "Crafted_Cacophany_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 490,
+    "StaticIndex": 490,
+    "UID": "Crafted_Cacophany_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 491,
+    "StaticIndex": 491,
+    "UID": "Crafted_Cacophany_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 492,
+    "StaticIndex": 492,
+    "UID": "Crafted_Perplex_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 493,
+    "StaticIndex": 493,
+    "UID": "Crafted_Perplex_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 494,
+    "StaticIndex": 494,
+    "UID": "Crafted_Perplex_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 495,
+    "StaticIndex": 495,
+    "UID": "Crafted_Perplex_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 496,
+    "StaticIndex": 496,
+    "UID": "Crafted_Perplex_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 497,
+    "StaticIndex": 497,
+    "UID": "Crafted_Perplex_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 498,
+    "StaticIndex": 498,
+    "UID": "Crafted_Malaises_Illusions_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 499,
+    "StaticIndex": 499,
+    "UID": "Crafted_Malaises_Illusions_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 500,
+    "StaticIndex": 500,
+    "UID": "Crafted_Malaises_Illusions_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 501,
+    "StaticIndex": 501,
+    "UID": "Crafted_Malaises_Illusions_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 502,
+    "StaticIndex": 502,
+    "UID": "Crafted_Malaises_Illusions_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 503,
+    "StaticIndex": 503,
+    "UID": "Crafted_Malaises_Illusions_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 504,
+    "StaticIndex": 504,
+    "UID": "Crafted_Soaring_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 505,
+    "StaticIndex": 505,
+    "UID": "Crafted_Soaring_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 506,
+    "StaticIndex": 506,
+    "UID": "Crafted_Soaring_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 507,
+    "StaticIndex": 507,
+    "UID": "Crafted_Freebird_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 508,
+    "StaticIndex": 508,
+    "UID": "Crafted_Freebird_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 509,
+    "StaticIndex": 509,
+    "UID": "Crafted_Freebird_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 510,
+    "StaticIndex": 510,
+    "UID": "Crafted_Springfoot_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 511,
+    "StaticIndex": 511,
+    "UID": "Crafted_Springfoot_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 512,
+    "StaticIndex": 512,
+    "UID": "Crafted_Springfoot_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 513,
+    "StaticIndex": 513,
+    "UID": "Crafted_Unbounded_Leap_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 514,
+    "StaticIndex": 514,
+    "UID": "Crafted_Unbounded_Leap_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 515,
+    "StaticIndex": 515,
+    "UID": "Crafted_Unbounded_Leap_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 516,
+    "StaticIndex": 516,
+    "UID": "Crafted_Quickfoot_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 517,
+    "StaticIndex": 517,
+    "UID": "Crafted_Quickfoot_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 518,
+    "StaticIndex": 518,
+    "UID": "Crafted_Quickfoot_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 519,
+    "StaticIndex": 519,
+    "UID": "Crafted_Celerity_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 520,
+    "StaticIndex": 520,
+    "UID": "Crafted_Celerity_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 521,
+    "StaticIndex": 521,
+    "UID": "Crafted_Celerity_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 522,
+    "StaticIndex": 522,
+    "UID": "Crafted_Jaunt_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 523,
+    "StaticIndex": 523,
+    "UID": "Crafted_Jaunt_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 524,
+    "StaticIndex": 524,
+    "UID": "Crafted_Jaunt_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 525,
+    "StaticIndex": 525,
+    "UID": "Crafted_TimeSpace_Manipulation_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 526,
+    "StaticIndex": 526,
+    "UID": "Crafted_TimeSpace_Manipulation_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 527,
+    "StaticIndex": 527,
+    "UID": "Crafted_TimeSpace_Manipulation_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 528,
+    "StaticIndex": 528,
+    "UID": "Hydra_DeBuff_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 529,
+    "StaticIndex": 529,
+    "UID": "Hydra_DeBuff_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 530,
+    "StaticIndex": 530,
+    "UID": "Hydra_Res_Damage_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 531,
+    "StaticIndex": 531,
+    "UID": "Hydra_Damage_Mez",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 532,
+    "StaticIndex": 532,
+    "UID": "Hydra_Accuracy_Mez",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 533,
+    "StaticIndex": 533,
+    "UID": "Hydra_Damage_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 534,
+    "StaticIndex": 534,
+    "UID": "Hydra_Damage_Range",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 535,
+    "StaticIndex": 535,
+    "UID": "Hydra_Heal_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 536,
+    "StaticIndex": 536,
+    "UID": "Hydra_Buff_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 537,
+    "StaticIndex": 537,
+    "UID": "Hydra_Buff_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 538,
+    "StaticIndex": 538,
+    "UID": "Hydra_Travel_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 539,
+    "StaticIndex": 539,
+    "UID": "Titan_Damage_Mez",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 540,
+    "StaticIndex": 540,
+    "UID": "Titan_Accuracy_Mez",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 541,
+    "StaticIndex": 541,
+    "UID": "Titan_Buff_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 542,
+    "StaticIndex": 542,
+    "UID": "Titan_Damage_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 543,
+    "StaticIndex": 543,
+    "UID": "Titan_DeBuff_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 544,
+    "StaticIndex": 544,
+    "UID": "Titan_Heal_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 545,
+    "StaticIndex": 545,
+    "UID": "Titan_Res_Damage_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 546,
+    "StaticIndex": 546,
+    "UID": "Titan_Damage_Range",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 547,
+    "StaticIndex": 547,
+    "UID": "Titan_Travel_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 548,
+    "StaticIndex": 548,
+    "UID": "Titan_Buff_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 549,
+    "StaticIndex": 549,
+    "UID": "Titan_DeBuff_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 550,
+    "StaticIndex": 550,
+    "UID": "Crafted_Hecatomb_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 551,
+    "StaticIndex": 551,
+    "UID": "Crafted_Hecatomb_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 552,
+    "StaticIndex": 552,
+    "UID": "Crafted_Hecatomb_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 553,
+    "StaticIndex": 553,
+    "UID": "Crafted_Hecatomb_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 554,
+    "StaticIndex": 554,
+    "UID": "Crafted_Hecatomb_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 555,
+    "StaticIndex": 555,
+    "UID": "Crafted_Hecatomb_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 556,
+    "StaticIndex": 556,
+    "UID": "Crafted_Apocalypse_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 557,
+    "StaticIndex": 557,
+    "UID": "Crafted_Apocalypse_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 558,
+    "StaticIndex": 558,
+    "UID": "Crafted_Apocalypse_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 559,
+    "StaticIndex": 559,
+    "UID": "Crafted_Apocalypse_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 560,
+    "StaticIndex": 560,
+    "UID": "Crafted_Apocalypse_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 561,
+    "StaticIndex": 561,
+    "UID": "Crafted_Apocalypse_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 562,
+    "StaticIndex": 562,
+    "UID": "Crafted_Ragnarok_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 563,
+    "StaticIndex": 563,
+    "UID": "Crafted_Ragnarok_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 564,
+    "StaticIndex": 564,
+    "UID": "Crafted_Ragnarok_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 565,
+    "StaticIndex": 565,
+    "UID": "Crafted_Ragnarok_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 566,
+    "StaticIndex": 566,
+    "UID": "Crafted_Ragnarok_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 567,
+    "StaticIndex": 567,
+    "UID": "Crafted_Ragnarok_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 568,
+    "StaticIndex": 568,
+    "UID": "Crafted_Armageddon_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 569,
+    "StaticIndex": 569,
+    "UID": "Crafted_Armageddon_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 570,
+    "StaticIndex": 570,
+    "UID": "Crafted_Armageddon_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 571,
+    "StaticIndex": 571,
+    "UID": "Crafted_Armageddon_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 572,
+    "StaticIndex": 572,
+    "UID": "Crafted_Armageddon_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 573,
+    "StaticIndex": 573,
+    "UID": "Crafted_Armageddon_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 574,
+    "StaticIndex": 574,
+    "UID": "Crafted_Soulbound_Allegiance_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 575,
+    "StaticIndex": 575,
+    "UID": "Crafted_Soulbound_Allegiance_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 576,
+    "StaticIndex": 576,
+    "UID": "Crafted_Soulbound_Allegiance_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 577,
+    "StaticIndex": 577,
+    "UID": "Crafted_Soulbound_Allegiance_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 578,
+    "StaticIndex": 578,
+    "UID": "Crafted_Soulbound_Allegiance_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 579,
+    "StaticIndex": 579,
+    "UID": "Crafted_Soulbound_Allegiance_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 580,
+    "StaticIndex": 580,
+    "UID": "Crafted_Unbreakable_Constraint_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 581,
+    "StaticIndex": 581,
+    "UID": "Crafted_Unbreakable_Constraint_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 582,
+    "StaticIndex": 582,
+    "UID": "Crafted_Unbreakable_Constraint_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 583,
+    "StaticIndex": 583,
+    "UID": "Crafted_Unbreakable_Constraint_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 584,
+    "StaticIndex": 584,
+    "UID": "Crafted_Unbreakable_Constraint_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 585,
+    "StaticIndex": 585,
+    "UID": "Crafted_Unbreakable_Constraint_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 586,
+    "StaticIndex": 586,
+    "UID": "Crafted_Absolute_Amazement_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 587,
+    "StaticIndex": 587,
+    "UID": "Crafted_Absolute_Amazement_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 588,
+    "StaticIndex": 588,
+    "UID": "Crafted_Absolute_Amazement_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 589,
+    "StaticIndex": 589,
+    "UID": "Crafted_Absolute_Amazement_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 590,
+    "StaticIndex": 590,
+    "UID": "Crafted_Absolute_Amazement_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 591,
+    "StaticIndex": 591,
+    "UID": "Crafted_Absolute_Amazement_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 592,
+    "StaticIndex": 592,
+    "UID": "Crafted_Gravitational_Anchor_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 593,
+    "StaticIndex": 593,
+    "UID": "Crafted_Gravitational_Anchor_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 594,
+    "StaticIndex": 594,
+    "UID": "Crafted_Gravitational_Anchor_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 595,
+    "StaticIndex": 595,
+    "UID": "Crafted_Gravitational_Anchor_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 596,
+    "StaticIndex": 596,
+    "UID": "Crafted_Gravitational_Anchor_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 597,
+    "StaticIndex": 597,
+    "UID": "Crafted_Gravitational_Anchor_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 598,
+    "StaticIndex": 598,
+    "UID": "Crafted_Fortunata_Hypnosis_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 599,
+    "StaticIndex": 599,
+    "UID": "Crafted_Fortunata_Hypnosis_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 600,
+    "StaticIndex": 600,
+    "UID": "Crafted_Fortunata_Hypnosis_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 601,
+    "StaticIndex": 601,
+    "UID": "Crafted_Fortunata_Hypnosis_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 602,
+    "StaticIndex": 602,
+    "UID": "Crafted_Fortunata_Hypnosis_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 603,
+    "StaticIndex": 603,
+    "UID": "Crafted_Fortunata_Hypnosis_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 604,
+    "StaticIndex": 604,
+    "UID": "Crafted_Coercive_Persuasion_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 605,
+    "StaticIndex": 605,
+    "UID": "Crafted_Coercive_Persuasion_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 606,
+    "StaticIndex": 606,
+    "UID": "Crafted_Coercive_Persuasion_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 607,
+    "StaticIndex": 607,
+    "UID": "Crafted_Coercive_Persuasion_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 608,
+    "StaticIndex": 608,
+    "UID": "Crafted_Coercive_Persuasion_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 609,
+    "StaticIndex": 609,
+    "UID": "Crafted_Coercive_Persuasion_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 610,
+    "StaticIndex": 610,
+    "UID": "Crafted_Annoyance_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 611,
+    "StaticIndex": 611,
+    "UID": "Crafted_Annoyance_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 612,
+    "StaticIndex": 612,
+    "UID": "Crafted_Annoyance_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 613,
+    "StaticIndex": 613,
+    "UID": "Crafted_Triumphant_Insult_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 614,
+    "StaticIndex": 614,
+    "UID": "Crafted_Triumphant_Insult_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 615,
+    "StaticIndex": 615,
+    "UID": "Crafted_Triumphant_Insult_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 616,
+    "StaticIndex": 616,
+    "UID": "Crafted_Mocking_Beratement_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 617,
+    "StaticIndex": 617,
+    "UID": "Crafted_Mocking_Beratement_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 618,
+    "StaticIndex": 618,
+    "UID": "Crafted_Mocking_Beratement_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 619,
+    "StaticIndex": 619,
+    "UID": "Crafted_Mocking_Beratement_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 620,
+    "StaticIndex": 620,
+    "UID": "Crafted_Mocking_Beratement_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 621,
+    "StaticIndex": 621,
+    "UID": "Crafted_Mocking_Beratement_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 622,
+    "StaticIndex": 622,
+    "UID": "Crafted_Perfect_Zinger_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 623,
+    "StaticIndex": 623,
+    "UID": "Crafted_Perfect_Zinger_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 624,
+    "StaticIndex": 624,
+    "UID": "Crafted_Perfect_Zinger_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 625,
+    "StaticIndex": 625,
+    "UID": "Crafted_Perfect_Zinger_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 626,
+    "StaticIndex": 626,
+    "UID": "Crafted_Perfect_Zinger_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 627,
+    "StaticIndex": 627,
+    "UID": "Crafted_Perfect_Zinger_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 628,
+    "StaticIndex": 628,
+    "UID": "Crafted_Volley_of_Velocity_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 629,
+    "StaticIndex": 629,
+    "UID": "Crafted_Volley_of_Velocity_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 630,
+    "StaticIndex": 630,
+    "UID": "Crafted_Volley_of_Velocity_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 631,
+    "StaticIndex": 631,
+    "UID": "Crafted_Explosive_Strike_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 632,
+    "StaticIndex": 632,
+    "UID": "Crafted_Explosive_Strike_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 633,
+    "StaticIndex": 633,
+    "UID": "Crafted_Explosive_Strike_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 634,
+    "StaticIndex": 634,
+    "UID": "Crafted_Kinetic_Crash_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 635,
+    "StaticIndex": 635,
+    "UID": "Crafted_Kinetic_Crash_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 636,
+    "StaticIndex": 636,
+    "UID": "Crafted_Kinetic_Crash_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 637,
+    "StaticIndex": 637,
+    "UID": "Crafted_Kinetic_Crash_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 638,
+    "StaticIndex": 638,
+    "UID": "Crafted_Kinetic_Crash_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 639,
+    "StaticIndex": 639,
+    "UID": "Crafted_Kinetic_Crash_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 640,
+    "StaticIndex": 640,
+    "UID": "Crafted_Force_Feedback_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 641,
+    "StaticIndex": 641,
+    "UID": "Crafted_Force_Feedback_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 642,
+    "StaticIndex": 642,
+    "UID": "Crafted_Force_Feedback_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 643,
+    "StaticIndex": 643,
+    "UID": "Crafted_Force_Feedback_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 644,
+    "StaticIndex": 644,
+    "UID": "Crafted_Force_Feedback_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 645,
+    "StaticIndex": 645,
+    "UID": "Crafted_Force_Feedback_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 646,
+    "StaticIndex": 646,
+    "UID": "Crafted_Adrenal_Adjustment_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 647,
+    "StaticIndex": 647,
+    "UID": "Crafted_Adrenal_Adjustment_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 648,
+    "StaticIndex": 648,
+    "UID": "Crafted_Adrenal_Adjustment_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 649,
+    "StaticIndex": 649,
+    "UID": "Crafted_Energy_Manipulator_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 650,
+    "StaticIndex": 650,
+    "UID": "Crafted_Energy_Manipulator_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 651,
+    "StaticIndex": 651,
+    "UID": "Crafted_Energy_Manipulator_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 652,
+    "StaticIndex": 652,
+    "UID": "Crafted_Efficacy_Adaptor_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 653,
+    "StaticIndex": 653,
+    "UID": "Crafted_Efficacy_Adaptor_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 654,
+    "StaticIndex": 654,
+    "UID": "Crafted_Efficacy_Adaptor_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 655,
+    "StaticIndex": 655,
+    "UID": "Crafted_Efficacy_Adaptor_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 656,
+    "StaticIndex": 656,
+    "UID": "Crafted_Efficacy_Adaptor_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 657,
+    "StaticIndex": 657,
+    "UID": "Crafted_Efficacy_Adaptor_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 658,
+    "StaticIndex": 658,
+    "UID": "Crafted_Performance_Shifter_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 659,
+    "StaticIndex": 659,
+    "UID": "Crafted_Performance_Shifter_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 660,
+    "StaticIndex": 660,
+    "UID": "Crafted_Performance_Shifter_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 661,
+    "StaticIndex": 661,
+    "UID": "Crafted_Performance_Shifter_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 662,
+    "StaticIndex": 662,
+    "UID": "Crafted_Performance_Shifter_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 663,
+    "StaticIndex": 663,
+    "UID": "Crafted_Performance_Shifter_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 664,
+    "StaticIndex": 664,
+    "UID": "Crafted_Encouraged_Accuracy_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 665,
+    "StaticIndex": 665,
+    "UID": "Crafted_Encouraged_Accuracy_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 666,
+    "StaticIndex": 666,
+    "UID": "Crafted_Encouraged_Accuracy_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 667,
+    "StaticIndex": 667,
+    "UID": "Crafted_Rectified_Reticle_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 668,
+    "StaticIndex": 668,
+    "UID": "Crafted_Rectified_Reticle_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 669,
+    "StaticIndex": 669,
+    "UID": "Crafted_Rectified_Reticle_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 670,
+    "StaticIndex": 670,
+    "UID": "Crafted_Adjusted_Targeting_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 671,
+    "StaticIndex": 671,
+    "UID": "Crafted_Adjusted_Targeting_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 672,
+    "StaticIndex": 672,
+    "UID": "Crafted_Adjusted_Targeting_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 673,
+    "StaticIndex": 673,
+    "UID": "Crafted_Adjusted_Targeting_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 674,
+    "StaticIndex": 674,
+    "UID": "Crafted_Adjusted_Targeting_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 675,
+    "StaticIndex": 675,
+    "UID": "Crafted_Adjusted_Targeting_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 676,
+    "StaticIndex": 676,
+    "UID": "Crafted_Gaussians_Synchronized_FireControl_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 677,
+    "StaticIndex": 677,
+    "UID": "Crafted_Gaussians_Synchronized_FireControl_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 678,
+    "StaticIndex": 678,
+    "UID": "Crafted_Gaussians_Synchronized_FireControl_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 679,
+    "StaticIndex": 679,
+    "UID": "Crafted_Gaussians_Synchronized_FireControl_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 680,
+    "StaticIndex": 680,
+    "UID": "Crafted_Gaussians_Synchronized_FireControl_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 681,
+    "StaticIndex": 681,
+    "UID": "Crafted_Gaussians_Synchronized_FireControl_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 682,
+    "StaticIndex": 682,
+    "UID": "Crafted_Discouraging_Words_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 683,
+    "StaticIndex": 683,
+    "UID": "Crafted_Discouraging_Words_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 684,
+    "StaticIndex": 684,
+    "UID": "Crafted_Discouraging_Words_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 685,
+    "StaticIndex": 685,
+    "UID": "Crafted_Deflated_Ego_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 686,
+    "StaticIndex": 686,
+    "UID": "Crafted_Deflated_Ego_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 687,
+    "StaticIndex": 687,
+    "UID": "Crafted_Deflated_Ego_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 688,
+    "StaticIndex": 688,
+    "UID": "Crafted_Dampened_Spirits_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 689,
+    "StaticIndex": 689,
+    "UID": "Crafted_Dampened_Spirits_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 690,
+    "StaticIndex": 690,
+    "UID": "Crafted_Dampened_Spirits_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 691,
+    "StaticIndex": 691,
+    "UID": "Crafted_Dampened_Spirits_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 692,
+    "StaticIndex": 692,
+    "UID": "Crafted_Dampened_Spirits_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 693,
+    "StaticIndex": 693,
+    "UID": "Crafted_Dampened_Spirits_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 694,
+    "StaticIndex": 694,
+    "UID": "Crafted_Dark_Watchers_Despair_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 695,
+    "StaticIndex": 695,
+    "UID": "Crafted_Dark_Watchers_Despair_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 696,
+    "StaticIndex": 696,
+    "UID": "Crafted_Dark_Watchers_Despair_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 697,
+    "StaticIndex": 697,
+    "UID": "Crafted_Dark_Watchers_Despair_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 698,
+    "StaticIndex": 698,
+    "UID": "Crafted_Dark_Watchers_Despair_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 699,
+    "StaticIndex": 699,
+    "UID": "Crafted_Dark_Watchers_Despair_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 700,
+    "StaticIndex": 700,
+    "UID": "Crafted_Exploited_Vulnerability_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 701,
+    "StaticIndex": 701,
+    "UID": "Crafted_Exploited_Vulnerability_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 702,
+    "StaticIndex": 702,
+    "UID": "Crafted_Exploited_Vulnerability_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 703,
+    "StaticIndex": 703,
+    "UID": "Crafted_Achilles_Heel_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 704,
+    "StaticIndex": 704,
+    "UID": "Crafted_Achilles_Heel_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 705,
+    "StaticIndex": 705,
+    "UID": "Crafted_Achilles_Heel_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 706,
+    "StaticIndex": 706,
+    "UID": "Crafted_Undermined_Defenses_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 707,
+    "StaticIndex": 707,
+    "UID": "Crafted_Undermined_Defenses_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 708,
+    "StaticIndex": 708,
+    "UID": "Crafted_Undermined_Defenses_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 709,
+    "StaticIndex": 709,
+    "UID": "Crafted_Undermined_Defenses_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 710,
+    "StaticIndex": 710,
+    "UID": "Crafted_Undermined_Defenses_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 711,
+    "StaticIndex": 711,
+    "UID": "Crafted_Undermined_Defenses_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 712,
+    "StaticIndex": 712,
+    "UID": "Crafted_Touch_of_Lady_Grey_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 713,
+    "StaticIndex": 713,
+    "UID": "Crafted_Touch_of_Lady_Grey_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 714,
+    "StaticIndex": 714,
+    "UID": "Crafted_Touch_of_Lady_Grey_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 715,
+    "StaticIndex": 715,
+    "UID": "Crafted_Touch_of_Lady_Grey_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 716,
+    "StaticIndex": 716,
+    "UID": "Crafted_Touch_of_Lady_Grey_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 717,
+    "StaticIndex": 717,
+    "UID": "Crafted_Touch_of_Lady_Grey_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 718,
+    "StaticIndex": 718,
+    "UID": "Crafted_Analyze_Weakness_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 719,
+    "StaticIndex": 719,
+    "UID": "Crafted_Analyze_Weakness_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 720,
+    "StaticIndex": 720,
+    "UID": "Crafted_Analyze_Weakness_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 721,
+    "StaticIndex": 721,
+    "UID": "Crafted_Analyze_Weakness_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 722,
+    "StaticIndex": 722,
+    "UID": "Crafted_Analyze_Weakness_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 723,
+    "StaticIndex": 723,
+    "UID": "Crafted_Analyze_Weakness_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 724,
+    "StaticIndex": 724,
+    "UID": "Crafted_Basilisks_Gaze_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 725,
+    "StaticIndex": 725,
+    "UID": "Crafted_Basilisks_Gaze_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 726,
+    "StaticIndex": 726,
+    "UID": "Crafted_Basilisks_Gaze_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 727,
+    "StaticIndex": 727,
+    "UID": "Crafted_Basilisks_Gaze_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 728,
+    "StaticIndex": 728,
+    "UID": "Crafted_Basilisks_Gaze_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 729,
+    "StaticIndex": 729,
+    "UID": "Crafted_Basilisks_Gaze_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 730,
+    "StaticIndex": 730,
+    "UID": "Crafted_Blessing_of_the_Zephyr_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 731,
+    "StaticIndex": 731,
+    "UID": "Crafted_Blessing_of_the_Zephyr_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 732,
+    "StaticIndex": 732,
+    "UID": "Crafted_Blessing_of_the_Zephyr_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 733,
+    "StaticIndex": 733,
+    "UID": "Crafted_Call_to_Arms_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 734,
+    "StaticIndex": 734,
+    "UID": "Crafted_Call_to_Arms_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 735,
+    "StaticIndex": 735,
+    "UID": "Crafted_Call_to_Arms_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 736,
+    "StaticIndex": 736,
+    "UID": "Crafted_Call_to_Arms_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 737,
+    "StaticIndex": 737,
+    "UID": "Crafted_Call_to_Arms_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 738,
+    "StaticIndex": 738,
+    "UID": "Crafted_Call_to_Arms_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 739,
+    "StaticIndex": 739,
+    "UID": "Crafted_Cloud_Senses_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 740,
+    "StaticIndex": 740,
+    "UID": "Crafted_Cloud_Senses_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 741,
+    "StaticIndex": 741,
+    "UID": "Crafted_Cloud_Senses_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 742,
+    "StaticIndex": 742,
+    "UID": "Crafted_Cloud_Senses_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 743,
+    "StaticIndex": 743,
+    "UID": "Crafted_Cloud_Senses_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 744,
+    "StaticIndex": 744,
+    "UID": "Crafted_Cloud_Senses_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 745,
+    "StaticIndex": 745,
+    "UID": "Crafted_Eradication_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 746,
+    "StaticIndex": 746,
+    "UID": "Crafted_Eradication_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 747,
+    "StaticIndex": 747,
+    "UID": "Crafted_Eradication_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 748,
+    "StaticIndex": 748,
+    "UID": "Crafted_Eradication_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 749,
+    "StaticIndex": 749,
+    "UID": "Crafted_Eradication_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 750,
+    "StaticIndex": 750,
+    "UID": "Crafted_Eradication_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 751,
+    "StaticIndex": 751,
+    "UID": "Crafted_Expedient_Reinforcement_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 752,
+    "StaticIndex": 752,
+    "UID": "Crafted_Expedient_Reinforcement_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 753,
+    "StaticIndex": 753,
+    "UID": "Crafted_Expedient_Reinforcement_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 754,
+    "StaticIndex": 754,
+    "UID": "Crafted_Expedient_Reinforcement_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 755,
+    "StaticIndex": 755,
+    "UID": "Crafted_Expedient_Reinforcement_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 756,
+    "StaticIndex": 756,
+    "UID": "Crafted_Expedient_Reinforcement_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 757,
+    "StaticIndex": 757,
+    "UID": "Crafted_Lockdown_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 758,
+    "StaticIndex": 758,
+    "UID": "Crafted_Lockdown_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 759,
+    "StaticIndex": 759,
+    "UID": "Crafted_Lockdown_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 760,
+    "StaticIndex": 760,
+    "UID": "Crafted_Lockdown_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 761,
+    "StaticIndex": 761,
+    "UID": "Crafted_Lockdown_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 762,
+    "StaticIndex": 762,
+    "UID": "Crafted_Lockdown_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 763,
+    "StaticIndex": 763,
+    "UID": "Crafted_Obliteration_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 764,
+    "StaticIndex": 764,
+    "UID": "Crafted_Obliteration_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 765,
+    "StaticIndex": 765,
+    "UID": "Crafted_Obliteration_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 766,
+    "StaticIndex": 766,
+    "UID": "Crafted_Obliteration_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 767,
+    "StaticIndex": 767,
+    "UID": "Crafted_Obliteration_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 768,
+    "StaticIndex": 768,
+    "UID": "Crafted_Obliteration_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 769,
+    "StaticIndex": 769,
+    "UID": "Crafted_Shield_Breaker_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 770,
+    "StaticIndex": 770,
+    "UID": "Crafted_Shield_Breaker_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 771,
+    "StaticIndex": 771,
+    "UID": "Crafted_Shield_Breaker_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 772,
+    "StaticIndex": 772,
+    "UID": "Crafted_Shield_Breaker_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 773,
+    "StaticIndex": 773,
+    "UID": "Crafted_Shield_Breaker_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 774,
+    "StaticIndex": 774,
+    "UID": "Crafted_Shield_Breaker_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 775,
+    "StaticIndex": 775,
+    "UID": "Crafted_Siphon_Insight_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 776,
+    "StaticIndex": 776,
+    "UID": "Crafted_Siphon_Insight_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 777,
+    "StaticIndex": 777,
+    "UID": "Crafted_Siphon_Insight_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 778,
+    "StaticIndex": 778,
+    "UID": "Crafted_Siphon_Insight_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 779,
+    "StaticIndex": 779,
+    "UID": "Crafted_Siphon_Insight_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 780,
+    "StaticIndex": 780,
+    "UID": "Crafted_Siphon_Insight_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 781,
+    "StaticIndex": 781,
+    "UID": "Crafted_Theft_of_Essence_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 782,
+    "StaticIndex": 782,
+    "UID": "Crafted_Theft_of_Essence_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 783,
+    "StaticIndex": 783,
+    "UID": "Crafted_Theft_of_Essence_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 784,
+    "StaticIndex": 784,
+    "UID": "Crafted_Theft_of_Essence_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 785,
+    "StaticIndex": 785,
+    "UID": "Crafted_Theft_of_Essence_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 786,
+    "StaticIndex": 786,
+    "UID": "Crafted_Theft_of_Essence_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 787,
+    "StaticIndex": 787,
+    "UID": "Crafted_Touch_of_the_Nictus_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 788,
+    "StaticIndex": 788,
+    "UID": "Crafted_Touch_of_the_Nictus_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 789,
+    "StaticIndex": 789,
+    "UID": "Crafted_Touch_of_the_Nictus_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 790,
+    "StaticIndex": 790,
+    "UID": "Crafted_Touch_of_the_Nictus_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 791,
+    "StaticIndex": 791,
+    "UID": "Crafted_Touch_of_the_Nictus_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 792,
+    "StaticIndex": 792,
+    "UID": "Crafted_Touch_of_the_Nictus_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 793,
+    "StaticIndex": 793,
+    "UID": "Crafted_Winters_Gift_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 794,
+    "StaticIndex": 794,
+    "UID": "Crafted_Winters_Gift_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 795,
+    "StaticIndex": 795,
+    "UID": "Crafted_Winters_Gift_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 796,
+    "StaticIndex": 796,
+    "UID": "Crafted_Panacea_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 797,
+    "StaticIndex": 797,
+    "UID": "Crafted_Panacea_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 798,
+    "StaticIndex": 798,
+    "UID": "Crafted_Panacea_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 799,
+    "StaticIndex": 799,
+    "UID": "Crafted_Panacea_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 800,
+    "StaticIndex": 800,
+    "UID": "Crafted_Panacea_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 801,
+    "StaticIndex": 801,
+    "UID": "Crafted_Panacea_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 802,
+    "StaticIndex": 802,
+    "UID": "Crafted_Javelin_Volley_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 803,
+    "StaticIndex": 803,
+    "UID": "Crafted_Gladiators_Strike_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 804,
+    "StaticIndex": 804,
+    "UID": "Crafted_Gladiators_Strike_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 805,
+    "StaticIndex": 805,
+    "UID": "Crafted_Gladiators_Strike_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 806,
+    "StaticIndex": 806,
+    "UID": "Crafted_Gladiators_Strike_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 807,
+    "StaticIndex": 807,
+    "UID": "Crafted_Gladiators_Strike_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 808,
+    "StaticIndex": 808,
+    "UID": "Crafted_Gladiators_Strike_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 809,
+    "StaticIndex": 809,
+    "UID": "Crafted_Gladiators_Javelin_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 810,
+    "StaticIndex": 810,
+    "UID": "Crafted_Gladiators_Javelin_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 811,
+    "StaticIndex": 811,
+    "UID": "Crafted_Gladiators_Javelin_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 812,
+    "StaticIndex": 812,
+    "UID": "Crafted_Gladiators_Javelin_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 813,
+    "StaticIndex": 813,
+    "UID": "Crafted_Gladiators_Javelin_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 814,
+    "StaticIndex": 814,
+    "UID": "Crafted_Gladiators_Javelin_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 815,
+    "StaticIndex": 817,
+    "UID": "Crafted_Gladiators_Armor_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 816,
+    "StaticIndex": 820,
+    "UID": "Crafted_Gladiators_Armor_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 817,
+    "StaticIndex": 819,
+    "UID": "Crafted_Gladiators_Armor_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 818,
+    "StaticIndex": 816,
+    "UID": "Crafted_Gladiators_Armor_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 819,
+    "StaticIndex": 815,
+    "UID": "Crafted_Gladiators_Armor_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 820,
+    "StaticIndex": 818,
+    "UID": "Crafted_Gladiators_Armor_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 821,
+    "StaticIndex": 821,
+    "UID": "Crafted_Javelin_Volley_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 822,
+    "StaticIndex": 822,
+    "UID": "Crafted_Javelin_Volley_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 823,
+    "StaticIndex": 823,
+    "UID": "Crafted_Javelin_Volley_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 824,
+    "StaticIndex": 824,
+    "UID": "Crafted_Javelin_Volley_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 825,
+    "StaticIndex": 825,
+    "UID": "Crafted_Javelin_Volley_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 826,
+    "StaticIndex": 826,
+    "UID": "Crafted_Fury_of_the_Gladiator_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 827,
+    "StaticIndex": 827,
+    "UID": "Crafted_Fury_of_the_Gladiator_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 828,
+    "StaticIndex": 828,
+    "UID": "Crafted_Fury_of_the_Gladiator_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 829,
+    "StaticIndex": 829,
+    "UID": "Crafted_Fury_of_the_Gladiator_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 830,
+    "StaticIndex": 830,
+    "UID": "Crafted_Fury_of_the_Gladiator_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 831,
+    "StaticIndex": 831,
+    "UID": "Crafted_Fury_of_the_Gladiator_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 832,
+    "StaticIndex": 832,
+    "UID": "Crafted_Gladiators_Net_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 833,
+    "StaticIndex": 833,
+    "UID": "Crafted_Gladiators_Net_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 834,
+    "StaticIndex": 834,
+    "UID": "Crafted_Gladiators_Net_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 835,
+    "StaticIndex": 835,
+    "UID": "Crafted_Gladiators_Net_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 836,
+    "StaticIndex": 836,
+    "UID": "Crafted_Gladiators_Net_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 837,
+    "StaticIndex": 837,
+    "UID": "Crafted_Gladiators_Net_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 838,
+    "StaticIndex": 838,
+    "UID": "Crafted_Shield_Wall_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 839,
+    "StaticIndex": 839,
+    "UID": "Crafted_Shield_Wall_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 840,
+    "StaticIndex": 840,
+    "UID": "Crafted_Shield_Wall_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 841,
+    "StaticIndex": 841,
+    "UID": "Crafted_Shield_Wall_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 842,
+    "StaticIndex": 842,
+    "UID": "Crafted_Shield_Wall_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 843,
+    "StaticIndex": 843,
+    "UID": "Crafted_Shield_Wall_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 844,
+    "StaticIndex": 844,
+    "UID": "Attuned_Dominion_of_Arachnos_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 845,
+    "StaticIndex": 845,
+    "UID": "Attuned_Dominion_of_Arachnos_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 846,
+    "StaticIndex": 846,
+    "UID": "Attuned_Dominion_of_Arachnos_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 847,
+    "StaticIndex": 847,
+    "UID": "Attuned_Dominion_of_Arachnos_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 848,
+    "StaticIndex": 848,
+    "UID": "Attuned_Dominion_of_Arachnos_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 849,
+    "StaticIndex": 849,
+    "UID": "Attuned_Dominion_of_Arachnos_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 850,
+    "StaticIndex": 850,
+    "UID": "Attuned_Blasters_Wrath_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 851,
+    "StaticIndex": 851,
+    "UID": "Attuned_Blasters_Wrath_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 852,
+    "StaticIndex": 852,
+    "UID": "Attuned_Blasters_Wrath_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 853,
+    "StaticIndex": 853,
+    "UID": "Attuned_Blasters_Wrath_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 854,
+    "StaticIndex": 854,
+    "UID": "Attuned_Blasters_Wrath_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 855,
+    "StaticIndex": 855,
+    "UID": "Attuned_Blasters_Wrath_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 856,
+    "StaticIndex": 856,
+    "UID": "Attuned_Brutes_Fury_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 857,
+    "StaticIndex": 857,
+    "UID": "Attuned_Brutes_Fury_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 858,
+    "StaticIndex": 858,
+    "UID": "Attuned_Brutes_Fury_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 859,
+    "StaticIndex": 859,
+    "UID": "Attuned_Brutes_Fury_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 860,
+    "StaticIndex": 860,
+    "UID": "Attuned_Brutes_Fury_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 861,
+    "StaticIndex": 861,
+    "UID": "Attuned_Brutes_Fury_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 862,
+    "StaticIndex": 862,
+    "UID": "Attuned_Will_of_the_Controller_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 863,
+    "StaticIndex": 863,
+    "UID": "Attuned_Will_of_the_Controller_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 864,
+    "StaticIndex": 864,
+    "UID": "Attuned_Will_of_the_Controller_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 865,
+    "StaticIndex": 865,
+    "UID": "Attuned_Will_of_the_Controller_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 866,
+    "StaticIndex": 866,
+    "UID": "Attuned_Will_of_the_Controller_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 867,
+    "StaticIndex": 867,
+    "UID": "Attuned_Will_of_the_Controller_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 868,
+    "StaticIndex": 868,
+    "UID": "Attuned_Malice_of_the_Corruptor_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 869,
+    "StaticIndex": 869,
+    "UID": "Attuned_Malice_of_the_Corruptor_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 870,
+    "StaticIndex": 870,
+    "UID": "Attuned_Malice_of_the_Corruptor_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 871,
+    "StaticIndex": 871,
+    "UID": "Attuned_Malice_of_the_Corruptor_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 872,
+    "StaticIndex": 872,
+    "UID": "Attuned_Malice_of_the_Corruptor_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 873,
+    "StaticIndex": 873,
+    "UID": "Attuned_Malice_of_the_Corruptor_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 874,
+    "StaticIndex": 874,
+    "UID": "Attuned_Defenders_Bastion_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 875,
+    "StaticIndex": 875,
+    "UID": "Attuned_Defenders_Bastion_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 876,
+    "StaticIndex": 876,
+    "UID": "Attuned_Defenders_Bastion_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 877,
+    "StaticIndex": 877,
+    "UID": "Attuned_Defenders_Bastion_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 878,
+    "StaticIndex": 878,
+    "UID": "Attuned_Defenders_Bastion_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 879,
+    "StaticIndex": 879,
+    "UID": "Attuned_Defenders_Bastion_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 880,
+    "StaticIndex": 880,
+    "UID": "Attuned_Ascendency_of_the_Dominator_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 881,
+    "StaticIndex": 881,
+    "UID": "Attuned_Ascendency_of_the_Dominator_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 882,
+    "StaticIndex": 882,
+    "UID": "Attuned_Ascendency_of_the_Dominator_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 883,
+    "StaticIndex": 883,
+    "UID": "Attuned_Ascendency_of_the_Dominator_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 884,
+    "StaticIndex": 884,
+    "UID": "Attuned_Ascendency_of_the_Dominator_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 885,
+    "StaticIndex": 885,
+    "UID": "Attuned_Ascendency_of_the_Dominator_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 886,
+    "StaticIndex": 886,
+    "UID": "Attuned_Command_of_the_Mastermind_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 887,
+    "StaticIndex": 887,
+    "UID": "Attuned_Command_of_the_Mastermind_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 888,
+    "StaticIndex": 888,
+    "UID": "Attuned_Command_of_the_Mastermind_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 889,
+    "StaticIndex": 889,
+    "UID": "Attuned_Command_of_the_Mastermind_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 890,
+    "StaticIndex": 890,
+    "UID": "Attuned_Command_of_the_Mastermind_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 891,
+    "StaticIndex": 891,
+    "UID": "Attuned_Command_of_the_Mastermind_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 892,
+    "StaticIndex": 892,
+    "UID": "Attuned_Scrappers_Strike_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 893,
+    "StaticIndex": 893,
+    "UID": "Attuned_Scrappers_Strike_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 894,
+    "StaticIndex": 894,
+    "UID": "Attuned_Scrappers_Strike_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 895,
+    "StaticIndex": 895,
+    "UID": "Attuned_Scrappers_Strike_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 896,
+    "StaticIndex": 896,
+    "UID": "Attuned_Scrappers_Strike_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 897,
+    "StaticIndex": 897,
+    "UID": "Attuned_Scrappers_Strike_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 898,
+    "StaticIndex": 898,
+    "UID": "Attuned_Stalkers_Guile_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 899,
+    "StaticIndex": 899,
+    "UID": "Attuned_Stalkers_Guile_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 900,
+    "StaticIndex": 900,
+    "UID": "Attuned_Stalkers_Guile_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 901,
+    "StaticIndex": 901,
+    "UID": "Attuned_Stalkers_Guile_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 902,
+    "StaticIndex": 902,
+    "UID": "Attuned_Stalkers_Guile_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 903,
+    "StaticIndex": 903,
+    "UID": "Attuned_Stalkers_Guile_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 904,
+    "StaticIndex": 904,
+    "UID": "Attuned_Might_of_the_Tanker_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 905,
+    "StaticIndex": 905,
+    "UID": "Attuned_Might_of_the_Tanker_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 906,
+    "StaticIndex": 906,
+    "UID": "Attuned_Might_of_the_Tanker_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 907,
+    "StaticIndex": 907,
+    "UID": "Attuned_Might_of_the_Tanker_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 908,
+    "StaticIndex": 908,
+    "UID": "Attuned_Might_of_the_Tanker_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 909,
+    "StaticIndex": 909,
+    "UID": "Attuned_Might_of_the_Tanker_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 910,
+    "StaticIndex": 910,
+    "UID": "Attuned_Kheldians_Grace_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 911,
+    "StaticIndex": 911,
+    "UID": "Attuned_Kheldians_Grace_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 912,
+    "StaticIndex": 912,
+    "UID": "Attuned_Kheldians_Grace_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 913,
+    "StaticIndex": 913,
+    "UID": "Attuned_Kheldians_Grace_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 914,
+    "StaticIndex": 914,
+    "UID": "Attuned_Kheldians_Grace_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 915,
+    "StaticIndex": 915,
+    "UID": "Attuned_Kheldians_Grace_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 916,
+    "StaticIndex": 916,
+    "UID": "Superior_Attuned_Superior_Dominion_of_Arachnos_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 917,
+    "StaticIndex": 917,
+    "UID": "Superior_Attuned_Superior_Dominion_of_Arachnos_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 918,
+    "StaticIndex": 918,
+    "UID": "Superior_Attuned_Superior_Dominion_of_Arachnos_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 919,
+    "StaticIndex": 919,
+    "UID": "Superior_Attuned_Superior_Dominion_of_Arachnos_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 920,
+    "StaticIndex": 920,
+    "UID": "Superior_Attuned_Superior_Dominion_of_Arachnos_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 921,
+    "StaticIndex": 921,
+    "UID": "Superior_Attuned_Superior_Dominion_of_Arachnos_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 922,
+    "StaticIndex": 922,
+    "UID": "Superior_Attuned_Superior_Blasters_Wrath_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 923,
+    "StaticIndex": 923,
+    "UID": "Superior_Attuned_Superior_Blasters_Wrath_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 924,
+    "StaticIndex": 924,
+    "UID": "Superior_Attuned_Superior_Blasters_Wrath_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 925,
+    "StaticIndex": 925,
+    "UID": "Superior_Attuned_Superior_Blasters_Wrath_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 926,
+    "StaticIndex": 926,
+    "UID": "Superior_Attuned_Superior_Blasters_Wrath_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 927,
+    "StaticIndex": 927,
+    "UID": "Superior_Attuned_Superior_Blasters_Wrath_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 928,
+    "StaticIndex": 928,
+    "UID": "Superior_Attuned_Superior_Brutes_Fury_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 929,
+    "StaticIndex": 929,
+    "UID": "Superior_Attuned_Superior_Brutes_Fury_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 930,
+    "StaticIndex": 930,
+    "UID": "Superior_Attuned_Superior_Brutes_Fury_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 931,
+    "StaticIndex": 931,
+    "UID": "Superior_Attuned_Superior_Brutes_Fury_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 932,
+    "StaticIndex": 932,
+    "UID": "Superior_Attuned_Superior_Brutes_Fury_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 933,
+    "StaticIndex": 933,
+    "UID": "Superior_Attuned_Superior_Brutes_Fury_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 934,
+    "StaticIndex": 934,
+    "UID": "Superior_Attuned_Superior_Will_of_the_Controller_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 935,
+    "StaticIndex": 935,
+    "UID": "Superior_Attuned_Superior_Will_of_the_Controller_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 936,
+    "StaticIndex": 936,
+    "UID": "Superior_Attuned_Superior_Will_of_the_Controller_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 937,
+    "StaticIndex": 937,
+    "UID": "Superior_Attuned_Superior_Will_of_the_Controller_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 938,
+    "StaticIndex": 938,
+    "UID": "Superior_Attuned_Superior_Will_of_the_Controller_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 939,
+    "StaticIndex": 939,
+    "UID": "Superior_Attuned_Superior_Will_of_the_Controller_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 940,
+    "StaticIndex": 940,
+    "UID": "Superior_Attuned_Superior_Malice_of_the_Corruptor_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 941,
+    "StaticIndex": 941,
+    "UID": "Superior_Attuned_Superior_Malice_of_the_Corruptor_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 942,
+    "StaticIndex": 942,
+    "UID": "Superior_Attuned_Superior_Malice_of_the_Corruptor_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 943,
+    "StaticIndex": 943,
+    "UID": "Superior_Attuned_Superior_Malice_of_the_Corruptor_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 944,
+    "StaticIndex": 944,
+    "UID": "Superior_Attuned_Superior_Malice_of_the_Corruptor_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 945,
+    "StaticIndex": 945,
+    "UID": "Superior_Attuned_Superior_Malice_of_the_Corruptor_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 946,
+    "StaticIndex": 946,
+    "UID": "Superior_Attuned_Superior_Defenders_Bastion_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 947,
+    "StaticIndex": 947,
+    "UID": "Superior_Attuned_Superior_Defenders_Bastion_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 948,
+    "StaticIndex": 948,
+    "UID": "Superior_Attuned_Superior_Defenders_Bastion_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 949,
+    "StaticIndex": 949,
+    "UID": "Superior_Attuned_Superior_Defenders_Bastion_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 950,
+    "StaticIndex": 950,
+    "UID": "Superior_Attuned_Superior_Defenders_Bastion_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 951,
+    "StaticIndex": 951,
+    "UID": "Superior_Attuned_Superior_Defenders_Bastion_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 952,
+    "StaticIndex": 952,
+    "UID": "Superior_Attuned_Superior_Ascendency_of_the_Dominator_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 953,
+    "StaticIndex": 953,
+    "UID": "Superior_Attuned_Superior_Ascendency_of_the_Dominator_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 954,
+    "StaticIndex": 954,
+    "UID": "Superior_Attuned_Superior_Ascendency_of_the_Dominator_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 955,
+    "StaticIndex": 955,
+    "UID": "Superior_Attuned_Superior_Ascendency_of_the_Dominator_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 956,
+    "StaticIndex": 956,
+    "UID": "Superior_Attuned_Superior_Ascendency_of_the_Dominator_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 957,
+    "StaticIndex": 957,
+    "UID": "Superior_Attuned_Superior_Ascendency_of_the_Dominator_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 958,
+    "StaticIndex": 958,
+    "UID": "Superior_Attuned_Superior_Kheldians_Grace_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 959,
+    "StaticIndex": 959,
+    "UID": "Superior_Attuned_Superior_Kheldians_Grace_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 960,
+    "StaticIndex": 960,
+    "UID": "Superior_Attuned_Superior_Kheldians_Grace_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 961,
+    "StaticIndex": 961,
+    "UID": "Superior_Attuned_Superior_Kheldians_Grace_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 962,
+    "StaticIndex": 962,
+    "UID": "Superior_Attuned_Superior_Kheldians_Grace_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 963,
+    "StaticIndex": 963,
+    "UID": "Superior_Attuned_Superior_Kheldians_Grace_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 964,
+    "StaticIndex": 964,
+    "UID": "Superior_Attuned_Superior_Command_of_the_Mastermind_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 965,
+    "StaticIndex": 965,
+    "UID": "Superior_Attuned_Superior_Command_of_the_Mastermind_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 966,
+    "StaticIndex": 966,
+    "UID": "Superior_Attuned_Superior_Command_of_the_Mastermind_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 967,
+    "StaticIndex": 967,
+    "UID": "Superior_Attuned_Superior_Command_of_the_Mastermind_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 968,
+    "StaticIndex": 968,
+    "UID": "Superior_Attuned_Superior_Command_of_the_Mastermind_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 969,
+    "StaticIndex": 969,
+    "UID": "Superior_Attuned_Superior_Command_of_the_Mastermind_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 970,
+    "StaticIndex": 970,
+    "UID": "Superior_Attuned_Superior_Scrappers_Strike_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 971,
+    "StaticIndex": 971,
+    "UID": "Superior_Attuned_Superior_Scrappers_Strike_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 972,
+    "StaticIndex": 972,
+    "UID": "Superior_Attuned_Superior_Scrappers_Strike_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 973,
+    "StaticIndex": 973,
+    "UID": "Superior_Attuned_Superior_Scrappers_Strike_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 974,
+    "StaticIndex": 974,
+    "UID": "Superior_Attuned_Superior_Scrappers_Strike_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 975,
+    "StaticIndex": 975,
+    "UID": "Superior_Attuned_Superior_Scrappers_Strike_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 976,
+    "StaticIndex": 976,
+    "UID": "Superior_Attuned_Superior_Stalkers_Guile_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 977,
+    "StaticIndex": 977,
+    "UID": "Superior_Attuned_Superior_Stalkers_Guile_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 978,
+    "StaticIndex": 978,
+    "UID": "Superior_Attuned_Superior_Stalkers_Guile_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 979,
+    "StaticIndex": 979,
+    "UID": "Superior_Attuned_Superior_Stalkers_Guile_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 980,
+    "StaticIndex": 980,
+    "UID": "Superior_Attuned_Superior_Stalkers_Guile_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 981,
+    "StaticIndex": 981,
+    "UID": "Superior_Attuned_Superior_Stalkers_Guile_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 982,
+    "StaticIndex": 982,
+    "UID": "Superior_Attuned_Superior_Might_of_the_Tanker_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 983,
+    "StaticIndex": 983,
+    "UID": "Superior_Attuned_Superior_Might_of_the_Tanker_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 984,
+    "StaticIndex": 984,
+    "UID": "Superior_Attuned_Superior_Might_of_the_Tanker_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 985,
+    "StaticIndex": 985,
+    "UID": "Superior_Attuned_Superior_Might_of_the_Tanker_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 986,
+    "StaticIndex": 986,
+    "UID": "Superior_Attuned_Superior_Might_of_the_Tanker_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 987,
+    "StaticIndex": 987,
+    "UID": "Superior_Attuned_Superior_Might_of_the_Tanker_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 988,
+    "StaticIndex": 988,
+    "UID": "Attuned_Overwhelming_Force_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 989,
+    "StaticIndex": 989,
+    "UID": "Attuned_Overwhelming_Force_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 990,
+    "StaticIndex": 990,
+    "UID": "Attuned_Overwhelming_Force_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 991,
+    "StaticIndex": 991,
+    "UID": "Attuned_Overwhelming_Force_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 992,
+    "StaticIndex": 992,
+    "UID": "Attuned_Overwhelming_Force_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 993,
+    "StaticIndex": 993,
+    "UID": "Attuned_Overwhelming_Force_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 994,
+    "StaticIndex": 994,
+    "UID": "Crafted_Annihilation_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 995,
+    "StaticIndex": 995,
+    "UID": "Crafted_Annihilation_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 996,
+    "StaticIndex": 996,
+    "UID": "Crafted_Annihilation_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 997,
+    "StaticIndex": 997,
+    "UID": "Crafted_Annihilation_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 998,
+    "StaticIndex": 998,
+    "UID": "Crafted_Annihilation_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 999,
+    "StaticIndex": 999,
+    "UID": "Crafted_Annihilation_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1000,
+    "StaticIndex": 1000,
+    "UID": "Crafted_Preventive_Medicine_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1001,
+    "StaticIndex": 1001,
+    "UID": "Crafted_Preventive_Medicine_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1002,
+    "StaticIndex": 1002,
+    "UID": "Crafted_Preventive_Medicine_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1003,
+    "StaticIndex": 1003,
+    "UID": "Crafted_Preventive_Medicine_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1004,
+    "StaticIndex": 1004,
+    "UID": "Crafted_Preventive_Medicine_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1005,
+    "StaticIndex": 1005,
+    "UID": "Crafted_Preventive_Medicine_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1006,
+    "StaticIndex": 1006,
+    "UID": "Crafted_Reactive_Defenses_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1007,
+    "StaticIndex": 1007,
+    "UID": "Crafted_Reactive_Defenses_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1008,
+    "StaticIndex": 1008,
+    "UID": "Crafted_Reactive_Defenses_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1009,
+    "StaticIndex": 1009,
+    "UID": "Crafted_Reactive_Defenses_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1010,
+    "StaticIndex": 1010,
+    "UID": "Crafted_Reactive_Defenses_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1011,
+    "StaticIndex": 1011,
+    "UID": "Crafted_Reactive_Defenses_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1012,
+    "StaticIndex": 1012,
+    "UID": "Crafted_Unbreakable_Guard_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1013,
+    "StaticIndex": 1013,
+    "UID": "Crafted_Unbreakable_Guard_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1014,
+    "StaticIndex": 1014,
+    "UID": "Crafted_Unbreakable_Guard_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1015,
+    "StaticIndex": 1015,
+    "UID": "Crafted_Unbreakable_Guard_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1016,
+    "StaticIndex": 1016,
+    "UID": "Crafted_Unbreakable_Guard_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1017,
+    "StaticIndex": 1017,
+    "UID": "Crafted_Unbreakable_Guard_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1018,
+    "StaticIndex": 1018,
+    "UID": "Attuned_Defiant_Barrage_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1019,
+    "StaticIndex": 1019,
+    "UID": "Attuned_Defiant_Barrage_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1020,
+    "StaticIndex": 1020,
+    "UID": "Attuned_Defiant_Barrage_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1021,
+    "StaticIndex": 1021,
+    "UID": "Attuned_Defiant_Barrage_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1022,
+    "StaticIndex": 1022,
+    "UID": "Attuned_Defiant_Barrage_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1023,
+    "StaticIndex": 1023,
+    "UID": "Attuned_Defiant_Barrage_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1024,
+    "StaticIndex": 1024,
+    "UID": "Superior_Attuned_Superior_Defiant_Barrage_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1025,
+    "StaticIndex": 1025,
+    "UID": "Superior_Attuned_Superior_Defiant_Barrage_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1026,
+    "StaticIndex": 1026,
+    "UID": "Superior_Attuned_Superior_Defiant_Barrage_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1027,
+    "StaticIndex": 1027,
+    "UID": "Superior_Attuned_Superior_Defiant_Barrage_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1028,
+    "StaticIndex": 1028,
+    "UID": "Superior_Attuned_Superior_Defiant_Barrage_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1029,
+    "StaticIndex": 1029,
+    "UID": "Superior_Attuned_Superior_Defiant_Barrage_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1030,
+    "StaticIndex": 1030,
+    "UID": "Attuned_Unrelenting_Fury_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1031,
+    "StaticIndex": 1031,
+    "UID": "Attuned_Unrelenting_Fury_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1032,
+    "StaticIndex": 1032,
+    "UID": "Attuned_Unrelenting_Fury_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1033,
+    "StaticIndex": 1033,
+    "UID": "Attuned_Unrelenting_Fury_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1034,
+    "StaticIndex": 1034,
+    "UID": "Attuned_Unrelenting_Fury_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1035,
+    "StaticIndex": 1035,
+    "UID": "Attuned_Unrelenting_Fury_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1036,
+    "StaticIndex": 1036,
+    "UID": "Superior_Attuned_Superior_Unrelenting_Fury_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1037,
+    "StaticIndex": 1037,
+    "UID": "Superior_Attuned_Superior_Unrelenting_Fury_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1038,
+    "StaticIndex": 1038,
+    "UID": "Superior_Attuned_Superior_Unrelenting_Fury_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1039,
+    "StaticIndex": 1039,
+    "UID": "Superior_Attuned_Superior_Unrelenting_Fury_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1040,
+    "StaticIndex": 1040,
+    "UID": "Superior_Attuned_Superior_Unrelenting_Fury_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1041,
+    "StaticIndex": 1041,
+    "UID": "Superior_Attuned_Superior_Unrelenting_Fury_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1042,
+    "StaticIndex": 1042,
+    "UID": "Attuned_Overpowering_Presence_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1043,
+    "StaticIndex": 1043,
+    "UID": "Attuned_Overpowering_Presence_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1044,
+    "StaticIndex": 1044,
+    "UID": "Attuned_Overpowering_Presence_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1045,
+    "StaticIndex": 1045,
+    "UID": "Attuned_Overpowering_Presence_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1046,
+    "StaticIndex": 1046,
+    "UID": "Attuned_Overpowering_Presence_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1047,
+    "StaticIndex": 1047,
+    "UID": "Attuned_Overpowering_Presence_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1048,
+    "StaticIndex": 1048,
+    "UID": "Superior_Attuned_Superior_Overpowering_Presence_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1049,
+    "StaticIndex": 1049,
+    "UID": "Superior_Attuned_Superior_Overpowering_Presence_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1050,
+    "StaticIndex": 1050,
+    "UID": "Superior_Attuned_Superior_Overpowering_Presence_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1051,
+    "StaticIndex": 1051,
+    "UID": "Superior_Attuned_Superior_Overpowering_Presence_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1052,
+    "StaticIndex": 1052,
+    "UID": "Superior_Attuned_Superior_Overpowering_Presence_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1053,
+    "StaticIndex": 1053,
+    "UID": "Superior_Attuned_Superior_Overpowering_Presence_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1054,
+    "StaticIndex": 1054,
+    "UID": "Attuned_Scourging_Blast_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1055,
+    "StaticIndex": 1055,
+    "UID": "Attuned_Scourging_Blast_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1056,
+    "StaticIndex": 1056,
+    "UID": "Attuned_Scourging_Blast_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1057,
+    "StaticIndex": 1057,
+    "UID": "Attuned_Scourging_Blast_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1058,
+    "StaticIndex": 1058,
+    "UID": "Attuned_Scourging_Blast_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1059,
+    "StaticIndex": 1059,
+    "UID": "Attuned_Scourging_Blast_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1060,
+    "StaticIndex": 1060,
+    "UID": "Superior_Attuned_Superior_Scourging_Blast_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1061,
+    "StaticIndex": 1061,
+    "UID": "Superior_Attuned_Superior_Scourging_Blast_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1062,
+    "StaticIndex": 1062,
+    "UID": "Superior_Attuned_Superior_Scourging_Blast_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1063,
+    "StaticIndex": 1063,
+    "UID": "Superior_Attuned_Superior_Scourging_Blast_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1064,
+    "StaticIndex": 1064,
+    "UID": "Superior_Attuned_Superior_Scourging_Blast_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1065,
+    "StaticIndex": 1065,
+    "UID": "Superior_Attuned_Superior_Scourging_Blast_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1066,
+    "StaticIndex": 1066,
+    "UID": "Attuned_Vigilant_Assault_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1067,
+    "StaticIndex": 1067,
+    "UID": "Attuned_Vigilant_Assault_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1068,
+    "StaticIndex": 1068,
+    "UID": "Attuned_Vigilant_Assault_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1069,
+    "StaticIndex": 1069,
+    "UID": "Attuned_Vigilant_Assault_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1070,
+    "StaticIndex": 1070,
+    "UID": "Attuned_Vigilant_Assault_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1071,
+    "StaticIndex": 1071,
+    "UID": "Attuned_Vigilant_Assault_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1072,
+    "StaticIndex": 1072,
+    "UID": "Superior_Attuned_Superior_Vigilant_Assault_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1073,
+    "StaticIndex": 1073,
+    "UID": "Superior_Attuned_Superior_Vigilant_Assault_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1074,
+    "StaticIndex": 1074,
+    "UID": "Superior_Attuned_Superior_Vigilant_Assault_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1075,
+    "StaticIndex": 1075,
+    "UID": "Superior_Attuned_Superior_Vigilant_Assault_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1076,
+    "StaticIndex": 1076,
+    "UID": "Superior_Attuned_Superior_Vigilant_Assault_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1077,
+    "StaticIndex": 1077,
+    "UID": "Superior_Attuned_Superior_Vigilant_Assault_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1078,
+    "StaticIndex": 1078,
+    "UID": "Attuned_Dominating_Grasp_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1079,
+    "StaticIndex": 1079,
+    "UID": "Attuned_Dominating_Grasp_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1080,
+    "StaticIndex": 1080,
+    "UID": "Attuned_Dominating_Grasp_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1081,
+    "StaticIndex": 1081,
+    "UID": "Attuned_Dominating_Grasp_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1082,
+    "StaticIndex": 1082,
+    "UID": "Attuned_Dominating_Grasp_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1083,
+    "StaticIndex": 1083,
+    "UID": "Attuned_Dominating_Grasp_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1084,
+    "StaticIndex": 1084,
+    "UID": "Superior_Attuned_Superior_Dominating_Grasp_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1085,
+    "StaticIndex": 1085,
+    "UID": "Superior_Attuned_Superior_Dominating_Grasp_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1086,
+    "StaticIndex": 1086,
+    "UID": "Superior_Attuned_Superior_Dominating_Grasp_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1087,
+    "StaticIndex": 1087,
+    "UID": "Superior_Attuned_Superior_Dominating_Grasp_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1088,
+    "StaticIndex": 1088,
+    "UID": "Superior_Attuned_Superior_Dominating_Grasp_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1089,
+    "StaticIndex": 1089,
+    "UID": "Superior_Attuned_Superior_Dominating_Grasp_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1090,
+    "StaticIndex": 1090,
+    "UID": "Attuned_Essence_Transfer_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1091,
+    "StaticIndex": 1091,
+    "UID": "Attuned_Essence_Transfer_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1092,
+    "StaticIndex": 1092,
+    "UID": "Attuned_Essence_Transfer_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1093,
+    "StaticIndex": 1093,
+    "UID": "Attuned_Essence_Transfer_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1094,
+    "StaticIndex": 1094,
+    "UID": "Attuned_Essence_Transfer_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1095,
+    "StaticIndex": 1095,
+    "UID": "Attuned_Essence_Transfer_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1096,
+    "StaticIndex": 1096,
+    "UID": "Superior_Attuned_Superior_Essence_Transfer_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1097,
+    "StaticIndex": 1097,
+    "UID": "Superior_Attuned_Superior_Essence_Transfer_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1098,
+    "StaticIndex": 1098,
+    "UID": "Superior_Attuned_Superior_Essence_Transfer_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1099,
+    "StaticIndex": 1099,
+    "UID": "Superior_Attuned_Superior_Essence_Transfer_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1100,
+    "StaticIndex": 1100,
+    "UID": "Superior_Attuned_Superior_Essence_Transfer_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1101,
+    "StaticIndex": 1101,
+    "UID": "Superior_Attuned_Superior_Essence_Transfer_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1102,
+    "StaticIndex": 1102,
+    "UID": "Attuned_Mark_of_Supremacy_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1103,
+    "StaticIndex": 1103,
+    "UID": "Attuned_Mark_of_Supremacy_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1104,
+    "StaticIndex": 1104,
+    "UID": "Attuned_Mark_of_Supremacy_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1105,
+    "StaticIndex": 1105,
+    "UID": "Attuned_Mark_of_Supremacy_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1106,
+    "StaticIndex": 1106,
+    "UID": "Attuned_Mark_of_Supremacy_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1107,
+    "StaticIndex": 1107,
+    "UID": "Attuned_Mark_of_Supremacy_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1108,
+    "StaticIndex": 1108,
+    "UID": "Superior_Attuned_Superior_Mark_of_Supremacy_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1109,
+    "StaticIndex": 1109,
+    "UID": "Superior_Attuned_Superior_Mark_of_Supremacy_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1110,
+    "StaticIndex": 1110,
+    "UID": "Superior_Attuned_Superior_Mark_of_Supremacy_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1111,
+    "StaticIndex": 1111,
+    "UID": "Superior_Attuned_Superior_Mark_of_Supremacy_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1112,
+    "StaticIndex": 1112,
+    "UID": "Superior_Attuned_Superior_Mark_of_Supremacy_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1113,
+    "StaticIndex": 1113,
+    "UID": "Superior_Attuned_Superior_Mark_of_Supremacy_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1114,
+    "StaticIndex": 1114,
+    "UID": "Attuned_Critical_Strikes_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1115,
+    "StaticIndex": 1115,
+    "UID": "Attuned_Critical_Strikes_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1116,
+    "StaticIndex": 1116,
+    "UID": "Attuned_Critical_Strikes_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1117,
+    "StaticIndex": 1117,
+    "UID": "Attuned_Critical_Strikes_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1118,
+    "StaticIndex": 1118,
+    "UID": "Attuned_Critical_Strikes_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1119,
+    "StaticIndex": 1119,
+    "UID": "Attuned_Critical_Strikes_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1120,
+    "StaticIndex": 1120,
+    "UID": "Superior_Attuned_Superior_Critical_Strikes_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1121,
+    "StaticIndex": 1121,
+    "UID": "Superior_Attuned_Superior_Critical_Strikes_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1122,
+    "StaticIndex": 1122,
+    "UID": "Superior_Attuned_Superior_Critical_Strikes_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1123,
+    "StaticIndex": 1123,
+    "UID": "Superior_Attuned_Superior_Critical_Strikes_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1124,
+    "StaticIndex": 1124,
+    "UID": "Superior_Attuned_Superior_Critical_Strikes_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1125,
+    "StaticIndex": 1125,
+    "UID": "Superior_Attuned_Superior_Critical_Strikes_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1126,
+    "StaticIndex": 1126,
+    "UID": "Attuned_Spiders_Bite_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1127,
+    "StaticIndex": 1127,
+    "UID": "Attuned_Spiders_Bite_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1128,
+    "StaticIndex": 1128,
+    "UID": "Attuned_Spiders_Bite_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1129,
+    "StaticIndex": 1129,
+    "UID": "Attuned_Spiders_Bite_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1130,
+    "StaticIndex": 1130,
+    "UID": "Attuned_Spiders_Bite_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1131,
+    "StaticIndex": 1131,
+    "UID": "Attuned_Spiders_Bite_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1132,
+    "StaticIndex": 1132,
+    "UID": "Superior_Attuned_Superior_Spiders_Bite_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1133,
+    "StaticIndex": 1133,
+    "UID": "Superior_Attuned_Superior_Spiders_Bite_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1134,
+    "StaticIndex": 1134,
+    "UID": "Superior_Attuned_Superior_Spiders_Bite_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1135,
+    "StaticIndex": 1135,
+    "UID": "Superior_Attuned_Superior_Spiders_Bite_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1136,
+    "StaticIndex": 1136,
+    "UID": "Superior_Attuned_Superior_Spiders_Bite_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1137,
+    "StaticIndex": 1137,
+    "UID": "Superior_Attuned_Superior_Spiders_Bite_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1138,
+    "StaticIndex": 1138,
+    "UID": "Attuned_Assassins_Mark_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1139,
+    "StaticIndex": 1139,
+    "UID": "Attuned_Assassins_Mark_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1140,
+    "StaticIndex": 1140,
+    "UID": "Attuned_Assassins_Mark_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1141,
+    "StaticIndex": 1141,
+    "UID": "Attuned_Assassins_Mark_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1142,
+    "StaticIndex": 1142,
+    "UID": "Attuned_Assassins_Mark_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1143,
+    "StaticIndex": 1143,
+    "UID": "Attuned_Assassins_Mark_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1144,
+    "StaticIndex": 1144,
+    "UID": "Superior_Attuned_Superior_Assassins_Mark_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1145,
+    "StaticIndex": 1145,
+    "UID": "Superior_Attuned_Superior_Assassins_Mark_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1146,
+    "StaticIndex": 1146,
+    "UID": "Superior_Attuned_Superior_Assassins_Mark_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1147,
+    "StaticIndex": 1147,
+    "UID": "Superior_Attuned_Superior_Assassins_Mark_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1148,
+    "StaticIndex": 1148,
+    "UID": "Superior_Attuned_Superior_Assassins_Mark_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1149,
+    "StaticIndex": 1149,
+    "UID": "Superior_Attuned_Superior_Assassins_Mark_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1150,
+    "StaticIndex": 1150,
+    "UID": "Attuned_Gauntleted_Fist_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1151,
+    "StaticIndex": 1151,
+    "UID": "Attuned_Gauntleted_Fist_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1152,
+    "StaticIndex": 1152,
+    "UID": "Attuned_Gauntleted_Fist_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1153,
+    "StaticIndex": 1153,
+    "UID": "Attuned_Gauntleted_Fist_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1154,
+    "StaticIndex": 1154,
+    "UID": "Attuned_Gauntleted_Fist_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1155,
+    "StaticIndex": 1155,
+    "UID": "Attuned_Gauntleted_Fist_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1156,
+    "StaticIndex": 1156,
+    "UID": "Superior_Attuned_Superior_Gauntleted_Fist_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1157,
+    "StaticIndex": 1157,
+    "UID": "Superior_Attuned_Superior_Gauntleted_Fist_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1158,
+    "StaticIndex": 1158,
+    "UID": "Superior_Attuned_Superior_Gauntleted_Fist_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1159,
+    "StaticIndex": 1159,
+    "UID": "Superior_Attuned_Superior_Gauntleted_Fist_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1160,
+    "StaticIndex": 1160,
+    "UID": "Superior_Attuned_Superior_Gauntleted_Fist_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1161,
+    "StaticIndex": 1161,
+    "UID": "Superior_Attuned_Superior_Gauntleted_Fist_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1162,
+    "StaticIndex": 1162,
+    "UID": "Attuned_Blistering_Cold_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1163,
+    "StaticIndex": 1163,
+    "UID": "Attuned_Blistering_Cold_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1164,
+    "StaticIndex": 1164,
+    "UID": "Attuned_Blistering_Cold_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1165,
+    "StaticIndex": 1165,
+    "UID": "Attuned_Blistering_Cold_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1166,
+    "StaticIndex": 1166,
+    "UID": "Attuned_Blistering_Cold_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1167,
+    "StaticIndex": 1167,
+    "UID": "Attuned_Blistering_Cold_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1168,
+    "StaticIndex": 1168,
+    "UID": "Superior_Attuned_Blistering_Cold_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1169,
+    "StaticIndex": 1169,
+    "UID": "Superior_Attuned_Blistering_Cold_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1170,
+    "StaticIndex": 1170,
+    "UID": "Superior_Attuned_Blistering_Cold_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1171,
+    "StaticIndex": 1171,
+    "UID": "Superior_Attuned_Blistering_Cold_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1172,
+    "StaticIndex": 1172,
+    "UID": "Superior_Attuned_Blistering_Cold_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1173,
+    "StaticIndex": 1173,
+    "UID": "Superior_Attuned_Blistering_Cold_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1174,
+    "StaticIndex": 1174,
+    "UID": "Attuned_Avalanche_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1175,
+    "StaticIndex": 1175,
+    "UID": "Attuned_Avalanche_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1176,
+    "StaticIndex": 1176,
+    "UID": "Attuned_Avalanche_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1177,
+    "StaticIndex": 1177,
+    "UID": "Attuned_Avalanche_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1178,
+    "StaticIndex": 1178,
+    "UID": "Attuned_Avalanche_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1179,
+    "StaticIndex": 1179,
+    "UID": "Attuned_Avalanche_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1180,
+    "StaticIndex": 1180,
+    "UID": "Superior_Attuned_Avalanche_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1181,
+    "StaticIndex": 1181,
+    "UID": "Superior_Attuned_Avalanche_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1182,
+    "StaticIndex": 1182,
+    "UID": "Superior_Attuned_Avalanche_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1183,
+    "StaticIndex": 1183,
+    "UID": "Superior_Attuned_Avalanche_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1184,
+    "StaticIndex": 1184,
+    "UID": "Superior_Attuned_Avalanche_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1185,
+    "StaticIndex": 1185,
+    "UID": "Superior_Attuned_Avalanche_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1186,
+    "StaticIndex": 1186,
+    "UID": "Attuned_Winters_Bite_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1187,
+    "StaticIndex": 1187,
+    "UID": "Attuned_Winters_Bite_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1188,
+    "StaticIndex": 1188,
+    "UID": "Attuned_Winters_Bite_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1189,
+    "StaticIndex": 1189,
+    "UID": "Attuned_Winters_Bite_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1190,
+    "StaticIndex": 1190,
+    "UID": "Attuned_Winters_Bite_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1191,
+    "StaticIndex": 1191,
+    "UID": "Attuned_Winters_Bite_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1192,
+    "StaticIndex": 1192,
+    "UID": "Superior_Attuned_Winters_Bite_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1193,
+    "StaticIndex": 1193,
+    "UID": "Superior_Attuned_Winters_Bite_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1194,
+    "StaticIndex": 1194,
+    "UID": "Superior_Attuned_Winters_Bite_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1195,
+    "StaticIndex": 1195,
+    "UID": "Superior_Attuned_Winters_Bite_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1196,
+    "StaticIndex": 1196,
+    "UID": "Superior_Attuned_Winters_Bite_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1197,
+    "StaticIndex": 1197,
+    "UID": "Superior_Attuned_Winters_Bite_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1198,
+    "StaticIndex": 1198,
+    "UID": "Attuned_Frozen_Blast_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1199,
+    "StaticIndex": 1199,
+    "UID": "Attuned_Frozen_Blast_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1200,
+    "StaticIndex": 1200,
+    "UID": "Attuned_Frozen_Blast_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1201,
+    "StaticIndex": 1201,
+    "UID": "Attuned_Frozen_Blast_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1202,
+    "StaticIndex": 1202,
+    "UID": "Attuned_Frozen_Blast_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1203,
+    "StaticIndex": 1203,
+    "UID": "Attuned_Frozen_Blast_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1204,
+    "StaticIndex": 1204,
+    "UID": "Superior_Attuned_Frozen_Blast_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1205,
+    "StaticIndex": 1205,
+    "UID": "Superior_Attuned_Frozen_Blast_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1206,
+    "StaticIndex": 1206,
+    "UID": "Superior_Attuned_Frozen_Blast_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1207,
+    "StaticIndex": 1207,
+    "UID": "Superior_Attuned_Frozen_Blast_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1208,
+    "StaticIndex": 1208,
+    "UID": "Superior_Attuned_Frozen_Blast_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1209,
+    "StaticIndex": 1209,
+    "UID": "Superior_Attuned_Frozen_Blast_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1210,
+    "StaticIndex": 1210,
+    "UID": "Attuned_Entomb_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1211,
+    "StaticIndex": 1211,
+    "UID": "Attuned_Entomb_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1212,
+    "StaticIndex": 1212,
+    "UID": "Attuned_Entomb_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1213,
+    "StaticIndex": 1213,
+    "UID": "Attuned_Entomb_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1214,
+    "StaticIndex": 1214,
+    "UID": "Attuned_Entomb_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1215,
+    "StaticIndex": 1215,
+    "UID": "Attuned_Entomb_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1216,
+    "StaticIndex": 1216,
+    "UID": "Superior_Attuned_Entomb_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1217,
+    "StaticIndex": 1217,
+    "UID": "Superior_Attuned_Entomb_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1218,
+    "StaticIndex": 1218,
+    "UID": "Superior_Attuned_Entomb_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1219,
+    "StaticIndex": 1219,
+    "UID": "Superior_Attuned_Entomb_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1220,
+    "StaticIndex": 1220,
+    "UID": "Superior_Attuned_Entomb_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1221,
+    "StaticIndex": 1221,
+    "UID": "Superior_Attuned_Entomb_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1222,
+    "StaticIndex": 1222,
+    "UID": "Attuned_Sentinels_Ward_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1223,
+    "StaticIndex": 1223,
+    "UID": "Attuned_Sentinels_Ward_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1224,
+    "StaticIndex": 1224,
+    "UID": "Attuned_Sentinels_Ward_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1225,
+    "StaticIndex": 1225,
+    "UID": "Attuned_Sentinels_Ward_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1226,
+    "StaticIndex": 1226,
+    "UID": "Attuned_Sentinels_Ward_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1227,
+    "StaticIndex": 1227,
+    "UID": "Attuned_Sentinels_Ward_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1228,
+    "StaticIndex": 1228,
+    "UID": "Superior_Attuned_Superior_Sentinels_Ward_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1229,
+    "StaticIndex": 1229,
+    "UID": "Superior_Attuned_Superior_Sentinels_Ward_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1230,
+    "StaticIndex": 1230,
+    "UID": "Superior_Attuned_Superior_Sentinels_Ward_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1231,
+    "StaticIndex": 1231,
+    "UID": "Superior_Attuned_Superior_Sentinels_Ward_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1232,
+    "StaticIndex": 1232,
+    "UID": "Superior_Attuned_Superior_Sentinels_Ward_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1233,
+    "StaticIndex": 1233,
+    "UID": "Superior_Attuned_Superior_Sentinels_Ward_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1234,
+    "StaticIndex": 1234,
+    "UID": "Attuned_Opportunity_Strikes_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1235,
+    "StaticIndex": 1235,
+    "UID": "Attuned_Opportunity_Strikes_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1236,
+    "StaticIndex": 1236,
+    "UID": "Attuned_Opportunity_Strikes_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1237,
+    "StaticIndex": 1237,
+    "UID": "Attuned_Opportunity_Strikes_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1238,
+    "StaticIndex": 1238,
+    "UID": "Attuned_Opportunity_Strikes_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1239,
+    "StaticIndex": 1239,
+    "UID": "Attuned_Opportunity_Strikes_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1240,
+    "StaticIndex": 1240,
+    "UID": "Superior_Attuned_Superior_Opportunity_Strikes_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1241,
+    "StaticIndex": 1241,
+    "UID": "Superior_Attuned_Superior_Opportunity_Strikes_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1242,
+    "StaticIndex": 1242,
+    "UID": "Superior_Attuned_Superior_Opportunity_Strikes_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1243,
+    "StaticIndex": 1243,
+    "UID": "Superior_Attuned_Superior_Opportunity_Strikes_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1244,
+    "StaticIndex": 1244,
+    "UID": "Superior_Attuned_Superior_Opportunity_Strikes_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1245,
+    "StaticIndex": 1245,
+    "UID": "Superior_Attuned_Superior_Opportunity_Strikes_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1246,
+    "StaticIndex": 1246,
+    "UID": "Crafted_Sudden_Acceleration_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1247,
+    "StaticIndex": 1247,
+    "UID": "Crafted_Sudden_Acceleration_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1248,
+    "StaticIndex": 1248,
+    "UID": "Crafted_Sudden_Acceleration_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1249,
+    "StaticIndex": 1249,
+    "UID": "Crafted_Sudden_Acceleration_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1250,
+    "StaticIndex": 1250,
+    "UID": "Crafted_Sudden_Acceleration_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1251,
+    "StaticIndex": 1251,
+    "UID": "Crafted_Sudden_Acceleration_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1252,
+    "StaticIndex": 1252,
+    "UID": "Crafted_Experienced_Marksman_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1253,
+    "StaticIndex": 1253,
+    "UID": "Crafted_Experienced_Marksman_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1254,
+    "StaticIndex": 1254,
+    "UID": "Crafted_Experienced_Marksman_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1255,
+    "StaticIndex": 1255,
+    "UID": "Crafted_Experienced_Marksman_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1256,
+    "StaticIndex": 1256,
+    "UID": "Crafted_Experienced_Marksman_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1257,
+    "StaticIndex": 1257,
+    "UID": "Crafted_Experienced_Marksman_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1258,
+    "StaticIndex": 1258,
+    "UID": "Crafted_Synapses_Shock_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1259,
+    "StaticIndex": 1259,
+    "UID": "Crafted_Synapses_Shock_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1260,
+    "StaticIndex": 1260,
+    "UID": "Crafted_Synapses_Shock_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1261,
+    "StaticIndex": 1261,
+    "UID": "Crafted_Synapses_Shock_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1262,
+    "StaticIndex": 1262,
+    "UID": "Crafted_Synapses_Shock_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1263,
+    "StaticIndex": 1263,
+    "UID": "Crafted_Synapses_Shock_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1264,
+    "StaticIndex": 1264,
+    "UID": "Crafted_Power_Transfer_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1265,
+    "StaticIndex": 1265,
+    "UID": "Crafted_Power_Transfer_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1266,
+    "StaticIndex": 1267,
+    "UID": "Crafted_Power_Transfer_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1267,
+    "StaticIndex": 1268,
+    "UID": "Crafted_Power_Transfer_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1268,
+    "StaticIndex": 1269,
+    "UID": "Crafted_Power_Transfer_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1269,
+    "StaticIndex": 1270,
+    "UID": "Crafted_Power_Transfer_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1270,
+    "StaticIndex": 1271,
+    "UID": "Crafted_Preemptive_Optimization_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1271,
+    "StaticIndex": 1272,
+    "UID": "Crafted_Preemptive_Optimization_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1272,
+    "StaticIndex": 1273,
+    "UID": "Crafted_Preemptive_Optimization_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1273,
+    "StaticIndex": 1274,
+    "UID": "Crafted_Preemptive_Optimization_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1274,
+    "StaticIndex": 1275,
+    "UID": "Crafted_Preemptive_Optimization_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1275,
+    "StaticIndex": 1276,
+    "UID": "Crafted_Preemptive_Optimization_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1276,
+    "StaticIndex": 1277,
+    "UID": "Crafted_Bombardment_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1277,
+    "StaticIndex": 1278,
+    "UID": "Crafted_Bombardment_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1278,
+    "StaticIndex": 1279,
+    "UID": "Crafted_Bombardment_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1279,
+    "StaticIndex": 1280,
+    "UID": "Crafted_Bombardment_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1280,
+    "StaticIndex": 1281,
+    "UID": "Crafted_Bombardment_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1281,
+    "StaticIndex": 1282,
+    "UID": "Crafted_Bombardment_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1282,
+    "StaticIndex": 1283,
+    "UID": "Crafted_Shrapnel_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1283,
+    "StaticIndex": 1284,
+    "UID": "Crafted_Shrapnel_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1284,
+    "StaticIndex": 1285,
+    "UID": "Crafted_Shrapnel_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1285,
+    "StaticIndex": 1286,
+    "UID": "Crafted_Shrapnel_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1286,
+    "StaticIndex": 1287,
+    "UID": "Crafted_Shrapnel_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1287,
+    "StaticIndex": 1288,
+    "UID": "Crafted_Shrapnel_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1288,
+    "StaticIndex": 1289,
+    "UID": "Crafted_Ice_Mistrals_Torment_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1289,
+    "StaticIndex": 1290,
+    "UID": "Crafted_Ice_Mistrals_Torment_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1290,
+    "StaticIndex": 1291,
+    "UID": "Crafted_Ice_Mistrals_Torment_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1291,
+    "StaticIndex": 1292,
+    "UID": "Crafted_Ice_Mistrals_Torment_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1292,
+    "StaticIndex": 1293,
+    "UID": "Crafted_Ice_Mistrals_Torment_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1293,
+    "StaticIndex": 1294,
+    "UID": "Crafted_Ice_Mistrals_Torment_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1294,
+    "StaticIndex": 1295,
+    "UID": "Crafted_Hypersonic_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1295,
+    "StaticIndex": 1296,
+    "UID": "Crafted_Hypersonic_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1296,
+    "StaticIndex": 1297,
+    "UID": "Crafted_Hypersonic_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1297,
+    "StaticIndex": 1298,
+    "UID": "Crafted_Hypersonic_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1298,
+    "StaticIndex": 1299,
+    "UID": "Crafted_Launch_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1299,
+    "StaticIndex": 1300,
+    "UID": "Crafted_Launch_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1300,
+    "StaticIndex": 1301,
+    "UID": "Crafted_Launch_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1301,
+    "StaticIndex": 1302,
+    "UID": "Crafted_Launch_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1302,
+    "StaticIndex": 1303,
+    "UID": "Crafted_Thrust_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1303,
+    "StaticIndex": 1304,
+    "UID": "Crafted_Thrust_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1304,
+    "StaticIndex": 1305,
+    "UID": "Crafted_Thrust_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1305,
+    "StaticIndex": 1306,
+    "UID": "Crafted_Thrust_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1306,
+    "StaticIndex": 1307,
+    "UID": "Crafted_Warp_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1307,
+    "StaticIndex": 1308,
+    "UID": "Crafted_Warp_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1308,
+    "StaticIndex": 1309,
+    "UID": "Crafted_Warp_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1309,
+    "StaticIndex": 1310,
+    "UID": "Crafted_Warp_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1310,
+    "StaticIndex": 1311,
+    "UID": "Dsync_Accuracy_Mez",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1311,
+    "StaticIndex": 1312,
+    "UID": "Dsync_Buff_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1312,
+    "StaticIndex": 1313,
+    "UID": "Dsync_Buff_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1313,
+    "StaticIndex": 1314,
+    "UID": "Dsync_Damage_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1314,
+    "StaticIndex": 1315,
+    "UID": "Dsync_Damage_Mez",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1315,
+    "StaticIndex": 1316,
+    "UID": "Dsync_Damage_Range",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1316,
+    "StaticIndex": 1317,
+    "UID": "Dsync_Debuff_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1317,
+    "StaticIndex": 1318,
+    "UID": "Dsync_Debuff_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1318,
+    "StaticIndex": 1319,
+    "UID": "Dsync_Heal_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1319,
+    "StaticIndex": 1320,
+    "UID": "Dsync_Res_Damage_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1320,
+    "StaticIndex": 1321,
+    "UID": "Dsync_Travel_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1321,
+    "StaticIndex": 1322,
+    "UID": "DSync_Accuracy_Range",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1322,
+    "StaticIndex": 1323,
+    "UID": "DSync_Heal_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1323,
+    "StaticIndex": 1324,
+    "UID": "DSync_Heal_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1324,
+    "StaticIndex": 1325,
+    "UID": "DSync_Damage_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1325,
+    "StaticIndex": 1326,
+    "UID": "DSync_Damage_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1326,
+    "StaticIndex": 1327,
+    "UID": "DSync_Endurance_Modification_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1327,
+    "StaticIndex": 1328,
+    "UID": "DSync_Endurance_Modification_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1328,
+    "StaticIndex": 1329,
+    "UID": "DSync_Slow_Recharge_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1329,
+    "StaticIndex": 1330,
+    "UID": "DSync_Threat_Accuracy_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1330,
+    "StaticIndex": 1331,
+    "UID": "Hamidon_Accuracy_Range",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1331,
+    "StaticIndex": 1332,
+    "UID": "Hamidon_Heal_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1332,
+    "StaticIndex": 1333,
+    "UID": "Hamidon_Heal_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1333,
+    "StaticIndex": 1334,
+    "UID": "Hamidon_Damage_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1334,
+    "StaticIndex": 1335,
+    "UID": "Hamidon_Damage_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1335,
+    "StaticIndex": 1336,
+    "UID": "Hamidon_Endurance_Modification_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1336,
+    "StaticIndex": 1337,
+    "UID": "Hamidon_Endurance_Modification_Accuracy",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1337,
+    "StaticIndex": 1338,
+    "UID": "Hamidon_Slow_Recharge_Endurance_Discount",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1338,
+    "StaticIndex": 1339,
+    "UID": "Hamidon_Threat_Accuracy_Recharge",
+    "TypeId": 3,
+    "TypeName": "SpecialO"
+  },
+  {
+    "Nid": 1339,
+    "StaticIndex": 1340,
+    "UID": "Attuned_Cupids_Crush_A",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1340,
+    "StaticIndex": 1341,
+    "UID": "Attuned_Cupids_Crush_B",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1341,
+    "StaticIndex": 1342,
+    "UID": "Attuned_Cupids_Crush_C",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1342,
+    "StaticIndex": 1343,
+    "UID": "Attuned_Cupids_Crush_D",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1343,
+    "StaticIndex": 1344,
+    "UID": "Attuned_Cupids_Crush_E",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  },
+  {
+    "Nid": 1344,
+    "StaticIndex": 1345,
+    "UID": "Attuned_Cupids_Crush_F",
+    "TypeId": 4,
+    "TypeName": "SetO"
+  }
+]

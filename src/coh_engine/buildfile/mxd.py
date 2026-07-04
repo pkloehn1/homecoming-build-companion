@@ -9,33 +9,60 @@ Covers the format's outer envelope (spec § data-and-build-formats, B.1-B.2):
   decode to bytes, reject if byte length != the header compressed size, then zlib
   (RFC1950, ``Z_BEST_COMPRESSION``) inflate and resize to the uncompressed size.
 
-The semantic parse of the decompressed buffer (``MxDReadSaveData``) — power/slot
-records, StaticIndex resolution, and the Homecoming migrations — is a separate
-layer built on :class:`coh_engine.buildfile.binary.Cursor`; it needs an enhancement
-StaticIndex->TypeID map from the oracle harness and is tracked separately.
+The semantic parse of the decompressed buffer (``MxDReadSaveData`` -> power/slot
+records, StaticIndex resolution, Homecoming migrations) is :func:`read_mxd_build`,
+built on :class:`coh_engine.buildfile.binary.Cursor` and the harness StaticIndex
+maps in :mod:`coh_engine.buildfile.dbindex`.
+
+The ``.mxd`` format is legacy (Mids' current builds are ``.mbd``); this reader
+exists to import older shared builds. New work targets ``.mbd``.
 """
 
 import re
 import zlib
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+
+from coh_engine.buildfile.binary import Cursor
+from coh_engine.buildfile.dbindex import EnhIndexEntry
+from coh_engine.buildfile.mbd import Enhancement, PowerEntry, Slot, SubPower
+from coh_engine.maths import f32
 
 _MXD_HEADER = re.compile(r"^\|MxDz;[0-9]+;[0-9]+;[0-9]+;HEX;\|")
 _MBD_HEADER = re.compile(r"^\|MBD;[0-9]+;[0-9]+;[0-9]+;BASE64;\|")
+# Loose prefix used to locate the header line so a malformed header still yields
+# a specific validation error (item count / non-integer sizes), as Mids does.
+_HEADER_PREFIX = re.compile(r"^\|(?:MxDz|MBD);")
 _UNK_BASE64 = re.compile(r"^[A-Za-z0-9+/]+={0,2}$")
 _HEX = re.compile(r"\A[0-9A-Fa-f]+\Z")
+# A payload line, after stripping the `|` bookends, is pure hex (mxd) or base64
+# (mbd) — never the banner's dashes. This bound lets the reader accept the full
+# MxDBuildSaveString output (leading "Do not modify" banner + trailing dashes).
+_PAYLOAD_LINE = re.compile(r"\A[0-9A-Za-z+/=]+\Z")
+
+
+def _find_header_index(lines: list[str]) -> int | None:
+    """Return the index of the first ``|MxDz;…`` / ``|MBD;…`` header line."""
+    for i, line in enumerate(lines):
+        if _HEADER_PREFIX.match(line):
+            return i
+    return None
 
 
 def classify(text: str) -> str | None:
-    """Classify a pasted share block by its first line (``DataClassifier.cs:36-53``).
+    """Classify a share block, tolerating a leading banner (``DataClassifier.cs``).
 
-    Returns ``"mxd"``, ``"mbd"``, ``"unkbase64"``, or ``None`` if unrecognized.
+    Mids classifies already-stripped content; a real ``.mxd``/``.mbd`` export
+    prefixes a "Do not modify" banner, so the header line is located rather than
+    assumed to be line 0. Returns ``"mxd"``, ``"mbd"``, ``"unkbase64"``, or ``None``.
     """
-    first = text.lstrip().splitlines()[0] if text.strip() else ""
-    if _MXD_HEADER.match(first):
-        return "mxd"
-    if _MBD_HEADER.match(first):
-        return "mbd"
-    if _UNK_BASE64.match(first):
+    lines = [ln for ln in re.split(r"[\r\n]+", text) if ln != ""]
+    for line in lines:
+        if _MXD_HEADER.match(line):
+            return "mxd"
+        if _MBD_HEADER.match(line):
+            return "mbd"
+    stripped = text.strip()
+    if stripped and "\n" not in stripped and _UNK_BASE64.match(stripped):
         return "unkbase64"
     return None
 
@@ -60,9 +87,12 @@ def decode_share_block(text: str) -> ShareBlock:
             ``;``-separated items, or the sizes are not integers.
     """
     lines = [ln for ln in re.split(r"[\r\n]+", text) if ln != ""]
-    if len(lines) < 2:
+    header_index = _find_header_index(lines)
+    if header_index is None:
+        raise ValueError("no |MxDz;…| or |MBD;…| header line found")
+    if header_index == len(lines) - 1:
         raise ValueError("share block needs a header line and at least one payload line")
-    header = lines[0].strip("|").strip()
+    header = lines[header_index].strip("|").strip()
     items = [it for it in header.split(";") if it != ""]
     if len(items) != 5:
         raise ValueError(f"share header must have exactly 5 items, got {len(items)}")
@@ -72,7 +102,17 @@ def decode_share_block(text: str) -> ShareBlock:
         encoded = int(items[3])
     except ValueError as exc:
         raise ValueError("share header sizes must be integers") from exc
-    payload = "".join(lines[1:]).replace("|", "")
+    # Collect payload lines after the header, stopping at the first non-payload
+    # line (the trailing banner of dashes, or trailing metadata).
+    payload_parts: list[str] = []
+    for line in lines[header_index + 1 :]:
+        token = line.replace("|", "").strip()
+        if token == "":
+            continue
+        if not _PAYLOAD_LINE.match(token):
+            break
+        payload_parts.append(token)
+    payload = "".join(payload_parts)
     return ShareBlock(
         magic=items[0],
         uncompressed_size=uncompressed,
@@ -115,3 +155,208 @@ def decode_mxd(text: str) -> bytes:
     except zlib.error as exc:
         raise ValueError("mxd zlib inflate failed") from exc
     return buffer[: block.uncompressed_size]
+
+
+# --- Semantic binary parse (MxDReadSaveData, MidsCharacterFileFormat.cs:338-750) ---
+
+_MAGIC = bytes([0x4D, 0x78, 0x44, 0x0C])  # 'M','x','D',12
+_PRIOR_VERSION = f32(3.10)
+_THIS_VERSION = f32(3.20)
+
+# eEnhRelative / eEnhGrade ordinals -> the same names the .mbd stores (Enums.cs).
+_EENH_RELATIVE = (
+    "None",
+    "MinusThree",
+    "MinusTwo",
+    "MinusOne",
+    "Even",
+    "PlusOne",
+    "PlusTwo",
+    "PlusThree",
+    "PlusFour",
+    "PlusFive",
+)
+_EENH_GRADE = ("None", "TrainingO", "DualO", "SingleO")
+
+# Powerset FullName migrations applied on .mxd read (MidsCharacterFileFormat.cs:459-467).
+_POWERSET_MIGRATIONS = {
+    "Pool.Leadership_beta": "Pool.Leadership",
+    "Blaster_Support.Atomic_Manipulation": "Blaster_Support.Radiation_Manipulation",
+    "Pool.Fitness": "Pool.Invisibility",
+}
+
+
+@dataclass(frozen=True, slots=True)
+class MxdBuild:
+    """A build parsed from a ``.mxd`` binary buffer.
+
+    Parallels :class:`coh_engine.buildfile.mbd.Build` without the ``BuiltWith``
+    metadata (the ``.mxd`` format carries none). Power/slot ``level`` values are
+    the raw stored 0-based levels (no ``.mbd``-style ``+1`` offset).
+    """
+
+    format: str
+    class_name: str
+    origin_uid: str
+    alignment: int
+    name: str
+    power_sets: tuple[str, ...]
+    last_power: int
+    power_entries: tuple[PowerEntry, ...] = field(default_factory=tuple)
+
+
+def _format_for_version(version: float) -> str:
+    """Map a file version to a field-set format (``MidsCharacterFileFormat.cs:406-422``)."""
+    if version > _THIS_VERSION:
+        raise ValueError(f"mxd saved by a newer version ({version}); cannot read")
+    if version < _PRIOR_VERSION:
+        return "legacy"
+    if version < _THIS_VERSION:
+        return "prior"
+    return "current"
+
+
+def _scan_magic(buffer: bytes) -> int:
+    """Return the offset just past the 4-byte magic number, scanning byte-by-byte."""
+    pos = 0
+    while pos + 4 <= len(buffer):
+        if buffer[pos : pos + 4] == _MAGIC:
+            return pos + 4
+        pos += 1
+    raise ValueError("mxd magic number MxD\x0c not found")
+
+
+def _read_slot_data(
+    cur: Cursor,
+    enh_index: dict[int, EnhIndexEntry],
+    f_version: float,
+) -> Enhancement | None:
+    """Read one slot's enhancement (``ReadSlotData``, MidsCharacterFileFormat.cs:1381-1425).
+
+    Non-qualified builds reference the enhancement by ``StaticIndex``; the byte
+    layout that follows depends on the enhancement's ``TypeID``.
+    """
+    static_index = cur.read_int32()
+    entry = enh_index.get(static_index)
+    if entry is None:  # -1 sentinel or unresolved -> empty slot
+        return None
+    if entry.type_id in ("Normal", "SpecialO"):
+        relative_level = _EENH_RELATIVE[cur.read_sbyte()]
+        grade = _EENH_GRADE[cur.read_sbyte()]
+        return Enhancement(uid=entry.uid, grade=grade, io_level=1, relative_level=relative_level)
+    if entry.type_id in ("InventO", "SetO"):
+        io_level = cur.read_sbyte()
+        io_level = min(io_level, 49)
+        relative_level = "Even"
+        if f_version > 1.0:
+            relative_level = _EENH_RELATIVE[cur.read_sbyte()]
+        return Enhancement(uid=entry.uid, grade="None", io_level=io_level, relative_level=relative_level)
+    # eType.None: reference present but no trailing fields.
+    return Enhancement(uid=entry.uid, grade="None", io_level=1, relative_level="Even")
+
+
+def _resolve_power(cur: Cursor, qualified: bool, power_index: dict[int, str]) -> tuple[int, str]:
+    """Read a power reference, returning (static_index, resolved FullName or "")."""
+    if qualified:
+        name = cur.read_string()
+        return (0 if name else -1, name)
+    static_index = cur.read_int32()
+    return static_index, power_index.get(static_index, "")
+
+
+def read_mxd_build(
+    buffer: bytes,
+    power_index: dict[int, str],
+    enh_index: dict[int, EnhIndexEntry],
+) -> MxdBuild:
+    """Parse a decompressed ``.mxd`` binary buffer into an :class:`MxdBuild`.
+
+    Reproduces the byte-consumption order of ``MxDReadSaveData``
+    (``MidsCharacterFileFormat.cs:338-750``); the character-grid re-sorting and
+    powerset bookkeeping that method also performs are UI/model concerns and are
+    not reproduced — only the build data is extracted.
+
+    Raises:
+        ValueError: if the magic number is absent or the version is too new.
+    """
+    cur = Cursor(buffer, _scan_magic(buffer))
+    f_version = cur.read_single()
+    fmt = _format_for_version(f_version)
+
+    qualified = cur.read_boolean()
+    has_sub_power = cur.read_boolean()
+    class_name = cur.read_string()
+    origin_uid = cur.read_string()
+    alignment = cur.read_int32() if f_version > 1 else 0
+    name = cur.read_string()
+
+    powerset_count = cur.read_array_count()
+    power_sets = tuple(_POWERSET_MIGRATIONS.get(n := cur.read_string(), n) for _ in range(powerset_count))
+
+    last_power = cur.read_int32() - 1
+
+    power_count = cur.read_array_count()
+    entries: list[PowerEntry] = []
+    for _ in range(power_count):
+        static_index, power_name = _resolve_power(cur, qualified, power_index)
+        level = 0
+        stat_include = proc_include = False
+        variable_value = inherent_slots_used = 0
+        sub_powers: list[SubPower] = []
+        if static_index > -1 or power_name:
+            level = cur.read_sbyte()
+            stat_include = cur.read_boolean()
+            if fmt in ("current", "prior"):
+                proc_include = cur.read_boolean()
+            variable_value = cur.read_int32()
+            if fmt == "current":
+                inherent_slots_used = cur.read_int32()
+            if has_sub_power:
+                sub_count = cur.read_sbyte() + 1
+                for _ in range(sub_count):
+                    _, sub_name = _resolve_power(cur, qualified, power_index)
+                    sub_powers.append(SubPower(power_name=sub_name, stat_include=cur.read_boolean()))
+
+        slot_count = cur.read_sbyte() + 1
+        slots: list[Slot] = []
+        for _ in range(slot_count):
+            slot_level = cur.read_sbyte()
+            is_inherent = cur.read_boolean() if fmt == "current" else False
+            enhancement = _read_slot_data(cur, enh_index, f_version)
+            flipped = _read_slot_data(cur, enh_index, f_version) if cur.read_boolean() else None
+            slots.append(
+                Slot(level=slot_level, is_inherent=is_inherent, enhancement=enhancement, flipped_enhancement=flipped)
+            )
+
+        entries.append(
+            PowerEntry(
+                power_name=power_name,
+                level=level,
+                stat_include=stat_include,
+                proc_include=proc_include,
+                variable_value=variable_value,
+                inherent_slots_used=inherent_slots_used,
+                sub_power_entries=tuple(sub_powers),
+                slot_entries=tuple(slots),
+            )
+        )
+
+    return MxdBuild(
+        format=fmt,
+        class_name=class_name,
+        origin_uid=origin_uid,
+        alignment=alignment,
+        name=name,
+        power_sets=power_sets,
+        last_power=last_power,
+        power_entries=tuple(entries),
+    )
+
+
+def read_mxd(
+    text: str,
+    power_index: dict[int, str],
+    enh_index: dict[int, EnhIndexEntry],
+) -> MxdBuild:
+    """Decode a ``.mxd`` share block and parse it into an :class:`MxdBuild`."""
+    return read_mxd_build(decode_mxd(text), power_index, enh_index)

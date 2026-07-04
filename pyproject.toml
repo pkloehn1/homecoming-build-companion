@@ -134,6 +134,13 @@ no_implicit_reexport = true
 strict_equality = true
 extra_checks = true
 
+# Test modules stay strict on defs/types, but the pre-commit mypy hook runs in an
+# isolated env without pytest, so its decorators (@fixture, @parametrize) read as
+# untyped there. Relax only that check for tests to keep the hook green.
+[[tool.mypy.overrides]]
+module = "coh_engine.tests.*"
+disallow_untyped_decorators = false
+
 [tool.pytest.ini_options]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
