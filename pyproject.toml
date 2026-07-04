@@ -118,6 +118,22 @@ warn_redundant_casts = true
 module = "tests.*"
 disallow_untyped_defs = false
 
+# The build-calculation engine is held to mypy strict (issue #4 enables strict
+# repo-wide; the engine is strict from the start since it is written fully typed).
+# `strict` is a superflag not settable per-module, so its component checks are
+# enumerated here for the coh_engine package (and its tests).
+[[tool.mypy.overrides]]
+module = "coh_engine.*"
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+no_implicit_reexport = true
+strict_equality = true
+extra_checks = true
+
 [tool.pytest.ini_options]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
