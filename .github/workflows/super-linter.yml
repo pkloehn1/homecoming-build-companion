@@ -27,6 +27,9 @@ jobs:
   lint:
     name: Lint Code Base
     runs-on: ubuntu-latest
+    # Backstop: scanners crawling the large game-data trees must fail fast,
+    # not consume a 6-hour runner slot.
+    timeout-minutes: 30
     permissions:
       contents: read
       pull-requests: write
@@ -44,15 +47,6 @@ jobs:
       - name: Load shared Super-Linter configuration
         run: grep -v '^#' .github/super-linter.env >> "$GITHUB_ENV"
 
-      # --- Spoke-specific: Ansible collection install for VALIDATE_ANSIBLE ---
-      - name: Install Ansible collections
-        run: |
-          pip install --quiet ansible-core
-          ansible-galaxy collection install -r automation/requirements.yml \
-            -p automation/collections --force
-        env:
-          ANSIBLE_COLLECTIONS_PATH: automation/collections
-
       - name: Super-Linter
         uses: super-linter/super-linter@v8
         env:
@@ -60,10 +54,17 @@ jobs:
           DEFAULT_BRANCH: origin/${{ github.event.repository.default_branch }}
           # --- Environment-specific overrides (not in shared .env) ---
           VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'workflow_dispatch' && fromJSON(github.event.inputs.full_scan) }}
-          FILTER_REGEX_EXCLUDE: '(.*/)?automation/collections/.*'
+          # Excluded from linting:
+          # - samples/, engine fixtures, data/canonical/: verbatim/harvested
+          #   game data, must stay byte-identical to MidsReborn/Homecoming.
+          # - docs/engine/: generated extraction output (lint-exempt per
+          #   .claude/rules/markdown.md).
+          # - scripts/*.ps1 + scripts/lane-*/: legacy PowerShell capture lane,
+          #   replaced by Python in the Phase 3 migration.
+          FILTER_REGEX_EXCLUDE: '((.*/)?(samples/|src/coh_engine/tests/fixtures/|data/canonical/|docs/engine/).*|scripts/[^/]+\.ps1|scripts/lane-[ab]/.*)'
           JSCPD_LINTER_RULES: /github/workspace/.github/linters/.jscpd.json
-          CHECKOV_SKIP_PATH: /tmp,/github/workspace/tmp,/github/workspace/automation/collections
-          ANSIBLE_COLLECTIONS_PATH: /github/workspace/automation/collections
+          # Checkov path/framework carve-outs live in ONE place:
+          # .github/linters/.checkov.yaml (auto-discovered via LINTER_RULES_PATH).
           SAVE_SUPER_LINTER_SUMMARY: true
           ENABLE_GITHUB_ACTIONS_STEP_SUMMARY: true
 

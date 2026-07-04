@@ -7,8 +7,13 @@ Track these as continuous constraints during draft, not as at-end checks.
 ## Character-level limits
 
 - **50 character levels.** Powers and slots granted on a fixed schedule (`Levels.json`).
-- **24 power picks** for non-inherent powers: 1 + 1 at level 1, then 1 every other level (2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 35, 38, 41, 44, 47, 49). Inherent powers are auto-granted and don't count.
-- **67 added enhancement slots per character** (`ServerData.MaxSlots`). Inherent power-pick slots and Fitness-pool inherent slots (Health/Stamina) sit outside this 67.
+- **24 power picks** for non-inherent powers: 1 + 1 at level 1, then 1 every other level
+  (2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 35, 38, 41, 44, 47, 49). Inherent powers are auto-granted and don't count.
+- **67 added enhancement slots per character** (`ServerData.MaxSlots`).
+  The Homecoming database sets `ServerData.EnableInherentSlotting = false` (verified in `MidsReborn/Databases/Homecoming/SData.mhd`),
+  so the `HealthSlots`/`StaminaSlots` bonus slots are **not** granted.
+  Only each power's single inherent (A) slot sits outside the 67; every other enhancement — Health and Stamina included — is drawn from this 67.
+  Budget Health/Stamina slots against the cap like any other power.
 - **6 enhancement slots per power max** (`Power.MaxBoosts`): 1 inherent + up to 5 added.
 
 ## Power gating
@@ -31,7 +36,8 @@ Slot placements are ascending across the build. Confirm by walking levels 2–50
 
 ## Enhancement rules
 
-- **Enhancement Diversification (ED).** Same-aspect stacking past ~95% diminishes sharply. ED applies per-aspect, per-power. Set bonuses, global buffs, procs, inherent power buffs, and across-power buffs sit outside ED.
+- **Enhancement Diversification (ED).** Same-aspect stacking past ~95% diminishes sharply. ED applies per-aspect, per-power.
+  Set bonuses, global buffs, procs, inherent power buffs, and across-power buffs sit outside ED.
 - **Rule of Five.** Up to 5 instances of any *exact* numeric set-bonus value stack across the build. Different values from different sources stack independently.
 - **Unique globals.** Slot once per build.
 

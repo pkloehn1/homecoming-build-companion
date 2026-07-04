@@ -24,17 +24,20 @@ dev = [
     "types-PyYAML>=6.0.12",
 ]
 
+[tool.setuptools.package-dir]
+coh_engine = "src/coh_engine"
+
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["tools*"]
-exclude = ["tools.*.tests*", "tools.*.fixtures*"]
+where = [".", "src"]
+include = ["scripts*", "coh_engine*"]
+exclude = ["scripts.*.tests*", "scripts.*.fixtures*", "coh_engine.tests*"]
 
 [tool.setuptools-scm]
 
 [tool.coverage.run]
 relative_files = true
 branch = true
-source = ["tools"]
+source = ["scripts", "src"]
 omit = [
     "*/test_*.py",
     "*/tests/*",
@@ -44,8 +47,8 @@ omit = [
 
 [tool.coverage.paths]
 source = [
-    "tools",
-    "*/homecoming-build-companion/tools",
+    "scripts",
+    "*/homecoming-build-companion/scripts",
 ]
 
 [tool.coverage.report]
@@ -90,7 +93,7 @@ ignore = [
 "**/conftest.py" = ["D"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["tools"]
+known-first-party = ["scripts", "coh_engine"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
@@ -103,6 +106,7 @@ line-ending = "lf"
 
 [tool.mypy]
 python_version = "3.14"
+mypy_path = "src"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = false
@@ -115,10 +119,13 @@ module = "tests.*"
 disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
-testpaths = ["tools"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
 addopts = "-q --tb=short"
+pythonpath = [".", "src"]
+# Without testpaths, bare pytest walks the whole repo — including the huge
+# harvested game-data trees (data/canonical/) and prose dirs.
+testpaths = ["scripts", "src"]
 
 [tool.pylint.main]
 # Pylint disabled - ruff is the standard linter for this repository

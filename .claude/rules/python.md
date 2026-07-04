@@ -2,12 +2,12 @@
 
 **Status:** MUST. Applies to every Python file authored or edited in this project.
 
-This project is Python-first. New tooling, validators, and migrations are written in Python. PowerShell remains only for legacy scripts under `tools/` until the Phase 3 migration replaces them.
+This project is Python-first. New tooling, validators, and migrations are written in Python. PowerShell remains only for legacy scripts under `scripts/` until the Phase 3 migration replaces them.
 
 ## Baseline
 
 - **Python 3.14+ required.** No support for older versions.
-- **Layout:** `src/<package>/` with co-located `tests/` directory; or `tools/<package>/<entrypoints>.py` with `tools/<package>/tests/` for thin tools.
+- **Layout:** `src/<package>/` with co-located `tests/` directory; or `scripts/<package>/<entrypoints>.py` with `scripts/<package>/tests/` for thin tools.
 - **CLI entry:** `__main__.py` so packages run as `python -m <package>`.
 - **Imports:** absolute within the project; relative within a package only when traversing siblings.
 
@@ -37,7 +37,7 @@ Pylint is disabled — ruff is the sole linter.
 - **Fixtures live in `tests/fixtures/`** and are referenced by `conftest.py`.
 - For each rule or unit of logic: author one passing fixture and one violating fixture, then write the test that exercises both.
 
-Test discipline applies to **non-trivial logic**. Trivial wrappers (CLI plumbing, dataclass definitions) don't need bespoke tests but must be covered by integration tests that exercise them end-to-end.
+Test discipline applies to **non-trivial logic**. Trivial wrappers (CLI plumbing, dataclass definitions) don't need bespoke tests, but integration tests must exercise them end-to-end.
 
 ## Pre-commit hooks
 
@@ -70,7 +70,7 @@ VENV detection auto-handles Linux (`.venv/bin/`) vs Windows (`.venv/Scripts/`).
 
 ## Reference
 
-- [`docs/repository-standards/style-guides/python-style-guide.md`](../../docs/repository-standards/style-guides/python-style-guide.md) — full canonical Python style guide imported from repo-template. This rule is the auto-loaded summary; that doc is the SSOT for detailed conventions.
+- [`docs/repository-standards/style-guides/python-style-guide.md`](../../docs/repository-standards/style-guides/python-style-guide.md) — full guide; this rule is the summary.
 - [`error-output.md`](./error-output.md) — diagnostic message standard for tool output.
 - [`c:/Users/petek/repos/repo-template/pyproject.toml`](../../../repo-template/pyproject.toml) — origin of the ruff/mypy/pytest config adapted here to py314.
 - [`c:/Users/petek/repos/repo-template/Makefile`](../../../repo-template/Makefile) — make-target template.

@@ -43,3 +43,8 @@ Desktop.ini
 # Project transient
 inbox/__staging/
 tmp/
+
+# .NET build artifacts + local oracle dumps (tools/oracle-dump)
+tools/oracle-dump/bin/
+tools/oracle-dump/obj/
+tools/oracle-dump/out/

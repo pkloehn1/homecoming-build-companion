@@ -5,8 +5,8 @@ from __future__ import annotations
 import json
 
 import pytest
-from scripts.github.conftest import ExpectedCall, QueueRunner
 
+from scripts.github.conftest import ExpectedCall, QueueRunner
 from scripts.github.create_tag import _build_parser, _validate_sha, _validate_tag, create_tag
 
 # -- _validate_tag ------------------------------------------------------------

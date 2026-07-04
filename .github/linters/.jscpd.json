@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/jscpd.json",
+  "absolute": true,
+  "gitignore": true,
+  "ignore": [
+    "**/*.yml",
+    "**/*.yaml",
+    "**/*.md",
+    "**/.venv/**",
+    "**/.tox/**",
+    "**/.pytest_cache/**",
+    "**/.mypy_cache/**",
+    "**/.ruff_cache/**",
+    "**/build/**",
+    "**/scripts/**/tests/**",
+    "**/src/**/tests/**",
+    "**/.github/instructions/**",
+    "**/data/canonical/**",
+    "**/samples/**",
+    "**/src/coh_engine/tests/fixtures/**"
+  ],
+  "reporters": ["console"],
+  "threshold": 3
+}

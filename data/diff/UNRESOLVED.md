@@ -1,11 +1,12 @@
 # Unresolved patch lines — needs manual review
 
-Lines that matched a numeric-change pattern but couldn't be classified by entity path. Walk these manually and either: add to current_overrides.json by hand, or extend tools/parse-patches.ps1 to handle the pattern.
+Lines that matched a numeric-change pattern but couldn't be classified by entity path. Walk these manually and either: add to current_overrides.json by hand, or extend scripts/parse-patches.ps1 to
+handle the pattern.
 
 Generated: 2026-04-27 21:16
 Total: 42
 
-```
+```text
 [Issue_26_Page_1] no-entity-context: Rain of Arrows animation has been reduced from 4 to 2 seconds. Base recharge time has been increased 5 seconds to compensate.
 [Issue_26_Page_2] no-entity-context: Taser: Recharge reduced from 20 to 10 seconds, duration reduced from scale 10 to scale 5, damage increased from 0.25 to 1.96 (same damage as Energy Punch)
 [Issue_26_Page_2] no-entity-context: Pools > Concealment > Invisibility: Endurance cost lowered from 0.65 to 0.2275. You are now be able to attack while this power is active, but should you attack, all it's defense will suppress.

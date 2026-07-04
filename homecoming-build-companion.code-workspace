@@ -2,12 +2,12 @@
   "folders": [
     {
       "name": "homecoming-build-companion",
-      "path": "."
+      "path": ".",
     },
     {
       "name": "MidsReborn (read-only reference)",
-      "path": "../MidsReborn"
-    }
+      "path": "../MidsReborn",
+    },
   ],
   "settings": {
     "files.eol": "\n",
@@ -19,9 +19,13 @@
     "python.defaultInterpreterPath": "${workspaceFolder:homecoming-build-companion}/.venv/Scripts/python.exe",
     "python.terminal.activateEnvironment": true,
     "python.testing.pytestEnabled": true,
-    "python.testing.pytestArgs": ["tools"],
+    "python.testing.pytestArgs": ["scripts", "src"],
     "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.exclude": ["**/.venv/**", "**/__pycache__/**", "**/node_modules/**"],
+    "python.analysis.exclude": [
+      "**/.venv/**",
+      "**/__pycache__/**",
+      "**/node_modules/**",
+    ],
 
     "ruff.enable": true,
     "ruff.organizeImports": true,
@@ -30,13 +34,13 @@
       "editor.formatOnSave": true,
       "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit",
-        "source.fixAll": "explicit"
-      }
+        "source.fixAll": "explicit",
+      },
     },
 
     "files.associations": {
       "*.mhd": "binary",
-      "*.mxd": "binary"
+      "*.mxd": "binary",
     },
 
     "files.exclude": {
@@ -44,31 +48,34 @@
       "**/.pytest_cache": true,
       "**/.mypy_cache": true,
       "**/.ruff_cache": true,
-      "**/scratch/build-archives": true
+      "**/scratch/build-archives": true,
     },
 
     "search.exclude": {
       "**/.venv": true,
       "**/scratch": true,
-      "**/data/canonical/powers": true
+      "**/data/canonical/powers": true,
     },
 
     "markdownlint.config": {
       "MD013": false,
       "MD024": false,
       "MD033": false,
-      "MD041": false
+      "MD041": false,
     },
 
     "yaml.schemas": {
-      "https://json.schemastore.org/github-workflow.json": [".github/workflows/*.yml", ".github/workflows/*.yaml"]
+      "https://json.schemastore.org/github-workflow.json": [
+        ".github/workflows/*.yml",
+        ".github/workflows/*.yaml",
+      ],
     },
 
     "json.schemas": [
       {
         "fileMatch": ["build-format/samples/*.json", "samples/builds/*.json"],
-        "url": "./build-format/schema.json"
-      }
+        "url": "./build-format/schema.json",
+      },
     ],
 
     "git.confirmSync": false,
@@ -78,8 +85,9 @@
       "titleBar.activeBackground": "#3b1f2b",
       "titleBar.activeForeground": "#fce4ec",
       "titleBar.inactiveBackground": "#2a161f",
-      "titleBar.inactiveForeground": "#9c8590"
-    }
+      "titleBar.inactiveForeground": "#9c8590",
+    },
+    "powershell.cwd": "homecoming-build-companion",
   },
   "extensions": {
     "recommendations": [
@@ -97,7 +105,7 @@
       "gruntfuggly.todo-tree",
       "anthropic.claude-code",
       "ms-dotnettools.csharp",
-      "ms-dotnettools.vscode-dotnet-runtime"
-    ]
-  }
+      "ms-dotnettools.vscode-dotnet-runtime",
+    ],
+  },
 }

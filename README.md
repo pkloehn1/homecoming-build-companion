@@ -8,24 +8,15 @@ Orientation for a Claude project that designs **City of Heroes (Homecoming)** bu
 
 Python 3.14+ is required. The bootstrap creates `.venv/`, installs dev dependencies from `pyproject.toml`, and wires up pre-commit hooks.
 
-**Windows (PowerShell):**
-
-```powershell
-& tools\dev\Bootstrap-Venv.ps1
+```bash
+make bootstrap
 ```
 
-**Linux / macOS / WSL (bash):**
+`make bootstrap` detects the platform and dispatches to `scripts/dev/Bootstrap-Venv.ps1` on Windows or `scripts/dev/bootstrap_venv.sh` elsewhere. For flags or direct invocation:
 
 ```bash
-./tools/dev/bootstrap_venv.sh
-```
-
-**Direct invocation (any platform with Python on PATH):**
-
-```bash
-python -m tools.dev.bootstrap_venv           # full bootstrap
-python -m tools.dev.bootstrap_venv --dry-run # preview without changes
-python -m tools.dev.bootstrap_venv --verify  # verify installed packages match pyproject.toml
+python -m scripts.dev.bootstrap_venv --dry-run  # preview without changes
+python -m scripts.dev.bootstrap_venv --verify   # verify installed packages match pyproject.toml
 ```
 
 The bootstrap is idempotent — hashes `pyproject.toml` and `.pre-commit-config.yaml` and skips when unchanged. Re-run when dependencies change.
@@ -136,4 +127,4 @@ Each file's lane is recorded in [manifest.json](manifest.json). Lanes mean:
 - `community-capture` — manually captured forum/wiki content with attribution.
 - `samples` — sample builds.
 
-Snapshot date: see `manifest.json::generated_at`. If it's been a while since a Homecoming patch, re-harvest (see `tools/lane-a/HARVEST.md` and `tools/lane-b/run.ps1`).
+Snapshot date: see `manifest.json::generated_at`. If it's been a while since a Homecoming patch, re-harvest (see `scripts/lane-a/HARVEST.md` and `scripts/lane-b/run.ps1`).

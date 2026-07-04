@@ -1,11 +1,12 @@
 # Forum Capture Queue
 
-Forum threads to ingest into `community/`. Each row is one capture target with the destination path, primary topic tag, and trust level. Walk these in priority order via the [Chrome + Claude extension workflow](CAPTURE.md).
+Forum threads to ingest into `community/`. Each row is one capture target with the destination path, primary topic tag, and trust level. Walk these in priority order via the [Chrome + Claude
+extension workflow](CAPTURE.md).
 
 After saving each markdown file, run:
 
 ```powershell
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\ingest-forum-capture.ps1" -Path <saved-md-file>
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\ingest-forum-capture.ps1" -Path <saved-md-file>
 ```
 
 That validates frontmatter, drops it into the right folder, and re-runs `regen-index.ps1`.
@@ -78,39 +79,51 @@ This one is special: it's an index of guides on the forum. Capture it, then walk
 
 ## How to capture (concise)
 
-**Easiest path:** generate per-URL prompt blocks once, then copy/paste per capture. See [CAPTURE_WORKFLOW.md](../../homecoming-build-companion/tools/CAPTURE_WORKFLOW.md) for full step-by-step. Short version:
+**Easiest path:** generate per-URL prompt blocks once, then copy/paste per capture. See [CAPTURE_WORKFLOW.md](../../homecoming-build-companion/scripts/CAPTURE_WORKFLOW.md) for full step-by-step.
+Short version:
 
 ```powershell
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\generate-prompts.ps1"
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\generate-prompts.ps1"
 # Open inbox/PROMPTS.md, copy the block for URL N, paste in Claude for Chrome,
 # copy Claude's response, then:
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\capture.ps1" -Paste
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\capture.ps1" -Paste
 ```
 
 **Manual path** (if you'd rather hand-craft the prompt): in Chrome with the Claude extension, on the forum thread, give Claude this prompt:
 
 > Extract this forum thread into markdown blocks matching the format in community/CAPTURE.md.
 >
-> **Multi-post guides.** Many threads spread the guide across several sequential posts by the same author (post 1: intro / table of contents, post 2: section A, post 3: section B, ...). Walk the entire thread and treat ALL posts by the original poster (and any users the OP explicitly names as co-authors) as one continuous guide. Concatenate them in chronological order, preserving the OP's section structure and headings. If the OP edits a post over time, capture the latest version.
+> **Multi-post guides.** Many threads spread the guide across several sequential posts by the same author (post 1: intro / table of contents, post 2: section A, post 3: section B, ...). Walk the
+> entire thread and treat ALL posts by the original poster (and any users the OP explicitly names as co-authors) as one continuous guide. Concatenate them in chronological order, preserving the OP's
+> section structure and headings. If the OP edits a post over time, capture the latest version.
 >
-> Replies from other users are community discussion. Include them only if they materially correct, extend, or codify the guide content (with attribution: "as @user noted in reply 17, ..."). Skip flames, signatures, brief praise, off-topic chatter.
+> Replies from other users are community discussion. Include them only if they materially correct, extend, or codify the guide content (with attribution: "as @user noted in reply 17, ..."). Skip
+> flames, signatures, brief praise, off-topic chatter.
 >
-> **Embedded builds.** When a forum post contains a complete build dump (a Hero Plan / Villain Plan forum-export block, a `[b]Hero Plan...[/b]` BBCode block, or a DataLink URL), extract it as a SEPARATE markdown block in your response, immediately after the parent capture. Each build is a loadable artifact and gets its own file when ingested, so it carries enough context to stand alone. When the thread has zero embedded builds, emit only the parent capture.
+> **Embedded builds.** When a forum post contains a complete build dump (a Hero Plan / Villain Plan forum-export block, a `[b]Hero Plan...[/b]` BBCode block, or a DataLink URL), extract it as a
+> SEPARATE markdown block in your response, immediately after the parent capture. Each build is a loadable artifact and gets its own file when ingested, so it carries enough context to stand alone.
+> When the thread has zero embedded builds, emit only the parent capture.
 >
 > **Output**: Emit one PARENT capture block followed by zero or more BUILD sub-capture blocks. All output is fenced markdown blocks; no other commentary.
 >
-> **PARENT frontmatter**: title, url (full), source (forums.homecomingservers.com), authors (every author whose content you included), date_posted (OP's first-post date), date_captured (today), captured_by (local-capture), topic_tags (3-5 tags, first one = topic folder), trust (the level shown on this row), multi_post (true/false), post_count, contradicts_data (none unless something stands out vs game data).
+> **PARENT frontmatter**: title, url (full), source (forums.homecomingservers.com), authors (every author whose content you included), date_posted (OP's first-post date), date_captured (today),
+> captured_by (local-capture), topic_tags (3-5 tags, first one = topic folder), trust (the level shown on this row), multi_post (true/false), post_count, contradicts_data (none unless something
+> stands out vs game data).
 >
-> **PARENT body**: Summary (3-5 bullets covering the WHOLE guide); Verbatim excerpt (substantive paragraphs chronologically, multi-post sections marked `### Post N — Section: <name>`); Notable replies (optional); Build attachments (lists every embedded build emitted in per-build blocks, plus any DataLink-only references and .mxd attachments).
+> **PARENT body**: Summary (3-5 bullets covering the WHOLE guide); Verbatim excerpt (substantive paragraphs chronologically, multi-post sections marked `### Post N — Section: <name>`); Notable
+> replies (optional); Build attachments (lists every embedded build emitted in per-build blocks, plus any DataLink-only references and .mxd attachments).
 >
-> **BUILD sub-capture frontmatter** (one per embedded build): title, parent_guide (relative path), parent_url, post_url (with `#post-N` anchor when available), build_author, date_posted, date_captured (today), captured_by (local-capture), archetype, primary, secondary, ancillary (or "none"), build_goal (one phrase), build_format (forum-export | datalink | mxd | mixed), verified (false), contradicts_data (none unless flag), suggested_filename (`builds/<archetype-lowercase>/<slug>.md`).
+> **BUILD sub-capture frontmatter** (one per embedded build): title, parent_guide (relative path), parent_url, post_url (with `#post-N` anchor when available), build_author, date_posted,
+> date_captured (today), captured_by (local-capture), archetype, primary, secondary, ancillary (or "none"), build_goal (one phrase), build_format (forum-export | datalink | mxd | mixed), verified
+> (false), contradicts_data (none unless flag), suggested_filename (`builds/<archetype-lowercase>/<slug>.md`).
 >
-> **BUILD body**: Context (2-4 sentences pulled from the parent guide so the build reads cleanly on its own); Verbatim build (the complete forum-export block, copied verbatim, source formatting preserved); DataLink (when posted); Notes from the author (when present in the same post).
+> **BUILD body**: Context (2-4 sentences pulled from the parent guide so the build reads cleanly on its own); Verbatim build (the complete forum-export block, copied verbatim, source formatting
+> preserved); DataLink (when posted); Notes from the author (when present in the same post).
 
 Save the markdown locally. Then in PowerShell:
 
 ```powershell
-& "$env:USERPROFILE\repos\homecoming-build-companion\tools\ingest-forum-capture.ps1" -Path <local-md> -Target <one-of-target-paths-from-the-table>
+& "$env:USERPROFILE\repos\homecoming-build-companion\scripts\ingest-forum-capture.ps1" -Path <local-md> -Target <one-of-target-paths-from-the-table>
 ```
 
 The script validates the frontmatter, copies the file to `community/<target>/<slug>.md`, and re-runs the index regenerator.
@@ -119,4 +132,5 @@ The script validates the frontmatter, copies the file to `community/<target>/<sl
 
 ## Progress tracking
 
-Mark rows here when captured: change the row to `~~strikethrough~~` or add a ✓ at the end. Or just check `community/INDEX.md` after each capture — it auto-regenerates from frontmatter and shows what's in the project now.
+Mark rows here when captured: change the row to `~~strikethrough~~` or add a ✓ at the end. Or just check `community/INDEX.md` after each capture — it auto-regenerates from frontmatter and shows
+what's in the project now.

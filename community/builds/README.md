@@ -8,7 +8,7 @@ Each file here is a verbatim build extracted from a forum thread. Builds live in
 
 ## Layout
 
-```
+```text
 community/builds/
 ├── tanker/
 │   ├── invuln-ss-softcap-bopper.md
@@ -37,7 +37,7 @@ The folder is the lowercase archetype name (with hyphens for spaces).
 Every build file carries:
 
 | Field | Purpose |
-|---|---|
+| --- | --- |
 | `title` | Build name from the post, or fallback `<AT>/<Primary>/<Secondary> — <theme>`. |
 | `parent_guide` | Relative path to the parent capture (the forum thread guide). |
 | `parent_url` | Forum thread URL. |
@@ -67,7 +67,8 @@ Each build file has these sections:
 
 ## Ingestion
 
-The capture pipeline ([`tools/capture.ps1`](../../tools/capture.ps1)) detects sub-capture frontmatter (presence of `archetype` + `primary` + `parent_url`) and routes the file to the path in `suggested_filename`. The parent capture lands in its `community/<topic>/` folder; build files land here.
+The capture pipeline ([`scripts/capture.ps1`](../../scripts/capture.ps1)) detects sub-capture frontmatter (presence of `archetype` + `primary` + `parent_url`) and routes the file to the path in
+`suggested_filename`. The parent capture lands in its `community/<topic>/` folder; build files land here.
 
 ## Verification
 

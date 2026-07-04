@@ -1,0 +1,24 @@
+---
+# Checkov configuration for Super-Linter (auto-discovered in LINTER_RULES_PATH).
+#
+# Scope: GitHub Actions configuration - the only IaC surface in this repo.
+# Without framework scoping, Checkov's auto-detection tries every .json in the
+# harvested game-data trees (data/canonical/ is tens of thousands of files) as
+# potential CloudFormation/ARM templates and hangs the lint job past its
+# 30-minute timeout.
+framework:
+  - github_actions
+skip-check:
+  # CKV_GHA_7 forbids workflow_dispatch inputs. super-linter.yml's full_scan
+  # input is a boolean scope toggle for a read-only lint job - it cannot
+  # affect build outputs.
+  - CKV_GHA_7
+# Single source of truth for Checkov carve-outs (the workflow sets no
+# CHECKOV_SKIP_PATH): the harvested game-data trees are the documented
+# 30-minute-hang risk, tmp dirs are scratch.
+skip-path:
+  - /tmp
+  - tmp
+  - data/canonical
+  - samples
+  - src/coh_engine/tests/fixtures

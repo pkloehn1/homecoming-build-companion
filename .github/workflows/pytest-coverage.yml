@@ -32,6 +32,8 @@ jobs:
       statuses: write
     strategy:
       fail-fast: false
+      # Matrix mirrors the packages that exist in THIS repo (adapted from the
+      # kloehnwars-homelab import; re-sync when packages are added).
       matrix:
         include:
           - package: ci
@@ -42,10 +44,6 @@ jobs:
             test_path: scripts/common/tests
             cov_path: scripts/common
             display: COMMON
-          - package: context-validator
-            test_path: scripts/context_validator/tests
-            cov_path: scripts/context_validator
-            display: CONTEXT_VALIDATOR
           - package: dev
             test_path: scripts/dev/tests
             cov_path: scripts/dev
@@ -58,27 +56,14 @@ jobs:
             test_path: scripts/github/tests
             cov_path: scripts/github
             display: GITHUB
-          - package: inventory
-            test_path: scripts/inventory/tests
-            cov_path: scripts/inventory
-            display: INVENTORY
-          - package: linting
-            test_path: scripts/linting/tests
-            cov_path: scripts/linting
-            display: LINTING
-          - package: precommit
-            test_path: scripts/precommit/tests
-            cov_path: scripts/precommit
-            display: PRECOMMIT
           - package: testing-hooks
             test_path: scripts/testing/hooks/tests
             cov_path: scripts/testing/hooks
             display: TESTING_HOOKS
-          - package: testing
-            test_path: scripts/testing/tests
-            cov_path: scripts/testing
-            cov_config: .github/coverage/testing.toml
-            display: TESTING
+          - package: coh-engine
+            test_path: src/coh_engine/tests
+            cov_path: src/coh_engine
+            display: COH_ENGINE
 
     steps:
       - name: Checkout
@@ -89,7 +74,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.11"
+          python-version: "3.14"
           cache: "pip"
 
       - name: Install dependencies
@@ -103,26 +88,26 @@ jobs:
           TEST_PATH: ${{ matrix.test_path }}
           COV_PATH: ${{ matrix.cov_path }}
           PACKAGE: ${{ matrix.package }}
-          COV_CONFIG_FLAG: ${{ matrix.cov_config && format('--cov-config={0}', matrix.cov_config) || '' }}
         run: |
           mkdir -p reports
           python -m pytest -vv \
             "${TEST_PATH}" \
             --log-cli-level=INFO \
             --cov="${COV_PATH}" \
-            ${COV_CONFIG_FLAG:+"${COV_CONFIG_FLAG}"} \
             --cov-report=term-missing \
             --cov-fail-under=100 \
             --junitxml="reports/pytest-${PACKAGE}.xml"
 
-      - name: Test Report (${{ matrix.display }})
-        uses: dorny/test-reporter@v3
+      # dorny/test-reporter (JUnit rendering) removed: unverified creator,
+      # blocked by this repo's Actions policy (GitHub-owned + verified only).
+      # The junitxml report is uploaded as a run artifact instead.
+      - name: Upload JUnit report (${{ matrix.display }})
+        uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: "--> Tested: ${{ matrix.display }}"
+          name: pytest-junit-${{ matrix.package }}
           path: reports/pytest-${{ matrix.package }}.xml
-          reporter: java-junit
-          fail-on-error: true
+          retention-days: 14
 
       - name: Report status context
         if: ${{ !cancelled() && github.event_name == 'pull_request' }}
@@ -144,6 +129,13 @@ jobs:
       pull-requests: read
       statuses: write
     steps:
+      # Checkout must precede the gate step: the report step below runs on
+      # failure too (!cancelled()) and needs the local composite action on disk.
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
       - name: Check test results
         env:
           MATRIX_RESULT: ${{ needs.test.result }}
@@ -152,11 +144,6 @@ jobs:
             printf 'Test matrix failed: %s\n' "${MATRIX_RESULT}"
             exit 1
           fi
-
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          persist-credentials: false
 
       - name: Report status context
         if: ${{ !cancelled() && github.event_name == 'pull_request' }}

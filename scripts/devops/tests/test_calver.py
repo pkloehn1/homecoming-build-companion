@@ -6,8 +6,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 import pytest
-from scripts.common.git_runner import GitResult
 
+from scripts.common.git_runner import GitResult
 from scripts.devops.calver import (
     CalVerResult,
     _DefaultGitRunner,
