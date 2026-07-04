@@ -68,8 +68,10 @@ def test_read_past_end_raises() -> None:
 
 
 def test_seven_bit_length_overflow_raises() -> None:
-    # Six continuation bytes never terminate the length -> guarded.
-    cur = Cursor(b"\x80\x80\x80\x80\x80\x80")
+    # Five continuation bytes (a 6th would exceed a 32-bit value) -> rejected,
+    # matching .NET's Read7BitEncodedInt, which throws before reading a 6th byte.
+    cur = Cursor(b"\x80\x80\x80\x80\x80")
+    assert len(cur) == 5
     with pytest.raises(ValueError, match="7-bit length"):
         cur.read_7bit_length()
 

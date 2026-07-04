@@ -10,6 +10,7 @@ from typing import Self
 
 import pytest
 
+from coh_engine.archetypes import Archetype, ArchetypeDb
 from coh_engine.buildfile.binary import Cursor
 from coh_engine.buildfile.dbindex import EnhIndexEntry
 from coh_engine.buildfile.mxd import (
@@ -181,10 +182,70 @@ def test_legacy_format_reads_no_proc_no_inherent() -> None:
     assert build.power_entries[0].stat_include is True
 
 
-def test_qualified_names_uses_uid_strings() -> None:
+def test_qualified_names_rejected() -> None:
+    # Mids never writes qualified-names builds; the reader rejects them rather
+    # than silently misparsing slot enhancement references.
     buf = _header(_Buf(), f32(3.20), qualified=True, has_sub=False)
-    buf.i32(0)  # 1 entry
-    buf.string("Test.Set.Power").sbyte(4).boolean(True).boolean(False).i32(0).i32(0)
-    buf.sbyte(-1)  # 0 slots
-    build = read_mxd_build(bytes(buf.b), POWER_INDEX, ENH_INDEX)
-    assert build.power_entries[0].power_name == "Test.Set.Power"
+    with pytest.raises(ValueError, match="qualified-names"):
+        read_mxd_build(bytes(buf.b), POWER_INDEX, ENH_INDEX)
+
+
+@pytest.mark.parametrize("bad_byte", [99, -1])
+def test_out_of_range_enum_byte_rejected(bad_byte: int) -> None:
+    # A relative-level ordinal outside [0,9] is corrupt: reject rather than raise
+    # IndexError or silently wrap (-1 -> "PlusFive").
+    buf = _Buf().i32(5).sbyte(bad_byte).sbyte(0)  # Normal enh
+    with pytest.raises(ValueError, match="relative level ordinal"):
+        _read_slot_data(Cursor(bytes(buf.b)), ENH_INDEX, f32(3.20))
+
+
+def test_out_of_range_grade_byte_rejected() -> None:
+    buf = _Buf().i32(5).sbyte(4).sbyte(9)  # relative Even(4), grade 9 (only 0..3 valid)
+    with pytest.raises(ValueError, match="grade ordinal"):
+        _read_slot_data(Cursor(bytes(buf.b)), ENH_INDEX, f32(3.20))
+
+
+def test_afterburner_migration() -> None:
+    from coh_engine.buildfile.mxd import _migrate_power_name
+
+    assert _migrate_power_name("Pool.Flight.Afterburner", 5) == "Pool.Flight.Evasive_Maneuvers"
+    assert _migrate_power_name("Inherent.Inherent.Afterburner", 10) == "Pool.Flight.Evasive_Maneuvers"
+    assert _migrate_power_name("Inherent.Inherent.Afterburner", 30) == "Inherent.Inherent.Afterburner"
+    assert _migrate_power_name("Pool.Flight.Fly", 0) == "Pool.Flight.Fly"
+
+
+def _archetypes() -> ArchetypeDb:
+    at = Archetype(
+        index=0,
+        class_name="Class_Scrapper",
+        display_name="Scrapper",
+        class_type="Hero",
+        column=0,
+        playable=True,
+        hitpoints=1,
+        hp_cap=1.0,
+        res_cap=1.0,
+        damage_cap=1.0,
+        recharge_cap=1.0,
+        recovery_cap=1.0,
+        regen_cap=1.0,
+        perception_cap=1.0,
+        base_recovery=1.0,
+        base_regen=1.0,
+        base_threat=1.0,
+    )
+    return ArchetypeDb(classes=(at,))
+
+
+def test_valid_class_uid_accepted() -> None:
+    buf = _header(_Buf(), f32(3.20), qualified=False, has_sub=False)
+    buf.i32(-1)  # 0 power entries
+    build = read_mxd_build(bytes(buf.b), POWER_INDEX, ENH_INDEX, _archetypes())
+    assert build.class_name == "Class_Scrapper"
+
+
+def test_invalid_class_uid_rejected() -> None:
+    buf = _header(_Buf(), f32(3.20), qualified=False, has_sub=False)
+    buf.i32(-1)
+    with pytest.raises(ValueError, match="invalid class UID"):
+        read_mxd_build(bytes(buf.b), POWER_INDEX, ENH_INDEX, ArchetypeDb(classes=()))

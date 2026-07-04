@@ -119,9 +119,14 @@ def _parse_slot(obj: dict[str, Any]) -> Slot:
 
 
 def _parse_power_entry(obj: dict[str, Any]) -> PowerEntry:
+    power_name = obj["PowerName"]
+    # Mids applies the -1 only to a real (resolved) power; an empty placeholder
+    # entry keeps its stored level (Mids substitutes Levels_MainPowers, a DB value
+    # not available at the parse layer — deferred to CP10).
+    level = obj["Level"] - 1 if power_name else obj["Level"]
     return PowerEntry(
-        power_name=obj["PowerName"],
-        level=obj["Level"] - 1,  # -1 offset
+        power_name=power_name,
+        level=level,
         stat_include=obj.get("StatInclude", False),
         proc_include=obj.get("ProcInclude", False),
         variable_value=obj.get("VariableValue", 0),

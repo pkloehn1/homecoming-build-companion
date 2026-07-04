@@ -22,6 +22,7 @@ import re
 import zlib
 from dataclasses import dataclass, field
 
+from coh_engine.archetypes import ArchetypeDb
 from coh_engine.buildfile.binary import Cursor
 from coh_engine.buildfile.dbindex import EnhIndexEntry
 from coh_engine.buildfile.mbd import Enhancement, PowerEntry, Slot, SubPower
@@ -185,6 +186,33 @@ _POWERSET_MIGRATIONS = {
     "Pool.Fitness": "Pool.Invisibility",
 }
 
+# Homecoming power-FullName migration (MidsCharacterFileFormat.cs:655-674). The
+# Inherent variant only migrates for the first 24 grid slots. Legacy StaticIndex
+# remaps (ReplTable, Fitness nID) and the Levels_MainPowers fallback are deferred
+# to CP10 — they need harness dumps the reader does not yet have.
+_POWER_MIGRATIONS = {"Pool.Flight.Afterburner": "Pool.Flight.Evasive_Maneuvers"}
+
+
+def _enum_name(table: tuple[str, ...], ordinal: int, kind: str) -> str:
+    """Map an enum ordinal to its name, rejecting an out-of-range (corrupt) byte.
+
+    ReadSlotData casts the raw ``SByte`` to the enum; a negative or too-large value
+    would silently wrap (``-1 -> "PlusFive"``) or raise ``IndexError`` if indexed
+    directly, so a corrupt build is rejected with a clear error instead.
+    """
+    if 0 <= ordinal < len(table):
+        return table[ordinal]
+    raise ValueError(f"corrupt .mxd: {kind} ordinal {ordinal} out of range")
+
+
+def _migrate_power_name(name: str, index: int) -> str:
+    """Apply the Homecoming Afterburner -> Evasive_Maneuvers power-name migration."""
+    if name in _POWER_MIGRATIONS:
+        return _POWER_MIGRATIONS[name]
+    if name == "Inherent.Inherent.Afterburner" and index < 24:
+        return "Pool.Flight.Evasive_Maneuvers"
+    return name
+
 
 @dataclass(frozen=True, slots=True)
 class MxdBuild:
@@ -241,25 +269,26 @@ def _read_slot_data(
     if entry is None:  # -1 sentinel or unresolved -> empty slot
         return None
     if entry.type_id in ("Normal", "SpecialO"):
-        relative_level = _EENH_RELATIVE[cur.read_sbyte()]
-        grade = _EENH_GRADE[cur.read_sbyte()]
+        relative_level = _enum_name(_EENH_RELATIVE, cur.read_sbyte(), "relative level")
+        grade = _enum_name(_EENH_GRADE, cur.read_sbyte(), "grade")
         return Enhancement(uid=entry.uid, grade=grade, io_level=1, relative_level=relative_level)
     if entry.type_id in ("InventO", "SetO"):
         io_level = cur.read_sbyte()
         io_level = min(io_level, 49)
         relative_level = "Even"
         if f_version > 1.0:
-            relative_level = _EENH_RELATIVE[cur.read_sbyte()]
+            relative_level = _enum_name(_EENH_RELATIVE, cur.read_sbyte(), "relative level")
         return Enhancement(uid=entry.uid, grade="None", io_level=io_level, relative_level=relative_level)
     # eType.None: reference present but no trailing fields.
     return Enhancement(uid=entry.uid, grade="None", io_level=1, relative_level="Even")
 
 
-def _resolve_power(cur: Cursor, qualified: bool, power_index: dict[int, str]) -> tuple[int, str]:
-    """Read a power reference, returning (static_index, resolved FullName or "")."""
-    if qualified:
-        name = cur.read_string()
-        return (0 if name else -1, name)
+def _resolve_power(cur: Cursor, power_index: dict[int, str]) -> tuple[int, str]:
+    """Read a non-qualified power reference (``Int32`` StaticIndex) -> (index, FullName).
+
+    Qualified-names builds (a String UID reference) are rejected up front in
+    :func:`read_mxd_build`, so only the StaticIndex form is handled here.
+    """
     static_index = cur.read_int32()
     return static_index, power_index.get(static_index, "")
 
@@ -268,6 +297,7 @@ def read_mxd_build(
     buffer: bytes,
     power_index: dict[int, str],
     enh_index: dict[int, EnhIndexEntry],
+    archetypes: ArchetypeDb | None = None,
 ) -> MxdBuild:
     """Parse a decompressed ``.mxd`` binary buffer into an :class:`MxdBuild`.
 
@@ -276,16 +306,26 @@ def read_mxd_build(
     powerset bookkeeping that method also performs are UI/model concerns and are
     not reproduced — only the build data is extracted.
 
+    When ``archetypes`` is given, an unresolvable class UID is rejected as Mids
+    does. Qualified-names builds (never written by Mids) are rejected rather than
+    silently misparsed.
+
     Raises:
-        ValueError: if the magic number is absent or the version is too new.
+        ValueError: if the magic number is absent, the version is too new, the
+            build uses qualified names, or (with ``archetypes``) the class UID is
+            invalid.
     """
     cur = Cursor(buffer, _scan_magic(buffer))
     f_version = cur.read_single()
     fmt = _format_for_version(f_version)
 
     qualified = cur.read_boolean()
+    if qualified:
+        raise ValueError("qualified-names .mxd builds are not supported")
     has_sub_power = cur.read_boolean()
     class_name = cur.read_string()
+    if archetypes is not None and archetypes.nid_from_uid_class(class_name) < 0:
+        raise ValueError(f"invalid class UID: {class_name!r}")
     origin_uid = cur.read_string()
     alignment = cur.read_int32() if f_version > 1 else 0
     name = cur.read_string()
@@ -297,8 +337,9 @@ def read_mxd_build(
 
     power_count = cur.read_array_count()
     entries: list[PowerEntry] = []
-    for _ in range(power_count):
-        static_index, power_name = _resolve_power(cur, qualified, power_index)
+    for index in range(power_count):
+        static_index, power_name = _resolve_power(cur, power_index)
+        power_name = _migrate_power_name(power_name, index)
         level = 0
         stat_include = proc_include = False
         variable_value = inherent_slots_used = 0
@@ -314,7 +355,7 @@ def read_mxd_build(
             if has_sub_power:
                 sub_count = cur.read_sbyte() + 1
                 for _ in range(sub_count):
-                    _, sub_name = _resolve_power(cur, qualified, power_index)
+                    _, sub_name = _resolve_power(cur, power_index)
                     sub_powers.append(SubPower(power_name=sub_name, stat_include=cur.read_boolean()))
 
         slot_count = cur.read_sbyte() + 1
@@ -357,6 +398,7 @@ def read_mxd(
     text: str,
     power_index: dict[int, str],
     enh_index: dict[int, EnhIndexEntry],
+    archetypes: ArchetypeDb | None = None,
 ) -> MxdBuild:
     """Decode a ``.mxd`` share block and parse it into an :class:`MxdBuild`."""
-    return read_mxd_build(decode_mxd(text), power_index, enh_index)
+    return read_mxd_build(decode_mxd(text), power_index, enh_index, archetypes)

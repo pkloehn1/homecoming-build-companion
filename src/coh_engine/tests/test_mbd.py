@@ -197,6 +197,37 @@ def test_enhancement_object_without_uid_is_none() -> None:
     assert build.power_entries[0].slot_entries[0].enhancement is None
 
 
+def test_empty_power_entry_keeps_raw_level() -> None:
+    # An empty placeholder entry (PowerName="") does not get the -1 offset that a
+    # resolved power gets — Mids substitutes Levels_MainPowers for such entries.
+    data = {
+        "BuiltWith": {"App": "x", "Version": "1.0.0", "Database": "Homecoming", "DatabaseVersion": "1.0.0"},
+        "Level": "50",
+        "Class": "Class_Blaster",
+        "Origin": "Magic",
+        "Alignment": "Hero",
+        "Name": "T",
+        "Comment": "",
+        "PowerSets": ["A"],
+        "LastPower": 0,
+        "PowerEntries": [
+            {
+                "PowerName": "",
+                "Level": 5,
+                "StatInclude": False,
+                "ProcInclude": False,
+                "VariableValue": 0,
+                "InherentSlotsUsed": 0,
+                "SubPowerEntries": [],
+                "SlotEntries": [],
+            }
+        ],
+    }
+    entry = parse_mbd(data).power_entries[0]
+    assert entry.power_name == ""
+    assert entry.level == 5  # raw, no -1
+
+
 def test_missing_builtwith_raises() -> None:
     with pytest.raises(ValueError, match="BuiltWith"):
         parse_mbd({"Level": "50"})

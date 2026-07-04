@@ -10,6 +10,7 @@ from pathlib import Path
 
 import pytest
 
+from coh_engine.archetypes import load_archetypes
 from coh_engine.buildfile.dbindex import EnhIndexEntry, load_enhancement_index, load_power_index
 from coh_engine.buildfile.mbd import Build, Enhancement, PowerEntry, load_mbd
 from coh_engine.buildfile.mxd import MxdBuild, read_mxd
@@ -21,6 +22,7 @@ SAMPLES = REPO / "samples" / "builds"
 FIXTURES = Path(__file__).parent / "fixtures"
 MXD_DIR = FIXTURES / "mxd"
 ORACLE = FIXTURES / "oracle"
+ARCHETYPES = load_archetypes(ORACLE / "archetypes.json")
 
 
 @pytest.fixture(scope="module")
@@ -81,14 +83,16 @@ def test_all_mxd_fixtures_match_their_mbd(indexes: Indexes) -> None:
     mxd_files = sorted(MXD_DIR.glob("*.mxd"))
     assert len(mxd_files) == 5
     for mxd_path in mxd_files:
-        mx = read_mxd(mxd_path.read_text(encoding="utf-8"), power_index, enh_index)
+        mx = read_mxd(mxd_path.read_text(encoding="utf-8"), power_index, enh_index, ARCHETYPES)
         mb = load_mbd(_mbd_for(mxd_path))
         _assert_build_parity(mx, mb)
 
 
 def test_scrapper_specifics(indexes: Indexes) -> None:
     power_index, enh_index = indexes
-    mx = read_mxd((MXD_DIR / "Scrapper - Dark-Shield.mxd").read_text(encoding="utf-8"), power_index, enh_index)
+    mx = read_mxd(
+        (MXD_DIR / "Scrapper - Dark-Shield.mxd").read_text(encoding="utf-8"), power_index, enh_index, ARCHETYPES
+    )
     assert mx.format == "current"
     assert mx.class_name == "Class_Scrapper"
     smite = _named(mx.power_entries)[0]

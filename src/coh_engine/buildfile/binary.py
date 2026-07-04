@@ -68,18 +68,19 @@ class Cursor:
         return f32(struct.unpack("<f", self.read_bytes(4))[0])
 
     def read_7bit_length(self) -> int:
-        """Read a .NET 7-bit-encoded (LEB128) unsigned length prefix."""
+        """Read a .NET 7-bit-encoded (LEB128) unsigned length prefix.
+
+        Matches ``BinaryReader.Read7BitEncodedInt``: at most 5 groups (a 32-bit
+        value); a 5th byte that still sets the continuation bit is malformed and
+        raises, one byte earlier than a naive ``shift > 35`` guard would.
+        """
         result = 0
-        shift = 0
-        while True:
+        for shift in range(0, 35, 7):  # 0,7,14,21,28 -> 5 bytes maximum
             byte = self.read_bytes(1)[0]
             result |= (byte & 0x7F) << shift
             if (byte & 0x80) == 0:
-                break
-            shift += 7
-            if shift > 35:
-                raise ValueError("7-bit length prefix too long")
-        return result
+                return result
+        raise ValueError("7-bit length prefix too long")
 
     def read_string(self) -> str:
         """Read a .NET length-prefixed UTF-8 string."""
