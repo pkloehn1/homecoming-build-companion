@@ -11,8 +11,10 @@
 
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Mids_Reborn;
 using Mids_Reborn.Core;
 using Mids_Reborn.Core.Base.Master_Classes;
+using Mids_Reborn.Core.BuildFile;
 
 namespace OracleDump;
 
@@ -109,10 +111,75 @@ internal static class Program
         DumpArchetypes(outDir);
         DumpMaths(outDir);
         DumpEnhancementClasses(outDir);
+        DumpEnhancements(outDir);
         DumpPowerIndex(outDir);
+
+        // Optional third arg: a directory of .mbd sample builds. Each is loaded
+        // through Mids and re-saved as a .mxd share block, giving the Python port
+        // real Mids-produced .mxd fixtures to validate its reader against.
+        if (args.Length >= 3)
+        {
+            ExportMxdBuilds(Path.GetFullPath(args[2]), outDir);
+        }
 
         Console.WriteLine($"OK: dumps written to {outDir}");
         return 0;
+    }
+
+    private static void DumpEnhancements(string outDir)
+    {
+        // StaticIndex -> {UID, TypeID}: the map the .mxd slot reader needs to know
+        // how many bytes follow each enhancement reference (the TypeID switch in
+        // ReadSlotData). The in-memory nID is the array index.
+        var db = DatabaseAPI.Database;
+        var enhancements = db.Enhancements
+            .Select((e, nid) => (e, nid))
+            .Where(t => t.e != null)
+            .Select(t => new
+            {
+                Nid = t.nid,
+                t.e.StaticIndex,
+                t.e.UID,
+                TypeId = (int)t.e.TypeID,
+                TypeName = t.e.TypeID.ToString(),
+            })
+            .ToList();
+        WriteJson(outDir, "enhancements.json", enhancements);
+    }
+
+    private static void ExportMxdBuilds(string samplesDir, string outDir)
+    {
+        if (!Directory.Exists(samplesDir))
+        {
+            Console.Error.WriteLine($"E09: samples dir not found: {samplesDir}");
+            return;
+        }
+
+        var mxdDir = Path.Combine(outDir, "mxd");
+        Directory.CreateDirectory(mxdDir);
+
+        // Recurse: samples/builds is split into community/ and operator-builds/ subfolders.
+        foreach (var mbdPath in Directory.EnumerateFiles(samplesDir, "*.mbd", SearchOption.AllDirectories))
+        {
+            // A fresh character per build so an earlier load never bleeds into the next.
+            MainModule.MidsController.Toon = new clsToonX();
+            if (!BuildManager.Instance.LoadFromFile(mbdPath))
+            {
+                Console.Error.WriteLine($"E10: LoadFromFile failed for {mbdPath}");
+                continue;
+            }
+
+            var mxd = MidsCharacterFileFormat.MxDBuildSaveString(true, false);
+            if (string.IsNullOrEmpty(mxd))
+            {
+                Console.Error.WriteLine($"E11: MxDBuildSaveString returned empty for {mbdPath}");
+                continue;
+            }
+
+            var outPath = Path.Combine(mxdDir, Path.GetFileNameWithoutExtension(mbdPath) + ".mxd");
+            File.WriteAllText(outPath, mxd);
+            Console.WriteLine($"exported {outPath}");
+        }
     }
 
     private static void WriteJson(string outDir, string name, object payload)
