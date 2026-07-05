@@ -6,22 +6,22 @@ folded into character totals exactly like any other buff power
 (``clsToonX.cs:2177-2178``):
 
 1. **Tally** (``GenerateSetBonusData`` / ``I9SetData.Add``, ``Build.cs:1151-1176``,
-   ``I9SetData.cs:31-52``) — per build power picked at ``Level <= ForceLevel``,
-   count the SetO pieces per enhancement set. Non-SetO IOs never contribute. There
-   is no per-slot level gate: if the power's pick level passes, all its slots count.
+    ``I9SetData.cs:31-52``) — per build power picked at ``Level <= ForceLevel``,
+    count the SetO pieces per enhancement set. Non-SetO IOs never contribute. There
+    is no per-slot level gate: if the power's pick level passes, all its slots count.
 2. **BuildEffects** (``I9SetData.cs:73-128``) — tier bonuses activate at
-   ``SlottedCount > 1`` (>=2 pieces) filtered by PvMode; per-enhancement specials
-   / uniques activate at ``SlottedCount > 0`` (>=1 piece), matched by the specific
-   slotted enhancement. Each activation contributes global ``set_bonus`` power ids.
+    ``SlottedCount > 1`` (>=2 pieces) filtered by PvMode; per-enhancement specials
+    / uniques activate at ``SlottedCount > 0`` (>=1 piece), matched by the specific
+    slotted enhancement. Each activation contributes global ``set_bonus`` power ids.
 3. **Rule of Five + MyPet skip** (``GetSetBonusVirtualPower``, ``Build.cs:1178-1226``)
-   — a counter keyed on the exact ``set_bonus`` power id (the identity of the exact
-   numeric bonus value) folds instances 1..5 and drops the 6th+; MyPet-only bonuses
-   are skipped (but still consume a Rule-of-Five slot).
+    — a counter keyed on the exact ``set_bonus`` power id (the identity of the exact
+    numeric bonus value) folds instances 1..5 and drops the 6th+; MyPet-only bonuses
+    are skipped (but still consume a Rule-of-Five slot).
 4. Assembly — the surviving bonus powers' effects are collected, in Mids' exact
-   order (build-power order -> set first-encounter order -> tier-then-special id
-   order -> effect-array order), into one :class:`~coh_engine.effect.Power`. The
-   ordering is load-bearing: the buff/enh passes sum per bucket in float32, and
-   float addition is not associative, so a different fold order would diverge.
+    order (build-power order -> set first-encounter order -> tier-then-special id
+    order -> effect-array order), into one :class:`~coh_engine.effect.Power`. The
+    ordering is load-bearing: the buff/enh passes sum per bucket in float32, and
+    float addition is not associative, so a different fold order would diverge.
 
 The RESOLVED exemplar rule (spec § set-bonuses-ruleof5): Mids applies **no** -3
 set-min retention. The one gate is power pick ``Level <= ForceLevel``.
@@ -195,7 +195,8 @@ def validate_set_slotting(
             if set_def is None:
                 raise ValueError(
                     f"H-ENH-002: enhancement nID {slot.enh} in {power.full_name!r} is a set IO whose set "
-                    f"(nIDSet {record.nid_set}) is not in the set database; the build references an unknown set"
+                    f"(nIDSet {record.nid_set}) is not in the set database; remove the piece or re-dump the "
+                    "set database so it includes this set"
                 )
             if not power_accepts_set(power, set_def):
                 raise ValueError(
@@ -222,8 +223,10 @@ def _tally_power(power_slots: Sequence[SlotRef], enh_db: Mapping[int, Enhancemen
     for slot in power_slots:
         if slot.enh < 0:
             continue
-        record = enh_db[slot.enh]
-        if record.type_name != "SetO":
+        # .get, not [], to match validate_set_slotting: an enh id absent from enh_db
+        # (inconsistent slots/enh dumps) is skipped like a non-SetO piece, not a crash.
+        record = enh_db.get(slot.enh)
+        if record is None or record.type_name != "SetO":
             continue
         info = by_set.get(record.nid_set)
         if info is None:

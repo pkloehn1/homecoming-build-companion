@@ -527,7 +527,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
-            toggle_end_mult={},
+            toggle_end_agg={},
         )
         assert result.totals.def_[0] == f32(0.05)
         assert result.totals.def_[1] == f32(f32(0.10) + f32(0.05))
@@ -547,7 +547,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
-            toggle_end_mult={},
+            toggle_end_agg={},
         )
         assert result.totals.buff_dam == f32(1.0)
 
@@ -565,7 +565,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
-            toggle_end_mult={},
+            toggle_end_agg={},
         )
         assert result.totals.buff_dam == f32(0.1)
 
@@ -582,7 +582,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
-            toggle_end_mult={},
+            toggle_end_agg={},
         )
         assert result.totals.buff_dam == f32(1.0)
 
@@ -606,7 +606,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
-            toggle_end_mult={},
+            toggle_end_agg={},
         )
         capped = result.totals_capped
         assert result.totals.res[1] == f32(0.9)
@@ -637,7 +637,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
-            toggle_end_mult={},
+            toggle_end_agg={},
         )
         assert result.totals_capped.hp_max == f32(10000.0)
 

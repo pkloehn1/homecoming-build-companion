@@ -168,7 +168,11 @@ def load_powers_effects(path: Path | str) -> tuple[Power, ...]:
             variable_enabled=r["VariableEnabled"],
             stat_include=r["StatInclude"],
             variable_value=r["VariableValue"],
-            set_types=tuple(r.get("SetTypes", ())),
+            # Strict, like enhancement.py's nIDSet: a power that accepts no sets is
+            # dumped as an explicit [] (loads fine and validates as reject-all); only
+            # a dump predating the field is missing the key, and should fail loud
+            # rather than silently validate every set IO as illegally slotted.
+            set_types=tuple(r["SetTypes"]),
             effects=tuple(_parse_effect(fx) for fx in r["Effects"]),
         )
         for r in records

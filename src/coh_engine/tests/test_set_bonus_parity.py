@@ -41,7 +41,8 @@ MIDS = FIXTURES / "mids"
 
 SET_BONUS_BUILD = "shield_scrapper_set_bonuses"
 MIXED_SETS_BUILD = "shield_scrapper_mixed_sets"
-SET_BONUS_BUILDS = [SET_BONUS_BUILD, MIXED_SETS_BUILD]
+GLOBAL_ENDRDX_BUILD = "shield_scrapper_global_endrdx"
+SET_BONUS_BUILDS = [SET_BONUS_BUILD, MIXED_SETS_BUILD, GLOBAL_ENDRDX_BUILD]
 NO_SET_BONUS_BUILDS = ["shield_scrapper_slotted", "hasten_2rech", "shield_scrapper_noslots"]
 
 VECTOR_FIELDS = {
@@ -270,6 +271,45 @@ def test_set_bonus_totals_match_mids(
                 assert f32(cell) == got_vec[i], f"{side}.{json_key}[{i}]"
         for json_key, attr in SCALAR_FIELDS.items():
             assert f32(want[json_key]) == getattr(got, attr), f"{side}.{json_key}"
+
+
+def test_global_endurance_discount_folds_into_toggle_end_use(
+    mods: AttribMods,
+    classes: ArchetypeDb,
+    enums: EnumMaps,
+    config: EngineConfig,
+    server: ServerData,
+    enh_db: dict[int, EnhancementRecord],
+    tables: MathTables,
+    set_db: SetBonusDb,
+) -> None:
+    """A global endurance-discount set bonus reduces every toggle's EndUse (Mids Pass3).
+
+    Reactive Defenses' 5-piece grants ``Enhancement/EnduranceDiscount +0.0375`` — a
+    global ``BuffEndRdx`` that folds into each running toggle's cost divisor, not just
+    the powers slotting it. The buffed toggle cost, and hence ``Totals.EndUse``, must
+    match Mids with that global term applied.
+    """
+    name = GLOBAL_ENDRDX_BUILD
+    powers = load_powers_effects(MIDS / "builds" / name / "powers_effects.json")
+    slots = load_build_slots(MIDS / "builds" / name / "slots.json")
+    expected = _totals(name)
+    result = compute_base_totals(
+        powers,
+        class_name=expected["Class"],
+        mods=mods,
+        classes=classes,
+        enums=enums,
+        config=config,
+        server=server,
+        slots=slots,
+        enh_db=enh_db,
+        tables=tables,
+        set_db=set_db,
+    )
+    assert result.totals.buff_end_rdx == f32(expected["Totals"]["BuffEndRdx"])
+    assert result.totals.buff_end_rdx > 0.0  # the global term is actually present
+    assert result.totals.end_use == f32(expected["Totals"]["EndUse"])
 
 
 @pytest.mark.parametrize("name", NO_SET_BONUS_BUILDS)
