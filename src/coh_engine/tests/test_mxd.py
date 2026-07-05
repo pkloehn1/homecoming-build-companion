@@ -1,4 +1,4 @@
-"""Tests for the .mxd share-wrapper and payload decode layer (CP2)."""
+"""Tests for the .mxd share-wrapper and payload decode layer."""
 
 import zlib
 

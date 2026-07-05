@@ -1,4 +1,4 @@
-"""Tests for the StaticIndex resolution maps used by the .mxd reader (CP2)."""
+"""Tests for the StaticIndex resolution maps used by the .mxd reader."""
 
 from pathlib import Path
 

@@ -278,5 +278,63 @@
     "MaxJumpSpeed": 50,
     "MaxFlySpeed": 51,
     "Absorb": 66
+  },
+  "eEnhance": {
+    "None": 0,
+    "Accuracy": 1,
+    "Damage": 2,
+    "Defense": 3,
+    "EnduranceDiscount": 4,
+    "Endurance": 5,
+    "SpeedFlying": 6,
+    "Heal": 7,
+    "HitPoints": 8,
+    "Interrupt": 9,
+    "JumpHeight": 10,
+    "SpeedJumping": 11,
+    "Mez": 12,
+    "Range": 13,
+    "RechargeTime": 14,
+    "X_RechargeTime": 15,
+    "Recovery": 16,
+    "Regeneration": 17,
+    "Resistance": 18,
+    "SpeedRunning": 19,
+    "ToHit": 20,
+    "Slow": 21,
+    "Absorb": 22
+  },
+  "eEnhGrade": {
+    "None": 0,
+    "TrainingO": 1,
+    "DualO": 2,
+    "SingleO": 3
+  },
+  "eEnhRelative": {
+    "None": 0,
+    "MinusThree": 1,
+    "MinusTwo": 2,
+    "MinusOne": 3,
+    "Even": 4,
+    "PlusOne": 5,
+    "PlusTwo": 6,
+    "PlusThree": 7,
+    "PlusFour": 8,
+    "PlusFive": 9
+  },
+  "eType": {
+    "None": 0,
+    "Normal": 1,
+    "InventO": 2,
+    "SpecialO": 3,
+    "SetO": 4
+  },
+  "eSchedule": {
+    "A": 0,
+    "B": 1,
+    "C": 2,
+    "D": 3,
+    "Multiple": 4,
+    "None": -1
   }
 }

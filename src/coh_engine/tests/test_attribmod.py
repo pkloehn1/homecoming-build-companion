@@ -1,4 +1,4 @@
-"""Tests for the AttribMod table loader and the GetModifier lookup (CP2)."""
+"""Tests for the AttribMod table loader and the GetModifier lookup."""
 
 from pathlib import Path
 

@@ -1,4 +1,4 @@
-"""Tests for coh_engine.effect — Effect.Mag and the GetModifier class routing (CP3)."""
+"""Tests for coh_engine.effect — Effect.Mag and the GetModifier class routing."""
 
 from collections.abc import Callable
 

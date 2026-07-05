@@ -9,8 +9,8 @@
   "Class": "Class_Dominator",
   "Origin": "Magic",
   "Alignment": "Hero",
-  "Name": "CP3 Arsenal Dominator (no slots)",
-  "Comment": "CP3 parity fixture: empty slots, toggles/autos only.",
+  "Name": "Arsenal Dominator (no slots)",
+  "Comment": "Parity fixture: empty slots, toggles/autos only.",
   "PowerSets": [
     "Dominator_Control.Arsenal_Control",
     "Dominator_Assault.Arsenal_Assault",

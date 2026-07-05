@@ -31,8 +31,8 @@ class Schedule(IntEnum):
 class Aspect(StrEnum):
     """Enhancement aspects the value pipeline touches (subset of ``Enums.eEnhance``).
 
-    The full eEnhance enum (with MidsReborn's integer values) lands with the CP2
-    database export; until then aspects are identified by name only.
+    The full eEnhance enum (with MidsReborn's integer values) lives in the
+    database export; this curated subset identifies aspects by name only.
     """
 
     ACCURACY = "accuracy"

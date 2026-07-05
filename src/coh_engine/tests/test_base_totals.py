@@ -1,4 +1,4 @@
-"""Tests for coh_engine.base_totals — filtering, bucket routing, GBD_Totals (CP3)."""
+"""Tests for coh_engine.base_totals — filtering, bucket routing, GBD_Totals."""
 
 import math
 from collections.abc import Callable
@@ -15,17 +15,21 @@ from coh_engine.base_totals import (
     ServerData,
     _apply_buff_effects,
     _BuffsX,
+    _compute_enh_multipliers,
     _gbd_totals,
     _get_effect_mag_sum,
     _MagContext,
     _new_buffs,
+    _slot_granted_effect_aspects,
     calculate_pvp_dr,
     compute_base_totals,
     load_enum_maps,
     load_server_data,
 )
+from coh_engine.ed import Schedule
 from coh_engine.effect import Effect, Power
-from coh_engine.maths import f32
+from coh_engine.enhancement import EnhancementRecord, EnhEffect, SlotRef
+from coh_engine.maths import MathTables, f32
 
 MakeEffect = Callable[..., Effect]
 MakePower = Callable[..., Power]
@@ -672,3 +676,91 @@ class TestGbdTotals:
 def test_enum_maps_size(enums: EnumMaps) -> None:
     assert enums.size("eDamage") == 16
     assert enums.size("eMez") == 20
+
+
+def _res_rech_record() -> EnhancementRecord:
+    """An InventO enhancing both Resistance (effect-borne) and RechargeTime (scalar)."""
+    return EnhancementRecord(
+        nid=1,
+        static_index=1,
+        type_name="InventO",
+        superior=False,
+        effects=(
+            EnhEffect(
+                enhance="Resistance", enhance_sub_id=-1, schedule=int(Schedule.B), multiplier=1.0, buff_mode="Any"
+            ),
+            EnhEffect(
+                enhance="RechargeTime", enhance_sub_id=-1, schedule=int(Schedule.A), multiplier=1.0, buff_mode="Any"
+            ),
+        ),
+    )
+
+
+class TestEnhancementGuards:
+    """The fail-loud guards that refuse builds the enhancement port cannot compute."""
+
+    def test_slot_granted_effect_aspects_gates(self) -> None:
+        """Only filled, in-gate slots count; scalar aspects (RechargeTime) are dropped."""
+        enh_db = {1: _res_rech_record()}
+        filled = SlotRef(level=0, is_inherent=False, enh=1, grade=0, io_level=49, relative_level=4)
+        empty = SlotRef(level=0, is_inherent=False, enh=-1, grade=0, io_level=49, relative_level=4)
+        gated = SlotRef(level=50, is_inherent=False, enh=1, grade=0, io_level=49, relative_level=4)
+        granted = _slot_granted_effect_aspects((filled, empty, gated), enh_db, force_level=50)
+        assert granted == {"Resistance"}
+
+    def test_unrouted_aspect_raises(
+        self,
+        make_power: MakePower,
+        make_effect: MakeEffect,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        tables: MathTables,
+    ) -> None:
+        # Slots enhance Resistance, but _enhance_aspect routes no effect to it.
+        power = make_power(make_effect(effect_type="Resistance", buffable=True), build_index=0)
+        slot = SlotRef(level=0, is_inherent=False, enh=1, grade=0, io_level=49, relative_level=4)
+        with pytest.raises(ValueError, match="P-ENH-001"):
+            _compute_enh_multipliers(
+                [power],
+                slots={0: (slot,)},
+                enh_db={1: _res_rech_record()},
+                tables=tables,
+                force_level=50,
+                ctx=_ctx(tiny_mods, tiny_classes),
+            )
+
+    def test_partial_enhancement_inputs_raise(
+        self, tiny_mods: AttribMods, tiny_classes: ArchetypeDb, enums: EnumMaps, server: ServerData
+    ) -> None:
+        with pytest.raises(ValueError, match="E11"):
+            compute_base_totals(
+                [],
+                class_name="Class_Test",
+                mods=tiny_mods,
+                classes=tiny_classes,
+                enums=enums,
+                config=PVE,
+                server=server,
+                slots={},  # enh_db / tables left None -> partial
+            )
+
+    def test_self_enhancement_effect_raises(
+        self,
+        make_power: MakePower,
+        make_effect: MakeEffect,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+        server: ServerData,
+    ) -> None:
+        power = make_power(make_effect(effect_type="DamageBuff", to_who="Self"))
+        with pytest.raises(ValueError, match="E12"):
+            compute_base_totals(
+                [power],
+                class_name="Class_Test",
+                mods=tiny_mods,
+                classes=tiny_classes,
+                enums=enums,
+                config=PVE,
+                server=server,
+            )
