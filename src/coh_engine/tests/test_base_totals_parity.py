@@ -1,4 +1,4 @@
-"""CP3 Mids-parity goldens: base per-attribute totals, no enhancements.
+"""Mids-parity goldens: base per-attribute totals, no enhancements.
 
 Each fixture under ``fixtures/builds/`` is an empty-slot build (zero
 enhancements, clicks toggled off). The Mids dump harness loaded it, ran
@@ -34,7 +34,7 @@ from coh_engine.maths import f32
 
 FIXTURES = Path(__file__).parent / "fixtures"
 MIDS = FIXTURES / "mids"
-BUILDS = ["cp3_shield_scrapper_noslots", "cp3_arsenal_dominator_noslots"]
+BUILDS = ["shield_scrapper_noslots", "arsenal_dominator_noslots"]
 
 VECTOR_FIELDS = {
     "Def": "def_",
@@ -150,7 +150,7 @@ def test_dump_stat_include_matches_mbd_fixture(name: str) -> None:
 
 @pytest.mark.parametrize("name", BUILDS)
 def test_fixture_builds_have_no_enhancements(name: str) -> None:
-    """CP3 scope guard: the parity fixtures are genuinely empty-slot builds."""
+    """Scope guard: the parity fixtures are genuinely empty-slot builds."""
     build = load_mbd(FIXTURES / "builds" / f"{name}.mbd")
     slotted = [
         (p.power_name, s.enhancement.uid)
@@ -162,7 +162,7 @@ def test_fixture_builds_have_no_enhancements(name: str) -> None:
 
 
 def _excluded_effect_count(name: str) -> int:
-    """Effects on stat-included powers that CP3's _can_include drops."""
+    """Effects on stat-included powers that _can_include drops."""
     powers = load_powers_effects(MIDS / "builds" / name / "powers_effects.json")
     return sum(
         1
@@ -177,7 +177,7 @@ def test_hazard_gate_is_non_vacuous() -> None:
     """At least one fixture must carry excluded conditional effects, or the gate
     below would prove nothing. The Shield Scrapper's Critical Hit inherent has
     nine conditional GlobalChanceMod effects."""
-    assert _excluded_effect_count("cp3_shield_scrapper_noslots") > 0
+    assert _excluded_effect_count("shield_scrapper_noslots") > 0
 
 
 @pytest.mark.parametrize("name", BUILDS)
@@ -190,10 +190,10 @@ def test_excluded_conditionals_do_not_affect_totals(
     server: ServerData,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    """The CP3 hazard gate: forcing every ActiveConditionals/SpecialCase effect
+    """The hazard gate: forcing every ActiveConditionals/SpecialCase effect
     back into the sum (bypassing _can_include) must not change any Totals field.
 
-    This is the check the module docstring cites. It proves the CP3 CanInclude
+    This is the check the module docstring cites. It proves the CanInclude
     simplification — which drops those effects rather than evaluating them —
     changes no reported total for the committed fixtures, so the known
     divergence from Mids' CanInclude does not affect these builds.

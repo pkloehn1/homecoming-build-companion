@@ -9,8 +9,8 @@
   "Class": "Class_Scrapper",
   "Origin": "Technology",
   "Alignment": "Hero",
-  "Name": "CP4 Shield Scrapper (Hasten 3x Rech + Deflection Def)",
-  "Comment": "CP4 parity fixture: generic L50 IOs only (no set bonuses). Hasten has 3 Recharge IOs; Deflection has 3 Defense IOs.",
+  "Name": "Shield Scrapper (no slots)",
+  "Comment": "Parity fixture: empty slots, toggles/autos only.",
   "PowerSets": [
     "Scrapper_Melee.Dark_Melee",
     "Scrapper_Defense.Shield_Defense",
@@ -123,37 +123,19 @@
         {
           "Level": 2,
           "IsInherent": false,
-          "Enhancement": {
-            "Uid": "Crafted_Defense_Buff",
-            "Grade": "None",
-            "IoLevel": 49,
-            "RelativeLevel": "Even",
-            "Obtained": false
-          },
+          "Enhancement": null,
           "FlippedEnhancement": null
         },
         {
           "Level": 5,
           "IsInherent": false,
-          "Enhancement": {
-            "Uid": "Crafted_Defense_Buff",
-            "Grade": "None",
-            "IoLevel": 49,
-            "RelativeLevel": "Even",
-            "Obtained": false
-          },
+          "Enhancement": null,
           "FlippedEnhancement": null
         },
         {
           "Level": 13,
           "IsInherent": false,
-          "Enhancement": {
-            "Uid": "Crafted_Defense_Buff",
-            "Grade": "None",
-            "IoLevel": 49,
-            "RelativeLevel": "Even",
-            "Obtained": false
-          },
+          "Enhancement": null,
           "FlippedEnhancement": null
         },
         {
@@ -299,37 +281,13 @@
         {
           "Level": 10,
           "IsInherent": false,
-          "Enhancement": {
-            "Uid": "Crafted_Recharge",
-            "Grade": "None",
-            "IoLevel": 49,
-            "RelativeLevel": "Even",
-            "Obtained": false
-          },
+          "Enhancement": null,
           "FlippedEnhancement": null
         },
         {
           "Level": 11,
           "IsInherent": false,
-          "Enhancement": {
-            "Uid": "Crafted_Recharge",
-            "Grade": "None",
-            "IoLevel": 49,
-            "RelativeLevel": "Even",
-            "Obtained": false
-          },
-          "FlippedEnhancement": null
-        },
-        {
-          "Level": 13,
-          "IsInherent": false,
-          "Enhancement": {
-            "Uid": "Crafted_Recharge",
-            "Grade": "None",
-            "IoLevel": 49,
-            "RelativeLevel": "Even",
-            "Obtained": false
-          },
+          "Enhancement": null,
           "FlippedEnhancement": null
         }
       ]

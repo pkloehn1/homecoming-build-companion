@@ -43,12 +43,12 @@ class TestHastenGoldens:
     """End-to-end aggregation over real slots -> ED once -> the spec goldens."""
 
     def test_three_recharge_ios_9908(self, enh_db: dict[int, EnhancementRecord], tables: MathTables) -> None:
-        slots = _hasten_slots("cp4_shield_scrapper_slotted")
+        slots = _hasten_slots("shield_scrapper_slotted")
         result = aggregate_and_ed(slots, aspect="RechargeTime", enh_db=enh_db, force_level=FORCE_LEVEL, tables=tables)
         assert round(result, 4) == 0.9908
 
     def test_two_recharge_ios_8332(self, enh_db: dict[int, EnhancementRecord], tables: MathTables) -> None:
-        slots = _hasten_slots("cp4_hasten_2rech")
+        slots = _hasten_slots("hasten_2rech")
         result = aggregate_and_ed(slots, aspect="RechargeTime", enh_db=enh_db, force_level=FORCE_LEVEL, tables=tables)
         assert round(result, 4) == 0.8332
 
@@ -56,7 +56,7 @@ class TestHastenGoldens:
         # Per-slot ED then sum would give 3x0.424 = 1.272 (each 0.424 is below
         # the 0.70 threshold, so unreduced). The correct once-on-aggregate value
         # is 0.9908 — well under 1.272.
-        slots = _hasten_slots("cp4_shield_scrapper_slotted")
+        slots = _hasten_slots("shield_scrapper_slotted")
         result = aggregate_and_ed(slots, aspect="RechargeTime", enh_db=enh_db, force_level=FORCE_LEVEL, tables=tables)
         assert result < 1.0
 
@@ -65,7 +65,7 @@ class TestScheduleBAggregation:
     """Defense (schedule B) over Deflection's three generic Defense IOs."""
 
     def test_deflection_defense_uses_schedule_b(self, enh_db: dict[int, EnhancementRecord], tables: MathTables) -> None:
-        slots = load_build_slots(MIDS / "builds" / "cp4_shield_scrapper_slotted" / "slots.json")[DEFLECTION_INDEX]
+        slots = load_build_slots(MIDS / "builds" / "shield_scrapper_slotted" / "slots.json")[DEFLECTION_INDEX]
         result = aggregate_and_ed(slots, aspect="Defense", enh_db=enh_db, force_level=FORCE_LEVEL, tables=tables)
         # Reference composition: three level-50 Defense IOs (MultIO[49][B]) summed,
         # then Enhancement Diversification on schedule B applied once.

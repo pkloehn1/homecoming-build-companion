@@ -1,4 +1,4 @@
-"""Tests for the .mxd binary primitive reader (CP2)."""
+"""Tests for the .mxd binary primitive reader."""
 
 import struct
 

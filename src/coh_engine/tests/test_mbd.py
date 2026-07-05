@@ -1,4 +1,4 @@
-"""Tests for the .mbd (modern JSON) build reader (CP2)."""
+"""Tests for the .mbd (modern JSON) build reader."""
 
 import json
 from pathlib import Path

@@ -4,8 +4,8 @@ import sys
 
 
 def main() -> int:
-    """Print engine status. Real subcommands land with CP2+ (calc, validate, ingest)."""
-    print("coh_engine: MidsReborn build-math port (CP1 scaffold).")
+    """Print engine status. Real subcommands (calc, validate, ingest) land as they are built."""
+    print("coh_engine: MidsReborn build-math port.")
     print("Spec: docs/engine/mids-port-spec.md. Reference: MidsReborn golden fixtures.")
     return 0
 

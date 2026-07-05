@@ -1,4 +1,4 @@
-"""Tests for coh_engine.base_totals — filtering, bucket routing, GBD_Totals (CP3)."""
+"""Tests for coh_engine.base_totals — filtering, bucket routing, GBD_Totals."""
 
 import math
 from collections.abc import Callable

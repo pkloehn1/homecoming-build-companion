@@ -129,8 +129,8 @@ internal static class Program
 
         // Optional fourth arg: a directory of parity-build .mbd files. Each is
         // loaded through Mids, recomputed via GenerateBuffedPowerArray, and dumped
-        // as builds/<name>/{powers_effects,totals}.json — the CP3+ reference
-        // fixtures the Python base-totals math is validated against.
+        // as builds/<name>/{powers_effects,totals}.json — the reference fixtures
+        // the Python base-totals math is validated against.
         if (args.Length >= 4)
         {
             var failures = DumpParityBuilds(Path.GetFullPath(args[3]), outDir);
@@ -160,7 +160,7 @@ internal static class Program
             typeof(Enums.eAttribType), typeof(Enums.eEffectClass), typeof(Enums.eStacking),
             typeof(Enums.eSuppress), typeof(Enums.ePowerType), typeof(Enums.eSpecialCase),
             typeof(Enums.eStatType),
-            // CP4 enhancement-value pipeline: the port resolves a slotted
+            // Enhancement-value pipeline: the port resolves a slotted
             // enhancement's aspect (eEnhance), grade/relative-level/type, and ED
             // schedule by ordinal from these maps.
             typeof(Enums.eEnhance), typeof(Enums.eEnhGrade), typeof(Enums.eEnhRelative),
@@ -238,7 +238,7 @@ internal static class Program
         // that never appear here — sub-power absorption (GBPA_AddSubPowerEffects)
         // and power-override redirects (GBPA_ApplyPowerOverride). The paired
         // totals.json comes from GenerateBuffedPowerArray, so for a build with
-        // such powers the two would disagree. Neither CP3 fixture uses one; a
+        // such powers the two would disagree. No committed fixture uses one; a
         // fixture that does will need this widened to the assembled _buffedPowers.
         var db = DatabaseAPI.Database;
         var powers = new List<object>();
@@ -359,7 +359,7 @@ internal static class Program
         // GetEnhancedPower(i) returns _buffedPowers[i] with the enhancement
         // multipliers already applied (RechargeTime/EndCost divided by their
         // multiplier, Range multiplied, each effect's Math_Mag = base * mult).
-        // This is the per-power, per-aspect float32 reference the CP4 pipeline is
+        // This is the per-power, per-aspect float32 reference the enhancement pipeline is
         // validated against (e.g. Hasten recharge 0.9908 surfaces as a reduced
         // RechargeTime, never in Totals).
         var powers = new List<object>();
@@ -486,7 +486,7 @@ internal static class Program
 
     private static void DumpEnhancementEffects(string outDir)
     {
-        // Per-enhancement effect data the CP4 value pipeline consumes: TypeID +
+        // Per-enhancement effect data the value pipeline consumes: TypeID +
         // Superior gate the schedule multiplier; each Enhancement-mode sEffect
         // carries the aspect (Enhance.ID as eEnhance, SubID for Mez), the ED
         // schedule, the per-effect Multiplier, and the buff/debuff sign gate.

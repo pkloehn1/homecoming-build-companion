@@ -1,4 +1,4 @@
-"""Tests for the archetype/class-record loader (CP2)."""
+"""Tests for the archetype/class-record loader."""
 
 from pathlib import Path
 

@@ -122,7 +122,7 @@ def _parse_power_entry(obj: dict[str, Any]) -> PowerEntry:
     power_name = obj["PowerName"]
     # Mids applies the -1 only to a real (resolved) power; an empty placeholder
     # entry keeps its stored level (Mids substitutes Levels_MainPowers, a DB value
-    # not available at the parse layer — deferred to CP10).
+    # not available at the parse layer — deferred).
     level = obj["Level"] - 1 if power_name else obj["Level"]
     return PowerEntry(
         power_name=power_name,

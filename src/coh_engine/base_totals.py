@@ -1,16 +1,16 @@
-"""Per-attribute totals for a build, with slotted-enhancement values (CP3+CP4).
+"""Per-attribute totals for a build, with slotted-enhancement values.
 
 Ports the totals pipeline of MidsReborn: the buff pass of
 ``CalculateAndApplyEffects`` (``clsToonX.cs:507-832``) feeding ``_selfBuffs`` and
 ``GBD_Totals`` (``clsToonX.cs:839-1002``) folding it into ``Totals`` and
 ``TotalsCapped``.
 
-CP4 enhancement path: when slot + enhancement data are supplied,
+Enhancement path: when slot + enhancement data are supplied,
 :func:`_compute_enh_multipliers` builds each effect's enhancement multiplier
 ``1 + ED(Σ slot values)`` (Pass1 aggregate → Pass2 ED → Pass4 ++), and the buff
 pass reads that enhanced ``BuffedMag`` (``base Mag x multiplier``) — Pass5's
 multiply folded into the sum. With no slots every multiplier is 1 and
-``BuffedMag`` collapses to raw ``Mag`` (the CP3 empty-slot path). The
+``BuffedMag`` collapses to raw ``Mag`` (the empty-slot path). The
 ``_selfEnhance`` accumulator (global enhancement buffs via
 ``GetEnhancementMagSum``) stays zero: the committed fixtures produce none, so it
 is deferred rather than shipped unexercised (see :func:`compute_base_totals`).
@@ -28,13 +28,13 @@ Semantics ported verbatim from the C# control flow, including the quirks:
 - The Absorb %-of-HP normalization reads the *previous* recompute's
     ``Totals.HPMax`` (zero on a fresh headless compute).
 
-CP3 conditional stance: effects carrying ``ActiveConditionals`` or a
+Conditional stance: effects carrying ``ActiveConditionals`` or a
 ``SpecialCase`` are excluded (``ValidateConditional`` and the ``CanInclude``
 character-state switch are unported leaves). This is a *known divergence* —
 Mids' ``CanInclude`` keeps many SpecialCase effects that are true in the
 default character state (Stalker ``Hidden``, Dual Blades ``ComboLevel0``,
 ``NotDisintegrated``, ...), so a build with such an effect feeding a read
-bucket will under-report until CP-later ports the switch. It is safe only
+bucket will under-report until the switch is ported. It is safe only
 where no excluded effect reaches a bucket ``GBD_Totals`` reads; the
 ``test_excluded_conditionals_do_not_affect_totals`` parity test enforces that
 over the committed fixtures.
@@ -222,7 +222,7 @@ class BaseTotals:
 
 @dataclass(slots=True)
 class _BuffsX:
-    """Working accumulator — ``Enums.BuffsX`` (``Enums.cs:1906``), CP3/CP4 subset.
+    """Working accumulator — ``Enums.BuffsX`` (``Enums.cs:1906``), current subset.
 
     Mids' ``EffectAux`` (the debuff half of the speed-scalar split) is written
     only by the ``_selfEnhance`` enhancement pass, which this port does not run
@@ -270,9 +270,9 @@ class _MagContext:
     """The shared lookup context every magnitude computation needs.
 
     ``enh_mult`` maps ``(power.build_index, effect.index)`` to the enhancement
-    multiplier ``1 + ED(Σ slot values)`` for that effect (CP4). Absent keys mean
-    an unenhanced effect (multiplier 1) — CP3's behaviour, and the fallback when
-    no slots/enhancement data are supplied.
+    multiplier ``1 + ED(Σ slot values)`` for that effect. Absent keys mean an
+    unenhanced effect (multiplier 1) — the fallback when no slots/enhancement
+    data are supplied.
     """
 
     mods: AttribMods
@@ -283,7 +283,7 @@ class _MagContext:
 
 
 def _can_include(fx: Effect) -> bool:
-    """CP3 slice of ``Effect.CanInclude`` (``Effect.cs:1856+``).
+    """Partial port of ``Effect.CanInclude`` (``Effect.cs:1856+``).
 
     True only for unconditional effects. Effects with ``ActiveConditionals``
     or a ``SpecialCase`` need the character-state evaluation leaves that are
@@ -337,7 +337,7 @@ def _get_effect_mag_sum(
             or not _pvx_include(fx, ctx.archetype_index, ctx.config)
         ):
             continue
-        # BuffedMag: the enhanced Math_Mag (base Mag x the CP4 enhancement
+        # BuffedMag: the enhanced Math_Mag (base Mag x the enhancement
         # multiplier) that GetEffectMagSum sums. With no enhancement the
         # multiplier is absent and this falls back to raw Mag, exactly as
         # BuffedMag falls back when Math_Mag ≈ 0 (Effect.cs:405). The ticks/
@@ -361,8 +361,8 @@ def _enhance_aspect(fx: Effect) -> str | None:
 
     ``GBPA_Pass1_EnhancePreED`` maps each Buffable effect's ``EffectType`` to an
     ``eEnhance`` bucket, with the ``ResEffect`` + ``ETModifies == Defense``
-    special remap (clsToonX.cs:1795-1833). CP4 ports the effect-borne aspects the
-    committed fixtures exercise — typed Defense and its debuff-resistance
+    special remap (clsToonX.cs:1795-1833). This ports the effect-borne aspects
+    the committed fixtures exercise — typed Defense and its debuff-resistance
     (``ResEffect → Defense``). Non-Buffable effects and effect types outside this
     subset return ``None`` (multiplier 1); later CPs widen the mapping. The
     per-effect ``enhanced_powers.json`` parity assertion catches any misroute for
@@ -497,7 +497,7 @@ def _apply_buff_effects(
                 continue
             if fx.effect_type != "ResEffect" and fx.et_modifies == "Accuracy":
                 # IsGlobalAccuracySource routes set-bonus / GlobalBoost sources
-                # to BuffAcc instead — both arrive with the CP5 set-bonus
+                # to BuffAcc instead — both arrive with the set-bonus
                 # virtual power; every power in a dumped build list is an
                 # ordinary source, and ordinary accuracy buffs act as ToHit.
                 _add(buffs.effect, stat["ToHit"], value)
@@ -523,8 +523,9 @@ def _apply_buff_effects(
                 # C# also guards on !BuildEffectString().Contains("From Enh")
                 # (clsToonX.cs:813), which only matters for enhancement-granted
                 # effects (is_enhancement_effect). No committed fixture has one
-                # (CP4 enhances existing effects, not GBPA_AddEnhFX-injected
-                # ones); the guard lands with that injection in a later CP.
+                # (the enhancement path scales existing effects, not
+                # GBPA_AddEnhFX-injected ones); the guard lands with that
+                # injection when it is ported.
                 buffs.effect[eff_index] = f32(buffs.effect[eff_index] - _mag(fx, power, ctx))
 
 
@@ -564,15 +565,15 @@ def compute_base_totals(
     recompute's ``Totals.HPMax`` that the Absorb normalization reads — zero on
     a fresh headless compute.
 
-    CP4: when ``slots``, ``enh_db`` and ``tables`` are all supplied, each slotted
+    When ``slots``, ``enh_db`` and ``tables`` are all supplied, each slotted
     power's effect magnitudes are enhanced (Pass1→2→4→5 folded into the buff
     pass, which then reads ``BuffedMag``). Omit them (or leave any ``None``) for
-    the empty-slot CP3 path, where every multiplier is 1.
+    the empty-slot path, where every multiplier is 1.
 
     The ``_selfEnhance`` accumulator (global enhancement buffs feeding
-    BuffHaste/BuffAcc/BuffEndRdx/BuffDam via ``GetEnhancementMagSum``) stays zero,
-    as in CP3: the committed fixtures produce no such buff, so wiring it would add
-    unexercised, unvalidated code. It lands when a fixture exercises it (CP5
+    BuffHaste/BuffAcc/BuffEndRdx/BuffDam via ``GetEnhancementMagSum``) stays zero:
+    the committed fixtures produce no such buff, so wiring it would add
+    unexercised, unvalidated code. It lands when a fixture exercises it (the
     set-bonus virtual power).
 
     Raises:
@@ -716,7 +717,7 @@ def _gbd_totals(
     # PVP_Resist_Bonus power into the buff pass when DisablePvE is set
     # (clsToonX.cs:2179-2191) — that injection lives in the GBPA orchestration,
     # not GBD_Totals, and is deferred. PvP-mode resist/mez totals are therefore
-    # incomplete; both CP3 fixtures are PvE (config.disable_pve == false).
+    # incomplete; both parity fixtures are PvE (config.disable_pve == false).
     if ctx.config.disable_pve:
         for index in range(len(totals.def_)):
             totals.def_[index] = calculate_pvp_dr(totals.def_[index])

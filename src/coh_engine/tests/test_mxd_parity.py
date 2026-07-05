@@ -1,4 +1,4 @@
-"""Mids-parity tests for the .mxd semantic reader (CP2).
+"""Mids-parity tests for the .mxd semantic reader.
 
 Each ``.mxd`` fixture was produced by Mids itself (the Mids dump harness loads a
 sample ``.mbd`` and re-saves it via ``MxDBuildSaveString``). Parsing the ``.mxd``

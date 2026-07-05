@@ -189,7 +189,7 @@ _POWERSET_MIGRATIONS = {
 # Homecoming power-FullName migration (MidsCharacterFileFormat.cs:655-674). The
 # Inherent variant only migrates for the first 24 grid slots. Legacy StaticIndex
 # remaps (ReplTable, Fitness nID) and the Levels_MainPowers fallback are deferred
-# to CP10 — they need harness dumps the reader does not yet have.
+# — they need harness dumps the reader does not yet have.
 _POWER_MIGRATIONS = {"Pool.Flight.Afterburner": "Pool.Flight.Evasive_Maneuvers"}
 
 

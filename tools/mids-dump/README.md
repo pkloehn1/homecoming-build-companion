@@ -32,7 +32,7 @@ load errors.
 | `maths.json` | `MultED` / `MultTO` / `MultDO` / `MultSO` / `MultHO` / `MultIO` — the ED and grade-effectiveness tables |
 | `enhancement_classes.json` | Enhancement class ID/name lookup |
 | `enhancements.json` | Per-enhancement `StaticIndex` / `UID` / `TypeID` (`.mxd` slot-reader byte-count map) |
-| `enhancement_effects.json` | Per-enhancement `Superior` + `Enhancement`-mode effects (aspect / schedule / multiplier / buff-mode) — the CP4 value-pipeline input |
+| `enhancement_effects.json` | Per-enhancement `Superior` + `Enhancement`-mode effects (aspect / schedule / multiplier / buff-mode) — the enhancement value-pipeline input |
 | `power_static_index.json` | `StaticIndex` → `FullName` map (`.mxd` build-file resolution layer) |
 | `enums.json` | Name → ordinal for every enum the engine indexes arrays by (`eDamage`, `eEffectType`, `eStatType`, `eEnhance`, `eSchedule`, …) |
 | `config.json` | Config state totals are computed under (`Suppression`, `DisablePvE`, `ForceLevel`, `ScalingToHit`) |

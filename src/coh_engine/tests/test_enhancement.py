@@ -3,7 +3,7 @@
 Ports ``I9Slot.GetScheduleMult`` / ``GetRelativeLevelMultiplier`` /
 ``GetEnhancementEffect`` (MidsReborn ``Core/I9Slot.cs:38-153``). Golden numbers
 come from the Homecoming ``Maths.mhd`` tables and the two generic Invention IOs
-the CP4 fixtures slot: ``Crafted_Recharge`` (RechargeTime, schedule A) and
+the slotted parity fixtures use: ``Crafted_Recharge`` (RechargeTime, schedule A) and
 ``Crafted_Defense_Buff`` (Defense, schedule B).
 """
 
@@ -85,7 +85,7 @@ class TestLoaders:
         assert fx.buff_mode == "BuffOnly"
 
     def test_build_slots_load(self) -> None:
-        slots = load_build_slots(MIDS / "builds" / "cp4_shield_scrapper_slotted" / "slots.json")
+        slots = load_build_slots(MIDS / "builds" / "shield_scrapper_slotted" / "slots.json")
         # Hasten is build index 6 with three level-50 recharge IOs.
         hasten = slots[6]
         filled = [s for s in hasten if s.enh > -1]
@@ -93,7 +93,7 @@ class TestLoaders:
         assert all(s.io_level == 49 and s.relative_level == REL_EVEN for s in filled)
 
     def test_empty_slot_has_enh_minus_one(self) -> None:
-        slots = load_build_slots(MIDS / "builds" / "cp4_shield_scrapper_slotted" / "slots.json")
+        slots = load_build_slots(MIDS / "builds" / "shield_scrapper_slotted" / "slots.json")
         deflection = slots[2]  # three defense IOs + one empty slot
         assert sum(1 for s in deflection if s.enh == -1) == 1
 

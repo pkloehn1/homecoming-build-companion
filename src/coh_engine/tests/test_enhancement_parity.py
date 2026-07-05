@@ -1,4 +1,4 @@
-"""CP4 Mids-parity goldens: enhanced per-power values and slotted totals.
+"""Mids-parity goldens: enhanced per-power values and slotted totals.
 
 Each slotted fixture was loaded through Mids, recomputed with
 ``GenerateBuffedPowerArray()``, and dumped as ``totals.json`` (buffed Totals),
@@ -42,8 +42,8 @@ from coh_engine.maths import MathTables, f32
 FIXTURES = Path(__file__).parent / "fixtures"
 MIDS = FIXTURES / "mids"
 
-SLOTTED = "cp4_shield_scrapper_slotted"
-HASTEN_2RECH = "cp4_hasten_2rech"
+SLOTTED = "shield_scrapper_slotted"
+HASTEN_2RECH = "hasten_2rech"
 DEFLECTION_INDEX = 2
 HASTEN_INDEX = 6
 
@@ -247,10 +247,10 @@ def test_empty_slots_are_a_no_op(
 ) -> None:
     """Passing enhancement data for an empty-slot build changes nothing.
 
-    Regression guard: the CP3 no-slot fixture must produce identical Totals whether
+    Regression guard: the no-slot fixture must produce identical Totals whether
     or not slots/enh_db/tables are supplied — every multiplier collapses to 1.
     """
-    name = "cp3_shield_scrapper_noslots"
+    name = "shield_scrapper_noslots"
     powers = load_powers_effects(MIDS / "builds" / name / "powers_effects.json")
     slots = load_build_slots(MIDS / "builds" / name / "slots.json")
     call: dict[str, Any] = {
