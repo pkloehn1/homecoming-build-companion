@@ -110,6 +110,17 @@ class Power:
     # exemplar. 0-based, like the slot placement levels. Defaults to 0 (always in gate)
     # for directly-constructed powers that never reach the tally.
     pick_level: int = 0
+    # Base (unenhanced) per-power scalars the derived-stat layer (CP6.1) folds
+    # enhancement + global buffs into: recharge time, cast (activation) time,
+    # interrupt time. Cast time is not recharge-reduced; it feeds the end/sec and DPS
+    # cadence. Default 0.0 for directly-constructed powers that skip that layer.
+    recharge_time: float = 0.0
+    cast_time: float = 0.0
+    interrupt_time: float = 0.0
+    # eEnhance aspect names this power ignores (``Power.IgnoreEnh``). The per-power
+    # scalar fold skips an ignored aspect entirely (``IgnoreEnhancement``, Pass 3),
+    # so e.g. One with the Shield (ignores RechargeTime) keeps its recharge at base.
+    ignore_enh: tuple[str, ...] = ()
 
 
 def _parse_effect(raw: dict[str, Any]) -> Effect:
@@ -188,6 +199,10 @@ def load_powers_effects(path: Path | str) -> tuple[Power, ...]:
             # or accept every standard IO.
             enhancements=tuple(r["Enhancements"]),
             pick_level=r["PickLevel"],
+            recharge_time=f32(r["RechargeTime"]),
+            cast_time=f32(r["CastTime"]),
+            interrupt_time=f32(r["InterruptTime"]),
+            ignore_enh=tuple(r["IgnoreEnh"]),
             effects=tuple(_parse_effect(fx) for fx in r["Effects"]),
         )
         for r in records

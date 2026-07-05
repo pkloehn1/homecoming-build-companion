@@ -201,6 +201,10 @@ internal static class Program
             cfg.Inc.DisablePvE,
             cfg.ForceLevel,
             cfg.ScalingToHit,
+            // The damage-math mode DamagePerActivation was computed under (defaults:
+            // Average / Numeric). The port's DPS uses the same per-activation damage.
+            DamageCalculate = cfg.DamageMath.Calculate.ToString(),
+            DamageReturn = cfg.DamageMath.ReturnValue.ToString(),
         });
     }
 
@@ -337,6 +341,19 @@ internal static class Program
                 pw.EndCost,
                 pw.ActivatePeriod,
                 pw.ToggleCost,
+                // Base scalars the derived-stat layer (CP6.1) needs as inputs: it
+                // computes the buffed recharge/end-per-sec/DPS from these and the
+                // slotted + global enhancement, then validates against enhanced_powers.
+                // CastTime is not recharge-reduced (base == buffed here) but feeds the
+                // end/sec and DPS cadence.
+                pw.RechargeTime,
+                CastTime = pw.CastTimeBase,
+                pw.InterruptTime,
+                // eEnhance aspects this power ignores (Power.IgnoreEnh). Pass 3 folds
+                // the global _selfEnhance term into a per-power scalar only when the
+                // aspect is NOT ignored (IgnoreEnhancement, Power.cs:1673) — e.g. One
+                // with the Shield ignores RechargeTime, so its recharge stays at base.
+                IgnoreEnh = pw.IgnoreEnh.Select(e => e.ToString()).ToList(),
                 pw.VariableEnabled,
                 entry.StatInclude,
                 entry.VariableValue,
@@ -499,6 +516,12 @@ internal static class Program
                 buffed.InterruptTime,
                 buffed.Range,
                 buffed.RechargeTime,
+                buffed.CastTime,
+                // Mids' authoritative damage-per-activation (FXGetDamageValue under
+                // the default Numeric/Average config, dumped in config.json): the
+                // reference the port's summed damage validates against; DPS is that
+                // over the (recharge + cast + interrupt) cadence.
+                DamagePerActivation = buffed.FXGetDamageValue(),
                 Base = basePower == null
                     ? null
                     : new
@@ -508,6 +531,7 @@ internal static class Program
                         basePower.InterruptTime,
                         basePower.Range,
                         basePower.RechargeTime,
+                        CastTime = basePower.CastTimeBase,
                     },
                 Effects = buffed.Effects.Select((fx, fxIdx) => new
                 {

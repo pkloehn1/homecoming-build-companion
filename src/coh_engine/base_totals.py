@@ -219,11 +219,31 @@ class TotalStatistics:
 
 
 @dataclass(frozen=True, slots=True)
+class GlobalEnhance:
+    """The global ``_selfEnhance`` scalar terms Pass 3 folds into every per-power scalar.
+
+    ``GBPA_Pass3_EnhancePostED`` (clsToonX.cs:1924) adds each of these to the matching
+    per-power multiplier before the ``+1`` and the divide. CP5 folded only
+    ``end_discount`` into toggle ``EndUse``; the derived-stat layer
+    (:mod:`coh_engine.statistics`) folds the rest into per-power recharge/end/DPS.
+    ``recharge`` is ``_selfEnhance.Effect[Haste]`` (== ``eEffectType.RechargeTime``,
+    the same index the character ``BuffHaste`` reads).
+    """
+
+    recharge: float
+    end_discount: float
+    accuracy: float
+    interrupt: float
+    range: float
+
+
+@dataclass(frozen=True, slots=True)
 class BaseTotals:
-    """Result pair: uncapped ``Totals`` and AT/server-capped ``TotalsCapped``."""
+    """Result pair: uncapped ``Totals`` and AT/server-capped ``TotalsCapped``, plus globals."""
 
     totals: TotalStatistics
     totals_capped: TotalStatistics
+    global_enhance: GlobalEnhance
 
 
 @dataclass(slots=True)
@@ -1137,7 +1157,19 @@ def _gbd_totals(
         for index in range(len(totals.def_)):
             totals.def_[index] = calculate_pvp_dr(totals.def_[index])
 
-    return BaseTotals(totals=totals, totals_capped=_gbd_apply_caps(totals, archetype, server))
+    e_type = enums.maps["eEffectType"]
+    global_enhance = GlobalEnhance(
+        recharge=self_enhance.effect[stat["Haste"]],
+        end_discount=self_enhance.effect[stat["BuffEndRdx"]],
+        accuracy=self_enhance.effect[stat["BuffAcc"]],
+        interrupt=self_enhance.effect[e_type["InterruptTime"]],
+        range=self_enhance.effect[e_type["Range"]],
+    )
+    return BaseTotals(
+        totals=totals,
+        totals_capped=_gbd_apply_caps(totals, archetype, server),
+        global_enhance=global_enhance,
+    )
 
 
 def calculate_pvp_dr(value: float, a: float = f32(1.2), b: float = f32(1.0)) -> float:

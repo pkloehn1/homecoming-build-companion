@@ -41,14 +41,18 @@ load errors.
 | `config.json` | Config state totals are computed under (`Suppression`, `DisablePvE`, `ForceLevel`, `ScalingToHit`) |
 | `builds/<name>/powers_effects.json` | Per parity build (4th CLI arg): the build's resolved DB powers with the full effect field set |
 | `builds/<name>/slots.json` | Per parity build: the resolved per-power slot layout (`Level`, `Enh` nID, `Grade`, `IOLevel`, `RelativeLevel`) |
-| `builds/<name>/enhanced_powers.json` | Per parity build: each power's enhanced scalars + effect `Math_Mag` (`GetEnhancedPower`), with the unenhanced `Base` scalars |
+| `builds/<name>/enhanced_powers.json` | Per parity build: each power's enhanced scalars + effect `Math_Mag` (`GetEnhancedPower`), with the unenhanced `Base` scalars. Adds `CastTime` and `DamagePerActivation` (`FXGetDamageValue` under the `config.json` damage mode) for the CP6.1 derived-stat parity |
 | `builds/<name>/set_bonus_virtual_power.json` | Per parity build: the assembled `SetBonusVirtualPower` effects (structural key + `Mag`) — the golden for the port's set-bonus assembly |
 | `builds/<name>/totals.json` | Per parity build: `Totals` + `TotalsCapped` after `GenerateBuffedPowerArray()` |
 | `builds/<name>_exemplar<N>/*` | A designated build recomputed at a lowered `ForceLevel` (N) — the exemplar-parity fixtures; the set-bonus gate keys on `PickLevel`, not the DB minimum, so bonuses from powers picked above N drop |
 
 Each build power in `powers_effects.json` also carries `PickLevel` (the build's actual
 `PowerEntry.Level`) alongside the DB minimum `Level`; the set-bonus exemplar gate uses
-`PickLevel` (they coincide at `ForceLevel` 50 and diverge under exemplar).
+`PickLevel` (they coincide at `ForceLevel` 50 and diverge under exemplar). It further
+carries the base `RechargeTime` / `CastTime` / `InterruptTime` and `IgnoreEnh` (the
+`eEnhance` aspects the power ignores) — the CP6.1 derived-stat layer's inputs; the
+per-power scalar fold skips an ignored aspect (e.g. One with the Shield ignores
+`RechargeTime`).
 
 Each build power in `powers_effects.json` also carries `SetTypes` (the `eSetType`
 ordinals the power accepts) so the port can map which IO sets are slottable where.

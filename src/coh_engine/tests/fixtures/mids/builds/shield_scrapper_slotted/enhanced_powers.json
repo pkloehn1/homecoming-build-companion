@@ -8,12 +8,15 @@
     "InterruptTime": 0,
     "Range": 7,
     "RechargeTime": 6,
+    "CastTime": 0.97,
+    "DamagePerActivation": 90.839294,
     "Base": {
       "Accuracy": 1,
       "EndCost": 6.864,
       "InterruptTime": 0,
       "Range": 7,
-      "RechargeTime": 6
+      "RechargeTime": 6,
+      "CastTime": 0.97
     },
     "Effects": [
       {
@@ -108,12 +111,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 4,
+    "CastTime": 1.5,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.104,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 4
+      "RechargeTime": 4,
+      "CastTime": 1.5
     },
     "Effects": [
       {
@@ -208,12 +214,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 4,
+    "CastTime": 1.5,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.104,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 4
+      "RechargeTime": 4,
+      "CastTime": 1.5
     },
     "Effects": [
       {
@@ -290,12 +299,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.0325,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -561,12 +573,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -634,12 +649,15 @@
     "InterruptTime": 0,
     "Range": 7,
     "RechargeTime": 10,
+    "CastTime": 1.93,
+    "DamagePerActivation": 134.8826,
     "Base": {
       "Accuracy": 1,
       "EndCost": 10.192,
       "InterruptTime": 0,
       "Range": 7,
-      "RechargeTime": 10
+      "RechargeTime": 10,
+      "CastTime": 1.93
     },
     "Effects": [
       {
@@ -725,12 +743,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 226.0398,
+    "CastTime": 0.73,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 450
+      "RechargeTime": 450,
+      "CastTime": 0.73
     },
     "Effects": [
       {
@@ -762,12 +783,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.228,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -871,12 +895,15 @@
     "InterruptTime": 0,
     "Range": 7,
     "RechargeTime": 2.5,
+    "CastTime": 1.07,
+    "DamagePerActivation": 49.92408,
     "Base": {
       "Accuracy": 1,
       "EndCost": 4.42,
       "InterruptTime": 0,
       "Range": 7,
-      "RechargeTime": 2.5
+      "RechargeTime": 2.5,
+      "CastTime": 1.07
     },
     "Effects": [
       {
@@ -1223,12 +1250,15 @@
     "InterruptTime": 0,
     "Range": 7,
     "RechargeTime": 11,
+    "CastTime": 2.37,
+    "DamagePerActivation": 148.37085,
     "Base": {
       "Accuracy": 1,
       "EndCost": 8.528,
       "InterruptTime": 0,
       "Range": 7,
-      "RechargeTime": 11
+      "RechargeTime": 11,
+      "CastTime": 2.37
     },
     "Effects": [
       {
@@ -1323,12 +1353,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 10,
+    "CastTime": 2.5,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.208,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 10
+      "RechargeTime": 10,
+      "CastTime": 2.5
     },
     "Effects": [
       {
@@ -1576,12 +1609,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 10,
+    "CastTime": 3.1,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.1625,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 10
+      "RechargeTime": 10,
+      "CastTime": 3.1
     },
     "Effects": [
       {
@@ -1685,12 +1721,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 120,
+    "CastTime": 2.37,
+    "DamagePerActivation": 68.81765,
     "Base": {
       "Accuracy": 1.2,
       "EndCost": 15.6,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 120
+      "RechargeTime": 120,
+      "CastTime": 2.37
     },
     "Effects": [
       {
@@ -1893,12 +1932,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 10,
+    "CastTime": 0.67,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.1625,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 10
+      "RechargeTime": 10,
+      "CastTime": 0.67
     },
     "Effects": [
       {
@@ -2119,12 +2161,15 @@
     "InterruptTime": 0,
     "Range": 7,
     "RechargeTime": 15,
+    "CastTime": 2.07,
+    "DamagePerActivation": 189.93672,
     "Base": {
       "Accuracy": 1,
       "EndCost": 11.96,
       "InterruptTime": 0,
       "Range": 7,
-      "RechargeTime": 15
+      "RechargeTime": 15,
+      "CastTime": 2.07
     },
     "Effects": [
       {
@@ -2246,12 +2291,15 @@
     "InterruptTime": 0,
     "Range": 60,
     "RechargeTime": 90,
+    "CastTime": 1.5,
+    "DamagePerActivation": 168.91605,
     "Base": {
       "Accuracy": 1,
       "EndCost": 13.52,
       "InterruptTime": 0,
       "Range": 60,
-      "RechargeTime": 90
+      "RechargeTime": 90,
+      "CastTime": 1.5
     },
     "Effects": [
       {
@@ -2310,12 +2358,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 15,
+    "CastTime": 1.5,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.78,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 15
+      "RechargeTime": 15,
+      "CastTime": 1.5
     },
     "Effects": [
       {
@@ -2527,12 +2578,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 200,
+    "CastTime": 1.5,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 10.4,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 200
+      "RechargeTime": 200,
+      "CastTime": 1.5
     },
     "Effects": [
       {
@@ -2834,12 +2888,15 @@
     "InterruptTime": 0,
     "Range": 150,
     "RechargeTime": 24,
+    "CastTime": 1.33,
+    "DamagePerActivation": 233.85487,
     "Base": {
       "Accuracy": 1,
       "EndCost": 17.94,
       "InterruptTime": 0,
       "Range": 150,
-      "RechargeTime": 24
+      "RechargeTime": 24,
+      "CastTime": 1.33
     },
     "Effects": [
       {
@@ -3069,12 +3126,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 90,
+    "CastTime": 3,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 5.2,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 90
+      "RechargeTime": 90,
+      "CastTime": 3
     },
     "Effects": [
       {
@@ -3196,12 +3256,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -3269,12 +3332,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 10,
+    "CastTime": 2.5,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.312,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 10
+      "RechargeTime": 10,
+      "CastTime": 2.5
     },
     "Effects": [
       {
@@ -3387,12 +3453,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 15,
+    "CastTime": 1.5,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.78,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 15
+      "RechargeTime": 15,
+      "CastTime": 1.5
     },
     "Effects": [
       {
@@ -3469,12 +3538,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 360,
+    "CastTime": 2.5,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 2.6,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 360
+      "RechargeTime": 360,
+      "CastTime": 2.5
     },
     "Effects": [
       {
@@ -3704,12 +3776,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -3804,12 +3879,15 @@
     "InterruptTime": 0,
     "Range": 7,
     "RechargeTime": 2,
+    "CastTime": 0.83,
+    "DamagePerActivation": 22.52214,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
       "InterruptTime": 0,
       "Range": 7,
-      "RechargeTime": 2
+      "RechargeTime": 2,
+      "CastTime": 0.83
     },
     "Effects": [
       {
@@ -3895,12 +3973,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.14625,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -3941,12 +4022,15 @@
     "InterruptTime": 6,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 6,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
       "InterruptTime": 6,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 6
     },
     "Effects": [
       {
@@ -4194,12 +4278,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -4231,12 +4318,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -4268,12 +4358,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -4305,12 +4398,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -4333,12 +4429,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 0,
       "EndCost": 0,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -4361,12 +4460,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 30,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0.118,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 30
+      "RechargeTime": 30,
+      "CastTime": 0
     },
     "Effects": [
       {
@@ -4389,12 +4491,15 @@
     "InterruptTime": 0,
     "Range": 0,
     "RechargeTime": 0,
+    "CastTime": 0,
+    "DamagePerActivation": 0,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
       "InterruptTime": 0,
       "Range": 0,
-      "RechargeTime": 0
+      "RechargeTime": 0,
+      "CastTime": 0
     },
     "Effects": [
       {
