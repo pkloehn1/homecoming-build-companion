@@ -239,7 +239,9 @@ internal static class Program
                 pw.EndCost,
                 pw.ActivatePeriod,
                 pw.ToggleCost,
+                pw.VariableEnabled,
                 entry.StatInclude,
+                entry.VariableValue,
                 Effects = pw.Effects.Select((fx, fxIdx) => new
                 {
                     Index = fxIdx,
@@ -262,6 +264,7 @@ internal static class Program
                     fx.Resistible,
                     fx.IgnoreED,
                     fx.IgnoreScaling,
+                    fx.VariableModified,
                     fx.BaseProbability,
                     fx.Probability,
                     fx.ProcsPerMinute,
@@ -413,6 +416,18 @@ internal static class Program
             sd.BaseToHit,
             sd.MaxSlots,
             sd.EnableInherentSlotting,
+            sd.BaseFlySpeed,
+            sd.BaseJumpSpeed,
+            sd.BaseJumpHeight,
+            sd.BasePerception,
+            sd.BaseRunSpeed,
+            sd.MaxFlySpeed,
+            sd.MaxJumpSpeed,
+            sd.MaxJumpHeight,
+            sd.MaxRunSpeed,
+            sd.MaxMaxFlySpeed,
+            sd.MaxMaxJumpSpeed,
+            sd.MaxMaxRunSpeed,
         });
     }
 
