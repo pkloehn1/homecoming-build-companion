@@ -71,6 +71,7 @@ select = [
     "I",      # isort
     "B",      # flake8-bugbear
     "C4",     # flake8-comprehensions
+    "C90",    # mccabe cyclomatic complexity (max-complexity below)
     "UP",     # pyupgrade
     "SIM",    # flake8-simplify
     "N",      # pep8-naming
@@ -91,6 +92,11 @@ ignore = [
 "__init__.py" = ["F401"]
 "**/test_*.py" = ["D"]
 "**/conftest.py" = ["D"]
+
+[tool.ruff.lint.mccabe]
+# McCabe's canonical threshold (also ruff/flake8 convention). Cyclomatic, not
+# SonarQube's cognitive metric — ruff has no cognitive rule.
+max-complexity = 10
 
 [tool.ruff.lint.isort]
 known-first-party = ["scripts", "coh_engine"]
