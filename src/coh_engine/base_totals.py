@@ -1,12 +1,19 @@
-"""Base per-attribute totals for a build with no enhancements (CP3).
+"""Per-attribute totals for a build, with slotted-enhancement values (CP3+CP4).
 
-Ports the no-enhancement slice of MidsReborn's totals pipeline: the buff pass
-of ``CalculateAndApplyEffects`` (``clsToonX.cs:507-832``) feeding ``_selfBuffs``
-and ``GBD_Totals`` (``clsToonX.cs:839-1002``) folding it into ``Totals`` and
-``TotalsCapped``. With zero enhancements every GBPA multiplier is 1, so each
-effect's ``BuffedMag`` equals its raw ``Mag`` and the enhancement pass
-(``_selfEnhance``) contributes nothing — its read sites are kept at zero here
-and wired up in CP4.
+Ports the totals pipeline of MidsReborn: the buff pass of
+``CalculateAndApplyEffects`` (``clsToonX.cs:507-832``) feeding ``_selfBuffs`` and
+``GBD_Totals`` (``clsToonX.cs:839-1002``) folding it into ``Totals`` and
+``TotalsCapped``.
+
+CP4 enhancement path: when slot + enhancement data are supplied,
+:func:`_compute_enh_multipliers` builds each effect's enhancement multiplier
+``1 + ED(Σ slot values)`` (Pass1 aggregate → Pass2 ED → Pass4 ++), and the buff
+pass reads that enhanced ``BuffedMag`` (``base Mag x multiplier``) — Pass5's
+multiply folded into the sum. With no slots every multiplier is 1 and
+``BuffedMag`` collapses to raw ``Mag`` (the CP3 empty-slot path). The
+``_selfEnhance`` accumulator (global enhancement buffs via
+``GetEnhancementMagSum``) stays zero: the committed fixtures produce none, so it
+is deferred rather than shipped unexercised (see :func:`compute_base_totals`).
 
 Semantics ported verbatim from the C# control flow, including the quirks:
 
@@ -39,14 +46,16 @@ Spec: docs/engine/mids-port-spec.md § effect-model, § gbpa-pass-pipeline,
 import json
 import math
 from collections.abc import Mapping, Sequence
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from types import MappingProxyType
 
 from coh_engine.archetypes import Archetype, ArchetypeDb
 from coh_engine.attribmod import AttribMods
 from coh_engine.effect import Effect, Power, effect_mag
-from coh_engine.maths import f32
+from coh_engine.enh_pipeline import aggregate_and_ed
+from coh_engine.enhancement import EnhancementRecord, SlotRef
+from coh_engine.maths import MathTables, f32
 
 _SPEED_EFFECT_TYPES = ("SpeedFlying", "SpeedRunning", "SpeedJumping")
 
@@ -213,10 +222,11 @@ class BaseTotals:
 
 @dataclass(slots=True)
 class _BuffsX:
-    """Working accumulator — ``Enums.BuffsX`` (``Enums.cs:1906``), CP3 subset.
+    """Working accumulator — ``Enums.BuffsX`` (``Enums.cs:1906``), CP3/CP4 subset.
 
     Mids' ``EffectAux`` (the debuff half of the speed-scalar split) is written
-    only in the enhancement pass, which CP3 does not run; CP4 adds it back.
+    only by the ``_selfEnhance`` enhancement pass, which this port does not run
+    (see :func:`compute_base_totals`); it lands with that pass in a later CP.
     """
 
     effect: list[float]
@@ -257,12 +267,19 @@ def _new_buffs(enums: EnumMaps) -> _BuffsX:
 
 @dataclass(frozen=True, slots=True)
 class _MagContext:
-    """The shared lookup context every magnitude computation needs."""
+    """The shared lookup context every magnitude computation needs.
+
+    ``enh_mult`` maps ``(power.build_index, effect.index)`` to the enhancement
+    multiplier ``1 + ED(Σ slot values)`` for that effect (CP4). Absent keys mean
+    an unenhanced effect (multiplier 1) — CP3's behaviour, and the fallback when
+    no slots/enhancement data are supplied.
+    """
 
     mods: AttribMods
     classes: ArchetypeDb
     archetype_index: int
     config: EngineConfig
+    enh_mult: Mapping[tuple[int, int], float] = field(default_factory=dict)
 
 
 def _can_include(fx: Effect) -> bool:
@@ -320,7 +337,15 @@ def _get_effect_mag_sum(
             or not _pvx_include(fx, ctx.archetype_index, ctx.config)
         ):
             continue
+        # BuffedMag: the enhanced Math_Mag (base Mag x the CP4 enhancement
+        # multiplier) that GetEffectMagSum sums. With no enhancement the
+        # multiplier is absent and this falls back to raw Mag, exactly as
+        # BuffedMag falls back when Math_Mag ≈ 0 (Effect.cs:405). The ticks/
+        # stacking DoT multiply happens after, matching Power.cs:1513-1516.
         mag = _mag(fx, power, ctx)
+        mult = ctx.enh_mult.get((power.build_index, fx.index))
+        if mult is not None:
+            mag = f32(mag * mult)
         if fx.ticks > 1 and fx.stacking == "Yes":
             mag = f32(mag * fx.ticks)
         out.append((fx, mag))
@@ -329,6 +354,66 @@ def _get_effect_mag_sum(
 
 def _mag(fx: Effect, power: Power, ctx: _MagContext) -> float:
     return effect_mag(fx, power, ctx.mods, ctx.classes, ctx.archetype_index)
+
+
+def _enhance_aspect(fx: Effect) -> str | None:
+    """The ``eEnhance`` aspect a Buffable effect is enhanced under (Pass1 subset).
+
+    ``GBPA_Pass1_EnhancePreED`` maps each Buffable effect's ``EffectType`` to an
+    ``eEnhance`` bucket, with the ``ResEffect`` + ``ETModifies == Defense``
+    special remap (clsToonX.cs:1795-1833). CP4 ports the effect-borne aspects the
+    committed fixtures exercise — typed Defense and its debuff-resistance
+    (``ResEffect → Defense``). Non-Buffable effects and effect types outside this
+    subset return ``None`` (multiplier 1); later CPs widen the mapping. The
+    per-effect ``enhanced_powers.json`` parity assertion catches any misroute for
+    a slotted power.
+    """
+    if not fx.buffable:
+        return None
+    if fx.effect_type == "Defense":
+        return "Defense"
+    if fx.effect_type == "ResEffect" and fx.et_modifies == "Defense":
+        return "Defense"
+    return None
+
+
+def _compute_enh_multipliers(
+    included: Sequence[Power],
+    *,
+    slots: Mapping[int, Sequence[SlotRef]],
+    enh_db: Mapping[int, EnhancementRecord],
+    tables: MathTables,
+    force_level: int,
+    ctx: _MagContext,
+) -> dict[tuple[int, int], float]:
+    """Per-effect enhancement multipliers ``1 + ED(Σ slot values)`` (Pass1→2→4).
+
+    For every effect of every slotted power, aggregate the aspect's per-slot
+    enhancement value across the power's slots (gated by the ForceLevel exemplar
+    cutoff) and apply ED once. Only non-unit multipliers are stored — an absent
+    key means an unenhanced effect. ``ctx.enh_mult`` is empty while this runs, so
+    the base magnitudes fed to the buff/debuff sign gate are unenhanced.
+    """
+    out: dict[tuple[int, int], float] = {}
+    for power in included:
+        power_slots = slots.get(power.build_index, ())
+        if not power_slots:
+            continue
+        for fx in power.effects:
+            aspect = _enhance_aspect(fx)
+            if aspect is None:
+                continue
+            aggregate = aggregate_and_ed(
+                power_slots,
+                aspect=aspect,
+                enh_db=enh_db,
+                force_level=force_level,
+                tables=tables,
+                mag=_mag(fx, power, ctx),
+            )
+            if aggregate != 0.0:
+                out[(power.build_index, fx.index)] = f32(1.0 + aggregate)
+    return out
 
 
 def _apply_buff_effects(
@@ -437,8 +522,9 @@ def _apply_buff_effects(
             if power.power_type == "Click" and not power.click_buff:
                 # C# also guards on !BuildEffectString().Contains("From Enh")
                 # (clsToonX.cs:813), which only matters for enhancement-granted
-                # effects (is_enhancement_effect). CP3 has none; CP4 adds the
-                # guard when it wires the enhancement pass.
+                # effects (is_enhancement_effect). No committed fixture has one
+                # (CP4 enhances existing effects, not GBPA_AddEnhFX-injected
+                # ones); the guard lands with that injection in a later CP.
                 buffs.effect[eff_index] = f32(buffs.effect[eff_index] - _mag(fx, power, ctx))
 
 
@@ -467,13 +553,27 @@ def compute_base_totals(
     config: EngineConfig,
     server: ServerData,
     prev_hp_max: float = 0.0,
+    slots: Mapping[int, Sequence[SlotRef]] | None = None,
+    enh_db: Mapping[int, EnhancementRecord] | None = None,
+    tables: MathTables | None = None,
 ) -> BaseTotals:
-    """Compute base ``Totals``/``TotalsCapped`` for an empty-slot build.
+    """Compute ``Totals``/``TotalsCapped`` for a build.
 
     ``powers`` are the dumped build powers; only ``stat_include`` entries
     contribute (``GBD_Totals`` preamble). ``prev_hp_max`` is the previous
     recompute's ``Totals.HPMax`` that the Absorb normalization reads — zero on
     a fresh headless compute.
+
+    CP4: when ``slots``, ``enh_db`` and ``tables`` are all supplied, each slotted
+    power's effect magnitudes are enhanced (Pass1→2→4→5 folded into the buff
+    pass, which then reads ``BuffedMag``). Omit them (or leave any ``None``) for
+    the empty-slot CP3 path, where every multiplier is 1.
+
+    The ``_selfEnhance`` accumulator (global enhancement buffs feeding
+    BuffHaste/BuffAcc/BuffEndRdx/BuffDam via ``GetEnhancementMagSum``) stays zero,
+    as in CP3: the committed fixtures produce no such buff, so wiring it would add
+    unexercised, unvalidated code. It lands when a fixture exercises it (CP5
+    set-bonus virtual power).
 
     Raises:
         ValueError: if ``class_name`` is not a known archetype.
@@ -489,8 +589,14 @@ def compute_base_totals(
     ctx = _MagContext(mods=mods, classes=classes, archetype_index=archetype_index, config=config)
 
     self_buffs = _new_buffs(enums)
-    self_enhance = _new_buffs(enums)  # CP4 wires the enhancement pass; zero here.
+    self_enhance = _new_buffs(enums)  # _selfEnhance stays zero (see docstring).
     included = [p for p in powers if p.stat_include]
+
+    if slots and enh_db and tables is not None:
+        enh_mult = _compute_enh_multipliers(
+            included, slots=slots, enh_db=enh_db, tables=tables, force_level=config.force_level, ctx=ctx
+        )
+        ctx = replace(ctx, enh_mult=enh_mult)
 
     for power in included:
         _apply_buff_effects(power, self_buffs, ctx, enums=enums, prev_hp_max=prev_hp_max)
