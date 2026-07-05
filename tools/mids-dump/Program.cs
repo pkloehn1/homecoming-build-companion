@@ -145,14 +145,15 @@ internal static class Program
         // by eDamage, _selfBuffs.Effect by eEffectType/eStatType, ...). The Python
         // port must never guess these orderings.
         var enums = new Dictionary<string, Dictionary<string, int>>();
-        foreach (var t in new[]
-                 {
-                     typeof(Enums.eEffectType), typeof(Enums.eDamage), typeof(Enums.eMez),
-                     typeof(Enums.eToWho), typeof(Enums.ePvX), typeof(Enums.eAspect),
-                     typeof(Enums.eAttribType), typeof(Enums.eEffectClass), typeof(Enums.eStacking),
-                     typeof(Enums.eSuppress), typeof(Enums.ePowerType), typeof(Enums.eSpecialCase),
-                     typeof(Enums.eStatType),
-                 })
+        var enumTypes = new[]
+        {
+            typeof(Enums.eEffectType), typeof(Enums.eDamage), typeof(Enums.eMez),
+            typeof(Enums.eToWho), typeof(Enums.ePvX), typeof(Enums.eAspect),
+            typeof(Enums.eAttribType), typeof(Enums.eEffectClass), typeof(Enums.eStacking),
+            typeof(Enums.eSuppress), typeof(Enums.ePowerType), typeof(Enums.eSpecialCase),
+            typeof(Enums.eStatType),
+        };
+        foreach (var t in enumTypes)
         {
             var values = new Dictionary<string, int>();
             foreach (var v in Enum.GetValues(t))
