@@ -229,7 +229,10 @@ def effect_mag(
     if effect.attrib_type == "Duration":
         return f32(sign * effect.n_magnitude)
     if effect.attrib_type == "Expression":
-        if effect.expr_magnitude:
+        # C# gates on string.IsNullOrWhiteSpace (Effect.cs:398-399): a
+        # whitespace-only expression is "blank" and falls through to
+        # Scale * nMagnitude, not treated as a real expression.
+        if effect.expr_magnitude.strip():
             raise NotImplementedError(
                 f"E08: cannot compute Mag for {power.full_name} effect {effect.index}: "
                 "AttribType == Expression with a magnitude expression requires the "

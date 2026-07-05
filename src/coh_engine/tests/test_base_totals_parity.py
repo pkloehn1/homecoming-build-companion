@@ -16,6 +16,7 @@ from typing import Any
 
 import pytest
 
+from coh_engine import base_totals
 from coh_engine.archetypes import ArchetypeDb, load_archetypes
 from coh_engine.attribmod import AttribMods, load_attribmod
 from coh_engine.base_totals import (
@@ -158,3 +159,57 @@ def test_fixture_builds_have_no_enhancements(name: str) -> None:
         if s is not None and s.enhancement is not None
     ]
     assert slotted == []
+
+
+def _excluded_effect_count(name: str) -> int:
+    """Effects on stat-included powers that CP3's _can_include drops."""
+    powers = load_powers_effects(MIDS / "builds" / name / "powers_effects.json")
+    return sum(
+        1
+        for p in powers
+        if p.stat_include
+        for fx in p.effects
+        if fx.active_conditionals_count > 0 or fx.special_case != "None"
+    )
+
+
+def test_hazard_gate_is_non_vacuous() -> None:
+    """At least one fixture must carry excluded conditional effects, or the gate
+    below would prove nothing. The Shield Scrapper's Critical Hit inherent has
+    nine conditional GlobalChanceMod effects."""
+    assert _excluded_effect_count("cp3_shield_scrapper_noslots") > 0
+
+
+@pytest.mark.parametrize("name", BUILDS)
+def test_excluded_conditionals_do_not_affect_totals(
+    name: str,
+    mods: AttribMods,
+    classes: ArchetypeDb,
+    enums: EnumMaps,
+    config: EngineConfig,
+    server: ServerData,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """The CP3 hazard gate: forcing every ActiveConditionals/SpecialCase effect
+    back into the sum (bypassing _can_include) must not change any Totals field.
+
+    This is the check the module docstring cites. It proves the CP3 CanInclude
+    simplification — which drops those effects rather than evaluating them —
+    changes no reported total for the committed fixtures, so the known
+    divergence from Mids' CanInclude does not affect these builds.
+    """
+    powers = load_powers_effects(MIDS / "builds" / name / "powers_effects.json")
+    class_name = _expected(name)["Class"]
+    call = {
+        "class_name": class_name,
+        "mods": mods,
+        "classes": classes,
+        "enums": enums,
+        "config": config,
+        "server": server,
+    }
+    excluded = compute_base_totals(powers, **call)
+    monkeypatch.setattr(base_totals, "_can_include", lambda fx: True)
+    forced = compute_base_totals(powers, **call)
+    assert forced.totals == excluded.totals
+    assert forced.totals_capped == excluded.totals_capped

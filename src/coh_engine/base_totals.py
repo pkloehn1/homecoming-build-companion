@@ -23,8 +23,14 @@ Semantics ported verbatim from the C# control flow, including the quirks:
 
 CP3 conditional stance: effects carrying ``ActiveConditionals`` or a
 ``SpecialCase`` are excluded (``ValidateConditional`` and the ``CanInclude``
-character-state switch are unported leaves). The fixture hazard gate verifies
-no such effect feeds any bucket ``GBD_Totals`` reads.
+character-state switch are unported leaves). This is a *known divergence* —
+Mids' ``CanInclude`` keeps many SpecialCase effects that are true in the
+default character state (Stalker ``Hidden``, Dual Blades ``ComboLevel0``,
+``NotDisintegrated``, ...), so a build with such an effect feeding a read
+bucket will under-report until CP-later ports the switch. It is safe only
+where no excluded effect reaches a bucket ``GBD_Totals`` reads; the
+``test_excluded_conditionals_do_not_affect_totals`` parity test enforces that
+over the committed fixtures.
 
 Spec: docs/engine/mids-port-spec.md § effect-model, § gbpa-pass-pipeline,
 § gbd-totals-and-caps.
@@ -44,12 +50,32 @@ from coh_engine.maths import f32
 
 _SPEED_EFFECT_TYPES = ("SpeedFlying", "SpeedRunning", "SpeedJumping")
 
+# Static: the eStatType MaxXSpeed bucket -> the eEffectType speed it sums from.
+_MAX_SPEED_SOURCES = {
+    "MaxRunSpeed": "SpeedRunning",
+    "MaxJumpSpeed": "SpeedJumping",
+    "MaxFlySpeed": "SpeedFlying",
+}
+
 
 @dataclass(frozen=True, slots=True)
 class EnumMaps:
-    """Name -> ordinal maps for the enums Mids indexes arrays by."""
+    """Name -> ordinal maps for the enums Mids indexes arrays by.
+
+    ``inverse`` holds the ordinal -> name reverse of each map, built once at
+    construction so the buff pass does not rebuild it per power.
+    """
 
     maps: Mapping[str, Mapping[str, int]]
+    inverse: Mapping[str, Mapping[int, str]] = field(init=False)
+
+    def __post_init__(self) -> None:
+        """Build and freeze the ordinal -> name inverse of every enum map."""
+        object.__setattr__(
+            self,
+            "inverse",
+            MappingProxyType({name: MappingProxyType({v: k for k, v in m.items()}) for name, m in self.maps.items()}),
+        )
 
     def size(self, enum_name: str) -> int:
         """Array length for ``enum_name`` — C# ``Enum.GetValues<T>().Length``."""
@@ -187,10 +213,13 @@ class BaseTotals:
 
 @dataclass(slots=True)
 class _BuffsX:
-    """Working accumulator — ``Enums.BuffsX`` (``Enums.cs:1906``), CP3 subset."""
+    """Working accumulator — ``Enums.BuffsX`` (``Enums.cs:1906``), CP3 subset.
+
+    Mids' ``EffectAux`` (the debuff half of the speed-scalar split) is written
+    only in the enhancement pass, which CP3 does not run; CP4 adds it back.
+    """
 
     effect: list[float]
-    effect_aux: list[float]
     mez: list[float]
     mez_res: list[float]
     damage: list[float]
@@ -211,7 +240,6 @@ def _new_buffs(enums: EnumMaps) -> _BuffsX:
     n_damage = enums.size("eDamage")
     return _BuffsX(
         effect=[0.0] * n_effect,
-        effect_aux=[0.0] * (n_effect - 1),
         mez=[0.0] * n_mez,
         mez_res=[0.0] * n_mez,
         damage=[0.0] * n_damage,
@@ -242,8 +270,10 @@ def _can_include(fx: Effect) -> bool:
 
     True only for unconditional effects. Effects with ``ActiveConditionals``
     or a ``SpecialCase`` need the character-state evaluation leaves that are
-    not ported yet; excluding them is validated by the fixture hazard gate
-    (no such effect feeds a bucket ``GBD_Totals`` reads).
+    not ported yet, so they are excluded. This diverges from Mids, which keeps
+    many default-true SpecialCase effects (see the module docstring); the
+    ``test_excluded_conditionals_do_not_affect_totals`` gate confirms the
+    committed fixtures have no such effect reaching a read bucket.
     """
     return fx.active_conditionals_count == 0 and fx.special_case == "None"
 
@@ -318,24 +348,19 @@ def _apply_buff_effects(
     if power.power_type == "GlobalBoost":
         return
 
-    effect_type_names = {v: k for k, v in enums.maps["eEffectType"].items()}
+    effect_type_names = enums.inverse["eEffectType"]
     stat = enums.maps["eStatType"]
     e_type = enums.maps["eEffectType"]
     e_mez = enums.maps["eMez"]
     e_damage = enums.maps["eDamage"]
-    max_speed_sources = {
-        "MaxRunSpeed": "SpeedRunning",
-        "MaxJumpSpeed": "SpeedJumping",
-        "MaxFlySpeed": "SpeedFlying",
-    }
 
     for eff_index in range(len(buffs.effect)):
         i_effect = effect_type_names[eff_index]
         if i_effect == "Damage":
             continue
 
-        if i_effect in max_speed_sources:
-            pairs = _get_effect_mag_sum(power, max_speed_sources[i_effect], ctx, max_mode=True)
+        if i_effect in _MAX_SPEED_SOURCES:
+            pairs = _get_effect_mag_sum(power, _MAX_SPEED_SOURCES[i_effect], ctx, max_mode=True)
             self_sum = _sum_mags(_get_effect_mag_sum(power, i_effect, ctx, only_self=True))
             buffs.effect[stat[i_effect]] = f32(buffs.effect[stat[i_effect]] + self_sum)
         else:
@@ -410,6 +435,10 @@ def _apply_buff_effects(
                 value = f32(value * prev_hp_max)
             _add(buffs.effect, eff_index, value)
             if power.power_type == "Click" and not power.click_buff:
+                # C# also guards on !BuildEffectString().Contains("From Enh")
+                # (clsToonX.cs:813), which only matters for enhancement-granted
+                # effects (is_enhancement_effect). CP3 has none; CP4 adds the
+                # guard when it wires the enhancement pass.
                 buffs.effect[eff_index] = f32(buffs.effect[eff_index] - _mag(fx, power, ctx))
 
 
@@ -452,6 +481,10 @@ def compute_base_totals(
     archetype_index = classes.nid_from_uid_class(class_name)
     if archetype_index < 0:
         raise ValueError(f"E09: unknown archetype class name: {class_name!r}")
+    # nid_from_uid_class returns the record's stored Index; the dump harness
+    # writes Index positionally (DumpArchetypes: Index = idx), so it equals the
+    # tuple position get_modifier also indexes by. This invariant holds for all
+    # harness-produced dumps.
     archetype = classes.classes[archetype_index]
     ctx = _MagContext(mods=mods, classes=classes, archetype_index=archetype_index, config=config)
 
@@ -559,15 +592,25 @@ def _gbd_totals(
     min_dmg = min(dmg_slice)
     max_dmg = max(dmg_slice)
     avg_dmg = f32(_float_average(dmg_slice))
-    if max_dmg - avg_dmg < avg_dmg - min_dmg:
+    # C# subtracts float32 values (Damage is float[]), so each difference is
+    # itself f32-rounded before the comparison (clsToonX.cs:965-969).
+    hi_gap = f32(max_dmg - avg_dmg)
+    lo_gap = f32(avg_dmg - min_dmg)
+    if hi_gap < lo_gap:
         totals.buff_dam = max_dmg
-    elif (max_dmg - avg_dmg > avg_dmg - min_dmg) and min_dmg > 0:
+    elif hi_gap > lo_gap and min_dmg > 0:
         totals.buff_dam = min_dmg
     else:
         totals.buff_dam = max_dmg
 
     totals.buff_heal = self_buffs.effect[stat["Heal"]]
 
+    # PvP mode: only the ApplyPvpDr defense pass (inline in GBD_Totals) is
+    # ported. Mids' GenerateBuffData also folds the Temporary_Powers
+    # PVP_Resist_Bonus power into the buff pass when DisablePvE is set
+    # (clsToonX.cs:2179-2191) — that injection lives in the GBPA orchestration,
+    # not GBD_Totals, and is deferred. PvP-mode resist/mez totals are therefore
+    # incomplete; both CP3 fixtures are PvE (config.disable_pve == false).
     if ctx.config.disable_pve:
         for index in range(len(totals.def_)):
             totals.def_[index] = calculate_pvp_dr(totals.def_[index])
@@ -591,9 +634,16 @@ def _gbd_totals(
     return BaseTotals(totals=totals, totals_capped=capped)
 
 
-def calculate_pvp_dr(value: float, a: float = 1.2, b: float = 1.0) -> float:
-    """``CalculatePvpDr`` (``clsToonX.cs:335-338``): PvP defense diminishing returns."""
-    return f32(value * (1.0 - abs(math.atan(a * value)) * (2.0 / math.pi) * b))
+def calculate_pvp_dr(value: float, a: float = f32(1.2), b: float = f32(1.0)) -> float:
+    """``CalculatePvpDr`` (``clsToonX.cs:335-338``): PvP defense diminishing returns.
+
+    Called with ``1.2f`` / ``1.0f`` (clsToonX.cs:57), so the defaults are the
+    float32 values of 1.2 and 1.0. C# widens ``a`` to double for ``a*(double)val``,
+    computes the bracket in double, then ``(float)``-narrows it before the final
+    ``val *`` float multiply — reproduced here as two f32 rounding steps.
+    """
+    factor = f32(1.0 - abs(math.atan(a * value)) * (2.0 / math.pi) * b)
+    return f32(value * factor)
 
 
 def _speed(effect_value: float, base: float) -> float:

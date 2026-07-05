@@ -640,9 +640,11 @@ class TestGbdTotals:
         assert result.totals.def_[1] == calculate_pvp_dr(f32(0.4))
 
     def test_calculate_pvp_dr_formula(self) -> None:
-        value = 0.45
-        expected = f32(value * (1.0 - abs(math.atan(1.2 * value)) * (2.0 / math.pi)))
-        assert calculate_pvp_dr(value) == expected
+        # Faithful to C# CalculatePvpDr: a = 1.2f, the bracket is (float)-narrowed
+        # before the final float multiply (two f32 rounding steps).
+        value = f32(0.45)
+        factor = f32(1.0 - abs(math.atan(f32(1.2) * value)) * (2.0 / math.pi) * f32(1.0))
+        assert calculate_pvp_dr(value) == f32(value * factor)
 
     def test_stat_exclude_powers_contribute_nothing(
         self,

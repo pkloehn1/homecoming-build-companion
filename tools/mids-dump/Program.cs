@@ -132,7 +132,14 @@ internal static class Program
         // fixtures the Python base-totals math is validated against.
         if (args.Length >= 4)
         {
-            DumpParityBuilds(Path.GetFullPath(args[3]), outDir);
+            var failures = DumpParityBuilds(Path.GetFullPath(args[3]), outDir);
+            if (failures > 0)
+            {
+                // Fail loudly: a silent OK on a bad re-baseline leaves the Python
+                // parity suite validating against stale or missing fixtures.
+                Console.Error.WriteLine($"E14: {failures} parity build(s) failed; dumps are incomplete");
+                return 1;
+            }
         }
 
         Console.WriteLine($"OK: dumps written to {outDir}");
@@ -179,14 +186,17 @@ internal static class Program
         });
     }
 
-    private static void DumpParityBuilds(string buildsDir, string outDir)
+    // Returns the number of parity builds that failed to load; Main turns a
+    // non-zero count into a non-zero exit so a bad re-baseline is never masked.
+    private static int DumpParityBuilds(string buildsDir, string outDir)
     {
         if (!Directory.Exists(buildsDir))
         {
             Console.Error.WriteLine($"E12: parity-builds dir not found: {buildsDir}");
-            return;
+            return 1;
         }
 
+        var failures = 0;
         foreach (var mbdPath in Directory.EnumerateFiles(buildsDir, "*.mbd", SearchOption.AllDirectories))
         {
             var toon = new clsToonX();
@@ -194,6 +204,7 @@ internal static class Program
             if (!BuildManager.Instance.LoadFromFile(mbdPath))
             {
                 Console.Error.WriteLine($"E13: LoadFromFile failed for {mbdPath}");
+                failures++;
                 continue;
             }
 
@@ -204,6 +215,8 @@ internal static class Program
             DumpBuildPowersEffects(buildDir, toon);
             DumpBuildTotals(buildDir, toon);
         }
+
+        return failures;
     }
 
     private static void DumpBuildPowersEffects(string buildDir, clsToonX toon)
@@ -211,6 +224,14 @@ internal static class Program
         // The build's resolved DB powers with the full magnitude-driving effect
         // field set. The Python port computes base totals from THESE records; the
         // enum-valued fields are dumped as names (enums.json maps them to ordinals).
+        //
+        // Limitation: this dumps the raw master-DB power (db.Power[NIDPower]),
+        // whose Effects are the pre-assembly set. GBPA assembly can add effects
+        // that never appear here — sub-power absorption (GBPA_AddSubPowerEffects)
+        // and power-override redirects (GBPA_ApplyPowerOverride). The paired
+        // totals.json comes from GenerateBuffedPowerArray, so for a build with
+        // such powers the two would disagree. Neither CP3 fixture uses one; a
+        // fixture that does will need this widened to the assembled _buffedPowers.
         var db = DatabaseAPI.Database;
         var powers = new List<object>();
         for (var i = 0; i < toon.CurrentBuild.Powers.Count; i++)
