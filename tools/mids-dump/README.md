@@ -31,10 +31,14 @@ load errors.
 | `archetypes.json` | Per-AT `Column` (class→column indirection) and all caps (HP/Res/Damage/Recharge/Recovery/Regen/Perception) |
 | `maths.json` | `MultED` / `MultTO` / `MultDO` / `MultSO` / `MultHO` / `MultIO` — the ED and grade-effectiveness tables |
 | `enhancement_classes.json` | Enhancement class ID/name lookup |
+| `enhancements.json` | Per-enhancement `StaticIndex` / `UID` / `TypeID` (`.mxd` slot-reader byte-count map) |
+| `enhancement_effects.json` | Per-enhancement `Superior` + `Enhancement`-mode effects (aspect / schedule / multiplier / buff-mode) — the CP4 value-pipeline input |
 | `power_static_index.json` | `StaticIndex` → `FullName` map (`.mxd` build-file resolution layer) |
-| `enums.json` | Name → ordinal for every enum the engine indexes arrays by (`eDamage`, `eEffectType`, `eStatType`, …) |
+| `enums.json` | Name → ordinal for every enum the engine indexes arrays by (`eDamage`, `eEffectType`, `eStatType`, `eEnhance`, `eSchedule`, …) |
 | `config.json` | Config state totals are computed under (`Suppression`, `DisablePvE`, `ForceLevel`, `ScalingToHit`) |
 | `builds/<name>/powers_effects.json` | Per parity build (4th CLI arg): the build's resolved DB powers with the full effect field set |
+| `builds/<name>/slots.json` | Per parity build: the resolved per-power slot layout (`Level`, `Enh` nID, `Grade`, `IOLevel`, `RelativeLevel`) |
+| `builds/<name>/enhanced_powers.json` | Per parity build: each power's enhanced scalars + effect `Math_Mag` (`GetEnhancedPower`), with the unenhanced `Base` scalars |
 | `builds/<name>/totals.json` | Per parity build: `Totals` + `TotalsCapped` after `GenerateBuffedPowerArray()` |
 
 ## Re-baselining

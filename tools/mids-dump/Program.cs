@@ -113,6 +113,7 @@ internal static class Program
         DumpMaths(outDir);
         DumpEnhancementClasses(outDir);
         DumpEnhancements(outDir);
+        DumpEnhancementEffects(outDir);
         DumpPowerIndex(outDir);
         DumpEnums(outDir);
         DumpConfig(outDir);
@@ -159,6 +160,11 @@ internal static class Program
             typeof(Enums.eAttribType), typeof(Enums.eEffectClass), typeof(Enums.eStacking),
             typeof(Enums.eSuppress), typeof(Enums.ePowerType), typeof(Enums.eSpecialCase),
             typeof(Enums.eStatType),
+            // CP4 enhancement-value pipeline: the port resolves a slotted
+            // enhancement's aspect (eEnhance), grade/relative-level/type, and ED
+            // schedule by ordinal from these maps.
+            typeof(Enums.eEnhance), typeof(Enums.eEnhGrade), typeof(Enums.eEnhRelative),
+            typeof(Enums.eType), typeof(Enums.eSchedule),
         };
         foreach (var t in enumTypes)
         {
@@ -213,6 +219,8 @@ internal static class Program
             var buildDir = Path.Combine(outDir, "builds", Path.GetFileNameWithoutExtension(mbdPath));
             Directory.CreateDirectory(buildDir);
             DumpBuildPowersEffects(buildDir, toon);
+            DumpBuildSlots(buildDir, toon);
+            DumpBuildEnhancedPowers(buildDir, toon);
             DumpBuildTotals(buildDir, toon);
         }
 
@@ -309,6 +317,104 @@ internal static class Program
         WriteJson(buildDir, "powers_effects.json", powers);
     }
 
+    private static void DumpBuildSlots(string buildDir, clsToonX toon)
+    {
+        // The resolved per-power slot layout: for each build power, its SlotEntry
+        // array as Mids resolved it (I9Slot already clamped Grade/IOLevel and
+        // resolved the UID to an Enh nID). BuildIndex matches powers_effects.json.
+        // The port aggregates enhancement value per aspect over these slots,
+        // gating each by Enh > -1 and Level < ForceLevel (clsToonX.cs:1751), so
+        // Level here is Mids' internal (0-based) slot-placement level, dumped raw.
+        var builds = new List<object>();
+        for (var i = 0; i < toon.CurrentBuild.Powers.Count; i++)
+        {
+            var entry = toon.CurrentBuild.Powers[i];
+            if (entry == null || entry.NIDPower < 0 || entry.Slots == null)
+            {
+                continue;
+            }
+
+            builds.Add(new
+            {
+                BuildIndex = i,
+                Slots = entry.Slots.Select(s => new
+                {
+                    s.Level,
+                    s.IsInherent,
+                    s.Enhancement.Enh,
+                    Grade = (int)s.Enhancement.Grade,
+                    GradeName = s.Enhancement.Grade.ToString(),
+                    s.Enhancement.IOLevel,
+                    RelativeLevel = (int)s.Enhancement.RelativeLevel,
+                    RelativeLevelName = s.Enhancement.RelativeLevel.ToString(),
+                }).ToList(),
+            });
+        }
+        WriteJson(buildDir, "slots.json", builds);
+    }
+
+    private static void DumpBuildEnhancedPowers(string buildDir, clsToonX toon)
+    {
+        // The per-power enhanced (buffed) values GenerateBuffedPowerArray produced:
+        // GetEnhancedPower(i) returns _buffedPowers[i] with the enhancement
+        // multipliers already applied (RechargeTime/EndCost divided by their
+        // multiplier, Range multiplied, each effect's Math_Mag = base * mult).
+        // This is the per-power, per-aspect float32 reference the CP4 pipeline is
+        // validated against (e.g. Hasten recharge 0.9908 surfaces as a reduced
+        // RechargeTime, never in Totals).
+        var powers = new List<object>();
+        for (var i = 0; i < toon.CurrentBuild.Powers.Count; i++)
+        {
+            var entry = toon.CurrentBuild.Powers[i];
+            if (entry == null || entry.NIDPower < 0)
+            {
+                continue;
+            }
+
+            var buffed = toon.GetEnhancedPower(i);
+            if (buffed == null)
+            {
+                continue;
+            }
+
+            // Base (unenhanced, assembled) scalars: the port multiplies these by
+            // its computed enhancement multipliers and must reproduce `buffed`.
+            // Dumping them keeps the per-power parity assertion free of magic
+            // base constants.
+            var basePower = toon.GetBasePower(i);
+
+            powers.Add(new
+            {
+                BuildIndex = i,
+                buffed.FullName,
+                buffed.Accuracy,
+                buffed.AccuracyMult,
+                buffed.EndCost,
+                buffed.InterruptTime,
+                buffed.Range,
+                buffed.RechargeTime,
+                Base = basePower == null
+                    ? null
+                    : new
+                    {
+                        basePower.Accuracy,
+                        basePower.EndCost,
+                        basePower.InterruptTime,
+                        basePower.Range,
+                        basePower.RechargeTime,
+                    },
+                Effects = buffed.Effects.Select((fx, fxIdx) => new
+                {
+                    Index = fxIdx,
+                    EffectType = fx.EffectType.ToString(),
+                    fx.Math_Mag,
+                    fx.Math_Duration,
+                }).ToList(),
+            });
+        }
+        WriteJson(buildDir, "enhanced_powers.json", powers);
+    }
+
     private static void DumpBuildTotals(string buildDir, clsToonX toon)
     {
         WriteJson(buildDir, "totals.json", new
@@ -376,6 +482,46 @@ internal static class Program
             })
             .ToList();
         WriteJson(outDir, "enhancements.json", enhancements);
+    }
+
+    private static void DumpEnhancementEffects(string outDir)
+    {
+        // Per-enhancement effect data the CP4 value pipeline consumes: TypeID +
+        // Superior gate the schedule multiplier; each Enhancement-mode sEffect
+        // carries the aspect (Enhance.ID as eEnhance, SubID for Mez), the ED
+        // schedule, the per-effect Multiplier, and the buff/debuff sign gate.
+        // Only Mode==Enhancement effects contribute numeric aspects
+        // (GetEnhancementEffect, I9Slot.cs:47), so FX/proc effects are dropped.
+        // Keyed by the in-memory nID (the array index enhancements.json also
+        // exposes), so the port matches this to a resolved slot's Enh.
+        var db = DatabaseAPI.Database;
+        var records = db.Enhancements
+            .Select((e, nid) => (e, nid))
+            .Where(t => t.e != null)
+            .Select(t => new
+            {
+                Nid = t.nid,
+                t.e.StaticIndex,
+                TypeId = (int)t.e.TypeID,
+                TypeName = t.e.TypeID.ToString(),
+                t.e.Superior,
+                Effects = t.e.Effect
+                    .Where(fx => fx.Mode == Enums.eEffMode.Enhancement)
+                    .Select(fx => new
+                    {
+                        Mode = fx.Mode.ToString(),
+                        BuffMode = fx.BuffMode.ToString(),
+                        EnhanceId = fx.Enhance.ID,
+                        EnhanceName = ((Enums.eEnhance)fx.Enhance.ID).ToString(),
+                        EnhanceSubId = fx.Enhance.SubID,
+                        Schedule = (int)fx.Schedule,
+                        ScheduleName = fx.Schedule.ToString(),
+                        fx.Multiplier,
+                    })
+                    .ToList(),
+            })
+            .ToList();
+        WriteJson(outDir, "enhancement_effects.json", records);
     }
 
     private static void ExportMxdBuilds(string samplesDir, string outDir)

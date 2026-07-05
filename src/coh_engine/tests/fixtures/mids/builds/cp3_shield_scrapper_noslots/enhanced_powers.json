@@ -1,0 +1,3163 @@
+[
+  {
+    "BuildIndex": 0,
+    "FullName": "Scrapper_Melee.Dark_Melee.Smite",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 6.864,
+    "InterruptTime": 0,
+    "Range": 7,
+    "RechargeTime": 6,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 6.864,
+      "InterruptTime": 0,
+      "Range": 7,
+      "RechargeTime": 6
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Damage",
+        "Math_Mag": 20.01968,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 1,
+        "EffectType": "Damage",
+        "Math_Mag": 62.5615,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 2,
+        "EffectType": "Damage",
+        "Math_Mag": 26.158215,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 3,
+        "EffectType": "Damage",
+        "Math_Mag": 78.47464,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 4,
+        "EffectType": "ToHit",
+        "Math_Mag": -0.056250002,
+        "Math_Duration": 10
+      },
+      {
+        "Index": 5,
+        "EffectType": "Damage",
+        "Math_Mag": 104.63286,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 6,
+        "EffectType": "Damage",
+        "Math_Mag": 82.581184,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 7,
+        "EffectType": "Damage",
+        "Math_Mag": 82.581184,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 8,
+        "EffectType": "Damage",
+        "Math_Mag": 37.16153,
+        "Math_Duration": 0
+      }
+    ]
+  },
+  {
+    "BuildIndex": 1,
+    "FullName": "Scrapper_Defense.Shield_Defense.Active_Defense",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.104,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 4,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.104,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 4
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Defense",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 1,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 2,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 3,
+        "EffectType": "Defense",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 4,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 5,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 6,
+        "EffectType": "Defense",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 7,
+        "EffectType": "Elusivity",
+        "Math_Mag": 0.1,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 8,
+        "EffectType": "Elusivity",
+        "Math_Mag": 0.1,
+        "Math_Duration": 0.75
+      }
+    ]
+  },
+  {
+    "BuildIndex": 2,
+    "FullName": "Scrapper_Defense.Shield_Defense.Deflection",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.104,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 4,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.104,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 4
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Defense",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 1,
+        "EffectType": "Defense",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 2,
+        "EffectType": "Defense",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 3,
+        "EffectType": "Defense",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 4,
+        "EffectType": "Elusivity",
+        "Math_Mag": 0.1,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 5,
+        "EffectType": "Elusivity",
+        "Math_Mag": 0.1,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 6,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.1384,
+        "Math_Duration": 0.75
+      }
+    ]
+  },
+  {
+    "BuildIndex": 3,
+    "FullName": "Pool.Leaping.Combat_Jumping",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.0325,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.0325,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "JumpHeight",
+        "Math_Mag": 2,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 1,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 2,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 3,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 4,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 5,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 6,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 7,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 8,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 9,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 10,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 11,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 12,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 13,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 14,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 15,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 16,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 17,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 18,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 19,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 20,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 21,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 22,
+        "EffectType": "Defense",
+        "Math_Mag": 0.01875,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 23,
+        "EffectType": "SpeedJumping",
+        "Math_Mag": 0.01,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 24,
+        "EffectType": "MovementControl",
+        "Math_Mag": 40,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 25,
+        "EffectType": "MovementFriction",
+        "Math_Mag": 0.2,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 26,
+        "EffectType": "Mez",
+        "Math_Mag": -10.379999,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 27,
+        "EffectType": "MezResist",
+        "Math_Mag": 1.038,
+        "Math_Duration": 0.75
+      }
+    ]
+  },
+  {
+    "BuildIndex": 4,
+    "FullName": "Scrapper_Defense.Shield_Defense.True_Grit",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "HitPoints",
+        "Math_Mag": 133.8621,
+        "Math_Duration": 10.25
+      },
+      {
+        "Index": 1,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 10.25
+      },
+      {
+        "Index": 2,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 10.25
+      },
+      {
+        "Index": 3,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 10.25
+      },
+      {
+        "Index": 4,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 10.25
+      },
+      {
+        "Index": 5,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 10.25
+      }
+    ]
+  },
+  {
+    "BuildIndex": 5,
+    "FullName": "Scrapper_Melee.Dark_Melee.Siphon_Life",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 10.192,
+    "InterruptTime": 0,
+    "Range": 7,
+    "RechargeTime": 10,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 10.192,
+      "InterruptTime": 0,
+      "Range": 7,
+      "RechargeTime": 10
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Damage",
+        "Math_Mag": 122.620544,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 1,
+        "EffectType": "Damage",
+        "Math_Mag": 170.63275,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 2,
+        "EffectType": "Damage",
+        "Math_Mag": 170.63275,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 3,
+        "EffectType": "Heal",
+        "Math_Mag": 133.8621,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 4,
+        "EffectType": "ToHit",
+        "Math_Mag": -0.056250002,
+        "Math_Duration": 10
+      },
+      {
+        "Index": 5,
+        "EffectType": "Damage",
+        "Math_Mag": 122.620544,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 6,
+        "EffectType": "Damage",
+        "Math_Mag": 122.620544,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 7,
+        "EffectType": "Damage",
+        "Math_Mag": 55.179245,
+        "Math_Duration": 0
+      }
+    ]
+  },
+  {
+    "BuildIndex": 6,
+    "FullName": "Pool.Speed.Hasten",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 450,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 450
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Enhancement",
+        "Math_Mag": 0.7,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 1,
+        "EffectType": "Endurance",
+        "Math_Mag": -15,
+        "Math_Duration": 0
+      }
+    ]
+  },
+  {
+    "BuildIndex": 7,
+    "FullName": "Pool.Leaping.Long_Jump",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.228,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.228,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "JumpHeight",
+        "Math_Mag": 27.8,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 1,
+        "EffectType": "SpeedJumping",
+        "Math_Mag": 2.49,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 2,
+        "EffectType": "MaxJumpSpeed",
+        "Math_Mag": 1.65,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 3,
+        "EffectType": "MovementControl",
+        "Math_Mag": 10,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 4,
+        "EffectType": "MovementFriction",
+        "Math_Mag": 2,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 5,
+        "EffectType": "JumpHeight",
+        "Math_Mag": 27.8,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 6,
+        "EffectType": "SpeedJumping",
+        "Math_Mag": 2.49,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 7,
+        "EffectType": "MovementControl",
+        "Math_Mag": 10,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 8,
+        "EffectType": "MovementFriction",
+        "Math_Mag": 2,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 9,
+        "EffectType": "SetMode",
+        "Math_Mag": 1,
+        "Math_Duration": 0.75
+      }
+    ]
+  },
+  {
+    "BuildIndex": 8,
+    "FullName": "Pool.Fighting.Boxing",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 4.42,
+    "InterruptTime": 0,
+    "Range": 7,
+    "RechargeTime": 2.5,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 4.42,
+      "InterruptTime": 0,
+      "Range": 7,
+      "RechargeTime": 2.5
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Damage",
+        "Math_Mag": 47.54674,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 1,
+        "EffectType": "Damage",
+        "Math_Mag": 7.132011,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 2,
+        "EffectType": "Damage",
+        "Math_Mag": 7.132011,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 3,
+        "EffectType": "Mez",
+        "Math_Mag": 2,
+        "Math_Duration": 4.768
+      },
+      {
+        "Index": 4,
+        "EffectType": "Mez",
+        "Math_Mag": 3,
+        "Math_Duration": 4.768
+      },
+      {
+        "Index": 5,
+        "EffectType": "Endurance",
+        "Math_Mag": -0.02,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 6,
+        "EffectType": "Recovery",
+        "Math_Mag": -0.05,
+        "Math_Duration": 4
+      },
+      {
+        "Index": 7,
+        "EffectType": "Damage",
+        "Math_Mag": 99.084785,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 8,
+        "EffectType": "Damage",
+        "Math_Mag": 14.86272,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 9,
+        "EffectType": "Damage",
+        "Math_Mag": 14.86272,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 10,
+        "EffectType": "Mez",
+        "Math_Mag": 2,
+        "Math_Duration": 2
+      },
+      {
+        "Index": 11,
+        "EffectType": "Mez",
+        "Math_Mag": 2,
+        "Math_Duration": 7.1520004
+      },
+      {
+        "Index": 12,
+        "EffectType": "Mez",
+        "Math_Mag": 2,
+        "Math_Duration": 2
+      },
+      {
+        "Index": 13,
+        "EffectType": "Damage",
+        "Math_Mag": 47.54674,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 14,
+        "EffectType": "Damage",
+        "Math_Mag": 7.132011,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 15,
+        "EffectType": "Damage",
+        "Math_Mag": 7.132011,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 16,
+        "EffectType": "Damage",
+        "Math_Mag": 47.54674,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 17,
+        "EffectType": "Damage",
+        "Math_Mag": 7.132011,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 18,
+        "EffectType": "Damage",
+        "Math_Mag": 7.132011,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 19,
+        "EffectType": "Damage",
+        "Math_Mag": 47.54674,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 20,
+        "EffectType": "Damage",
+        "Math_Mag": 7.132011,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 21,
+        "EffectType": "Damage",
+        "Math_Mag": 7.132011,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 22,
+        "EffectType": "Damage",
+        "Math_Mag": 47.54674,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 23,
+        "EffectType": "Damage",
+        "Math_Mag": 7.132011,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 24,
+        "EffectType": "Damage",
+        "Math_Mag": 7.132011,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 25,
+        "EffectType": "Damage",
+        "Math_Mag": 99.084785,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 26,
+        "EffectType": "Damage",
+        "Math_Mag": 14.86272,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 27,
+        "EffectType": "Damage",
+        "Math_Mag": 14.86272,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 28,
+        "EffectType": "Damage",
+        "Math_Mag": 49.542393,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 29,
+        "EffectType": "Damage",
+        "Math_Mag": 7.431359,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 30,
+        "EffectType": "Damage",
+        "Math_Mag": 7.431359,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 31,
+        "EffectType": "Damage",
+        "Math_Mag": 99.084785,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 32,
+        "EffectType": "Damage",
+        "Math_Mag": 14.86272,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 33,
+        "EffectType": "Damage",
+        "Math_Mag": 14.86272,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 34,
+        "EffectType": "Damage",
+        "Math_Mag": 99.084785,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 35,
+        "EffectType": "Damage",
+        "Math_Mag": 14.86272,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 36,
+        "EffectType": "Damage",
+        "Math_Mag": 14.86272,
+        "Math_Duration": 0
+      }
+    ]
+  },
+  {
+    "BuildIndex": 9,
+    "FullName": "Scrapper_Melee.Dark_Melee.Shadow_Maul",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 8.528,
+    "InterruptTime": 0,
+    "Range": 7,
+    "RechargeTime": 11,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 8.528,
+      "InterruptTime": 0,
+      "Range": 7,
+      "RechargeTime": 11
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Damage",
+        "Math_Mag": 16.860323,
+        "Math_Duration": 2
+      },
+      {
+        "Index": 1,
+        "EffectType": "Damage",
+        "Math_Mag": 16.860323,
+        "Math_Duration": 2
+      },
+      {
+        "Index": 2,
+        "EffectType": "Damage",
+        "Math_Mag": 28.448591,
+        "Math_Duration": 2
+      },
+      {
+        "Index": 3,
+        "EffectType": "Damage",
+        "Math_Mag": 28.448591,
+        "Math_Duration": 2
+      },
+      {
+        "Index": 4,
+        "EffectType": "Damage",
+        "Math_Mag": 227.58998,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 5,
+        "EffectType": "ToHit",
+        "Math_Mag": -0.056250002,
+        "Math_Duration": 10
+      },
+      {
+        "Index": 6,
+        "EffectType": "Damage",
+        "Math_Mag": 134.88258,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 7,
+        "EffectType": "Damage",
+        "Math_Mag": 134.88258,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 8,
+        "EffectType": "Damage",
+        "Math_Mag": 15.174292,
+        "Math_Duration": 2
+      }
+    ]
+  },
+  {
+    "BuildIndex": 10,
+    "FullName": "Scrapper_Defense.Shield_Defense.Against_all_Odds",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.208,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 10,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.208,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 10
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Mez",
+        "Math_Mag": 3,
+        "Math_Duration": 17
+      },
+      {
+        "Index": 1,
+        "EffectType": "Mez",
+        "Math_Mag": 3,
+        "Math_Duration": 17
+      },
+      {
+        "Index": 2,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.125,
+        "Math_Duration": 1.25
+      },
+      {
+        "Index": 3,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.125,
+        "Math_Duration": 1.25
+      },
+      {
+        "Index": 4,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.125,
+        "Math_Duration": 1.25
+      },
+      {
+        "Index": 5,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.125,
+        "Math_Duration": 1.25
+      },
+      {
+        "Index": 6,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.125,
+        "Math_Duration": 1.25
+      },
+      {
+        "Index": 7,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.125,
+        "Math_Duration": 1.25
+      },
+      {
+        "Index": 8,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.125,
+        "Math_Duration": 1.25
+      },
+      {
+        "Index": 9,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.125,
+        "Math_Duration": 1.25
+      },
+      {
+        "Index": 10,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.06875,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 11,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.06875,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 12,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.06875,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 13,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.06875,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 14,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.06875,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 15,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.06875,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 16,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.06875,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 17,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.06875,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 18,
+        "EffectType": "DamageBuff",
+        "Math_Mag": -0.075,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 19,
+        "EffectType": "DamageBuff",
+        "Math_Mag": -0.075,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 20,
+        "EffectType": "DamageBuff",
+        "Math_Mag": -0.075,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 21,
+        "EffectType": "DamageBuff",
+        "Math_Mag": -0.075,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 22,
+        "EffectType": "DamageBuff",
+        "Math_Mag": -0.075,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 23,
+        "EffectType": "DamageBuff",
+        "Math_Mag": -0.075,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 24,
+        "EffectType": "DamageBuff",
+        "Math_Mag": -0.075,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 25,
+        "EffectType": "DamageBuff",
+        "Math_Mag": -0.075,
+        "Math_Duration": 1
+      }
+    ]
+  },
+  {
+    "BuildIndex": 11,
+    "FullName": "Pool.Fighting.Tough",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.1625,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 10,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.1625,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 10
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 1,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 2,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 3,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 4,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 5,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 6,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 7,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 8,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 9,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 0.75
+      }
+    ]
+  },
+  {
+    "BuildIndex": 12,
+    "FullName": "Scrapper_Melee.Dark_Melee.Soul_Drain",
+    "Accuracy": 0.984,
+    "AccuracyMult": 0.984,
+    "EndCost": 15.6,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 120,
+    "Base": {
+      "Accuracy": 1.2,
+      "EndCost": 15.6,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 120
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Damage",
+        "Math_Mag": 62.5615,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 1,
+        "EffectType": "ToHit",
+        "Math_Mag": 0.020000001,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 2,
+        "EffectType": "ToHit",
+        "Math_Mag": 0.1,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 3,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.1,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 4,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.1,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 5,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.1,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 6,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.1,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 7,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.1,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 8,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.1,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 9,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.1,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 10,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.5,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 11,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.5,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 12,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.5,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 13,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.5,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 14,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.5,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 15,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.5,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 16,
+        "EffectType": "DamageBuff",
+        "Math_Mag": 0.5,
+        "Math_Duration": 30
+      },
+      {
+        "Index": 17,
+        "EffectType": "Damage",
+        "Math_Mag": 62.5615,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 18,
+        "EffectType": "Damage",
+        "Math_Mag": 62.5615,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 19,
+        "EffectType": "Damage",
+        "Math_Mag": 62.5615,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 20,
+        "EffectType": "Damage",
+        "Math_Mag": 28.152674,
+        "Math_Duration": 0
+      }
+    ]
+  },
+  {
+    "BuildIndex": 13,
+    "FullName": "Pool.Fighting.Weave",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.1625,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 10,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.1625,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 10
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 1,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 2,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 3,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 4,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 5,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 6,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 7,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 8,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 9,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 10,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 11,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 12,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 13,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 14,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 15,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 16,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 17,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 18,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 19,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 20,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 21,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 22,
+        "EffectType": "MezResist",
+        "Math_Mag": 0.6055,
+        "Math_Duration": 0.75
+      }
+    ]
+  },
+  {
+    "BuildIndex": 14,
+    "FullName": "Scrapper_Melee.Dark_Melee.Midnight_Grasp",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 11.96,
+    "InterruptTime": 0,
+    "Range": 7,
+    "RechargeTime": 15,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 11.96,
+      "InterruptTime": 0,
+      "Range": 7,
+      "RechargeTime": 15
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Damage",
+        "Math_Mag": 138.26093,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 1,
+        "EffectType": "Damage",
+        "Math_Mag": 162.99147,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 2,
+        "EffectType": "Damage",
+        "Math_Mag": 6.2561502,
+        "Math_Duration": 3.1
+      },
+      {
+        "Index": 3,
+        "EffectType": "Damage",
+        "Math_Mag": 194.27223,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 4,
+        "EffectType": "Mez",
+        "Math_Mag": 3,
+        "Math_Duration": 17.880001
+      },
+      {
+        "Index": 5,
+        "EffectType": "Mez",
+        "Math_Mag": 3,
+        "Math_Duration": 2.384
+      },
+      {
+        "Index": 6,
+        "EffectType": "ToHit",
+        "Math_Mag": -0.056250002,
+        "Math_Duration": 20
+      },
+      {
+        "Index": 7,
+        "EffectType": "Damage",
+        "Math_Mag": 6.881765,
+        "Math_Duration": 3.1
+      },
+      {
+        "Index": 8,
+        "EffectType": "Damage",
+        "Math_Mag": 172.66974,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 9,
+        "EffectType": "Damage",
+        "Math_Mag": 172.66974,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 10,
+        "EffectType": "Damage",
+        "Math_Mag": 62.21741,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 11,
+        "EffectType": "Damage",
+        "Math_Mag": 2.8152676,
+        "Math_Duration": 3.1
+      }
+    ]
+  },
+  {
+    "BuildIndex": 15,
+    "FullName": "Scrapper_Defense.Shield_Defense.Shield_Charge",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 13.52,
+    "InterruptTime": 0,
+    "Range": 60,
+    "RechargeTime": 90,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 13.52,
+      "InterruptTime": 0,
+      "Range": 60,
+      "RechargeTime": 90
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Mez",
+        "Math_Mag": 1,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 1,
+        "EffectType": "Damage",
+        "Math_Mag": 49.26718,
+        "Math_Duration": 4
+      },
+      {
+        "Index": 2,
+        "EffectType": "Damage",
+        "Math_Mag": 119.64887,
+        "Math_Duration": 4
+      },
+      {
+        "Index": 3,
+        "EffectType": "Mez",
+        "Math_Mag": 0.64,
+        "Math_Duration": 4
+      },
+      {
+        "Index": 4,
+        "EffectType": "Mez",
+        "Math_Mag": 0.64,
+        "Math_Duration": 4
+      }
+    ]
+  },
+  {
+    "BuildIndex": 16,
+    "FullName": "Pool.Leadership.Defense",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.78,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 15,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.78,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 15
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 1,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 2,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 3,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 4,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 5,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 6,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 7,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 8,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 9,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 10,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 11,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 12,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 13,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 14,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 15,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 16,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 17,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 18,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 19,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 20,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 21,
+        "EffectType": "Defense",
+        "Math_Mag": 0.02275,
+        "Math_Duration": 2.25
+      }
+    ]
+  },
+  {
+    "BuildIndex": 17,
+    "FullName": "Scrapper_Defense.Shield_Defense.Battle_Agility",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 10.4,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 200,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 10.4,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 200
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Mez",
+        "Math_Mag": -10.379999,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 1,
+        "EffectType": "Mez",
+        "Math_Mag": -10.379999,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 2,
+        "EffectType": "Mez",
+        "Math_Mag": -10.379999,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 3,
+        "EffectType": "Mez",
+        "Math_Mag": -10.379999,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 4,
+        "EffectType": "Mez",
+        "Math_Mag": -10.379999,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 5,
+        "EffectType": "Mez",
+        "Math_Mag": -10.379999,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 6,
+        "EffectType": "MezResist",
+        "Math_Mag": 1.038,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 7,
+        "EffectType": "MezResist",
+        "Math_Mag": 1.038,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 8,
+        "EffectType": "MezResist",
+        "Math_Mag": 1.038,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 9,
+        "EffectType": "MezResist",
+        "Math_Mag": 1.038,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 10,
+        "EffectType": "MezResist",
+        "Math_Mag": 1.038,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 11,
+        "EffectType": "MezResist",
+        "Math_Mag": 1.038,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 12,
+        "EffectType": "MezResist",
+        "Math_Mag": 100,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 13,
+        "EffectType": "MezResist",
+        "Math_Mag": 100,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 14,
+        "EffectType": "Mez",
+        "Math_Mag": -10,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 15,
+        "EffectType": "Mez",
+        "Math_Mag": -10,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 16,
+        "EffectType": "MezResist",
+        "Math_Mag": 100,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 17,
+        "EffectType": "Mez",
+        "Math_Mag": -10,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 18,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.173,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 19,
+        "EffectType": "MezResist",
+        "Math_Mag": 100,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 20,
+        "EffectType": "MezResist",
+        "Math_Mag": 100,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 21,
+        "EffectType": "Mez",
+        "Math_Mag": -10,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 22,
+        "EffectType": "Mez",
+        "Math_Mag": -10,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 23,
+        "EffectType": "MezResist",
+        "Math_Mag": 100,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 24,
+        "EffectType": "Mez",
+        "Math_Mag": -10,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 25,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.3,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 26,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.3,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 27,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.3,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 28,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.5,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 29,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.5,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 30,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.5,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 31,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.5,
+        "Math_Duration": 120
+      }
+    ]
+  },
+  {
+    "BuildIndex": 18,
+    "FullName": "Epic.Stalker_Soul_Mastery.Moonbeam",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 17.94,
+    "InterruptTime": 0,
+    "Range": 150,
+    "RechargeTime": 24,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 17.94,
+      "InterruptTime": 0,
+      "Range": 150,
+      "RechargeTime": 24
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Damage",
+        "Math_Mag": 222.71893,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 1,
+        "EffectType": "Damage",
+        "Math_Mag": 111.35947,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 2,
+        "EffectType": "Damage",
+        "Math_Mag": 111.35947,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 3,
+        "EffectType": "Damage",
+        "Math_Mag": 111.35947,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 4,
+        "EffectType": "ToHit",
+        "Math_Mag": -0.056250002,
+        "Math_Duration": 10
+      },
+      {
+        "Index": 5,
+        "EffectType": "Damage",
+        "Math_Mag": 348.34372,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 6,
+        "EffectType": "Damage",
+        "Math_Mag": 348.34372,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 7,
+        "EffectType": "Damage",
+        "Math_Mag": 348.34372,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 8,
+        "EffectType": "Damage",
+        "Math_Mag": 348.34372,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 9,
+        "EffectType": "ModifyAttrib",
+        "Math_Mag": 1,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 10,
+        "EffectType": "ModifyAttrib",
+        "Math_Mag": 1,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 11,
+        "EffectType": "ModifyAttrib",
+        "Math_Mag": 1,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 12,
+        "EffectType": "Damage",
+        "Math_Mag": 109.48263,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 13,
+        "EffectType": "Damage",
+        "Math_Mag": 1.5640376,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 14,
+        "EffectType": "Damage",
+        "Math_Mag": 109.48263,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 15,
+        "EffectType": "Damage",
+        "Math_Mag": 1.5640376,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 16,
+        "EffectType": "Damage",
+        "Math_Mag": 109.48263,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 17,
+        "EffectType": "Damage",
+        "Math_Mag": 1.5640376,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 18,
+        "EffectType": "Damage",
+        "Math_Mag": 109.48263,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 19,
+        "EffectType": "Damage",
+        "Math_Mag": 1.5640376,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 20,
+        "EffectType": "Damage",
+        "Math_Mag": 181.748,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 21,
+        "EffectType": "Damage",
+        "Math_Mag": 181.748,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 22,
+        "EffectType": "Damage",
+        "Math_Mag": 181.748,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 23,
+        "EffectType": "Damage",
+        "Math_Mag": 181.748,
+        "Math_Duration": 0
+      }
+    ]
+  },
+  {
+    "BuildIndex": 19,
+    "FullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 5.2,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 90,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 5.2,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 90
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Defense",
+        "Math_Mag": 0.20250002,
+        "Math_Duration": 15
+      },
+      {
+        "Index": 1,
+        "EffectType": "Defense",
+        "Math_Mag": 0.20250002,
+        "Math_Duration": 15
+      },
+      {
+        "Index": 2,
+        "EffectType": "Defense",
+        "Math_Mag": 0.20250002,
+        "Math_Duration": 15
+      },
+      {
+        "Index": 3,
+        "EffectType": "Defense",
+        "Math_Mag": 0.20250002,
+        "Math_Duration": 15
+      },
+      {
+        "Index": 4,
+        "EffectType": "Defense",
+        "Math_Mag": 0.20250002,
+        "Math_Duration": 15
+      },
+      {
+        "Index": 5,
+        "EffectType": "Defense",
+        "Math_Mag": 0.20250002,
+        "Math_Duration": 15
+      },
+      {
+        "Index": 6,
+        "EffectType": "Defense",
+        "Math_Mag": 0.20250002,
+        "Math_Duration": 15
+      },
+      {
+        "Index": 7,
+        "EffectType": "Defense",
+        "Math_Mag": 0.20250002,
+        "Math_Duration": 15
+      },
+      {
+        "Index": 8,
+        "EffectType": "Defense",
+        "Math_Mag": 0.20250002,
+        "Math_Duration": 15
+      },
+      {
+        "Index": 9,
+        "EffectType": "Defense",
+        "Math_Mag": 0.20250002,
+        "Math_Duration": 15
+      },
+      {
+        "Index": 10,
+        "EffectType": "Defense",
+        "Math_Mag": 0.20250002,
+        "Math_Duration": 15
+      },
+      {
+        "Index": 11,
+        "EffectType": "Translucency",
+        "Math_Mag": 0,
+        "Math_Duration": 15
+      }
+    ]
+  },
+  {
+    "BuildIndex": 20,
+    "FullName": "Scrapper_Defense.Shield_Defense.Phalanx_Fighting",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Defense",
+        "Math_Mag": 0,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 1,
+        "EffectType": "Defense",
+        "Math_Mag": 0,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 2,
+        "EffectType": "Defense",
+        "Math_Mag": 0,
+        "Math_Duration": 1
+      },
+      {
+        "Index": 3,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 1.25
+      },
+      {
+        "Index": 4,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 1.25
+      },
+      {
+        "Index": 5,
+        "EffectType": "Defense",
+        "Math_Mag": 0.0375,
+        "Math_Duration": 1.25
+      }
+    ]
+  },
+  {
+    "BuildIndex": 21,
+    "FullName": "Scrapper_Defense.Shield_Defense.Grant_Cover",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.312,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 10,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.312,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 10
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Defense",
+        "Math_Mag": 0.084375,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 1,
+        "EffectType": "Defense",
+        "Math_Mag": 0.084375,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 2,
+        "EffectType": "Defense",
+        "Math_Mag": 0.084375,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 3,
+        "EffectType": "Defense",
+        "Math_Mag": 0.084375,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 4,
+        "EffectType": "Defense",
+        "Math_Mag": 0.084375,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 5,
+        "EffectType": "Defense",
+        "Math_Mag": 0.084375,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 6,
+        "EffectType": "Defense",
+        "Math_Mag": 0.084375,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 7,
+        "EffectType": "Defense",
+        "Math_Mag": 0.084375,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 8,
+        "EffectType": "Defense",
+        "Math_Mag": 0.084375,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 9,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.1384,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 10,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.3,
+        "Math_Duration": 2.25
+      }
+    ]
+  },
+  {
+    "BuildIndex": 22,
+    "FullName": "Pool.Leadership.Tactics",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.78,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 15,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.78,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 15
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "ToHit",
+        "Math_Mag": 0.07,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 1,
+        "EffectType": "ResEffect",
+        "Math_Mag": 0.3633,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 2,
+        "EffectType": "PerceptionRadius",
+        "Math_Mag": 0.4844,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 3,
+        "EffectType": "MezResist",
+        "Math_Mag": 0.42385,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 4,
+        "EffectType": "Mez",
+        "Math_Mag": -3.6330001,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 5,
+        "EffectType": "MezResist",
+        "Math_Mag": 0.78715,
+        "Math_Duration": 2.25
+      },
+      {
+        "Index": 6,
+        "EffectType": "MezResist",
+        "Math_Mag": 0.42385,
+        "Math_Duration": 2.25
+      }
+    ]
+  },
+  {
+    "BuildIndex": 23,
+    "FullName": "Scrapper_Defense.Shield_Defense.One_with_the_Shield",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 2.6,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 360,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 2.6,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 360
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.22500001,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 1,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.22500001,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 2,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 3,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 4,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 5,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 6,
+        "EffectType": "Resistance",
+        "Math_Mag": 0.112500004,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 7,
+        "EffectType": "HitPoints",
+        "Math_Mag": 267.7242,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 8,
+        "EffectType": "Mez",
+        "Math_Mag": -100,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 9,
+        "EffectType": "MezResist",
+        "Math_Mag": 10,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 10,
+        "EffectType": "Mez",
+        "Math_Mag": -100,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 11,
+        "EffectType": "MezResist",
+        "Math_Mag": 10,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 12,
+        "EffectType": "Mez",
+        "Math_Mag": -10,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 13,
+        "EffectType": "MezResist",
+        "Math_Mag": 10,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 14,
+        "EffectType": "Mez",
+        "Math_Mag": -17.3,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 15,
+        "EffectType": "Mez",
+        "Math_Mag": -17.3,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 16,
+        "EffectType": "Mez",
+        "Math_Mag": -17.3,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 17,
+        "EffectType": "Mez",
+        "Math_Mag": -17.3,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 18,
+        "EffectType": "MezResist",
+        "Math_Mag": 1.7299999,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 19,
+        "EffectType": "MezResist",
+        "Math_Mag": 1.7299999,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 20,
+        "EffectType": "MezResist",
+        "Math_Mag": 1.7299999,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 21,
+        "EffectType": "MezResist",
+        "Math_Mag": 1.7299999,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 22,
+        "EffectType": "Recovery",
+        "Math_Mag": 0.3,
+        "Math_Duration": 120
+      },
+      {
+        "Index": 23,
+        "EffectType": "Endurance",
+        "Math_Mag": -0.6,
+        "Math_Duration": 0
+      }
+    ]
+  },
+  {
+    "BuildIndex": 24,
+    "FullName": "Inherent.Inherent.Critical_Hit",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "GlobalChanceMod",
+        "Math_Mag": 0,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 1,
+        "EffectType": "GlobalChanceMod",
+        "Math_Mag": 0,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 2,
+        "EffectType": "GlobalChanceMod",
+        "Math_Mag": 0,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 3,
+        "EffectType": "GlobalChanceMod",
+        "Math_Mag": 0,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 4,
+        "EffectType": "GlobalChanceMod",
+        "Math_Mag": 0,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 5,
+        "EffectType": "GlobalChanceMod",
+        "Math_Mag": 0,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 6,
+        "EffectType": "GlobalChanceMod",
+        "Math_Mag": 0,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 7,
+        "EffectType": "GlobalChanceMod",
+        "Math_Mag": 0,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 8,
+        "EffectType": "GlobalChanceMod",
+        "Math_Mag": 0,
+        "Math_Duration": 0
+      }
+    ]
+  },
+  {
+    "BuildIndex": 25,
+    "FullName": "Inherent.Inherent.Brawl",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0,
+    "InterruptTime": 0,
+    "Range": 7,
+    "RechargeTime": 2,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0,
+      "InterruptTime": 0,
+      "Range": 7,
+      "RechargeTime": 2
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Damage",
+        "Math_Mag": 22.52214,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 1,
+        "EffectType": "Damage",
+        "Math_Mag": 22.52214,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 2,
+        "EffectType": "Enhancement",
+        "Math_Mag": -0.1,
+        "Math_Duration": 10
+      },
+      {
+        "Index": 3,
+        "EffectType": "Enhancement",
+        "Math_Mag": -0.1,
+        "Math_Duration": 10
+      },
+      {
+        "Index": 4,
+        "EffectType": "ToHit",
+        "Math_Mag": -0.1,
+        "Math_Duration": 10
+      },
+      {
+        "Index": 5,
+        "EffectType": "ToHit",
+        "Math_Mag": -0.1,
+        "Math_Duration": 10
+      },
+      {
+        "Index": 6,
+        "EffectType": "Regeneration",
+        "Math_Mag": -0.1,
+        "Math_Duration": 10
+      },
+      {
+        "Index": 7,
+        "EffectType": "Recovery",
+        "Math_Mag": -0.1,
+        "Math_Duration": 10
+      }
+    ]
+  },
+  {
+    "BuildIndex": 26,
+    "FullName": "Inherent.Inherent.Sprint",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.14625,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.14625,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "SpeedRunning",
+        "Math_Mag": 0.5,
+        "Math_Duration": 0.8
+      },
+      {
+        "Index": 1,
+        "EffectType": "SpeedRunning",
+        "Math_Mag": 0.5,
+        "Math_Duration": 0.75
+      },
+      {
+        "Index": 2,
+        "EffectType": "JumpHeight",
+        "Math_Mag": 0.1,
+        "Math_Duration": 0.75
+      }
+    ]
+  },
+  {
+    "BuildIndex": 27,
+    "FullName": "Inherent.Inherent.Rest",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0,
+    "InterruptTime": 6,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0,
+      "InterruptTime": 6,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Regeneration",
+        "Math_Mag": 19,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 1,
+        "EffectType": "Recovery",
+        "Math_Mag": 4.25,
+        "Math_Duration": 0
+      },
+      {
+        "Index": 2,
+        "EffectType": "Mez",
+        "Math_Mag": 100,
+        "Math_Duration": 0.3
+      },
+      {
+        "Index": 3,
+        "EffectType": "Mez",
+        "Math_Mag": 100,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 4,
+        "EffectType": "Mez",
+        "Math_Mag": -100,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 5,
+        "EffectType": "Resistance",
+        "Math_Mag": -10,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 6,
+        "EffectType": "Resistance",
+        "Math_Mag": -10,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 7,
+        "EffectType": "Resistance",
+        "Math_Mag": -10,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 8,
+        "EffectType": "Resistance",
+        "Math_Mag": -10,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 9,
+        "EffectType": "Resistance",
+        "Math_Mag": -10,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 10,
+        "EffectType": "Resistance",
+        "Math_Mag": -10,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 11,
+        "EffectType": "Resistance",
+        "Math_Mag": -10,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 12,
+        "EffectType": "Resistance",
+        "Math_Mag": -10,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 13,
+        "EffectType": "Resistance",
+        "Math_Mag": -10,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 14,
+        "EffectType": "Defense",
+        "Math_Mag": -1000,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 15,
+        "EffectType": "Mez",
+        "Math_Mag": -100,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 16,
+        "EffectType": "Fly",
+        "Math_Mag": -100,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 17,
+        "EffectType": "Defense",
+        "Math_Mag": -1000,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 18,
+        "EffectType": "Defense",
+        "Math_Mag": -1000,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 19,
+        "EffectType": "Defense",
+        "Math_Mag": -1000,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 20,
+        "EffectType": "Defense",
+        "Math_Mag": -1000,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 21,
+        "EffectType": "Defense",
+        "Math_Mag": -1000,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 22,
+        "EffectType": "Defense",
+        "Math_Mag": -1000,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 23,
+        "EffectType": "Defense",
+        "Math_Mag": -1000,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 24,
+        "EffectType": "Defense",
+        "Math_Mag": -1000,
+        "Math_Duration": 0.55
+      },
+      {
+        "Index": 25,
+        "EffectType": "Defense",
+        "Math_Mag": -1000,
+        "Math_Duration": 0.55
+      }
+    ]
+  },
+  {
+    "BuildIndex": 28,
+    "FullName": "Inherent.Fitness.Swift",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "SpeedRunning",
+        "Math_Mag": 0.35,
+        "Math_Duration": 10.25
+      },
+      {
+        "Index": 1,
+        "EffectType": "SpeedFlying",
+        "Math_Mag": 0.1365,
+        "Math_Duration": 10.25
+      }
+    ]
+  },
+  {
+    "BuildIndex": 29,
+    "FullName": "Inherent.Fitness.Hurdle",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "JumpHeight",
+        "Math_Mag": 1.6679999,
+        "Math_Duration": 10.25
+      },
+      {
+        "Index": 1,
+        "EffectType": "SpeedJumping",
+        "Math_Mag": 1.245,
+        "Math_Duration": 10.25
+      }
+    ]
+  },
+  {
+    "BuildIndex": 30,
+    "FullName": "Inherent.Fitness.Health",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Regeneration",
+        "Math_Mag": 0.4,
+        "Math_Duration": 10.25
+      },
+      {
+        "Index": 1,
+        "EffectType": "MezResist",
+        "Math_Mag": 0.6055,
+        "Math_Duration": 10.25
+      }
+    ]
+  },
+  {
+    "BuildIndex": 31,
+    "FullName": "Inherent.Fitness.Stamina",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Recovery",
+        "Math_Mag": 0.25,
+        "Math_Duration": 10.25
+      }
+    ]
+  },
+  {
+    "BuildIndex": 32,
+    "FullName": "Inherent.Inherent.Special_Set_Bonuses",
+    "Accuracy": 0,
+    "AccuracyMult": 0,
+    "EndCost": 0,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 0,
+      "EndCost": 0,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Regeneration",
+        "Math_Mag": 0.25,
+        "Math_Duration": 120
+      }
+    ]
+  },
+  {
+    "BuildIndex": 33,
+    "FullName": "Inherent.Inherent.Double_Jump",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0.118,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 30,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0.118,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 30
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "Jumppack",
+        "Math_Mag": 1,
+        "Math_Duration": 0.75
+      }
+    ]
+  },
+  {
+    "BuildIndex": 34,
+    "FullName": "Inherent.Inherent.Fast_Snipe",
+    "Accuracy": 0.82,
+    "AccuracyMult": 0.82,
+    "EndCost": 0,
+    "InterruptTime": 0,
+    "Range": 0,
+    "RechargeTime": 0,
+    "Base": {
+      "Accuracy": 1,
+      "EndCost": 0,
+      "InterruptTime": 0,
+      "Range": 0,
+      "RechargeTime": 0
+    },
+    "Effects": [
+      {
+        "Index": 0,
+        "EffectType": "NullBool",
+        "Math_Mag": 1,
+        "Math_Duration": 0
+      }
+    ]
+  }
+]
