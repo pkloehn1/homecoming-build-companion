@@ -406,7 +406,14 @@ internal static class Program
                 Effects = buffed.Effects.Select((fx, fxIdx) => new
                 {
                     Index = fxIdx,
+                    // Structural identity so the parity test matches effects by
+                    // (type, damage, mez, ETModifies) rather than array position:
+                    // GBPA assembly can reorder/trim the buffed effect array
+                    // relative to the raw powers_effects dump.
                     EffectType = fx.EffectType.ToString(),
+                    DamageType = fx.DamageType.ToString(),
+                    MezType = fx.MezType.ToString(),
+                    ETModifies = fx.ETModifies.ToString(),
                     fx.Math_Mag,
                     fx.Math_Duration,
                 }).ToList(),

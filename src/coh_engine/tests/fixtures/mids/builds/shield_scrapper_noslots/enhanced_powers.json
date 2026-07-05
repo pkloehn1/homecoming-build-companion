@@ -19,54 +19,81 @@
       {
         "Index": 0,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 20.01968,
         "Math_Duration": 0
       },
       {
         "Index": 1,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 62.5615,
         "Math_Duration": 0
       },
       {
         "Index": 2,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 26.158215,
         "Math_Duration": 0
       },
       {
         "Index": 3,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 78.47464,
         "Math_Duration": 0
       },
       {
         "Index": 4,
         "EffectType": "ToHit",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.056250002,
         "Math_Duration": 10
       },
       {
         "Index": 5,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 104.63286,
         "Math_Duration": 0
       },
       {
         "Index": 6,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 82.581184,
         "Math_Duration": 0
       },
       {
         "Index": 7,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 82.581184,
         "Math_Duration": 0
       },
       {
         "Index": 8,
         "EffectType": "Damage",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 37.16153,
         "Math_Duration": 0
       }
@@ -92,54 +119,81 @@
       {
         "Index": 0,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 1,
         "EffectType": "Resistance",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 2,
         "EffectType": "Resistance",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 3,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 4,
         "EffectType": "Resistance",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 5,
         "EffectType": "Resistance",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 6,
         "EffectType": "Defense",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 7,
         "EffectType": "Elusivity",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 0.75
       },
       {
         "Index": 8,
         "EffectType": "Elusivity",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 0.75
       }
@@ -165,42 +219,63 @@
       {
         "Index": 0,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 1,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 2,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 3,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 4,
         "EffectType": "Elusivity",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 0.75
       },
       {
         "Index": 5,
         "EffectType": "Elusivity",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 0.75
       },
       {
         "Index": 6,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "Defense",
         "Math_Mag": 0.1384,
         "Math_Duration": 0.75
       }
@@ -226,168 +301,252 @@
       {
         "Index": 0,
         "EffectType": "JumpHeight",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 2,
         "Math_Duration": 0.75
       },
       {
         "Index": 1,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 2,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 3,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 4,
         "EffectType": "Defense",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 5,
         "EffectType": "Defense",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 6,
         "EffectType": "Defense",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 7,
         "EffectType": "Defense",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 8,
         "EffectType": "Defense",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 9,
         "EffectType": "Defense",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 10,
         "EffectType": "Defense",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 11,
         "EffectType": "Defense",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 12,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 13,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 14,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 15,
         "EffectType": "Defense",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 16,
         "EffectType": "Defense",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 17,
         "EffectType": "Defense",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 18,
         "EffectType": "Defense",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 19,
         "EffectType": "Defense",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 20,
         "EffectType": "Defense",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 21,
         "EffectType": "Defense",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 22,
         "EffectType": "Defense",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01875,
         "Math_Duration": 0.75
       },
       {
         "Index": 23,
         "EffectType": "SpeedJumping",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.01,
         "Math_Duration": 0.75
       },
       {
         "Index": 24,
         "EffectType": "MovementControl",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 40,
         "Math_Duration": 0.75
       },
       {
         "Index": 25,
         "EffectType": "MovementFriction",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.2,
         "Math_Duration": 0.75
       },
       {
         "Index": 26,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Immobilized",
+        "ETModifies": "None",
         "Math_Mag": -10.379999,
         "Math_Duration": 0.75
       },
       {
         "Index": 27,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Immobilized",
+        "ETModifies": "None",
         "Math_Mag": 1.038,
         "Math_Duration": 0.75
       }
@@ -413,36 +572,54 @@
       {
         "Index": 0,
         "EffectType": "HitPoints",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 133.8621,
         "Math_Duration": 10.25
       },
       {
         "Index": 1,
         "EffectType": "Resistance",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 10.25
       },
       {
         "Index": 2,
         "EffectType": "Resistance",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 10.25
       },
       {
         "Index": 3,
         "EffectType": "Resistance",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 10.25
       },
       {
         "Index": 4,
         "EffectType": "Resistance",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 10.25
       },
       {
         "Index": 5,
         "EffectType": "Resistance",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 10.25
       }
@@ -468,48 +645,72 @@
       {
         "Index": 0,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 122.620544,
         "Math_Duration": 0
       },
       {
         "Index": 1,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 170.63275,
         "Math_Duration": 0
       },
       {
         "Index": 2,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 170.63275,
         "Math_Duration": 0
       },
       {
         "Index": 3,
         "EffectType": "Heal",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 133.8621,
         "Math_Duration": 0
       },
       {
         "Index": 4,
         "EffectType": "ToHit",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.056250002,
         "Math_Duration": 10
       },
       {
         "Index": 5,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 122.620544,
         "Math_Duration": 0
       },
       {
         "Index": 6,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 122.620544,
         "Math_Duration": 0
       },
       {
         "Index": 7,
         "EffectType": "Damage",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 55.179245,
         "Math_Duration": 0
       }
@@ -535,12 +736,18 @@
       {
         "Index": 0,
         "EffectType": "Enhancement",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "RechargeTime",
         "Math_Mag": 0.7,
         "Math_Duration": 120
       },
       {
         "Index": 1,
         "EffectType": "Endurance",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -15,
         "Math_Duration": 0
       }
@@ -566,60 +773,90 @@
       {
         "Index": 0,
         "EffectType": "JumpHeight",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 27.8,
         "Math_Duration": 0.75
       },
       {
         "Index": 1,
         "EffectType": "SpeedJumping",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 2.49,
         "Math_Duration": 0.75
       },
       {
         "Index": 2,
         "EffectType": "MaxJumpSpeed",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1.65,
         "Math_Duration": 0.75
       },
       {
         "Index": 3,
         "EffectType": "MovementControl",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 10,
         "Math_Duration": 0.75
       },
       {
         "Index": 4,
         "EffectType": "MovementFriction",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 2,
         "Math_Duration": 0.75
       },
       {
         "Index": 5,
         "EffectType": "JumpHeight",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 27.8,
         "Math_Duration": 0.75
       },
       {
         "Index": 6,
         "EffectType": "SpeedJumping",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 2.49,
         "Math_Duration": 0.75
       },
       {
         "Index": 7,
         "EffectType": "MovementControl",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 10,
         "Math_Duration": 0.75
       },
       {
         "Index": 8,
         "EffectType": "MovementFriction",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 2,
         "Math_Duration": 0.75
       },
       {
         "Index": 9,
         "EffectType": "SetMode",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1,
         "Math_Duration": 0.75
       }
@@ -645,222 +882,333 @@
       {
         "Index": 0,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 47.54674,
         "Math_Duration": 0
       },
       {
         "Index": 1,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.132011,
         "Math_Duration": 0
       },
       {
         "Index": 2,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.132011,
         "Math_Duration": 0
       },
       {
         "Index": 3,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Stunned",
+        "ETModifies": "None",
         "Math_Mag": 2,
         "Math_Duration": 4.768
       },
       {
         "Index": 4,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Stunned",
+        "ETModifies": "None",
         "Math_Mag": 3,
         "Math_Duration": 4.768
       },
       {
         "Index": 5,
         "EffectType": "Endurance",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.02,
         "Math_Duration": 0
       },
       {
         "Index": 6,
         "EffectType": "Recovery",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.05,
         "Math_Duration": 4
       },
       {
         "Index": 7,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 99.084785,
         "Math_Duration": 0
       },
       {
         "Index": 8,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 14.86272,
         "Math_Duration": 0
       },
       {
         "Index": 9,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 14.86272,
         "Math_Duration": 0
       },
       {
         "Index": 10,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Stunned",
+        "ETModifies": "None",
         "Math_Mag": 2,
         "Math_Duration": 2
       },
       {
         "Index": 11,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Stunned",
+        "ETModifies": "None",
         "Math_Mag": 2,
         "Math_Duration": 7.1520004
       },
       {
         "Index": 12,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Stunned",
+        "ETModifies": "None",
         "Math_Mag": 2,
         "Math_Duration": 2
       },
       {
         "Index": 13,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 47.54674,
         "Math_Duration": 0
       },
       {
         "Index": 14,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.132011,
         "Math_Duration": 0
       },
       {
         "Index": 15,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.132011,
         "Math_Duration": 0
       },
       {
         "Index": 16,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 47.54674,
         "Math_Duration": 0
       },
       {
         "Index": 17,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.132011,
         "Math_Duration": 0
       },
       {
         "Index": 18,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.132011,
         "Math_Duration": 0
       },
       {
         "Index": 19,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 47.54674,
         "Math_Duration": 0
       },
       {
         "Index": 20,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.132011,
         "Math_Duration": 0
       },
       {
         "Index": 21,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.132011,
         "Math_Duration": 0
       },
       {
         "Index": 22,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 47.54674,
         "Math_Duration": 0
       },
       {
         "Index": 23,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.132011,
         "Math_Duration": 0
       },
       {
         "Index": 24,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.132011,
         "Math_Duration": 0
       },
       {
         "Index": 25,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 99.084785,
         "Math_Duration": 0
       },
       {
         "Index": 26,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 14.86272,
         "Math_Duration": 0
       },
       {
         "Index": 27,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 14.86272,
         "Math_Duration": 0
       },
       {
         "Index": 28,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 49.542393,
         "Math_Duration": 0
       },
       {
         "Index": 29,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.431359,
         "Math_Duration": 0
       },
       {
         "Index": 30,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 7.431359,
         "Math_Duration": 0
       },
       {
         "Index": 31,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 99.084785,
         "Math_Duration": 0
       },
       {
         "Index": 32,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 14.86272,
         "Math_Duration": 0
       },
       {
         "Index": 33,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 14.86272,
         "Math_Duration": 0
       },
       {
         "Index": 34,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 99.084785,
         "Math_Duration": 0
       },
       {
         "Index": 35,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 14.86272,
         "Math_Duration": 0
       },
       {
         "Index": 36,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 14.86272,
         "Math_Duration": 0
       }
@@ -886,54 +1234,81 @@
       {
         "Index": 0,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 16.860323,
         "Math_Duration": 2
       },
       {
         "Index": 1,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 16.860323,
         "Math_Duration": 2
       },
       {
         "Index": 2,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 28.448591,
         "Math_Duration": 2
       },
       {
         "Index": 3,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 28.448591,
         "Math_Duration": 2
       },
       {
         "Index": 4,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 227.58998,
         "Math_Duration": 0
       },
       {
         "Index": 5,
         "EffectType": "ToHit",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.056250002,
         "Math_Duration": 10
       },
       {
         "Index": 6,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 134.88258,
         "Math_Duration": 0
       },
       {
         "Index": 7,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 134.88258,
         "Math_Duration": 0
       },
       {
         "Index": 8,
         "EffectType": "Damage",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 15.174292,
         "Math_Duration": 2
       }
@@ -959,156 +1334,234 @@
       {
         "Index": 0,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Taunt",
+        "ETModifies": "None",
         "Math_Mag": 3,
         "Math_Duration": 17
       },
       {
         "Index": 1,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Taunt",
+        "ETModifies": "None",
         "Math_Mag": 3,
         "Math_Duration": 17
       },
       {
         "Index": 2,
         "EffectType": "DamageBuff",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.125,
         "Math_Duration": 1.25
       },
       {
         "Index": 3,
         "EffectType": "DamageBuff",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.125,
         "Math_Duration": 1.25
       },
       {
         "Index": 4,
         "EffectType": "DamageBuff",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.125,
         "Math_Duration": 1.25
       },
       {
         "Index": 5,
         "EffectType": "DamageBuff",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.125,
         "Math_Duration": 1.25
       },
       {
         "Index": 6,
         "EffectType": "DamageBuff",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.125,
         "Math_Duration": 1.25
       },
       {
         "Index": 7,
         "EffectType": "DamageBuff",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.125,
         "Math_Duration": 1.25
       },
       {
         "Index": 8,
         "EffectType": "DamageBuff",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.125,
         "Math_Duration": 1.25
       },
       {
         "Index": 9,
         "EffectType": "DamageBuff",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.125,
         "Math_Duration": 1.25
       },
       {
         "Index": 10,
         "EffectType": "DamageBuff",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.06875,
         "Math_Duration": 1
       },
       {
         "Index": 11,
         "EffectType": "DamageBuff",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.06875,
         "Math_Duration": 1
       },
       {
         "Index": 12,
         "EffectType": "DamageBuff",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.06875,
         "Math_Duration": 1
       },
       {
         "Index": 13,
         "EffectType": "DamageBuff",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.06875,
         "Math_Duration": 1
       },
       {
         "Index": 14,
         "EffectType": "DamageBuff",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.06875,
         "Math_Duration": 1
       },
       {
         "Index": 15,
         "EffectType": "DamageBuff",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.06875,
         "Math_Duration": 1
       },
       {
         "Index": 16,
         "EffectType": "DamageBuff",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.06875,
         "Math_Duration": 1
       },
       {
         "Index": 17,
         "EffectType": "DamageBuff",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.06875,
         "Math_Duration": 1
       },
       {
         "Index": 18,
         "EffectType": "DamageBuff",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.075,
         "Math_Duration": 1
       },
       {
         "Index": 19,
         "EffectType": "DamageBuff",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.075,
         "Math_Duration": 1
       },
       {
         "Index": 20,
         "EffectType": "DamageBuff",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.075,
         "Math_Duration": 1
       },
       {
         "Index": 21,
         "EffectType": "DamageBuff",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.075,
         "Math_Duration": 1
       },
       {
         "Index": 22,
         "EffectType": "DamageBuff",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.075,
         "Math_Duration": 1
       },
       {
         "Index": 23,
         "EffectType": "DamageBuff",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.075,
         "Math_Duration": 1
       },
       {
         "Index": 24,
         "EffectType": "DamageBuff",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.075,
         "Math_Duration": 1
       },
       {
         "Index": 25,
         "EffectType": "DamageBuff",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.075,
         "Math_Duration": 1
       }
@@ -1134,60 +1587,90 @@
       {
         "Index": 0,
         "EffectType": "Resistance",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 1,
         "EffectType": "Resistance",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 2,
         "EffectType": "Resistance",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 3,
         "EffectType": "Resistance",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 4,
         "EffectType": "Resistance",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 5,
         "EffectType": "Resistance",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 6,
         "EffectType": "Resistance",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 7,
         "EffectType": "Resistance",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 8,
         "EffectType": "Resistance",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       },
       {
         "Index": 9,
         "EffectType": "Resistance",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 0.75
       }
@@ -1213,126 +1696,189 @@
       {
         "Index": 0,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 62.5615,
         "Math_Duration": 0
       },
       {
         "Index": 1,
         "EffectType": "ToHit",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.020000001,
         "Math_Duration": 30
       },
       {
         "Index": 2,
         "EffectType": "ToHit",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 30
       },
       {
         "Index": 3,
         "EffectType": "DamageBuff",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 30
       },
       {
         "Index": 4,
         "EffectType": "DamageBuff",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 30
       },
       {
         "Index": 5,
         "EffectType": "DamageBuff",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 30
       },
       {
         "Index": 6,
         "EffectType": "DamageBuff",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 30
       },
       {
         "Index": 7,
         "EffectType": "DamageBuff",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 30
       },
       {
         "Index": 8,
         "EffectType": "DamageBuff",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 30
       },
       {
         "Index": 9,
         "EffectType": "DamageBuff",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 30
       },
       {
         "Index": 10,
         "EffectType": "DamageBuff",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.5,
         "Math_Duration": 30
       },
       {
         "Index": 11,
         "EffectType": "DamageBuff",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.5,
         "Math_Duration": 30
       },
       {
         "Index": 12,
         "EffectType": "DamageBuff",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.5,
         "Math_Duration": 30
       },
       {
         "Index": 13,
         "EffectType": "DamageBuff",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.5,
         "Math_Duration": 30
       },
       {
         "Index": 14,
         "EffectType": "DamageBuff",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.5,
         "Math_Duration": 30
       },
       {
         "Index": 15,
         "EffectType": "DamageBuff",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.5,
         "Math_Duration": 30
       },
       {
         "Index": 16,
         "EffectType": "DamageBuff",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.5,
         "Math_Duration": 30
       },
       {
         "Index": 17,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 62.5615,
         "Math_Duration": 0
       },
       {
         "Index": 18,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 62.5615,
         "Math_Duration": 0
       },
       {
         "Index": 19,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 62.5615,
         "Math_Duration": 0
       },
       {
         "Index": 20,
         "EffectType": "Damage",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 28.152674,
         "Math_Duration": 0
       }
@@ -1358,138 +1904,207 @@
       {
         "Index": 0,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 1,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 2,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 3,
         "EffectType": "Defense",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 4,
         "EffectType": "Defense",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 5,
         "EffectType": "Defense",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 6,
         "EffectType": "Defense",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 7,
         "EffectType": "Defense",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 8,
         "EffectType": "Defense",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 9,
         "EffectType": "Defense",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 10,
         "EffectType": "Defense",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 11,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 12,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 13,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 14,
         "EffectType": "Defense",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 15,
         "EffectType": "Defense",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 16,
         "EffectType": "Defense",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 17,
         "EffectType": "Defense",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 18,
         "EffectType": "Defense",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 19,
         "EffectType": "Defense",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 20,
         "EffectType": "Defense",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 21,
         "EffectType": "Defense",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 0.75
       },
       {
         "Index": 22,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Immobilized",
+        "ETModifies": "None",
         "Math_Mag": 0.6055,
         "Math_Duration": 0.75
       }
@@ -1515,72 +2130,108 @@
       {
         "Index": 0,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 138.26093,
         "Math_Duration": 0
       },
       {
         "Index": 1,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 162.99147,
         "Math_Duration": 0
       },
       {
         "Index": 2,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 6.2561502,
         "Math_Duration": 3.1
       },
       {
         "Index": 3,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 194.27223,
         "Math_Duration": 0
       },
       {
         "Index": 4,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Immobilized",
+        "ETModifies": "None",
         "Math_Mag": 3,
         "Math_Duration": 17.880001
       },
       {
         "Index": 5,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Immobilized",
+        "ETModifies": "None",
         "Math_Mag": 3,
         "Math_Duration": 2.384
       },
       {
         "Index": 6,
         "EffectType": "ToHit",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.056250002,
         "Math_Duration": 20
       },
       {
         "Index": 7,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 6.881765,
         "Math_Duration": 3.1
       },
       {
         "Index": 8,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 172.66974,
         "Math_Duration": 0
       },
       {
         "Index": 9,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 172.66974,
         "Math_Duration": 0
       },
       {
         "Index": 10,
         "EffectType": "Damage",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 62.21741,
         "Math_Duration": 0
       },
       {
         "Index": 11,
         "EffectType": "Damage",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 2.8152676,
         "Math_Duration": 3.1
       }
@@ -1606,30 +2257,45 @@
       {
         "Index": 0,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Teleport",
+        "ETModifies": "None",
         "Math_Mag": 1,
         "Math_Duration": 0
       },
       {
         "Index": 1,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 49.26718,
         "Math_Duration": 4
       },
       {
         "Index": 2,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 119.64887,
         "Math_Duration": 4
       },
       {
         "Index": 3,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Knockback",
+        "ETModifies": "None",
         "Math_Mag": 0.64,
         "Math_Duration": 4
       },
       {
         "Index": 4,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Knockback",
+        "ETModifies": "None",
         "Math_Mag": 0.64,
         "Math_Duration": 4
       }
@@ -1655,132 +2321,198 @@
       {
         "Index": 0,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 1,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 2,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 3,
         "EffectType": "Defense",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 4,
         "EffectType": "Defense",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 5,
         "EffectType": "Defense",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 6,
         "EffectType": "Defense",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 7,
         "EffectType": "Defense",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 8,
         "EffectType": "Defense",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 9,
         "EffectType": "Defense",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 10,
         "EffectType": "Defense",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 11,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 12,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 13,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 14,
         "EffectType": "Defense",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 15,
         "EffectType": "Defense",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 16,
         "EffectType": "Defense",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 17,
         "EffectType": "Defense",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 18,
         "EffectType": "Defense",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 19,
         "EffectType": "Defense",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 20,
         "EffectType": "Defense",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       },
       {
         "Index": 21,
         "EffectType": "Defense",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.02275,
         "Math_Duration": 2.25
       }
@@ -1806,192 +2538,288 @@
       {
         "Index": 0,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Stunned",
+        "ETModifies": "None",
         "Math_Mag": -10.379999,
         "Math_Duration": 120
       },
       {
         "Index": 1,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Sleep",
+        "ETModifies": "None",
         "Math_Mag": -10.379999,
         "Math_Duration": 120
       },
       {
         "Index": 2,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Held",
+        "ETModifies": "None",
         "Math_Mag": -10.379999,
         "Math_Duration": 120
       },
       {
         "Index": 3,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Confused",
+        "ETModifies": "None",
         "Math_Mag": -10.379999,
         "Math_Duration": 120
       },
       {
         "Index": 4,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Terrorized",
+        "ETModifies": "None",
         "Math_Mag": -10.379999,
         "Math_Duration": 120
       },
       {
         "Index": 5,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Immobilized",
+        "ETModifies": "None",
         "Math_Mag": -10.379999,
         "Math_Duration": 120
       },
       {
         "Index": 6,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Stunned",
+        "ETModifies": "None",
         "Math_Mag": 1.038,
         "Math_Duration": 120
       },
       {
         "Index": 7,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Sleep",
+        "ETModifies": "None",
         "Math_Mag": 1.038,
         "Math_Duration": 120
       },
       {
         "Index": 8,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Held",
+        "ETModifies": "None",
         "Math_Mag": 1.038,
         "Math_Duration": 120
       },
       {
         "Index": 9,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Confused",
+        "ETModifies": "None",
         "Math_Mag": 1.038,
         "Math_Duration": 120
       },
       {
         "Index": 10,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Terrorized",
+        "ETModifies": "None",
         "Math_Mag": 1.038,
         "Math_Duration": 120
       },
       {
         "Index": 11,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Immobilized",
+        "ETModifies": "None",
         "Math_Mag": 1.038,
         "Math_Duration": 120
       },
       {
         "Index": 12,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Knockback",
+        "ETModifies": "None",
         "Math_Mag": 100,
         "Math_Duration": 120
       },
       {
         "Index": 13,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Knockup",
+        "ETModifies": "None",
         "Math_Mag": 100,
         "Math_Duration": 120
       },
       {
         "Index": 14,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Knockback",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 120
       },
       {
         "Index": 15,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Knockup",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 120
       },
       {
         "Index": 16,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Repel",
+        "ETModifies": "None",
         "Math_Mag": 100,
         "Math_Duration": 120
       },
       {
         "Index": 17,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Repel",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 120
       },
       {
         "Index": 18,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "Defense",
         "Math_Mag": 0.173,
         "Math_Duration": 120
       },
       {
         "Index": 19,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Knockback",
+        "ETModifies": "None",
         "Math_Mag": 100,
         "Math_Duration": 120
       },
       {
         "Index": 20,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Knockup",
+        "ETModifies": "None",
         "Math_Mag": 100,
         "Math_Duration": 120
       },
       {
         "Index": 21,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Knockback",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 120
       },
       {
         "Index": 22,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Knockup",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 120
       },
       {
         "Index": 23,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Repel",
+        "ETModifies": "None",
         "Math_Mag": 100,
         "Math_Duration": 120
       },
       {
         "Index": 24,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Repel",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 120
       },
       {
         "Index": 25,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "Defense",
         "Math_Mag": 0.3,
         "Math_Duration": 120
       },
       {
         "Index": 26,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "ToHit",
         "Math_Mag": 0.3,
         "Math_Duration": 120
       },
       {
         "Index": 27,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "RechargeTime",
         "Math_Mag": 0.3,
         "Math_Duration": 120
       },
       {
         "Index": 28,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "SpeedRunning",
         "Math_Mag": 0.5,
         "Math_Duration": 120
       },
       {
         "Index": 29,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "SpeedFlying",
         "Math_Mag": 0.5,
         "Math_Duration": 120
       },
       {
         "Index": 30,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "JumpHeight",
         "Math_Mag": 0.5,
         "Math_Duration": 120
       },
       {
         "Index": 31,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "SpeedJumping",
         "Math_Mag": 0.5,
         "Math_Duration": 120
       }
@@ -2017,144 +2845,216 @@
       {
         "Index": 0,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 222.71893,
         "Math_Duration": 0
       },
       {
         "Index": 1,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 111.35947,
         "Math_Duration": 0
       },
       {
         "Index": 2,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 111.35947,
         "Math_Duration": 0
       },
       {
         "Index": 3,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 111.35947,
         "Math_Duration": 0
       },
       {
         "Index": 4,
         "EffectType": "ToHit",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.056250002,
         "Math_Duration": 10
       },
       {
         "Index": 5,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 348.34372,
         "Math_Duration": 0
       },
       {
         "Index": 6,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 348.34372,
         "Math_Duration": 0
       },
       {
         "Index": 7,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 348.34372,
         "Math_Duration": 0
       },
       {
         "Index": 8,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 348.34372,
         "Math_Duration": 0
       },
       {
         "Index": 9,
         "EffectType": "ModifyAttrib",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1,
         "Math_Duration": 0
       },
       {
         "Index": 10,
         "EffectType": "ModifyAttrib",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1,
         "Math_Duration": 0
       },
       {
         "Index": 11,
         "EffectType": "ModifyAttrib",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1,
         "Math_Duration": 0
       },
       {
         "Index": 12,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 109.48263,
         "Math_Duration": 0
       },
       {
         "Index": 13,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1.5640376,
         "Math_Duration": 0
       },
       {
         "Index": 14,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 109.48263,
         "Math_Duration": 0
       },
       {
         "Index": 15,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1.5640376,
         "Math_Duration": 0
       },
       {
         "Index": 16,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 109.48263,
         "Math_Duration": 0
       },
       {
         "Index": 17,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1.5640376,
         "Math_Duration": 0
       },
       {
         "Index": 18,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 109.48263,
         "Math_Duration": 0
       },
       {
         "Index": 19,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1.5640376,
         "Math_Duration": 0
       },
       {
         "Index": 20,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 181.748,
         "Math_Duration": 0
       },
       {
         "Index": 21,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 181.748,
         "Math_Duration": 0
       },
       {
         "Index": 22,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 181.748,
         "Math_Duration": 0
       },
       {
         "Index": 23,
         "EffectType": "Damage",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 181.748,
         "Math_Duration": 0
       }
@@ -2180,72 +3080,108 @@
       {
         "Index": 0,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.20250002,
         "Math_Duration": 15
       },
       {
         "Index": 1,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.20250002,
         "Math_Duration": 15
       },
       {
         "Index": 2,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.20250002,
         "Math_Duration": 15
       },
       {
         "Index": 3,
         "EffectType": "Defense",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.20250002,
         "Math_Duration": 15
       },
       {
         "Index": 4,
         "EffectType": "Defense",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.20250002,
         "Math_Duration": 15
       },
       {
         "Index": 5,
         "EffectType": "Defense",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.20250002,
         "Math_Duration": 15
       },
       {
         "Index": 6,
         "EffectType": "Defense",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.20250002,
         "Math_Duration": 15
       },
       {
         "Index": 7,
         "EffectType": "Defense",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.20250002,
         "Math_Duration": 15
       },
       {
         "Index": 8,
         "EffectType": "Defense",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.20250002,
         "Math_Duration": 15
       },
       {
         "Index": 9,
         "EffectType": "Defense",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.20250002,
         "Math_Duration": 15
       },
       {
         "Index": 10,
         "EffectType": "Defense",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.20250002,
         "Math_Duration": 15
       },
       {
         "Index": 11,
         "EffectType": "Translucency",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 15
       }
@@ -2271,36 +3207,54 @@
       {
         "Index": 0,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 1
       },
       {
         "Index": 1,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 1
       },
       {
         "Index": 2,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 1
       },
       {
         "Index": 3,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 1.25
       },
       {
         "Index": 4,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 1.25
       },
       {
         "Index": 5,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.0375,
         "Math_Duration": 1.25
       }
@@ -2326,66 +3280,99 @@
       {
         "Index": 0,
         "EffectType": "Defense",
+        "DamageType": "Melee",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.084375,
         "Math_Duration": 2.25
       },
       {
         "Index": 1,
         "EffectType": "Defense",
+        "DamageType": "Ranged",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.084375,
         "Math_Duration": 2.25
       },
       {
         "Index": 2,
         "EffectType": "Defense",
+        "DamageType": "AoE",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.084375,
         "Math_Duration": 2.25
       },
       {
         "Index": 3,
         "EffectType": "Defense",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.084375,
         "Math_Duration": 2.25
       },
       {
         "Index": 4,
         "EffectType": "Defense",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.084375,
         "Math_Duration": 2.25
       },
       {
         "Index": 5,
         "EffectType": "Defense",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.084375,
         "Math_Duration": 2.25
       },
       {
         "Index": 6,
         "EffectType": "Defense",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.084375,
         "Math_Duration": 2.25
       },
       {
         "Index": 7,
         "EffectType": "Defense",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.084375,
         "Math_Duration": 2.25
       },
       {
         "Index": 8,
         "EffectType": "Defense",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.084375,
         "Math_Duration": 2.25
       },
       {
         "Index": 9,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "Defense",
         "Math_Mag": 0.1384,
         "Math_Duration": 2.25
       },
       {
         "Index": 10,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "RechargeTime",
         "Math_Mag": 0.3,
         "Math_Duration": 2.25
       }
@@ -2411,42 +3398,63 @@
       {
         "Index": 0,
         "EffectType": "ToHit",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.07,
         "Math_Duration": 2.25
       },
       {
         "Index": 1,
         "EffectType": "ResEffect",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "PerceptionRadius",
         "Math_Mag": 0.3633,
         "Math_Duration": 2.25
       },
       {
         "Index": 2,
         "EffectType": "PerceptionRadius",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.4844,
         "Math_Duration": 2.25
       },
       {
         "Index": 3,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Confused",
+        "ETModifies": "None",
         "Math_Mag": 0.42385,
         "Math_Duration": 2.25
       },
       {
         "Index": 4,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Confused",
+        "ETModifies": "None",
         "Math_Mag": -3.6330001,
         "Math_Duration": 2.25
       },
       {
         "Index": 5,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Confused",
+        "ETModifies": "None",
         "Math_Mag": 0.78715,
         "Math_Duration": 2.25
       },
       {
         "Index": 6,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Terrorized",
+        "ETModifies": "None",
         "Math_Mag": 0.42385,
         "Math_Duration": 2.25
       }
@@ -2472,144 +3480,216 @@
       {
         "Index": 0,
         "EffectType": "Resistance",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.22500001,
         "Math_Duration": 120
       },
       {
         "Index": 1,
         "EffectType": "Resistance",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.22500001,
         "Math_Duration": 120
       },
       {
         "Index": 2,
         "EffectType": "Resistance",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 120
       },
       {
         "Index": 3,
         "EffectType": "Resistance",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 120
       },
       {
         "Index": 4,
         "EffectType": "Resistance",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 120
       },
       {
         "Index": 5,
         "EffectType": "Resistance",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 120
       },
       {
         "Index": 6,
         "EffectType": "Resistance",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.112500004,
         "Math_Duration": 120
       },
       {
         "Index": 7,
         "EffectType": "HitPoints",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 267.7242,
         "Math_Duration": 120
       },
       {
         "Index": 8,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Knockup",
+        "ETModifies": "None",
         "Math_Mag": -100,
         "Math_Duration": 120
       },
       {
         "Index": 9,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Knockup",
+        "ETModifies": "None",
         "Math_Mag": 10,
         "Math_Duration": 120
       },
       {
         "Index": 10,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Knockback",
+        "ETModifies": "None",
         "Math_Mag": -100,
         "Math_Duration": 120
       },
       {
         "Index": 11,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Knockback",
+        "ETModifies": "None",
         "Math_Mag": 10,
         "Math_Duration": 120
       },
       {
         "Index": 12,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Repel",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 120
       },
       {
         "Index": 13,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Repel",
+        "ETModifies": "None",
         "Math_Mag": 10,
         "Math_Duration": 120
       },
       {
         "Index": 14,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Stunned",
+        "ETModifies": "None",
         "Math_Mag": -17.3,
         "Math_Duration": 120
       },
       {
         "Index": 15,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Held",
+        "ETModifies": "None",
         "Math_Mag": -17.3,
         "Math_Duration": 120
       },
       {
         "Index": 16,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Sleep",
+        "ETModifies": "None",
         "Math_Mag": -17.3,
         "Math_Duration": 120
       },
       {
         "Index": 17,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Immobilized",
+        "ETModifies": "None",
         "Math_Mag": -17.3,
         "Math_Duration": 120
       },
       {
         "Index": 18,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Stunned",
+        "ETModifies": "None",
         "Math_Mag": 1.7299999,
         "Math_Duration": 120
       },
       {
         "Index": 19,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Held",
+        "ETModifies": "None",
         "Math_Mag": 1.7299999,
         "Math_Duration": 120
       },
       {
         "Index": 20,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Sleep",
+        "ETModifies": "None",
         "Math_Mag": 1.7299999,
         "Math_Duration": 120
       },
       {
         "Index": 21,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Immobilized",
+        "ETModifies": "None",
         "Math_Mag": 1.7299999,
         "Math_Duration": 120
       },
       {
         "Index": 22,
         "EffectType": "Recovery",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.3,
         "Math_Duration": 120
       },
       {
         "Index": 23,
         "EffectType": "Endurance",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.6,
         "Math_Duration": 0
       }
@@ -2635,54 +3715,81 @@
       {
         "Index": 0,
         "EffectType": "GlobalChanceMod",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 0
       },
       {
         "Index": 1,
         "EffectType": "GlobalChanceMod",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 0
       },
       {
         "Index": 2,
         "EffectType": "GlobalChanceMod",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 0
       },
       {
         "Index": 3,
         "EffectType": "GlobalChanceMod",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 0
       },
       {
         "Index": 4,
         "EffectType": "GlobalChanceMod",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 0
       },
       {
         "Index": 5,
         "EffectType": "GlobalChanceMod",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 0
       },
       {
         "Index": 6,
         "EffectType": "GlobalChanceMod",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 0
       },
       {
         "Index": 7,
         "EffectType": "GlobalChanceMod",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 0
       },
       {
         "Index": 8,
         "EffectType": "GlobalChanceMod",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0,
         "Math_Duration": 0
       }
@@ -2708,48 +3815,72 @@
       {
         "Index": 0,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 22.52214,
         "Math_Duration": 0
       },
       {
         "Index": 1,
         "EffectType": "Damage",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 22.52214,
         "Math_Duration": 0
       },
       {
         "Index": 2,
         "EffectType": "Enhancement",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "RechargeTime",
         "Math_Mag": -0.1,
         "Math_Duration": 10
       },
       {
         "Index": 3,
         "EffectType": "Enhancement",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "RechargeTime",
         "Math_Mag": -0.1,
         "Math_Duration": 10
       },
       {
         "Index": 4,
         "EffectType": "ToHit",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.1,
         "Math_Duration": 10
       },
       {
         "Index": 5,
         "EffectType": "ToHit",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.1,
         "Math_Duration": 10
       },
       {
         "Index": 6,
         "EffectType": "Regeneration",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.1,
         "Math_Duration": 10
       },
       {
         "Index": 7,
         "EffectType": "Recovery",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -0.1,
         "Math_Duration": 10
       }
@@ -2775,18 +3906,27 @@
       {
         "Index": 0,
         "EffectType": "SpeedRunning",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.5,
         "Math_Duration": 0.8
       },
       {
         "Index": 1,
         "EffectType": "SpeedRunning",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.5,
         "Math_Duration": 0.75
       },
       {
         "Index": 2,
         "EffectType": "JumpHeight",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1,
         "Math_Duration": 0.75
       }
@@ -2812,156 +3952,234 @@
       {
         "Index": 0,
         "EffectType": "Regeneration",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 19,
         "Math_Duration": 0.55
       },
       {
         "Index": 1,
         "EffectType": "Recovery",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 4.25,
         "Math_Duration": 0
       },
       {
         "Index": 2,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Immobilized",
+        "ETModifies": "None",
         "Math_Mag": 100,
         "Math_Duration": 0.3
       },
       {
         "Index": 3,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "OnlyAffectsSelf",
+        "ETModifies": "None",
         "Math_Mag": 100,
         "Math_Duration": 0.55
       },
       {
         "Index": 4,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Untouchable",
+        "ETModifies": "None",
         "Math_Mag": -100,
         "Math_Duration": 0.55
       },
       {
         "Index": 5,
         "EffectType": "Resistance",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 0.55
       },
       {
         "Index": 6,
         "EffectType": "Resistance",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 0.55
       },
       {
         "Index": 7,
         "EffectType": "Resistance",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 0.55
       },
       {
         "Index": 8,
         "EffectType": "Resistance",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 0.55
       },
       {
         "Index": 9,
         "EffectType": "Resistance",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 0.55
       },
       {
         "Index": 10,
         "EffectType": "Resistance",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 0.55
       },
       {
         "Index": 11,
         "EffectType": "Resistance",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 0.55
       },
       {
         "Index": 12,
         "EffectType": "Resistance",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 0.55
       },
       {
         "Index": 13,
         "EffectType": "Resistance",
+        "DamageType": "Special",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -10,
         "Math_Duration": 0.55
       },
       {
         "Index": 14,
         "EffectType": "Defense",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -1000,
         "Math_Duration": 0.55
       },
       {
         "Index": 15,
         "EffectType": "Mez",
+        "DamageType": "None",
+        "MezType": "Teleport",
+        "ETModifies": "None",
         "Math_Mag": -100,
         "Math_Duration": 0.55
       },
       {
         "Index": 16,
         "EffectType": "Fly",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -100,
         "Math_Duration": 0.55
       },
       {
         "Index": 17,
         "EffectType": "Defense",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -1000,
         "Math_Duration": 0.55
       },
       {
         "Index": 18,
         "EffectType": "Defense",
+        "DamageType": "Smashing",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -1000,
         "Math_Duration": 0.55
       },
       {
         "Index": 19,
         "EffectType": "Defense",
+        "DamageType": "Lethal",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -1000,
         "Math_Duration": 0.55
       },
       {
         "Index": 20,
         "EffectType": "Defense",
+        "DamageType": "Fire",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -1000,
         "Math_Duration": 0.55
       },
       {
         "Index": 21,
         "EffectType": "Defense",
+        "DamageType": "Cold",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -1000,
         "Math_Duration": 0.55
       },
       {
         "Index": 22,
         "EffectType": "Defense",
+        "DamageType": "Energy",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -1000,
         "Math_Duration": 0.55
       },
       {
         "Index": 23,
         "EffectType": "Defense",
+        "DamageType": "Negative",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -1000,
         "Math_Duration": 0.55
       },
       {
         "Index": 24,
         "EffectType": "Defense",
+        "DamageType": "Toxic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -1000,
         "Math_Duration": 0.55
       },
       {
         "Index": 25,
         "EffectType": "Defense",
+        "DamageType": "Psionic",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": -1000,
         "Math_Duration": 0.55
       }
@@ -2987,12 +4205,18 @@
       {
         "Index": 0,
         "EffectType": "SpeedRunning",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.35,
         "Math_Duration": 10.25
       },
       {
         "Index": 1,
         "EffectType": "SpeedFlying",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.1365,
         "Math_Duration": 10.25
       }
@@ -3018,12 +4242,18 @@
       {
         "Index": 0,
         "EffectType": "JumpHeight",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1.6679999,
         "Math_Duration": 10.25
       },
       {
         "Index": 1,
         "EffectType": "SpeedJumping",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1.245,
         "Math_Duration": 10.25
       }
@@ -3049,12 +4279,18 @@
       {
         "Index": 0,
         "EffectType": "Regeneration",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.4,
         "Math_Duration": 10.25
       },
       {
         "Index": 1,
         "EffectType": "MezResist",
+        "DamageType": "None",
+        "MezType": "Sleep",
+        "ETModifies": "None",
         "Math_Mag": 0.6055,
         "Math_Duration": 10.25
       }
@@ -3080,6 +4316,9 @@
       {
         "Index": 0,
         "EffectType": "Recovery",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.25,
         "Math_Duration": 10.25
       }
@@ -3105,6 +4344,9 @@
       {
         "Index": 0,
         "EffectType": "Regeneration",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 0.25,
         "Math_Duration": 120
       }
@@ -3130,6 +4372,9 @@
       {
         "Index": 0,
         "EffectType": "Jumppack",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1,
         "Math_Duration": 0.75
       }
@@ -3155,6 +4400,9 @@
       {
         "Index": 0,
         "EffectType": "NullBool",
+        "DamageType": "None",
+        "MezType": "None",
+        "ETModifies": "None",
         "Math_Mag": 1,
         "Math_Duration": 0
       }

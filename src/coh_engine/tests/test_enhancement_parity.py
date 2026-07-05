@@ -13,6 +13,7 @@ enhancement flows purely through the per-effect ``Math_Mag`` multiplier path.
 """
 
 import json
+from collections import defaultdict, deque
 from pathlib import Path
 from typing import Any
 
@@ -207,11 +208,19 @@ def test_deflection_per_effect_math_mag(
 
     deflection = powers[DEFLECTION_INDEX]
     dumped = next(p for p in _enhanced_powers(SLOTTED) if p["BuildIndex"] == DEFLECTION_INDEX)
+    # Match effects by structural identity, not array position — GBPA assembly
+    # can reorder the buffed effect array relative to the raw powers_effects
+    # dump. Same-identity effects (Deflection has two Defense/Ranged) are paired
+    # FIFO; their enhanced Math_Mag is identical, so within-key order is moot.
+    dumped_by_key: dict[tuple[str, str, str, str], deque[float]] = defaultdict(deque)
+    for e in dumped["Effects"]:
+        dumped_by_key[(e["EffectType"], e["DamageType"], e["MezType"], e["ETModifies"])].append(f32(e["Math_Mag"]))
     for fx in deflection.effects:
         base_mag = effect_mag(fx, deflection, mods, classes, at_index)
         mult = enh_mult.get((DEFLECTION_INDEX, fx.index), 1.0)
-        got = f32(base_mag * mult)
-        assert got == f32(dumped["Effects"][fx.index]["Math_Mag"]), f"Deflection effect {fx.index}"
+        key = (fx.effect_type, fx.damage_type, fx.mez_type, fx.et_modifies)
+        assert dumped_by_key[key].popleft() == f32(base_mag * mult), f"Deflection {key}"
+    assert all(len(q) == 0 for q in dumped_by_key.values()), "unmatched dumped effect"
 
 
 @pytest.mark.parametrize(("name", "rounded"), [(SLOTTED, 0.9908), (HASTEN_2RECH, 0.8332)])
