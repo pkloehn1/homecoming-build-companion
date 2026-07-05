@@ -8,6 +8,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 1,
+    "PickLevel": 0,
     "EndCost": 5.2,
     "ActivatePeriod": 0,
     "ToggleCost": 5.2,
@@ -20,6 +21,15 @@
       14,
       44,
       38
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      17,
+      18,
+      21,
+      22
     ],
     "Effects": [
       {
@@ -462,6 +472,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 1,
+    "PickLevel": 0,
     "EndCost": 5.2,
     "ActivatePeriod": 0,
     "ToggleCost": 5.2,
@@ -473,6 +484,14 @@
       21,
       30,
       44
+    ],
+    "Enhancements": [
+      1,
+      4,
+      6,
+      8,
+      17,
+      18
     ],
     "Effects": [
       {
@@ -993,6 +1012,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 2,
+    "PickLevel": 1,
     "EndCost": 15.6,
     "ActivatePeriod": 0,
     "ToggleCost": 15.6,
@@ -1005,6 +1025,15 @@
       44,
       3,
       38
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      17,
+      18,
+      21,
+      22
     ],
     "Effects": [
       {
@@ -1408,6 +1437,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 4,
+    "PickLevel": 3,
     "EndCost": 0.0325,
     "ActivatePeriod": 0.5,
     "ToggleCost": 0.065,
@@ -1419,6 +1449,11 @@
       18,
       28,
       47
+    ],
+    "Enhancements": [
+      5,
+      8,
+      15
     ],
     "Effects": [
       {
@@ -2524,6 +2559,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 6,
+    "PickLevel": 5,
     "EndCost": 10.4,
     "ActivatePeriod": 0,
     "ToggleCost": 10.4,
@@ -2534,6 +2570,14 @@
       3,
       44,
       13
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      17,
+      18,
+      22
     ],
     "Effects": [
       {
@@ -2859,6 +2903,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 8,
+    "PickLevel": 7,
     "EndCost": 0.18,
     "ActivatePeriod": 0.5,
     "ToggleCost": 0.36,
@@ -2867,6 +2912,11 @@
     "VariableValue": 0,
     "SetTypes": [
       7
+    ],
+    "Enhancements": [
+      5,
+      8,
+      18
     ],
     "Effects": [
       {
@@ -3426,6 +3476,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 4,
+    "PickLevel": 9,
     "EndCost": 4.42,
     "ActivatePeriod": 0,
     "ToggleCost": 4.42,
@@ -3436,6 +3487,13 @@
       1,
       11,
       44
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      18,
+      23
     ],
     "Effects": [
       {
@@ -4892,6 +4950,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 4,
+    "PickLevel": 11,
     "EndCost": 0.228,
     "ActivatePeriod": 0.5,
     "ToggleCost": 0.456,
@@ -4902,6 +4961,10 @@
       18,
       28,
       47
+    ],
+    "Enhancements": [
+      8,
+      15
     ],
     "Effects": [
       {
@@ -5305,6 +5368,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 14,
+    "PickLevel": 13,
     "EndCost": 0.1625,
     "ActivatePeriod": 0.5,
     "ToggleCost": 0.325,
@@ -5313,6 +5377,11 @@
     "VariableValue": 0,
     "SetTypes": [
       8
+    ],
+    "Enhancements": [
+      8,
+      18,
+      19
     ],
     "Effects": [
       {
@@ -5716,6 +5785,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 4,
+    "PickLevel": 15,
     "EndCost": 10.19,
     "ActivatePeriod": 0,
     "ToggleCost": 10.19,
@@ -5726,6 +5796,14 @@
       3,
       44,
       23
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      16,
+      17,
+      18
     ],
     "Effects": [
       {
@@ -5895,6 +5973,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 18,
+    "PickLevel": 17,
     "EndCost": 15.6,
     "ActivatePeriod": 0,
     "ToggleCost": 15.6,
@@ -5908,6 +5987,15 @@
       26,
       31,
       38
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      17,
+      18,
+      23,
+      26
     ],
     "Effects": [
       {
@@ -6272,6 +6360,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 14,
+    "PickLevel": 19,
     "EndCost": 0.1625,
     "ActivatePeriod": 0.5,
     "ToggleCost": 0.325,
@@ -6280,6 +6369,11 @@
     "VariableValue": 0,
     "SetTypes": [
       7
+    ],
+    "Enhancements": [
+      5,
+      8,
+      18
     ],
     "Effects": [
       {
@@ -7190,6 +7284,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 4,
+    "PickLevel": 21,
     "EndCost": 0.78,
     "ActivatePeriod": 2,
     "ToggleCost": 0.39,
@@ -7198,6 +7293,11 @@
     "VariableValue": 0,
     "SetTypes": [
       7
+    ],
+    "Enhancements": [
+      5,
+      8,
+      18
     ],
     "Effects": [
       {
@@ -8069,6 +8169,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 24,
+    "PickLevel": 23,
     "EndCost": 0.155,
     "ActivatePeriod": 0.5,
     "ToggleCost": 0.31,
@@ -8076,6 +8177,11 @@
     "StatInclude": true,
     "VariableValue": 0,
     "SetTypes": [
+      25
+    ],
+    "Enhancements": [
+      8,
+      18,
       25
     ],
     "Effects": [
@@ -8246,6 +8352,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 26,
+    "PickLevel": 25,
     "EndCost": 26,
     "ActivatePeriod": 0,
     "ToggleCost": 26,
@@ -8257,6 +8364,13 @@
       24,
       27,
       44
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      18,
+      24
     ],
     "Effects": [
       {
@@ -8309,6 +8423,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 28,
+    "PickLevel": 27,
     "EndCost": 18.51,
     "ActivatePeriod": 0,
     "ToggleCost": 18.51,
@@ -8320,6 +8435,15 @@
       5,
       23,
       44
+    ],
+    "Enhancements": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      17,
+      18
     ],
     "Effects": [
       {
@@ -8411,6 +8535,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 30,
+    "PickLevel": 29,
     "EndCost": 11.86,
     "ActivatePeriod": 0,
     "ToggleCost": 11.86,
@@ -8420,6 +8545,13 @@
     "SetTypes": [
       3,
       44
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      17,
+      18
     ],
     "Effects": [
       {
@@ -8667,6 +8799,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 14,
+    "PickLevel": 31,
     "EndCost": 0.78,
     "ActivatePeriod": 2,
     "ToggleCost": 0.39,
@@ -8675,6 +8808,11 @@
     "VariableValue": 0,
     "SetTypes": [
       25
+    ],
+    "Enhancements": [
+      25,
+      8,
+      18
     ],
     "Effects": [
       {
@@ -8961,6 +9099,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 22,
+    "PickLevel": 34,
     "EndCost": 15.6,
     "ActivatePeriod": 0,
     "ToggleCost": 15.6,
@@ -8972,6 +9111,14 @@
       10,
       38,
       44
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      12,
+      17,
+      18
     ],
     "Effects": [
       {
@@ -9414,6 +9561,7 @@
     "ForcedClass": "",
     "ClickBuff": true,
     "Level": 16,
+    "PickLevel": 37,
     "EndCost": 7.8,
     "ActivatePeriod": 0,
     "ToggleCost": 7.8,
@@ -9421,6 +9569,10 @@
     "StatInclude": false,
     "VariableValue": 0,
     "SetTypes": [],
+    "Enhancements": [
+      8,
+      18
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -10603,6 +10755,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 10,
+    "PickLevel": 40,
     "EndCost": 11.86,
     "ActivatePeriod": 0,
     "ToggleCost": 11.86,
@@ -10613,6 +10766,13 @@
       1,
       23,
       44
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      16,
+      18
     ],
     "Effects": [
       {
@@ -10782,6 +10942,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 20,
+    "PickLevel": 43,
     "EndCost": 18.51,
     "ActivatePeriod": 0,
     "ToggleCost": 18.51,
@@ -10792,6 +10953,13 @@
       4,
       23,
       44
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      16,
+      18
     ],
     "Effects": [
       {
@@ -10961,6 +11129,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 1,
+    "PickLevel": 46,
     "EndCost": 8.53,
     "ActivatePeriod": 0,
     "ToggleCost": 8.53,
@@ -10973,6 +11142,15 @@
       13,
       44,
       38
+    ],
+    "Enhancements": [
+      1,
+      4,
+      8,
+      12,
+      17,
+      18,
+      22
     ],
     "Effects": [
       {
@@ -11610,6 +11788,7 @@
     "ForcedClass": "",
     "ClickBuff": true,
     "Level": 4,
+    "PickLevel": 48,
     "EndCost": 0,
     "ActivatePeriod": 0,
     "ToggleCost": 0,
@@ -11617,6 +11796,9 @@
     "StatInclude": false,
     "VariableValue": 0,
     "SetTypes": [],
+    "Enhancements": [
+      18
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -11707,6 +11889,7 @@
     "ForcedClass": "",
     "ClickBuff": true,
     "Level": 1,
+    "PickLevel": 0,
     "EndCost": 0,
     "ActivatePeriod": 0,
     "ToggleCost": 0,
@@ -11714,6 +11897,7 @@
     "StatInclude": false,
     "VariableValue": 0,
     "SetTypes": [],
+    "Enhancements": [],
     "Effects": [
       {
         "Index": 0,
@@ -12662,6 +12846,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 1,
+    "PickLevel": 0,
     "EndCost": 0,
     "ActivatePeriod": 0,
     "ToggleCost": 0,
@@ -12671,6 +12856,11 @@
     "SetTypes": [
       1,
       44
+    ],
+    "Enhancements": [
+      1,
+      4,
+      18
     ],
     "Effects": [
       {
@@ -12996,6 +13186,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 1,
+    "PickLevel": 0,
     "EndCost": 0.14625,
     "ActivatePeriod": 0.5,
     "ToggleCost": 0.2925,
@@ -13005,6 +13196,11 @@
     "SetTypes": [
       18,
       19
+    ],
+    "Enhancements": [
+      8,
+      15,
+      20
     ],
     "Effects": [
       {
@@ -13135,6 +13331,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 2,
+    "PickLevel": 1,
     "EndCost": 0,
     "ActivatePeriod": 0.2,
     "ToggleCost": 0,
@@ -13142,6 +13339,11 @@
     "StatInclude": false,
     "VariableValue": 0,
     "SetTypes": [],
+    "Enhancements": [
+      2,
+      7,
+      11
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -14168,6 +14370,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 1,
+    "PickLevel": 0,
     "EndCost": 0,
     "ActivatePeriod": 10,
     "ToggleCost": 0,
@@ -14175,6 +14378,10 @@
     "StatInclude": true,
     "VariableValue": 0,
     "SetTypes": [],
+    "Enhancements": [
+      10,
+      20
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -14265,6 +14472,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 1,
+    "PickLevel": 0,
     "EndCost": 0,
     "ActivatePeriod": 10,
     "ToggleCost": 0,
@@ -14272,6 +14480,9 @@
     "StatInclude": true,
     "VariableValue": 0,
     "SetTypes": [],
+    "Enhancements": [
+      15
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -14362,6 +14573,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 1,
+    "PickLevel": 0,
     "EndCost": 0,
     "ActivatePeriod": 10,
     "ToggleCost": 0,
@@ -14370,6 +14582,9 @@
     "VariableValue": 0,
     "SetTypes": [
       9
+    ],
+    "Enhancements": [
+      11
     ],
     "Effects": [
       {
@@ -14461,6 +14676,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 1,
+    "PickLevel": 0,
     "EndCost": 0,
     "ActivatePeriod": 10,
     "ToggleCost": 0,
@@ -14469,6 +14685,9 @@
     "VariableValue": 0,
     "SetTypes": [
       22
+    ],
+    "Enhancements": [
+      7
     ],
     "Effects": [
       {
@@ -14521,6 +14740,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 49,
+    "PickLevel": 48,
     "EndCost": 0,
     "ActivatePeriod": 0,
     "ToggleCost": 0,
@@ -14528,6 +14748,7 @@
     "StatInclude": false,
     "VariableValue": 0,
     "SetTypes": [],
+    "Enhancements": [],
     "Effects": [
       {
         "Index": 0,
@@ -14579,6 +14800,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 0,
+    "PickLevel": 11,
     "EndCost": 0.118,
     "ActivatePeriod": 0.5,
     "ToggleCost": 0.236,
@@ -14586,6 +14808,7 @@
     "StatInclude": false,
     "VariableValue": 0,
     "SetTypes": [],
+    "Enhancements": [],
     "Effects": [
       {
         "Index": 0,
@@ -14637,6 +14860,7 @@
     "ForcedClass": "",
     "ClickBuff": false,
     "Level": 0,
+    "PickLevel": 0,
     "EndCost": 0,
     "ActivatePeriod": 0,
     "ToggleCost": 0,
@@ -14644,6 +14868,7 @@
     "StatInclude": true,
     "VariableValue": 0,
     "SetTypes": [],
+    "Enhancements": [],
     "Effects": [
       {
         "Index": 0,

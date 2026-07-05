@@ -281,7 +281,11 @@ def _tally_build(
     """
     ordered: list[_SetInfo] = []
     for power in sorted(powers, key=lambda p: p.build_index):
-        if power.level > force_level:
+        # The exemplar gate is the build's PICK level (``PowerEntry.Level``,
+        # Build.cs:1160), not the DB minimum ``level``. They coincide at ForceLevel
+        # 50; under exemplar a power whose DB minimum passes but whose pick level does
+        # not must drop its set bonuses.
+        if power.pick_level > force_level:
             continue
         infos = _tally_power(slots.get(power.build_index, ()), enh_db)
         for info in infos:

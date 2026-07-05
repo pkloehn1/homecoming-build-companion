@@ -72,7 +72,13 @@ def _effect(**over: object) -> Effect:
     return Effect(**base)  # type: ignore[arg-type]
 
 
-def _power(build_index: int, *, level: int = 1, set_types: tuple[int, ...] = (_DEFENSE_SET_TYPE,)) -> Power:
+def _power(
+    build_index: int,
+    *,
+    level: int = 1,
+    pick_level: int | None = None,
+    set_types: tuple[int, ...] = (_DEFENSE_SET_TYPE,),
+) -> Power:
     return Power(
         build_index=build_index,
         nid_power=build_index,
@@ -82,6 +88,9 @@ def _power(build_index: int, *, level: int = 1, set_types: tuple[int, ...] = (_D
         forced_class="",
         click_buff=False,
         level=level,
+        # The tally gates on pick_level; default it to level so existing gate tests
+        # (a power picked above ForceLevel) keep their intent.
+        pick_level=level if pick_level is None else pick_level,
         end_cost=0.0,
         activate_period=0.0,
         toggle_cost=0.0,
