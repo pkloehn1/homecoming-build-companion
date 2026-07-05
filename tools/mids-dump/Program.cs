@@ -13,6 +13,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Mids_Reborn;
 using Mids_Reborn.Core;
+using Mids_Reborn.Core.Base.Data_Classes;
 using Mids_Reborn.Core.Base.Master_Classes;
 using Mids_Reborn.Core.BuildFile;
 
@@ -113,17 +114,222 @@ internal static class Program
         DumpEnhancementClasses(outDir);
         DumpEnhancements(outDir);
         DumpPowerIndex(outDir);
+        DumpEnums(outDir);
+        DumpConfig(outDir);
 
         // Optional third arg: a directory of .mbd sample builds. Each is loaded
         // through Mids and re-saved as a .mxd share block, giving the Python port
         // real Mids-produced .mxd fixtures to validate its reader against.
-        if (args.Length >= 3)
+        // Pass "-" to skip.
+        if (args.Length >= 3 && args[2] != "-")
         {
             ExportMxdBuilds(Path.GetFullPath(args[2]), outDir);
         }
 
+        // Optional fourth arg: a directory of parity-build .mbd files. Each is
+        // loaded through Mids, recomputed via GenerateBuffedPowerArray, and dumped
+        // as builds/<name>/{powers_effects,totals}.json — the CP3+ reference
+        // fixtures the Python base-totals math is validated against.
+        if (args.Length >= 4)
+        {
+            DumpParityBuilds(Path.GetFullPath(args[3]), outDir);
+        }
+
         Console.WriteLine($"OK: dumps written to {outDir}");
         return 0;
+    }
+
+    private static void DumpEnums(string outDir)
+    {
+        // Name -> ordinal for every enum the engine indexes arrays by (Totals.Def
+        // by eDamage, _selfBuffs.Effect by eEffectType/eStatType, ...). The Python
+        // port must never guess these orderings.
+        var enums = new Dictionary<string, Dictionary<string, int>>();
+        foreach (var t in new[]
+                 {
+                     typeof(Enums.eEffectType), typeof(Enums.eDamage), typeof(Enums.eMez),
+                     typeof(Enums.eToWho), typeof(Enums.ePvX), typeof(Enums.eAspect),
+                     typeof(Enums.eAttribType), typeof(Enums.eEffectClass), typeof(Enums.eStacking),
+                     typeof(Enums.eSuppress), typeof(Enums.ePowerType), typeof(Enums.eSpecialCase),
+                     typeof(Enums.eStatType),
+                 })
+        {
+            var values = new Dictionary<string, int>();
+            foreach (var v in Enum.GetValues(t))
+            {
+                values[v.ToString()!] = Convert.ToInt32(v);
+            }
+            enums[t.Name] = values;
+        }
+        WriteJson(outDir, "enums.json", enums);
+    }
+
+    private static void DumpConfig(string outDir)
+    {
+        // The config state the totals were computed under. The Python port pins
+        // its assumptions (PvE mode, no suppression, level-50 build) to this dump.
+        var cfg = MidsContext.Config;
+        WriteJson(outDir, "config.json", new
+        {
+            Suppression = (int)cfg.Suppression,
+            cfg.Inc.DisablePvE,
+            cfg.ForceLevel,
+            cfg.ScalingToHit,
+        });
+    }
+
+    private static void DumpParityBuilds(string buildsDir, string outDir)
+    {
+        if (!Directory.Exists(buildsDir))
+        {
+            Console.Error.WriteLine($"E12: parity-builds dir not found: {buildsDir}");
+            return;
+        }
+
+        foreach (var mbdPath in Directory.EnumerateFiles(buildsDir, "*.mbd", SearchOption.AllDirectories))
+        {
+            var toon = new clsToonX();
+            MainModule.MidsController.Toon = toon;
+            if (!BuildManager.Instance.LoadFromFile(mbdPath))
+            {
+                Console.Error.WriteLine($"E13: LoadFromFile failed for {mbdPath}");
+                continue;
+            }
+
+            toon.GenerateBuffedPowerArray();
+
+            var buildDir = Path.Combine(outDir, "builds", Path.GetFileNameWithoutExtension(mbdPath));
+            Directory.CreateDirectory(buildDir);
+            DumpBuildPowersEffects(buildDir, toon);
+            DumpBuildTotals(buildDir, toon);
+        }
+    }
+
+    private static void DumpBuildPowersEffects(string buildDir, clsToonX toon)
+    {
+        // The build's resolved DB powers with the full magnitude-driving effect
+        // field set. The Python port computes base totals from THESE records; the
+        // enum-valued fields are dumped as names (enums.json maps them to ordinals).
+        var db = DatabaseAPI.Database;
+        var powers = new List<object>();
+        for (var i = 0; i < toon.CurrentBuild.Powers.Count; i++)
+        {
+            var entry = toon.CurrentBuild.Powers[i];
+            if (entry == null || entry.NIDPower < 0)
+            {
+                continue;
+            }
+
+            var pw = db.Power[entry.NIDPower];
+            if (pw == null)
+            {
+                continue;
+            }
+
+            powers.Add(new
+            {
+                BuildIndex = i,
+                entry.NIDPower,
+                pw.FullName,
+                pw.StaticIndex,
+                PowerType = pw.PowerType.ToString(),
+                pw.ForcedClass,
+                pw.ClickBuff,
+                pw.Level,
+                pw.EndCost,
+                pw.ActivatePeriod,
+                pw.ToggleCost,
+                entry.StatInclude,
+                Effects = pw.Effects.Select((fx, fxIdx) => new
+                {
+                    Index = fxIdx,
+                    EffectType = fx.EffectType.ToString(),
+                    DamageType = fx.DamageType.ToString(),
+                    MezType = fx.MezType.ToString(),
+                    ETModifies = fx.ETModifies.ToString(),
+                    fx.Scale,
+                    fx.nMagnitude,
+                    fx.nDuration,
+                    AttribType = fx.AttribType.ToString(),
+                    Aspect = fx.Aspect.ToString(),
+                    fx.ModifierTable,
+                    fx.nModifierTable,
+                    ToWho = fx.ToWho.ToString(),
+                    PvMode = fx.PvMode.ToString(),
+                    Stacking = fx.Stacking.ToString(),
+                    Suppression = (int)fx.Suppression,
+                    fx.Buffable,
+                    fx.Resistible,
+                    fx.IgnoreED,
+                    fx.IgnoreScaling,
+                    fx.BaseProbability,
+                    fx.Probability,
+                    fx.ProcsPerMinute,
+                    fx.Ticks,
+                    fx.DelayedTime,
+                    EffectClass = fx.EffectClass.ToString(),
+                    SpecialCase = fx.SpecialCase.ToString(),
+                    fx.nIDClassName,
+                    fx.Absorbed_Effect,
+                    Absorbed_PowerType = fx.Absorbed_PowerType.ToString(),
+                    fx.Absorbed_Class_nID,
+                    ActiveConditionalsCount = fx.ActiveConditionals?.Count ?? 0,
+                    ExprMagnitude = fx.Expressions?.Magnitude ?? "",
+                    ExprDuration = fx.Expressions?.Duration ?? "",
+                    ExprProbability = fx.Expressions?.Probability ?? "",
+                    fx.DisplayPercentage,
+                }).ToList(),
+            });
+        }
+        WriteJson(buildDir, "powers_effects.json", powers);
+    }
+
+    private static void DumpBuildTotals(string buildDir, clsToonX toon)
+    {
+        WriteJson(buildDir, "totals.json", new
+        {
+            Class = toon.Archetype?.ClassName,
+            toon.Level,
+            Totals = MapTotals(toon.Totals),
+            TotalsCapped = MapTotals(toon.TotalsCapped),
+        });
+    }
+
+    private static object MapTotals(Character.TotalStatistics t)
+    {
+        return new
+        {
+            t.Def,
+            t.Res,
+            t.Mez,
+            t.MezRes,
+            t.DebuffRes,
+            t.Elusivity,
+            t.HPRegen,
+            t.HPMax,
+            t.Absorb,
+            t.EndRec,
+            t.EndUse,
+            t.EndMax,
+            t.RunSpd,
+            t.MaxRunSpd,
+            t.JumpSpd,
+            t.MaxJumpSpd,
+            t.FlySpd,
+            t.MaxFlySpd,
+            t.JumpHeight,
+            t.StealthPvE,
+            t.StealthPvP,
+            t.ThreatLevel,
+            t.Perception,
+            t.BuffHaste,
+            t.BuffAcc,
+            t.BuffToHit,
+            t.BuffDam,
+            t.BuffEndRdx,
+            t.BuffRange,
+            t.BuffHeal,
+        };
     }
 
     private static void DumpEnhancements(string outDir)

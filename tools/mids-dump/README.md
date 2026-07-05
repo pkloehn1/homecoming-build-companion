@@ -32,6 +32,10 @@ load errors.
 | `maths.json` | `MultED` / `MultTO` / `MultDO` / `MultSO` / `MultHO` / `MultIO` — the ED and grade-effectiveness tables |
 | `enhancement_classes.json` | Enhancement class ID/name lookup |
 | `power_static_index.json` | `StaticIndex` → `FullName` map (`.mxd` build-file resolution layer) |
+| `enums.json` | Name → ordinal for every enum the engine indexes arrays by (`eDamage`, `eEffectType`, `eStatType`, …) |
+| `config.json` | Config state totals are computed under (`Suppression`, `DisablePvE`, `ForceLevel`, `ScalingToHit`) |
+| `builds/<name>/powers_effects.json` | Per parity build (4th CLI arg): the build's resolved DB powers with the full effect field set |
+| `builds/<name>/totals.json` | Per parity build: `Totals` + `TotalsCapped` after `GenerateBuffedPowerArray()` |
 
 ## Re-baselining
 
