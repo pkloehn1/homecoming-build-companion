@@ -74,7 +74,7 @@ def _try_parse_float(token: str) -> float:
 
     ``DatabaseAPI.LoadMaths`` records a load-error flag on TryParse failure but
     keeps the default 0 value and continues loading; matching that keeps the
-    port's tables identical to the oracle's for the same quirky input file.
+    port's tables identical to MidsReborn's for the same quirky input file.
     """
     try:
         return f32(float(token))

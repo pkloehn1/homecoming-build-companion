@@ -1,8 +1,8 @@
 """StaticIndex resolution maps the .mxd reader needs.
 
 A ``.mxd`` build references powers and enhancements by ``StaticIndex`` (the stable
-on-disk id), not by name. Resolving them requires two maps exported by the oracle
-harness:
+on-disk id), not by name. Resolving them requires two maps exported by the Mids
+dump harness:
 
 - ``power_static_index.json`` — ``StaticIndex`` -> power ``FullName``.
 - ``enhancements.json`` — ``StaticIndex`` -> ``{UID, TypeID}``. The ``TypeID`` is

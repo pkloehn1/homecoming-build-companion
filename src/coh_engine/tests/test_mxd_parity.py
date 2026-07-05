@@ -1,6 +1,6 @@
-"""Oracle-parity tests for the .mxd semantic reader (CP2).
+"""Mids-parity tests for the .mxd semantic reader (CP2).
 
-Each ``.mxd`` fixture was produced by Mids itself (the oracle harness loads a
+Each ``.mxd`` fixture was produced by Mids itself (the Mids dump harness loads a
 sample ``.mbd`` and re-saves it via ``MxDBuildSaveString``). Parsing the ``.mxd``
 must reproduce the same build the ``.mbd`` describes — validating the reader
 against real Mids output, not a hand-authored buffer.
@@ -21,15 +21,15 @@ REPO = Path(__file__).resolve().parents[3]
 SAMPLES = REPO / "samples" / "builds"
 FIXTURES = Path(__file__).parent / "fixtures"
 MXD_DIR = FIXTURES / "mxd"
-ORACLE = FIXTURES / "oracle"
-ARCHETYPES = load_archetypes(ORACLE / "archetypes.json")
+MIDS = FIXTURES / "mids"
+ARCHETYPES = load_archetypes(MIDS / "archetypes.json")
 
 
 @pytest.fixture(scope="module")
 def indexes() -> Indexes:
     return (
-        load_power_index(ORACLE / "power_static_index.json"),
-        load_enhancement_index(ORACLE / "enhancements.json"),
+        load_power_index(MIDS / "power_static_index.json"),
+        load_enhancement_index(MIDS / "enhancements.json"),
     )
 
 
