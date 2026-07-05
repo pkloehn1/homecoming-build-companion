@@ -14,10 +14,13 @@ from coh_engine.base_totals import (
     EnumMaps,
     ServerData,
     _apply_buff_effects,
+    _apply_enhance_effects,
     _BuffsX,
     _compute_enh_multipliers,
     _gbd_totals,
     _get_effect_mag_sum,
+    _get_enhancement_mag_sum,
+    _is_global_acc_source,
     _MagContext,
     _new_buffs,
     _slot_granted_effect_aspects,
@@ -30,6 +33,7 @@ from coh_engine.ed import Schedule
 from coh_engine.effect import Effect, Power
 from coh_engine.enhancement import EnhancementRecord, EnhEffect, SlotRef
 from coh_engine.maths import MathTables, f32
+from coh_engine.set_bonuses import SET_BONUS_BUILD_INDEX, SetBonusDb
 
 MakeEffect = Callable[..., Effect]
 MakePower = Callable[..., Power]
@@ -71,9 +75,17 @@ def _run_buff_pass(
     enums: EnumMaps,
     config: EngineConfig = PVE,
     prev_hp_max: float = 0.0,
+    global_acc_source: bool = False,
 ) -> _BuffsX:
     buffs = _new_buffs(enums)
-    _apply_buff_effects(power, buffs, _ctx(tiny_mods, tiny_classes, config), enums=enums, prev_hp_max=prev_hp_max)
+    _apply_buff_effects(
+        power,
+        buffs,
+        _ctx(tiny_mods, tiny_classes, config),
+        enums=enums,
+        prev_hp_max=prev_hp_max,
+        global_acc_source=global_acc_source,
+    )
     return buffs
 
 
@@ -435,10 +447,11 @@ class TestGbdTotals:
         enums: EnumMaps,
         server: ServerData,
     ) -> None:
+        # A Toggle with no ActivatePeriod: ToggleCost == EndCost (Power.cs:388).
         flyer = make_power(
             make_effect(effect_type="Fly", scale=1.0),
             make_effect(index=1, effect_type="SpeedFlying", scale=0.5),
-            toggle_cost=0.26,
+            end_cost=0.26,
         )
         result = compute_base_totals(
             [flyer],
@@ -514,6 +527,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
+            toggle_end_agg={},
         )
         assert result.totals.def_[0] == f32(0.05)
         assert result.totals.def_[1] == f32(f32(0.10) + f32(0.05))
@@ -533,6 +547,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
+            toggle_end_agg={},
         )
         assert result.totals.buff_dam == f32(1.0)
 
@@ -550,6 +565,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
+            toggle_end_agg={},
         )
         assert result.totals.buff_dam == f32(0.1)
 
@@ -566,6 +582,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
+            toggle_end_agg={},
         )
         assert result.totals.buff_dam == f32(1.0)
 
@@ -589,6 +606,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
+            toggle_end_agg={},
         )
         capped = result.totals_capped
         assert result.totals.res[1] == f32(0.9)
@@ -619,6 +637,7 @@ class TestGbdTotals:
             ctx=_ctx(tiny_mods, tiny_classes),
             enums=enums,
             server=server,
+            toggle_end_agg={},
         )
         assert result.totals_capped.hp_max == f32(10000.0)
 
@@ -744,7 +763,7 @@ class TestEnhancementGuards:
                 slots={},  # enh_db / tables left None -> partial
             )
 
-    def test_self_enhancement_effect_raises(
+    def test_self_damage_buff_feeds_buff_dam(
         self,
         make_power: MakePower,
         make_effect: MakeEffect,
@@ -753,14 +772,368 @@ class TestEnhancementGuards:
         enums: EnumMaps,
         server: ServerData,
     ) -> None:
-        power = make_power(make_effect(effect_type="DamageBuff", to_who="Self"))
-        with pytest.raises(ValueError, match="E12"):
-            compute_base_totals(
-                [power],
-                class_name="Class_Test",
-                mods=tiny_mods,
-                classes=tiny_classes,
-                enums=enums,
-                config=PVE,
-                server=server,
+        """A self DamageBuff (what E12 used to refuse) now folds into BuffDam via _selfEnhance.
+
+        With the enhancement pass ported, the DamageBuff gather feeds
+        ``_selfEnhance.Damage[Smashing]``; ``_gbd_buff_damage`` seeds the empty
+        ``_selfBuffs.Damage`` from it and the min/avg/max heuristic reports it.
+        """
+        power = make_power(
+            make_effect(effect_type="DamageBuff", to_who="Self", damage_type="Smashing", modifier_table="Ones")
+        )
+        result = compute_base_totals(
+            [power],
+            class_name="Class_Test",
+            mods=tiny_mods,
+            classes=tiny_classes,
+            enums=enums,
+            config=PVE,
+            server=server,
+        )
+        assert result.totals.buff_dam == f32(1.0)
+
+
+def _run_enhance_pass(
+    power: Power,
+    tiny_mods: AttribMods,
+    tiny_classes: ArchetypeDb,
+    enums: EnumMaps,
+    config: EngineConfig = PVE,
+) -> _BuffsX:
+    buffs = _new_buffs(enums)
+    _apply_enhance_effects(power, buffs, _ctx(tiny_mods, tiny_classes, config), enums=enums)
+    return buffs
+
+
+class TestEnhancePass:
+    """The enhancement pass (``enhancementPass=true``) feeding ``_selfEnhance``."""
+
+    def test_recharge_routes_to_boosts_and_effect_fallback(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="RechargeTime", to_who="Self"))
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        etype = enums.maps["eEffectType"]
+        assert buffs.boosts[etype["RechargeTime"]] == f32(1.0)
+        assert buffs.effect[etype["RechargeTime"]] == f32(1.0)
+
+    def test_mez_enhancement_routes_to_boosts_mez_and_mez(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="Mez", mez_type="Held", to_who="Self"))
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        emez = enums.maps["eMez"]
+        assert buffs.boosts_mez[emez["Held"]] == f32(1.0)
+        assert buffs.mez[emez["Held"]] == f32(1.0)
+
+    def test_heal_enhancement_routes_to_boosts_and_effect_heal(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="Heal", to_who="Self"))
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        etype = enums.maps["eEffectType"]
+        assert buffs.boosts[etype["Heal"]] == f32(1.0)
+        assert buffs.effect[etype["Heal"]] == f32(1.0)
+
+    def test_typed_defense_enhancement_routes_to_defense_vector(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(
+            make_effect(effect_type="Enhancement", et_modifies="Defense", damage_type="Fire", to_who="Self")
+        )
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        assert buffs.defense[enums.maps["eDamage"]["Fire"]] == f32(1.0)
+
+    def test_generic_defense_enhancement_routes_to_effect_bucket(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(
+            make_effect(effect_type="Enhancement", et_modifies="Defense", damage_type="None", to_who="Self")
+        )
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        assert buffs.effect[enums.maps["eEffectType"]["Defense"]] == f32(1.0)
+
+    def test_generic_resistance_enhancement_routes_to_effect_bucket(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(
+            make_effect(effect_type="Enhancement", et_modifies="Resistance", damage_type="None", to_who="Self")
+        )
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        assert buffs.effect[enums.maps["eEffectType"]["Resistance"]] == f32(1.0)
+
+    def test_typed_resistance_enhancement_routes_to_resistance_vector(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(
+            make_effect(effect_type="Enhancement", et_modifies="Resistance", damage_type="Cold", to_who="Self")
+        )
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        assert buffs.resistance[enums.maps["eDamage"]["Cold"]] == f32(1.0)
+
+    def test_damage_buff_routes_to_damage_vector(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(make_effect(effect_type="DamageBuff", damage_type="Fire", to_who="Self"))
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        assert buffs.damage[enums.maps["eDamage"]["Fire"]] == f32(1.0)
+
+    def test_defiance_damage_buff_is_excluded(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        fx = make_effect(effect_type="DamageBuff", damage_type="Fire", to_who="Self", effect_class="Tertiary")
+        power = make_power(replace(fx, is_enhancement_effect=True))
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        assert buffs.damage[enums.maps["eDamage"]["Fire"]] == 0.0
+
+    def test_accuracy_enhancement_is_dropped_from_effect(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="Accuracy", to_who="Self"))
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        etype = enums.maps["eEffectType"]
+        assert buffs.boosts[etype["Accuracy"]] == f32(1.0)  # boost head still fires...
+        assert buffs.effect[etype["Accuracy"]] == 0.0  # ...but the main routing drops Accuracy.
+
+    def test_speed_scalar_enhancement_raises(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="SpeedRunning", to_who="Self"))
+        with pytest.raises(ValueError, match="E13"):
+            _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+
+    def test_mez_none_subtype_takes_boost_elif_and_mez_zero(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        # ETModifies==Mez with MezType None: the boost head's Mez branch is False
+        # (mez_type == None) and the elif is False (Mez is in the skip tuple), so no
+        # boost; the main routing still folds it into Mez[None] (index 0).
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="Mez", mez_type="None", to_who="Self"))
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        assert buffs.mez[enums.maps["eMez"]["None"]] == f32(1.0)
+        assert all(v == 0.0 for v in buffs.boosts_mez)
+
+    def test_unspecified_to_who_gathered_but_not_routed(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        # GetEnhancementMagSum includes ToWho != Target (so Unspecified passes), but
+        # the apply loop routes only Self/All — the effect is gathered then dropped.
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="RechargeTime", to_who="Unspecified"))
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        assert all(v == 0.0 for v in buffs.effect)
+        assert all(v == 0.0 for v in buffs.boosts)
+
+    def test_global_boost_power_is_skipped(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(
+            make_effect(effect_type="Enhancement", et_modifies="RechargeTime", to_who="Self"), power_type="GlobalBoost"
+        )
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        assert all(v == 0.0 for v in buffs.effect)
+
+    def test_absorbed_global_boost_effect_skips_main_routing(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        # absorbed_effect False keeps it past the gather filter; the route-level
+        # GlobalBoost skip then bars the main routing (boost head still runs).
+        power = make_power(
+            make_effect(
+                effect_type="Enhancement", et_modifies="RechargeTime", to_who="Self", absorbed_power_type="GlobalBoost"
             )
+        )
+        buffs = _run_enhance_pass(power, tiny_mods, tiny_classes, enums)
+        etype = enums.maps["eEffectType"]
+        assert buffs.boosts[etype["RechargeTime"]] == f32(1.0)
+        assert buffs.effect[etype["RechargeTime"]] == 0.0
+
+
+class TestGetEnhancementMagSum:
+    """Filtering rules of ``Power.GetEnhancementMagSum`` (``Power.cs:1433-1462``)."""
+
+    def _sum(
+        self, power: Power, i_effect: str, tiny_mods: AttribMods, tiny_classes: ArchetypeDb
+    ) -> list[tuple[Effect, float]]:
+        return _get_enhancement_mag_sum(power, i_effect, _ctx(tiny_mods, tiny_classes))
+
+    def test_zero_probability_excluded(
+        self, make_effect: MakeEffect, make_power: MakePower, tiny_mods: AttribMods, tiny_classes: ArchetypeDb
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="Haste", probability=0.0))
+        assert self._sum(power, "Haste", tiny_mods, tiny_classes) == []
+
+    def test_non_enhancement_effect_type_excluded(
+        self, make_effect: MakeEffect, make_power: MakePower, tiny_mods: AttribMods, tiny_classes: ArchetypeDb
+    ) -> None:
+        power = make_power(make_effect(effect_type="Defense", et_modifies="Haste"))
+        assert self._sum(power, "Haste", tiny_mods, tiny_classes) == []
+
+    def test_target_directed_excluded(
+        self, make_effect: MakeEffect, make_power: MakePower, tiny_mods: AttribMods, tiny_classes: ArchetypeDb
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="Haste", to_who="Target"))
+        assert self._sum(power, "Haste", tiny_mods, tiny_classes) == []
+
+    def test_conditional_effect_excluded(
+        self, make_effect: MakeEffect, make_power: MakePower, tiny_mods: AttribMods, tiny_classes: ArchetypeDb
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="Haste", special_case="Domination"))
+        assert self._sum(power, "Haste", tiny_mods, tiny_classes) == []
+
+    def test_pvp_only_effect_excluded_in_pve(
+        self, make_effect: MakeEffect, make_power: MakePower, tiny_mods: AttribMods, tiny_classes: ArchetypeDb
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="Haste", pv_mode="PvP"))
+        assert self._sum(power, "Haste", tiny_mods, tiny_classes) == []
+
+    def test_absorbed_global_boost_excluded(
+        self, make_effect: MakeEffect, make_power: MakePower, tiny_mods: AttribMods, tiny_classes: ArchetypeDb
+    ) -> None:
+        power = make_power(
+            make_effect(
+                effect_type="Enhancement",
+                et_modifies="Haste",
+                absorbed_effect=True,
+                absorbed_power_type="GlobalBoost",
+            )
+        )
+        assert self._sum(power, "Haste", tiny_mods, tiny_classes) == []
+
+    def test_matching_effect_included(
+        self, make_effect: MakeEffect, make_power: MakePower, tiny_mods: AttribMods, tiny_classes: ArchetypeDb
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="Haste", to_who="Self"))
+        result = self._sum(power, "Haste", tiny_mods, tiny_classes)
+        assert len(result) == 1
+        assert result[0][1] == f32(1.0)
+
+
+class TestIsGlobalAccuracySource:
+    def test_set_bonus_virtual_power_is_global(self, make_power: MakePower) -> None:
+        assert _is_global_acc_source(make_power(build_index=SET_BONUS_BUILD_INDEX)) is True
+
+    def test_global_boost_power_is_global(self, make_power: MakePower) -> None:
+        assert _is_global_acc_source(make_power(build_index=0, power_type="GlobalBoost")) is True
+
+    def test_ordinary_power_is_not_global(self, make_power: MakePower) -> None:
+        assert _is_global_acc_source(make_power(build_index=0)) is False
+
+    def test_global_accuracy_routes_to_buff_acc(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="Accuracy", to_who="Self"))
+        buffs = _run_buff_pass(power, tiny_mods, tiny_classes, enums, global_acc_source=True)
+        stat = enums.maps["eStatType"]
+        assert buffs.effect[stat["BuffAcc"]] == f32(1.0)
+        assert buffs.effect[stat["ToHit"]] == 0.0
+
+    def test_ordinary_accuracy_routes_to_to_hit(
+        self,
+        make_effect: MakeEffect,
+        make_power: MakePower,
+        tiny_mods: AttribMods,
+        tiny_classes: ArchetypeDb,
+        enums: EnumMaps,
+    ) -> None:
+        power = make_power(make_effect(effect_type="Enhancement", et_modifies="Accuracy", to_who="Self"))
+        buffs = _run_buff_pass(power, tiny_mods, tiny_classes, enums, global_acc_source=False)
+        stat = enums.maps["eStatType"]
+        assert buffs.effect[stat["ToHit"]] == f32(1.0)
+        assert buffs.effect[stat["BuffAcc"]] == 0.0
+
+
+def test_set_db_without_slots_raises(
+    tiny_mods: AttribMods, tiny_classes: ArchetypeDb, enums: EnumMaps, server: ServerData
+) -> None:
+    empty_db = SetBonusDb(sets={}, powers={})
+    with pytest.raises(ValueError, match="E14"):
+        compute_base_totals(
+            [],
+            class_name="Class_Test",
+            mods=tiny_mods,
+            classes=tiny_classes,
+            enums=enums,
+            config=PVE,
+            server=server,
+            set_db=empty_db,
+        )

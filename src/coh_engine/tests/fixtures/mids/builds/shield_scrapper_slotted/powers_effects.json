@@ -14,6 +14,13 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      1,
+      26,
+      31,
+      41,
+      44
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -383,6 +390,10 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      7,
+      8
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -752,6 +763,9 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [
+      7
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -1043,6 +1057,12 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [
+      7,
+      18,
+      28,
+      47
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -2153,6 +2173,10 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [
+      8,
+      9
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -2405,6 +2429,15 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      1,
+      9,
+      26,
+      29,
+      31,
+      41,
+      44
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -2735,6 +2768,7 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [],
     "Effects": [
       {
         "Index": 0,
@@ -2831,6 +2865,11 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      18,
+      28,
+      47
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -3239,6 +3278,11 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      1,
+      11,
+      44
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -4700,6 +4744,13 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      4,
+      26,
+      31,
+      41,
+      44
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -5069,6 +5120,9 @@
     "VariableEnabled": true,
     "StatInclude": false,
     "VariableValue": 1,
+    "SetTypes": [
+      24
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -6101,6 +6155,9 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [
+      8
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -6509,6 +6566,12 @@
     "VariableEnabled": true,
     "StatInclude": false,
     "VariableValue": 1,
+    "SetTypes": [
+      4,
+      25,
+      41,
+      44
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -7346,6 +7409,9 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [
+      7
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -8261,6 +8327,14 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      1,
+      12,
+      26,
+      31,
+      41,
+      44
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -8747,6 +8821,12 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      4,
+      23,
+      41,
+      44
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -8843,6 +8923,9 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [
+      7
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -9719,6 +9802,7 @@
     "VariableEnabled": true,
     "StatInclude": true,
     "VariableValue": 1,
+    "SetTypes": [],
     "Effects": [
       {
         "Index": 0,
@@ -10985,6 +11069,13 @@
     "VariableEnabled": true,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      2,
+      5,
+      26,
+      31,
+      44
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -11939,6 +12030,9 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      7
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -12425,6 +12519,9 @@
     "VariableEnabled": true,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [
+      7
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -12677,6 +12774,9 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [
+      7
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -13124,6 +13224,9 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [
+      25
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -13415,6 +13518,11 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      8,
+      9,
+      22
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -14369,6 +14477,7 @@
     "VariableEnabled": true,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [],
     "Effects": [
       {
         "Index": 0,
@@ -14738,6 +14847,10 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      1,
+      44
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -15068,6 +15181,10 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [
+      18,
+      19
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -15203,6 +15320,7 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [],
     "Effects": [
       {
         "Index": 0,
@@ -16235,6 +16353,7 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [],
     "Effects": [
       {
         "Index": 0,
@@ -16331,6 +16450,7 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [],
     "Effects": [
       {
         "Index": 0,
@@ -16427,6 +16547,9 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [
+      9
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -16523,6 +16646,9 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [
+      22
+    ],
     "Effects": [
       {
         "Index": 0,
@@ -16580,6 +16706,7 @@
     "VariableEnabled": false,
     "StatInclude": true,
     "VariableValue": 0,
+    "SetTypes": [],
     "Effects": [
       {
         "Index": 0,
@@ -16637,6 +16764,7 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [],
     "Effects": [
       {
         "Index": 0,
@@ -16694,6 +16822,7 @@
     "VariableEnabled": false,
     "StatInclude": false,
     "VariableValue": 0,
+    "SetTypes": [],
     "Effects": [
       {
         "Index": 0,
