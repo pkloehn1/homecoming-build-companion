@@ -56,6 +56,12 @@ from coh_engine.effect import Effect, Power, effect_mag
 from coh_engine.enh_pipeline import aggregate_and_ed
 from coh_engine.enhancement import EnhancementRecord, SlotRef
 from coh_engine.maths import MathTables, f32
+from coh_engine.set_bonuses import (
+    SET_BONUS_BUILD_INDEX,
+    SetBonusDb,
+    build_set_bonus_power,
+    validate_set_slotting,
+)
 
 _SPEED_EFFECT_TYPES = ("SpeedFlying", "SpeedRunning", "SpeedJumping")
 
@@ -526,15 +532,14 @@ def _route_typed_vectors(fx: Effect, value: float, buffs: _BuffsX, i_effect: str
 
 
 def _route_scalar_and_speed(
-    fx: Effect, value: float, buffs: _BuffsX, i_effect: str, eff_index: int, m: _BuffMaps
+    fx: Effect, value: float, buffs: _BuffsX, i_effect: str, eff_index: int, m: _BuffMaps, *, global_acc_source: bool
 ) -> bool:
     """Accuracy-as-ToHit, MaxSpeed caps, and ToHit (clsToonX.cs:754-798). True if consumed."""
     if fx.effect_type != "ResEffect" and fx.et_modifies == "Accuracy":
-        # IsGlobalAccuracySource routes set-bonus / GlobalBoost sources to
-        # BuffAcc instead — both arrive with the set-bonus virtual power; every
-        # power in a dumped build list is an ordinary source, and ordinary
-        # accuracy buffs act as ToHit.
-        _add(buffs.effect, m.stat["ToHit"], value)
+        # IsGlobalAccuracySource (clsToonX.cs:829) routes set-bonus-virtual-power /
+        # GlobalBoost accuracy to BuffAcc; every ordinary power's accuracy buff acts
+        # as ToHit (all in-game accuracy buffs behave as ToHit).
+        _add(buffs.effect, m.stat["BuffAcc" if global_acc_source else "ToHit"], value)
         return True
     if _is_max_speed_cap(fx, "SpeedRunning"):
         _add(buffs.effect, m.stat["MaxRunSpeed"], value)
@@ -586,12 +591,14 @@ def _route_buff_effect(
     i_effect: str,
     eff_index: int,
     m: _BuffMaps,
+    global_acc_source: bool,
 ) -> None:
     """Route one contributing sub-effect to its ``BuffsX`` bucket (clsToonX.cs:588-815).
 
     Order is load-bearing: the enhancement-boost and status buckets accumulate
     unconditionally, then the first matching typed/scalar router consumes the
-    effect, else the generic fallback runs.
+    effect, else the generic fallback runs. ``global_acc_source`` is
+    ``IsGlobalAccuracySource(power)`` — it steers Accuracy to BuffAcc vs ToHit.
     """
     _apply_enhancement_boosts(fx, value, buffs, m)
     if fx.absorbed_power_type == "GlobalBoost":
@@ -603,7 +610,7 @@ def _route_buff_effect(
         return
     if _route_typed_vectors(fx, value, buffs, i_effect, m):
         return
-    if _route_scalar_and_speed(fx, value, buffs, i_effect, eff_index, m):
+    if _route_scalar_and_speed(fx, value, buffs, i_effect, eff_index, m, global_acc_source=global_acc_source):
         return
     _apply_effect_fallback(fx, value, buffs, ctx, power, prev_hp_max, eff_index, m)
 
@@ -615,6 +622,7 @@ def _apply_buff_effects(
     *,
     enums: EnumMaps,
     prev_hp_max: float,
+    global_acc_source: bool,
 ) -> None:
     """Buff (non-enhancement) pass of ``CalculateAndApplyEffects`` for one power.
 
@@ -622,7 +630,7 @@ def _apply_buff_effects(
     ``eEffectType`` bucket's contributing sub-effects and routes them via
     :func:`_route_buff_effect`. GlobalBoost powers are skipped by the caller's
     contract in C#; none exist in a dumped build's power list, so the guard is
-    kept here for fidelity.
+    kept here for fidelity. ``global_acc_source`` is ``IsGlobalAccuracySource``.
     """
     if power.power_type == "GlobalBoost":
         return
@@ -650,8 +658,154 @@ def _apply_buff_effects(
         for fx, value in pairs:
             if fx.to_who in ("Self", "All"):
                 _route_buff_effect(
-                    fx, value, buffs, ctx, power, prev_hp_max, i_effect=i_effect, eff_index=eff_index, m=m
+                    fx,
+                    value,
+                    buffs,
+                    ctx,
+                    power,
+                    prev_hp_max,
+                    i_effect=i_effect,
+                    eff_index=eff_index,
+                    m=m,
+                    global_acc_source=global_acc_source,
                 )
+
+
+# Speed-scalar eEffectTypes routed buff-vs-debuff in the enhancement pass
+# (clsToonX.cs:686). The debuff half writes ``EffectAux``, which this port does
+# not model (see :func:`_route_enhance_main`).
+_ENHANCE_SPEED_SCALARS = frozenset({"SpeedRunning", "SpeedFlying", "SpeedJumping", "JumpHeight"})
+
+
+def _get_enhancement_mag_sum(power: Power, i_effect: str, ctx: _MagContext) -> list[tuple[Effect, float]]:
+    """``Power.GetEnhancementMagSum(iEffect, -1)`` (Power.cs:1433-1462) as (effect, mag) pairs.
+
+    Sums the ``Enhancement``/``DamageBuff`` effects whose ``ETModifies == i_effect``
+    and that are directed at Self/All (``ToWho != Target``). This is the enhancement
+    pass's gather; it reads the pre-Pass5 ``BuffedMag`` — the unenhanced base ``Mag``
+    for an effect the multiplier passes have not yet scaled. ``ctx`` carries no
+    enhancement multiplier here (the caller passes a base-mag context), so
+    ``_mag`` returns that base value directly.
+    """
+    out: list[tuple[Effect, float]] = []
+    for fx in power.effects:
+        if (
+            fx.probability <= 0
+            or fx.et_modifies != i_effect
+            or fx.effect_type not in ("Enhancement", "DamageBuff")
+            or (fx.absorbed_effect and fx.absorbed_power_type == "GlobalBoost")
+            or not _can_include(fx)
+            or not _pvx_include(fx, ctx.archetype_index, ctx.config)
+            or fx.to_who == "Target"
+        ):
+            continue
+        out.append((fx, _mag(fx, power, ctx)))
+    return out
+
+
+def _apply_enh_boosts_head(fx: Effect, value: float, buffs: _BuffsX, m: _BuffMaps) -> None:
+    """Enhancement-pass boost buckets: Boosts / Boosts_Mez / Heal (clsToonX.cs:576-600).
+
+    The ``Range`` redirect (591-594) is buff-pass only and omitted here.
+    """
+    if fx.effect_type != "Enhancement":
+        return
+    if fx.et_modifies == "Mez" and fx.mez_type != "None":
+        _add(buffs.boosts_mez, m.e_mez[fx.mez_type], value)
+    elif fx.et_modifies not in ("None", "Null", "NullBool", "Mez"):
+        _add(buffs.boosts, m.e_type[fx.et_modifies], value)
+    if fx.et_modifies == "Heal":
+        _add(buffs.effect, m.e_type["Heal"], value)
+
+
+def _route_enhance_main(
+    fx: Effect, value: float, buffs: _BuffsX, *, i_effect: str, eff_index: int, m: _BuffMaps
+) -> None:
+    """Enhancement-pass main routing for a DamageBuff/Enhancement effect (clsToonX.cs:630-704).
+
+    Every branch is terminal (the C# ``continue``). ``Accuracy``/``Heal`` are dropped
+    here — Accuracy is folded by the buff pass (BuffAcc/ToHit) and Heal by the boost
+    head. The speed-scalar *debuff* arm (``EffectAux``) is unported: it is refused
+    (``E13``) rather than silently dropped.
+    """
+    etm = fx.et_modifies
+    if etm == "Mez":
+        _add(buffs.mez, m.e_mez[fx.mez_type], value)
+        return
+    if etm in ("Defense", "Resistance"):
+        bucket = buffs.defense if etm == "Defense" else buffs.resistance
+        if fx.damage_type != "None":
+            _add(bucket, m.e_damage[fx.damage_type], value)
+        else:
+            _add(buffs.effect, eff_index, value)
+        return
+    if i_effect == "DamageBuff":
+        # Defiance-tagged DamageBuffs are excluded (clsToonX.cs:666-676). The
+        # ValidateConditional / SpecialCase==Defiance arms are already handled
+        # upstream: _can_include drops any conditional/SpecialCase effect, so only
+        # the enhancement-effect Tertiary arm can reach here.
+        if not (fx.is_enhancement_effect and fx.effect_class == "Tertiary"):
+            _add(buffs.damage, m.e_damage[fx.damage_type], value)
+        return
+    if etm in ("Accuracy", "Heal"):
+        return
+    if etm in _ENHANCE_SPEED_SCALARS:
+        # The buff arm writes Effect[etm], the debuff arm writes EffectAux
+        # (clsToonX.cs:686-698); the split reads Effect.buffMode and the EffectAux
+        # bucket, neither of which is ported. No committed fixture slots a movement
+        # set bonus, so refuse rather than guess which arm applies.
+        raise ValueError(
+            f"E13: enhancement-pass speed-scalar ({etm}) buff/debuff split (Effect vs EffectAux) is "
+            "not ported; add a movement set-bonus fixture and the EffectAux bucket before computing "
+            "this build"
+        )
+    _add(buffs.effect, eff_index, value)
+
+
+def _route_enhance_effect(
+    fx: Effect, value: float, buffs: _BuffsX, *, i_effect: str, eff_index: int, m: _BuffMaps
+) -> None:
+    """Route one enhancement-pass sub-effect (clsToonX.cs:576-704, enhancementPass=true).
+
+    Boost head accumulates unconditionally, GlobalBoost-absorbed effects are skipped,
+    then the main routing consumes the effect (every branch terminal for a
+    DamageBuff/Enhancement effect, so the non-enhancement tail is never reached).
+    """
+    _apply_enh_boosts_head(fx, value, buffs, m)
+    if fx.absorbed_power_type == "GlobalBoost":
+        return
+    _route_enhance_main(fx, value, buffs, i_effect=i_effect, eff_index=eff_index, m=m)
+
+
+def _apply_enhance_effects(power: Power, buffs: _BuffsX, ctx: _MagContext, *, enums: EnumMaps) -> None:
+    """Enhancement pass of ``CalculateAndApplyEffects`` for one power (enhancementPass=true).
+
+    Feeds ``_selfEnhance``: the global enhancement buffs (set-bonus recharge,
+    damage, endredux; ``BuffHaste``/``BuffDam``/``BuffEndRdx``). ``DamageBuff`` is
+    gathered with the normal effect-mag sum (clsToonX.cs:530); every other bucket
+    uses ``GetEnhancementMagSum``. ``ctx`` must carry no enhancement multiplier
+    (the pass reads pre-Pass5 base magnitudes).
+    """
+    if power.power_type == "GlobalBoost":
+        return
+    effect_type_names = enums.inverse["eEffectType"]
+    m = _BuffMaps(
+        stat=enums.maps["eStatType"],
+        e_type=enums.maps["eEffectType"],
+        e_mez=enums.maps["eMez"],
+        e_damage=enums.maps["eDamage"],
+    )
+    for eff_index in range(len(buffs.effect)):
+        i_effect = effect_type_names[eff_index]
+        if i_effect == "Damage":
+            continue
+        if i_effect == "DamageBuff":
+            pairs = _get_effect_mag_sum(power, i_effect, ctx)
+        else:
+            pairs = _get_enhancement_mag_sum(power, i_effect, ctx)
+        for fx, value in pairs:
+            if fx.to_who in ("Self", "All"):
+                _route_enhance_effect(fx, value, buffs, i_effect=i_effect, eff_index=eff_index, m=m)
 
 
 def _is_max_speed_cap(fx: Effect, mod: str) -> bool:
@@ -669,22 +823,9 @@ def _sum_mags(pairs: list[tuple[Effect, float]]) -> float:
     return total
 
 
-def _assert_self_enhance_unneeded(included: Sequence[Power]) -> None:
-    """Refuse a build that needs the unported ``_selfEnhance`` pass.
-
-    ``_selfEnhance`` (``GetEnhancementMagSum`` feeding BuffHaste/BuffAcc/
-    BuffEndRdx/BuffDam) is not ported. A stat-included power carrying a self
-    ``Enhancement`` or ``DamageBuff`` effect is what that pass sums, so its
-    presence means those totals would under-report; fail loud (``E12``) instead
-    of returning a silently low number.
-    """
-    for power in included:
-        for fx in power.effects:
-            if fx.to_who in ("Self", "All") and fx.effect_type in ("Enhancement", "DamageBuff"):
-                raise ValueError(
-                    f"E12: {power.full_name!r} carries a self {fx.effect_type} effect; the _selfEnhance "
-                    "pass (BuffHaste/BuffAcc/BuffEndRdx/BuffDam via GetEnhancementMagSum) is not ported"
-                )
+def _is_global_acc_source(power: Power) -> bool:
+    """``IsGlobalAccuracySource`` (clsToonX.cs:829): the set-bonus virtual power or a GlobalBoost."""
+    return power.build_index == SET_BONUS_BUILD_INDEX or power.power_type == "GlobalBoost"
 
 
 def compute_base_totals(
@@ -700,6 +841,7 @@ def compute_base_totals(
     slots: Mapping[int, Sequence[SlotRef]] | None = None,
     enh_db: Mapping[int, EnhancementRecord] | None = None,
     tables: MathTables | None = None,
+    set_db: SetBonusDb | None = None,
 ) -> BaseTotals:
     """Compute ``Totals``/``TotalsCapped`` for a build.
 
@@ -713,18 +855,23 @@ def compute_base_totals(
     pass, which then reads ``BuffedMag``). Omit them (or leave any ``None``) for
     the empty-slot path, where every multiplier is 1.
 
-    The ``_selfEnhance`` accumulator (global enhancement buffs feeding
-    BuffHaste/BuffAcc/BuffEndRdx/BuffDam via ``GetEnhancementMagSum``) stays zero:
-    the committed fixtures produce no such buff, so wiring it would add
-    unexercised, unvalidated code. It lands when a fixture exercises it (the
-    set-bonus virtual power). Until then a build that *would* need it is refused
-    (``E12``) rather than silently under-reported.
+    When ``set_db`` is supplied (with ``slots`` and ``enh_db``), the set-bonus
+    virtual power is assembled (:func:`~coh_engine.set_bonuses.build_set_bonus_power`)
+    and folded into both passes: the enhancement pass (``_selfEnhance``, reading
+    pre-Pass5 base magnitudes) feeds ``BuffHaste``/``BuffDam``/``BuffEndRdx``; the
+    buff pass folds typed Defense/Resistance/etc. and routes the virtual power's
+    accuracy to ``BuffAcc`` (``IsGlobalAccuracySource``). Slotting legality is
+    checked first (:func:`~coh_engine.set_bonuses.validate_set_slotting`) — an IO
+    set in a power that rejects it fails loud (``H-ENH-001``) before any math runs.
 
     Raises:
         ValueError: ``E09`` if ``class_name`` is unknown; ``E11`` if the
             enhancement inputs (``slots``/``enh_db``/``tables``) are supplied
-            partially; ``E12`` if the build needs the unported ``_selfEnhance``
-            pass; ``P-ENH-001`` if a slot enhances an unrouted effect-borne aspect.
+            partially; ``E13`` if a build needs the unported enhancement-pass
+            speed-scalar (movement set-bonus) path; ``E14`` if ``set_db`` is
+            supplied without ``slots``/``enh_db``; ``H-ENH-001`` if a set IO is
+            slotted in a power that does not accept it; ``P-ENH-001`` if a slot
+            enhances an unrouted effect-borne aspect.
     """
     _enh_inputs = (slots, enh_db, tables)
     if any(x is not None for x in _enh_inputs) and not all(x is not None for x in _enh_inputs):
@@ -738,39 +885,107 @@ def compute_base_totals(
     # tuple position get_modifier also indexes by. This invariant holds for all
     # harness-produced dumps.
     archetype = classes.classes[archetype_index]
-    ctx = _MagContext(mods=mods, classes=classes, archetype_index=archetype_index, config=config)
+    # base_ctx carries no enhancement multiplier: the enhancement pass and the ED
+    # gate both read pre-Pass5 base magnitudes. The buff pass reads buff_ctx (the
+    # enhanced BuffedMag).
+    base_ctx = _MagContext(mods=mods, classes=classes, archetype_index=archetype_index, config=config)
 
     self_buffs = _new_buffs(enums)
-    self_enhance = _new_buffs(enums)  # _selfEnhance stays zero (see docstring).
+    self_enhance = _new_buffs(enums)
     included = [p for p in powers if p.stat_include]
-    _assert_self_enhance_unneeded(included)
 
+    if set_db is not None:
+        if slots is None or enh_db is None:
+            raise ValueError("E14: set_db requires slots and enh_db to assemble the set-bonus virtual power")
+        validate_set_slotting(powers, slots, enh_db, set_db)
+        virtual = build_set_bonus_power(
+            powers, slots, enh_db, set_db, force_level=config.force_level, disable_pve=config.disable_pve
+        )
+        if virtual.effects:
+            included = [*included, virtual]
+
+    buff_ctx = base_ctx
+    toggle_end_mult: dict[int, float] = {}
     if slots is not None and enh_db is not None and tables is not None:
         enh_mult = _compute_enh_multipliers(
-            included, slots=slots, enh_db=enh_db, tables=tables, force_level=config.force_level, ctx=ctx
+            included, slots=slots, enh_db=enh_db, tables=tables, force_level=config.force_level, ctx=base_ctx
         )
-        ctx = replace(ctx, enh_mult=enh_mult)
+        buff_ctx = replace(base_ctx, enh_mult=enh_mult)
+        toggle_end_mult = _compute_toggle_end_mult(
+            included, slots=slots, enh_db=enh_db, tables=tables, force_level=config.force_level
+        )
 
+    # Enhancement pass (step 6) before the buff pass (step 8), per
+    # GenerateBuffedPowerArray. The set-bonus virtual power participates in both.
     for power in included:
-        _apply_buff_effects(power, self_buffs, ctx, enums=enums, prev_hp_max=prev_hp_max)
+        _apply_enhance_effects(power, self_enhance, base_ctx, enums=enums)
+    for power in included:
+        _apply_buff_effects(
+            power,
+            self_buffs,
+            buff_ctx,
+            enums=enums,
+            prev_hp_max=prev_hp_max,
+            global_acc_source=_is_global_acc_source(power),
+        )
 
     return _gbd_totals(
         included,
         self_buffs,
         self_enhance,
         archetype=archetype,
-        ctx=ctx,
+        ctx=buff_ctx,
         enums=enums,
         server=server,
+        toggle_end_mult=toggle_end_mult,
     )
 
 
-def _gbd_toggle_end_and_fly(included: Sequence[Power], totals: TotalStatistics, ctx: _MagContext) -> bool:
-    """Sum toggle end-use into ``totals`` and report canFly (clsToonX.cs:852-865)."""
+def _compute_toggle_end_mult(
+    included: Sequence[Power],
+    *,
+    slots: Mapping[int, Sequence[SlotRef]],
+    enh_db: Mapping[int, EnhancementRecord],
+    tables: MathTables,
+    force_level: int,
+) -> dict[int, float]:
+    """Per-power endurance-discount multiplier ``1 + ED(Σ EndRdx)`` for toggle EndUse.
+
+    ``EnduranceDiscount`` is a scalar aspect (it reaches no effect bucket), so
+    :func:`_compute_enh_multipliers` skips it; the buffed toggle cost needs it
+    separately. Only non-unit multipliers are stored — an absent key means the raw
+    toggle cost.
+    """
+    out: dict[int, float] = {}
+    for power in included:
+        power_slots = slots.get(power.build_index, ())
+        if not power_slots:
+            continue
+        aggregate = aggregate_and_ed(
+            power_slots, aspect="EnduranceDiscount", enh_db=enh_db, force_level=force_level, tables=tables
+        )
+        if aggregate != 0.0:
+            out[power.build_index] = f32(1.0 + aggregate)
+    return out
+
+
+def _gbd_toggle_end_and_fly(
+    included: Sequence[Power], totals: TotalStatistics, ctx: _MagContext, toggle_end_mult: Mapping[int, float]
+) -> bool:
+    """Sum toggle end-use into ``totals`` and report canFly (clsToonX.cs:852-865).
+
+    ``EndUse`` sums the *buffed* toggle cost — ``Power.ToggleCost`` derives from the
+    enhancement-reduced ``EndCost`` (Power.cs:388): ``buffed.EndCost = base.EndCost /
+    (1 + ED(Σ EndRdx))``, then ``/ ActivatePeriod`` when the toggle has one.
+    ``toggle_end_mult`` supplies ``1 + ED(Σ EndRdx)`` per power (absent → 1, the raw
+    cost). The two f32 divides mirror Pass5's ``EndCost /=`` then the ToggleCost getter.
+    """
     can_fly = False
     for power in included:
         if power.power_type == "Toggle":
-            totals.end_use = f32(totals.end_use + power.toggle_cost)
+            buffed_end_cost = f32(power.end_cost / toggle_end_mult.get(power.build_index, 1.0))
+            cost = f32(buffed_end_cost / power.activate_period) if power.activate_period > 0 else buffed_end_cost
+            totals.end_use = f32(totals.end_use + cost)
         for fx in power.effects:
             if fx.effect_type == "Fly" and _mag(fx, power, ctx) > 0:
                 can_fly = True
@@ -863,6 +1078,7 @@ def _gbd_totals(
     ctx: _MagContext,
     enums: EnumMaps,
     server: ServerData,
+    toggle_end_mult: Mapping[int, float],
 ) -> BaseTotals:
     """``GBD_Totals`` (``clsToonX.cs:839-1002``): fold the BuffsX accumulators into Totals/TotalsCapped."""
     stat = enums.maps["eStatType"]
@@ -875,7 +1091,7 @@ def _gbd_totals(
         elusivity=[0.0] * enums.size("eDamage"),
     )
 
-    can_fly = _gbd_toggle_end_and_fly(included, totals, ctx)
+    can_fly = _gbd_toggle_end_and_fly(included, totals, ctx, toggle_end_mult)
     _gbd_fold_and_copy_vectors(totals, self_buffs)
 
     totals.end_max = self_buffs.max_end

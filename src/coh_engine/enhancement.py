@@ -70,6 +70,9 @@ class EnhancementRecord:
     type_name: str  # eType name: None / Normal / InventO / SpecialO / SetO.
     superior: bool
     effects: tuple[EnhEffect, ...]
+    # nIDSet: the enhancement set this piece belongs to (-1 for non-set IOs). The
+    # set-bonus tally (coh_engine.set_bonuses) reads it for SetO pieces only.
+    nid_set: int = -1
 
 
 @dataclass(frozen=True, slots=True)
@@ -104,6 +107,7 @@ def load_enhancement_effects(path: Path | str) -> Mapping[int, EnhancementRecord
             static_index=r["StaticIndex"],
             type_name=r["TypeName"],
             superior=r["Superior"],
+            nid_set=r["nIDSet"],
             effects=tuple(
                 EnhEffect(
                     enhance=fx["EnhanceName"],

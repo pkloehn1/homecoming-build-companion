@@ -107,6 +107,11 @@ internal static class Program
         DatabaseAPI.AssignSetBonusIndexes();
         DatabaseAPI.AssignRecipeIDs();
 
+        // An empty character context so computed effect getters (e.g. Probability,
+        // which parses an expression against character state) don't dereference a
+        // null MidsContext.Character during the DB-level set_bonus_powers dump.
+        MainModule.MidsController.Toon = new clsToonX();
+
         DumpVersion(outDir);
         DumpServerData(outDir);
         DumpArchetypes(outDir);
@@ -114,6 +119,8 @@ internal static class Program
         DumpEnhancementClasses(outDir);
         DumpEnhancements(outDir);
         DumpEnhancementEffects(outDir);
+        DumpEnhancementSets(outDir);
+        DumpSetBonusPowers(outDir);
         DumpPowerIndex(outDir);
         DumpEnums(outDir);
         DumpConfig(outDir);
@@ -165,6 +172,10 @@ internal static class Program
             // schedule by ordinal from these maps.
             typeof(Enums.eEnhance), typeof(Enums.eEnhGrade), typeof(Enums.eEnhRelative),
             typeof(Enums.eType), typeof(Enums.eSchedule),
+            // Set-bonus subsystem: eSetType maps an EnhancementSet to the powers
+            // that accept it (Power.SetTypes). ePvX (tier-bonus PvMode gate) is
+            // already dumped above.
+            typeof(Enums.eSetType),
         };
         foreach (var t in enumTypes)
         {
@@ -221,6 +232,7 @@ internal static class Program
             DumpBuildPowersEffects(buildDir, toon);
             DumpBuildSlots(buildDir, toon);
             DumpBuildEnhancedPowers(buildDir, toon);
+            DumpBuildSetBonusVirtualPower(buildDir, toon);
             DumpBuildTotals(buildDir, toon);
         }
 
@@ -272,49 +284,82 @@ internal static class Program
                 pw.VariableEnabled,
                 entry.StatInclude,
                 entry.VariableValue,
-                Effects = pw.Effects.Select((fx, fxIdx) => new
-                {
-                    Index = fxIdx,
-                    EffectType = fx.EffectType.ToString(),
-                    DamageType = fx.DamageType.ToString(),
-                    MezType = fx.MezType.ToString(),
-                    ETModifies = fx.ETModifies.ToString(),
-                    fx.Scale,
-                    fx.nMagnitude,
-                    fx.nDuration,
-                    AttribType = fx.AttribType.ToString(),
-                    Aspect = fx.Aspect.ToString(),
-                    fx.ModifierTable,
-                    fx.nModifierTable,
-                    ToWho = fx.ToWho.ToString(),
-                    PvMode = fx.PvMode.ToString(),
-                    Stacking = fx.Stacking.ToString(),
-                    Suppression = (int)fx.Suppression,
-                    fx.Buffable,
-                    fx.Resistible,
-                    fx.IgnoreED,
-                    fx.IgnoreScaling,
-                    fx.VariableModified,
-                    fx.BaseProbability,
-                    fx.Probability,
-                    fx.ProcsPerMinute,
-                    fx.Ticks,
-                    fx.DelayedTime,
-                    EffectClass = fx.EffectClass.ToString(),
-                    SpecialCase = fx.SpecialCase.ToString(),
-                    fx.nIDClassName,
-                    fx.Absorbed_Effect,
-                    Absorbed_PowerType = fx.Absorbed_PowerType.ToString(),
-                    fx.Absorbed_Class_nID,
-                    ActiveConditionalsCount = fx.ActiveConditionals?.Count ?? 0,
-                    ExprMagnitude = fx.Expressions?.Magnitude ?? "",
-                    ExprDuration = fx.Expressions?.Duration ?? "",
-                    ExprProbability = fx.Expressions?.Probability ?? "",
-                    fx.DisplayPercentage,
-                }).ToList(),
+                // The enhancement set types this power accepts (Power.SetTypes,
+                // the raw eSetType ordinals as List<int>). An IO set is slottable
+                // here only if its SetType ordinal is in this list — the power<->set
+                // acceptance map the legality layer (and the set-bonus tally's
+                // validity assumption) rests on. Empty means the power takes no set
+                // IOs (e.g. Battle Agility). eSetType names are in enums.json.
+                pw.SetTypes,
+                Effects = pw.Effects.Select((fx, fxIdx) => SerializeEffect(fx, fxIdx)).ToList(),
             });
         }
         WriteJson(buildDir, "powers_effects.json", powers);
+    }
+
+    // Shared effect serializer: the full magnitude-driving field set the Python
+    // port's effect model reads. Used for build powers (powers_effects.json) and
+    // the referenced set_bonus_powers the virtual power clones effects from.
+    private static object SerializeEffect(IEffect fx, int idx)
+    {
+        return new
+        {
+            Index = idx,
+            EffectType = fx.EffectType.ToString(),
+            DamageType = fx.DamageType.ToString(),
+            MezType = fx.MezType.ToString(),
+            ETModifies = fx.ETModifies.ToString(),
+            fx.Scale,
+            fx.nMagnitude,
+            fx.nDuration,
+            AttribType = fx.AttribType.ToString(),
+            Aspect = fx.Aspect.ToString(),
+            fx.ModifierTable,
+            fx.nModifierTable,
+            ToWho = fx.ToWho.ToString(),
+            PvMode = fx.PvMode.ToString(),
+            Stacking = fx.Stacking.ToString(),
+            Suppression = (int)fx.Suppression,
+            fx.Buffable,
+            fx.Resistible,
+            fx.IgnoreED,
+            fx.IgnoreScaling,
+            fx.VariableModified,
+            fx.BaseProbability,
+            fx.Probability,
+            fx.ProcsPerMinute,
+            fx.Ticks,
+            fx.DelayedTime,
+            EffectClass = fx.EffectClass.ToString(),
+            SpecialCase = fx.SpecialCase.ToString(),
+            fx.nIDClassName,
+            fx.Absorbed_Effect,
+            Absorbed_PowerType = fx.Absorbed_PowerType.ToString(),
+            fx.Absorbed_Class_nID,
+            ActiveConditionalsCount = fx.ActiveConditionals?.Count ?? 0,
+            ExprMagnitude = fx.Expressions?.Magnitude ?? "",
+            ExprDuration = fx.Expressions?.Duration ?? "",
+            ExprProbability = fx.Expressions?.Probability ?? "",
+            fx.DisplayPercentage,
+        };
+    }
+
+    // Light serializer for the set-bonus virtual-power golden: the structural
+    // identity the port keys effects by, plus the resolved Mag/BuffedMag. The
+    // port assembles its virtual power by cloning set_bonus_powers effects (full
+    // field set there) and validates the sequence, count, and magnitude here.
+    private static object SerializeVirtualEffect(IEffect fx, int idx)
+    {
+        return new
+        {
+            Index = idx,
+            EffectType = fx.EffectType.ToString(),
+            DamageType = fx.DamageType.ToString(),
+            MezType = fx.MezType.ToString(),
+            ETModifies = fx.ETModifies.ToString(),
+            fx.Mag,
+            fx.BuffedMag,
+        };
     }
 
     private static void DumpBuildSlots(string buildDir, clsToonX toon)
@@ -512,6 +557,7 @@ internal static class Program
                 TypeId = (int)t.e.TypeID,
                 TypeName = t.e.TypeID.ToString(),
                 t.e.Superior,
+                t.e.nIDSet,
                 Effects = t.e.Effect
                     .Where(fx => fx.Mode == Enums.eEffMode.Enhancement)
                     .Select(fx => new
@@ -529,6 +575,102 @@ internal static class Program
             })
             .ToList();
         WriteJson(outDir, "enhancement_effects.json", records);
+    }
+
+    private static void DumpEnhancementSets(string outDir)
+    {
+        // Per enhancement SET (keyed by nID = array index): the tier + special
+        // bonus definitions the port assembles the set-bonus virtual power from.
+        // Bonus[] are the tiered (>=2 pieces) count bonuses; SpecialBonus[] are the
+        // per-enhancement globals/uniques (>=1 piece), paired 1:1 with Enhancements[]
+        // by index. Index[] values are global set_bonus Power ids (see
+        // set_bonus_powers.json); Slotted is the 1-based piece threshold; PvMode
+        // gates tier activation. The port never guesses these — it reads them here.
+        var sets = DatabaseAPI.Database.EnhancementSets
+            .Select((s, nid) => (s, nid))
+            .Where(t => t.s != null)
+            .Select(t => new
+            {
+                Nid = t.nid,
+                t.s.Uid,
+                t.s.DisplayName,
+                t.s.SetType,
+                // The eSetType name this set maps to; matched against a power's
+                // SetTypes to decide whether the set is slottable in that power.
+                SetTypeName = ((Enums.eSetType)t.s.SetType).ToString(),
+                t.s.Enhancements,
+                Bonus = t.s.Bonus.Select(b => new
+                {
+                    b.Slotted,
+                    PvMode = (int)b.PvMode,
+                    PvModeName = b.PvMode.ToString(),
+                    b.Index,
+                }).ToList(),
+                SpecialBonus = t.s.SpecialBonus.Select(b => new
+                {
+                    b.Slotted,
+                    PvMode = (int)b.PvMode,
+                    b.Index,
+                }).ToList(),
+            })
+            .ToList();
+        WriteJson(outDir, "enhancement_sets.json", sets);
+    }
+
+    private static void DumpSetBonusPowers(string outDir)
+    {
+        // The bonus powers referenced by any EnhancementSet Bonus/SpecialBonus
+        // Index[]: the exact key space the set-bonus virtual power clones effects
+        // from and that the Rule-of-Five counter is keyed on (Mids' setCount is
+        // sized to the whole Power array because NidPowers("set_bonus") does not
+        // resolve a real powerset — it returns every id; only these referenced ids
+        // are ever counted). Keyed by global Power id. MyPet* mirror
+        // ShouldSkipEffects (Build.cs:1229-1234): a bonus whose Target AND
+        // EntitiesAffected are both MyPet-flagged is excluded from the character's
+        // own totals (but still consumes a Rule-of-Five slot).
+        var db = DatabaseAPI.Database;
+        var referenced = new SortedSet<int>();
+        foreach (var set in db.EnhancementSets.Where(s => s != null))
+        {
+            foreach (var b in set.Bonus.Concat(set.SpecialBonus))
+            {
+                foreach (var id in b.Index.Where(id => id > -1))
+                {
+                    referenced.Add(id);
+                }
+            }
+        }
+
+        var powers = referenced
+            .Where(id => id < db.Power.Length && db.Power[id] != null)
+            .Select(id =>
+            {
+                var pw = db.Power[id];
+                return new
+                {
+                    PowerId = id,
+                    pw.FullName,
+                    PowerType = pw.PowerType.ToString(),
+                    MyPetTarget = pw.Target.HasFlag(Enums.eEntity.MyPet),
+                    MyPetEntities = pw.EntitiesAffected.HasFlag(Enums.eEntity.MyPet),
+                    Effects = pw.Effects.Select((fx, fxIdx) => SerializeEffect(fx, fxIdx)).ToList(),
+                };
+            })
+            .ToList();
+        WriteJson(outDir, "set_bonus_powers.json", powers);
+    }
+
+    private static void DumpBuildSetBonusVirtualPower(string buildDir, clsToonX toon)
+    {
+        // The GOLDEN for the port's assembled set-bonus virtual power. After
+        // GenerateBuffedPowerArray, CurrentBuild.SetBonusVirtualPower holds the
+        // cloned, Rule-of-Five-filtered bonus effects Mids folds into totals. The
+        // port assembles its own virtual power from enhancement_sets + set_bonus_powers
+        // and must reproduce these effects (structural key + Mag) before the fold.
+        var vp = toon.CurrentBuild?.SetBonusVirtualPower;
+        var effects = vp?.Effects.Select((fx, fxIdx) => SerializeVirtualEffect(fx, fxIdx)).ToList()
+                      ?? new List<object>();
+        WriteJson(buildDir, "set_bonus_virtual_power.json", new { EffectCount = effects.Count, Effects = effects });
     }
 
     private static void ExportMxdBuilds(string samplesDir, string outDir)
