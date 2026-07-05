@@ -2,7 +2,7 @@
 
 <!-- markdownlint-disable -->
 
-> Generated 2026-07-02 from the MidsReborn fork at `<repos>/MidsReborn/MidsReborn` by the `mids-port-spec` extraction workflow (run `wf_04edd3dd-bb9`). Language-neutral SSOT the Python port implements against. Mids is the oracle: every numeric claim is validated against MidsReborn's own output via golden fixtures. Regenerate and re-baseline after any Homecoming DB update.
+> Generated 2026-07-02 from the MidsReborn fork at `<repos>/MidsReborn/MidsReborn` by the `mids-port-spec` extraction workflow (run `wf_04edd3dd-bb9`). Language-neutral SSOT the Python port implements against. Mids is the reference implementation: every numeric claim is validated against MidsReborn's own output via golden fixtures. Regenerate and re-baseline after any Homecoming DB update.
 
 ## Synthesis
 
@@ -16,7 +16,7 @@
 - **gbpa-pass-pipeline** — GenerateBuffedPowerArray orchestration: Pass0 assemble, enhancement pass, Pass1-6 per-power (preED/ED/postED/add/caps/multiply), buff pass, Pass6 accuracy/ToHit, global-enh fold — the exact-ordering spine everything feeds.
 - **gbd-totals-and-caps** — GBD_Totals: fold _selfBuffs/_selfEnhance into Totals (defense[0] fold, MezRes/DebuffRes x100, movement, BuffDam min/avg/max heuristic) then TotalsCapped applying AT/server caps with the cap-minus-1 convention.
 - **set-bonuses-ruleof5** — Set-bonus virtual power: per-power I9SetData tally (SetO only), tier activation (>=2 pieces, PvMode), specials/uniques (>=1 piece), Rule-of-Five (count<6 on shared set_bonus power id), exemplar gate on power pick Level<=ForceLevel.
-- **legality-predicates** — Enhancement placement legality: standard enh via IsEnhancementValid (ClassID in Power.Enhancements) + set enh via SetType in Power.SetTypes, plus EnhancementTest unique/mutex/duplicate build-wide rules; EnhancementTest alone is NOT a complete oracle for standard IOs.
+- **legality-predicates** — Enhancement placement legality: standard enh via IsEnhancementValid (ClassID in Power.Enhancements) + set enh via SetType in Power.SetTypes, plus EnhancementTest unique/mutex/duplicate build-wide rules; EnhancementTest alone is NOT a complete legality check for standard IOs.
 - **updater-protocol** — DB-refresh pull: fetch primary midsreborn manifest, System.Version strict-greater compare, download .mru (zlib+LEB128 container) + .hash sidecar, SHA256-verify, drop into Databases/Homecoming/; the beta-channel math-update path.
 
 ### Resolved questions
@@ -38,7 +38,7 @@
 - Pass ordering and in-place mutation quirks in the GBPA pipeline (high risk): _selfBuffs is empty during Pass1-6 but read by Pass6; Pass5_ResyncEffects RemoveAt-while-iterating skips a comparison (must reproduce, not 'fix'); buffed.Accuracy is overwritten before AccuracyMult is computed. Naive reimplementation silently diverges on Accuracy/ToHit routing, the Defiance DamageBuff exclusion, generic-vs-typed defense folding (index 0 fold), and the BuffDam min/avg/max headline heuristic.
 - GetModifier level index is hardcoded to 49 (character level 50), NOT the character's current/exemplar level, and the class column is an indirection Classes[iClass].Column (not iClass). A port that indexes by current level or by raw class index silently produces wrong base magnitudes for every effect.
 - ED is applied ONCE on the per-aspect aggregate across all slots, not per slot; IOLevel is 0-based (level-1, so MultIO[49] for a level-50 IO); RelativeLevel None yields a 0.0 multiplier (kills the contribution, distinct from Even=1.0); Superior x1.25 is inside the per-effect multiplier before summation. Per-slot ED then summing over-values every enhanced power.
-- The exemplar -3 divergence: Mids has NO set-min-minus-3 retention (only power-pick-Level<=ForceLevel gating). Porting the 'correct' live-CoH -3 rule from training memory would make the port diverge from the Mids oracle exactly where a benchmark expects agreement.
+- The exemplar -3 divergence: Mids has NO set-min-minus-3 retention (only power-pick-Level<=ForceLevel gating). Porting the 'correct' live-CoH -3 rule from training memory would make the port diverge from the Mids reference exactly where a benchmark expects agreement.
 - Legality single-gate trap: EnhancementTest does not class-check standard (Normal/InventO/SpecialO) enhancements — legality for those comes from IsEnhancementValid/picker population + load-time CheckAndFixAllEnhancements. A port routing all placement through EnhancementTest alone will wrongly accept illegal standard IOs (e.g. a Recharge IO in One with the Shield).
 - Binary .mhd data-file drift (high): Power (~60 fields) and Effect (~90 fields) records are large sequential layouts with enums-as-Int32 and nested variable-length arrays that change across app versions; every array count is stored as length-1. Direct byte-for-byte transcription is high-defect — the recommended mitigation is a Mids-driven JSON export stamped with DB version.
 - Build-file format asymmetries: .mxd stores power/slot Level raw while .mbd stores +1 (subtract on load); .mxd references by StaticIndex (with ReplTable.FetchAlternate remap + DB-specific migrations: Fitness->Invisibility, Fitness nID remap, Afterburner->Evasive_Maneuvers) while .mbd references by UID; IOLevel clamp<=49 only on .mxd. Compression differs: .mbd=Brotli+Base64, .mxd=zlib(Z_BEST)+Hex.
@@ -2083,7 +2083,7 @@ return false                     # (d) same set enhancement already slotted in t
 
 `eEnhMutex`: `None=0, Stealth=1, ArchetypeA..F=2..7` (Enums.cs:653). Superior/Attuned families collide by their name stem (UID with `Attuned_`/`Superior_` stripped); Stealth procs are mutually exclusive with each other build-wide.
 
-**Critical gap in EnhancementTest a naive port must preserve:** the set-type gate (a) fires **only** when `enh.TypeID == SetO`. For `Normal`/`InventO`/`SpecialO` enhancements, EnhancementTest performs **no `Power.Enhancements` class check at all** — it only checks unique/mutex/duplicate. So EnhancementTest is *not* a complete legality oracle for standard enhancements.
+**Critical gap in EnhancementTest a naive port must preserve:** the set-type gate (a) fires **only** when `enh.TypeID == SetO`. For `Normal`/`InventO`/`SpecialO` enhancements, EnhancementTest performs **no `Power.Enhancements` class check at all** — it only checks unique/mutex/duplicate. So EnhancementTest is *not* a complete legality check for standard enhancements.
 
 #### Where each predicate is enforced (placement paths)
 

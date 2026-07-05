@@ -1,8 +1,8 @@
-// OracleDump — test-only harness that loads the MidsReborn Homecoming database
-// headless (no UI) and dumps the data the Python port (src/coh_engine) baselines
-// its golden fixtures against.
+// MidsDump — test-only harness that loads the MidsReborn Homecoming database
+// headless (no UI) and dumps the reference data the Python port (src/coh_engine)
+// baselines its golden fixtures against.
 //
-// Usage: OracleDump <databases-dir> <output-dir>
+// Usage: MidsDump <databases-dir> <output-dir>
 //   <databases-dir>  e.g. <midsreborn-fork>/MidsReborn/Databases/Homecoming
 //   <output-dir>     directory to write the JSON dumps into (created if missing)
 //
@@ -16,7 +16,7 @@ using Mids_Reborn.Core;
 using Mids_Reborn.Core.Base.Master_Classes;
 using Mids_Reborn.Core.BuildFile;
 
-namespace OracleDump;
+namespace MidsDump;
 
 internal static class Program
 {
@@ -31,7 +31,7 @@ internal static class Program
     {
         if (args.Length < 2)
         {
-            Console.Error.WriteLine("usage: OracleDump <databases-dir> <output-dir>");
+            Console.Error.WriteLine("usage: MidsDump <databases-dir> <output-dir>");
             return 2;
         }
 

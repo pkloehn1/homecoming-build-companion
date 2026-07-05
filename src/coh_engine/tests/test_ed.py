@@ -1,7 +1,7 @@
 """Tests for coh_engine.ed — Enhancement Diversification.
 
 Golden values from docs/engine/mids-port-spec.md § enhancement-value-pipeline
-worked assertions (oracle: MidsReborn Enhancement.ApplyED, Enhancement.cs:450-476):
+worked assertions (reference: MidsReborn Enhancement.ApplyED, Enhancement.cs:450-476):
 
 - Hasten with 3x level-50 recharge IOs: pre-ED 1.272 -> 0.9908 (99.08%).
 - Hasten with 2x level-50 recharge IOs: pre-ED 0.848 -> 0.8332 (83.32%).

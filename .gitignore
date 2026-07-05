@@ -44,7 +44,7 @@ Desktop.ini
 inbox/__staging/
 tmp/
 
-# .NET build artifacts + local oracle dumps (tools/oracle-dump)
-tools/oracle-dump/bin/
-tools/oracle-dump/obj/
-tools/oracle-dump/out/
+# .NET build artifacts + local Mids reference dumps (tools/mids-dump)
+tools/mids-dump/bin/
+tools/mids-dump/obj/
+tools/mids-dump/out/

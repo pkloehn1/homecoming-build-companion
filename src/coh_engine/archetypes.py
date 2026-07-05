@@ -1,4 +1,4 @@
-"""Loader for the archetype/class records the oracle harness dumps.
+"""Loader for the archetype/class records the Mids dump harness exports.
 
 Mirrors the fields MidsReborn reads in ``Archetype.cs:89-115`` and the
 case-insensitive ``DatabaseAPI.NidFromUidClass`` lookup (``DatabaseAPI.cs:122-133``).
@@ -51,7 +51,7 @@ class ArchetypeDb:
 
 
 def load_archetypes(path: Path | str) -> ArchetypeDb:
-    """Parse an ``archetypes.json`` oracle dump into :class:`ArchetypeDb`.
+    """Parse an ``archetypes.json`` Mids reference dump into :class:`ArchetypeDb`.
 
     Raises:
         FileNotFoundError: if ``path`` does not exist.
