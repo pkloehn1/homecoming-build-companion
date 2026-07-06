@@ -240,6 +240,22 @@ def test_score_perma_hasten_profile_reports_unmet(computed: tuple[BaseTotals, li
     assert result.score == 0.0
 
 
+def test_two_targets_on_one_metric_both_count_toward_score(computed: tuple[BaseTotals, list[PowerStats]]) -> None:
+    """Two targets on the same metric each count independently (score is over targets, not the met dict)."""
+    base, stats = computed
+    profile = BuildProfile(
+        name="x",
+        display_name="X",
+        priority=(),
+        targets=(
+            Target(metric="resist_min", op=">=", value=0.0),  # met (resist_min ~12.75 >= 0)
+            Target(metric="resist_min", op="<=", value=100.0),  # met (12.75 <= 100)
+        ),
+    )
+    result = score_build(profile, base.totals, base.totals_capped, stats, _scrapper(base))
+    assert result.score == 1.0  # both met — not 0.5 from a collided single dict entry
+
+
 def test_score_perma_dom_metric(computed: tuple[BaseTotals, list[PowerStats]]) -> None:
     """The perma_dom metric routes through score_build (False for a Scrapper build)."""
     base, stats = computed

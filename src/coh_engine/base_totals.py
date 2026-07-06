@@ -56,6 +56,7 @@ from coh_engine.effect import Effect, Power, effect_mag
 from coh_engine.enh_pipeline import aggregate_and_ed
 from coh_engine.enhancement import EnhancementRecord, SlotRef
 from coh_engine.maths import MathTables, f32
+from coh_engine.pass3 import fold_divisor
 from coh_engine.set_bonuses import (
     SET_BONUS_BUILD_INDEX,
     SetBonusDb,
@@ -1005,15 +1006,22 @@ def _gbd_toggle_end_and_fly(
     ``EndUse`` sums the *buffed* toggle cost — ``Power.ToggleCost`` derives from the
     enhancement-reduced ``EndCost`` (Power.cs:388): ``buffed.EndCost = base.EndCost /
     (1 + ED(Σ slotted EndRdx) + global EndRdx)``, then ``/ ActivatePeriod`` when the
-    toggle has one. The divisor mirrors Mids' per-power ``math.EndCost``: Pass1-2 give
-    ``ED(Σ slotted)`` (``toggle_end_agg``), Pass3 adds the global ``_selfEnhance``
-    EnduranceDiscount (``global_end_rdx``), Pass4 the ``+1`` — folded in that f32 order.
-    The two f32 divides mirror Pass5's ``EndCost /=`` then the ToggleCost getter.
+    toggle has one. The divisor comes from the shared :func:`~coh_engine.pass3.fold_divisor`
+    (``ED(Σ slotted)`` = ``toggle_end_agg``, plus the global ``_selfEnhance``
+    EnduranceDiscount, plus 1, in that f32 order) — the same helper the per-power
+    ``statistics`` arm uses, so a toggle that ignores EnduranceDiscount enhancement
+    (``Power.IgnoreEnh``) keeps its base cost here exactly as it does per-power
+    (previously this arm skipped the gate and could disagree with the per-power number).
     """
     can_fly = False
     for power in included:
         if power.power_type == "Toggle":
-            divisor = f32(f32(toggle_end_agg.get(power.build_index, 0.0) + global_end_rdx) + 1.0)
+            divisor = fold_divisor(
+                toggle_end_agg.get(power.build_index, 0.0),
+                global_end_rdx,
+                aspect="EnduranceDiscount",
+                ignored_aspects=power.ignore_enh,
+            )
             buffed_end_cost = f32(power.end_cost / divisor)
             cost = f32(buffed_end_cost / power.activate_period) if power.activate_period > 0 else buffed_end_cost
             totals.end_use = f32(totals.end_use + cost)

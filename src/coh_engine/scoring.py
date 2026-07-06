@@ -160,7 +160,10 @@ def _meets(actual: float | bool, target: Target) -> bool:
         return actual >= target.value
     if target.op == "<=":
         return actual <= target.value
-    raise ValueError(f"E18: unknown comparison op {target.op!r} in a profile target")
+    raise ValueError(
+        f"E18: unknown comparison op {target.op!r} in a profile target; use one of '==', '>=', '<=' in "
+        "build_profiles.json (or add the op to _meets before using it)"
+    )
 
 
 def score_build(
@@ -177,11 +180,13 @@ def score_build(
     endurance shortfall adds ``P-END-001``. All are warnings — the build stays valid.
     """
     met: dict[str, bool] = {}
+    met_count = 0
     diagnostics: list[Diagnostic] = []
     for target in profile.targets:
         actual = _metric_value(target.metric, totals, power_stats)
         ok = _meets(actual, target)
         met[target.metric] = ok
+        met_count += int(ok)
         if not ok:
             diagnostics.append(
                 Diagnostic(
@@ -195,7 +200,9 @@ def score_build(
                     actual=actual,
                 )
             )
-    score = 1.0 if not profile.targets else f32(sum(met.values()) / len(profile.targets))
+    # Count met TARGETS, not met dict entries: two targets on one metric collide in
+    # `met` (last wins), but each still counts toward the score independently.
+    score = 1.0 if not profile.targets else f32(met_count / len(profile.targets))
     diagnostics.extend(cap_adherence_diagnostics(totals, archetype))
     end_diag = endurance_diagnostic(totals, totals_capped, archetype)
     if end_diag is not None:

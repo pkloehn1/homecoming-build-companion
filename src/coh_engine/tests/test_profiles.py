@@ -109,3 +109,15 @@ def test_ref_resolving_to_a_nonnumeric_node_fails_loud(breakpoints: dict[str, An
     }
     with pytest.raises(ValueError, match="E16"):
         resolve_profile("bad", {"bad": bad}, breakpoints, at_key="Scrapper")
+
+
+def test_ref_resolving_to_a_boolean_fails_loud() -> None:
+    """A boolean breakpoint is not numeric (bool is an int subclass) and is refused (E16)."""
+    breakpoints = {"universal": {"a_flag": True}}
+    bad = {
+        "display_name": "Bad",
+        "priority": [],
+        "targets": [{"metric": "x", "op": ">=", "ref": "universal.a_flag"}],
+    }
+    with pytest.raises(ValueError, match="E16"):
+        resolve_profile("bad", {"bad": bad}, breakpoints, at_key="Scrapper")

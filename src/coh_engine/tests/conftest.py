@@ -99,7 +99,12 @@ def make_power() -> MakePower:
     """Factory for synthetic :class:`Power` records taking effects positionally."""
 
     def _make(*effects: Effect, **overrides: Any) -> Power:
-        return Power(effects=tuple(effects), **{**_POWER_DEFAULTS, **overrides})
+        fields = {**_POWER_DEFAULTS, **overrides}
+        # Default pick_level to the (possibly overridden) level so the set-bonus
+        # exemplar gate (which keys on pick_level) is exercised, not silently bypassed
+        # at pick_level 0. Matches test_set_bonuses._power; callers can override.
+        fields.setdefault("pick_level", fields["level"])
+        return Power(effects=tuple(effects), **fields)
 
     return _make
 

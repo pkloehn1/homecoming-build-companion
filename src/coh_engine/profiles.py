@@ -87,8 +87,12 @@ def _resolve_ref(ref: str, breakpoints: Mapping[str, Any], at_key: str) -> float
                 "breakpoints.json; fix the ref or add the breakpoint"
             )
         node = node[part]
-    if not isinstance(node, int | float):
-        raise ValueError(f"E16: breakpoint path {ref!r} resolved to a non-numeric value {node!r}")
+    # bool is an int subclass; a boolean breakpoint must not resolve to 1.0/0.0.
+    if isinstance(node, bool) or not isinstance(node, int | float):
+        raise ValueError(
+            f"E16: breakpoint path {ref!r} resolved to a non-numeric value {node!r}; point the ref at a "
+            "numeric leaf in breakpoints.json (not a sub-object)"
+        )
     return float(node)
 
 

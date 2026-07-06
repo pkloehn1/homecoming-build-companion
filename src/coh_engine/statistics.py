@@ -35,6 +35,7 @@ from coh_engine.effect import Power
 from coh_engine.enh_pipeline import aggregate_and_ed
 from coh_engine.enhancement import EnhancementRecord, SlotRef
 from coh_engine.maths import MathTables, f32
+from coh_engine.pass3 import fold_divisor
 
 # eEnhance aspect names (Power.IgnoreEnh entries) the per-power scalar fold keys on.
 _ASPECT_RECHARGE = "RechargeTime"
@@ -79,38 +80,39 @@ def _aggregate(power_slots: Sequence[SlotRef], aspect: str, ctx: StatsContext) -
     )
 
 
-def _fold_divisor(
-    power: Power, power_slots: Sequence[SlotRef], aspect: str, global_term: float, ctx: StatsContext
+def _scalar_fold(
+    power: Power,
+    power_slots: Sequence[SlotRef],
+    aspect: str,
+    global_term: float,
+    ctx: StatsContext,
+    *,
+    cap: float | None = None,
 ) -> float:
-    """The Pass 3/4 multiplier ``(ED(sum slotted) + global) + 1``, or 1 if the aspect is ignored.
+    """The Pass 3/4 fold divisor for one aspect, via the shared :func:`~coh_engine.pass3.fold_divisor`.
 
-    ``Power.IgnoreEnh`` (``IgnoreEnhancement``) zeroes the modifiable base for an
-    ignored aspect, so neither the slotted nor the global term applies and the buffed
-    scalar stays at base.
+    The power's ``ignore_enh`` set is the filter; ``cap`` is the AT recharge cap where
+    the aspect is clamped (recharge only). The base_totals toggle-EndUse arm uses the
+    same helper, so the two folds cannot diverge.
     """
-    if aspect in power.ignore_enh:
-        return 1.0
-    return f32(f32(_aggregate(power_slots, aspect, ctx) + global_term) + 1.0)
+    aggregate = _aggregate(power_slots, aspect, ctx)
+    return fold_divisor(aggregate, global_term, aspect=aspect, ignored_aspects=power.ignore_enh, cap=cap)
 
 
 def _buffed_recharge(power: Power, power_slots: Sequence[SlotRef], ctx: StatsContext) -> float:
     """Buffed recharge = base / clamp((ED(sum rech) + global) + 1, recharge cap), 0 if base is 0."""
     if power.recharge_time <= 0.0:
         return 0.0
-    multiplier = min(
-        _fold_divisor(power, power_slots, _ASPECT_RECHARGE, ctx.global_enhance.recharge, ctx), ctx.recharge_cap
-    )
-    return f32(power.recharge_time / multiplier)
+    divisor = _scalar_fold(power, power_slots, _ASPECT_RECHARGE, ctx.global_enhance.recharge, ctx, cap=ctx.recharge_cap)
+    return f32(power.recharge_time / divisor)
 
 
 def compute_power_stats(power: Power, power_slots: Sequence[SlotRef], ctx: StatsContext) -> PowerStats:
     """The derived scalars + endurance/sec for one power (see the module docstring)."""
     recharge = _buffed_recharge(power, power_slots, ctx)
-    end_cost = f32(
-        power.end_cost / _fold_divisor(power, power_slots, _ASPECT_END, ctx.global_enhance.end_discount, ctx)
-    )
+    end_cost = f32(power.end_cost / _scalar_fold(power, power_slots, _ASPECT_END, ctx.global_enhance.end_discount, ctx))
     interrupt = f32(
-        power.interrupt_time / _fold_divisor(power, power_slots, _ASPECT_INTERRUPT, ctx.global_enhance.interrupt, ctx)
+        power.interrupt_time / _scalar_fold(power, power_slots, _ASPECT_INTERRUPT, ctx.global_enhance.interrupt, ctx)
     )
 
     if power.power_type == "Toggle" and power.activate_period > 0.0:
