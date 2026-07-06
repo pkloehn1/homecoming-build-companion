@@ -27,6 +27,7 @@ Spec: docs/engine/mids-port-spec.md § gbpa-pass-pipeline (Pass 3).
 
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
+from types import MappingProxyType
 
 from coh_engine.archetypes import ArchetypeDb
 from coh_engine.attribmod import AttribMods
@@ -45,6 +46,9 @@ class StatsContext:
     ``global_enhance`` carries the build's global ``_selfEnhance`` scalar terms (from
     :func:`~coh_engine.base_totals.compute_base_totals`); ``recharge_cap`` is the
     archetype's recharge-multiplier cap. ``force_level`` comes from ``config``.
+    ``incarnate_scalar`` maps ``(build_index, aspect)`` to the incarnate ``(pre_ed,
+    post_ed)`` scalar addends (:mod:`coh_engine.incarnate`); the pre-ED term co-EDs with
+    the slotted aggregate and the post-ED term is the ``fold_scalar`` post-ED seam.
     """
 
     mods: AttribMods
@@ -55,6 +59,7 @@ class StatsContext:
     enh_db: Mapping[int, EnhancementRecord]
     global_enhance: GlobalEnhance
     recharge_cap: float
+    incarnate_scalar: Mapping[tuple[int, str], tuple[float, float]] = MappingProxyType({})
 
 
 @dataclass(frozen=True, slots=True)
@@ -79,10 +84,15 @@ def _is_attack(power: Power) -> bool:
     return power.power_type == "Click" and any(fx.effect_type == "Damage" for fx in power.effects)
 
 
-def _aggregate(power_slots: Sequence[SlotRef], aspect: str, ctx: StatsContext) -> float:
-    """``ED(sum slotted <aspect>)`` over the power's in-gate slots."""
+def _aggregate(power_slots: Sequence[SlotRef], aspect: str, ctx: StatsContext, pre_ed_addend: float = 0.0) -> float:
+    """``ED(sum slotted <aspect> + incarnate pre-ED)`` over the power's in-gate slots."""
     return aggregate_and_ed(
-        power_slots, aspect=aspect, enh_db=ctx.enh_db, force_level=ctx.config.force_level, tables=ctx.tables
+        power_slots,
+        aspect=aspect,
+        enh_db=ctx.enh_db,
+        force_level=ctx.config.force_level,
+        tables=ctx.tables,
+        pre_ed_addend=pre_ed_addend,
     )
 
 
@@ -90,16 +100,21 @@ def _scalar_fold(power: Power, power_slots: Sequence[SlotRef], handler: AspectHa
     """The Pass 3/4 fold divisor for one aspect, via the per-aspect handler registry.
 
     The handler (:mod:`coh_engine.enh_aspects`) supplies the aspect's global ``_selfEnhance``
-    term and its cap; the power's ``ignore_enh`` set is the filter. The base_totals
-    toggle-EndUse arm routes through the same ``fold_scalar``, so the two folds cannot diverge.
+    term and its cap; the power's ``ignore_enh`` set is the filter. Any incarnate scalar
+    contribution for this ``(power, aspect)`` folds in as its pre-ED addend (co-ED'd with
+    the slotted aggregate) and post-ED extra, reproducing the pre-ED / post-ED incarnate
+    application straddling ``GBPA_Pass2_ApplyED``. The base_totals toggle-EndUse arm routes
+    through the same ``fold_scalar``, so the two folds cannot diverge.
     """
-    aggregate = _aggregate(power_slots, handler.aspect, ctx)
+    pre_ed, post_ed = ctx.incarnate_scalar.get((power.build_index, handler.aspect), (0.0, 0.0))
+    aggregate = _aggregate(power_slots, handler.aspect, ctx, pre_ed)
     return fold_scalar(
         handler,
         aggregate,
         global_term(handler, ctx.global_enhance),
         ignore_enh=power.ignore_enh,
         recharge_cap=ctx.recharge_cap,
+        post_ed_extra=post_ed,
     )
 
 

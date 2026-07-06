@@ -276,7 +276,76 @@ internal static class Program
         DumpBuildSlots(buildDir, toon);
         DumpBuildEnhancedPowers(buildDir, toon);
         DumpBuildSetBonusVirtualPower(buildDir, toon);
+        DumpBuildIncarnates(buildDir, toon);
         DumpBuildTotals(buildDir, toon);
+    }
+
+    private static void DumpBuildIncarnates(string buildDir, clsToonX toon)
+    {
+        // Each StatInclude incarnate's GrantPower-delivered enhancement, resolved to the
+        // hidden granted sub-powers that actually carry it. An Alpha's raw db.Power holds
+        // only GrantPower/RevokePower/LevelShift/SetMode; the real Accuracy/RechargeTime/…
+        // enhancement lives on the sub-powers a GrantPower effect names via fx.Summon /
+        // fx.nSummon -> db.Power[nSummon] (Power.ApplyGrantPowerEffects absorbs them). The
+        // port applies these per-target via the per-aspect handler (pre-ED where IgnoreED
+        // is false, post-ED where true) instead of porting GBPA's GrantPower absorption.
+        //
+        // The accept-gate (clsToonX.cs:1458) intersects the TARGET power's Enhancements
+        // with the SUB-POWER's Enhancements (not the Alpha's, which is []); so each
+        // sub-power carries its own gate list. Only Enhancement/DamageBuff sub-effects are
+        // kept (the ones GBPA_ApplyIncarnateEnhancements routes by ETModifies); nested
+        // GrantPower / GlobalChanceMod paths are dropped here and refused loudly in the port.
+        var db = DatabaseAPI.Database;
+        var incarnates = new List<object>();
+        for (var i = 0; i < toon.CurrentBuild.Powers.Count; i++)
+        {
+            var entry = toon.CurrentBuild.Powers[i];
+            if (entry?.Power == null || entry.NIDPower < 0 || !entry.StatInclude)
+            {
+                continue;
+            }
+            if (!entry.Power.FullName.StartsWith("Incarnate.", StringComparison.Ordinal))
+            {
+                continue;
+            }
+
+            var subPowers = new List<object>();
+            foreach (var fx in entry.Power.Effects)
+            {
+                if (fx.EffectType != Enums.eEffectType.GrantPower || fx.nSummon <= -1
+                    || fx.nSummon >= db.Power.Length || db.Power[fx.nSummon] == null)
+                {
+                    continue;
+                }
+
+                var sub = db.Power[fx.nSummon];
+                var enhFx = sub.Effects
+                    .Where(e => e.EffectType is Enums.eEffectType.Enhancement or Enums.eEffectType.DamageBuff)
+                    .Select((e, eIdx) => SerializeEffect(e, eIdx))
+                    .ToList();
+                if (enhFx.Count == 0)
+                {
+                    continue;
+                }
+
+                subPowers.Add(new
+                {
+                    sub.FullName,
+                    // The accept-gate list: the target build power must share an
+                    // enhancement class with THIS sub-power for the enhancement to apply.
+                    sub.Enhancements,
+                    Effects = enhFx,
+                });
+            }
+
+            incarnates.Add(new
+            {
+                BuildIndex = i,
+                entry.Power.FullName,
+                SubPowers = subPowers,
+            });
+        }
+        WriteJson(buildDir, "incarnates.json", incarnates);
     }
 
     // Builds recomputed at a lowered ForceLevel: the exemplar parity fixtures. At a

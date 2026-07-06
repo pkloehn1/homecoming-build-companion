@@ -45,7 +45,7 @@ Spec: docs/engine/mids-port-spec.md § effect-model, § gbpa-pass-pipeline,
 
 import json
 import math
-from collections.abc import Mapping, Sequence
+from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import dataclass, field, replace
 from pathlib import Path
 from types import MappingProxyType
@@ -56,6 +56,7 @@ from coh_engine.effect import Effect, Power, effect_mag
 from coh_engine.enh_aspects import END, fold_scalar
 from coh_engine.enh_pipeline import aggregate_and_ed
 from coh_engine.enhancement import EnhancementRecord, SlotRef
+from coh_engine.incarnate import Incarnate, IncarnateAddends, resolve_incarnates
 from coh_engine.maths import MathTables, f32
 from coh_engine.set_bonuses import (
     SET_BONUS_BUILD_INDEX,
@@ -245,11 +246,19 @@ class GlobalEnhance:
 
 @dataclass(frozen=True, slots=True)
 class BaseTotals:
-    """Result pair: uncapped ``Totals`` and AT/server-capped ``TotalsCapped``, plus globals."""
+    """Result pair: uncapped ``Totals`` and AT/server-capped ``TotalsCapped``, plus globals.
+
+    ``incarnate_addends`` carries the resolved incarnate (Alpha-slot) pre/post-ED
+    contributions (:class:`~coh_engine.incarnate.IncarnateAddends`); the effect-mag half is
+    already folded into these totals, and the scalar half is threaded to the per-power
+    derived-stat layer (:mod:`coh_engine.statistics`). ``None`` when no incarnate was
+    supplied.
+    """
 
     totals: TotalStatistics
     totals_capped: TotalStatistics
     global_enhance: GlobalEnhance
+    incarnate_addends: IncarnateAddends | None = None
 
 
 @dataclass(slots=True)
@@ -441,14 +450,21 @@ def _compute_enh_multipliers(
     tables: MathTables,
     force_level: int,
     ctx: _MagContext,
+    incarnate_effect: Mapping[tuple[int, int], float] = MappingProxyType({}),
 ) -> dict[tuple[int, int], float]:
-    """Per-effect enhancement multipliers ``1 + ED(Σ slot values)`` (Pass1→2→4).
+    """Per-effect enhancement multipliers ``1 + ED(Σ slot values) + incarnate`` (Pass1→2→4).
 
     For every effect of every slotted power, aggregate the aspect's per-slot
     enhancement value across the power's slots (gated by the ForceLevel exemplar
     cutoff) and apply ED once. Only non-unit multipliers are stored — an absent
     key means an unenhanced effect. ``ctx.enh_mult`` is empty while this runs, so
     the base magnitudes fed to the buff/debuff sign gate are unenhanced.
+
+    ``incarnate_effect`` adds each effect's resolved incarnate effect-mag addend
+    (``ED(pre_ed) + post_ed``, :mod:`coh_engine.incarnate`) onto its ``1 + ED(Σ slot)``
+    multiplier — reaching effects the slotted routing does not (e.g. Recovery), which is
+    why the incarnate resolver refuses co-slotting an effect (``E19``): only one of the
+    two pre-ED sources is present per effect.
 
     Fails loud (``P-ENH-001``) when a power's slots enhance an effect-borne aspect
     ``_enhance_aspect`` does not route: that aspect would be dropped from Totals,
@@ -485,6 +501,8 @@ def _compute_enh_multipliers(
                 )
             if memo[key] != 0.0:
                 out[(power.build_index, fx.index)] = f32(1.0 + memo[key])
+    for key_effect, addend in incarnate_effect.items():
+        out[key_effect] = f32(out.get(key_effect, 1.0) + addend)
     return out
 
 
@@ -862,6 +880,7 @@ def compute_base_totals(
     enh_db: Mapping[int, EnhancementRecord] | None = None,
     tables: MathTables | None = None,
     set_db: SetBonusDb | None = None,
+    incarnates: Iterable[Incarnate] | None = None,
 ) -> BaseTotals:
     """Compute ``Totals``/``TotalsCapped`` for a build.
 
@@ -884,14 +903,25 @@ def compute_base_totals(
     checked first (:func:`~coh_engine.set_bonuses.validate_set_slotting`) — an IO
     set in a power that rejects it fails loud (``H-ENH-001``) before any math runs.
 
+    When ``incarnates`` (Alpha-slot powers, resolved from ``incarnates.json``) are
+    supplied together with the enhancement inputs, their GrantPower-delivered enhancement
+    is applied per target power (:func:`~coh_engine.incarnate.resolve_incarnates`): the
+    effect-mag half (Defense/Recovery/…) folds into these totals here, and the resolved
+    addends ride on the result for the per-power scalar layer. The ``Incarnate.*`` powers
+    themselves are excluded from the buff/enhance passes — they are GrantPower delivery
+    vehicles, not direct-effect powers, so their raw effects contribute nothing to Totals.
+
     Raises:
         ValueError: ``E09`` if ``class_name`` is unknown; ``E11`` if the
             enhancement inputs (``slots``/``enh_db``/``tables``) are supplied
             partially; ``E13`` if a build needs the unported enhancement-pass
             speed-scalar (movement set-bonus) path; ``E14`` if ``set_db`` is
-            supplied without ``slots``/``enh_db``; ``H-ENH-001`` if a set IO is
+            supplied without ``slots``/``enh_db``; ``E21`` if ``incarnates`` is
+            supplied without the enhancement inputs; ``H-ENH-001`` if a set IO is
             slotted in a power that does not accept it; ``P-ENH-001`` if a slot
             enhances an unrouted effect-borne aspect.
+        NotImplementedError: ``E19``/``E20`` for an unported incarnate delivery path
+            (:mod:`coh_engine.incarnate`).
     """
     _enh_inputs = (slots, enh_db, tables)
     if any(x is not None for x in _enh_inputs) and not all(x is not None for x in _enh_inputs):
@@ -912,7 +942,13 @@ def compute_base_totals(
 
     self_buffs = _new_buffs(enums)
     self_enhance = _new_buffs(enums)
-    included = [p for p in powers if p.stat_include]
+    # Incarnate.* powers are GrantPower delivery vehicles; they contribute via the
+    # resolved addends, never their own raw GrantPower/LevelShift/SetMode effects.
+    included = [p for p in powers if p.stat_include and not _incarnate_excluded(p)]
+
+    addends = _resolve_build_incarnates(
+        incarnates, powers, archetype_index=archetype_index, mods=mods, classes=classes, tables=tables, slots=slots
+    )
 
     if set_db is not None:
         if slots is None or enh_db is None:
@@ -932,7 +968,13 @@ def compute_base_totals(
     toggle_end_agg: dict[int, float] = {}
     if slots is not None and enh_db is not None and tables is not None:
         enh_mult = _compute_enh_multipliers(
-            included, slots=slots, enh_db=enh_db, tables=tables, force_level=config.force_level, ctx=base_ctx
+            included,
+            slots=slots,
+            enh_db=enh_db,
+            tables=tables,
+            force_level=config.force_level,
+            ctx=base_ctx,
+            incarnate_effect=addends.effect if addends is not None else MappingProxyType({}),
         )
         buff_ctx = replace(base_ctx, enh_mult=enh_mult)
         toggle_end_agg = _compute_toggle_end_agg(
@@ -953,7 +995,7 @@ def compute_base_totals(
             global_acc_source=_is_global_acc_source(power),
         )
 
-    return _gbd_totals(
+    result = _gbd_totals(
         included,
         self_buffs,
         self_enhance,
@@ -962,6 +1004,69 @@ def compute_base_totals(
         enums=enums,
         server=server,
         toggle_end_agg=toggle_end_agg,
+    )
+    return result if addends is None else replace(result, incarnate_addends=addends)
+
+
+def _is_incarnate(power: Power) -> bool:
+    """Whether a build power is an ``Incarnate.*`` slot power (a GrantPower delivery vehicle)."""
+    return power.full_name.startswith("Incarnate.")
+
+
+# The effect types a GrantPower-delivery incarnate (Alpha) carries on its raw power — none
+# reach a Totals bucket, so excluding the power from the buff pass is faithful. A direct-
+# effect incarnate (Destiny-style Recovery/Endurance/Enhancement) is a different subsystem.
+_INCARNATE_DELIVERY_EFFECT_TYPES = frozenset({"GrantPower", "RevokePower", "LevelShift", "SetMode"})
+
+
+def _incarnate_excluded(power: Power) -> bool:
+    """Whether to drop an ``Incarnate.*`` power from the buff/enhance passes.
+
+    A GrantPower-delivery incarnate (its raw effects are all delivery-only) contributes
+    solely through the resolved addends, so it is excluded. An incarnate carrying a direct
+    effect (Destiny-style) would lose that contribution if excluded, so refuse it loudly.
+
+    Raises:
+        NotImplementedError: ``E22`` if an ``Incarnate.*`` power carries a non-delivery
+            (direct) effect — that path (Destiny/Lore direct buffs) is unported.
+    """
+    if not _is_incarnate(power):
+        return False
+    direct = [fx.effect_type for fx in power.effects if fx.effect_type not in _INCARNATE_DELIVERY_EFFECT_TYPES]
+    if direct:
+        raise NotImplementedError(
+            f"E22: incarnate power {power.full_name!r} carries direct effect type(s) {sorted(set(direct))} beyond "
+            "GrantPower delivery; the direct-effect incarnate path (Destiny/Lore) is unported — add a validated "
+            "fixture before computing this build"
+        )
+    return True
+
+
+def _resolve_build_incarnates(
+    incarnates: Iterable[Incarnate] | None,
+    powers: Sequence[Power],
+    *,
+    archetype_index: int,
+    mods: AttribMods,
+    classes: ArchetypeDb,
+    tables: MathTables | None,
+    slots: Mapping[int, Sequence[SlotRef]] | None,
+) -> IncarnateAddends | None:
+    """Resolve the build's incarnate addends, or ``None`` when none were supplied.
+
+    Raises:
+        ValueError: ``E21`` if incarnates were supplied without the enhancement inputs
+            (``tables``/``slots``) their fold threads through.
+    """
+    if incarnates is None:
+        return None
+    if tables is None:
+        raise ValueError(
+            "E21: incarnates require the enhancement inputs (slots, enh_db, tables) — an incarnate's "
+            "enhancement folds through the per-effect multiplier and per-power scalar path; pass them together"
+        )
+    return resolve_incarnates(
+        incarnates, powers, mods=mods, classes=classes, archetype_index=archetype_index, tables=tables, slots=slots
     )
 
 
