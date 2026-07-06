@@ -109,7 +109,7 @@ for modularity the numeric core does not need. Keep them literal.
 ## Where the pattern applies (beneficiary map)
 
 | Layer | Registry keyed on | Status |
-|---|---|---|
+| --- | --- | --- |
 | Legality (`legality.py`) | placement + build-wide rules | adopted (the reference implementation) |
 | Goal-scoring metrics (`scoring.py`) | metric name (from `build_profiles.json`) | adopted |
 | Cap / endurance adherence (`scoring.py`) | adherence check | adopted (cap check diffs Totals vs TotalsCapped) |
