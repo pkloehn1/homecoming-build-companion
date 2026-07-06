@@ -321,6 +321,7 @@ class _MagContext:
     archetype_index: int
     config: EngineConfig
     enh_mult: Mapping[tuple[int, int], float] = field(default_factory=dict)
+    enhance_names: frozenset[str] = frozenset()
 
 
 def _can_include(fx: Effect) -> bool:
@@ -404,24 +405,35 @@ def _mag(fx: Effect, power: Power, ctx: _MagContext) -> float:
 _SCALAR_ENHANCE_ASPECTS = frozenset({"Accuracy", "RechargeTime", "EnduranceDiscount", "Interrupt", "Range"})
 
 
-def _enhance_aspect(fx: Effect) -> str | None:
-    """The ``eEnhance`` aspect a Buffable effect is enhanced under (Pass1 subset).
+def _enhance_names(enums: EnumMaps) -> frozenset[str]:
+    """The ``eEnhance`` value names (minus ``None``) — the Pass1 name-identity route set."""
+    return frozenset(enums.maps["eEnhance"]) - {"None"}
 
-    ``GBPA_Pass1_EnhancePreED`` maps each Buffable effect's ``EffectType`` to an
-    ``eEnhance`` bucket, with the ``ResEffect`` + ``ETModifies == Defense``
-    special remap (clsToonX.cs:1795-1833). This ports the effect-borne aspects
-    the committed fixtures exercise — typed Defense and its debuff-resistance
-    (``ResEffect → Defense``). Non-Buffable effects and effect types outside this
-    subset return ``None`` (unenhanced). Slots that would enhance an unrouted
-    effect-borne aspect are rejected loudly by :func:`_compute_enh_multipliers`,
-    so no build is ever silently under-enhanced.
+
+def _enhance_aspect(fx: Effect, enhance_names: frozenset[str]) -> str | None:
+    """The ``eEnhance`` aspect a Buffable effect is enhanced under (``GBPA_Pass1_EnhancePreED``).
+
+    Faithful transcription of the Mids routing (clsToonX.cs:1790-1833): an effect is
+    enhanced under the ``eEnhance`` aspect whose *name* equals its ``EffectType`` name
+    (``IsEnumValue`` / ``StringToFlaggedEnum`` name-identity), plus the special cases the
+    name match misses — ``Enhancement`` + ``ETModifies == Accuracy → Accuracy``,
+    ``ResEffect`` + ``ETModifies == Defense → Defense``, and ``ResEffect`` +
+    ``ETModifies == Regeneration → Heal``. Non-Buffable effects and effect types that are
+    neither an ``eEnhance`` name nor a special case return ``None`` (unenhanced). ``Mids``
+    also has a per-enhancement ``GetAllowedEffectsFromEnhance`` fallback for effects outside
+    both; no ported build exercises it, so a slot enhancing such an aspect is refused loudly
+    by :func:`_check_enh_routing` rather than silently dropped.
     """
     if not fx.buffable:
         return None
-    if fx.effect_type == "Defense":
-        return "Defense"
+    if fx.effect_type in enhance_names:
+        return fx.effect_type
+    if fx.effect_type == "Enhancement" and fx.et_modifies == "Accuracy":
+        return "Accuracy"
     if fx.effect_type == "ResEffect" and fx.et_modifies == "Defense":
         return "Defense"
+    if fx.effect_type == "ResEffect" and fx.et_modifies == "Regeneration":
+        return "Heal"
     return None
 
 
@@ -447,6 +459,7 @@ def _check_enh_routing(
     power_slots: Sequence[SlotRef],
     enh_db: Mapping[int, EnhancementRecord],
     force_level: int,
+    enhance_names: frozenset[str],
 ) -> None:
     """Fail loud (``P-ENH-001``) if a slot enhances an effect-borne aspect ``_enhance_aspect`` drops.
 
@@ -454,7 +467,7 @@ def _check_enh_routing(
     under-reported. Only meaningful for a slotted power (an unrouted aspect can only come
     from a slot).
     """
-    routed = {aspect for fx in power.effects if (aspect := _enhance_aspect(fx)) is not None}
+    routed = {aspect for fx in power.effects if (aspect := _enhance_aspect(fx, enhance_names)) is not None}
     unrouted = _slot_granted_effect_aspects(power_slots, enh_db, force_level) - routed
     if unrouted:
         raise ValueError(
@@ -483,7 +496,7 @@ def _effect_multiplier(
     effect, or ``None``. Pass1 gates on the pre-Pass5 base ``Math_Mag`` — the unenhanced base
     magnitude used here — so the sign key matches Mids' gate.
     """
-    aspect = _enhance_aspect(fx)
+    aspect = _enhance_aspect(fx, ctx.enhance_names)
     if aspect is None and inc is None:
         return None
     base_mag = _mag(fx, power, ctx)
@@ -545,7 +558,7 @@ def _compute_enh_multipliers(
             continue
         # Harmless when power_slots is empty (no slot grants no aspect); an incarnate-only
         # power reaches here and correctly finds nothing unrouted.
-        _check_enh_routing(power, power_slots, enh_db, force_level)
+        _check_enh_routing(power, power_slots, enh_db, force_level, ctx.enhance_names)
         memo: dict[tuple[str, bool, bool], float] = {}
         for fx in power.effects:
             mult = _effect_multiplier(
@@ -996,7 +1009,9 @@ def compute_base_totals(
     # base_ctx carries no enhancement multiplier: the enhancement pass and the ED
     # gate both read pre-Pass5 base magnitudes. The buff pass reads buff_ctx (the
     # enhanced BuffedMag).
-    base_ctx = _MagContext(mods=mods, classes=classes, archetype_index=archetype_index, config=config)
+    base_ctx = _MagContext(
+        mods=mods, classes=classes, archetype_index=archetype_index, config=config, enhance_names=_enhance_names(enums)
+    )
 
     self_buffs = _new_buffs(enums)
     self_enhance = _new_buffs(enums)

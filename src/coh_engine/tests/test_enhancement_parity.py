@@ -190,6 +190,7 @@ def test_deflection_per_effect_math_mag(
     config: EngineConfig,
     enh_db: dict[int, EnhancementRecord],
     tables: MathTables,
+    enums: EnumMaps,
 ) -> None:
     """Every Deflection effect's enhanced ``Math_Mag`` matches Mids, effect by effect.
 
@@ -200,7 +201,13 @@ def test_deflection_per_effect_math_mag(
     powers = {p.build_index: p for p in load_powers_effects(MIDS / "builds" / SLOTTED / "powers_effects.json")}
     slots = load_build_slots(MIDS / "builds" / SLOTTED / "slots.json")
     at_index = classes.nid_from_uid_class(_totals_json(SLOTTED)["Class"])
-    ctx = base_totals._MagContext(mods=mods, classes=classes, archetype_index=at_index, config=config)
+    ctx = base_totals._MagContext(
+        mods=mods,
+        classes=classes,
+        archetype_index=at_index,
+        config=config,
+        enhance_names=base_totals._enhance_names(enums),
+    )
     included = [p for p in powers.values() if p.stat_include]
     enh_mult = base_totals._compute_enh_multipliers(
         included, slots=slots, enh_db=enh_db, tables=tables, force_level=config.force_level, ctx=ctx
@@ -277,21 +284,43 @@ def test_empty_slots_are_a_no_op(
 
 
 class TestEnhanceAspect:
-    """``_enhance_aspect`` maps effect types to their eEnhance bucket (Pass1 subset)."""
+    """``_enhance_aspect`` routes a Buffable effect by eEnhance name-identity + special cases."""
 
-    def test_buffable_defense(self, make_effect: Any) -> None:
-        assert base_totals._enhance_aspect(make_effect(effect_type="Defense", buffable=True)) == "Defense"
+    def test_name_identity_defense(self, make_effect: Any, enums: EnumMaps) -> None:
+        names = base_totals._enhance_names(enums)
+        assert base_totals._enhance_aspect(make_effect(effect_type="Defense", buffable=True), names) == "Defense"
 
-    def test_res_effect_defense_remap(self, make_effect: Any) -> None:
+    def test_name_identity_resistance(self, make_effect: Any, enums: EnumMaps) -> None:
+        # Name-identity now routes Resistance (and Recovery/Heal/...), not just Defense.
+        names = base_totals._enhance_names(enums)
+        assert base_totals._enhance_aspect(make_effect(effect_type="Resistance", buffable=True), names) == "Resistance"
+
+    def test_name_identity_recovery(self, make_effect: Any, enums: EnumMaps) -> None:
+        names = base_totals._enhance_names(enums)
+        assert base_totals._enhance_aspect(make_effect(effect_type="Recovery", buffable=True), names) == "Recovery"
+
+    def test_enhancement_accuracy_special_case(self, make_effect: Any, enums: EnumMaps) -> None:
+        names = base_totals._enhance_names(enums)
+        fx = make_effect(effect_type="Enhancement", et_modifies="Accuracy", buffable=True)
+        assert base_totals._enhance_aspect(fx, names) == "Accuracy"
+
+    def test_res_effect_defense_remap(self, make_effect: Any, enums: EnumMaps) -> None:
+        names = base_totals._enhance_names(enums)
         fx = make_effect(effect_type="ResEffect", et_modifies="Defense", buffable=True)
-        assert base_totals._enhance_aspect(fx) == "Defense"
+        assert base_totals._enhance_aspect(fx, names) == "Defense"
 
-    def test_non_buffable_is_none(self, make_effect: Any) -> None:
-        assert base_totals._enhance_aspect(make_effect(effect_type="Defense", buffable=False)) is None
-
-    def test_unmapped_buffable_is_none(self, make_effect: Any) -> None:
-        assert base_totals._enhance_aspect(make_effect(effect_type="Resistance", buffable=True)) is None
-
-    def test_res_effect_non_defense_is_none(self, make_effect: Any) -> None:
+    def test_res_effect_regeneration_remaps_to_heal(self, make_effect: Any, enums: EnumMaps) -> None:
+        names = base_totals._enhance_names(enums)
         fx = make_effect(effect_type="ResEffect", et_modifies="Regeneration", buffable=True)
-        assert base_totals._enhance_aspect(fx) is None
+        assert base_totals._enhance_aspect(fx, names) == "Heal"
+
+    def test_non_buffable_is_none(self, make_effect: Any, enums: EnumMaps) -> None:
+        names = base_totals._enhance_names(enums)
+        assert base_totals._enhance_aspect(make_effect(effect_type="Defense", buffable=False), names) is None
+
+    def test_non_enhance_name_is_none(self, make_effect: Any, enums: EnumMaps) -> None:
+        # ResEffect is an eEffectType but not an eEnhance name, and ETModifies is neither
+        # Defense nor Regeneration -> unrouted.
+        names = base_totals._enhance_names(enums)
+        fx = make_effect(effect_type="ResEffect", et_modifies="Recovery", buffable=True)
+        assert base_totals._enhance_aspect(fx, names) is None
