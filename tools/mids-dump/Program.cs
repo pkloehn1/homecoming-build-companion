@@ -126,6 +126,7 @@ internal static class Program
         DumpEnums(outDir);
         DumpConfig(outDir);
         DumpLevels(outDir);
+        DumpIncarnates(outDir);
 
         // Optional third arg: a directory of .mbd sample builds. Each is loaded
         // through Mids and re-saved as a .mxd share block, giving the Python port
@@ -346,6 +347,93 @@ internal static class Program
             });
         }
         WriteJson(buildDir, "incarnates.json", incarnates);
+    }
+
+    // A DB-level catalog of every incarnate powerset (ePowerSetType.Incarnate): the
+    // authoritative port-format reference for the full incarnate buff set (CP6.2). For
+    // each incarnate power it records the aspect tuples it delivers — its own effects and
+    // the effects of its GrantPower-granted sub-powers (fx.nSummon -> db.Power[nSummon]) —
+    // so the engine can enumerate which EffectType/ETModifies/Aspect each incarnate routes
+    // (Strength = enhancement increment, Current/Absolute/Maximum = direct buff, Resistance
+    // = resist, IgnoreED = the ED-bypass split). This is a compact descriptor (no
+    // magnitudes/tables): it drives which aspects need routing, not their values.
+    private static void DumpIncarnates(string outDir)
+    {
+        var db = DatabaseAPI.Database;
+        var sets = new List<object>();
+        // Character-affecting incarnate slots only: group "Incarnate" (drops the
+        // "Incarnate_Pets" summon zoo) and skip the Lore pet-summoner sets. Lore summons
+        // via Create_Entity, which is Totals-neutral for the character — Mids does not fold
+        // pet buffs into the static build totals, so neither does the port (nothing to
+        // catalog for parity).
+        var incarnateSlots = db.Powersets.Where(p =>
+            p is {SetType: Enums.ePowerSetType.Incarnate, GroupName: "Incarnate"}
+            && !p.FullName.StartsWith("Incarnate.Lore", StringComparison.Ordinal));
+        foreach (var ps in incarnateSlots)
+        {
+            // The delivered-aspect signature: the distinct (EffectType, ETModifies, Aspect,
+            // IgnoreED) tuples this slot's powers apply — its own direct effects and the
+            // effects of its GrantPower-granted sub-powers. Collapsed across the slot's
+            // powers/types so the catalog is the CP6.2 routing driver (which aspects need
+            // handling), not a per-power value dump. DamageType/MezType are summarized to
+            // whether the aspect spans typed variants.
+            var sig = new SortedDictionary<string, HashSet<string>>();
+            foreach (var pw in ps.Powers.Where(p => p != null))
+            {
+                foreach (var fx in pw.Effects)
+                {
+                    AddAspectSignature(sig, fx, false);
+                    if (fx.EffectType != Enums.eEffectType.GrantPower || fx.nSummon <= -1
+                        || fx.nSummon >= db.Power.Length || db.Power[fx.nSummon] == null)
+                    {
+                        continue;
+                    }
+
+                    var grantedEnh = db.Power[fx.nSummon].Effects.Where(e =>
+                        e.EffectType is Enums.eEffectType.Enhancement or Enums.eEffectType.DamageBuff);
+                    foreach (var sfx in grantedEnh)
+                    {
+                        AddAspectSignature(sig, sfx, true);
+                    }
+                }
+            }
+
+            sets.Add(new
+            {
+                ps.FullName,
+                ps.DisplayName,
+                PowerCount = ps.Powers.Count(p => p != null),
+                DeliveredAspects = sig.Select(kv => new { Aspect = kv.Key, Types = kv.Value.OrderBy(x => x).ToList() }),
+            });
+        }
+        WriteJson(outDir, "incarnate_catalog.json", sets);
+    }
+
+    // Fold one effect into the powerset's aspect signature. The key is a stable
+    // "EffectType|ETModifies|Aspect|IgnoreED|src" string; the value collects the
+    // DamageType/MezType variants seen (so a typed Defense shows its type span without a
+    // row per type).
+    private static void AddAspectSignature(IDictionary<string, HashSet<string>> sig, IEffect fx, bool fromSub)
+    {
+        var key = string.Join("|",
+            fx.EffectType.ToString(),
+            fx.ETModifies.ToString(),
+            fx.Aspect.ToString(),
+            fx.IgnoreED ? "IgnoreED" : "ED",
+            fromSub ? "granted" : "direct");
+        if (!sig.TryGetValue(key, out var types))
+        {
+            types = new HashSet<string>();
+            sig[key] = types;
+        }
+        if (fx.DamageType != Enums.eDamage.None)
+        {
+            types.Add(fx.DamageType.ToString());
+        }
+        if (fx.MezType != Enums.eMez.None)
+        {
+            types.Add(fx.MezType.ToString());
+        }
     }
 
     // Builds recomputed at a lowered ForceLevel: the exemplar parity fixtures. At a

@@ -1,0 +1,1937 @@
+[
+  {
+    "FullName": "Incarnate.Alpha",
+    "DisplayName": "Alpha",
+    "PowerCount": 72,
+    "DeliveredAspects": [
+      {
+        "Aspect": "DamageBuff|None|Str|ED|granted",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "DamageBuff|None|Str|IgnoreED|granted",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Absorb|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Absorb|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Accuracy|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Accuracy|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Defense|Str|ED|granted",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Defense|Str|IgnoreED|granted",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Endurance|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Endurance|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|EnduranceDiscount|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|EnduranceDiscount|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Heal|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Heal|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|HitPoints|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|HitPoints|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|JumpHeight|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|JumpHeight|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Mez|Str|ED|granted",
+        "Types": [
+          "Afraid",
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Sleep",
+          "Stunned",
+          "Taunt",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Mez|Str|IgnoreED|granted",
+        "Types": [
+          "Afraid",
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Sleep",
+          "Stunned",
+          "Taunt",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Range|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Range|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Recovery|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Recovery|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Regeneration|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Regeneration|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedFlying|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedFlying|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedJumping|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedJumping|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedRunning|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedRunning|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|ToHit|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|ToHit|Str|IgnoreED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "GrantPower|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "LevelShift|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "RevokePower|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SetMode|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Alpha_Silent",
+    "DisplayName": "Alpha_Silent",
+    "PowerCount": 126,
+    "DeliveredAspects": [
+      {
+        "Aspect": "DamageBuff|None|Str|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "DamageBuff|None|Str|IgnoreED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Absorb|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Absorb|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Accuracy|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Accuracy|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Defense|Str|ED|direct",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Defense|Str|IgnoreED|direct",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Endurance|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Endurance|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|EnduranceDiscount|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|EnduranceDiscount|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Heal|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Heal|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|HitPoints|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|HitPoints|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|InterruptTime|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|InterruptTime|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|JumpHeight|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|JumpHeight|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Mez|Str|ED|direct",
+        "Types": [
+          "Afraid",
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Knockback",
+          "Knockup",
+          "Sleep",
+          "Stunned",
+          "Taunt",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Mez|Str|IgnoreED|direct",
+        "Types": [
+          "Afraid",
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Knockback",
+          "Knockup",
+          "Sleep",
+          "Stunned",
+          "Taunt",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Range|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Range|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Recovery|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Recovery|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Regeneration|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Regeneration|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedFlying|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedFlying|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedJumping|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedJumping|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedRunning|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedRunning|Str|IgnoreED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|ToHit|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|ToHit|Str|IgnoreED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.AntiMatterRayBurn",
+    "DisplayName": "AntiMatterRayBurn",
+    "PowerCount": 1,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Damage|None|Abs|ED|direct",
+        "Types": [
+          "Energy"
+        ]
+      },
+      {
+        "Aspect": "Defense|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Data",
+    "DisplayName": "Data",
+    "PowerCount": 9,
+    "DeliveredAspects": [
+      {
+        "Aspect": "EntCreate|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Defiler_Pets",
+    "DisplayName": "Defiler_Pets",
+    "PowerCount": 1,
+    "DeliveredAspects": [
+      {
+        "Aspect": "DamageBuff|None|Str|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedRunning|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Barrier_Rez",
+    "DisplayName": "Destiny",
+    "PowerCount": 3,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Endurance|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Heal|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "XPDebtProtection|None|Abs|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Destiny",
+    "DisplayName": "Destiny",
+    "PowerCount": 45,
+    "DeliveredAspects": [
+      {
+        "Aspect": "CombatPhase|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Defense|None|Cur|ED|direct",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Endurance|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Absorb|Str|ED|direct",
+        "Types": [
+          "AoE",
+          "Held"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Defense|Str|ED|direct",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Held",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Endurance|Str|ED|direct",
+        "Types": [
+          "AoE",
+          "Held"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Heal|Str|ED|direct",
+        "Types": [
+          "AoE",
+          "Held"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Mez|Str|ED|direct",
+        "Types": [
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Sleep",
+          "Stunned",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Range|Str|ED|direct",
+        "Types": [
+          "AoE",
+          "Held"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedFlying|Str|ED|direct",
+        "Types": [
+          "Held"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|SpeedRunning|Str|ED|direct",
+        "Types": [
+          "Held"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|ToHit|Str|ED|direct",
+        "Types": [
+          "AoE",
+          "Held"
+        ]
+      },
+      {
+        "Aspect": "EntCreate|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ExecutePower|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "GrantPower|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Heal|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "HitPoints|None|Max|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "JumpHeight|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Mez|None|Cur|ED|direct",
+        "Types": [
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Intangible",
+          "Knockback",
+          "Knockup",
+          "Sleep",
+          "Stunned",
+          "Teleport",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "MezResist|None|Res|ED|direct",
+        "Types": [
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Placate",
+          "Repel",
+          "Sleep",
+          "Stunned",
+          "Taunt",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "PerceptionRadius|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Recovery|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Regeneration|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|Accuracy|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|Defense|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|Endurance|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|Heal|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|PerceptionRadius|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|RechargeTime|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|Recovery|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|Regeneration|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|SpeedFlying|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|SpeedRunning|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|ToHit|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Resistance|None|Res|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "RevokePower|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedFlying|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedRunning|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "StealthRadius|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "StealthRadiusPlayer|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Translucency|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Destiny_Silent",
+    "DisplayName": "Destiny_Silent",
+    "PowerCount": 3,
+    "DeliveredAspects": [
+      {
+        "Aspect": "LevelShift|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Mez|None|Cur|ED|direct",
+        "Types": [
+          "Knockback",
+          "Stunned"
+        ]
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Fate",
+    "DisplayName": "Fate",
+    "PowerCount": 9,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Defense|None|Cur|ED|direct",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing"
+        ]
+      },
+      {
+        "Aspect": "Endurance|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Defense|Str|ED|direct",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Endurance|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Heal|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Mez|Str|ED|direct",
+        "Types": [
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Sleep",
+          "Stunned",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Range|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedFlying|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedRunning|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|ToHit|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "EntCreate|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Heal|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "HitPoints|None|Max|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Mez|None|Cur|ED|direct",
+        "Types": [
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Knockback",
+          "Knockup",
+          "Sleep",
+          "Stunned",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "MezResist|None|Res|ED|direct",
+        "Types": [
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Placate",
+          "Repel",
+          "Sleep",
+          "Stunned",
+          "Taunt",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "None|None|Res|ED|direct",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing"
+        ]
+      },
+      {
+        "Aspect": "Recovery|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|Accuracy|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|Defense|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|Endurance|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|PerceptionRadius|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|RechargeTime|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|Recovery|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|Regeneration|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|SpeedFlying|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|SpeedRunning|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ResEffect|ToHit|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Resistance|None|Res|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Faux_Granter",
+    "DisplayName": "Faux_Granter",
+    "PowerCount": 1,
+    "DeliveredAspects": []
+  },
+  {
+    "FullName": "Incarnate.Faux_Uberbuff",
+    "DisplayName": "Freem",
+    "PowerCount": 1,
+    "DeliveredAspects": []
+  },
+  {
+    "FullName": "Incarnate.Genesis_Silent",
+    "DisplayName": "Genesis",
+    "PowerCount": 20,
+    "DeliveredAspects": [
+      {
+        "Aspect": "DamageBuff|None|Str|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "DamageBuff|None|Str|ED|granted",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Endurance|None|Max|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Defense|Str|ED|direct",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Endurance|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Heal|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|HitPoints|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Mez|Str|ED|direct",
+        "Types": [
+          "Afraid",
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Placate",
+          "Sleep",
+          "Stunned",
+          "Taunt",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "GrantPower|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "HitPoints|None|Max|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Genesis",
+    "DisplayName": "Genesis",
+    "PowerCount": 37,
+    "DeliveredAspects": [
+      {
+        "Aspect": "DamageBuff|None|Str|ED|granted",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Defense|Str|ED|granted",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Endurance|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Heal|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|HitPoints|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|JumpHeight|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Mez|Str|ED|granted",
+        "Types": [
+          "Afraid",
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Placate",
+          "Sleep",
+          "Stunned",
+          "Taunt",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Range|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedFlying|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedRunning|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|ToHit|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "GlobalChanceMod|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "GlobalChanceMod|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "GrantPower|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "RevokePower|None|Abs|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Hybrid",
+    "DisplayName": "Hybrid",
+    "PowerCount": 36,
+    "DeliveredAspects": [
+      {
+        "Aspect": "DamageBuff|None|Str|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "DamageBuff|None|Str|ED|granted",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Defense|None|Cur|ED|direct",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Accuracy|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|EnduranceDiscount|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Heal|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Mez|Str|ED|direct",
+        "Types": [
+          "Afraid",
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Sleep",
+          "Stunned",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "GlobalChanceMod|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "GrantPower|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Mez|None|Abs|ED|direct",
+        "Types": [
+          "Taunt"
+        ]
+      },
+      {
+        "Aspect": "Mez|None|Cur|ED|direct",
+        "Types": [
+          "Afraid",
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Sleep",
+          "Stunned",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "Regeneration|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Resistance|None|Res|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "RevokePower|None|Abs|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Hybrid_Silent",
+    "DisplayName": "Hybrid",
+    "PowerCount": 62,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Damage|None|Abs|ED|direct",
+        "Types": [
+          "Energy",
+          "Lethal",
+          "Psionic",
+          "Smashing"
+        ]
+      },
+      {
+        "Aspect": "DamageBuff|None|Str|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "DamageBuff|None|Str|ED|granted",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|EnduranceDiscount|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "GlobalChanceMod|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "GrantPower|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Mez|None|Cur|ED|direct",
+        "Types": [
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Sleep",
+          "Stunned",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "MezResist|None|Res|ED|direct",
+        "Types": [
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Intangible",
+          "Knockback",
+          "Knockup",
+          "OnlyAffectsSelf",
+          "Placate",
+          "Repel",
+          "Sleep",
+          "Stunned",
+          "Taunt",
+          "Teleport",
+          "Terrorized",
+          "Untouchable"
+        ]
+      },
+      {
+        "Aspect": "Regeneration|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "RevokePower|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SetMode|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Interface_Silent",
+    "DisplayName": "Interface",
+    "PowerCount": 65,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Damage|None|Abs|ED|direct",
+        "Types": [
+          "Energy",
+          "Fire",
+          "Negative",
+          "Psionic",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "DamageBuff|None|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Defense|None|Max|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Endurance|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Endurance|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Defense|Str|ED|direct",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Heal|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|JumpHeight|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Mez|Str|ED|direct",
+        "Types": [
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Knockback",
+          "Knockup",
+          "Repel",
+          "Sleep",
+          "Stunned",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedFlying|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedRunning|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|ToHit|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "HitPoints|None|Max|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Mez|None|Cur|ED|direct",
+        "Types": [
+          "Confused",
+          "Immobilized"
+        ]
+      },
+      {
+        "Aspect": "Recovery|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Regeneration|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Resistance|None|Res|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedFlying|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedJumping|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedRunning|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "ToHit|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Interface",
+    "DisplayName": "Interface",
+    "PowerCount": 72,
+    "DeliveredAspects": [
+      {
+        "Aspect": "DamageBuff|None|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Defense|Str|ED|granted",
+        "Types": [
+          "AoE",
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Melee",
+          "Negative",
+          "Psionic",
+          "Ranged",
+          "Smashing"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|Heal|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|JumpHeight|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|Mez|Str|ED|granted",
+        "Types": [
+          "Confused",
+          "Held",
+          "Immobilized",
+          "Knockback",
+          "Knockup",
+          "Repel",
+          "Sleep",
+          "Stunned",
+          "Terrorized"
+        ]
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedFlying|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|SpeedRunning|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|ToHit|Str|ED|granted",
+        "Types": []
+      },
+      {
+        "Aspect": "GlobalChanceMod|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "GrantPower|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "HitPoints|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "RevokePower|None|Abs|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Ion_Judgement",
+    "DisplayName": "Ion_Judgement",
+    "PowerCount": 30,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Damage|None|Abs|ED|direct",
+        "Types": [
+          "Energy"
+        ]
+      },
+      {
+        "Aspect": "Endurance|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Endurance|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "EntCreate|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Mez|None|Cur|ED|direct",
+        "Types": [
+          "Held"
+        ]
+      },
+      {
+        "Aspect": "Null|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Recovery|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SetMode|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Judgement",
+    "DisplayName": "Judgement",
+    "PowerCount": 54,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Damage|None|Abs|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Smashing"
+        ]
+      },
+      {
+        "Aspect": "DamageBuff|None|Str|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Defense|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Endurance|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Endurance|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|JumpHeight|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "EntCreate|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Mez|None|Cur|ED|direct",
+        "Types": [
+          "Held",
+          "Knockback",
+          "Knockup",
+          "Stunned"
+        ]
+      },
+      {
+        "Aspect": "Null|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Recovery|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SetMode|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedFlying|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedJumping|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedRunning|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Mind",
+    "DisplayName": "Mind",
+    "PowerCount": 1,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Null|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Omega",
+    "DisplayName": "Omega",
+    "PowerCount": 1,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Null|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Faux_Proc",
+    "DisplayName": "Overthruster",
+    "PowerCount": 2,
+    "DeliveredAspects": []
+  },
+  {
+    "FullName": "Incarnate.Socket",
+    "DisplayName": "Socket",
+    "PowerCount": 10,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Damage|None|Abs|ED|direct",
+        "Types": [
+          "Energy",
+          "Fire",
+          "Negative",
+          "Psionic",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Endurance|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Endurance|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "HitPoints|None|Max|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Mez|None|Cur|ED|direct",
+        "Types": [
+          "Confused",
+          "Immobilized"
+        ]
+      },
+      {
+        "Aspect": "Recovery|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Resistance|None|Res|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Stance",
+    "DisplayName": "Stance",
+    "PowerCount": 1,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Null|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Faux_Untouchable",
+    "DisplayName": "Temporal",
+    "PowerCount": 1,
+    "DeliveredAspects": []
+  },
+  {
+    "FullName": "Incarnate.Verdict",
+    "DisplayName": "Verdict",
+    "PowerCount": 9,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Damage|None|Abs|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Negative",
+          "Smashing"
+        ]
+      },
+      {
+        "Aspect": "DamageBuff|None|Str|ED|direct",
+        "Types": [
+          "Cold",
+          "Energy",
+          "Fire",
+          "Lethal",
+          "Negative",
+          "Psionic",
+          "Smashing",
+          "Toxic"
+        ]
+      },
+      {
+        "Aspect": "Defense|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Endurance|None|Abs|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Endurance|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|JumpHeight|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Enhancement|RechargeTime|Str|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "EntCreate|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Mez|None|Cur|ED|direct",
+        "Types": [
+          "Held"
+        ]
+      },
+      {
+        "Aspect": "Null|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "Recovery|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SetMode|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedFlying|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedJumping|None|Cur|ED|direct",
+        "Types": []
+      },
+      {
+        "Aspect": "SpeedRunning|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  },
+  {
+    "FullName": "Incarnate.Vitae",
+    "DisplayName": "Vitae",
+    "PowerCount": 1,
+    "DeliveredAspects": [
+      {
+        "Aspect": "Null|None|Cur|ED|direct",
+        "Types": []
+      }
+    ]
+  }
+]
