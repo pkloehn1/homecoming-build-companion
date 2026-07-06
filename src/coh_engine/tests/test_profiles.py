@@ -65,6 +65,12 @@ def test_resist_cap_target_resolves_the_at_specific_breakpoint(
     assert tanker.targets[0].value == 90
 
 
+def test_at_ref_accepts_a_display_name_with_a_space(raw_profiles: dict[str, Any], breakpoints: dict[str, Any]) -> None:
+    """resolve_profile normalizes a spaced display name to the underscore breakpoints key."""
+    profile = resolve_profile("resist-cap", raw_profiles, breakpoints, at_key="Arachnos Soldier")
+    assert profile.targets[0].value == breakpoints["archetypes"]["Arachnos_Soldier"]["res_cap_pct"]
+
+
 def test_boolean_target_keeps_its_literal_value(raw_profiles: dict[str, Any], breakpoints: dict[str, Any]) -> None:
     """perma-hasten's boolean target carries the literal True, not a breakpoint ref."""
     profile = resolve_profile("perma-hasten", raw_profiles, breakpoints, at_key="Dominator")

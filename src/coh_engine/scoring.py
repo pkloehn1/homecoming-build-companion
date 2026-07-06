@@ -18,7 +18,7 @@ every profile (via :mod:`coh_engine.exemplar`), not a selectable target.
 Spec: docs/build-types-and-goals.md; .claude/rules/hard-limits.md; error-output.md.
 """
 
-from collections.abc import Sequence
+from collections.abc import Callable, Sequence
 from dataclasses import dataclass
 
 from coh_engine.archetypes import Archetype
@@ -107,49 +107,93 @@ def endurance_diagnostic(
     )
 
 
-def _cap_overshoots(totals: TotalStatistics, archetype: Archetype) -> list[tuple[str, float, float]]:
-    """(label, actual, cap) for each uncapped total above its AT cap."""
+def _cap_overshoots(totals: TotalStatistics, totals_capped: TotalStatistics) -> list[tuple[str, float, float]]:
+    """(label, uncapped, capped) for each field the engine clamped — ``Totals`` above ``TotalsCapped``.
+
+    Diffs the engine's own capped output instead of re-deriving cap thresholds, so the
+    check can never drift from ``_gbd_apply_caps`` (check-registry.md: assert against
+    engine output, do not re-derive).
+    """
     out: list[tuple[str, float, float]] = []
     for i in _TYPED:
-        if totals.res[i] > archetype.res_cap:
-            out.append((f"Res[{i}]", totals.res[i], archetype.res_cap))
-    for label, actual, cap in (
-        ("BuffHaste", totals.buff_haste, f32(archetype.recharge_cap - 1)),
-        ("BuffDam", totals.buff_dam, f32(archetype.damage_cap - 1)),
-        ("HPRegen", totals.hp_regen, f32(archetype.regen_cap - 1)),
-        ("EndRec", totals.end_rec, f32(archetype.recovery_cap - 1)),
+        if totals.res[i] > totals_capped.res[i]:
+            out.append((f"Res[{i}]", totals.res[i], totals_capped.res[i]))
+    for label, uncapped, capped in (
+        ("BuffHaste", totals.buff_haste, totals_capped.buff_haste),
+        ("BuffDam", totals.buff_dam, totals_capped.buff_dam),
+        ("HPRegen", totals.hp_regen, totals_capped.hp_regen),
+        ("EndRec", totals.end_rec, totals_capped.end_rec),
     ):
-        if actual > cap:
-            out.append((label, actual, cap))
+        if uncapped > capped:
+            out.append((label, uncapped, capped))
     return out
 
 
-def cap_adherence_diagnostics(totals: TotalStatistics, archetype: Archetype) -> list[Diagnostic]:
-    """Warn (``P-CAP-001``) for each uncapped total above its AT cap (game-clamped, so wasted)."""
+def cap_adherence_diagnostics(totals: TotalStatistics, totals_capped: TotalStatistics) -> list[Diagnostic]:
+    """Warn (``P-CAP-001``) for each field the engine clamped (uncapped > capped, so wasted)."""
     return [
         Diagnostic(
             rule_id="P-CAP-001",
             severity="warning",
-            message=f"{label} {actual:.3f} exceeds the AT cap {cap:.3f}; the excess is clamped and wasted",
+            message=f"{label} {uncapped:.3f} exceeds the AT cap {capped:.3f}; the excess is clamped and wasted",
             fix="re-budget the over-cap slotting toward an unmet stat",
-            expected=round(cap, 3),
-            actual=round(actual, 3),
+            expected=round(capped, 3),
+            actual=round(uncapped, 3),
         )
-        for label, actual, cap in _cap_overshoots(totals, archetype)
+        for label, uncapped, capped in _cap_overshoots(totals, totals_capped)
     ]
 
 
-def _metric_value(metric: str, totals: TotalStatistics, power_stats: Sequence[PowerStats]) -> float | bool:
-    """Resolve a target's metric name to the build's computed value."""
-    if metric == "defense_positional_min":
-        return defense_positional_min(totals)
-    if metric == "resist_min":
-        return resist_min(totals)
-    if metric == "perma_hasten":
-        return perma_hasten(power_stats)
-    if metric == "perma_dom":
-        return perma_dom(power_stats)
-    raise ValueError(f"E17: unknown scoring metric {metric!r}; add it to _metric_value before using it in a profile")
+# The metric registry: a scoring metric is a name -> (Totals, power stats) -> value. A new
+# metric is a new @metric(name); build_profiles.json references the name (check-registry.md).
+Metric = Callable[[TotalStatistics, Sequence[PowerStats]], float | bool]
+_METRICS: dict[str, Metric] = {}
+
+
+def metric(name: str) -> Callable[[Metric], Metric]:
+    """Register a scoring metric under the name a profile target references."""
+
+    def register(fn: Metric) -> Metric:
+        _METRICS[name] = fn
+        return fn
+
+    return register
+
+
+def registered_metrics() -> list[str]:
+    """The scoring metric names the registry can evaluate — the introspectable registry."""
+    return sorted(_METRICS)
+
+
+@metric("defense_positional_min")
+def _metric_defense_positional(totals: TotalStatistics, power_stats: Sequence[PowerStats]) -> float | bool:
+    return defense_positional_min(totals)
+
+
+@metric("resist_min")
+def _metric_resist_min(totals: TotalStatistics, power_stats: Sequence[PowerStats]) -> float | bool:
+    return resist_min(totals)
+
+
+@metric("perma_hasten")
+def _metric_perma_hasten(totals: TotalStatistics, power_stats: Sequence[PowerStats]) -> float | bool:
+    return perma_hasten(power_stats)
+
+
+@metric("perma_dom")
+def _metric_perma_dom(totals: TotalStatistics, power_stats: Sequence[PowerStats]) -> float | bool:
+    return perma_dom(power_stats)
+
+
+def _metric_value(name: str, totals: TotalStatistics, power_stats: Sequence[PowerStats]) -> float | bool:
+    """Resolve a target's metric name to the build's computed value via the registry."""
+    fn = _METRICS.get(name)
+    if fn is None:
+        raise ValueError(
+            f"E17: unknown scoring metric {name!r}; register it with @metric({name!r}) before using it in a "
+            f"profile (known metrics: {sorted(_METRICS)})"
+        )
+    return fn(totals, power_stats)
 
 
 def _meets(actual: float | bool, target: Target) -> bool:
@@ -203,7 +247,7 @@ def score_build(
     # Count met TARGETS, not met dict entries: two targets on one metric collide in
     # `met` (last wins), but each still counts toward the score independently.
     score = 1.0 if not profile.targets else f32(met_count / len(profile.targets))
-    diagnostics.extend(cap_adherence_diagnostics(totals, archetype))
+    diagnostics.extend(cap_adherence_diagnostics(totals, totals_capped))
     end_diag = endurance_diagnostic(totals, totals_capped, archetype)
     if end_diag is not None:
         diagnostics.append(end_diag)

@@ -18,6 +18,8 @@ from pathlib import Path
 from types import MappingProxyType
 from typing import Any
 
+from coh_engine.at_names import resolve_at_key
+
 # The nine canonical build types (docs/build-types-and-goals.md § The major build types).
 CANONICAL_PROFILES = (
     "soft-cap-defense",
@@ -77,8 +79,15 @@ def profile_names(raw_profiles: Mapping[str, Any]) -> list[str]:
 
 
 def _resolve_ref(ref: str, breakpoints: Mapping[str, Any], at_key: str) -> float:
-    """Walk a dotted breakpoints path (``{at}`` -> ``at_key``) to its numeric value."""
+    """Walk a dotted breakpoints path (``{at}`` -> ``at_key``) to its numeric value.
+
+    When the ref uses ``{at}``, ``at_key`` is resolved to its canonical archetype key
+    (:func:`~coh_engine.at_names.resolve_at_key`), so a caller may pass a display name
+    (``"Arachnos Soldier"``) or ``Class_`` name and still hit the underscore key.
+    """
     node: Any = breakpoints
+    if "{at}" in ref:
+        at_key = resolve_at_key(at_key, breakpoints.get("archetypes", {}))
     parts = ref.replace("{at}", at_key).split(".")
     for part in parts:
         if not isinstance(node, Mapping) or part not in node:

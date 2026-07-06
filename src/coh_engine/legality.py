@@ -28,8 +28,9 @@ so a Mids-round-tripped build never trips these; the checks guard direct build
 
 import json
 import re
-from collections.abc import Mapping, Sequence
+from collections.abc import Callable, Iterable, Mapping, Sequence
 from dataclasses import dataclass
+from enum import Enum, auto
 from pathlib import Path
 from types import MappingProxyType
 from typing import Any
@@ -89,39 +90,100 @@ def load_enhancement_legality(path: Path | str) -> Mapping[int, EnhancementLegal
     return MappingProxyType(out)
 
 
-def is_enhancement_valid(power: Power, enh: EnhancementLegality, set_db: SetBonusDb) -> bool:
-    """``Power.IsEnhancementValid`` (Power.cs:2119): can ``enh`` slot in ``power``.
+class PlacementVerdict(Enum):
+    """The one placement decision, consumed by both the predicate and the diagnostic."""
 
-    Set IOs check the set type against the power's accepted set types; standard IOs
-    check the enhancement's class IDs against the power's accepted classes. An
-    unknown set (or a class-less enhancement) is not valid.
+    VALID = auto()
+    UNKNOWN_SET = auto()
+    SET_NOT_ACCEPTED = auto()
+    CLASS_NOT_ACCEPTED = auto()
+
+
+def classify_placement(power: Power, enh: EnhancementLegality, set_db: SetBonusDb) -> PlacementVerdict:
+    """``Power.IsEnhancementValid`` (Power.cs:2119) as a typed verdict — the single source.
+
+    A set IO's set type must be accepted by the power (``power_accepts_set``, the shared
+    primitive); a standard IO's class ID must be in the power's accepted classes. The
+    verdict backs both :func:`is_enhancement_valid` (the Mids-validated predicate) and the
+    placement rule's diagnostics, so the tested decision and the production decision are
+    one function, not two that can drift.
     """
     if enh.type_name == "SetO":
         set_def = set_db.sets.get(enh.nid_set)
-        return set_def is not None and power_accepts_set(power, set_def)
-    return any(cid in power.enhancements for cid in enh.class_ids)
+        if set_def is None:
+            return PlacementVerdict.UNKNOWN_SET
+        return PlacementVerdict.VALID if power_accepts_set(power, set_def) else PlacementVerdict.SET_NOT_ACCEPTED
+    return (
+        PlacementVerdict.VALID
+        if any(cid in power.enhancements for cid in enh.class_ids)
+        else PlacementVerdict.CLASS_NOT_ACCEPTED
+    )
+
+
+def is_enhancement_valid(power: Power, enh: EnhancementLegality, set_db: SetBonusDb) -> bool:
+    """Whether ``enh`` may slot in ``power`` — ``classify_placement`` reduced to a bool."""
+    return classify_placement(power, enh, set_db) is PlacementVerdict.VALID
+
+
+_FilledSlot = tuple[Power, SlotRef, EnhancementLegality | None]
+
+
+@dataclass(frozen=True, slots=True)
+class LegalityContext:
+    """The pre-built inputs every legality rule reads — the build's slots walked once.
+
+    ``filled`` is every ``(power, filled slot, resolved enhancement)`` in build order,
+    with the enhancement ``None`` when its nID is absent from the database. Building it
+    once means no rule re-walks the slots and none re-resolves an enhancement.
+    """
+
+    set_db: SetBonusDb
+    filled: tuple[_FilledSlot, ...]
+
+
+def _build_filled(
+    powers: Sequence[Power], slots: Mapping[int, Sequence[SlotRef]], enh_db: Mapping[int, EnhancementLegality]
+) -> tuple[_FilledSlot, ...]:
+    return tuple(
+        (power, slot, enh_db.get(slot.enh))
+        for power in powers
+        for slot in slots.get(power.build_index, ())
+        if slot.enh >= 0
+    )
+
+
+LegalityRule = Callable[[LegalityContext], Iterable[Diagnostic]]
+_RULES: list[LegalityRule] = []
+
+
+def legality_rule(fn: LegalityRule) -> LegalityRule:
+    """Register a legality rule — a new dimension is a new ``@legality_rule``, no runner edit."""
+    _RULES.append(fn)
+    return fn
+
+
+def registered_rules() -> list[str]:
+    """The names of the registered legality rules — the introspectable registry."""
+    return [rule.__name__ for rule in _RULES]
 
 
 def _error(rule_id: str, message: str, **ctx: Any) -> Diagnostic:
     return Diagnostic(rule_id=rule_id, severity="error", message=message, **ctx)
 
 
-def _check_set_placement(power: Power, enh: EnhancementLegality, set_db: SetBonusDb) -> list[Diagnostic]:
-    """Set-IO placement: unknown set -> H-ENH-002, set type not accepted -> H-ENH-001."""
-    set_def = set_db.sets.get(enh.nid_set)
-    if set_def is None:
-        return [
-            _error(
-                "H-ENH-002",
-                f"{enh.uid} in {power.full_name!r} is a set IO whose set (nIDSet {enh.nid_set}) is not in the "
-                "set database",
-                fix="re-dump the set database so it includes this set, or remove the piece",
-            )
-        ]
-    if power_accepts_set(power, set_def):
-        return []
-    return [
-        _error(
+def _placement_diagnostic(
+    verdict: PlacementVerdict, power: Power, enh: EnhancementLegality, set_db: SetBonusDb
+) -> Diagnostic:
+    """Map a non-VALID placement verdict to its diagnostic (H-ENH-001/002/003)."""
+    if verdict is PlacementVerdict.UNKNOWN_SET:
+        return _error(
+            "H-ENH-002",
+            f"{enh.uid} in {power.full_name!r} is a set IO whose set (nIDSet {enh.nid_set}) is not in the set database",
+            fix="re-dump the set database so it includes this set, or remove the piece",
+        )
+    if verdict is PlacementVerdict.SET_NOT_ACCEPTED:
+        set_def = set_db.sets[enh.nid_set]
+        return _error(
             "H-ENH-001",
             f"set {set_def.uid!r} (set type {set_def.set_type}) is not slottable in {power.full_name!r} "
             f"(accepts set types {sorted(power.set_types)})",
@@ -129,123 +191,92 @@ def _check_set_placement(power: Power, enh: EnhancementLegality, set_db: SetBonu
             expected=sorted(power.set_types),
             actual=set_def.set_type,
         )
-    ]
+    return _error(
+        "H-ENH-003",
+        f"{enh.long_name!r} ({enh.uid}) is not slottable in {power.full_name!r}: its enhancement "
+        f"class {list(enh.class_ids)} is not in the power's accepted classes",
+        fix="move the piece to a power that accepts this enhancement class",
+        expected=sorted(power.enhancements),
+        actual=list(enh.class_ids),
+    )
 
 
-def _check_placement(
-    power: Power, slot: SlotRef, enh_db: Mapping[int, EnhancementLegality], set_db: SetBonusDb
-) -> list[Diagnostic]:
-    """One slot's placement verdict (``IsEnhancementValid`` as diagnostics)."""
-    enh = enh_db.get(slot.enh)
-    if enh is None:
-        return [
-            _error(
+@legality_rule
+def _rule_placement(ctx: LegalityContext) -> Iterable[Diagnostic]:
+    """Per-slot placement (``classify_placement``): unknown-enh H-ENH-007, else the verdict."""
+    for power, slot, enh in ctx.filled:
+        if enh is None:
+            yield _error(
                 "H-ENH-007",
                 f"enhancement nID {slot.enh} slotted in {power.full_name!r} is not in the enhancement database",
                 fix="remove the slot or re-dump the enhancement database",
             )
-        ]
-    if enh.type_name == "SetO":
-        return _check_set_placement(power, enh, set_db)
-    if any(cid in power.enhancements for cid in enh.class_ids):
-        return []
-    return [
-        _error(
-            "H-ENH-003",
-            f"{enh.long_name!r} ({enh.uid}) is not slottable in {power.full_name!r}: its enhancement "
-            f"class {list(enh.class_ids)} is not in the power's accepted classes",
-            fix="move the piece to a power that accepts this enhancement class",
-            expected=sorted(power.enhancements),
-            actual=list(enh.class_ids),
-        )
-    ]
+            continue
+        verdict = classify_placement(power, enh, ctx.set_db)
+        if verdict is not PlacementVerdict.VALID:
+            yield _placement_diagnostic(verdict, power, enh, ctx.set_db)
 
 
-def _iter_filled(
-    powers: Sequence[Power], slots: Mapping[int, Sequence[SlotRef]], enh_db: Mapping[int, EnhancementLegality]
-) -> list[tuple[Power, SlotRef, EnhancementLegality]]:
-    """Every (power, filled slot, resolved enhancement) triple, in build order."""
-    out: list[tuple[Power, SlotRef, EnhancementLegality]] = []
-    for power in powers:
-        for slot in slots.get(power.build_index, ()):
-            if slot.enh < 0:
-                continue
-            enh = enh_db.get(slot.enh)
-            if enh is not None:
-                out.append((power, slot, enh))
-    return out
-
-
-def _check_uniques(triples: Sequence[tuple[Power, SlotRef, EnhancementLegality]]) -> list[Diagnostic]:
+@legality_rule
+def _rule_global_unique(ctx: LegalityContext) -> Iterable[Diagnostic]:
     """H-ENH-004: a ``Unique`` IO slotted more than once build-wide."""
-    diags: list[Diagnostic] = []
     seen: dict[int, str] = {}
-    for power, _, enh in triples:
-        if not enh.unique:
+    for power, _, enh in ctx.filled:
+        if enh is None or not enh.unique:
             continue
         if enh.nid in seen:
-            diags.append(
-                _error(
-                    "H-ENH-004",
-                    f"unique enhancement {enh.long_name!r} ({enh.uid}) is slotted more than once "
-                    f"(also in {seen[enh.nid]!r}, now {power.full_name!r}); a unique IO may be slotted once per build",
-                    fix="remove the extra copy",
-                )
+            yield _error(
+                "H-ENH-004",
+                f"unique enhancement {enh.long_name!r} ({enh.uid}) is slotted more than once "
+                f"(also in {seen[enh.nid]!r}, now {power.full_name!r}); a unique IO may be slotted once per build",
+                fix="remove the extra copy",
             )
         else:
             seen[enh.nid] = power.full_name
-    return diags
 
 
-def _check_per_power_set_dupes(
-    powers: Sequence[Power], slots: Mapping[int, Sequence[SlotRef]], enh_db: Mapping[int, EnhancementLegality]
-) -> list[Diagnostic]:
-    """H-ENH-006: the same set piece slotted twice in one power."""
-    diags: list[Diagnostic] = []
-    for power in powers:
-        seen: set[int] = set()
-        for slot in slots.get(power.build_index, ()):
-            enh = enh_db.get(slot.enh) if slot.enh >= 0 else None
-            if enh is None or enh.nid_set < 0:
-                continue
-            if enh.nid in seen:
-                diags.append(
-                    _error(
-                        "H-ENH-006",
-                        f"set piece {enh.uid} is slotted more than once in {power.full_name!r}; only one of "
-                        "each set piece is allowed per power",
-                        fix="replace the duplicate with a different piece from the set",
-                    )
-                )
-            else:
-                seen.add(enh.nid)
-    return diags
-
-
-def _check_mutex(triples: Sequence[tuple[Power, SlotRef, EnhancementLegality]]) -> list[Diagnostic]:
+@legality_rule
+def _rule_mutex(ctx: LegalityContext) -> Iterable[Diagnostic]:
     """H-ENH-005: stealth procs, and superior/attuned versions of one set piece, are mutex.
 
     Gated on ``mutex_name != None`` (Build.cs:1074) — the ``Superior`` value flag alone
     never triggers this, so purples (Superior=True, MutExID=None) do not conflict.
     """
-    diags: list[Diagnostic] = []
     stealth: str | None = None
     versions: dict[str, str] = {}
-    for power, _, enh in triples:
-        if enh.mutex_name == _MUTEX_NONE:
+    for power, _, enh in ctx.filled:
+        if enh is None or enh.mutex_name == _MUTEX_NONE:
             continue
         if enh.mutex_name == _MUTEX_STEALTH:
             if stealth is not None:
-                diags.append(_mutex_error(enh, power, f"the stealth proc in {stealth!r}", "one stealth proc"))
+                yield _mutex_error(enh, power, f"the stealth proc in {stealth!r}", "one stealth proc")
             else:
                 stealth = power.full_name
             continue
         base = _VERSION_PREFIX.sub("", enh.uid)
         if base in versions:
-            diags.append(_mutex_error(enh, power, f"a version of the same piece in {versions[base]!r}", "one version"))
+            yield _mutex_error(enh, power, f"a version of the same piece in {versions[base]!r}", "one version")
         else:
             versions[base] = power.full_name
-    return diags
+
+
+@legality_rule
+def _rule_per_power_set_dup(ctx: LegalityContext) -> Iterable[Diagnostic]:
+    """H-ENH-006: the same set piece slotted twice in one power."""
+    seen_by_power: dict[int, set[int]] = {}
+    for power, _, enh in ctx.filled:
+        if enh is None or enh.nid_set < 0:
+            continue
+        seen = seen_by_power.setdefault(power.build_index, set())
+        if enh.nid in seen:
+            yield _error(
+                "H-ENH-006",
+                f"set piece {enh.uid} is slotted more than once in {power.full_name!r}; only one of "
+                "each set piece is allowed per power",
+                fix="replace the duplicate with a different piece from the set",
+            )
+        else:
+            seen.add(enh.nid)
 
 
 def _mutex_error(enh: EnhancementLegality, power: Power, conflict: str, limit: str) -> Diagnostic:
@@ -263,20 +294,11 @@ def check_build_legality(
     enh_db: Mapping[int, EnhancementLegality],
     set_db: SetBonusDb,
 ) -> list[Diagnostic]:
-    """All enhancement-placement and build-wide legality violations, in build order.
+    """Every legality violation, by running the registered rules over a pre-built context.
 
-    Placement is checked per filled slot (``IsEnhancementValid``); the build-wide
-    unique / mutex / per-power-duplicate rules scan the whole build. Every finding is
-    an error :class:`~coh_engine.diagnostics.Diagnostic`; an empty list means legal.
+    The runner holds no per-dimension logic: it builds the :class:`LegalityContext` once
+    and folds every ``@legality_rule`` over it. A new legality dimension is a new
+    ``@legality_rule`` — never an edit here. An empty list means legal.
     """
-    diags: list[Diagnostic] = []
-    for power in powers:
-        for slot in slots.get(power.build_index, ()):
-            if slot.enh < 0:
-                continue
-            diags.extend(_check_placement(power, slot, enh_db, set_db))
-    triples = _iter_filled(powers, slots, enh_db)
-    diags.extend(_check_uniques(triples))
-    diags.extend(_check_mutex(triples))
-    diags.extend(_check_per_power_set_dupes(powers, slots, enh_db))
-    return diags
+    ctx = LegalityContext(set_db=set_db, filled=_build_filled(powers, slots, enh_db))
+    return [diagnostic for rule in _RULES for diagnostic in rule(ctx)]

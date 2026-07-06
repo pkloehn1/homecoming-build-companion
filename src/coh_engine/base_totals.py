@@ -226,9 +226,14 @@ class GlobalEnhance:
     ``GBPA_Pass3_EnhancePostED`` (clsToonX.cs:1924) adds each of these to the matching
     per-power multiplier before the ``+1`` and the divide. CP5 folded only
     ``end_discount`` into toggle ``EndUse``; the derived-stat layer
-    (:mod:`coh_engine.statistics`) folds the rest into per-power recharge/end/DPS.
-    ``recharge`` is ``_selfEnhance.Effect[Haste]`` (== ``eEffectType.RechargeTime``,
-    the same index the character ``BuffHaste`` reads).
+    (:mod:`coh_engine.statistics`) folds ``recharge``, ``end_discount``, and
+    ``interrupt`` into per-power scalars. ``recharge`` is ``_selfEnhance.Effect[Haste]``
+    (== ``eEffectType.RechargeTime``, the same index the character ``BuffHaste`` reads).
+
+    ``accuracy`` and ``range`` are the complete Pass-3 global surface, reserved for the
+    per-aspect enhancement handler (the accuracy fold feeds to-hit / DPS in CP6.2, the
+    range fold multiplies per-power range). They are populated but not yet consumed —
+    kept so the struct is the whole set of global scalars, not a partial one.
     """
 
     recharge: float

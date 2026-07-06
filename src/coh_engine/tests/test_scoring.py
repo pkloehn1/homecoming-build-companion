@@ -278,7 +278,7 @@ def test_score_build_appends_endurance_warning(computed: tuple[BaseTotals, list[
 def _cap_only(totals: TotalStatistics, base: BaseTotals) -> list:  # type: ignore[type-arg]
     from coh_engine.scoring import cap_adherence_diagnostics
 
-    return cap_adherence_diagnostics(totals, _scrapper(base))
+    return cap_adherence_diagnostics(totals, base.totals_capped)
 
 
 def _replace_end_use(totals: TotalStatistics, value: float) -> TotalStatistics:
