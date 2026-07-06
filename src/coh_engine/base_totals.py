@@ -481,7 +481,7 @@ def _effect_multiplier(
     power: Power,
     fx: Effect,
     power_slots: Sequence[SlotRef],
-    memo: dict[tuple[str, bool, bool], float],
+    memo: dict[tuple[str, bool, bool, float, float], float],
     inc: tuple[float, float] | None,
     *,
     enh_db: Mapping[int, EnhancementRecord],
@@ -491,42 +491,43 @@ def _effect_multiplier(
 ) -> float | None:
     """One effect's enhancement multiplier ``1 + ED(Σ slot + incarnate pre) + incarnate post``.
 
-    Returns ``None`` for an unenhanced effect (no routed aspect and no incarnate addend, or a
-    slotted-only aggregate of zero). ``inc`` is the incarnate ``(pre_ed, post_ed)`` for this
-    effect, or ``None``. Pass1 gates on the pre-Pass5 base ``Math_Mag`` — the unenhanced base
-    magnitude used here — so the sign key matches Mids' gate.
+    Slotted-only and incarnate-touched effects flow through the *same* accumulator: ``inc`` is
+    the incarnate ``(pre_ed, post_ed)`` for this effect or ``None`` (treated as ``(0, 0)``, which
+    is bit-identical to the slotted-only path). Returns ``None`` when the accumulator is zero —
+    an unenhanced effect the caller records as an absent key (multiplier 1). Pass1 gates on the
+    pre-Pass5 base ``Math_Mag`` — the unenhanced base magnitude used here — so the sign key
+    matches Mids' gate.
     """
     aspect = _enhance_aspect(fx, ctx.enhance_names)
     if aspect is None and inc is None:
         return None
     base_mag = _mag(fx, power, ctx)
-    if inc is None:
-        # Routed slotted enhancement only: share the per-(aspect, sign) aggregate across the
-        # power's effects (byte-identical to the pre-incarnate path). aspect is non-None here —
-        # the aspect-None-and-inc-None case returned above.
-        assert aspect is not None
-        key = (aspect, base_mag <= 0.0, base_mag >= 0.0)
-        if key not in memo:
-            memo[key] = aggregate_and_ed(
-                power_slots, aspect=aspect, enh_db=enh_db, force_level=force_level, tables=tables, mag=base_mag
-            )
-        return f32(1.0 + memo[key]) if memo[key] != 0.0 else None
-    # Incarnate-touched: co-ED the incarnate pre-ED term with the slotted aggregate through
-    # one ApplyED (Mids Pass1 accumulate + Pass2 ED), then add the post-ED term. The ED
-    # schedule is the routed aspect where slotting knows it (Defense), else the effect's own
-    # type (Recovery/etc., whose slot aggregate is 0 — non-matching slots contribute nothing).
-    pre_ed, post_ed = inc
+    # One accumulator for both the slotted-only and incarnate-touched effect: co-ED the
+    # incarnate pre-ED term (0.0 when absent — bit-identical to no addend, since f32(x + 0) ==
+    # x) with the power's slotted aggregate through one ApplyED (Mids Pass1 accumulate + Pass2
+    # ED), then add the post-ED (IgnoreED) term. The result is shared per (aspect, sign, pre,
+    # post) across the power's effects; a slotted-only effect keys on (aspect, sign, 0, 0) and
+    # shares exactly as before. The ED schedule keys on the routed aspect, or — for an
+    # incarnate-touched effect whose type is neither an eEnhance name nor a special case — on
+    # the effect's own type (its slotted aggregate is 0, so only the schedule label matters).
+    # Accumulator 0 means neither slot nor incarnate enhances this aspect: multiplier 1, which
+    # the caller stores as an absent key.
+    pre_ed, post_ed = inc if inc is not None else (0.0, 0.0)
     ed_aspect = aspect if aspect is not None else fx.effect_type
-    aggregate = aggregate_and_ed(
-        power_slots,
-        aspect=ed_aspect,
-        enh_db=enh_db,
-        force_level=force_level,
-        tables=tables,
-        mag=base_mag,
-        pre_ed_addend=pre_ed,
-    )
-    return f32(1.0 + f32(aggregate + post_ed))
+    key = (ed_aspect, base_mag <= 0.0, base_mag >= 0.0, pre_ed, post_ed)
+    if key not in memo:
+        aggregate = aggregate_and_ed(
+            power_slots,
+            aspect=ed_aspect,
+            enh_db=enh_db,
+            force_level=force_level,
+            tables=tables,
+            mag=base_mag,
+            pre_ed_addend=pre_ed,
+        )
+        memo[key] = f32(aggregate + post_ed)
+    accumulator = memo[key]
+    return f32(1.0 + accumulator) if accumulator != 0.0 else None
 
 
 def _compute_enh_multipliers(
@@ -559,7 +560,7 @@ def _compute_enh_multipliers(
         # Harmless when power_slots is empty (no slot grants no aspect); an incarnate-only
         # power reaches here and correctly finds nothing unrouted.
         _check_enh_routing(power, power_slots, enh_db, force_level, ctx.enhance_names)
-        memo: dict[tuple[str, bool, bool], float] = {}
+        memo: dict[tuple[str, bool, bool, float, float], float] = {}
         for fx in power.effects:
             mult = _effect_multiplier(
                 power,
