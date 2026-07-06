@@ -895,7 +895,7 @@
     "EndCost": 4.42,
     "InterruptTime": 0,
     "Range": 7,
-    "RechargeTime": 1.184834,
+    "RechargeTime": 1.8796993,
     "CastTime": 1.07,
     "DamagePerActivation": 44.376934,
     "Base": {
@@ -1635,7 +1635,7 @@
     "EndCost": 0.1625,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 3.3898304,
+    "RechargeTime": 7.5187974,
     "CastTime": 0.67,
     "DamagePerActivation": 0,
     "Base": {
@@ -1864,7 +1864,7 @@
     "EndCost": 0.78,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 7.1090045,
+    "RechargeTime": 11.278196,
     "CastTime": 1.5,
     "DamagePerActivation": 0,
     "Base": {

@@ -208,6 +208,59 @@ def test_slotted_coed_totals_match_mids(
 
 
 @pytest.mark.parametrize(
+    "full_name",
+    [
+        # The powers that carry slotted Defense IOs — their added slots shift them into a
+        # racy Parallel.For partition in Mids, so the pre-sequential dump reported spurious
+        # extra recharge. Defense IOs do not touch recharge, so each must equal its Agility-
+        # only recharge (Weave/Tough/Targeting Drone == the empty-build 7.5188).
+        "Pool.Fighting.Boxing",
+        "Pool.Fighting.Tough",
+        "Pool.Fighting.Weave",
+        "Pool.Leadership.Defense",
+        "Dominator_Assault.Arsenal_Assault.Targeting_Drone",
+        "Pool.Leadership.Tactics",
+    ],
+)
+def test_slotted_per_power_recharge_is_race_free(
+    full_name: str,
+    mods: AttribMods,
+    classes: ArchetypeDb,
+    enums: EnumMaps,
+    config: EngineConfig,
+    server: ServerData,
+    enh_db: dict[int, EnhancementRecord],
+    tables: MathTables,
+) -> None:
+    """The slotted build's per-power recharge matches the race-free ``enhanced_powers.json``.
+
+    The engine applies only the Agility recharge fold to these Defense-slotted powers, so
+    it reproduces the sequential (UI) recharge — proving the port never had the Parallel.For
+    read/write race the pre-sequential dump carried.
+    """
+    result = _compute(
+        SLOTTED, mods=mods, classes=classes, enums=enums, config=config, server=server, enh_db=enh_db, tables=tables
+    )
+    assert result.incarnate_addends is not None
+    powers = load_powers_effects(MIDS / "builds" / SLOTTED / "powers_effects.json")
+    slots = load_build_slots(MIDS / "builds" / SLOTTED / "slots.json")
+    at_index = classes.nid_from_uid_class(_totals_json(SLOTTED)["Class"])
+    ctx = StatsContext(
+        mods=mods,
+        classes=classes,
+        archetype_index=at_index,
+        config=config,
+        tables=tables,
+        enh_db=enh_db,
+        global_enhance=result.global_enhance,
+        recharge_cap=classes.classes[at_index].recharge_cap,
+        incarnate_scalar=result.incarnate_addends.scalar,
+    )
+    stats = {s.full_name: s for s in compute_build_stats(list(powers), slots, ctx)}
+    assert stats[full_name].recharge_time == f32(_enhanced_powers(SLOTTED)[full_name]["RechargeTime"])
+
+
+@pytest.mark.parametrize(
     ("full_name", "buffed_recharge"),
     [
         ("Pool.Speed.Hasten", 338.34588623046875),
