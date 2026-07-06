@@ -2,13 +2,15 @@
 
 **Status:** MUST. Applies to every build emitted in this project.
 
-This document is the playbook for producing correct, playable, comparable builds. The principles are stated as positive practices. The "Lessons learned" section at the end records the v1 TW/Bio Scrapper benchmark errors that motivated each principle, so future-you understands the precedent.
+This document is the playbook for producing correct, playable, comparable builds. The principles are stated as positive practices.
+The "Lessons learned" section at the end records the v1 TW/Bio Scrapper benchmark errors that motivated each principle, so future-you understands the precedent.
 
 ## Principles (positive framing)
 
 ### P1. Format is a spec — read the source first
 
-When producing an artifact that mimics a tool's output (e.g. MidsReborn's forum export), read the tool's emitter source before drafting. The format detail is fine-grained and easy to invent incorrectly from memory.
+When producing an artifact that mimics a tool's output (e.g. MidsReborn's forum export), read the tool's emitter source before drafting.
+  The format detail is fine-grained and easy to invent incorrectly from memory.
 
 For MidsReborn forum exports:
 
@@ -60,7 +62,7 @@ Show the format by using it; annotate only where it's non-obvious or where the a
 Unique globals always go in their canonical homes:
 
 | Unique | Canonical home |
-|---|---|
+| --- | --- |
 | Numina's Convalescence — +Regeneration/+Recovery | Health |
 | Miracle — +Recovery | Health |
 | Panacea — +Hit Points/Endurance | Health |
@@ -115,7 +117,8 @@ Per [`exemplar-10.md`](./exemplar-10.md):
 
 - Defensive toggles get ≥ 2 added slots by character level 15.
 - Anchor attack gets ≥ 2 added slots by character level 14.
-- Every attack's inherent slot (A) and first added slot hold an Acc-bearing IO (Acc/Dmg, Acc/Dmg/Rchg, Acc/Dmg/EndRdx, Acc/Dmg/EndRdx/Rchg). Damage-only pieces appear at slot 3 or later. See [`exemplar-10.md` § Slot-aspect priority for attacks](./exemplar-10.md#slot-aspect-priority-for-attacks-accuracy-first).
+- Every attack's inherent slot (A) and first added slot hold an Acc-bearing IO (Acc/Dmg, Acc/Dmg/Rchg, Acc/Dmg/EndRdx, Acc/Dmg/EndRdx/Rchg). Damage-only pieces appear at slot 3 or later.
+  See [`exemplar-10.md` § Slot-aspect priority for attacks](./exemplar-10.md#slot-aspect-priority-for-attacks-accuracy-first).
 
 Confirm on the slot-allocation table by the level-15 row.
 
@@ -152,7 +155,7 @@ Walk this list before emitting any build. Every item passes; otherwise the build
 - [ ] Picks at levels 1–14 cover the functional core: 2 attacks, 1 defensive layer (where AT has one), travel power picked by level 12, Build Up / Aim if AT has one, sustain mechanic if AT depends on one.
 - [ ] Defensive toggles have ≥ 2 added slots by character level 15.
 - [ ] Anchor attack has ≥ 2 added slots by character level 14.
-- [ ] Every attack's slot (A) and first added slot hold an Acc-bearing IO; damage-only or Dmg/Rchg pieces appear no earlier than slot 3 (exceptions flagged: pre-buffed snipes, procmonster vehicles, auto-hit powers).
+- [ ] Every attack's slot (A) and first added slot hold an Acc-bearing IO; damage-only pieces appear no earlier than slot 3 (exceptions: pre-buffed snipes, procmonster vehicles, auto-hit powers).
 
 ### Verification against data
 
@@ -280,7 +283,8 @@ The principles above were derived from concrete failures in the v1 TW/Bio Scrapp
 
 ### L8. Defensive frontloading rule existed but wasn't applied (motivates P9)
 
-**Failure observed:** [docs/slotting-and-leveling.md](../../docs/slotting-and-leveling.md) says "≥ 2 added slots in defensive toggles by level 14." The v1 build had only 1 added slot in Hardened Carapace by level 14.
+**Failure observed:** [docs/slotting-and-leveling.md](../../docs/slotting-and-leveling.md) says "≥ 2 added slots in defensive toggles by level 14."
+The v1 build had only 1 added slot in Hardened Carapace by level 14.
 
 **5 Whys:**
 

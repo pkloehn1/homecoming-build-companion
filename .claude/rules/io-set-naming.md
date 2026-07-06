@@ -1,10 +1,14 @@
 # Rule: Use full IO set names in prose
 
-**Status:** MUST. Applies to every word emitted in prose, frontmatter, lessons documents, summaries, headings, conversation responses, and code comments. Abbreviations are tolerated **only** inside ```text``` fenced blocks holding a verbatim Mids forum-export.
+**Status:** MUST. Applies to every word emitted in prose, frontmatter, lessons documents, summaries, headings, conversation responses, and code comments.
+Abbreviations are tolerated **only** inside ```text``` fenced blocks holding a verbatim Mids forum-export.
 
 ## Why
 
-The Mids forum-export shorthand (`SprScrStr`, `Hct`, `Arm`, `AchHee`, `FuroftheG`, etc.) is an artifact of the export format, not a documentation standard. Prose is for humans (and for future Claude sessions) who read without the export reader's mental dictionary loaded. "Superior Scrapper's Strike: Recharge/+50% Crit" is unambiguous; "SprScrStr-Rchg/+Crit" requires the reader to know the lookup. Discoverability, searchability, and future-readability all improve with the full name.
+The Mids forum-export shorthand (`SprScrStr`, `Hct`, `Arm`, `AchHee`, `FuroftheG`, etc.) is an artifact of the export format, not a documentation standard.
+Prose is for humans (and for future Claude sessions) who read without the export reader's mental dictionary loaded.
+"Superior Scrapper's Strike: Recharge/+50% Crit" is unambiguous; "SprScrStr-Rchg/+Crit" requires the reader to know the lookup.
+Discoverability, searchability, and future-readability all improve with the full name.
 
 ## How to apply
 
@@ -12,12 +16,13 @@ The Mids forum-export shorthand (`SprScrStr`, `Hct`, `Arm`, `AchHee`, `FuroftheG
 - **Everywhere else** (prose, frontmatter values, lessons docs, build-creation rules, summaries, conversation responses): full set name.
 - **For procs:** "Achilles' Heel: Chance for Resistance Debuff" or "Fury of the Gladiator: Chance for -Res", not "AchHee-ResDeb%".
 - **For uniques:** "Steadfast Protection: Resistance/+Defense", "Gladiator's Armor: TP Protection +3% Defense (All)", "Luck of the Gambler: Defense/Increased Global Recharge Speed".
-- **When transcribing a build's slotting into prose,** translate every abbreviation to the full name even if the source build text used the shorthand. The verbatim ```text``` block stays verbatim; the prose translates.
+- **When transcribing a build's slotting into prose,** translate every abbreviation to the full name even if the source build text used the shorthand.
+  The verbatim ```text``` block stays verbatim; the prose translates.
 
 ## Reference table for common abbreviations
 
 | Mids abbreviation | Full set name |
-|---|---|
+| --- | --- |
 | SprScrStr | Superior Scrapper's Strike |
 | SprCrtStr | Superior Critical Strikes |
 | SprBlsCol | Superior Blistering Cold |
@@ -84,7 +89,8 @@ The Mids forum-export shorthand (`SprScrStr`, `Hct`, `Arm`, `AchHee`, `FuroftheG
 | HO:Golgi | Golgi Exposure (Hami-O) |
 | HO:Microfil | Microfilament Exposure (Hami-O) |
 
-When an abbreviation appears in a Mids forum-export source and the full name isn't in this table, look it up in [`data/canonical/boost_sets/`](../../data/canonical/boost_sets/) — the file name (snake-cased) and `display_name` field together resolve to the full set name.
+When an abbreviation appears in a Mids forum-export source and the full name isn't in this table, look it up in [`data/canonical/boost_sets/`](../../data/canonical/boost_sets/).
+The file name (snake-cased) and `display_name` field together resolve to the full set name.
 
 ## Reference
 

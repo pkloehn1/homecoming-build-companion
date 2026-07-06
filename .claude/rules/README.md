@@ -5,7 +5,7 @@ Files in this directory are normative. They constrain what Claude does in this p
 ## Files
 
 | File | Scope |
-|---|---|
+| --- | --- |
 | [`build-creation.md`](./build-creation.md) | Full build creation rules: format spec, slot allocation, pre-flight checklist, 5 Whys analysis from past failures. |
 | [`exemplar-10.md`](./exemplar-10.md) | Universal exemplar-10 playability rule. Level-50 endgame stays the primary target; never trade for exemplar bonuses. |
 | [`hard-limits.md`](./hard-limits.md) | Game-engine invariants — slot count, power picks, ED, Rule of Five, AT caps. |
