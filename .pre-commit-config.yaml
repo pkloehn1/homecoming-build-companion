@@ -14,6 +14,17 @@ repos:
         always_run: true
         stages:
           - pre-commit
+      # Full Super-Linter parity (Docker). Slow, so manual-stage only: run with
+      # `pre-commit run --hook-stage manual super-linter`. Uses the SAME image
+      # tag and .github/super-linter.env as CI, so local == remote.
+      - id: super-linter
+        name: Super-Linter (Docker, manual)
+        entry: python -m scripts.linting.run_super_linter
+        language: system
+        pass_filenames: false
+        require_serial: true
+        stages:
+          - manual
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # v0.15.x supports target-version = "py314"; v0.8.0 caps at py313.

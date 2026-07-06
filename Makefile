@@ -49,6 +49,10 @@ fix: ## Auto-fix ruff lint issues and reformat
 	$(RUFF) check --fix .
 	$(RUFF) format .
 
+.PHONY: super-linter
+super-linter: ## Run full Super-Linter in Docker (same image + config as CI)
+	$(PYTHON) -m scripts.linting.run_super_linter
+
 # ---------------------------------------------------------------------------
 # Test / Coverage
 # ---------------------------------------------------------------------------
