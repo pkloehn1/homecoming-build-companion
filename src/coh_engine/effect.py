@@ -121,6 +121,17 @@ class Power:
     # scalar fold skips an ignored aspect entirely (``IgnoreEnhancement``, Pass 3),
     # so e.g. One with the Shield (ignores RechargeTime) keeps its recharge at base.
     ignore_enh: tuple[str, ...] = ()
+    # Power-availability prerequisites (``Power.Requires``, Requirement.cs). The
+    # hard-limits validator ports ``Build.MeetsRequirement`` over these — no expression
+    # evaluator, just structured full-name comparison. ``requires_powers`` is an OR list
+    # of AND-groups of prerequisite power full-names (pool/ancillary tier unlocks live
+    # here); ``requires_powers_not`` is the forbidden/mutex list; the class lists gate by
+    # archetype. Empty tuples for a power with no prerequisites (and for dumps predating
+    # the field).
+    requires_powers: tuple[tuple[str, ...], ...] = ()
+    requires_powers_not: tuple[tuple[str, ...], ...] = ()
+    requires_class: tuple[str, ...] = ()
+    requires_class_not: tuple[str, ...] = ()
 
 
 def _parse_effect(raw: dict[str, Any]) -> Effect:
@@ -203,10 +214,24 @@ def load_powers_effects(path: Path | str) -> tuple[Power, ...]:
             cast_time=f32(r["CastTime"]),
             interrupt_time=f32(r["InterruptTime"]),
             ignore_enh=tuple(r["IgnoreEnh"]),
+            # Lenient (``.get``): Requirement was added after the earlier build dumps;
+            # a power with no prerequisites dumps empty arrays, and a dump predating the
+            # field is treated as no-prerequisites. Empty names inside an AND-pair
+            # (single-power requirements leave the second slot blank) are dropped.
+            requires_powers=_parse_requirement_groups(r.get("RequiresPowers", ())),
+            requires_powers_not=_parse_requirement_groups(r.get("RequiresPowersNot", ())),
+            requires_class=tuple(c for c in r.get("RequiresClass", ()) if c),
+            requires_class_not=tuple(c for c in r.get("RequiresClassNot", ()) if c),
             effects=tuple(_parse_effect(fx) for fx in r["Effects"]),
         )
         for r in records
     )
+
+
+def _parse_requirement_groups(groups: Any) -> tuple[tuple[str, ...], ...]:
+    """A ``Requires`` OR-list of AND-pairs → tuples, dropping blank names and empty groups."""
+    parsed = tuple(tuple(name for name in group if name) for group in groups)
+    return tuple(group for group in parsed if group)
 
 
 def get_modifier_for_effect(

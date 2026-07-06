@@ -125,6 +125,7 @@ internal static class Program
         DumpPowerIndex(outDir);
         DumpEnums(outDir);
         DumpConfig(outDir);
+        DumpLevels(outDir);
 
         // Optional third arg: a directory of .mbd sample builds. Each is loaded
         // through Mids and re-saved as a .mxd share block, giving the Python port
@@ -188,6 +189,33 @@ internal static class Program
             enums[t.Name] = values;
         }
         WriteJson(outDir, "enums.json", enums);
+    }
+
+    private static void DumpLevels(string outDir)
+    {
+        // The character-level schedule (Database.Levels, one LevelMap per level,
+        // 0-based index i == in-game level i+1). LevelMap.Powers is the count of
+        // powers pickable at that level; LevelMap.Slots is the count of enhancement
+        // slots granted. The hard-limits validator reads these to check that a slot
+        // lands on a real grant level and a power is picked at a real pick level —
+        // anchored to game data, never a schedule reconstructed from memory.
+        var levels = DatabaseAPI.Database.Levels;
+        var mainPowers = DatabaseAPI.Database.Levels_MainPowers;
+        WriteJson(outDir, "levels.json", new
+        {
+            Count = levels.Length,
+            Convention = "levelIndex is 0-based; gameLevel = levelIndex + 1",
+            SlotGrantLevels = levels
+                .Select((lm, idx) => new { LevelIndex = idx, GameLevel = idx + 1, Slots = lm.Slots })
+                .Where(x => x.Slots > 0)
+                .ToList(),
+            PowerPickLevels = mainPowers
+                .Select(idx => new { LevelIndex = idx, GameLevel = idx + 1 })
+                .ToList(),
+            PerLevel = levels
+                .Select((lm, idx) => new { LevelIndex = idx, GameLevel = idx + 1, lm.Powers, lm.Slots })
+                .ToList(),
+        });
     }
 
     private static void DumpConfig(string outDir)
@@ -369,6 +397,19 @@ internal static class Program
                 // here only if one of its ClassIds is in this list (IsEnhancementValid);
                 // the standard-IO half of legality CP6 adds atop CP5's set-type gate.
                 pw.Enhancements,
+                // Power availability prerequisites (Power.Requires, Requirement.cs).
+                // The hard-limits validator ports Build.MeetsRequirement over these:
+                // RequiresPowers is an OR list of AND-pairs of prerequisite power
+                // full-names (pool/ancillary tier unlocks live here, e.g. "take 2 of
+                // the first 3" = (A&B)|(A&C)|(B&C)); RequiresPowersNot is the forbidden
+                // (mutex) list; the Class allow/deny lists gate by archetype. Full-name
+                // based so the port compares strings and needs no index cache or
+                // expression evaluator (availability is a structured comparison, not
+                // Expressions.Parse).
+                RequiresPowers = pw.Requires.PowerID,
+                RequiresPowersNot = pw.Requires.PowerIDNot,
+                RequiresClass = pw.Requires.ClassName,
+                RequiresClassNot = pw.Requires.ClassNameNot,
                 Effects = pw.Effects.Select((fx, fxIdx) => SerializeEffect(fx, fxIdx)).ToList(),
             });
         }

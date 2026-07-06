@@ -53,10 +53,10 @@ from types import MappingProxyType
 from coh_engine.archetypes import Archetype, ArchetypeDb
 from coh_engine.attribmod import AttribMods
 from coh_engine.effect import Effect, Power, effect_mag
+from coh_engine.enh_aspects import END, fold_scalar
 from coh_engine.enh_pipeline import aggregate_and_ed
 from coh_engine.enhancement import EnhancementRecord, SlotRef
 from coh_engine.maths import MathTables, f32
-from coh_engine.pass3 import fold_divisor
 from coh_engine.set_bonuses import (
     SET_BONUS_BUILD_INDEX,
     SetBonusDb,
@@ -1005,27 +1005,30 @@ def _gbd_toggle_end_and_fly(
     ctx: _MagContext,
     toggle_end_agg: Mapping[int, float],
     global_end_rdx: float,
+    recharge_cap: float,
 ) -> bool:
     """Sum toggle end-use into ``totals`` and report canFly (clsToonX.cs:852-865).
 
     ``EndUse`` sums the *buffed* toggle cost — ``Power.ToggleCost`` derives from the
     enhancement-reduced ``EndCost`` (Power.cs:388): ``buffed.EndCost = base.EndCost /
     (1 + ED(Σ slotted EndRdx) + global EndRdx)``, then ``/ ActivatePeriod`` when the
-    toggle has one. The divisor comes from the shared :func:`~coh_engine.pass3.fold_divisor`
-    (``ED(Σ slotted)`` = ``toggle_end_agg``, plus the global ``_selfEnhance``
-    EnduranceDiscount, plus 1, in that f32 order) — the same helper the per-power
+    toggle has one. The divisor comes from the shared per-aspect handler
+    (:func:`~coh_engine.enh_aspects.fold_scalar` with the ``END`` / EnduranceDiscount
+    handler: ``ED(Σ slotted)`` = ``toggle_end_agg``, plus the global ``_selfEnhance``
+    EnduranceDiscount, plus 1, in that f32 order) — the same fold the per-power
     ``statistics`` arm uses, so a toggle that ignores EnduranceDiscount enhancement
-    (``Power.IgnoreEnh``) keeps its base cost here exactly as it does per-power
-    (previously this arm skipped the gate and could disagree with the per-power number).
+    (``Power.IgnoreEnh``) keeps its base cost here exactly as it does per-power. EndUse is
+    uncapped (the ``END`` handler is uncapped), so ``recharge_cap`` is inert for this aspect.
     """
     can_fly = False
     for power in included:
         if power.power_type == "Toggle":
-            divisor = fold_divisor(
+            divisor = fold_scalar(
+                END,
                 toggle_end_agg.get(power.build_index, 0.0),
                 global_end_rdx,
-                aspect="EnduranceDiscount",
-                ignored_aspects=power.ignore_enh,
+                ignore_enh=power.ignore_enh,
+                recharge_cap=recharge_cap,
             )
             buffed_end_cost = f32(power.end_cost / divisor)
             cost = f32(buffed_end_cost / power.activate_period) if power.activate_period > 0 else buffed_end_cost
@@ -1138,7 +1141,7 @@ def _gbd_totals(
     # The global _selfEnhance EnduranceDiscount reduces every toggle's cost (Mids
     # Pass3); it is the same value GBD reports as BuffEndRdx just below.
     global_end_rdx = self_enhance.effect[stat["BuffEndRdx"]]
-    can_fly = _gbd_toggle_end_and_fly(included, totals, ctx, toggle_end_agg, global_end_rdx)
+    can_fly = _gbd_toggle_end_and_fly(included, totals, ctx, toggle_end_agg, global_end_rdx, archetype.recharge_cap)
     _gbd_fold_and_copy_vectors(totals, self_buffs)
 
     totals.end_max = self_buffs.max_end
