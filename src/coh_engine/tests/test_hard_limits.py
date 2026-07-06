@@ -170,6 +170,20 @@ def test_inherents_do_not_count_toward_picks(schedule: LevelSchedule) -> None:
     assert "H-POWER-001" not in _rule_ids(diags)
 
 
+def test_incarnates_do_not_count_toward_picks_or_grant_levels(schedule: LevelSchedule) -> None:
+    """An Incarnate slot power is a separate crafting system — not a 24-pick, not a grant level.
+
+    A full 24-pick build plus an equipped Alpha (picked at level 50, which is not a
+    power-pick level) must raise neither H-POWER-001 (>24 picks) nor H-POWER-003 (pick at a
+    non-grant level): the incarnate is excluded from the pick set entirely, like an inherent.
+    """
+    powers = [_power(i, f"Dominator_Control.Arsenal_Control.P{i}", pick_level=0) for i in range(24)]
+    powers += [_power(24, "Incarnate.Alpha.Agility_Core_Paragon", level=50, pick_level=49)]
+    diags = check_hard_limits(powers, {}, schedule, MAX_SLOTS)
+    assert "H-POWER-001" not in _rule_ids(diags)
+    assert "H-POWER-003" not in _rule_ids(diags)
+
+
 def test_power_picked_before_available_errors(schedule: LevelSchedule) -> None:
     """H-POWER-002: picking a power below its DB minimum level is an error."""
     # A tier-9 power (DB level 32) picked at level 20 (pick index 19).

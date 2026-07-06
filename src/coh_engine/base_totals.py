@@ -442,6 +442,80 @@ def _slot_granted_effect_aspects(
     return granted
 
 
+def _check_enh_routing(
+    power: Power,
+    power_slots: Sequence[SlotRef],
+    enh_db: Mapping[int, EnhancementRecord],
+    force_level: int,
+) -> None:
+    """Fail loud (``P-ENH-001``) if a slot enhances an effect-borne aspect ``_enhance_aspect`` drops.
+
+    That aspect would be dropped from Totals, so the build is refused rather than silently
+    under-reported. Only meaningful for a slotted power (an unrouted aspect can only come
+    from a slot).
+    """
+    routed = {aspect for fx in power.effects if (aspect := _enhance_aspect(fx)) is not None}
+    unrouted = _slot_granted_effect_aspects(power_slots, enh_db, force_level) - routed
+    if unrouted:
+        raise ValueError(
+            f"P-ENH-001: slots in {power.full_name!r} enhance effect-borne aspect(s) "
+            f"{sorted(unrouted)} that the effect->aspect routing does not port; extend "
+            "_enhance_aspect against a validated reference fixture before computing this build"
+        )
+
+
+def _effect_multiplier(
+    power: Power,
+    fx: Effect,
+    power_slots: Sequence[SlotRef],
+    memo: dict[tuple[str, bool, bool], float],
+    inc: tuple[float, float] | None,
+    *,
+    enh_db: Mapping[int, EnhancementRecord],
+    tables: MathTables,
+    force_level: int,
+    ctx: _MagContext,
+) -> float | None:
+    """One effect's enhancement multiplier ``1 + ED(Σ slot + incarnate pre) + incarnate post``.
+
+    Returns ``None`` for an unenhanced effect (no routed aspect and no incarnate addend, or a
+    slotted-only aggregate of zero). ``inc`` is the incarnate ``(pre_ed, post_ed)`` for this
+    effect, or ``None``. Pass1 gates on the pre-Pass5 base ``Math_Mag`` — the unenhanced base
+    magnitude used here — so the sign key matches Mids' gate.
+    """
+    aspect = _enhance_aspect(fx)
+    if aspect is None and inc is None:
+        return None
+    base_mag = _mag(fx, power, ctx)
+    if inc is None:
+        # Routed slotted enhancement only: share the per-(aspect, sign) aggregate across the
+        # power's effects (byte-identical to the pre-incarnate path). aspect is non-None here —
+        # the aspect-None-and-inc-None case returned above.
+        assert aspect is not None
+        key = (aspect, base_mag <= 0.0, base_mag >= 0.0)
+        if key not in memo:
+            memo[key] = aggregate_and_ed(
+                power_slots, aspect=aspect, enh_db=enh_db, force_level=force_level, tables=tables, mag=base_mag
+            )
+        return f32(1.0 + memo[key]) if memo[key] != 0.0 else None
+    # Incarnate-touched: co-ED the incarnate pre-ED term with the slotted aggregate through
+    # one ApplyED (Mids Pass1 accumulate + Pass2 ED), then add the post-ED term. The ED
+    # schedule is the routed aspect where slotting knows it (Defense), else the effect's own
+    # type (Recovery/etc., whose slot aggregate is 0 — non-matching slots contribute nothing).
+    pre_ed, post_ed = inc
+    ed_aspect = aspect if aspect is not None else fx.effect_type
+    aggregate = aggregate_and_ed(
+        power_slots,
+        aspect=ed_aspect,
+        enh_db=enh_db,
+        force_level=force_level,
+        tables=tables,
+        mag=base_mag,
+        pre_ed_addend=pre_ed,
+    )
+    return f32(1.0 + f32(aggregate + post_ed))
+
+
 def _compute_enh_multipliers(
     included: Sequence[Power],
     *,
@@ -450,59 +524,43 @@ def _compute_enh_multipliers(
     tables: MathTables,
     force_level: int,
     ctx: _MagContext,
-    incarnate_effect: Mapping[tuple[int, int], float] = MappingProxyType({}),
+    incarnate_effect: Mapping[tuple[int, int], tuple[float, float]] = MappingProxyType({}),
 ) -> dict[tuple[int, int], float]:
-    """Per-effect enhancement multipliers ``1 + ED(Σ slot values) + incarnate`` (Pass1→2→4).
+    """Per-effect enhancement multipliers ``1 + ED(Σ slot + incarnate pre) + incarnate post``.
 
-    For every effect of every slotted power, aggregate the aspect's per-slot
-    enhancement value across the power's slots (gated by the ForceLevel exemplar
-    cutoff) and apply ED once. Only non-unit multipliers are stored — an absent
-    key means an unenhanced effect. ``ctx.enh_mult`` is empty while this runs, so
-    the base magnitudes fed to the buff/debuff sign gate are unenhanced.
-
-    ``incarnate_effect`` adds each effect's resolved incarnate effect-mag addend
-    (``ED(pre_ed) + post_ed``, :mod:`coh_engine.incarnate`) onto its ``1 + ED(Σ slot)``
-    multiplier — reaching effects the slotted routing does not (e.g. Recovery), which is
-    why the incarnate resolver refuses co-slotting an effect (``E19``): only one of the
-    two pre-ED sources is present per effect.
-
-    Fails loud (``P-ENH-001``) when a power's slots enhance an effect-borne aspect
-    ``_enhance_aspect`` does not route: that aspect would be dropped from Totals,
-    so the build is refused rather than silently under-reported.
+    For every effect of every slotted or incarnate-touched power, aggregate the aspect's
+    per-slot enhancement value plus any incarnate pre-ED contribution and apply ED once
+    (Pass1→2→4), then add the incarnate post-ED (``IgnoreED``) term. Only non-unit
+    multipliers are stored — an absent key means an unenhanced effect. ``ctx.enh_mult`` is
+    empty while this runs, so the base magnitudes fed to the buff/debuff sign gate are
+    unenhanced. ``incarnate_effect`` (:mod:`coh_engine.incarnate`) carries the raw
+    ``(pre_ed, post_ed)`` per effect; its pre-ED term co-EDs with the slots exactly as Mids
+    does, so a target effect may carry both slotted and incarnate enhancement.
     """
     out: dict[tuple[int, int], float] = {}
     for power in included:
         power_slots = slots.get(power.build_index, ())
-        if not power_slots:
+        has_incarnate = any((power.build_index, fx.index) in incarnate_effect for fx in power.effects)
+        if not power_slots and not has_incarnate:
             continue
-        routed = {aspect for fx in power.effects if (aspect := _enhance_aspect(fx)) is not None}
-        unrouted = _slot_granted_effect_aspects(power_slots, enh_db, force_level) - routed
-        if unrouted:
-            raise ValueError(
-                f"P-ENH-001: slots in {power.full_name!r} enhance effect-borne aspect(s) "
-                f"{sorted(unrouted)} that the effect->aspect routing does not port; extend "
-                "_enhance_aspect against a validated reference fixture before computing this build"
-            )
-        # Cache the aggregate per (aspect, sign(mag)): effects sharing an aspect
-        # and buff/debuff sign share one ED aggregation instead of re-running it.
+        # Harmless when power_slots is empty (no slot grants no aspect); an incarnate-only
+        # power reaches here and correctly finds nothing unrouted.
+        _check_enh_routing(power, power_slots, enh_db, force_level)
         memo: dict[tuple[str, bool, bool], float] = {}
         for fx in power.effects:
-            aspect = _enhance_aspect(fx)
-            if aspect is None:
-                continue
-            # Pass1 gates GetEnhancementEffect on the buffed power's Math_Mag,
-            # which before Pass5's multiply equals the base Mag Pass0 snapshotted
-            # — so the unenhanced base magnitude used here matches Mids' gate.
-            base_mag = _mag(fx, power, ctx)
-            key = (aspect, base_mag <= 0.0, base_mag >= 0.0)
-            if key not in memo:
-                memo[key] = aggregate_and_ed(
-                    power_slots, aspect=aspect, enh_db=enh_db, force_level=force_level, tables=tables, mag=base_mag
-                )
-            if memo[key] != 0.0:
-                out[(power.build_index, fx.index)] = f32(1.0 + memo[key])
-    for key_effect, addend in incarnate_effect.items():
-        out[key_effect] = f32(out.get(key_effect, 1.0) + addend)
+            mult = _effect_multiplier(
+                power,
+                fx,
+                power_slots,
+                memo,
+                incarnate_effect.get((power.build_index, fx.index)),
+                enh_db=enh_db,
+                tables=tables,
+                force_level=force_level,
+                ctx=ctx,
+            )
+            if mult is not None:
+                out[(power.build_index, fx.index)] = mult
     return out
 
 
@@ -942,13 +1000,17 @@ def compute_base_totals(
 
     self_buffs = _new_buffs(enums)
     self_enhance = _new_buffs(enums)
-    # Incarnate.* powers are GrantPower delivery vehicles; they contribute via the
-    # resolved addends, never their own raw GrantPower/LevelShift/SetMode effects.
-    included = [p for p in powers if p.stat_include and not _incarnate_excluded(p)]
+    # Every StatInclude power contributes — incarnate powers included, exactly as Mids'
+    # GenerateBuffData does (clsToonX.cs:2157): an Alpha's raw GrantPower/LevelShift/SetMode
+    # effects are non-Buffable and contribute nothing, while a Destiny/Lore power's direct
+    # effects fold in. The incarnate's GrantPower-delivered enhancement is applied separately
+    # via the resolved addends.
+    included = [p for p in powers if p.stat_include]
 
     addends = _resolve_build_incarnates(
-        incarnates, powers, archetype_index=archetype_index, mods=mods, classes=classes, tables=tables, slots=slots
+        incarnates, powers, archetype_index=archetype_index, mods=mods, classes=classes, tables=tables
     )
+    incarnate_scalar = addends.scalar if addends is not None else MappingProxyType({})
 
     if set_db is not None:
         if slots is None or enh_db is None:
@@ -978,7 +1040,12 @@ def compute_base_totals(
         )
         buff_ctx = replace(base_ctx, enh_mult=enh_mult)
         toggle_end_agg = _compute_toggle_end_agg(
-            included, slots=slots, enh_db=enh_db, tables=tables, force_level=config.force_level
+            included,
+            slots=slots,
+            enh_db=enh_db,
+            tables=tables,
+            force_level=config.force_level,
+            incarnate_scalar=incarnate_scalar,
         )
 
     # Enhancement pass (step 6) before the buff pass (step 8), per
@@ -1004,42 +1071,9 @@ def compute_base_totals(
         enums=enums,
         server=server,
         toggle_end_agg=toggle_end_agg,
+        incarnate_scalar=incarnate_scalar,
     )
     return result if addends is None else replace(result, incarnate_addends=addends)
-
-
-def _is_incarnate(power: Power) -> bool:
-    """Whether a build power is an ``Incarnate.*`` slot power (a GrantPower delivery vehicle)."""
-    return power.full_name.startswith("Incarnate.")
-
-
-# The effect types a GrantPower-delivery incarnate (Alpha) carries on its raw power — none
-# reach a Totals bucket, so excluding the power from the buff pass is faithful. A direct-
-# effect incarnate (Destiny-style Recovery/Endurance/Enhancement) is a different subsystem.
-_INCARNATE_DELIVERY_EFFECT_TYPES = frozenset({"GrantPower", "RevokePower", "LevelShift", "SetMode"})
-
-
-def _incarnate_excluded(power: Power) -> bool:
-    """Whether to drop an ``Incarnate.*`` power from the buff/enhance passes.
-
-    A GrantPower-delivery incarnate (its raw effects are all delivery-only) contributes
-    solely through the resolved addends, so it is excluded. An incarnate carrying a direct
-    effect (Destiny-style) would lose that contribution if excluded, so refuse it loudly.
-
-    Raises:
-        NotImplementedError: ``E22`` if an ``Incarnate.*`` power carries a non-delivery
-            (direct) effect — that path (Destiny/Lore direct buffs) is unported.
-    """
-    if not _is_incarnate(power):
-        return False
-    direct = [fx.effect_type for fx in power.effects if fx.effect_type not in _INCARNATE_DELIVERY_EFFECT_TYPES]
-    if direct:
-        raise NotImplementedError(
-            f"E22: incarnate power {power.full_name!r} carries direct effect type(s) {sorted(set(direct))} beyond "
-            "GrantPower delivery; the direct-effect incarnate path (Destiny/Lore) is unported — add a validated "
-            "fixture before computing this build"
-        )
-    return True
 
 
 def _resolve_build_incarnates(
@@ -1050,13 +1084,16 @@ def _resolve_build_incarnates(
     mods: AttribMods,
     classes: ArchetypeDb,
     tables: MathTables | None,
-    slots: Mapping[int, Sequence[SlotRef]] | None,
 ) -> IncarnateAddends | None:
     """Resolve the build's incarnate addends, or ``None`` when none were supplied.
 
+    ``tables`` is only a presence gate here: an incarnate's enhancement folds through the
+    per-effect multiplier and per-power scalar path, both of which need the enhancement
+    inputs, so refuse incarnates without them (``E21``). The resolver itself needs no ED
+    tables — it emits raw pre/post magnitudes the consumer co-EDs.
+
     Raises:
-        ValueError: ``E21`` if incarnates were supplied without the enhancement inputs
-            (``tables``/``slots``) their fold threads through.
+        ValueError: ``E21`` if incarnates were supplied without the enhancement inputs.
     """
     if incarnates is None:
         return None
@@ -1065,9 +1102,7 @@ def _resolve_build_incarnates(
             "E21: incarnates require the enhancement inputs (slots, enh_db, tables) — an incarnate's "
             "enhancement folds through the per-effect multiplier and per-power scalar path; pass them together"
         )
-    return resolve_incarnates(
-        incarnates, powers, mods=mods, classes=classes, archetype_index=archetype_index, tables=tables, slots=slots
-    )
+    return resolve_incarnates(incarnates, powers, mods=mods, classes=classes, archetype_index=archetype_index)
 
 
 def _compute_toggle_end_agg(
@@ -1077,27 +1112,32 @@ def _compute_toggle_end_agg(
     enh_db: Mapping[int, EnhancementRecord],
     tables: MathTables,
     force_level: int,
+    incarnate_scalar: Mapping[tuple[int, str], tuple[float, float]] = MappingProxyType({}),
 ) -> dict[int, float]:
-    """Per-toggle slotted endurance-discount aggregate ``ED(Σ EndRdx)`` for EndUse.
+    """Per-toggle endurance-discount aggregate ``ED(Σ EndRdx + incarnate pre)`` for EndUse.
 
     ``EnduranceDiscount`` is a scalar aspect (it reaches no effect bucket), so
     :func:`_compute_enh_multipliers` skips it; the buffed toggle cost needs it
-    separately. Only Toggle powers consume the result (``_gbd_toggle_end_and_fly``),
-    so non-toggles are skipped. Only non-zero aggregates are stored; the global
-    ``_selfEnhance`` EndRdx term is added per toggle at fold time, not here.
+    separately. Any incarnate EnduranceDiscount pre-ED term (a Cardiac Alpha) co-EDs with
+    the slotted EndRdx here, exactly as the per-power ``statistics`` fold does. Only Toggle
+    powers consume the result (``_gbd_toggle_end_and_fly``), so non-toggles are skipped.
+    Only non-zero aggregates are stored; the global ``_selfEnhance`` EndRdx term and the
+    incarnate post-ED term are added per toggle at fold time, not here.
     """
     out: dict[int, float] = {}
     for power in included:
         if power.power_type != "Toggle":
             continue
-        # aggregate_and_ed over an empty/EndRdx-free slot list returns 0, so no
-        # separate empty-slots guard is needed; only non-zero aggregates are stored.
+        pre_ed, _post = incarnate_scalar.get((power.build_index, END.aspect), (0.0, 0.0))
+        # aggregate_and_ed over an empty/EndRdx-free slot list with no incarnate pre returns
+        # 0, so no separate empty-slots guard is needed; only non-zero aggregates are stored.
         aggregate = aggregate_and_ed(
             slots.get(power.build_index, ()),
             aspect="EnduranceDiscount",
             enh_db=enh_db,
             force_level=force_level,
             tables=tables,
+            pre_ed_addend=pre_ed,
         )
         if aggregate != 0.0:
             out[power.build_index] = aggregate
@@ -1111,29 +1151,32 @@ def _gbd_toggle_end_and_fly(
     toggle_end_agg: Mapping[int, float],
     global_end_rdx: float,
     recharge_cap: float,
+    incarnate_scalar: Mapping[tuple[int, str], tuple[float, float]] = MappingProxyType({}),
 ) -> bool:
     """Sum toggle end-use into ``totals`` and report canFly (clsToonX.cs:852-865).
 
     ``EndUse`` sums the *buffed* toggle cost — ``Power.ToggleCost`` derives from the
     enhancement-reduced ``EndCost`` (Power.cs:388): ``buffed.EndCost = base.EndCost /
-    (1 + ED(Σ slotted EndRdx) + global EndRdx)``, then ``/ ActivatePeriod`` when the
-    toggle has one. The divisor comes from the shared per-aspect handler
-    (:func:`~coh_engine.enh_aspects.fold_scalar` with the ``END`` / EnduranceDiscount
-    handler: ``ED(Σ slotted)`` = ``toggle_end_agg``, plus the global ``_selfEnhance``
-    EnduranceDiscount, plus 1, in that f32 order) — the same fold the per-power
-    ``statistics`` arm uses, so a toggle that ignores EnduranceDiscount enhancement
-    (``Power.IgnoreEnh``) keeps its base cost here exactly as it does per-power. EndUse is
-    uncapped (the ``END`` handler is uncapped), so ``recharge_cap`` is inert for this aspect.
+    (((ED(Σ slotted EndRdx + incarnate pre) + global EndRdx) + incarnate post) + 1)``, then
+    ``/ ActivatePeriod`` when the toggle has one. The divisor comes from the shared
+    per-aspect handler (:func:`~coh_engine.enh_aspects.fold_scalar` with the ``END`` /
+    EnduranceDiscount handler) — the same fold the per-power ``statistics`` arm uses, so the
+    two cannot diverge: a Cardiac incarnate lowers toggle EndUse exactly as it lowers the
+    per-power end cost, and a toggle that ignores EnduranceDiscount (``Power.IgnoreEnh``)
+    keeps its base cost. EndUse is uncapped (the ``END`` handler is uncapped), so
+    ``recharge_cap`` is inert for this aspect.
     """
     can_fly = False
     for power in included:
         if power.power_type == "Toggle":
+            _pre, post_ed = incarnate_scalar.get((power.build_index, END.aspect), (0.0, 0.0))
             divisor = fold_scalar(
                 END,
                 toggle_end_agg.get(power.build_index, 0.0),
                 global_end_rdx,
                 ignore_enh=power.ignore_enh,
                 recharge_cap=recharge_cap,
+                post_ed_extra=post_ed,
             )
             buffed_end_cost = f32(power.end_cost / divisor)
             cost = f32(buffed_end_cost / power.activate_period) if power.activate_period > 0 else buffed_end_cost
@@ -1231,6 +1274,7 @@ def _gbd_totals(
     enums: EnumMaps,
     server: ServerData,
     toggle_end_agg: Mapping[int, float],
+    incarnate_scalar: Mapping[tuple[int, str], tuple[float, float]] = MappingProxyType({}),
 ) -> BaseTotals:
     """``GBD_Totals`` (``clsToonX.cs:839-1002``): fold the BuffsX accumulators into Totals/TotalsCapped."""
     stat = enums.maps["eStatType"]
@@ -1246,7 +1290,9 @@ def _gbd_totals(
     # The global _selfEnhance EnduranceDiscount reduces every toggle's cost (Mids
     # Pass3); it is the same value GBD reports as BuffEndRdx just below.
     global_end_rdx = self_enhance.effect[stat["BuffEndRdx"]]
-    can_fly = _gbd_toggle_end_and_fly(included, totals, ctx, toggle_end_agg, global_end_rdx, archetype.recharge_cap)
+    can_fly = _gbd_toggle_end_and_fly(
+        included, totals, ctx, toggle_end_agg, global_end_rdx, archetype.recharge_cap, incarnate_scalar
+    )
     _gbd_fold_and_copy_vectors(totals, self_buffs)
 
     totals.end_max = self_buffs.max_end

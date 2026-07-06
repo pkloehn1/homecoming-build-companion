@@ -43,6 +43,7 @@ FIXTURES = Path(__file__).parent / "fixtures"
 MIDS = FIXTURES / "mids"
 
 INCARNATE = "arsenal_dominator_incarnate"
+SLOTTED = "arsenal_dominator_incarnate_slotted"
 NOSLOTS = "arsenal_dominator_noslots"
 
 VECTOR_FIELDS = {
@@ -167,6 +168,35 @@ def test_incarnate_totals_match_mids(
         INCARNATE, mods=mods, classes=classes, enums=enums, config=config, server=server, enh_db=enh_db, tables=tables
     )
     expected = _totals_json(INCARNATE)
+    for side, got in (("Totals", result.totals), ("TotalsCapped", result.totals_capped)):
+        want = expected[side]
+        for json_key, attr in VECTOR_FIELDS.items():
+            got_vec = getattr(got, attr)
+            for i, cell in enumerate(want[json_key]):
+                assert f32(cell) == got_vec[i], f"{side}.{json_key}[{i}]"
+        for json_key, attr in SCALAR_FIELDS.items():
+            assert f32(want[json_key]) == getattr(got, attr), f"{side}.{json_key}"
+
+
+def test_slotted_coed_totals_match_mids(
+    mods: AttribMods,
+    classes: ArchetypeDb,
+    enums: EnumMaps,
+    config: EngineConfig,
+    server: ServerData,
+    enh_db: dict[int, EnhancementRecord],
+    tables: MathTables,
+) -> None:
+    """Co-ED (#2): slotted Defense IOs + the Agility Defense incarnate share one ApplyED.
+
+    Weave/Maneuvers carry crafted Defense IOs; Agility adds a pre-ED Defense term. Full
+    Totals/TotalsCapped parity holds only if the two fold through a single
+    ``ED(Σ slotted + incarnate_pre)`` pass, not ``ED(slotted) + ED(incarnate_pre)``.
+    """
+    result = _compute(
+        SLOTTED, mods=mods, classes=classes, enums=enums, config=config, server=server, enh_db=enh_db, tables=tables
+    )
+    expected = _totals_json(SLOTTED)
     for side, got in (("Totals", result.totals), ("TotalsCapped", result.totals_capped)):
         want = expected[side]
         for json_key, attr in VECTOR_FIELDS.items():

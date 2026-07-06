@@ -10,24 +10,19 @@ from typing import Any
 
 import pytest
 
-from coh_engine import base_totals, incarnate
+from coh_engine import incarnate
 from coh_engine.archetypes import ArchetypeDb
 from coh_engine.attribmod import AttribMods
-from coh_engine.enhancement import SlotRef
 from coh_engine.incarnate import (
     Incarnate,
     IncarnateSubPower,
     resolve_incarnates,
 )
-from coh_engine.maths import MathTables, f32
+from coh_engine.maths import f32
 
 
 def _sub(*effects: Any, enhancements: frozenset[int] = frozenset({5})) -> IncarnateSubPower:
     return IncarnateSubPower(full_name="Incarnate.Alpha_Silent.Test", enhancements=enhancements, effects=tuple(effects))
-
-
-def _filled_slot() -> SlotRef:
-    return SlotRef(level=0, is_inherent=False, enh=42, grade=0, io_level=49, relative_level=1)
 
 
 class TestScalarAspect:
@@ -67,6 +62,17 @@ class TestMatchesEffect:
         target = make_effect(effect_type="Defense", damage_type="Fire", buffable=True)
         assert not incarnate._matches_effect(target, inc)
 
+    def test_damage_buff_matches_resistance_by_damage_type(self, make_effect: Any) -> None:
+        # Cardiac: DamageBuff incarnate folds into a Resistance target of the same DamageType.
+        inc = make_effect(effect_type="DamageBuff", damage_type="Smashing")
+        target = make_effect(effect_type="Resistance", damage_type="Smashing", buffable=True)
+        assert incarnate._matches_effect(target, inc)
+
+    def test_damage_buff_wrong_damage_type_no_match(self, make_effect: Any) -> None:
+        inc = make_effect(effect_type="DamageBuff", damage_type="Smashing")
+        target = make_effect(effect_type="Resistance", damage_type="Fire", buffable=True)
+        assert not incarnate._matches_effect(target, inc)
+
     def test_recovery_matches_on_effect_type_only(self, make_effect: Any) -> None:
         inc = make_effect(et_modifies="Recovery", damage_type="None")
         target = make_effect(effect_type="Recovery", damage_type="Smashing", buffable=True)
@@ -86,9 +92,9 @@ class TestMatchesEffect:
 class TestGuardSupported:
     """``_guard_supported`` refuses the incarnate delivery paths that are not ported."""
 
-    def test_damage_buff_is_refused(self, make_effect: Any) -> None:
-        with pytest.raises(NotImplementedError, match="E20"):
-            incarnate._guard_supported(make_effect(effect_type="DamageBuff", et_modifies="Damage"), "Sub")
+    def test_damage_buff_is_supported(self, make_effect: Any) -> None:
+        # DamageBuff delivers resistance (Cardiac) and damage (Musculature); both are ported.
+        incarnate._guard_supported(make_effect(effect_type="DamageBuff", et_modifies="Damage"), "Sub")
 
     def test_grant_power_is_refused(self, make_effect: Any) -> None:
         with pytest.raises(NotImplementedError, match="E20"):
@@ -113,71 +119,32 @@ class TestAddSplit:
         assert bucket[("k",)] == (f32(0.16), f32(0.22))
 
 
-class TestHasFilledSlot:
-    """``_has_filled_slot`` reports whether any slot holds an enhancement."""
-
-    def test_true_for_filled(self) -> None:
-        assert incarnate._has_filled_slot([_filled_slot()])
-
-    def test_false_for_empty(self) -> None:
-        empty = SlotRef(level=0, is_inherent=False, enh=-1, grade=0, io_level=49, relative_level=1)
-        assert not incarnate._has_filled_slot([empty])
-
-
-class TestIncarnateExcluded:
-    """``base_totals._incarnate_excluded`` drops delivery-only incarnates, refuses direct ones."""
-
-    def test_delivery_only_incarnate_is_excluded(self, make_effect: Any, make_power: Any) -> None:
-        power = make_power(
-            make_effect(effect_type="GrantPower"),
-            make_effect(effect_type="LevelShift"),
-            full_name="Incarnate.Alpha.Agility_Core_Paragon",
-        )
-        assert base_totals._incarnate_excluded(power)
-
-    def test_non_incarnate_is_kept(self, make_power: Any) -> None:
-        assert not base_totals._incarnate_excluded(make_power(full_name="Pool.Speed.Hasten"))
-
-    def test_direct_effect_incarnate_is_refused(self, make_effect: Any, make_power: Any) -> None:
-        power = make_power(
-            make_effect(effect_type="GrantPower"),
-            make_effect(effect_type="Recovery"),
-            full_name="Incarnate.Destiny.Ageless_Core_Epiphany",
-        )
-        with pytest.raises(NotImplementedError, match="E22"):
-            base_totals._incarnate_excluded(power)
-
-
 def _resolve(
     sub: IncarnateSubPower,
     power: Any,
     *,
     tiny_mods: AttribMods,
     tiny_classes: ArchetypeDb,
-    tables: MathTables,
-    slots: Any = None,
 ) -> incarnate.IncarnateAddends:
     inc = Incarnate(build_index=99, full_name="Incarnate.Alpha.Test", sub_powers=(sub,))
-    return resolve_incarnates(
-        [inc], [power], mods=tiny_mods, classes=tiny_classes, archetype_index=0, tables=tables, slots=slots
-    )
+    return resolve_incarnates([inc], [power], mods=tiny_mods, classes=tiny_classes, archetype_index=0)
 
 
 class TestResolveIncarnates:
-    """End-to-end resolution over a synthetic incarnate and one target power."""
+    """End-to-end resolution over a synthetic incarnate — both buckets carry raw (pre, post)."""
 
     def test_scalar_addend_split(
-        self, make_effect: Any, make_power: Any, tiny_mods: AttribMods, tiny_classes: ArchetypeDb, tables: MathTables
+        self, make_effect: Any, make_power: Any, tiny_mods: AttribMods, tiny_classes: ArchetypeDb
     ) -> None:
         pre = make_effect(effect_type="Enhancement", et_modifies="RechargeTime", scale=0.11, ignore_ed=False)
         post = make_effect(effect_type="Enhancement", et_modifies="RechargeTime", scale=0.22, ignore_ed=True)
         power = make_power(build_index=0, enhancements=(5,))
-        addends = _resolve(_sub(pre, post), power, tiny_mods=tiny_mods, tiny_classes=tiny_classes, tables=tables)
+        addends = _resolve(_sub(pre, post), power, tiny_mods=tiny_mods, tiny_classes=tiny_classes)
         assert addends.scalar[(0, "RechargeTime")] == (f32(0.11), f32(0.22))
         assert addends.effect == {}
 
-    def test_effect_addend_ed_applied(
-        self, make_effect: Any, make_power: Any, tiny_mods: AttribMods, tiny_classes: ArchetypeDb, tables: MathTables
+    def test_effect_addend_is_raw_pre_post(
+        self, make_effect: Any, make_power: Any, tiny_mods: AttribMods, tiny_classes: ArchetypeDb
     ) -> None:
         pre = make_effect(effect_type="Enhancement", et_modifies="Defense", damage_type="Smashing", scale=0.0667)
         post = make_effect(
@@ -185,32 +152,17 @@ class TestResolveIncarnates:
         )
         target = make_effect(index=0, effect_type="Defense", damage_type="Smashing", buffable=True)
         power = make_power(target, build_index=0, enhancements=(5,))
-        addends = _resolve(_sub(pre, post), power, tiny_mods=tiny_mods, tiny_classes=tiny_classes, tables=tables)
-        # ED(0.0667) is below the schedule-B first knee, so unreduced: addend == 0.0667 + 0.1333.
-        assert addends.effect[(0, 0)] == f32(f32(0.0667) + f32(0.1333))
+        addends = _resolve(_sub(pre, post), power, tiny_mods=tiny_mods, tiny_classes=tiny_classes)
+        # The effect bucket is raw (pre_ed, post_ed): ED and the co-ED with the target
+        # power's slotted aggregate happen in the consumer (base_totals), not here.
+        assert addends.effect[(0, 0)] == (f32(0.0667), f32(0.1333))
         assert addends.scalar == {}
 
     def test_gate_miss_contributes_nothing(
-        self, make_effect: Any, make_power: Any, tiny_mods: AttribMods, tiny_classes: ArchetypeDb, tables: MathTables
+        self, make_effect: Any, make_power: Any, tiny_mods: AttribMods, tiny_classes: ArchetypeDb
     ) -> None:
         fx = make_effect(effect_type="Enhancement", et_modifies="RechargeTime", scale=0.11)
         power = make_power(build_index=0, enhancements=(18,))  # accepts class 18, sub gates on {5}
-        addends = _resolve(_sub(fx), power, tiny_mods=tiny_mods, tiny_classes=tiny_classes, tables=tables)
+        addends = _resolve(_sub(fx), power, tiny_mods=tiny_mods, tiny_classes=tiny_classes)
         assert addends.scalar == {}
         assert addends.effect == {}
-
-    def test_co_slotting_effect_is_refused(
-        self, make_effect: Any, make_power: Any, tiny_mods: AttribMods, tiny_classes: ArchetypeDb, tables: MathTables
-    ) -> None:
-        inc = make_effect(effect_type="Enhancement", et_modifies="Defense", damage_type="Smashing", scale=0.0667)
-        target = make_effect(index=0, effect_type="Defense", damage_type="Smashing", buffable=True)
-        power = make_power(target, build_index=0, enhancements=(5,))
-        with pytest.raises(NotImplementedError, match="E19"):
-            _resolve(
-                _sub(inc),
-                power,
-                tiny_mods=tiny_mods,
-                tiny_classes=tiny_classes,
-                tables=tables,
-                slots={0: [_filled_slot()]},
-            )

@@ -71,6 +71,10 @@ def build_attack_chain(power_stats: Sequence[PowerStats]) -> AttackChain:
     cycle_time = max(cast_sum, bottleneck)
     gap = f32(cycle_time - cast_sum)
     rotation = tuple(s.full_name for s in sorted(attacks, key=lambda s: (-s.recharge_time, s.full_name)))
+    # A real attack always has a non-zero cast (activation) time, so cycle_time > 0 whenever
+    # a genuine attack is present. cycle_time == 0 means every "attack" has zero cast AND zero
+    # recharge — a degenerate/malformed stat with no meaningful cadence — so there is no rate
+    # to report and the endurance drain is 0 (a divide-by-zero would be the only alternative).
     end_per_sec = f32(end_sum / cycle_time) if cycle_time > 0.0 else 0.0
     return AttackChain(
         rotation=rotation,

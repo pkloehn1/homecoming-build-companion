@@ -33,7 +33,6 @@ from collections.abc import Collection
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
-from coh_engine.maths import f32
 from coh_engine.pass3 import fold_divisor
 
 if TYPE_CHECKING:
@@ -122,14 +121,16 @@ def fold_scalar(
     differs per consumer). ``global_scalar`` is the aspect's global ``_selfEnhance`` term
     (``global_term`` resolves it from a :class:`GlobalEnhance`, or the caller passes the raw
     value). ``post_ed_extra`` is the post-ED extra source — the incarnate ``IgnoreED`` = true
-    term (CP5.1) — defaulting to 0 so today's callers reproduce the CP5/CP6.1 fold exactly.
-    Delegates the ``(aggregate + global) + 1`` step, the ignore gate, and the cap to
-    :func:`~coh_engine.pass3.fold_divisor`.
+    term (CP5.1) — defaulting to 0. The global and post-ED terms are passed **separately** to
+    :func:`~coh_engine.pass3.fold_divisor`, which adds them sequentially
+    (``((agg + global) + post) + 1``) to match Mids' three-term float order — pre-summing
+    ``global + post`` would re-associate the float32 add and diverge by up to 1 ULP.
     """
     return fold_divisor(
         ed_aggregate,
-        f32(global_scalar + post_ed_extra),
+        global_scalar,
         aspect=handler.aspect,
         ignored_aspects=ignore_enh,
         cap=cap_for(handler, recharge_cap),
+        post_ed_extra=post_ed_extra,
     )

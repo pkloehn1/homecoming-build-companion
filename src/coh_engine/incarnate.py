@@ -34,14 +34,16 @@ looks them up and stays a literal Mids transcription (check-registry.md fidelity
 - ``scalar[(build_index, aspect)] = (pre_ed, post_ed)`` — the recharge/end/interrupt/acc/
     range per-power scalar fold (``pre_ed`` co-EDs with slotted enhancement, ``post_ed`` is
     the ``fold_scalar`` ``post_ed_extra`` seam).
-- ``effect[(build_index, effect_index)] = ED(pre_ed) + post_ed`` — the effect-mag addend
-    added onto ``1 + ED(Σ slotted)`` for that effect.
+- ``effect[(build_index, effect_index)] = (pre_ed, post_ed)`` — the effect-mag addend, whose
+    ``pre_ed`` co-EDs with the effect's slotted aggregate via ``aggregate_and_ed`` and whose
+    ``post_ed`` is added after ED (``base_totals._compute_enh_multipliers``).
 
-Scope boundary: the recharge-Alpha parity fixture has **empty slots**, so a target effect
-never carries both slotted enhancement and an incarnate effect addend for the same aspect.
-Co-slotting the two on one effect would need them co-ED'd (one ``ApplyED`` over the summed
-pre-ED terms); :func:`resolve_incarnates` refuses that case loudly (``E19``) rather than
-apply the two ED passes separately and diverge from Mids.
+Both terms stay raw here: the pre-ED term is summed with the slotted aggregate BEFORE the
+single ``ApplyED`` the consumer runs, exactly as Mids Pass1 accumulates the incarnate pre-ED
+increment into the effect's ``Math_Mag`` alongside slotted enhancement before Pass2's one
+``ApplyED`` (``ED(slotted + incarnatePreED)``, not ``ED(slotted) + ED(incarnatePreED)``). So a
+target effect may carry both slotted and incarnate enhancement — no separate-ED divergence,
+no co-slotting guard.
 
 Spec: docs/engine/mids-port-spec.md § gbpa-pass-pipeline; .claude/rules/check-registry.md.
 """
@@ -56,10 +58,8 @@ from typing import Any
 
 from coh_engine.archetypes import ArchetypeDb
 from coh_engine.attribmod import AttribMods
-from coh_engine.ed import apply_ed
-from coh_engine.effect import Effect, Power, effect_mag
-from coh_engine.enh_pipeline import schedule_for_enhance
-from coh_engine.maths import MathTables, f32
+from coh_engine.effect import Effect, Power, _parse_effect, effect_mag
+from coh_engine.maths import f32
 
 # The scalar-aspect switch of GBPA_ApplyIncarnateEnhancements (clsToonX.cs:1470-1495):
 # ETModifies -> (the eEnhance handler aspect name, whether the target's IgnoreEnhancement
@@ -100,16 +100,19 @@ class Incarnate:
 
 @dataclass(frozen=True, slots=True)
 class IncarnateAddends:
-    """The pre/post-ED incarnate contributions the numeric core folds in.
+    """The raw pre/post-ED incarnate contributions the numeric core co-EDs and folds in.
 
-    ``scalar`` is keyed by ``(build_index, eEnhance aspect name)`` and carries the
-    ``(pre_ed, post_ed)`` scalar addends. ``effect`` is keyed by ``(build_index,
-    effect_index)`` and carries the ready-to-add effect-mag addend ``ED(pre_ed) +
-    post_ed`` (added onto ``1 + ED(Σ slotted)`` for that effect).
+    Both buckets carry raw ``(pre_ed, post_ed)`` magnitudes. ``scalar`` is keyed by
+    ``(build_index, eEnhance aspect name)`` — the per-power recharge/end/interrupt/acc/range
+    fold. ``effect`` is keyed by ``(build_index, effect_index)`` — the per-effect
+    Defense/Recovery/… enhancement. In both, the consumer feeds ``pre_ed`` through
+    ``aggregate_and_ed(pre_ed_addend=…)`` so it is co-ED'd with the slotted aggregate in one
+    ``ApplyED`` (Mids Pass1 accumulate → Pass2 ED), then adds ``post_ed`` after ED (the
+    ``IgnoreED`` Pass3 term). No ED happens in this module.
     """
 
     scalar: Mapping[tuple[int, str], tuple[float, float]]
-    effect: Mapping[tuple[int, int], float]
+    effect: Mapping[tuple[int, int], tuple[float, float]]
 
 
 def load_incarnates(path: Path | str) -> tuple[Incarnate, ...]:
@@ -128,55 +131,12 @@ def load_incarnates(path: Path | str) -> tuple[Incarnate, ...]:
                 IncarnateSubPower(
                     full_name=s["FullName"],
                     enhancements=frozenset(s["Enhancements"]),
-                    effects=tuple(_parse_incarnate_effect(fx) for fx in s["Effects"]),
+                    effects=tuple(_parse_effect(fx) for fx in s["Effects"]),
                 )
                 for s in r["SubPowers"]
             ),
         )
         for r in records
-    )
-
-
-def _parse_incarnate_effect(raw: dict[str, Any]) -> Effect:
-    """One incarnate sub-power effect. Mirrors ``effect._parse_effect`` field-for-field."""
-    return Effect(
-        index=raw["Index"],
-        effect_type=raw["EffectType"],
-        damage_type=raw["DamageType"],
-        mez_type=raw["MezType"],
-        et_modifies=raw["ETModifies"],
-        scale=f32(raw["Scale"]),
-        n_magnitude=f32(raw["nMagnitude"]),
-        n_duration=f32(raw["nDuration"]),
-        attrib_type=raw["AttribType"],
-        aspect=raw["Aspect"],
-        modifier_table=raw["ModifierTable"],
-        n_modifier_table=raw["nModifierTable"],
-        to_who=raw["ToWho"],
-        pv_mode=raw["PvMode"],
-        stacking=raw["Stacking"],
-        suppression=raw["Suppression"],
-        buffable=raw["Buffable"],
-        resistible=raw["Resistible"],
-        ignore_ed=raw["IgnoreED"],
-        ignore_scaling=raw["IgnoreScaling"],
-        variable_modified=raw["VariableModified"],
-        base_probability=f32(raw["BaseProbability"]),
-        probability=f32(raw["Probability"]),
-        procs_per_minute=f32(raw["ProcsPerMinute"]),
-        ticks=raw["Ticks"],
-        delayed_time=f32(raw["DelayedTime"]),
-        effect_class=raw["EffectClass"],
-        special_case=raw["SpecialCase"],
-        n_id_class_name=raw["nIDClassName"],
-        absorbed_effect=raw["Absorbed_Effect"],
-        absorbed_power_type=raw["Absorbed_PowerType"],
-        absorbed_class_n_id=raw["Absorbed_Class_nID"],
-        active_conditionals_count=raw["ActiveConditionalsCount"],
-        expr_magnitude=raw["ExprMagnitude"],
-        expr_duration=raw["ExprDuration"],
-        expr_probability=raw["ExprProbability"],
-        display_percentage=raw["DisplayPercentage"],
     )
 
 
@@ -204,21 +164,6 @@ def _sub_power_context(full_name: str) -> Power:
     )
 
 
-@dataclass(frozen=True, slots=True)
-class _ResolveContext:
-    """The shared inputs the incarnate magnitude read needs."""
-
-    mods: AttribMods
-    classes: ArchetypeDb
-    archetype_index: int
-    tables: MathTables
-
-
-def _buffed_mag(effect: Effect, sub_full_name: str, ctx: _ResolveContext) -> float:
-    """The sub-power effect's ``BuffedMag`` — its base ``Mag`` (Pass5 has not run)."""
-    return effect_mag(effect, _sub_power_context(sub_full_name), ctx.mods, ctx.classes, ctx.archetype_index)
-
-
 def _scalar_aspect(effect: Effect, power: Power) -> str | None:
     """The scalar handler aspect an incarnate effect folds into, or ``None`` if effect-borne.
 
@@ -239,11 +184,17 @@ def _scalar_aspect(effect: Effect, power: Power) -> str | None:
 def _matches_effect(target_fx: Effect, inc: Effect) -> bool:
     """Whether an incarnate effect-borne aspect enhances this Buffable target effect.
 
-    ``HandleDefaultIncarnateEnh``: the target effect must be Buffable and its
-    ``EffectType`` equal the incarnate ``ETModifies``; Damage/Defense additionally match
-    on ``DamageType`` (clsToonX.cs:1300-1318), every other aspect on EffectType alone.
+    ``HandleDefaultIncarnateEnh`` (clsToonX.cs:1300-1318): a ``DamageBuff`` incarnate effect
+    (Cardiac resistance, Musculature damage) matches a target ``Resistance`` or ``Damage``
+    effect by ``DamageType``; otherwise the target ``EffectType`` must equal the incarnate
+    ``ETModifies``, with Damage/Defense additionally matching on ``DamageType`` and every
+    other aspect on EffectType alone.
     """
-    if not target_fx.buffable or target_fx.effect_type != inc.et_modifies:
+    if not target_fx.buffable:
+        return False
+    if inc.effect_type == "DamageBuff":
+        return target_fx.effect_type in ("Resistance", "Damage") and target_fx.damage_type == inc.damage_type
+    if target_fx.effect_type != inc.et_modifies:
         return False
     if inc.et_modifies in _DAMAGE_TYPED_ASPECTS:
         return target_fx.damage_type == inc.damage_type
@@ -254,16 +205,18 @@ def _guard_supported(effect: Effect, sub_full_name: str) -> None:
     """Refuse the incarnate delivery paths this port does not yet apply.
 
     Raises:
-        NotImplementedError: ``E20`` for a DamageBuff / GrantPower / GlobalChanceMod
-            sub-effect (damage-Alpha, nested GrantPower, Hybrid GlobalChanceMod) or a Mez
-            aspect (the duration/magnitude split is unported) — each needs its own
-            validated fixture before it is applied, so fail loud rather than under-report.
+        NotImplementedError: ``E20`` for a GrantPower / GlobalChanceMod sub-effect (nested
+            GrantPower, Hybrid GlobalChanceMod) or a Mez aspect (the duration/magnitude split
+            is unported) — each needs its own validated fixture before it is applied, so fail
+            loud rather than under-report. ``DamageBuff`` (Cardiac/Destiny resistance,
+            Musculature damage) is applied: resistance folds into Totals; the damage half is
+            Totals-inert until the DPS port (CP6.2/#31).
     """
-    if effect.effect_type != "Enhancement":
+    if effect.effect_type not in ("Enhancement", "DamageBuff"):
         raise NotImplementedError(
             f"E20: incarnate sub-power {sub_full_name!r} carries a {effect.effect_type!r} effect; only "
-            "Enhancement-delivered incarnate aspects are ported (DamageBuff/GrantPower/GlobalChanceMod need "
-            "a damage-Alpha / nested-GrantPower / Hybrid fixture first)"
+            "Enhancement- and DamageBuff-delivered incarnate aspects are ported (GrantPower/GlobalChanceMod "
+            "need a nested-GrantPower / Hybrid fixture first)"
         )
     if effect.et_modifies == "Mez":
         raise NotImplementedError(
@@ -274,14 +227,13 @@ def _guard_supported(effect: Effect, sub_full_name: str) -> None:
 
 def _route_effect(
     inc: Effect,
+    mag: float,
     sub_full_name: str,
     power: Power,
-    ctx: _ResolveContext,
     scalar: dict[tuple[int, str], tuple[float, float]],
     effect_pre: dict[tuple[int, int], tuple[float, float]],
 ) -> None:
-    """Route one accepted incarnate effect for one target power into the addend buckets."""
-    mag = _buffed_mag(inc, sub_full_name, ctx)
+    """Route one accepted incarnate effect (with its precomputed magnitude) into the buckets."""
     aspect = _scalar_aspect(inc, power)
     if aspect is not None:
         _add_split(scalar, (power.build_index, aspect), mag, inc.ignore_ed)
@@ -308,66 +260,31 @@ def resolve_incarnates(
     mods: AttribMods,
     classes: ArchetypeDb,
     archetype_index: int,
-    tables: MathTables,
-    slots: Mapping[int, Sequence[Any]] | None = None,
 ) -> IncarnateAddends:
-    """Fold every accepted incarnate aspect over every build power into the addend maps.
+    """Fold every accepted incarnate aspect over every build power into the raw addend maps.
 
-    ``slots`` (when supplied) is only consulted to refuse the co-slotting case the fixture
-    does not cover: a target effect that carries both a slotted enhancement and an
-    incarnate effect addend must be co-ED'd, which this separate-ED path does not do.
+    Both buckets carry raw ``(pre_ed, post_ed)`` magnitudes — the consumer co-EDs the pre-ED
+    term with the power's slotted aggregate (``aggregate_and_ed(pre_ed_addend=…)``) and adds
+    the post-ED term after ED. No ED or co-slotting guard is needed here: the co-ED happens in
+    one ``ApplyED`` downstream exactly as Mids does, so a target effect may carry both slotted
+    and incarnate enhancement.
 
     Raises:
-        NotImplementedError: ``E19`` if an incarnate effect addend lands on a power that
-            also has filled slots (the co-ED path is unported); ``E20`` via
-            :func:`_guard_supported` for an unported delivery path.
+        NotImplementedError: ``E20`` via :func:`_guard_supported` for an unported delivery path.
     """
-    ctx = _ResolveContext(mods=mods, classes=classes, archetype_index=archetype_index, tables=tables)
-    by_index = {power.build_index: power for power in powers}
     scalar: dict[tuple[int, str], tuple[float, float]] = {}
     effect_pre: dict[tuple[int, int], tuple[float, float]] = {}
 
     for incarnate in incarnates:
         for sub in incarnate.sub_powers:
+            # Magnitude is power-independent (the granted sub-power effect's base Mag), so
+            # read it once per sub effect rather than per accepting target power.
+            sub_power = _sub_power_context(sub.full_name)
+            mags = [effect_mag(inc, sub_power, mods, classes, archetype_index) for inc in sub.effects]
             for power in powers:
-                if not sub.enhancements.intersection(power.enhancements):
+                if sub.enhancements.isdisjoint(power.enhancements):
                     continue
-                for inc in sub.effects:
-                    _route_effect(inc, sub.full_name, power, ctx, scalar, effect_pre)
+                for inc, mag in zip(sub.effects, mags, strict=True):
+                    _route_effect(inc, mag, sub.full_name, power, scalar, effect_pre)
 
-    effect = _ed_effect_addends(effect_pre, by_index, tables, slots)
-    return IncarnateAddends(scalar=scalar, effect=effect)
-
-
-def _ed_effect_addends(
-    effect_pre: Mapping[tuple[int, int], tuple[float, float]],
-    by_index: Mapping[int, Power],
-    tables: MathTables,
-    slots: Mapping[int, Sequence[Any]] | None,
-) -> dict[tuple[int, int], float]:
-    """Turn per-effect ``(pre_ed, post_ed)`` into the ED'd addend, refusing co-slotting.
-
-    The ED schedule is the target effect's aspect schedule (``schedule_for_enhance`` on
-    the effect's ``EffectType``), matching Mids' Pass 2, which EDs the effect's Math_Mag
-    on the enhancement schedule named by its EffectType.
-    """
-    out: dict[tuple[int, int], float] = {}
-    for (build_index, effect_index), (pre, post) in effect_pre.items():
-        if slots is not None and _has_filled_slot(slots.get(build_index, ())):
-            raise NotImplementedError(
-                f"E19: build power index {build_index} carries both filled slots and an incarnate effect "
-                "enhancement; co-ED of slotted + incarnate pre-ED terms on one effect is unported — the "
-                "recharge-Alpha fixture is empty-slot. Add a slotted-incarnate fixture and co-ED both terms."
-            )
-        power = by_index[build_index]
-        target_fx = next(fx for fx in power.effects if fx.index == effect_index)
-        # Damage/Defense effects share the enhancement schedule of their aspect name; a
-        # generic (schedule A) fallback covers Recovery/Endurance/Heal/etc.
-        schedule = schedule_for_enhance(target_fx.effect_type)
-        out[(build_index, effect_index)] = f32(apply_ed(schedule, pre, tables) + post)
-    return out
-
-
-def _has_filled_slot(power_slots: Sequence[Any]) -> bool:
-    """Whether any of the power's slots holds an enhancement (``enh > -1``)."""
-    return any(getattr(slot, "enh", -1) > -1 for slot in power_slots)
+    return IncarnateAddends(scalar=scalar, effect=effect_pre)

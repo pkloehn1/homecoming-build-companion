@@ -35,6 +35,7 @@ from coh_engine.levels import LevelSchedule
 
 # Group prefix (first dotted segment of a power full name) → build role.
 _INHERENT_GROUP = "Inherent"
+_INCARNATE_GROUP = "Incarnate"
 _POOL_GROUP = "Pool"
 _ANCILLARY_GROUP = "Epic"  # Ancillary / Patron pools are the "Epic" group.
 
@@ -56,8 +57,28 @@ def _powerset_key(power: Power) -> str:
 
 
 def _is_inherent(power: Power) -> bool:
-    """Whether a power is auto-granted (the ``Inherent`` group) — excluded from picks."""
+    """Whether a power is auto-granted (the ``Inherent`` group) — excluded from picks.
+
+    Inherent powers (Fitness Health/Stamina/Swift/Hurdle, Brawl/Sprint/Rest) are NOT power
+    picks, but they ARE slottable: their added enhancement slots count against the 67-slot
+    budget (Mids ``Power.Slottable`` whitelists SetType ``Inherent``). So this predicate
+    gates picks only — slot accounting walks all powers regardless.
+    """
     return _group(power) == _INHERENT_GROUP
+
+
+def _is_incarnate(power: Power) -> bool:
+    """Whether a power is an incarnate (the ``Incarnate`` group) — excluded from picks.
+
+    Incarnates are a separate crafting system (level-50, XP-unlocked slots, salvage-crafted,
+    one power equipped per incarnate slot); they never consume one of the 24 core picks
+    (Mids auto-adds them via ``AddPower`` with ``chosen=false``). They also take no
+    enhancement slots (``Power.Slottable`` excludes SetType ``Incarnate``; ``PowerEntry``
+    refuses a default slot when the group is ``Incarnate``), so they contribute 0 to the
+    slot budget on their own — a distinct treatment from inherents, kept as its own
+    predicate rather than merged with :func:`_is_inherent`.
+    """
+    return _group(power) == _INCARNATE_GROUP
 
 
 def _added_slots(power_slots: Sequence[SlotRef]) -> list[SlotRef]:
@@ -88,6 +109,9 @@ class HardLimitsContext:
     picks: tuple[Power, ...] = field(default_factory=tuple)
     added_by_power: Mapping[int, int] = field(default_factory=dict)
     added_by_level: Mapping[int, int] = field(default_factory=dict)
+    # Every (power, added slot) pair, walked once here so the slot-placement rules read it
+    # instead of each re-walking the build (check-registry "context walks once").
+    added_pairs: tuple[tuple[Power, SlotRef], ...] = field(default_factory=tuple)
 
 
 def build_context(
@@ -96,16 +120,24 @@ def build_context(
     schedule: LevelSchedule,
     max_slots: int,
 ) -> HardLimitsContext:
-    """Assemble the shared context every rule reads (the single build walk)."""
-    picks = tuple(p for p in powers if p.build_index >= 0 and not _is_inherent(p))
+    """Assemble the shared context every rule reads (the single build walk).
+
+    Picks exclude both the auto-granted ``Inherent`` group and the ``Incarnate`` group —
+    neither counts against the 24 core picks (Mids auto-adds both with ``chosen=false``).
+    Slot accounting walks all powers, so inherent Health/Stamina slots still count against
+    the budget and slotless incarnates contribute 0.
+    """
+    picks = tuple(p for p in powers if p.build_index >= 0 and not _is_inherent(p) and not _is_incarnate(p))
     added_by_power: dict[int, int] = {}
     added_by_level: dict[int, int] = {}
+    added_pairs: list[tuple[Power, SlotRef]] = []
     for power in powers:
         added = _added_slots(slots.get(power.build_index, ()))
         if added:
             added_by_power[power.build_index] = len(added)
         for slot in added:
             added_by_level[slot.level] = added_by_level.get(slot.level, 0) + 1
+            added_pairs.append((power, slot))
     return HardLimitsContext(
         powers=tuple(powers),
         slots={idx: tuple(s) for idx, s in slots.items()},
@@ -114,6 +146,7 @@ def build_context(
         picks=picks,
         added_by_power=added_by_power,
         added_by_level=added_by_level,
+        added_pairs=tuple(added_pairs),
     )
 
 
@@ -167,10 +200,8 @@ def _rule_per_power_added_slots(ctx: HardLimitsContext) -> Iterable[Diagnostic]:
 
 
 def _iter_added_slots(ctx: HardLimitsContext) -> Iterable[tuple[Power, SlotRef]]:
-    """Every ``(power, added slot)`` pair in the build — the shared walk for the slot rules."""
-    for power in ctx.powers:
-        for slot in _added_slots(ctx.slots.get(power.build_index, ())):
-            yield power, slot
+    """Every ``(power, added slot)`` pair — precomputed once in the context, not re-walked."""
+    return ctx.added_pairs
 
 
 @hard_limit_rule

@@ -125,13 +125,12 @@ class Power:
     # hard-limits validator ports ``Build.MeetsRequirement`` over these — no expression
     # evaluator, just structured full-name comparison. ``requires_powers`` is an OR list
     # of AND-groups of prerequisite power full-names (pool/ancillary tier unlocks live
-    # here); ``requires_powers_not`` is the forbidden/mutex list; the class lists gate by
-    # archetype. Empty tuples for a power with no prerequisites (and for dumps predating
-    # the field).
+    # here); ``requires_powers_not`` is the forbidden/mutex list. Empty tuples for a power
+    # with no prerequisites (and for dumps predating the field). Archetype gating
+    # (``RequiresClass``) is not modelled here — a loaded build is already AT-resolved, and
+    # class-prerequisite validation belongs to the post-CP10 AT-specific tier.
     requires_powers: tuple[tuple[str, ...], ...] = ()
     requires_powers_not: tuple[tuple[str, ...], ...] = ()
-    requires_class: tuple[str, ...] = ()
-    requires_class_not: tuple[str, ...] = ()
 
 
 def _parse_effect(raw: dict[str, Any]) -> Effect:
@@ -220,8 +219,6 @@ def load_powers_effects(path: Path | str) -> tuple[Power, ...]:
             # (single-power requirements leave the second slot blank) are dropped.
             requires_powers=_parse_requirement_groups(r.get("RequiresPowers", ())),
             requires_powers_not=_parse_requirement_groups(r.get("RequiresPowersNot", ())),
-            requires_class=tuple(c for c in r.get("RequiresClass", ()) if c),
-            requires_class_not=tuple(c for c in r.get("RequiresClassNot", ()) if c),
             effects=tuple(_parse_effect(fx) for fx in r["Effects"]),
         )
         for r in records
