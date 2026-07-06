@@ -31,11 +31,24 @@ repos:
         additional_dependencies:
           - types-PyYAML
 
+  # markdownlint + editorconfig-checker match the versions and config Super-Linter
+  # runs, so `pre-commit` catches what CI would. markdownlint points at the SAME
+  # .github/linters/.markdownlint.yml Super-Linter uses (it extends the root
+  # .markdownlint.yaml). For exact parity, run scripts/linting/run_super_linter.sh.
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.45.0
+    rev: v0.48.0
     hooks:
       - id: markdownlint
-        args: [--config, .markdownlint.yaml]
+        args: [--config, .github/linters/.markdownlint.yml]
+
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 3.2.1
+    hooks:
+      - id: editorconfig-checker
+        name: EditorConfig Compliance
+        # Verbatim/harvested game data and generated extraction docs are exempt,
+        # mirroring the Super-Linter FILTER_REGEX_EXCLUDE.
+        exclude: ^(src/coh_engine/tests/fixtures/|samples/|data/canonical/|docs/engine/)
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0

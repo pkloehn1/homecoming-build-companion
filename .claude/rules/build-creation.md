@@ -152,7 +152,7 @@ Walk this list before emitting any build. Every item passes; otherwise the build
 
 ### Exemplar-10 playability
 
-- [ ] Picks at levels 1–14 cover the functional core: 2 attacks, 1 defensive layer (where AT has one), travel power picked by level 12, Build Up / Aim if AT has one, sustain mechanic if AT depends on one.
+- [ ] Picks at levels 1–14 cover the functional core: 2 attacks, 1 defensive layer (where AT has one), travel power picked by level 12, Build Up / Aim if AT has one, sustain mechanic if needed.
 - [ ] Defensive toggles have ≥ 2 added slots by character level 15.
 - [ ] Anchor attack has ≥ 2 added slots by character level 14.
 - [ ] Every attack's slot (A) and first added slot hold an Acc-bearing IO; damage-only pieces appear no earlier than slot 3 (exceptions: pre-buffed snipes, procmonster vehicles, auto-hit powers).
@@ -181,7 +181,8 @@ When any check fails, surface the failure and either fix it or escalate to the u
 
 ## Lessons learned (precedent record)
 
-The principles above were derived from concrete failures in the v1 TW/Bio Scrapper benchmark. Recorded here so future-you understands the precedent and the 5 Whys reasoning that produced each principle.
+The principles above were derived from concrete failures in the v1 TW/Bio Scrapper benchmark.
+Recorded here so future-you understands the precedent and the 5 Whys reasoning that produced each principle.
 
 ### L1. Slot-prefix format (motivates P1, P2)
 

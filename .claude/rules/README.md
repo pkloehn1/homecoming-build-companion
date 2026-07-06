@@ -16,10 +16,10 @@ Files in this directory are normative. They constrain what Claude does in this p
 1. Create the file in this directory with a name matching the constraint.
 2. Lead with `**Status:** MUST` (or `SHOULD` for softer guidance).
 3. Provide:
-   - **Scope** — when the rule applies.
-   - **What is forbidden / required** — concrete constraints.
-   - **Why** — root cause or precedent.
-   - **How to apply** — what Claude does in practice.
+    - **Scope** — when the rule applies.
+    - **What is forbidden / required** — concrete constraints.
+    - **Why** — root cause or precedent.
+    - **How to apply** — what Claude does in practice.
 4. Reference the new file from [`../../CLAUDE.md`](../../CLAUDE.md) under "MUST rules" so it auto-loads.
 5. If the rule is build-specific, also reference it from [`build-creation.md`](./build-creation.md).
 
