@@ -118,6 +118,7 @@ internal static class Program
         DumpMaths(outDir);
         DumpEnhancementClasses(outDir);
         DumpEnhancements(outDir);
+        DumpLegalityProbe(outDir);
         DumpEnhancementEffects(outDir);
         DumpEnhancementSets(outDir);
         DumpSetBonusPowers(outDir);
@@ -200,6 +201,10 @@ internal static class Program
             cfg.Inc.DisablePvE,
             cfg.ForceLevel,
             cfg.ScalingToHit,
+            // The damage-math mode DamagePerActivation was computed under (defaults:
+            // Average / Numeric). The port's DPS uses the same per-activation damage.
+            DamageCalculate = cfg.DamageMath.Calculate.ToString(),
+            DamageReturn = cfg.DamageMath.ReturnValue.ToString(),
         });
     }
 
@@ -214,6 +219,7 @@ internal static class Program
         }
 
         var failures = 0;
+        var byName = new Dictionary<string, string>();
         foreach (var mbdPath in Directory.EnumerateFiles(buildsDir, "*.mbd", SearchOption.AllDirectories))
         {
             var toon = new clsToonX();
@@ -226,16 +232,63 @@ internal static class Program
             }
 
             toon.GenerateBuffedPowerArray();
-
-            var buildDir = Path.Combine(outDir, "builds", Path.GetFileNameWithoutExtension(mbdPath));
-            Directory.CreateDirectory(buildDir);
-            DumpBuildPowersEffects(buildDir, toon);
-            DumpBuildSlots(buildDir, toon);
-            DumpBuildEnhancedPowers(buildDir, toon);
-            DumpBuildSetBonusVirtualPower(buildDir, toon);
-            DumpBuildTotals(buildDir, toon);
+            var name = Path.GetFileNameWithoutExtension(mbdPath);
+            byName[name] = mbdPath;
+            DumpOneBuild(Path.Combine(outDir, "builds", name), toon);
         }
 
+        failures += DumpExemplarVariants(byName, outDir);
+        return failures;
+    }
+
+    private static void DumpOneBuild(string buildDir, clsToonX toon)
+    {
+        Directory.CreateDirectory(buildDir);
+        DumpBuildPowersEffects(buildDir, toon);
+        DumpBuildSlots(buildDir, toon);
+        DumpBuildEnhancedPowers(buildDir, toon);
+        DumpBuildSetBonusVirtualPower(buildDir, toon);
+        DumpBuildTotals(buildDir, toon);
+    }
+
+    // Builds recomputed at a lowered ForceLevel: the exemplar parity fixtures. At a
+    // low ForceLevel, powers picked above it drop their set bonuses (pick Level >
+    // ForceLevel) and slots placed at/above it stop contributing — the CP6 exemplar
+    // gate the port threads through config.force_level. No -3 retention (Mids gates
+    // purely on pick Level <= ForceLevel).
+    private static readonly (string Build, int ForceLevel)[] ExemplarVariants =
+    {
+        ("shield_scrapper_set_bonuses", 25),
+    };
+
+    private static int DumpExemplarVariants(IReadOnlyDictionary<string, string> byName, string outDir)
+    {
+        var failures = 0;
+        var savedForceLevel = MidsContext.Config.ForceLevel;
+        foreach (var (buildName, forceLevel) in ExemplarVariants)
+        {
+            if (!byName.TryGetValue(buildName, out var mbdPath))
+            {
+                Console.Error.WriteLine($"E21: exemplar-variant source build not found: {buildName}");
+                failures++;
+                continue;
+            }
+
+            var toon = new clsToonX();
+            MainModule.MidsController.Toon = toon;
+            if (!BuildManager.Instance.LoadFromFile(mbdPath))
+            {
+                Console.Error.WriteLine($"E13: LoadFromFile failed for {mbdPath} (exemplar variant)");
+                failures++;
+                continue;
+            }
+
+            MidsContext.Config.ForceLevel = forceLevel;
+            toon.GenerateBuffedPowerArray();
+            DumpOneBuild(Path.Combine(outDir, "builds", $"{buildName}_exemplar{forceLevel}"), toon);
+        }
+
+        MidsContext.Config.ForceLevel = savedForceLevel;
         return failures;
     }
 
@@ -277,10 +330,30 @@ internal static class Program
                 PowerType = pw.PowerType.ToString(),
                 pw.ForcedClass,
                 pw.ClickBuff,
+                // pw.Level is the DB minimum pick level; PickLevel is the level this
+                // build actually took the power (PowerEntry.Level). The set-bonus
+                // exemplar gate (Build.cs:1160) uses the PICK level, not the DB
+                // minimum — the two coincide at ForceLevel 50 but diverge under
+                // exemplar (a power whose DB min is 14 but picked at 30 drops at
+                // ForceLevel 25). Dump both; the port gates on PickLevel.
                 pw.Level,
+                PickLevel = entry.Level,
                 pw.EndCost,
                 pw.ActivatePeriod,
                 pw.ToggleCost,
+                // Base scalars the derived-stat layer (CP6.1) needs as inputs: it
+                // computes the buffed recharge/end-per-sec/DPS from these and the
+                // slotted + global enhancement, then validates against enhanced_powers.
+                // CastTime is not recharge-reduced (base == buffed here) but feeds the
+                // end/sec and DPS cadence.
+                pw.RechargeTime,
+                CastTime = pw.CastTimeBase,
+                pw.InterruptTime,
+                // eEnhance aspects this power ignores (Power.IgnoreEnh). Pass 3 folds
+                // the global _selfEnhance term into a per-power scalar only when the
+                // aspect is NOT ignored (IgnoreEnhancement, Power.cs:1673) — e.g. One
+                // with the Shield ignores RechargeTime, so its recharge stays at base.
+                IgnoreEnh = pw.IgnoreEnh.Select(e => e.ToString()).ToList(),
                 pw.VariableEnabled,
                 entry.StatInclude,
                 entry.VariableValue,
@@ -291,6 +364,11 @@ internal static class Program
                 // validity assumption) rests on. Empty means the power takes no set
                 // IOs (e.g. Battle Agility). eSetType names are in enums.json.
                 pw.SetTypes,
+                // The enhancement class IDs this power accepts (Power.Enhancements,
+                // int[] of EnhancementClasses[..].ID). A standard/generic IO is legal
+                // here only if one of its ClassIds is in this list (IsEnhancementValid);
+                // the standard-IO half of legality CP6 adds atop CP5's set-type gate.
+                pw.Enhancements,
                 Effects = pw.Effects.Select((fx, fxIdx) => SerializeEffect(fx, fxIdx)).ToList(),
             });
         }
@@ -438,6 +516,12 @@ internal static class Program
                 buffed.InterruptTime,
                 buffed.Range,
                 buffed.RechargeTime,
+                buffed.CastTime,
+                // Mids' authoritative damage-per-activation (FXGetDamageValue under
+                // the default Numeric/Average config, dumped in config.json): the
+                // reference the port's summed damage validates against; DPS is that
+                // over the (recharge + cast + interrupt) cadence.
+                DamagePerActivation = buffed.FXGetDamageValue(),
                 Base = basePower == null
                     ? null
                     : new
@@ -447,6 +531,7 @@ internal static class Program
                         basePower.InterruptTime,
                         basePower.Range,
                         basePower.RechargeTime,
+                        CastTime = basePower.CastTimeBase,
                     },
                 Effects = buffed.Effects.Select((fx, fxIdx) => new
                 {
@@ -520,7 +605,17 @@ internal static class Program
         // StaticIndex -> {UID, TypeID}: the map the .mxd slot reader needs to know
         // how many bytes follow each enhancement reference (the TypeID switch in
         // ReadSlotData). The in-memory nID is the array index.
+        //
+        // The legality layer (CP6) additionally reads:
+        //   ClassIds  - Enhancement.ClassID[] resolved from EnhancementClasses index
+        //               to the class .ID (int); Power.IsEnhancementValid tests these
+        //               against Power.Enhancements. Resolving here keeps the port from
+        //               needing the EnhancementClasses index table at check time.
+        //   SubTypeId - GetValidEnhancements' subtype gate (0 = wildcard).
+        //   Unique / MutExId / Superior / LongName - Build.EnhancementTest's build-wide
+        //               unique / mutual-exclusion (superior-attuned, stealth) rules.
         var db = DatabaseAPI.Database;
+        var classes = db.EnhancementClasses;
         var enhancements = db.Enhancements
             .Select((e, nid) => (e, nid))
             .Where(t => t.e != null)
@@ -529,11 +624,77 @@ internal static class Program
                 Nid = t.nid,
                 t.e.StaticIndex,
                 t.e.UID,
+                t.e.LongName,
                 TypeId = (int)t.e.TypeID,
                 TypeName = t.e.TypeID.ToString(),
+                SubTypeId = t.e.SubTypeID,
+                // The owning set (-1 for non-set IOs); the SetO legality branch
+                // resolves the set's SetType via this and tests it against Power.SetTypes.
+                t.e.nIDSet,
+                // ClassID indexes EnhancementClasses; the ID we test against
+                // Power.Enhancements is EnhancementClasses[idx].ID. Guard the index
+                // (a stray -1/out-of-range entry contributes no class).
+                ClassIds = (t.e.ClassID ?? Array.Empty<int>())
+                    .Where(idx => idx >= 0 && idx < classes.Length)
+                    .Select(idx => classes[idx].ID)
+                    .ToList(),
+                t.e.Unique,
+                MutExId = (int)t.e.MutExID,
+                MutExName = t.e.MutExID.ToString(),
+                t.e.Superior,
             })
             .ToList();
         WriteJson(outDir, "enhancements.json", enhancements);
+    }
+
+    // The (power, enhancement) pairs whose legality verdict CP6 asserts against.
+    // Illegal slots cannot round-trip through a loaded build (CheckAndFixAllEnhancements
+    // strips them on load), so the port validates its reject against Mids' own
+    // IsEnhancementValid verdict for each pair rather than a loaded build.
+    private static readonly (string Power, string Enh)[] LegalityProbePairs =
+    {
+        // Resolved rejections (mids-port-spec § legality-predicates):
+        // a generic Recharge IO is class-illegal in One with the Shield (its
+        // Power.Enhancements has no Recharge class); Force Feedback (a Knockback set)
+        // is set-type-illegal in Soul Drain (SetTypes has no Knockback).
+        ("Scrapper_Defense.Shield_Defense.One_with_the_Shield", "Crafted_Recharge"),
+        ("Scrapper_Melee.Dark_Melee.Soul_Drain", "Crafted_Force_Feedback_A"),
+        // A control legal placement: a Recharge IO in Hasten (accepts Recharge).
+        ("Pool.Speed.Hasten", "Crafted_Recharge"),
+    };
+
+    private static void DumpLegalityProbe(string outDir)
+    {
+        // Per named pair: Mids' IsEnhancementValid verdict plus the inputs the port's
+        // legality port reads (Power.Enhancements / SetTypes, enh ClassIds / set type).
+        var db = DatabaseAPI.Database;
+        var probes = new List<object>();
+        foreach (var (powerName, enhUid) in LegalityProbePairs)
+        {
+            var power = DatabaseAPI.GetPowerByFullName(powerName);
+            var enhNid = DatabaseAPI.GetEnhancementByUIDName(enhUid);
+            if (power == null || enhNid < 0)
+            {
+                Console.Error.WriteLine($"E20: legality-probe pair unresolved: power={powerName} enh={enhUid}");
+                continue;
+            }
+
+            var enh = db.Enhancements[enhNid];
+            probes.Add(new
+            {
+                PowerFullName = powerName,
+                power.SetTypes,
+                PowerEnhancements = power.Enhancements,
+                EnhUid = enhUid,
+                EnhNid = enhNid,
+                EnhTypeName = enh.TypeID.ToString(),
+                EnhNidSet = enh.nIDSet,
+                // IsValid is the reference verdict the port's IsEnhancementValid port
+                // must reproduce for each pair (two false, one true).
+                IsValid = power.IsEnhancementValid(enhNid),
+            });
+        }
+        WriteJson(outDir, "legality_probe.json", probes);
     }
 
     private static void DumpEnhancementEffects(string outDir)

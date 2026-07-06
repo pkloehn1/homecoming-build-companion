@@ -107,12 +107,13 @@ Captures set `trust:` to `first-party`, `community-consensus`, or `single-author
 11. [`.claude/rules/gitops.md`](./.claude/rules/gitops.md) — GitOps conventions: branches, Conventional Commits, signed commits, PR structure with issue grouping.
 12. [`.claude/rules/devsecops.md`](./.claude/rules/devsecops.md) — DevSecOps non-negotiables: no secrets in code, signed commits, least-privilege CI, no hook bypass.
 13. [`.claude/rules/error-output.md`](./.claude/rules/error-output.md) — diagnostic and error message standard.
-14. [`.claude/rules/markdown.md`](./.claude/rules/markdown.md) — Markdown style and lint conformance for all prose authoring.
-15. [`docs/repository-standards/style-guides/`](./docs/repository-standards/style-guides/) — canonical Markdown / Python / error-output guides (imported SSOTs).
-16. [`docs/repository-standards/`](./docs/repository-standards/) — git-standards, git-branching, devsecops-workflow (one-time imports from kloehnwars-homelab; standalone-consumer model, not auto-synced).
-17. [`docs/automation/runbooks/`](./docs/automation/runbooks/) — git-workflow-checklist, fix-unsigned-commits-in-pr (operational runbooks).
-18. [`docs/`](./docs/) — game mechanics reference (powers, enhancements, procs, incarnates, attack chains, min-maxing).
-19. [`community/INDEX.md`](./community/INDEX.md) — captured forum guides, grouped by topic.
+14. [`.claude/rules/check-registry.md`](./.claude/rules/check-registry.md) — extensible check registries: a new dimension is a new `@rule`, never a dispatcher edit (not the numeric port).
+15. [`.claude/rules/markdown.md`](./.claude/rules/markdown.md) — Markdown style and lint conformance for all prose authoring.
+16. [`docs/repository-standards/style-guides/`](./docs/repository-standards/style-guides/) — canonical Markdown / Python / error-output guides (imported SSOTs).
+17. [`docs/repository-standards/`](./docs/repository-standards/) — git-standards, git-branching, devsecops-workflow (one-time imports from kloehnwars-homelab; standalone-consumer model, not auto-synced).
+18. [`docs/automation/runbooks/`](./docs/automation/runbooks/) — git-workflow-checklist, fix-unsigned-commits-in-pr (operational runbooks).
+19. [`docs/`](./docs/) — game mechanics reference (powers, enhancements, procs, incarnates, attack chains, min-maxing).
+20. [`community/INDEX.md`](./community/INDEX.md) — captured forum guides, grouped by topic.
 
 ---
 

@@ -2,14 +2,14 @@
   {
     "BuildIndex": 0,
     "FullName": "Scrapper_Melee.Dark_Melee.Smite",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 6.864,
     "InterruptTime": 0,
     "Range": 7,
-    "RechargeTime": 6,
+    "RechargeTime": 5,
     "CastTime": 0.97,
-    "DamagePerActivation": 90.839294,
+    "DamagePerActivation": 92.65608,
     "Base": {
       "Accuracy": 1,
       "EndCost": 6.864,
@@ -25,7 +25,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 20.01968,
+        "Math_Mag": 20.420073,
         "Math_Duration": 0
       },
       {
@@ -34,7 +34,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 62.5615,
+        "Math_Mag": 63.81273,
         "Math_Duration": 0
       },
       {
@@ -43,7 +43,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 26.158215,
+        "Math_Mag": 26.681377,
         "Math_Duration": 0
       },
       {
@@ -52,7 +52,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 78.47464,
+        "Math_Mag": 80.04413,
         "Math_Duration": 0
       },
       {
@@ -70,7 +70,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 104.63286,
+        "Math_Mag": 106.72551,
         "Math_Duration": 0
       },
       {
@@ -79,7 +79,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 82.581184,
+        "Math_Mag": 84.2328,
         "Math_Duration": 0
       },
       {
@@ -88,7 +88,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 82.581184,
+        "Math_Mag": 84.2328,
         "Math_Duration": 0
       },
       {
@@ -97,7 +97,7 @@
         "DamageType": "Fire",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 37.16153,
+        "Math_Mag": 37.90476,
         "Math_Duration": 0
       }
     ]
@@ -105,12 +105,12 @@
   {
     "BuildIndex": 1,
     "FullName": "Scrapper_Defense.Shield_Defense.Active_Defense",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0.104,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 4,
+    "RechargeTime": 3.3333333,
     "CastTime": 1.5,
     "DamagePerActivation": 0,
     "Base": {
@@ -208,12 +208,12 @@
   {
     "BuildIndex": 2,
     "FullName": "Scrapper_Defense.Shield_Defense.Deflection",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
-    "EndCost": 0.104,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
+    "EndCost": 0.059845783,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 4,
+    "RechargeTime": 2.0641966,
     "CastTime": 1.5,
     "DamagePerActivation": 0,
     "Base": {
@@ -231,7 +231,7 @@
         "DamageType": "Ranged",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.17828438,
+        "Math_Mag": 0.1772172,
         "Math_Duration": 0.75
       },
       {
@@ -240,7 +240,7 @@
         "DamageType": "AoE",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.17828438,
+        "Math_Mag": 0.1772172,
         "Math_Duration": 0.75
       },
       {
@@ -249,7 +249,7 @@
         "DamageType": "Ranged",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.17828438,
+        "Math_Mag": 0.1772172,
         "Math_Duration": 0.75
       },
       {
@@ -258,7 +258,7 @@
         "DamageType": "AoE",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.17828438,
+        "Math_Mag": 0.1772172,
         "Math_Duration": 0.75
       },
       {
@@ -285,7 +285,7 @@
         "DamageType": "None",
         "MezType": "None",
         "ETModifies": "Defense",
-        "Math_Mag": 0.2193294,
+        "Math_Mag": 0.21801654,
         "Math_Duration": 0.75
       }
     ]
@@ -293,8 +293,8 @@
   {
     "BuildIndex": 3,
     "FullName": "Pool.Leaping.Combat_Jumping",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0.0325,
     "InterruptTime": 0,
     "Range": 0,
@@ -325,7 +325,7 @@
         "DamageType": "Melee",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -334,7 +334,7 @@
         "DamageType": "Ranged",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -343,7 +343,7 @@
         "DamageType": "AoE",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -352,7 +352,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -361,7 +361,7 @@
         "DamageType": "Lethal",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -370,7 +370,7 @@
         "DamageType": "Fire",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -379,7 +379,7 @@
         "DamageType": "Cold",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -388,7 +388,7 @@
         "DamageType": "Energy",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -397,7 +397,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -406,7 +406,7 @@
         "DamageType": "Toxic",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -415,7 +415,7 @@
         "DamageType": "Psionic",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -424,7 +424,7 @@
         "DamageType": "Melee",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -433,7 +433,7 @@
         "DamageType": "Ranged",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -442,7 +442,7 @@
         "DamageType": "AoE",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -451,7 +451,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -460,7 +460,7 @@
         "DamageType": "Lethal",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -469,7 +469,7 @@
         "DamageType": "Fire",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -478,7 +478,7 @@
         "DamageType": "Cold",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -487,7 +487,7 @@
         "DamageType": "Energy",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -496,7 +496,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -505,7 +505,7 @@
         "DamageType": "Toxic",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -514,7 +514,7 @@
         "DamageType": "Psionic",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.01875,
+        "Math_Mag": 0.021738281,
         "Math_Duration": 0.75
       },
       {
@@ -567,8 +567,8 @@
   {
     "BuildIndex": 4,
     "FullName": "Scrapper_Defense.Shield_Defense.True_Grit",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0,
     "InterruptTime": 0,
     "Range": 0,
@@ -643,14 +643,14 @@
   {
     "BuildIndex": 5,
     "FullName": "Scrapper_Melee.Dark_Melee.Siphon_Life",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 10.192,
     "InterruptTime": 0,
     "Range": 7,
-    "RechargeTime": 10,
+    "RechargeTime": 8.333333,
     "CastTime": 1.93,
-    "DamagePerActivation": 134.8826,
+    "DamagePerActivation": 137.58025,
     "Base": {
       "Accuracy": 1,
       "EndCost": 10.192,
@@ -666,7 +666,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 122.620544,
+        "Math_Mag": 125.07295,
         "Math_Duration": 0
       },
       {
@@ -675,7 +675,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 170.63275,
+        "Math_Mag": 174.04541,
         "Math_Duration": 0
       },
       {
@@ -684,7 +684,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 170.63275,
+        "Math_Mag": 174.04541,
         "Math_Duration": 0
       },
       {
@@ -711,7 +711,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 122.620544,
+        "Math_Mag": 125.07295,
         "Math_Duration": 0
       },
       {
@@ -720,7 +720,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 122.620544,
+        "Math_Mag": 125.07295,
         "Math_Duration": 0
       },
       {
@@ -729,7 +729,7 @@
         "DamageType": "Fire",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 55.179245,
+        "Math_Mag": 56.28283,
         "Math_Duration": 0
       }
     ]
@@ -737,12 +737,12 @@
   {
     "BuildIndex": 6,
     "FullName": "Pool.Speed.Hasten",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 226.0398,
+    "RechargeTime": 375,
     "CastTime": 0.73,
     "DamagePerActivation": 0,
     "Base": {
@@ -777,8 +777,8 @@
   {
     "BuildIndex": 7,
     "FullName": "Pool.Leaping.Long_Jump",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0.228,
     "InterruptTime": 0,
     "Range": 0,
@@ -889,14 +889,14 @@
   {
     "BuildIndex": 8,
     "FullName": "Pool.Fighting.Boxing",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 4.42,
     "InterruptTime": 0,
     "Range": 7,
-    "RechargeTime": 2.5,
+    "RechargeTime": 2.0833333,
     "CastTime": 1.07,
-    "DamagePerActivation": 49.92408,
+    "DamagePerActivation": 50.92256,
     "Base": {
       "Accuracy": 1,
       "EndCost": 4.42,
@@ -912,7 +912,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 47.54674,
+        "Math_Mag": 48.497677,
         "Math_Duration": 0
       },
       {
@@ -921,7 +921,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.132011,
+        "Math_Mag": 7.274651,
         "Math_Duration": 0
       },
       {
@@ -930,7 +930,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.132011,
+        "Math_Mag": 7.274651,
         "Math_Duration": 0
       },
       {
@@ -975,7 +975,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 99.084785,
+        "Math_Mag": 101.06648,
         "Math_Duration": 0
       },
       {
@@ -984,7 +984,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 14.86272,
+        "Math_Mag": 15.159974,
         "Math_Duration": 0
       },
       {
@@ -993,7 +993,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 14.86272,
+        "Math_Mag": 15.159974,
         "Math_Duration": 0
       },
       {
@@ -1029,7 +1029,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 47.54674,
+        "Math_Mag": 48.497677,
         "Math_Duration": 0
       },
       {
@@ -1038,7 +1038,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.132011,
+        "Math_Mag": 7.274651,
         "Math_Duration": 0
       },
       {
@@ -1047,7 +1047,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.132011,
+        "Math_Mag": 7.274651,
         "Math_Duration": 0
       },
       {
@@ -1056,7 +1056,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 47.54674,
+        "Math_Mag": 48.497677,
         "Math_Duration": 0
       },
       {
@@ -1065,7 +1065,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.132011,
+        "Math_Mag": 7.274651,
         "Math_Duration": 0
       },
       {
@@ -1074,7 +1074,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.132011,
+        "Math_Mag": 7.274651,
         "Math_Duration": 0
       },
       {
@@ -1083,7 +1083,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 47.54674,
+        "Math_Mag": 48.497677,
         "Math_Duration": 0
       },
       {
@@ -1092,7 +1092,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.132011,
+        "Math_Mag": 7.274651,
         "Math_Duration": 0
       },
       {
@@ -1101,7 +1101,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.132011,
+        "Math_Mag": 7.274651,
         "Math_Duration": 0
       },
       {
@@ -1110,7 +1110,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 47.54674,
+        "Math_Mag": 48.497677,
         "Math_Duration": 0
       },
       {
@@ -1119,7 +1119,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.132011,
+        "Math_Mag": 7.274651,
         "Math_Duration": 0
       },
       {
@@ -1128,7 +1128,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.132011,
+        "Math_Mag": 7.274651,
         "Math_Duration": 0
       },
       {
@@ -1137,7 +1137,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 99.084785,
+        "Math_Mag": 101.06648,
         "Math_Duration": 0
       },
       {
@@ -1146,7 +1146,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 14.86272,
+        "Math_Mag": 15.159974,
         "Math_Duration": 0
       },
       {
@@ -1155,7 +1155,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 14.86272,
+        "Math_Mag": 15.159974,
         "Math_Duration": 0
       },
       {
@@ -1164,7 +1164,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 49.542393,
+        "Math_Mag": 50.53324,
         "Math_Duration": 0
       },
       {
@@ -1173,7 +1173,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.431359,
+        "Math_Mag": 7.5799856,
         "Math_Duration": 0
       },
       {
@@ -1182,7 +1182,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 7.431359,
+        "Math_Mag": 7.5799856,
         "Math_Duration": 0
       },
       {
@@ -1191,7 +1191,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 99.084785,
+        "Math_Mag": 101.06648,
         "Math_Duration": 0
       },
       {
@@ -1200,7 +1200,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 14.86272,
+        "Math_Mag": 15.159974,
         "Math_Duration": 0
       },
       {
@@ -1209,7 +1209,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 14.86272,
+        "Math_Mag": 15.159974,
         "Math_Duration": 0
       },
       {
@@ -1218,7 +1218,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 99.084785,
+        "Math_Mag": 101.06648,
         "Math_Duration": 0
       },
       {
@@ -1227,7 +1227,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 14.86272,
+        "Math_Mag": 15.159974,
         "Math_Duration": 0
       },
       {
@@ -1236,7 +1236,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 14.86272,
+        "Math_Mag": 15.159974,
         "Math_Duration": 0
       }
     ]
@@ -1244,14 +1244,14 @@
   {
     "BuildIndex": 9,
     "FullName": "Scrapper_Melee.Dark_Melee.Shadow_Maul",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 8.528,
     "InterruptTime": 0,
     "Range": 7,
-    "RechargeTime": 11,
+    "RechargeTime": 9.166666,
     "CastTime": 2.37,
-    "DamagePerActivation": 148.37085,
+    "DamagePerActivation": 151.33826,
     "Base": {
       "Accuracy": 1,
       "EndCost": 8.528,
@@ -1267,7 +1267,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 16.860323,
+        "Math_Mag": 17.197529,
         "Math_Duration": 2
       },
       {
@@ -1276,7 +1276,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 16.860323,
+        "Math_Mag": 17.197529,
         "Math_Duration": 2
       },
       {
@@ -1285,7 +1285,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 28.448591,
+        "Math_Mag": 29.017563,
         "Math_Duration": 2
       },
       {
@@ -1294,7 +1294,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 28.448591,
+        "Math_Mag": 29.017563,
         "Math_Duration": 2
       },
       {
@@ -1303,7 +1303,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 227.58998,
+        "Math_Mag": 232.14177,
         "Math_Duration": 0
       },
       {
@@ -1321,7 +1321,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 134.88258,
+        "Math_Mag": 137.58023,
         "Math_Duration": 0
       },
       {
@@ -1330,7 +1330,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 134.88258,
+        "Math_Mag": 137.58023,
         "Math_Duration": 0
       },
       {
@@ -1339,7 +1339,7 @@
         "DamageType": "Fire",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 15.174292,
+        "Math_Mag": 15.4777775,
         "Math_Duration": 2
       }
     ]
@@ -1347,12 +1347,12 @@
   {
     "BuildIndex": 10,
     "FullName": "Scrapper_Defense.Shield_Defense.Against_all_Odds",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0.208,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 10,
+    "RechargeTime": 8.333333,
     "CastTime": 2.5,
     "DamagePerActivation": 0,
     "Base": {
@@ -1603,12 +1603,12 @@
   {
     "BuildIndex": 11,
     "FullName": "Pool.Fighting.Tough",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0.1625,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 10,
+    "RechargeTime": 8.333333,
     "CastTime": 3.1,
     "DamagePerActivation": 0,
     "Base": {
@@ -1715,14 +1715,14 @@
   {
     "BuildIndex": 12,
     "FullName": "Scrapper_Melee.Dark_Melee.Soul_Drain",
-    "Accuracy": 0.984,
-    "AccuracyMult": 0.984,
+    "Accuracy": 1.0725601,
+    "AccuracyMult": 1.1690905,
     "EndCost": 15.6,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 120,
+    "RechargeTime": 99.99999,
     "CastTime": 2.37,
-    "DamagePerActivation": 68.81765,
+    "DamagePerActivation": 70.194,
     "Base": {
       "Accuracy": 1.2,
       "EndCost": 15.6,
@@ -1738,7 +1738,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 62.5615,
+        "Math_Mag": 63.81273,
         "Math_Duration": 0
       },
       {
@@ -1891,7 +1891,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 62.5615,
+        "Math_Mag": 63.81273,
         "Math_Duration": 0
       },
       {
@@ -1900,7 +1900,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 62.5615,
+        "Math_Mag": 63.81273,
         "Math_Duration": 0
       },
       {
@@ -1909,7 +1909,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 62.5615,
+        "Math_Mag": 63.81273,
         "Math_Duration": 0
       },
       {
@@ -1918,7 +1918,7 @@
         "DamageType": "Fire",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 28.152674,
+        "Math_Mag": 28.715727,
         "Math_Duration": 0
       }
     ]
@@ -1926,12 +1926,12 @@
   {
     "BuildIndex": 13,
     "FullName": "Pool.Fighting.Weave",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
-    "EndCost": 0.1625,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
+    "EndCost": 0.1284585,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 10,
+    "RechargeTime": 6.825939,
     "CastTime": 0.67,
     "DamagePerActivation": 0,
     "Base": {
@@ -1949,7 +1949,7 @@
         "DamageType": "Melee",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -1958,7 +1958,7 @@
         "DamageType": "Ranged",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -1967,7 +1967,7 @@
         "DamageType": "AoE",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -1976,7 +1976,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -1985,7 +1985,7 @@
         "DamageType": "Lethal",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -1994,7 +1994,7 @@
         "DamageType": "Fire",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2003,7 +2003,7 @@
         "DamageType": "Cold",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2012,7 +2012,7 @@
         "DamageType": "Energy",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2021,7 +2021,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2030,7 +2030,7 @@
         "DamageType": "Toxic",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2039,7 +2039,7 @@
         "DamageType": "Psionic",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2048,7 +2048,7 @@
         "DamageType": "Melee",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2057,7 +2057,7 @@
         "DamageType": "Ranged",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2066,7 +2066,7 @@
         "DamageType": "AoE",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2075,7 +2075,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2084,7 +2084,7 @@
         "DamageType": "Lethal",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2093,7 +2093,7 @@
         "DamageType": "Fire",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2102,7 +2102,7 @@
         "DamageType": "Cold",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2111,7 +2111,7 @@
         "DamageType": "Energy",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2120,7 +2120,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2129,7 +2129,7 @@
         "DamageType": "Psionic",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2138,7 +2138,7 @@
         "DamageType": "Toxic",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 0.0375,
+        "Math_Mag": 0.049453128,
         "Math_Duration": 0.75
       },
       {
@@ -2155,14 +2155,14 @@
   {
     "BuildIndex": 14,
     "FullName": "Scrapper_Melee.Dark_Melee.Midnight_Grasp",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 11.96,
     "InterruptTime": 0,
     "Range": 7,
-    "RechargeTime": 15,
+    "RechargeTime": 12.499999,
     "CastTime": 2.07,
-    "DamagePerActivation": 189.93672,
+    "DamagePerActivation": 193.73544,
     "Base": {
       "Accuracy": 1,
       "EndCost": 11.96,
@@ -2178,7 +2178,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 138.26093,
+        "Math_Mag": 141.02614,
         "Math_Duration": 0
       },
       {
@@ -2187,7 +2187,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 162.99147,
+        "Math_Mag": 166.2513,
         "Math_Duration": 0
       },
       {
@@ -2196,7 +2196,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 6.2561502,
+        "Math_Mag": 6.3812733,
         "Math_Duration": 3.1
       },
       {
@@ -2205,7 +2205,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 194.27223,
+        "Math_Mag": 198.15767,
         "Math_Duration": 0
       },
       {
@@ -2241,7 +2241,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 6.881765,
+        "Math_Mag": 7.0194,
         "Math_Duration": 3.1
       },
       {
@@ -2250,7 +2250,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 172.66974,
+        "Math_Mag": 176.12312,
         "Math_Duration": 0
       },
       {
@@ -2259,7 +2259,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 172.66974,
+        "Math_Mag": 176.12312,
         "Math_Duration": 0
       },
       {
@@ -2268,7 +2268,7 @@
         "DamageType": "Fire",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 62.21741,
+        "Math_Mag": 63.461758,
         "Math_Duration": 0
       },
       {
@@ -2277,7 +2277,7 @@
         "DamageType": "Fire",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 2.8152676,
+        "Math_Mag": 2.871573,
         "Math_Duration": 3.1
       }
     ]
@@ -2285,14 +2285,14 @@
   {
     "BuildIndex": 15,
     "FullName": "Scrapper_Defense.Shield_Defense.Shield_Charge",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 13.52,
     "InterruptTime": 0,
     "Range": 60,
-    "RechargeTime": 90,
+    "RechargeTime": 75,
     "CastTime": 1.5,
-    "DamagePerActivation": 168.91605,
+    "DamagePerActivation": 172.29437,
     "Base": {
       "Accuracy": 1,
       "EndCost": 13.52,
@@ -2317,7 +2317,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 49.26718,
+        "Math_Mag": 50.252525,
         "Math_Duration": 4
       },
       {
@@ -2326,7 +2326,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 119.64887,
+        "Math_Mag": 122.04185,
         "Math_Duration": 4
       },
       {
@@ -2352,12 +2352,12 @@
   {
     "BuildIndex": 16,
     "FullName": "Pool.Leadership.Defense",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0.78,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 15,
+    "RechargeTime": 12.499999,
     "CastTime": 1.5,
     "DamagePerActivation": 0,
     "Base": {
@@ -2572,12 +2572,12 @@
   {
     "BuildIndex": 17,
     "FullName": "Scrapper_Defense.Shield_Defense.Battle_Agility",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 10.4,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 200,
+    "RechargeTime": 166.66666,
     "CastTime": 1.5,
     "DamagePerActivation": 0,
     "Base": {
@@ -2882,14 +2882,14 @@
   {
     "BuildIndex": 18,
     "FullName": "Epic.Stalker_Soul_Mastery.Moonbeam",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 17.94,
     "InterruptTime": 0,
     "Range": 150,
-    "RechargeTime": 24,
+    "RechargeTime": 20,
     "CastTime": 1.33,
-    "DamagePerActivation": 233.85487,
+    "DamagePerActivation": 238.53198,
     "Base": {
       "Accuracy": 1,
       "EndCost": 17.94,
@@ -2905,7 +2905,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 222.71893,
+        "Math_Mag": 227.17331,
         "Math_Duration": 0
       },
       {
@@ -2914,7 +2914,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 111.35947,
+        "Math_Mag": 113.586655,
         "Math_Duration": 0
       },
       {
@@ -2923,7 +2923,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 111.35947,
+        "Math_Mag": 113.586655,
         "Math_Duration": 0
       },
       {
@@ -2932,7 +2932,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 111.35947,
+        "Math_Mag": 113.586655,
         "Math_Duration": 0
       },
       {
@@ -2950,7 +2950,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 348.34372,
+        "Math_Mag": 355.31058,
         "Math_Duration": 0
       },
       {
@@ -2959,7 +2959,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 348.34372,
+        "Math_Mag": 355.31058,
         "Math_Duration": 0
       },
       {
@@ -2968,7 +2968,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 348.34372,
+        "Math_Mag": 355.31058,
         "Math_Duration": 0
       },
       {
@@ -2977,7 +2977,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 348.34372,
+        "Math_Mag": 355.31058,
         "Math_Duration": 0
       },
       {
@@ -3013,7 +3013,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 109.48263,
+        "Math_Mag": 111.67228,
         "Math_Duration": 0
       },
       {
@@ -3022,7 +3022,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 1.5640376,
+        "Math_Mag": 1.5953183,
         "Math_Duration": 0
       },
       {
@@ -3031,7 +3031,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 109.48263,
+        "Math_Mag": 111.67228,
         "Math_Duration": 0
       },
       {
@@ -3040,7 +3040,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 1.5640376,
+        "Math_Mag": 1.5953183,
         "Math_Duration": 0
       },
       {
@@ -3049,7 +3049,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 109.48263,
+        "Math_Mag": 111.67228,
         "Math_Duration": 0
       },
       {
@@ -3058,7 +3058,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 1.5640376,
+        "Math_Mag": 1.5953183,
         "Math_Duration": 0
       },
       {
@@ -3067,7 +3067,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 109.48263,
+        "Math_Mag": 111.67228,
         "Math_Duration": 0
       },
       {
@@ -3076,7 +3076,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 1.5640376,
+        "Math_Mag": 1.5953183,
         "Math_Duration": 0
       },
       {
@@ -3085,7 +3085,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 181.748,
+        "Math_Mag": 185.38297,
         "Math_Duration": 0
       },
       {
@@ -3094,7 +3094,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 181.748,
+        "Math_Mag": 185.38297,
         "Math_Duration": 0
       },
       {
@@ -3103,7 +3103,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 181.748,
+        "Math_Mag": 185.38297,
         "Math_Duration": 0
       },
       {
@@ -3112,7 +3112,7 @@
         "DamageType": "Negative",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 181.748,
+        "Math_Mag": 185.38297,
         "Math_Duration": 0
       }
     ]
@@ -3120,12 +3120,12 @@
   {
     "BuildIndex": 19,
     "FullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 5.2,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 90,
+    "RechargeTime": 75,
     "CastTime": 3,
     "DamagePerActivation": 0,
     "Base": {
@@ -3250,8 +3250,8 @@
   {
     "BuildIndex": 20,
     "FullName": "Scrapper_Defense.Shield_Defense.Phalanx_Fighting",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0,
     "InterruptTime": 0,
     "Range": 0,
@@ -3326,12 +3326,12 @@
   {
     "BuildIndex": 21,
     "FullName": "Scrapper_Defense.Shield_Defense.Grant_Cover",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0.312,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 10,
+    "RechargeTime": 8.333333,
     "CastTime": 2.5,
     "DamagePerActivation": 0,
     "Base": {
@@ -3447,12 +3447,12 @@
   {
     "BuildIndex": 22,
     "FullName": "Pool.Leadership.Tactics",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0.78,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 15,
+    "RechargeTime": 12.499999,
     "CastTime": 1.5,
     "DamagePerActivation": 0,
     "Base": {
@@ -3532,8 +3532,8 @@
   {
     "BuildIndex": 23,
     "FullName": "Scrapper_Defense.Shield_Defense.One_with_the_Shield",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 2.6,
     "InterruptTime": 0,
     "Range": 0,
@@ -3770,8 +3770,8 @@
   {
     "BuildIndex": 24,
     "FullName": "Inherent.Inherent.Critical_Hit",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0,
     "InterruptTime": 0,
     "Range": 0,
@@ -3873,14 +3873,14 @@
   {
     "BuildIndex": 25,
     "FullName": "Inherent.Inherent.Brawl",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0,
     "InterruptTime": 0,
     "Range": 7,
-    "RechargeTime": 2,
+    "RechargeTime": 1.6666666,
     "CastTime": 0.83,
-    "DamagePerActivation": 22.52214,
+    "DamagePerActivation": 22.972584,
     "Base": {
       "Accuracy": 1,
       "EndCost": 0,
@@ -3896,7 +3896,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 22.52214,
+        "Math_Mag": 22.972584,
         "Math_Duration": 0
       },
       {
@@ -3905,7 +3905,7 @@
         "DamageType": "Smashing",
         "MezType": "None",
         "ETModifies": "None",
-        "Math_Mag": 22.52214,
+        "Math_Mag": 22.972584,
         "Math_Duration": 0
       },
       {
@@ -3967,8 +3967,8 @@
   {
     "BuildIndex": 26,
     "FullName": "Inherent.Inherent.Sprint",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0.14625,
     "InterruptTime": 0,
     "Range": 0,
@@ -4016,8 +4016,8 @@
   {
     "BuildIndex": 27,
     "FullName": "Inherent.Inherent.Rest",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0,
     "InterruptTime": 6,
     "Range": 0,
@@ -4272,8 +4272,8 @@
   {
     "BuildIndex": 28,
     "FullName": "Inherent.Fitness.Swift",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0,
     "InterruptTime": 0,
     "Range": 0,
@@ -4312,8 +4312,8 @@
   {
     "BuildIndex": 29,
     "FullName": "Inherent.Fitness.Hurdle",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0,
     "InterruptTime": 0,
     "Range": 0,
@@ -4352,8 +4352,8 @@
   {
     "BuildIndex": 30,
     "FullName": "Inherent.Fitness.Health",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0,
     "InterruptTime": 0,
     "Range": 0,
@@ -4392,8 +4392,8 @@
   {
     "BuildIndex": 31,
     "FullName": "Inherent.Fitness.Stamina",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0,
     "InterruptTime": 0,
     "Range": 0,
@@ -4454,12 +4454,12 @@
   {
     "BuildIndex": 33,
     "FullName": "Inherent.Inherent.Double_Jump",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0.118,
     "InterruptTime": 0,
     "Range": 0,
-    "RechargeTime": 30,
+    "RechargeTime": 24.999998,
     "CastTime": 0,
     "DamagePerActivation": 0,
     "Base": {
@@ -4485,8 +4485,8 @@
   {
     "BuildIndex": 34,
     "FullName": "Inherent.Inherent.Fast_Snipe",
-    "Accuracy": 0.82,
-    "AccuracyMult": 0.82,
+    "Accuracy": 0.8938,
+    "AccuracyMult": 0.97424203,
     "EndCost": 0,
     "InterruptTime": 0,
     "Range": 0,

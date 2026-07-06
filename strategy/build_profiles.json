@@ -1,0 +1,69 @@
+{
+  "$comment": "The nine canonical build types (docs/build-types-and-goals.md), each parameterizing CP7 goal scoring. Targets REFERENCE strategy/breakpoints.json by dotted path (resolved by coh_engine.profiles) rather than restating numbers; a ref containing {at} is resolved against the build's archetype. This layer selects a target profile and scores a build against it — it does NOT change engine math. Hard-mode / Advanced (4-star) is a documented GAP (needs verified canonical numbers) and is deliberately absent.",
+  "schema_version": 1,
+  "$breakpoints": "strategy/breakpoints.json",
+  "universal_gate": "exemplar-10",
+  "profiles": {
+    "soft-cap-defense": {
+      "display_name": "Soft-cap defense",
+      "priority": ["survival"],
+      "targets": [
+        {"metric": "defense_positional_min", "op": ">=", "ref": "universal.soft_cap_defense_pve"}
+      ]
+    },
+    "resist-cap": {
+      "display_name": "Resist cap",
+      "priority": ["survival"],
+      "targets": [
+        {"metric": "resist_min", "op": ">=", "ref": "archetypes.{at}.res_cap_pct"}
+      ]
+    },
+    "perma-hasten": {
+      "display_name": "Perma-Hasten / +Recharge",
+      "priority": ["recharge"],
+      "targets": [
+        {"metric": "perma_hasten", "op": "==", "value": true}
+      ]
+    },
+    "procmonster": {
+      "display_name": "Procmonster",
+      "priority": ["damage"],
+      "targets": []
+    },
+    "farmer": {
+      "display_name": "Farmer",
+      "priority": ["survival", "damage"],
+      "targets": [
+        {"metric": "resist_min", "op": ">=", "ref": "archetypes.{at}.res_cap_pct"},
+        {"metric": "defense_positional_min", "op": ">=", "ref": "universal.soft_cap_defense_pve"}
+      ]
+    },
+    "pvp": {
+      "display_name": "PvP",
+      "priority": ["survival", "damage", "recharge"],
+      "targets": [
+        {"metric": "defense_positional_min", "op": ">=", "ref": "universal.soft_cap_defense_pvp"}
+      ]
+    },
+    "theme-rp": {
+      "display_name": "Theme / RP",
+      "priority": [],
+      "targets": []
+    },
+    "solo-99-difficulty": {
+      "display_name": "Solo-99-difficulty",
+      "priority": ["survival", "damage"],
+      "targets": [
+        {"metric": "defense_positional_min", "op": ">=", "ref": "universal.soft_cap_defense_pve"},
+        {"metric": "resist_min", "op": ">=", "ref": "archetypes.{at}.res_cap_pct"}
+      ]
+    },
+    "speed-runner-tf": {
+      "display_name": "Speed-runner / TF",
+      "priority": ["recharge", "damage"],
+      "targets": [
+        {"metric": "perma_hasten", "op": "==", "value": true}
+      ]
+    }
+  }
+}

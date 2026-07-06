@@ -5,7 +5,7 @@ Files in this directory are normative. They constrain what Claude does in this p
 ## Files
 
 | File | Scope |
-|---|---|
+| --- | --- |
 | [`build-creation.md`](./build-creation.md) | Full build creation rules: format spec, slot allocation, pre-flight checklist, 5 Whys analysis from past failures. |
 | [`exemplar-10.md`](./exemplar-10.md) | Universal exemplar-10 playability rule. Level-50 endgame stays the primary target; never trade for exemplar bonuses. |
 | [`hard-limits.md`](./hard-limits.md) | Game-engine invariants — slot count, power picks, ED, Rule of Five, AT caps. |
@@ -16,10 +16,10 @@ Files in this directory are normative. They constrain what Claude does in this p
 1. Create the file in this directory with a name matching the constraint.
 2. Lead with `**Status:** MUST` (or `SHOULD` for softer guidance).
 3. Provide:
-   - **Scope** — when the rule applies.
-   - **What is forbidden / required** — concrete constraints.
-   - **Why** — root cause or precedent.
-   - **How to apply** — what Claude does in practice.
+    - **Scope** — when the rule applies.
+    - **What is forbidden / required** — concrete constraints.
+    - **Why** — root cause or precedent.
+    - **How to apply** — what Claude does in practice.
 4. Reference the new file from [`../../CLAUDE.md`](../../CLAUDE.md) under "MUST rules" so it auto-loads.
 5. If the rule is build-specific, also reference it from [`build-creation.md`](./build-creation.md).
 

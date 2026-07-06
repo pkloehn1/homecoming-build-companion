@@ -100,6 +100,27 @@ class Power:
     # slottable here only if its set-type ordinal is in this tuple. Empty for
     # powers that take no set IOs (and for records from dumps predating the field).
     set_types: tuple[int, ...] = ()
+    # EnhancementClass IDs this power accepts (``Power.Enhancements``); a standard
+    # (non-set) IO is slottable here only if one of its class IDs is in this tuple
+    # (``IsEnhancementValid``). Empty for powers from dumps predating the field.
+    enhancements: tuple[int, ...] = ()
+    # The level this build actually picked the power (``PowerEntry.Level``), distinct
+    # from ``level`` (the DB minimum pick level). The set-bonus exemplar gate uses the
+    # PICK level (Build.cs:1160); the two coincide at ForceLevel 50 but diverge under
+    # exemplar. 0-based, like the slot placement levels. Defaults to 0 (always in gate)
+    # for directly-constructed powers that never reach the tally.
+    pick_level: int = 0
+    # Base (unenhanced) per-power scalars the derived-stat layer (CP6.1) folds
+    # enhancement + global buffs into: recharge time, cast (activation) time,
+    # interrupt time. Cast time is not recharge-reduced; it feeds the end/sec and DPS
+    # cadence. Default 0.0 for directly-constructed powers that skip that layer.
+    recharge_time: float = 0.0
+    cast_time: float = 0.0
+    interrupt_time: float = 0.0
+    # eEnhance aspect names this power ignores (``Power.IgnoreEnh``). The per-power
+    # scalar fold skips an ignored aspect entirely (``IgnoreEnhancement``, Pass 3),
+    # so e.g. One with the Shield (ignores RechargeTime) keeps its recharge at base.
+    ignore_enh: tuple[str, ...] = ()
 
 
 def _parse_effect(raw: dict[str, Any]) -> Effect:
@@ -173,6 +194,15 @@ def load_powers_effects(path: Path | str) -> tuple[Power, ...]:
             # a dump predating the field is missing the key, and should fail loud
             # rather than silently validate every set IO as illegally slotted.
             set_types=tuple(r["SetTypes"]),
+            # Same strictness: an explicit [] means "accepts no standard IO class";
+            # a missing key is a stale dump that must fail loud, not silently reject
+            # or accept every standard IO.
+            enhancements=tuple(r["Enhancements"]),
+            pick_level=r["PickLevel"],
+            recharge_time=f32(r["RechargeTime"]),
+            cast_time=f32(r["CastTime"]),
+            interrupt_time=f32(r["InterruptTime"]),
+            ignore_enh=tuple(r["IgnoreEnh"]),
             effects=tuple(_parse_effect(fx) for fx in r["Effects"]),
         )
         for r in records

@@ -56,6 +56,7 @@ from coh_engine.effect import Effect, Power, effect_mag
 from coh_engine.enh_pipeline import aggregate_and_ed
 from coh_engine.enhancement import EnhancementRecord, SlotRef
 from coh_engine.maths import MathTables, f32
+from coh_engine.pass3 import fold_divisor
 from coh_engine.set_bonuses import (
     SET_BONUS_BUILD_INDEX,
     SetBonusDb,
@@ -219,11 +220,36 @@ class TotalStatistics:
 
 
 @dataclass(frozen=True, slots=True)
+class GlobalEnhance:
+    """The global ``_selfEnhance`` scalar terms Pass 3 folds into every per-power scalar.
+
+    ``GBPA_Pass3_EnhancePostED`` (clsToonX.cs:1924) adds each of these to the matching
+    per-power multiplier before the ``+1`` and the divide. CP5 folded only
+    ``end_discount`` into toggle ``EndUse``; the derived-stat layer
+    (:mod:`coh_engine.statistics`) folds ``recharge``, ``end_discount``, and
+    ``interrupt`` into per-power scalars. ``recharge`` is ``_selfEnhance.Effect[Haste]``
+    (== ``eEffectType.RechargeTime``, the same index the character ``BuffHaste`` reads).
+
+    ``accuracy`` and ``range`` are the complete Pass-3 global surface, reserved for the
+    per-aspect enhancement handler (the accuracy fold feeds to-hit / DPS in CP6.2, the
+    range fold multiplies per-power range). They are populated but not yet consumed —
+    kept so the struct is the whole set of global scalars, not a partial one.
+    """
+
+    recharge: float
+    end_discount: float
+    accuracy: float
+    interrupt: float
+    range: float
+
+
+@dataclass(frozen=True, slots=True)
 class BaseTotals:
-    """Result pair: uncapped ``Totals`` and AT/server-capped ``TotalsCapped``."""
+    """Result pair: uncapped ``Totals`` and AT/server-capped ``TotalsCapped``, plus globals."""
 
     totals: TotalStatistics
     totals_capped: TotalStatistics
+    global_enhance: GlobalEnhance
 
 
 @dataclass(slots=True)
@@ -985,15 +1011,22 @@ def _gbd_toggle_end_and_fly(
     ``EndUse`` sums the *buffed* toggle cost — ``Power.ToggleCost`` derives from the
     enhancement-reduced ``EndCost`` (Power.cs:388): ``buffed.EndCost = base.EndCost /
     (1 + ED(Σ slotted EndRdx) + global EndRdx)``, then ``/ ActivatePeriod`` when the
-    toggle has one. The divisor mirrors Mids' per-power ``math.EndCost``: Pass1-2 give
-    ``ED(Σ slotted)`` (``toggle_end_agg``), Pass3 adds the global ``_selfEnhance``
-    EnduranceDiscount (``global_end_rdx``), Pass4 the ``+1`` — folded in that f32 order.
-    The two f32 divides mirror Pass5's ``EndCost /=`` then the ToggleCost getter.
+    toggle has one. The divisor comes from the shared :func:`~coh_engine.pass3.fold_divisor`
+    (``ED(Σ slotted)`` = ``toggle_end_agg``, plus the global ``_selfEnhance``
+    EnduranceDiscount, plus 1, in that f32 order) — the same helper the per-power
+    ``statistics`` arm uses, so a toggle that ignores EnduranceDiscount enhancement
+    (``Power.IgnoreEnh``) keeps its base cost here exactly as it does per-power
+    (previously this arm skipped the gate and could disagree with the per-power number).
     """
     can_fly = False
     for power in included:
         if power.power_type == "Toggle":
-            divisor = f32(f32(toggle_end_agg.get(power.build_index, 0.0) + global_end_rdx) + 1.0)
+            divisor = fold_divisor(
+                toggle_end_agg.get(power.build_index, 0.0),
+                global_end_rdx,
+                aspect="EnduranceDiscount",
+                ignored_aspects=power.ignore_enh,
+            )
             buffed_end_cost = f32(power.end_cost / divisor)
             cost = f32(buffed_end_cost / power.activate_period) if power.activate_period > 0 else buffed_end_cost
             totals.end_use = f32(totals.end_use + cost)
@@ -1137,7 +1170,19 @@ def _gbd_totals(
         for index in range(len(totals.def_)):
             totals.def_[index] = calculate_pvp_dr(totals.def_[index])
 
-    return BaseTotals(totals=totals, totals_capped=_gbd_apply_caps(totals, archetype, server))
+    e_type = enums.maps["eEffectType"]
+    global_enhance = GlobalEnhance(
+        recharge=self_enhance.effect[stat["Haste"]],
+        end_discount=self_enhance.effect[stat["BuffEndRdx"]],
+        accuracy=self_enhance.effect[stat["BuffAcc"]],
+        interrupt=self_enhance.effect[e_type["InterruptTime"]],
+        range=self_enhance.effect[e_type["Range"]],
+    )
+    return BaseTotals(
+        totals=totals,
+        totals_capped=_gbd_apply_caps(totals, archetype, server),
+        global_enhance=global_enhance,
+    )
 
 
 def calculate_pvp_dr(value: float, a: float = f32(1.2), b: float = f32(1.0)) -> float:
