@@ -167,6 +167,40 @@ def test_endurance_drain_exceeding_recovery_warns(computed: tuple[BaseTotals, li
     diag = endurance_diagnostic(heavy, base.totals_capped, _scrapper(base))
     assert diag is not None
     assert diag.rule_id == "P-END-001" and diag.severity == "warning"
+    assert "toggles" in diag.message  # no chain drain -> toggle-only detail
+
+
+def test_attack_chain_drain_adds_to_toggle_drain(computed: tuple[BaseTotals, list[PowerStats]]) -> None:
+    """Toggles alone are sustainable, but toggles + a chain drain that tips over recovery warns."""
+    base, _ = computed
+    assert endurance_diagnostic(base.totals, base.totals_capped, _scrapper(base)) is None  # toggles OK
+    diag = endurance_diagnostic(base.totals, base.totals_capped, _scrapper(base), chain_drain=1.0)
+    assert diag is not None
+    assert diag.rule_id == "P-END-001"
+    assert "chain 1.000" in diag.message  # the composed toggle + chain detail
+
+
+def test_score_build_sustainable_build_has_no_endurance_warning(
+    computed: tuple[BaseTotals, list[PowerStats]],
+) -> None:
+    """With no attacks and sustainable toggles, score_build emits no P-END-001 (the None arm)."""
+    base, _ = computed
+    profile = BuildProfile(name="x", display_name="X", priority=(), targets=())
+    result = score_build(profile, base.totals, base.totals_capped, [], _scrapper(base))  # no attacks -> no chain drain
+    assert not any(d.rule_id == "P-END-001" for d in result.diagnostics)
+
+
+def test_score_build_folds_the_attack_chain_into_endurance(computed: tuple[BaseTotals, list[PowerStats]]) -> None:
+    """score_build derives the chain from the power stats and includes it in the P-END-001 check."""
+    base, stats = computed
+    from coh_engine.attack_chain import build_attack_chain
+
+    chain = build_attack_chain(stats)
+    profile = BuildProfile(name="x", display_name="X", priority=(), targets=())
+    result = score_build(profile, base.totals, base.totals_capped, stats, _scrapper(base))
+    recovery = endurance_recovery_per_sec(base.totals_capped, _scrapper(base))
+    fires = any(d.rule_id == "P-END-001" for d in result.diagnostics)
+    assert fires == (base.totals.end_use + chain.end_per_sec > recovery)
 
 
 def test_over_cap_total_warns_not_errors(computed: tuple[BaseTotals, list[PowerStats]]) -> None:

@@ -59,13 +59,24 @@ class StatsContext:
 
 @dataclass(frozen=True, slots=True)
 class PowerStats:
-    """One power's derived scalars and the endurance rate derived from them."""
+    """One power's derived scalars and the endurance rate derived from them.
+
+    ``cast_time`` is the (recharge-unreduced) activation time; ``is_attack`` flags a
+    click power that deals damage — the attack-chain sequencer (CP7.1) consumes both.
+    """
 
     full_name: str
     recharge_time: float
     end_cost: float
     interrupt_time: float
     end_per_sec: float
+    cast_time: float
+    is_attack: bool
+
+
+def _is_attack(power: Power) -> bool:
+    """A click power that deals damage — an attack-chain member (identity, not its DPS)."""
+    return power.power_type == "Click" and any(fx.effect_type == "Damage" for fx in power.effects)
 
 
 def _aggregate(power_slots: Sequence[SlotRef], aspect: str, ctx: StatsContext) -> float:
@@ -117,6 +128,8 @@ def compute_power_stats(power: Power, power_slots: Sequence[SlotRef], ctx: Stats
         end_cost=end_cost,
         interrupt_time=interrupt,
         end_per_sec=end_per_sec,
+        cast_time=power.cast_time,
+        is_attack=_is_attack(power),
     )
 
 
