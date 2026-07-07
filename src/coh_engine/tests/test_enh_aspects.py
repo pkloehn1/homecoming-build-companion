@@ -7,12 +7,12 @@ import pytest
 from coh_engine.base_totals import GlobalEnhance
 from coh_engine.enh_aspects import (
     END,
+    RANGE,
     RECHARGE,
     cap_for,
     fold_scalar,
     global_term,
     registered_aspect_handlers,
-    resolve_aspect,
 )
 from coh_engine.maths import MathTables, f32, load_maths
 
@@ -37,17 +37,11 @@ def test_registry_lists_the_five_scalar_aspects() -> None:
     assert registered_aspect_handlers() == ["Accuracy", "EnduranceDiscount", "Interrupt", "Range", "RechargeTime"]
 
 
-def test_resolve_unknown_aspect_raises() -> None:
-    """An unregistered aspect is a KeyError (fail loud, not a silent None)."""
-    with pytest.raises(KeyError):
-        resolve_aspect("Damage")
-
-
 def test_global_term_reads_the_handlers_field(ge: GlobalEnhance) -> None:
     """Each handler resolves its own GlobalEnhance field."""
     assert global_term(RECHARGE, ge) == f32(0.425)
     assert global_term(END, ge) == f32(0.0375)
-    assert global_term(resolve_aspect("Range"), ge) == f32(0.3)
+    assert global_term(RANGE, ge) == f32(0.3)
 
 
 def test_only_recharge_is_capped() -> None:

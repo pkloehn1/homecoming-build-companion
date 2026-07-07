@@ -199,15 +199,10 @@ def _rule_per_power_added_slots(ctx: HardLimitsContext) -> Iterable[Diagnostic]:
             )
 
 
-def _iter_added_slots(ctx: HardLimitsContext) -> Iterable[tuple[Power, SlotRef]]:
-    """Every ``(power, added slot)`` pair — precomputed once in the context, not re-walked."""
-    return ctx.added_pairs
-
-
 @hard_limit_rule
 def _rule_slot_after_power(ctx: HardLimitsContext) -> Iterable[Diagnostic]:
     """H-SLOT-003: an added slot cannot be placed before its power is available (its pick level)."""
-    for power, slot in _iter_added_slots(ctx):
+    for power, slot in ctx.added_pairs:
         if slot.level < power.pick_level:
             yield _error(
                 "H-SLOT-003",
@@ -222,7 +217,7 @@ def _rule_slot_after_power(ctx: HardLimitsContext) -> Iterable[Diagnostic]:
 @hard_limit_rule
 def _rule_slot_on_grant_level(ctx: HardLimitsContext) -> Iterable[Diagnostic]:
     """H-SLOT-004: an added slot must land on a real slot-grant level in the schedule."""
-    for power, slot in _iter_added_slots(ctx):
+    for power, slot in ctx.added_pairs:
         if slot.level not in ctx.schedule.slot_grant_levels:
             yield _error(
                 "H-SLOT-004",

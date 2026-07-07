@@ -87,15 +87,6 @@ def registered_aspect_handlers() -> list[str]:
     return sorted(_HANDLERS)
 
 
-def resolve_aspect(aspect: str) -> AspectHandler:
-    """The handler for an ``eEnhance`` scalar aspect.
-
-    Raises:
-        KeyError: if ``aspect`` is not a registered scalar aspect.
-    """
-    return _HANDLERS[aspect]
-
-
 def global_term(handler: AspectHandler, global_enhance: GlobalEnhance) -> float:
     """The global ``_selfEnhance`` term this aspect adds (from :class:`GlobalEnhance`)."""
     return float(getattr(global_enhance, handler.global_field))
