@@ -22,6 +22,30 @@ dotnet run -c Debug --no-build -- <midsreborn-fork>/MidsReborn/Databases/Homecom
 Load sequence mirrors `MainModule.LoadDataAsync` (minus graphics); dialogs only fire on
 load errors.
 
+## Race-free dumps — apply the harness patch first
+
+`MidsReborn.GenerateBuffedPowerArray` runs its per-power pass loops under `Parallel.For`,
+which carries three intra-pass data races (a cross-power `Math_Mag`/`BuffedMag` read, a torn
+`Effects` array, and a concurrent write to the shared non-thread-safe `ModifyEffects`
+dictionary). They surface on **incarnate and set-bonus** builds — e.g. Combat Jumping's
+endurance dumps ÷2.15 instead of the correct ÷1.45. The interactive UI happens to show the
+correct in-index-order result; the harness must reproduce it deterministically.
+
+The fork is a read-only vendored reference and stays pristine (no branches, no commits), so
+the fix lives here as a patch applied only for the duration of a dump, then reverted:
+
+```bash
+FORK=<repos>/MidsReborn
+git -C "$FORK" apply tools/mids-dump/patches/gbpa-sequential.patch   # serialize the pass loops
+dotnet build -c Debug                                                # rebuild against the patched fork
+dotnet run -c Debug --no-build -- "$FORK"/MidsReborn/Databases/Homecoming ./out - <parity-builds>
+git -C "$FORK" checkout -- MidsReborn/clsToonX.cs                     # revert — fork back to pristine
+```
+
+[`patches/gbpa-sequential.patch`](./patches/gbpa-sequential.patch) replaces both `Parallel.For`
+loops with sequential `for` loops (see the patch's inline comment for the full rationale).
+Non-incarnate builds are byte-identical patched or not — only race-carrying builds change.
+
 ## Outputs
 
 | File | Contents |
