@@ -6,8 +6,20 @@ import pytest
 
 from coh_engine.archetypes import ArchetypeDb
 from coh_engine.attribmod import AttribMods
-from coh_engine.effect import Effect, Power, effect_mag, get_modifier_for_effect
+from coh_engine.effect import Effect, Power, _parse_requirement_groups, effect_mag, get_modifier_for_effect
 from coh_engine.maths import f32
+
+
+def test_parse_requirement_groups_drops_blanks_and_empty_groups() -> None:
+    """A ``Requires`` array: blank second slots (single-power reqs) and empty groups are dropped."""
+    raw = [["A", "B"], ["C", ""], ["", ""], []]
+    assert _parse_requirement_groups(raw) == (("A", "B"), ("C",))
+
+
+def test_parse_requirement_groups_empty_is_empty() -> None:
+    """No requirement data parses to an empty tuple."""
+    assert _parse_requirement_groups(()) == ()
+
 
 MakeEffect = Callable[..., Effect]
 MakePower = Callable[..., Power]

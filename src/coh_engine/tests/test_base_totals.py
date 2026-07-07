@@ -17,6 +17,7 @@ from coh_engine.base_totals import (
     _apply_enhance_effects,
     _BuffsX,
     _compute_enh_multipliers,
+    _enhance_names,
     _gbd_totals,
     _get_effect_mag_sum,
     _get_enhancement_mag_sum,
@@ -41,6 +42,8 @@ MakePower = Callable[..., Power]
 FIXTURES = Path(__file__).parent / "fixtures"
 PVE = EngineConfig(suppression=0, disable_pve=False, force_level=50, scaling_to_hit=0.75)
 PVP = EngineConfig(suppression=0, disable_pve=True, force_level=50, scaling_to_hit=0.75)
+# The eEnhance name-identity route set, loaded once for the plain _ctx helper (not a fixture).
+_ENHANCE_NAMES = _enhance_names(load_enum_maps(FIXTURES / "mids" / "enums.json"))
 
 
 @pytest.fixture(scope="module")
@@ -54,7 +57,9 @@ def server() -> ServerData:
 
 
 def _ctx(tiny_mods: AttribMods, tiny_classes: ArchetypeDb, config: EngineConfig = PVE) -> _MagContext:
-    return _MagContext(mods=tiny_mods, classes=tiny_classes, archetype_index=0, config=config)
+    return _MagContext(
+        mods=tiny_mods, classes=tiny_classes, archetype_index=0, config=config, enhance_names=_ENHANCE_NAMES
+    )
 
 
 def _mag_sum(
@@ -735,8 +740,9 @@ class TestEnhancementGuards:
         tiny_classes: ArchetypeDb,
         tables: MathTables,
     ) -> None:
-        # Slots enhance Resistance, but _enhance_aspect routes no effect to it.
-        power = make_power(make_effect(effect_type="Resistance", buffable=True), build_index=0)
+        # The slot enhances Resistance, but the power's only effect is Recovery (routes to
+        # Recovery, not Resistance), so the Resistance aspect matches no effect -> refused.
+        power = make_power(make_effect(effect_type="Recovery", buffable=True), build_index=0)
         slot = SlotRef(level=0, is_inherent=False, enh=1, grade=0, io_level=49, relative_level=4)
         with pytest.raises(ValueError, match="P-ENH-001"):
             _compute_enh_multipliers(

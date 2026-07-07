@@ -22,6 +22,7 @@ from collections.abc import Callable, Sequence
 from dataclasses import dataclass
 
 from coh_engine.archetypes import Archetype
+from coh_engine.attack_chain import build_attack_chain
 from coh_engine.base_totals import TotalStatistics
 from coh_engine.diagnostics import Diagnostic
 from coh_engine.maths import f32
@@ -84,26 +85,30 @@ def endurance_recovery_per_sec(totals_capped: TotalStatistics, archetype: Archet
 
 
 def endurance_diagnostic(
-    totals: TotalStatistics, totals_capped: TotalStatistics, archetype: Archetype
+    totals: TotalStatistics, totals_capped: TotalStatistics, archetype: Archetype, chain_drain: float = 0.0
 ) -> Diagnostic | None:
-    """Warn (``P-END-001``) when toggle drain/sec exceeds recovery/sec.
+    """Warn (``P-END-001``) when total drain/sec (toggles + attack chain) exceeds recovery/sec.
 
-    ``Totals.EndUse`` is the running toggle drain (CP5). The attack-chain drain is
-    additive and lands with the chain sequencer; this is the toggle-sustainability half.
+    ``Totals.EndUse`` is the running toggle drain (CP5); ``chain_drain`` is the attack
+    chain's endurance/sec (:func:`~coh_engine.attack_chain.build_attack_chain`, CP7.1).
+    Their sum is the full sustained drain a running build pays. Drain over recovery is a
+    ``warning`` — the game does not fail a build on endurance.
     """
     recovery = endurance_recovery_per_sec(totals_capped, archetype)
-    if totals.end_use <= recovery:
+    drain = f32(totals.end_use + chain_drain)
+    if drain <= recovery:
         return None
+    detail = f"toggles {totals.end_use:.3f} + chain {chain_drain:.3f}" if chain_drain > 0.0 else "toggles"
     return Diagnostic(
         rule_id="P-END-001",
         severity="warning",
         message=(
-            f"toggle endurance drain {totals.end_use:.3f}/s exceeds recovery {recovery:.3f}/s; "
-            "the build is not endurance-sustainable on toggles alone"
+            f"endurance drain {drain:.3f}/s ({detail}) exceeds recovery {recovery:.3f}/s; "
+            "the build is not endurance-sustainable"
         ),
-        fix="add +Recovery/+MaxEnd, reduce toggle EndRdx cost, or drop a toggle",
+        fix="add +Recovery/+MaxEnd, reduce toggle EndRdx cost, drop a toggle, or lengthen the attack chain",
         expected=round(recovery, 3),
-        actual=round(totals.end_use, 3),
+        actual=round(drain, 3),
     )
 
 
@@ -248,7 +253,8 @@ def score_build(
     # `met` (last wins), but each still counts toward the score independently.
     score = 1.0 if not profile.targets else f32(met_count / len(profile.targets))
     diagnostics.extend(cap_adherence_diagnostics(totals, totals_capped))
-    end_diag = endurance_diagnostic(totals, totals_capped, archetype)
+    chain = build_attack_chain(power_stats)
+    end_diag = endurance_diagnostic(totals, totals_capped, archetype, chain.end_per_sec)
     if end_diag is not None:
         diagnostics.append(end_diag)
     return ScoreResult(score=score, met=met, diagnostics=diagnostics)

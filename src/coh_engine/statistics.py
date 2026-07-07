@@ -27,20 +27,16 @@ Spec: docs/engine/mids-port-spec.md § gbpa-pass-pipeline (Pass 3).
 
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
+from types import MappingProxyType
 
 from coh_engine.archetypes import ArchetypeDb
 from coh_engine.attribmod import AttribMods
 from coh_engine.base_totals import EngineConfig, GlobalEnhance
 from coh_engine.effect import Power
+from coh_engine.enh_aspects import END, INTERRUPT, RECHARGE, AspectHandler, fold_scalar, global_term
 from coh_engine.enh_pipeline import aggregate_and_ed
 from coh_engine.enhancement import EnhancementRecord, SlotRef
 from coh_engine.maths import MathTables, f32
-from coh_engine.pass3 import fold_divisor
-
-# eEnhance aspect names (Power.IgnoreEnh entries) the per-power scalar fold keys on.
-_ASPECT_RECHARGE = "RechargeTime"
-_ASPECT_END = "EnduranceDiscount"
-_ASPECT_INTERRUPT = "Interrupt"
 
 
 @dataclass(frozen=True, slots=True)
@@ -50,6 +46,9 @@ class StatsContext:
     ``global_enhance`` carries the build's global ``_selfEnhance`` scalar terms (from
     :func:`~coh_engine.base_totals.compute_base_totals`); ``recharge_cap`` is the
     archetype's recharge-multiplier cap. ``force_level`` comes from ``config``.
+    ``incarnate_scalar`` maps ``(build_index, aspect)`` to the incarnate ``(pre_ed,
+    post_ed)`` scalar addends (:mod:`coh_engine.incarnate`); the pre-ED term co-EDs with
+    the slotted aggregate and the post-ED term is the ``fold_scalar`` post-ED seam.
     """
 
     mods: AttribMods
@@ -60,60 +59,77 @@ class StatsContext:
     enh_db: Mapping[int, EnhancementRecord]
     global_enhance: GlobalEnhance
     recharge_cap: float
+    incarnate_scalar: Mapping[tuple[int, str], tuple[float, float]] = MappingProxyType({})
 
 
 @dataclass(frozen=True, slots=True)
 class PowerStats:
-    """One power's derived scalars and the endurance rate derived from them."""
+    """One power's derived scalars and the endurance rate derived from them.
+
+    ``cast_time`` is the (recharge-unreduced) activation time; ``is_attack`` flags a
+    click power that deals damage — the attack-chain sequencer (CP7.1) consumes both.
+    """
 
     full_name: str
     recharge_time: float
     end_cost: float
     interrupt_time: float
     end_per_sec: float
+    cast_time: float
+    is_attack: bool
 
 
-def _aggregate(power_slots: Sequence[SlotRef], aspect: str, ctx: StatsContext) -> float:
-    """``ED(sum slotted <aspect>)`` over the power's in-gate slots."""
+def _is_attack(power: Power) -> bool:
+    """A click power that deals damage — an attack-chain member (identity, not its DPS)."""
+    return power.power_type == "Click" and any(fx.effect_type == "Damage" for fx in power.effects)
+
+
+def _aggregate(power_slots: Sequence[SlotRef], aspect: str, ctx: StatsContext, pre_ed_addend: float = 0.0) -> float:
+    """``ED(sum slotted <aspect> + incarnate pre-ED)`` over the power's in-gate slots."""
     return aggregate_and_ed(
-        power_slots, aspect=aspect, enh_db=ctx.enh_db, force_level=ctx.config.force_level, tables=ctx.tables
+        power_slots,
+        aspect=aspect,
+        enh_db=ctx.enh_db,
+        force_level=ctx.config.force_level,
+        tables=ctx.tables,
+        pre_ed_addend=pre_ed_addend,
     )
 
 
-def _scalar_fold(
-    power: Power,
-    power_slots: Sequence[SlotRef],
-    aspect: str,
-    global_term: float,
-    ctx: StatsContext,
-    *,
-    cap: float | None = None,
-) -> float:
-    """The Pass 3/4 fold divisor for one aspect, via the shared :func:`~coh_engine.pass3.fold_divisor`.
+def _scalar_fold(power: Power, power_slots: Sequence[SlotRef], handler: AspectHandler, ctx: StatsContext) -> float:
+    """The Pass 3/4 fold divisor for one aspect, via the per-aspect handler registry.
 
-    The power's ``ignore_enh`` set is the filter; ``cap`` is the AT recharge cap where
-    the aspect is clamped (recharge only). The base_totals toggle-EndUse arm uses the
-    same helper, so the two folds cannot diverge.
+    The handler (:mod:`coh_engine.enh_aspects`) supplies the aspect's global ``_selfEnhance``
+    term and its cap; the power's ``ignore_enh`` set is the filter. Any incarnate scalar
+    contribution for this ``(power, aspect)`` folds in as its pre-ED addend (co-ED'd with
+    the slotted aggregate) and post-ED extra, reproducing the pre-ED / post-ED incarnate
+    application straddling ``GBPA_Pass2_ApplyED``. The base_totals toggle-EndUse arm routes
+    through the same ``fold_scalar``, so the two folds cannot diverge.
     """
-    aggregate = _aggregate(power_slots, aspect, ctx)
-    return fold_divisor(aggregate, global_term, aspect=aspect, ignored_aspects=power.ignore_enh, cap=cap)
+    pre_ed, post_ed = ctx.incarnate_scalar.get((power.build_index, handler.aspect), (0.0, 0.0))
+    aggregate = _aggregate(power_slots, handler.aspect, ctx, pre_ed)
+    return fold_scalar(
+        handler,
+        aggregate,
+        global_term(handler, ctx.global_enhance),
+        ignore_enh=power.ignore_enh,
+        recharge_cap=ctx.recharge_cap,
+        post_ed_extra=post_ed,
+    )
 
 
 def _buffed_recharge(power: Power, power_slots: Sequence[SlotRef], ctx: StatsContext) -> float:
     """Buffed recharge = base / clamp((ED(sum rech) + global) + 1, recharge cap), 0 if base is 0."""
     if power.recharge_time <= 0.0:
         return 0.0
-    divisor = _scalar_fold(power, power_slots, _ASPECT_RECHARGE, ctx.global_enhance.recharge, ctx, cap=ctx.recharge_cap)
-    return f32(power.recharge_time / divisor)
+    return f32(power.recharge_time / _scalar_fold(power, power_slots, RECHARGE, ctx))
 
 
 def compute_power_stats(power: Power, power_slots: Sequence[SlotRef], ctx: StatsContext) -> PowerStats:
     """The derived scalars + endurance/sec for one power (see the module docstring)."""
     recharge = _buffed_recharge(power, power_slots, ctx)
-    end_cost = f32(power.end_cost / _scalar_fold(power, power_slots, _ASPECT_END, ctx.global_enhance.end_discount, ctx))
-    interrupt = f32(
-        power.interrupt_time / _scalar_fold(power, power_slots, _ASPECT_INTERRUPT, ctx.global_enhance.interrupt, ctx)
-    )
+    end_cost = f32(power.end_cost / _scalar_fold(power, power_slots, END, ctx))
+    interrupt = f32(power.interrupt_time / _scalar_fold(power, power_slots, INTERRUPT, ctx))
 
     if power.power_type == "Toggle" and power.activate_period > 0.0:
         end_per_sec = f32(end_cost / power.activate_period)
@@ -127,6 +143,8 @@ def compute_power_stats(power: Power, power_slots: Sequence[SlotRef], ctx: Stats
         end_cost=end_cost,
         interrupt_time=interrupt,
         end_per_sec=end_per_sec,
+        cast_time=power.cast_time,
+        is_attack=_is_attack(power),
     )
 
 

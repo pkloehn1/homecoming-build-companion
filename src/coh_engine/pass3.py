@@ -32,22 +32,28 @@ def fold_divisor(
     aspect: str,
     ignored_aspects: Collection[str] = (),
     cap: float | None = None,
+    post_ed_extra: float = 0.0,
 ) -> float:
     """The per-power fold multiplier for one scalar aspect.
 
-    Returns ``(( aggregate + global_term ) + 1)`` in the C# float order, clamped to
-    ``cap`` when given (the AT recharge cap, ``GBPA_ApplyArchetypeCaps``). Returns
-    ``1.0`` — no fold — when ``aspect`` is in ``ignored_aspects`` (the power ignores
-    that enhancement, so its modifiable base is zero).
+    Returns ``((( aggregate + global_term ) + post_ed_extra ) + 1)`` in the C# float
+    order — ``GBPA_Pass3_EnhancePostED`` adds the global ``_selfEnhance`` term
+    (clsToonX.cs:1957), then the incarnate post-ED (``IgnoreED``) term (clsToonX.cs:2083),
+    then ``GBPA_Pass4_Add``'s ``+1`` — each a separate float add, so the three-term order is
+    load-bearing (float32 addition is not associative). Clamped to ``cap`` when given (the AT
+    recharge cap, ``GBPA_ApplyArchetypeCaps``). Returns ``1.0`` — no fold — when ``aspect``
+    is in ``ignored_aspects`` (the power ignores that enhancement, so its modifiable base is
+    zero).
 
-    ``aggregate`` is the ED-reduced sum of the power's slotted enhancement for
-    ``aspect`` (from :func:`~coh_engine.enh_pipeline.aggregate_and_ed`); ``global_term``
-    is the matching global ``_selfEnhance`` scalar
-    (:class:`~coh_engine.base_totals.GlobalEnhance`).
+    ``aggregate`` is the ED-reduced sum of the power's slotted enhancement (co-ED'd with any
+    incarnate pre-ED term) for ``aspect``
+    (:func:`~coh_engine.enh_pipeline.aggregate_and_ed`); ``global_term`` is the matching
+    global ``_selfEnhance`` scalar (:class:`~coh_engine.base_totals.GlobalEnhance`);
+    ``post_ed_extra`` is the incarnate post-ED addend, defaulting to 0.
     """
     if aspect in ignored_aspects:
         return 1.0
-    divisor = f32(f32(aggregate + global_term) + 1.0)
+    divisor = f32(f32(f32(aggregate + global_term) + post_ed_extra) + 1.0)
     if cap is not None:
         divisor = min(divisor, cap)
     return divisor

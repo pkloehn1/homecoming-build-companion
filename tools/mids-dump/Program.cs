@@ -125,6 +125,8 @@ internal static class Program
         DumpPowerIndex(outDir);
         DumpEnums(outDir);
         DumpConfig(outDir);
+        DumpLevels(outDir);
+        DumpIncarnates(outDir);
 
         // Optional third arg: a directory of .mbd sample builds. Each is loaded
         // through Mids and re-saved as a .mxd share block, giving the Python port
@@ -190,6 +192,33 @@ internal static class Program
         WriteJson(outDir, "enums.json", enums);
     }
 
+    private static void DumpLevels(string outDir)
+    {
+        // The character-level schedule (Database.Levels, one LevelMap per level,
+        // 0-based index i == in-game level i+1). LevelMap.Powers is the count of
+        // powers pickable at that level; LevelMap.Slots is the count of enhancement
+        // slots granted. The hard-limits validator reads these to check that a slot
+        // lands on a real grant level and a power is picked at a real pick level —
+        // anchored to game data, never a schedule reconstructed from memory.
+        var levels = DatabaseAPI.Database.Levels;
+        var mainPowers = DatabaseAPI.Database.Levels_MainPowers;
+        WriteJson(outDir, "levels.json", new
+        {
+            Count = levels.Length,
+            Convention = "levelIndex is 0-based; gameLevel = levelIndex + 1",
+            SlotGrantLevels = levels
+                .Select((lm, idx) => new { LevelIndex = idx, GameLevel = idx + 1, Slots = lm.Slots })
+                .Where(x => x.Slots > 0)
+                .ToList(),
+            PowerPickLevels = mainPowers
+                .Select(idx => new { LevelIndex = idx, GameLevel = idx + 1 })
+                .ToList(),
+            PerLevel = levels
+                .Select((lm, idx) => new { LevelIndex = idx, GameLevel = idx + 1, lm.Powers, lm.Slots })
+                .ToList(),
+        });
+    }
+
     private static void DumpConfig(string outDir)
     {
         // The config state the totals were computed under. The Python port pins
@@ -248,7 +277,163 @@ internal static class Program
         DumpBuildSlots(buildDir, toon);
         DumpBuildEnhancedPowers(buildDir, toon);
         DumpBuildSetBonusVirtualPower(buildDir, toon);
+        DumpBuildIncarnates(buildDir, toon);
         DumpBuildTotals(buildDir, toon);
+    }
+
+    private static void DumpBuildIncarnates(string buildDir, clsToonX toon)
+    {
+        // Each StatInclude incarnate's GrantPower-delivered enhancement, resolved to the
+        // hidden granted sub-powers that actually carry it. An Alpha's raw db.Power holds
+        // only GrantPower/RevokePower/LevelShift/SetMode; the real Accuracy/RechargeTime/…
+        // enhancement lives on the sub-powers a GrantPower effect names via fx.Summon /
+        // fx.nSummon -> db.Power[nSummon] (Power.ApplyGrantPowerEffects absorbs them). The
+        // port applies these per-target via the per-aspect handler (pre-ED where IgnoreED
+        // is false, post-ED where true) instead of porting GBPA's GrantPower absorption.
+        //
+        // The accept-gate (clsToonX.cs:1458) intersects the TARGET power's Enhancements
+        // with the SUB-POWER's Enhancements (not the Alpha's, which is []); so each
+        // sub-power carries its own gate list. Only Enhancement/DamageBuff sub-effects are
+        // kept (the ones GBPA_ApplyIncarnateEnhancements routes by ETModifies); nested
+        // GrantPower / GlobalChanceMod paths are dropped here and refused loudly in the port.
+        var db = DatabaseAPI.Database;
+        var incarnates = new List<object>();
+        for (var i = 0; i < toon.CurrentBuild.Powers.Count; i++)
+        {
+            var entry = toon.CurrentBuild.Powers[i];
+            if (entry?.Power == null || entry.NIDPower < 0 || !entry.StatInclude)
+            {
+                continue;
+            }
+            if (!entry.Power.FullName.StartsWith("Incarnate.", StringComparison.Ordinal))
+            {
+                continue;
+            }
+
+            var subPowers = new List<object>();
+            foreach (var fx in entry.Power.Effects)
+            {
+                if (fx.EffectType != Enums.eEffectType.GrantPower || fx.nSummon <= -1
+                    || fx.nSummon >= db.Power.Length || db.Power[fx.nSummon] == null)
+                {
+                    continue;
+                }
+
+                var sub = db.Power[fx.nSummon];
+                var enhFx = sub.Effects
+                    .Where(e => e.EffectType is Enums.eEffectType.Enhancement or Enums.eEffectType.DamageBuff)
+                    .Select((e, eIdx) => SerializeEffect(e, eIdx))
+                    .ToList();
+                if (enhFx.Count == 0)
+                {
+                    continue;
+                }
+
+                subPowers.Add(new
+                {
+                    sub.FullName,
+                    // The accept-gate list: the target build power must share an
+                    // enhancement class with THIS sub-power for the enhancement to apply.
+                    sub.Enhancements,
+                    Effects = enhFx,
+                });
+            }
+
+            incarnates.Add(new
+            {
+                BuildIndex = i,
+                entry.Power.FullName,
+                SubPowers = subPowers,
+            });
+        }
+        WriteJson(buildDir, "incarnates.json", incarnates);
+    }
+
+    // A DB-level catalog of every incarnate powerset (ePowerSetType.Incarnate): the
+    // authoritative port-format reference for the full incarnate buff set (CP6.2). For
+    // each incarnate power it records the aspect tuples it delivers — its own effects and
+    // the effects of its GrantPower-granted sub-powers (fx.nSummon -> db.Power[nSummon]) —
+    // so the engine can enumerate which EffectType/ETModifies/Aspect each incarnate routes
+    // (Strength = enhancement increment, Current/Absolute/Maximum = direct buff, Resistance
+    // = resist, IgnoreED = the ED-bypass split). This is a compact descriptor (no
+    // magnitudes/tables): it drives which aspects need routing, not their values.
+    private static void DumpIncarnates(string outDir)
+    {
+        var db = DatabaseAPI.Database;
+        var sets = new List<object>();
+        // Character-affecting incarnate slots only: group "Incarnate" (drops the
+        // "Incarnate_Pets" summon zoo) and skip the Lore pet-summoner sets. Lore summons
+        // via Create_Entity, which is Totals-neutral for the character — Mids does not fold
+        // pet buffs into the static build totals, so neither does the port (nothing to
+        // catalog for parity).
+        var incarnateSlots = db.Powersets.Where(p =>
+            p is {SetType: Enums.ePowerSetType.Incarnate, GroupName: "Incarnate"}
+            && !p.FullName.StartsWith("Incarnate.Lore", StringComparison.Ordinal));
+        foreach (var ps in incarnateSlots)
+        {
+            // The delivered-aspect signature: the distinct (EffectType, ETModifies, Aspect,
+            // IgnoreED) tuples this slot's powers apply — its own direct effects and the
+            // effects of its GrantPower-granted sub-powers. Collapsed across the slot's
+            // powers/types so the catalog is the CP6.2 routing driver (which aspects need
+            // handling), not a per-power value dump. DamageType/MezType are summarized to
+            // whether the aspect spans typed variants.
+            var sig = new SortedDictionary<string, HashSet<string>>();
+            foreach (var pw in ps.Powers.Where(p => p != null))
+            {
+                foreach (var fx in pw.Effects)
+                {
+                    AddAspectSignature(sig, fx, false);
+                    if (fx.EffectType != Enums.eEffectType.GrantPower || fx.nSummon <= -1
+                        || fx.nSummon >= db.Power.Length || db.Power[fx.nSummon] == null)
+                    {
+                        continue;
+                    }
+
+                    var grantedEnh = db.Power[fx.nSummon].Effects.Where(e =>
+                        e.EffectType is Enums.eEffectType.Enhancement or Enums.eEffectType.DamageBuff);
+                    foreach (var sfx in grantedEnh)
+                    {
+                        AddAspectSignature(sig, sfx, true);
+                    }
+                }
+            }
+
+            sets.Add(new
+            {
+                ps.FullName,
+                ps.DisplayName,
+                PowerCount = ps.Powers.Count(p => p != null),
+                DeliveredAspects = sig.Select(kv => new { Aspect = kv.Key, Types = kv.Value.OrderBy(x => x).ToList() }),
+            });
+        }
+        WriteJson(outDir, "incarnate_catalog.json", sets);
+    }
+
+    // Fold one effect into the powerset's aspect signature. The key is a stable
+    // "EffectType|ETModifies|Aspect|IgnoreED|src" string; the value collects the
+    // DamageType/MezType variants seen (so a typed Defense shows its type span without a
+    // row per type).
+    private static void AddAspectSignature(IDictionary<string, HashSet<string>> sig, IEffect fx, bool fromSub)
+    {
+        var key = string.Join("|",
+            fx.EffectType.ToString(),
+            fx.ETModifies.ToString(),
+            fx.Aspect.ToString(),
+            fx.IgnoreED ? "IgnoreED" : "ED",
+            fromSub ? "granted" : "direct");
+        if (!sig.TryGetValue(key, out var types))
+        {
+            types = new HashSet<string>();
+            sig[key] = types;
+        }
+        if (fx.DamageType != Enums.eDamage.None)
+        {
+            types.Add(fx.DamageType.ToString());
+        }
+        if (fx.MezType != Enums.eMez.None)
+        {
+            types.Add(fx.MezType.ToString());
+        }
     }
 
     // Builds recomputed at a lowered ForceLevel: the exemplar parity fixtures. At a
@@ -369,6 +554,19 @@ internal static class Program
                 // here only if one of its ClassIds is in this list (IsEnhancementValid);
                 // the standard-IO half of legality CP6 adds atop CP5's set-type gate.
                 pw.Enhancements,
+                // Power availability prerequisites (Power.Requires, Requirement.cs).
+                // The hard-limits validator ports Build.MeetsRequirement over these:
+                // RequiresPowers is an OR list of AND-pairs of prerequisite power
+                // full-names (pool/ancillary tier unlocks live here, e.g. "take 2 of
+                // the first 3" = (A&B)|(A&C)|(B&C)); RequiresPowersNot is the forbidden
+                // (mutex) list; the Class allow/deny lists gate by archetype. Full-name
+                // based so the port compares strings and needs no index cache or
+                // expression evaluator (availability is a structured comparison, not
+                // Expressions.Parse).
+                RequiresPowers = pw.Requires.PowerID,
+                RequiresPowersNot = pw.Requires.PowerIDNot,
+                RequiresClass = pw.Requires.ClassName,
+                RequiresClassNot = pw.Requires.ClassNameNot,
                 Effects = pw.Effects.Select((fx, fxIdx) => SerializeEffect(fx, fxIdx)).ToList(),
             });
         }

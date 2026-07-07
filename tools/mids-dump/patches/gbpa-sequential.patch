@@ -1,0 +1,53 @@
+diff --git a/MidsReborn/clsToonX.cs b/MidsReborn/clsToonX.cs
+index 223498f4e..9e63a59a1 100644
+--- a/MidsReborn/clsToonX.cs
++++ b/MidsReborn/clsToonX.cs
+@@ -2206,11 +2206,25 @@ namespace Mids_Reborn
+ 
+             GenerateBuffData(ref _selfEnhance, true);
+ 
+-            Parallel.For(0, _mathPowers.Length, hIDX =>
++            // The per-power pass loop runs SEQUENTIALLY in index order — it must not be
++            // parallelized. Pass1/Pass3 apply incarnate/set-bonus enhancement by reaching
++            // ACROSS powers: a target reads a source power's effect BuffedMag (Effect.cs
++            // BuffedMag = |Math_Mag|>eps ? Math_Mag : Mag), enumerates the source's Effects
++            // array, and every power writes the shared ModifyEffects dictionary. Under a
++            // Parallel.For those cross-index reads see the source mid-mutation (its own
++            // Pass1-4, notably Pass4's ++Math_Mag) and the shared Dictionary is written
++            // concurrently — three intra-pass data races (order-dependent totals plus a
++            // non-thread-safe Dictionary.Add that can corrupt or throw). A per-pass barrier
++            // does not help: the conflicting reads and writes are in the SAME pass across
++            // two powers. Sequential index order is the only race-free order — a target reads
++            // every not-yet-processed source (incarnates are highest-index) in its nominal
++            // pre-pass state, and the dictionary has a single writer. The loop is ~24 powers,
++            // so serializing costs nothing measurable.
++            for (var hIDX = 0; hIDX < _mathPowers.Length; hIDX++)
+             {
+                 if (_mathPowers[hIDX] == null)
+                 {
+-                    return;
++                    continue;
+                 }
+ 
+                 GBPA_Pass1_EnhancePreED(ref _mathPowers[hIDX], hIDX);
+@@ -2219,17 +2233,17 @@ namespace Mids_Reborn
+                 GBPA_Pass4_Add(ref _mathPowers[hIDX]);
+                 GBPA_ApplyArchetypeCaps(ref _mathPowers[hIDX]);
+                 GBPA_Pass5_MultiplyPreBuff(ref _mathPowers[hIDX], ref _buffedPowers[hIDX]);
+-            });
++            }
+ 
+             GenerateBuffData(ref _selfBuffs, false);
+ 
+-            Parallel.For(0, _mathPowers.Length, index =>
++            for (var index = 0; index < _mathPowers.Length; index++)
+             {
+                 if (_mathPowers[index] != null)
+                 {
+                     GBPA_Pass6_MultiplyPostBuff(ref _mathPowers[index], ref _buffedPowers[index]);
+                 }
+-            });
++            }
+ 
+             ApplyGlobalEnhancements();
+             GBD_Totals();

@@ -64,12 +64,13 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
-      # Verbatim game-data fixtures and sample builds must stay byte-identical
-      # to their MidsReborn/Homecoming sources — exempt from whitespace fixers.
+      # Verbatim game-data fixtures, sample builds, and the vendored .patch (whose
+      # unified-diff context lines carry significant leading/trailing whitespace) must
+      # stay byte-identical to their sources — exempt from whitespace fixers.
       - id: trailing-whitespace
-        exclude: ^(src/coh_engine/tests/fixtures/|samples/)
+        exclude: ^(src/coh_engine/tests/fixtures/|samples/|tools/mids-dump/patches/)
       - id: end-of-file-fixer
-        exclude: ^(src/coh_engine/tests/fixtures/|samples/)
+        exclude: ^(src/coh_engine/tests/fixtures/|samples/|tools/mids-dump/patches/)
       - id: check-yaml
       - id: check-json
       - id: check-toml
@@ -81,4 +82,4 @@ repos:
         args: [--maxkb=15360]
       - id: mixed-line-ending
         args: [--fix=lf]
-        exclude: ^(src/coh_engine/tests/fixtures/|samples/)
+        exclude: ^(src/coh_engine/tests/fixtures/|samples/|tools/mids-dump/patches/)
